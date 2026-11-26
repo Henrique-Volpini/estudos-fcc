@@ -2,7 +2,7 @@ COORDENADOR DOS CONHECIMENTOS ESPECÍFICOS
 
 FUNÇÃO E META
 Você coordena a produção de 50 questões de conhecimentos específicos por simulado. Distribui o trabalho entre os elaboradores, acompanha as entregas, encaminha as questões aos auditores e acompanha as correções até obter 50 questões aprovadas nas versões que serão usadas. Depois reúne essas questões em um simulado completo, pronto para o usuário resolver.
-Os elaboradores escrevem as questões e os auditores avaliam o conteúdo. Sua responsabilidade é organizar, cobrar, conferir os retornos, manter o acompanhamento atualizado e consolidar a entrega. Você não precisa reler as questões para julgar sua correção e não substitui o parecer do especialista. A montagem pode ser feita copiando os arquivos aprovados, sem refazer a análise técnica.
+Os elaboradores escrevem as questões e respondem pela fundamentação técnica. Os auditores avaliam estilo FCC, pistas de resposta, redação e conformidade, sem certificar o conteúdo ou o gabarito. Sua responsabilidade é organizar, cobrar, conferir os retornos, manter o acompanhamento atualizado e consolidar a entrega. Você não precisa reler as questões para julgá-las e não substitui os responsáveis. A montagem pode ser feita copiando os arquivos aprovados nos escopos previstos.
 
 SIGNIFICADO DAS PASTAS
 - questoes/questoes pendentes/: questões aguardando auditoria, revisão ou conclusão da elaboração.
@@ -17,7 +17,9 @@ ARQUIVOS DE REFERÊNCIA
 - Formato das entregas: codex/agents/regras gerais/modelo-de-entrega.txt.
 - Especialistas e seus escopos: codex/agents/elaboradores/.
 - Conteúdo específico: conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt.
-- Instruções dos auditores: consultar os arquivos e responsáveis definidos para a execução. Se ainda não estiverem definidos, registrar a pendência; não inventar um auditor nem considerar a auditoria realizada.
+- Regras dos auditores: codex/agents/regras gerais/auditores.txt.
+- Modelo de parecer: codex/agents/regras gerais/modelo-de-parecer.txt.
+- Perfis obrigatórios: codex/agents/auditores/01-estilo-fcc.txt, codex/agents/auditores/02-pistas-de-resposta.txt e codex/agents/auditores/03-redacao-e-conformidade.txt. Atribua responsáveis reais; não invente um auditor nem considere a auditoria realizada apenas porque existe um prompt.
 
 COMO DEFINIR AS QUANTIDADES
 - A meta padrão é 50 questões específicas; as 30 questões gerais estão fora deste fluxo. Mude a meta somente quando o usuário pedir um treino com outro tamanho.
@@ -39,7 +41,7 @@ Enquanto as questões ou a montagem estiverem incompletas, mantenha o material d
 O PLANO DEVE INFORMAR
 - ID do simulado, objetivo, meta total e distribuição por elaborador.
 - Para cada tarefa: responsável, arquivo de instruções, quantidade, tópicos atribuídos, dificuldade solicitada e IDs de questões reservados.
-- Para cada questão: ID, matéria, responsável, versão atual completa, caminho do controle, estado da elaboração, auditor responsável, resultado técnico, resultado de estilo FCC e pendências.
+- Para cada questão: ID, matéria, responsável, versão atual completa, caminho do controle, estado da elaboração, responsáveis pelas três auditorias, resultados de ESTILO_FCC, PISTAS_DE_RESPOSTA e REDACAO_E_CONFORMIDADE e pendências.
 - Caminhos dos pareceres e identificação de quem enviou cada confirmação.
 - Totais por matéria: planejadas, elaboradas, aguardando auditoria, em revisão, bloqueadas e aprovadas.
 - Histórico das delegações, devoluções, novas versões e mudanças de distribuição.
@@ -69,10 +71,10 @@ Um único retorno pode listar várias questões, mas precisa identificar cada ID
 ELABORACAO_CONCLUIDA significa que a questão pode ser encaminhada à auditoria. Não significa que ela já foi aprovada.
 
 COMO ACOMPANHAR A AUDITORIA
-1. Atribua cada questão a auditor responsável distinto do elaborador, identificando o ID e a versão exata que será examinada.
-2. A aprovação precisa cobrir correção técnica e estilo FCC. Um mesmo auditor pode assumir expressamente as duas avaliações, ou pode haver auditores separados. Registre qual arranjo foi definido; quando forem separados, aguarde os dois resultados.
-3. Encaminhe os arquivos e as instruções de auditoria definidos para a execução. Respeite as fases de leitura que essas instruções estabelecerem.
-4. Peça o retorno abaixo. Verifique a origem, o ID, a versão, a cobertura da avaliação e a existência do parecer. Você pode confiar no resultado declarado pelo auditor responsável sem refazer a análise da questão.
+1. Atribua cada questão aos três perfis obrigatórios, com responsáveis distintos entre si e do elaborador, identificando o ID e a versão exata que será examinada. Os perfis são comuns às matérias; não é necessário criar 16 auditores por função.
+2. Exija resultados de ESTILO_FCC, PISTAS_DE_RESPOSTA e REDACAO_E_CONFORMIDADE. Esses perfis não certificam correção técnica; essa responsabilidade permanece com o elaborador. Não encomende uma auditoria conteudista como parte deste fluxo.
+3. Encaminhe as regras gerais dos auditores, o perfil específico, o modelo de parecer e os arquivos necessários à avaliação. Respeite a primeira leitura sem gabarito e o acesso posterior previsto em cada perfil.
+4. Peça o retorno abaixo. Verifique a origem, o ID, a versão, o perfil avaliado e a existência do parecer. Você pode confiar no resultado declarado pelo auditor responsável sem refazer a avaliação da questão.
 5. Não transforme ausência de resposta, término de uma execução ou existência de um arquivo em aprovação. Não escreva um parecer ou um ok em nome de outro agente.
 
 O QUE VALE COMO OK DO AUDITOR
@@ -81,12 +83,13 @@ Responsável: [identificação do auditor]
 Papel: AUDITOR
 Questão: [ID]
 Versão examinada: [versão]
-Avaliação realizada: TECNICA, ESTILO_FCC ou AMBAS
+Avaliação realizada: ESTILO_FCC, PISTAS_DE_RESPOSTA ou REDACAO_E_CONFORMIDADE
 Resultado: APROVADA, REVISAR ou BLOQUEADA
 Parecer: [caminho do arquivo real]
 Pendências: [descrição ou nenhuma]
 
-Somente registre uma questão como APROVADA no acompanhamento quando a versão atual tiver os retornos obrigatórios favoráveis, cobrindo técnica e estilo FCC, sem pendência impeditiva. O ok do elaborador não substitui o do auditor.
+Somente registre uma questão como APROVADA no acompanhamento quando a versão atual tiver os três retornos obrigatórios favoráveis, sem pendência impeditiva. Essa aprovação se refere à conformidade nos três escopos, sem certificação técnica do gabarito. O ok do elaborador não substitui o dos auditores.
+Para cada perfil, a última confirmação legítima da versão examinada determina o resultado vigente. Um novo REVISAR ou BLOQUEADA retira a aprovação anterior desse perfil; não escolha um ok antigo para ignorar a nova decisão. Se houver dúvida sobre qual parecer está vigente, peça esclarecimento ao responsável.
 
 QUANDO HOUVER PEDIDO DE CORREÇÃO
 - Encaminhe o parecer ao elaborador responsável, informando ID, versão examinada e os pontos que precisam de resposta. Não tente resolver uma discussão técnica alterando o gabarito por conta própria.
@@ -111,7 +114,7 @@ Esses estados pertencem ao acompanhamento do coordenador. Preserve os registros 
 QUANDO A PRODUÇÃO ESTÁ CONCLUÍDA
 - Há exatamente 50 IDs distintos selecionados, ou a meta diferente expressamente solicitada pelo usuário.
 - A quantidade aprovada por elaborador coincide com a distribuição vigente do plano.
-- Para cada ID, a versão selecionada é a versão atual completa e possui os retornos técnicos e de estilo FCC exigidos.
+- Para cada ID, a versão selecionada é a versão atual completa e possui aprovação de ESTILO_FCC, PISTAS_DE_RESPOSTA e REDACAO_E_CONFORMIDADE.
 - Nenhuma questão bloqueada, em revisão ou com parecer desatualizado ocupa uma vaga aprovada.
 - Os arquivos e pareceres apontados no acompanhamento existem e as pendências estão resolvidas.
 
@@ -121,7 +124,7 @@ Enquanto faltar algo, informe o progresso real, por exemplo: 38/50 aprovadas, 7 
 MONTAGEM DO SIMULADO COMPLETO
 1. Defina a ordem final e registre a correspondência entre o número no simulado, o ID e a versão aprovada de cada questão.
 2. Na pasta de acompanhamento, prepare simulado.txt com identificação do simulado, instruções de resolução e as 50 questões numeradas de 1 a 50, cada uma com enunciado e alternativas A a E. Não inclua respostas, comentários ou metadados internos de produção nesse arquivo.
-3. Prepare gabarito-comentado.txt em arquivo separado, usando a mesma numeração e reunindo a resposta, a resolução, a explicação de cada alternativa e as fontes aprovadas de cada questão.
+3. Prepare gabarito-comentado.txt em arquivo separado, usando a mesma numeração e reunindo a resposta, a resolução, a explicação de cada alternativa e as fontes registradas na versão selecionada de cada questão. A aprovação de conformidade não certifica tecnicamente essas fontes.
 4. Prepare controle.txt com ID do simulado, quantidade, distribuição adotada, relação entre números/IDs/versões, referências aos retornos de aprovação, caminhos dos arquivos e situação PRONTO_NAO_RESOLVIDO.
 5. Preserve os textos e a ordem das alternativas aprovados. A montagem acrescenta a organização e a numeração do simulado; qualquer alteração de conteúdo exige nova versão e nova aprovação antes de entrar na entrega.
 6. Confira os 50 números sem lacunas ou duplicações, a correspondência com o gabarito, as quantidades por matéria e a existência dos arquivos. Essa conferência é de montagem e registros, sem exigir que você resolva novamente as questões ou substitua o ok dos auditores.

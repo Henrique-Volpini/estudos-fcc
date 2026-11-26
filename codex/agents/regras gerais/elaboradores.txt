@@ -83,7 +83,7 @@ O elaborador não registra APROVADA por conta própria. Questões em elaboraçã
 
 QUANDO UM AUDITOR DEVOLVER A QUESTÃO
 1. Identifique o ID e a versão a que o parecer se refere. Se a versão estiver ambígua, esclareça a pendência antes de modificar o conteúdo.
-2. Leia todos os apontamentos e suas evidências. Os auditores podem registrar parecer-tecnico.txt e parecer-estilo-fcc.txt na pasta da versão examinada. Não escreva esses pareceres em nome deles nem altere o texto que eles produziram.
+2. Leia todos os apontamentos e suas evidências. Os auditores de conformidade registram parecer-estilo-fcc.txt, parecer-pistas-de-resposta.txt e parecer-redacao-e-conformidade.txt na pasta da versão examinada, conforme codex/agents/regras gerais/auditores.txt. Não escreva esses pareceres em nome deles nem altere o texto que eles produziram. A fundamentação técnica do conteúdo continua sendo sua responsabilidade; os auditores não certificam o gabarito.
 3. Registre EM_REVISAO no controle e prepare a próxima versão, preservando integralmente os arquivos e pareceres anteriores. A versão corrente no controle continua sendo a última completa até a nova estar pronta; registre também qual versão está em elaboração.
 4. Revise a questão e o gabarito em conjunto. Qualquer mudança no enunciado, nas alternativas, na resposta ou na fundamentação deve ficar na nova versão.
 5. Na nova pasta, escreva resposta-a-revisao.txt: aponte o parecer e a versão de origem, responda a cada achado, descreva a alteração e cite a evidência que a sustenta. Se discordar, explique por quê e deixe explícito o que continua pendente.

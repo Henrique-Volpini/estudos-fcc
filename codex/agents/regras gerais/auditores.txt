@@ -1,0 +1,69 @@
+REGRAS GERAIS DOS AUDITORES DE CONFORMIDADE
+
+OBJETIVO E LIMITES
+Avaliar se a questão está bem construída para o simulado de estilo FCC. Os auditores verificam estilo, pistas involuntárias, redação e conformidade da entrega. Eles não exercem auditoria de conteúdo: não resolvem a questão para certificar o gabarito, não refazem cálculos, não executam código e não atestam a correção de normas ou conceitos técnicos.
+A elaboração e a fundamentação técnica continuam sob responsabilidade do elaborador. APROVADA em um parecer significa aprovação somente no escopo indicado pelo auditor, não uma certificação técnica da resposta.
+
+PERFIS OBRIGATÓRIOS
+ESTILO_FCC: codex/agents/auditores/01-estilo-fcc.txt.
+PISTAS_DE_RESPOSTA: codex/agents/auditores/02-pistas-de-resposta.txt.
+REDACAO_E_CONFORMIDADE: codex/agents/auditores/03-redacao-e-conformidade.txt.
+Os três perfis avaliam cada questão. Nenhum deles precisa ser duplicado por matéria. Cada parecer deve ser emitido por responsável distinto do elaborador; use revisores distintos para as três funções.
+
+O QUE RECEBER E LER
+1. Este arquivo, o perfil específico e codex/agents/regras gerais/modelo-de-parecer.txt.
+2. A tarefa do coordenador: ID do simulado, ID da questão, versão, perfil atribuído e caminhos dos arquivos.
+3. O controle da questão e os materiais necessários ao seu perfil. Confira a identificação e a versão antes de analisar.
+4. Nas revisões, o parecer anterior do mesmo perfil, os apontamentos encaminhados e a resposta do elaborador, além da nova versão.
+Você não precisa estudar todo o conteúdo do edital nem consultar fontes técnicas para exercer estas funções. O perfil de estilo precisa consultar as provas FCC usadas como evidência editorial.
+
+INDEPENDÊNCIA E LEITURA SEM RESPOSTA
+- Comece pelo texto que o estudante verá: enunciado e alternativas, a partir de ENUNCIADO em questao.txt. Os campos de controle acima desse trecho são internos e não devem influenciar sua leitura como candidato.
+- Não consulte a letra da resposta ou a resolução antes dessa primeira leitura. Registre as observações iniciais, especialmente se uma alternativa é favorecida pela forma do texto.
+- Depois consulte apenas as partes adicionais de que seu perfil precisa. O auditor de pistas compara suas observações com o gabarito; o de estilo acessa as referências FCC; o de conformidade confere a presença e a identificação dos componentes da entrega.
+- Essa ordem de leitura é uma regra de trabalho. Os arquivos compartilham a mesma pasta; não existe isolamento de acesso imposto por este prompt.
+- Não use um título interno, a tag do tópico ou o comentário do gabarito como prova de vazamento no enunciado se esse material não aparecer para o estudante. Caso apareça indevidamente no texto público, aponte o trecho exposto.
+
+COMO REGISTRAR UM ACHADO
+- Identifique o trecho exato ou a localização do problema.
+- Explique o efeito concreto: ambiguidade, pista, comando confuso, incompatibilidade com a referência ou componente obrigatório ausente.
+- Indique o ajuste necessário para o elaborador avaliar, sem escrever a versão final nem decidir por ele qual deve ser o gabarito.
+- Distinga defeito observável de preferência pessoal. Não exija sinônimos, comprimento fixo, formato único ou dificuldade maior apenas por gosto.
+- Uma questão fácil, um enunciado curto, uma palavra repetida ou uma alternativa longa não constituem, isoladamente, um defeito. Justifique por que o caso compromete a avaliação ou a aderência ao padrão de referência.
+- Se a questão for devolvida, os apontamentos devem ser acionáveis e numerados para o elaborador responder um por um.
+- Se suspeitar de problema técnico fora do seu escopo, registre esclarecimento solicitado ao elaborador, sem afirmar qual resposta técnica é correta. Não escolha outro gabarito nem imponha uma solução de conteúdo.
+- Uma suspeita técnica isolada não fundamenta reprovação de conteúdo por estes auditores. Se o esclarecimento for indispensável para concluir a avaliação formal, registre BLOQUEADA e explique a dependência; caso contrário, encaminhe a observação ao elaborador sem declará-la um erro certificado.
+
+DECISÕES POSSÍVEIS
+APROVADA: nenhum defeito impeditivo encontrado dentro do perfil, com a verificação desse perfil concluída.
+REVISAR: defeito identificado e corrigível; descreva os achados que impedem a aprovação.
+BLOQUEADA: não foi possível concluir a avaliação por falta de material, versão indefinida, referência indispensável ausente ou dependência de esclarecimento essencial.
+Ausência de erro encontrado não autoriza declarar que houve certificação do conteúdo. Se não examinou um critério obrigatório, não marque APROVADA.
+
+ONDE SALVAR O PARECER
+Grave na pasta exata da versão examinada, ao lado de questao.txt e gabarito-comentado.txt:
+ESTILO_FCC -> parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA -> parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE -> parecer-redacao-e-conformidade.txt
+
+Use o modelo de parecer. Não edite o enunciado, o gabarito, o controle de outro responsável ou o parecer de outro perfil. Não mova a questão para outra pasta.
+Não sobrescreva um parecer anterior: se precisar complementar a mesma versão, salve um arquivo com sufixo sequencial, como parecer-estilo-fcc-r02.txt, identificando o parecer substituído. Informe ao coordenador qual decisão está vigente; preserve o histórico.
+
+QUANDO HOUVER REVISÃO DO ELABORADOR
+- Confira que a nova versão está identificada e que as alterações correspondem aos apontamentos recebidos.
+- Reavalie todos os critérios do seu perfil na versão nova; não aprove apenas por existir uma resposta ao parecer.
+- Uma aprovação anterior não vale para a versão alterada. Grave novo parecer na pasta da nova versão e devolva a confirmação identificada ao coordenador.
+- Se a correção resolver um achado e criar outro, registre ambos os resultados. Se a divergência continuar, mantenha REVISAR ou BLOQUEADA conforme o caso.
+
+RETORNO OBRIGATÓRIO AO COORDENADOR
+Simulado: [ID]
+Responsável: [identificação real do auditor]
+Papel: AUDITOR
+Questão: [ID]
+Versão examinada: [versão]
+Avaliação realizada: [ESTILO_FCC, PISTAS_DE_RESPOSTA ou REDACAO_E_CONFORMIDADE]
+Resultado: [APROVADA, REVISAR ou BLOQUEADA]
+Parecer: [caminho do arquivo realmente salvo]
+Pendências: [descrição ou nenhuma]
+
+Um retorno pode reunir várias questões, identificando separadamente ID, versão, resultado e parecer de cada uma. Não envie apenas ok sem esses dados nem fale em nome de outro auditor.

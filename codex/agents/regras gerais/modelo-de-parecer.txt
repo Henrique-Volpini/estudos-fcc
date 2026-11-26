@@ -1,0 +1,41 @@
+MODELO DE PARECER DE CONFORMIDADE
+
+Preencha os campos com informações reais e salve no arquivo correspondente ao seu perfil, na pasta da versão examinada. As instruções entre colchetes não devem permanecer na entrega.
+
+Simulado: [ID]
+Questão: [ID]
+Versão examinada: [versão]
+Responsável: [identificação real do auditor]
+Perfil: [ESTILO_FCC, PISTAS_DE_RESPOSTA ou REDACAO_E_CONFORMIDADE]
+Data: [data real da avaliação]
+Resultado: [APROVADA, REVISAR ou BLOQUEADA]
+Parecer anterior substituído: [caminho, se houver; caso contrário, nenhum]
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- [Caminho de cada arquivo efetivamente lido e respectiva versão.]
+
+PRIMEIRA LEITURA SEM GABARITO
+[Registre observações do enunciado e das alternativas antes de consultar resposta, comentários ou referências do elaborador.]
+
+CRITÉRIOS EXAMINADOS
+- [Critério do perfil: atendido, não atendido ou não verificável; evidência ou localização.]
+[Registre todos os critérios obrigatórios do perfil; quando algo depender do tipo de questão, explique a não aplicação.]
+
+ACHADO 01
+Localização e trecho: [citação curta ou indicação precisa]
+Problema: [defeito observável]
+Efeito: [como prejudica o comando, a leitura, o estilo ou a independência da resposta]
+Ajuste solicitado: [o que o elaborador deve corrigir ou esclarecer]
+Evidência: [comparação, relação textual ou referência que sustenta o achado]
+
+[Repita para cada achado. Se nenhum defeito foi encontrado, registre nenhum achado impeditivo no escopo avaliado.]
+
+REFERÊNCIAS DE ESTILO
+[Obrigatório para ESTILO_FCC: órgão, cargo, ano, caderno quando disponível, questão, página, origem verificável e característica comparada. Nos outros perfis, registre não aplicável quando não houver comparação com prova.]
+
+PENDÊNCIAS E ESCLARECIMENTOS
+[Indique os pontos que dependem de retorno do elaborador ou de material adicional, separando dúvida técnica não certificada de defeito formal observado. Caso não existam, registre nenhuma.]
+
+JUSTIFICATIVA DA DECISÃO
+[Explique por que a questão está aprovada no seu perfil, precisa de revisão ou não pôde ser avaliada. Não declare aprovação em nome dos demais perfis nem validade técnica da resposta.]
