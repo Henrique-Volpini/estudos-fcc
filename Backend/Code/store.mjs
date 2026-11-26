@@ -349,6 +349,89 @@ export class SimuladoStore {
     });
   }
 
+  async reset(id, body) {
+    return this.serialized(id, async () => {
+      requireValue(object(body) && body.confirmar === true, 'Confirme o reinício do simulado com confirmar: true.', 400);
+      const loaded = await this.load(id);
+      const originalStatus = loaded.status;
+      const previousProgress = loaded.progress;
+      const progress = emptyProgress(loaded.simulado);
+      const backupName = `.resultado.json.${randomUUID()}.reset`;
+      let resultBackedUp = false;
+      let progressWritten = false;
+      const checkDirectory = async () => {
+        requireValue(await this.directoryFor(loaded.status, id) === loaded.directory, 'A pasta do simulado foi alterada durante o reinício.', 409);
+      };
+      const dataPath = name => {
+        const target = path.resolve(loaded.directory, name);
+        requireValue(path.isAbsolute(target) && isInside(this.categories[loaded.status], target) && path.dirname(target) === loaded.directory, 'Caminho de dados fora da pasta permitida.', 400);
+        return target;
+      };
+      const checkedFile = async name => {
+        await checkDirectory();
+        const target = dataPath(name);
+        const stat = await statOptional(target);
+        requireValue(!stat || (stat.isFile() && !stat.isSymbolicLink()), 'O arquivo de dados não é um arquivo regular.');
+        return { target, exists: !!stat };
+      };
+      const moveTo = async status => {
+        await checkDirectory();
+        await this.checkCategory(status);
+        const destination = path.resolve(this.categories[status], id);
+        requireValue(path.isAbsolute(destination) && isInside(this.categories[status], destination) && path.dirname(destination) === this.categories[status], 'Destino do simulado inválido.', 400);
+        requireValue(!(await statOptional(destination)), 'Já existe um simulado com este ID na pasta de destino.', 409);
+        await fs.rename(loaded.directory, destination);
+        loaded.directory = destination;
+        loaded.status = status;
+      };
+      try {
+        // Keep the completed attempt intact until it is safely back in pendentes.
+        if (loaded.status === 'resolvido') await moveTo('pendente');
+        const result = await checkedFile('resultado.json');
+        if (result.exists) {
+          const backup = await checkedFile(backupName);
+          requireValue(!backup.exists, 'Já existe um arquivo de recuperação para este reinício.', 409);
+          await fs.rename(result.target, backup.target);
+          resultBackedUp = true;
+        }
+        await checkDirectory();
+        await atomicJson(dataPath('progresso.json'), progress);
+        progressWritten = true;
+        if (resultBackedUp) {
+          const backup = await checkedFile(backupName);
+          requireValue(backup.exists, 'O arquivo de recuperação do resultado foi alterado.', 409);
+          await fs.unlink(backup.target);
+          resultBackedUp = false;
+        }
+        loaded.progress = progress;
+        return toDetail(loaded);
+      } catch (error) {
+        let rollbackFailed = false;
+        if (progressWritten) {
+          try {
+            await checkDirectory();
+            await atomicJson(dataPath('progresso.json'), previousProgress);
+          } catch { rollbackFailed = true; }
+        }
+        if (resultBackedUp) {
+          try {
+            const backup = await checkedFile(backupName);
+            const result = await checkedFile('resultado.json');
+            requireValue(backup.exists && !result.exists, 'Não foi possível restaurar o resultado anterior.', 409);
+            await fs.rename(backup.target, result.target);
+          } catch { rollbackFailed = true; }
+        }
+        if (!rollbackFailed && loaded.status !== originalStatus) {
+          try { await moveTo(originalStatus); } catch { rollbackFailed = true; }
+        }
+        if (rollbackFailed) {
+          throw new AppError(500, 'Não foi possível concluir nem desfazer o reinício. O simulado permanece em simulados pendentes; preserve os arquivos de recuperação ocultos e verifique a pasta antes de tentar novamente.');
+        }
+        throw error;
+      }
+    });
+  }
+
   async finish(id) {
     return this.serialized(id, async () => {
       const loaded = await this.load(id);

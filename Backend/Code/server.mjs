@@ -51,16 +51,16 @@ export function createAppServer({ dataRoot = process.env.ESTUDOS_FCC_DATA_ROOT |
         return sendJson(response, 200, { ok: true });
       }
       if (request.method === 'GET' && url.pathname === '/api/simulados') return sendJson(response, 200, await storage.list());
-      const match = url.pathname.match(/^\/api\/simulados\/([^/]+)(?:\/(iniciar|respostas|classificacao|navegacao|finalizar))?$/);
+      const match = url.pathname.match(/^\/api\/simulados\/([^/]+)(?:\/(iniciar|respostas|classificacao|navegacao|finalizar|reiniciar))?$/);
       if (match) {
         let id;
         try { id = decodeURIComponent(match[1]); } catch { throw new AppError(400, 'ID do simulado inválido.'); }
         const action = match[2];
         if (request.method === 'GET' && !action) return sendJson(response, 200, await storage.get(id));
-        const allowed = { iniciar: 'POST', respostas: 'POST', classificacao: 'PATCH', navegacao: 'PATCH', finalizar: 'POST' };
+        const allowed = { iniciar: 'POST', respostas: 'POST', classificacao: 'PATCH', navegacao: 'PATCH', finalizar: 'POST', reiniciar: 'POST' };
         if (!action || request.method !== allowed[action]) throw new AppError(405, 'Método não permitido.');
         const body = await readBody(request);
-        const methods = { iniciar: 'start', respostas: 'answer', classificacao: 'classify', navegacao: 'navigate', finalizar: 'finish' };
+        const methods = { iniciar: 'start', respostas: 'answer', classificacao: 'classify', navegacao: 'navigate', finalizar: 'finish', reiniciar: 'reset' };
         return sendJson(response, 200, await storage[methods[action]](id, body));
       }
       if ((request.method === 'GET' || request.method === 'HEAD') && assets.has(url.pathname)) {

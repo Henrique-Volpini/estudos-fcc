@@ -59,6 +59,9 @@ h1 { margin: 0; font-size: clamp(1.65rem, 2.7vw, 2.2rem); line-height: 1.22; let
 .button-secondary { background: #fff; color: #415b67; border: 1px solid #d9e2e8; }
 .button-secondary:hover:not(:disabled) { background: #eef3f6; }
 .button-secondary:disabled { color: #9ba9b2; background: #f7f9fa; }
+.button-reset { color: var(--red); border-color: #e6cdd0; }
+.button-reset:hover:not(:disabled) { color: #913138; background: var(--red-light); }
+.heading-actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; max-width: 100%; }
 .button-text { color: #526d78; background: transparent; padding-left: 0; }
 .button-text:hover:not(:disabled) { color: var(--teal-dark); }
 .overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 34px; }

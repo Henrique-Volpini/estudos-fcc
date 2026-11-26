@@ -199,6 +199,26 @@ async function finishExam() {
   try { await loadLibrary(); render(); } catch { /* The completed result remains available even if refreshing the list fails. */ }
 }
 
+async function resetExam() {
+  if (state.busy || state.loading || !state.detail) return;
+  const title = state.detail.simulado.titulo;
+  if (!window.confirm(`Reiniciar "${title}"?\n\nIsso vai apagar todas as respostas, as marcações (sabia, chutei e deduzi) e o resultado desta tentativa. O simulado voltará à primeira questão.`)) return;
+  if (!(await mutate(endpoint('/reiniciar'), 'POST', { confirmar: true }))) return;
+  state.view = 'quiz'; state.tab = 'pendentes'; state.index = 0;
+  render();
+  document.querySelector('[data-testid="question-card"]')?.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  announce('Simulado reiniciado. Você pode começar novamente pela primeira questão.');
+  try { await loadLibrary(); render(); } catch { /* The reset attempt remains available even if refreshing the list fails. */ }
+}
+
+function renderResetButton() {
+  return button('Reiniciar simulado', {
+    action: resetExam, iconName: 'refresh', className: 'button-reset',
+    testId: 'reset-exam', disabled: state.busy || state.loading,
+  });
+}
+
 function renderSidebar() {
   const sidebar = node('aside', 'sidebar');
   const brand = node('div', 'brand');
@@ -349,7 +369,9 @@ function renderQuiz() {
   } }), renderSaveState());
   fragment.append(top);
   const heading = pageHeading(resolved ? 'REVISÃO DO SIMULADO' : 'UM PASSO DE CADA VEZ', detail.simulado.titulo, resolved ? 'Reveja suas escolhas e os comentários de cada alternativa.' : `${detail.resumo.respondidas} de ${detail.resumo.total} questões respondidas. Seu progresso é salvo a cada ação.`);
-  if (!resolved && detail.resumo.respondidas === detail.resumo.total && state.index !== questions.length - 1) heading.append(button('Finalizar simulado', { kind: 'primary', action: finishExam, disabled: state.busy, testId: 'finish-exam' }));
+  const actions = node('div', 'heading-actions'); actions.append(renderResetButton());
+  if (!resolved && detail.resumo.respondidas === detail.resumo.total && state.index !== questions.length - 1) actions.append(button('Finalizar simulado', { kind: 'primary', action: finishExam, disabled: state.busy, testId: 'finish-exam' }));
+  heading.append(actions);
   fragment.append(heading);
   const error = renderError(); if (error) fragment.append(error);
   const layout = node('div', 'quiz-layout');
@@ -461,8 +483,9 @@ function renderSummary() {
   const fragment = document.createDocumentFragment();
   const detail = state.detail;
   const summary = detail.resumo;
-  fragment.append(button('Meus simulados', { kind: 'text', iconName: 'chevronLeft', testId: 'back-to-list', action: () => showLibrary('resolvidos') }));
+  fragment.append(button('Meus simulados', { kind: 'text', iconName: 'chevronLeft', testId: 'back-to-list', disabled: state.busy, action: () => showLibrary('resolvidos') }));
   const heading = pageHeading('SIMULADO CONCLUÍDO', detail.simulado.titulo, detail.progresso.finalizadoEm ? `Concluído em ${dateLabel(detail.progresso.finalizadoEm, true)}. Suas respostas e marcações estão guardadas.` : 'Suas respostas e marcações estão guardadas.');
+  const actions = node('div', 'heading-actions'); actions.append(renderResetButton()); heading.append(actions);
   heading.style.marginTop = '18px'; fragment.append(heading);
   const error = renderError(); if (error) fragment.append(error);
   const hero = node('section', 'summary-hero'); hero.dataset.testid = 'result-summary';
@@ -472,7 +495,7 @@ function renderSummary() {
   for (const [value, label] of [[summary.acertos, 'acertos'], [summary.erros, 'erros'], [summary.total, 'questões']]) {
     const item = node('span'); item.append(node('strong', '', value), document.createTextNode(` ${label}`)); counts.append(item);
   }
-  text.append(counts, button('Revisar respostas', { kind: 'primary', iconName: 'history', testId: 'review-exam', action: () => { state.view = 'quiz'; state.index = 0; state.error = ''; render(); window.scrollTo({ top: 0, behavior: 'instant' }); } }));
+  text.append(counts, button('Revisar respostas', { kind: 'primary', iconName: 'history', testId: 'review-exam', disabled: state.busy, action: () => { state.view = 'quiz'; state.index = 0; state.error = ''; render(); window.scrollTo({ top: 0, behavior: 'instant' }); } }));
   hero.append(circle, text); fragment.append(hero);
   const columns = node('div', 'summary-columns');
   const subjects = node('section', 'summary-card'); subjects.append(node('h2', '', 'Desempenho por matéria'));
