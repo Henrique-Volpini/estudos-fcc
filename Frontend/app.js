@@ -1,5 +1,7 @@
 const app = document.querySelector('#app');
 const announcements = document.querySelector('#announcements');
+const browserMode = document.querySelector('meta[name="estudos-fcc-mode"]')?.content === 'browser';
+let browserApiPromise;
 const letters = ['A', 'B', 'C', 'D', 'E'];
 const confidenceOptions = [
   { value: 'sabia', label: 'Sabia', icon: 'check' },
@@ -78,6 +80,7 @@ function dateLabel(value, includeTime = false) {
 }
 
 async function api(path, { method = 'GET', body } = {}) {
+  if (browserMode) return (await getBrowserApi())(path, { method, body });
   let response;
   try {
     response = await fetch(path, {
@@ -94,6 +97,64 @@ async function api(path, { method = 'GET', body } = {}) {
   catch { throw new Error('Não foi possível ler a resposta do aplicativo. Tente novamente.'); }
   if (!response.ok) throw new Error(data.erro || 'Não foi possível concluir esta ação. Tente novamente.');
   return data;
+}
+
+function getBrowserApi() {
+  browserApiPromise ??= import('./browser-api.js').then(({ createBrowserApi }) => createBrowserApi()).catch(() => {
+    browserApiPromise = null;
+    throw new Error('Não foi possível carregar os simulados. Atualize a página e tente novamente.');
+  });
+  return browserApiPromise;
+}
+
+async function exportProgress() {
+  if (!browserMode || state.busy || state.loading) return;
+  state.busy = true; state.error = ''; render();
+  try {
+    const data = await (await getBrowserApi()).exportProgress();
+    const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    const link = node('a'); link.href = url; link.download = 'progresso-estudos-fcc.json';
+    document.body.append(link);
+    try { link.click(); } finally { link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
+    announce('Progresso exportado. Importe esse arquivo no outro aparelho para continuar.');
+  } catch (error) { state.error = error.message; announce(error.message); }
+  state.busy = false; render();
+}
+
+function chooseProgressFile() {
+  if (!browserMode || state.busy || state.loading) return;
+  const input = node('input'); input.type = 'file'; input.accept = '.json,application/json'; input.hidden = true;
+  input.addEventListener('change', () => { const file = input.files?.[0]; input.remove(); if (file) importProgress(file); }, { once: true });
+  input.addEventListener('cancel', () => input.remove(), { once: true });
+  document.body.append(input); input.click();
+}
+
+async function importProgress(file) {
+  if (state.busy || state.loading) return;
+  state.busy = true; state.error = ''; render();
+  let imported = false;
+  try {
+    if (file.size > 5 * 1024 * 1024) throw new Error('O arquivo de progresso deve ter até 5 MB.');
+    let data;
+    try { data = JSON.parse((await file.text()).replace(/^\uFEFF/, '')); }
+    catch { throw new Error('O arquivo selecionado não contém um progresso JSON válido.'); }
+    const storage = await getBrowserApi();
+    const preview = await storage.previewImport(data);
+    if (preview.substituicoes.length && !window.confirm(`Este arquivo substituirá o progresso salvo de ${preview.substituicoes.length} simulado(s) neste navegador. Deseja continuar?`)) return;
+    await storage.importProgress(data, { confirmar: true }); imported = true;
+    await loadLibrary();
+    if (state.view !== 'library' && state.detail) {
+      state.detail = await api(endpoint());
+      state.index = state.detail.progresso.indiceAtual;
+      state.view = state.detail.status === 'resolvido' ? 'summary' : 'quiz';
+      state.tab = state.detail.status === 'resolvido' ? 'resolvidos' : 'pendentes';
+      state.saveStatus = '';
+    }
+    announce(`Progresso de ${preview.simulados.length} simulado(s) importado. Você pode continuar de onde parou.`);
+  } catch (error) {
+    state.error = imported ? 'O progresso foi importado, mas a tela não pôde ser atualizada. Atualize a página.' : error.message;
+    announce(state.error);
+  } finally { state.busy = false; render(); }
 }
 
 function endpoint(suffix = '') { return `/api/simulados/${encodeURIComponent(state.detail.simulado.id)}${suffix}`; }
@@ -272,8 +333,14 @@ function renderLibrary() {
   const fragment = document.createDocumentFragment();
   const pending = state.tab === 'pendentes';
   const heading = pageHeading('CADERNOS DE ESTUDO', pending ? 'Vamos praticar?' : 'Seu caminho até aqui', pending ? 'Escolha um simulado para começar ou continuar de onde parou.' : 'Reveja suas respostas e acompanhe o que aprendeu.');
-  heading.append(button('Atualizar', { action: refreshLibrary, iconName: 'refresh', disabled: state.loading, testId: 'refresh-list' }));
+  const actions = node('div', 'heading-actions');
+  if (browserMode) {
+    actions.append(button('Exportar progresso', { action: exportProgress, disabled: state.loading || state.busy, testId: 'export-progress' }), button('Importar progresso', { action: chooseProgressFile, disabled: state.loading || state.busy, testId: 'import-progress' }));
+  }
+  actions.append(button('Atualizar', { action: refreshLibrary, iconName: 'refresh', disabled: state.loading || state.busy, testId: 'refresh-list' }));
+  heading.append(actions);
   fragment.append(heading);
+  if (browserMode) fragment.append(node('p', 'storage-note', 'Seu progresso fica salvo neste navegador. Para continuar em outro aparelho, exporte o arquivo e importe lá.'));
   const error = renderError(); if (error) fragment.append(error);
   if (state.loading) { fragment.append(loading()); return fragment; }
   if (!state.library && state.error) {

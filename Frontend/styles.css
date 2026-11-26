@@ -62,6 +62,7 @@ h1 { margin: 0; font-size: clamp(1.65rem, 2.7vw, 2.2rem); line-height: 1.22; let
 .button-reset { color: var(--red); border-color: #e6cdd0; }
 .button-reset:hover:not(:disabled) { color: #913138; background: var(--red-light); }
 .heading-actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; max-width: 100%; }
+.storage-note { color: var(--muted); font-size: .9375rem; line-height: 1.6; margin: 0 0 22px; }
 .button-text { color: #526d78; background: transparent; padding-left: 0; }
 .button-text:hover:not(:disabled) { color: var(--teal-dark); }
 .overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 34px; }
