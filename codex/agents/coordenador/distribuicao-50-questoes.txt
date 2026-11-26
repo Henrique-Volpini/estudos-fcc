@@ -1,0 +1,33 @@
+DISTRIBUIÇÃO INICIAL - 50 QUESTÕES ESPECÍFICAS
+
+NATUREZA DA DISTRIBUIÇÃO
+Proposta de treino para o Banestes - Desenvolvimento de Sistemas. O edital fixa 50 questões específicas, mas não determina a quantidade por estes 16 blocos. Esta divisão não representa uma frequência medida da FCC nem uma previsão da prova.
+O coordenador usa esta divisão como ponto de partida e registra no plano de cada simulado a distribuição efetivamente adotada. Instruções expressas do usuário prevalecem.
+
+ELABORADOR | MATÉRIA | QUANTIDADE
+01 | Processo de desenvolvimento de software | 4
+02 | Gestão e Governança de Tecnologia da Informação | 3
+03 | Programação | 7
+04 | Banco de Dados | 6
+05 | Desenvolvimento de aplicações web e mobile | 5
+06 | Arquitetura de sistemas | 4
+07 | DevOps e DevSecOps | 3
+08 | Sistemas Operacionais | 2
+09 | Redes de computadores | 3
+10 | Serviços e gerenciamento de redes | 2
+11 | Segurança da Informação | 4
+12 | Computação em nuvem | 2
+13 | Git, Kubernetes, Rancher, deploy e CI/CD | 1
+14 | Levantamento de requisitos, testes, integração e documentação técnica | 1
+15 | Governança de dados, autenticação e controle de acesso | 1
+16 | Inglês técnico | 2
+TOTAL | Conhecimentos específicos | 50
+
+COMO USAR
+- A quantidade indica as vagas daquele elaborador no conjunto final de 50 questões aprovadas, não a soma de todas as tentativas ou versões produzidas.
+- A proposta dá mais vagas a programação, bancos e desenvolvimento web/mobile e reserva participação para os demais blocos. É uma escolha inicial de treino, ajustável pelo coordenador.
+- Distribua os subtópicos dentro da quantidade de cada matéria e faça rodízio entre simulados. Não repita o mesmo recorte por falta de planejamento.
+- Nas sobreposições, defina o responsável principal e evite cobrar o mesmo objetivo em questões duplicadas. Uma questão conta uma vez.
+- Se alterar a distribuição, registre quantidades, justificativa e data no plano e confira novamente a soma. Não amplie o programa para preencher uma vaga.
+- Não mude automaticamente a quantidade de uma matéria para compensar uma questão bloqueada. Primeiro tente resolver a pendência ou substituí-la por outra questão da mesma matéria.
+- Só conte uma vaga como atendida depois que a versão selecionada receber os retornos obrigatórios dos auditores.

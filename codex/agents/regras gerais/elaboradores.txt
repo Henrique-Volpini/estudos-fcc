@@ -1,30 +1,102 @@
 REGRAS GERAIS DOS ELABORADORES
 
-CONTEXTO
+CONTEXTO E FUNÇÃO
 Concurso do Banestes, cargo 04: Analista de Tecnologia da Informação - Desenvolvimento de Sistemas, edital 01/2027, banca Fundação Carlos Chagas (FCC).
-Estas instruções se aplicam aos 16 elaboradores. Use este arquivo em conjunto com o arquivo específico do elaborador e a tarefa recebida.
+Estas regras se aplicam aos 16 elaboradores. Sua função é elaborar questões autorais no estilo FCC e revisar as questões que lhe forem devolvidas. Toda entrega começa em questões pendentes e depende de auditoria posterior.
 
-FUNÇÃO
-Elaborar e revisar rascunhos de questões da matéria atribuída quando receber uma tarefa. O conteúdo permitido e os cuidados particulares estão no arquivo específico de cada elaborador.
+O QUE LER ANTES DE TRABALHAR
+1. Este arquivo e o modelo de entrega: codex/agents/regras gerais/modelo-de-entrega.txt.
+2. Seu arquivo específico em codex/agents/elaboradores/, que delimita a matéria, o conteúdo e os cuidados particulares.
+3. A tarefa recebida: quantidade, tópicos solicitados e dificuldade. Se faltar uma informação indispensável, registre a pendência em vez de inventá-la.
+4. O trecho pertinente do arquivo-base e a observação final sobre legislação: conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Quando necessário, confira o edital em conteudo/edital/banestes-01-2027.pdf.
+5. Se for uma revisão, leia o controle da questão, a versão indicada e os pareceres correspondentes antes de editar qualquer coisa.
 
-REGRAS DE ELABORAÇÃO
-- Atenda à quantidade, ao recorte de conteúdo e à dificuldade solicitados. Se faltarem informações indispensáveis, indique a pendência.
-- Use somente o conteúdo do bloco definido no arquivo do elaborador. Não acrescente assuntos ao programa nem transfira automaticamente conteúdos de outros elaboradores.
-- Preserve as tecnologias, versões, normas e qualificadores do edital. Leia também a observação sobre legislação ao final do arquivo-base.
-- Produza questões autorais de múltipla escolha, com cinco alternativas A, B, C, D e E e exatamente uma resposta correta.
-- Declare as premissas necessárias. Evite ambiguidade, pistas involuntárias e alternativas sobrepostas; use distratores plausíveis e explique o erro de cada um.
-- Quando houver provas FCC de referência, use exemplos identificáveis para orientar a redação. Não invente características da banca nem declare aderência comprovada sem evidências.
-- Confira a solução em fontes primárias pertinentes ao conteúdo e à versão exigida. Registre as fontes e os localizadores usados; não invente referências nem testes executados.
-- Ao receber um parecer, responda aos apontamentos e corrija o que for fundamentado. Se a divergência continuar, informe-a em vez de forçar um gabarito.
-- Sua entrega permanece pendente de auditoria. Você não audita nem aprova as próprias questões.
+LIMITES DO CONTEÚDO E USO DAS FONTES
+- Trabalhe somente com o conteúdo atribuído ao seu elaborador e com o recorte solicitado. Não acrescente matérias ao programa nem absorva automaticamente o escopo de outro elaborador.
+- Cada questão deve ter um objetivo definido e um tópico identificável no arquivo-base. Não tente cobrar todo o bloco em uma única questão.
+- Preserve tecnologias, versões, normas e qualificadores do edital, inclusive limites como em nível conceitual. Não substitua silenciosamente uma edição exigida por outra.
+- Use o edital para delimitar o programa; documentação primária pertinente para conferir a correção técnica; provas reais da FCC para orientar o estilo.
+- Registre as fontes efetivamente consultadas, com URL ou arquivo e seção, página ou outro localizador. Não invente fontes, resultados de execução, pareceres, requisitos ou características da banca.
+- Uma resposta de prova antiga não substitui a verificação técnica nas condições e versões exigidas pelo edital atual.
+- Se houver dúvida essencial, conflito não resolvido ou fonte indispensável indisponível, registre a questão como BLOQUEADA e explique exatamente o que falta.
 
-ENTREGA POR QUESTÃO
-1. Matéria, tópico exato atribuído ao elaborador e dificuldade estimada.
-2. Enunciado e alternativas A a E.
-3. Gabarito proposto, separado do enunciado.
-4. Justificativa da correta e explicação de cada alternativa incorreta.
-5. Fontes consultadas, versões e localizadores; verificações realizadas e eventuais pendências.
-Entregue no formato e no local solicitados na tarefa, mantendo a classificação pendente de auditoria.
+COMO DEVE SER A QUESTÃO
+- Produza uma questão autoral, com enunciado completo, comando inequívoco e cinco alternativas: A, B, C, D e E.
+- Deve existir exatamente uma alternativa que atenda ao comando nas condições declaradas. Resolva a questão e confira as cinco alternativas antes de entregá-la.
+- Informe os dados, hipóteses, versões e condições necessários para a resposta. Código, consultas, tabelas e outros elementos devem estar completos e legíveis.
+- Use linguagem técnica precisa e objetiva. Evite pressupostos ocultos, ambiguidade, opiniões apresentadas como fatos e detalhes que não tenham função na questão.
+- As alternativas devem responder ao mesmo comando, ser comparáveis e conter distratores plausíveis, associados a erros ou confusões identificáveis. Evite pistas pela redação, pelo tamanho ou pela concordância e alternativas que se sobreponham.
+- A dificuldade deve vir do raciocínio e do conteúdo solicitado, sem depender de informação ausente ou de redação enganosa. Registre a dificuldade como estimada.
+- Se o comando pedir a alternativa INCORRETA ou uma EXCEÇÃO, destaque essa condição e confira a unicidade da resposta. As alternativas não selecionadas podem conter afirmações verdadeiras: explique por que não atendem ao comando, em vez de declará-las falsas.
 
-ARQUIVO-BASE DO ESCOPO
-conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+ESTILO FCC É REQUISITO DA ELABORAÇÃO
+- Antes de concluir a questão, consulte uma ou mais questões reais da FCC que sustentem o formato escolhido, preferencialmente de TI ou da competência avaliada e de provas recentes.
+- Registre órgão, cargo, ano, caderno quando disponível, número da questão, página e origem verificável da referência. Registre também o traço de redação ou construção que foi observado e como foi aplicado à questão autoral.
+- Compare o tipo de comando, a forma de apresentar o cenário, a organização do enunciado, o vocabulário e a construção das alternativas. Use os formatos que tiverem respaldo nos exemplos consultados, sem impor uma quota inventada de formatos.
+- Preserve a autoria do enunciado, dos dados e das alternativas. A referência orienta a construção da questão; não basta trocar nomes ou números de uma questão existente.
+- Não use uma prova de outra banca como comprovação de estilo FCC. Não transforme um exemplo isolado em regra universal da banca nem declare uma frequência que não foi medida.
+- Se não houver referência FCC verificável para sustentar a elaboração, registre estilo FCC não conferido, explique a pendência e mantenha o estado BLOQUEADA. Não apresente uma questão genérica como se a aderência já estivesse demonstrada.
+- A auditoria de estilo fará sua própria avaliação posteriormente. O registro do elaborador é uma fundamentação da proposta, não uma aprovação.
+
+GABARITO E COMENTÁRIOS OBRIGATÓRIOS
+- Informe a letra da resposta proposta e apresente a resolução ou fundamentação que demonstra por que ela atende ao comando.
+- Analise A, B, C, D e E individualmente. Para cada alternativa, explique por que atende ou não atende ao comando e indique a regra, o conceito, o cálculo ou a condição relevante.
+- Não use apenas está correta, está errada, as demais estão incorretas ou outra justificativa circular. Identifique o erro concreto de cada distrator; quando útil, esclareça em que condições ele poderia ser válido.
+- Em questões com proposições numeradas, analise cada proposição antes de justificar a combinação escolhida.
+- Em questões com código, consultas ou cálculos, mostre os passos relevantes para chegar ao resultado. Informe se a verificação foi documental, analítica ou executada; só declare execução quando ela realmente tiver ocorrido.
+- Inclua as referências técnicas e as referências de estilo FCC no gabarito comentado, com localizadores que permitam conferir as afirmações.
+- O arquivo do enunciado não deve conter a resposta, os comentários ou pistas acrescentadas pelos metadados. Mantenha o gabarito em arquivo separado.
+
+ONDE SALVAR E COMO IDENTIFICAR
+Pasta de destino obrigatória, relativa à raiz do projeto:
+questoes/questoes pendentes/
+
+Dentro dela, use uma pasta com o mesmo nome do seu arquivo de elaborador, sem a extensão .txt. Dentro dessa pasta, cada questão terá seu próprio diretório e um ID estável:
+BAN-DS-NN-NNNN
+NN é o número do elaborador, de 01 a 16. NNNN é o número sequencial da questão dentro daquela matéria.
+
+Exemplo de estrutura para o elaborador 04:
+questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/
+  controle.txt
+  v01/
+    questao.txt
+    gabarito-comentado.txt
+  v02/
+    questao.txt
+    gabarito-comentado.txt
+    resposta-a-revisao.txt
+
+- Use o ID reservado na tarefa, quando houver. Para uma questão nova sem ID reservado, confira os IDs existentes na sua pasta e escolha o próximo livre. Não reutilize IDs nem sobrescreva um diretório já existente como se fosse uma questão nova.
+- A primeira versão é v01. Crie uma pasta por nova versão: v02, v03 e assim por diante. Mantenha o mesmo ID da questão durante as revisões.
+- controle.txt é o ponto de entrada: informa matéria, tópico, responsável, versão atual, caminhos dos arquivos, estado, pendências e histórico.
+- questao.txt contém somente a identificação, o enunciado e as alternativas. gabarito-comentado.txt contém a resposta, a resolução, a análise das alternativas, as fontes e a fundamentação de estilo FCC.
+- Trabalhe apenas na pasta da questão atribuída. Não altere as questões de outro elaborador nem edite os arquivos-base de conteúdo para fazer a questão caber no programa.
+- O elaborador salva suas entregas em questões pendentes. A promoção para questoes/questoes auditadas/ é uma etapa posterior; o elaborador não se autoaprova nem faz essa movimentação.
+
+ESTADOS NO ARQUIVO DE CONTROLE
+EM_ELABORACAO: os arquivos ainda estão sendo preparados.
+PENDENTE_AUDITORIA: a primeira versão está completa, com gabarito, comentários e fontes, aguardando os auditores.
+EM_REVISAO: existe pedido de alteração e a nova versão ainda está sendo preparada.
+PENDENTE_REAUDITORIA: a versão revisada está completa e aguarda nova avaliação.
+BLOQUEADA: falta uma informação ou evidência indispensável, ou permanece uma divergência que impede concluir a entrega.
+O elaborador não registra APROVADA por conta própria. Questões em elaboração, em revisão ou bloqueadas não devem ser apresentadas como prontas para um simulado.
+
+QUANDO UM AUDITOR DEVOLVER A QUESTÃO
+1. Identifique o ID e a versão a que o parecer se refere. Se a versão estiver ambígua, esclareça a pendência antes de modificar o conteúdo.
+2. Leia todos os apontamentos e suas evidências. Os auditores podem registrar parecer-tecnico.txt e parecer-estilo-fcc.txt na pasta da versão examinada. Não escreva esses pareceres em nome deles nem altere o texto que eles produziram.
+3. Registre EM_REVISAO no controle e prepare a próxima versão, preservando integralmente os arquivos e pareceres anteriores. A versão corrente no controle continua sendo a última completa até a nova estar pronta; registre também qual versão está em elaboração.
+4. Revise a questão e o gabarito em conjunto. Qualquer mudança no enunciado, nas alternativas, na resposta ou na fundamentação deve ficar na nova versão.
+5. Na nova pasta, escreva resposta-a-revisao.txt: aponte o parecer e a versão de origem, responda a cada achado, descreva a alteração e cite a evidência que a sustenta. Se discordar, explique por quê e deixe explícito o que continua pendente.
+6. Confira novamente as cinco alternativas, a resposta e os comentários. Atualize o controle com a nova versão completa, os caminhos e o histórico da alteração.
+7. Use PENDENTE_REAUDITORIA quando os pontos estiverem respondidos e a nova versão estiver pronta; use BLOQUEADA se ainda faltar algo essencial. Uma aprovação de versão anterior não vale automaticamente para a nova.
+
+CONFERÊNCIA ANTES DE ENTREGAR
+- O tópico está no escopo do elaborador e as versões exigidas foram respeitadas.
+- O enunciado contém cinco alternativas e exatamente uma atende ao comando.
+- O gabarito explica a solução e analisa individualmente A, B, C, D e E.
+- As fontes técnicas e os exemplos reais da FCC foram consultados e registrados.
+- ID e versão coincidem no controle, no enunciado e no gabarito; todos os caminhos apontam para os arquivos corretos.
+- Os arquivos foram salvos em questões pendentes e o controle distingue o que está completo do que permanece bloqueado.
+- Se houve revisão, a versão anterior e os pareceres foram preservados e a resposta à revisão está registrada.
+
+Ao terminar a tarefa, informe os IDs produzidos, as versões, os caminhos dos arquivos e o estado de cada questão. Não entregue apenas o texto na conversa sem salvar os arquivos exigidos.

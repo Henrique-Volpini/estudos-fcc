@@ -1,0 +1,96 @@
+MODELO DE ENTREGA DOS ELABORADORES
+
+Use este modelo junto com elaboradores.txt, nesta mesma pasta. Cada seção abaixo corresponde a um arquivo separado. Os campos entre colchetes devem ser preenchidos com os dados reais; não deixe instruções ou valores de exemplo como se fossem dados da questão. Os títulos ARQUIVO e as instruções de preenchimento não fazem parte dos arquivos entregues.
+
+ARQUIVO 1: controle.txt, na pasta do ID da questão
+
+ID: [BAN-DS-NN-NNNN]
+Matéria: [número e nome do elaborador]
+Arquivo do elaborador: [caminho do prompt específico]
+Tópico do conteúdo: [trecho exato do arquivo-base]
+Objetivo da questão: [conhecimento ou raciocínio que será avaliado]
+Tarefa de origem: [identificador ou descrição da solicitação recebida]
+Responsável pela elaboração: [identificação real do responsável]
+Dificuldade estimada: [fácil, média ou difícil, conforme a tarefa]
+Estado: [EM_ELABORACAO, PENDENTE_AUDITORIA, EM_REVISAO, PENDENTE_REAUDITORIA ou BLOQUEADA]
+Versão atual completa: [v01, v02 etc.; nenhuma enquanto a primeira estiver incompleta]
+Versão em elaboração: [versão que está sendo preparada ou nenhuma]
+Enunciado atual: [caminho do questao.txt da versão completa ou ainda não disponível]
+Gabarito atual: [caminho do gabarito-comentado.txt da versão completa ou ainda não disponível]
+Pendências: [descrição precisa ou nenhuma]
+Histórico:
+- [data real, versão, evento, responsável e motivo]
+
+Atualize os campos de situação e caminhos, acrescentando os novos eventos ao histórico sem apagar os anteriores.
+
+ARQUIVO 2: questao.txt, dentro da pasta da versão
+
+ID: [mesmo ID do controle]
+Versão: [versão desta pasta]
+Matéria: [matéria atribuída]
+Tópico: [recorte do conteúdo]
+
+ENUNCIADO
+[Texto autoral, cenário e dados necessários, com comando claro.]
+
+A) [Alternativa A]
+B) [Alternativa B]
+C) [Alternativa C]
+D) [Alternativa D]
+E) [Alternativa E]
+
+Este arquivo termina nas alternativas. Não acrescente nele a resposta, os comentários ou as referências de fundamentação.
+
+ARQUIVO 3: gabarito-comentado.txt, dentro da mesma pasta da versão
+
+ID: [mesmo ID da questão]
+Versão: [mesma versão do enunciado]
+Gabarito proposto: [uma letra entre A e E]
+O que o comando pede: [identificar corretamente, identificar incorreta, determinar resultado etc.]
+
+RESOLUÇÃO
+[Demonstre a solução, explicite as premissas e mostre por que o gabarito atende ao comando.]
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) [Atende ou não atende ao comando; explicar concretamente por quê.]
+B) [Atende ou não atende ao comando; explicar concretamente por quê.]
+C) [Atende ou não atende ao comando; explicar concretamente por quê.]
+D) [Atende ou não atende ao comando; explicar concretamente por quê.]
+E) [Atende ou não atende ao comando; explicar concretamente por quê.]
+
+FONTES TÉCNICAS CONSULTADAS
+- [Título, entidade responsável, versão ou data pertinente, URL ou arquivo e localizador exato. Indicar qual afirmação ou trecho da solução a fonte sustenta.]
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: [identificar]
+- Caderno, questão e página: [identificar; informar expressamente se algum dado não estiver disponível]
+- Origem verificável: [URL ou caminho do arquivo efetivamente consultado]
+- Característica observada: [traço concreto do comando, enunciado ou alternativas]
+- Aplicação nesta questão autoral: [explicar a correspondência]
+- Limites da referência: [registrar limitações pertinentes sem generalizar o exemplo]
+
+VERIFICAÇÕES REALIZADAS
+[Descrever o que foi conferido por documentação, análise ou execução. Se houve execução, registrar ambiente, versão, entrada e resultado observado.]
+
+PENDÊNCIAS
+[Descrever o que não foi resolvido ou registrar nenhuma. Falta de evidência essencial implica BLOQUEADA no controle.]
+
+ARQUIVO 4: resposta-a-revisao.txt, somente em versões produzidas após pedido de revisão
+
+ID: [mesmo ID da questão]
+Versão de origem: [versão examinada pelos auditores]
+Nova versão: [versão desta pasta]
+Pareceres recebidos: [caminhos dos arquivos reais, com identificação dos responsáveis]
+
+APONTAMENTO 1
+Referência no parecer: [identificador ou trecho do achado]
+Problema apontado: [resumo fiel]
+Resposta do elaborador: [concordância fundamentada ou discordância fundamentada]
+Alteração realizada: [o que mudou e em qual arquivo, ou razão para não alterar]
+Evidência: [fonte, localizador ou verificação que sustenta a resposta]
+Situação do apontamento: [respondido para reavaliação ou ainda pendente]
+
+[Repetir a estrutura para cada apontamento recebido.]
+
+PENDÊNCIAS RESTANTES
+[Descrição precisa ou nenhuma. Respondido para reavaliação não significa aprovado pelo auditor.]
