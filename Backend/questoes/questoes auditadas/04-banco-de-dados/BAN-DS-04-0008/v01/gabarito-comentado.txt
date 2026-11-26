@@ -1,0 +1,53 @@
+ID: BAN-DS-04-0008
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar o valor retornado após dois retornos ao mesmo savepoint e COMMIT.
+
+RESOLUÇÃO
+O primeiro UPDATE leva o valor de 100 para 120. SAVEPOINT ajuste marca esse estado. A multiplicação produz 240, mas seu efeito é desfeito pelo primeiro ROLLBACK TO, que restaura 120. O acréscimo de 5 produz 125, também desfeito pelo retorno ao mesmo savepoint, ainda válido. Resta 120; o acréscimo final de 7 produz 127. O COMMIT confirma esse estado e o SELECT retorna 127. ROLLBACK TO não encerra a transação nem desfaz o que precede o savepoint.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O acréscimo de 20 ocorreu antes de ajuste e não é desfeito por ROLLBACK TO SAVEPOINT ajuste. Também permanece o acréscimo final de 7.
+B) Não atende. 120 é o valor registrado no savepoint e restaurado pelos dois rollbacks parciais. O último UPDATE acrescenta 7 antes do COMMIT.
+C) Não atende. 132 resultaria de somar 5 e 7 a 120, mas o segundo ROLLBACK TO descarta o acréscimo de 5.
+D) Não atende. 252 é o resultado de 120 * 2 + 5 + 7, que ignora os dois rollbacks parciais.
+E) Atende. Cada ROLLBACK TO restaura 120, e o savepoint continua válido após a primeira utilização. A última atualização produz 127, confirmado pelo COMMIT.
+
+FONTES TÉCNICAS CONSULTADAS
+- PostgreSQL 15 Documentation - SAVEPOINT
+  URL ou arquivo: https://www.postgresql.org/docs/15/sql-savepoint.html
+  Localizador e suporte: Description, Notes e Examples: marco interno à transação e desfazimento das operações posteriores.
+- PostgreSQL 15 Documentation - ROLLBACK TO SAVEPOINT
+  URL ou arquivo: https://www.postgresql.org/docs/15/sql-rollback-to.html
+  Localizador e suporte: Description: operações posteriores são desfeitas e o savepoint permanece válido para reutilização.
+- PostgreSQL 15 Documentation - COMMIT
+  URL ou arquivo: https://www.postgresql.org/docs/15/sql-commit.html
+  Localizador e suporte: Description e Examples: confirmação da transação.
+- PostgreSQL 14 Documentation - SAVEPOINT
+  URL ou arquivo: https://www.postgresql.org/docs/14/sql-savepoint.html
+  Localizador e suporte: Description e Notes: conferência na outra versão do programa.
+- PostgreSQL 14 Documentation - ROLLBACK TO SAVEPOINT
+  URL ou arquivo: https://www.postgresql.org/docs/14/sql-rollback-to.html
+  Localizador e suporte: Description: mesmo comportamento de permanência do savepoint.
+- PostgreSQL 14 Documentation - COMMIT
+  URL ou arquivo: https://www.postgresql.org/docs/14/sql-commit.html
+  Localizador e suporte: Description: confirmação da transação; conferência entre versões.
+- Programa de conhecimentos específicos - Banco de Dados
+  URL ou arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: controle de transações; PostgreSQL versões 14 e 15;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 43; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: O enunciado exibe um fragmento técnico destacado e pede sua representação entre cinco alternativas. Aplicação: O bloco SQL precede o comando de resultado; as alternativas são valores comparáveis, sem copiar o fragmento XML/JSON da referência.
+  Limites da referência: Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultadas por navegação as páginas SAVEPOINT, ROLLBACK TO SAVEPOINT e COMMIT das versões 14 e 15 em 26/11/2026; enunciado fixado em PostgreSQL 15.
+- Analítica: rastreada a sequência 100 → 120 → 240 → 120 → 125 → 120 → 127, e conferido o motivo de cada distrator. Não houve execução em PostgreSQL nem simulação apresentada como execução do SGBD.
+- Editorial: lida a Q43, p10, da extração TRT4/2022 e conferida sua origem secundária em fontes.json.
+- Independência: o SIM-001 cobrou visibilidade concorrente em READ COMMITTED; aqui o objetivo é rollback parcial e reutilização de savepoint em uma sessão.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguardando auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

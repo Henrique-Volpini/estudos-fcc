@@ -1,0 +1,43 @@
+ID: BAN-DS-04-0007
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a chave primária adequada à tabela associativa nas regras declaradas.
+
+RESOLUÇÃO
+A titularidade pertence ao par cliente-conta, caracterizando uma associação muitos-para-muitos. A tabela associativa armazena uma linha por par, com as duas referências e a data do vínculo. A chave (id_cliente, id_conta) impõe a unicidade exatamente no nível requerido. Não se deve tornar cada identificador individualmente único nem permitir que uma mudança de data crie outro registro do mesmo par.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Tornar id_cliente único permitiria no máximo uma linha de titularidade por cliente, impedindo que ele fosse titular de várias contas.
+B) Não atende. Tornar id_conta único permitiria no máximo um titular por conta, contrariando a possibilidade de contas com vários titulares.
+C) Atende. A combinação dos dois identificadores distingue cada vínculo e impede repetir o mesmo par. Cada identificador pode reaparecer em combinações diferentes, preservando os dois lados muitos.
+D) Não atende. A data não identifica um vínculo: o cenário admite vários vínculos na mesma data. Além de rejeitá-los, essa chave permitiria repetir um mesmo par usando datas diferentes.
+E) Não atende. A unicidade da tripla não impede repetir o mesmo par com outra data. Para a regra declarada, data_inicio é atributo do vínculo identificado pelo par, e não componente necessário de sua identificação.
+
+FONTES TÉCNICAS CONSULTADAS
+- PostgreSQL 15 Documentation - 5.4. Constraints
+  URL ou arquivo: https://www.postgresql.org/docs/15/ddl-constraints.html
+  Localizador e suporte: 5.4.4 Primary Keys e 5.4.5 Foreign Keys, exemplo products/orders/order_items com duas chaves estrangeiras e chave primária composta. Fundamenta unicidade por combinação e implementação de associação muitos-para-muitos.
+- Programa de conhecimentos específicos - Banco de Dados
+  URL ou arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: modelo entidade-relacionamento;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 43; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: O exemplo apresenta uma estrutura de origem antes do comando e cinco representações concorrentes. Aplicação: O enunciado fornece as regras e a estrutura relacional, e as opções apresentam composições concorrentes de chave; o objetivo é de modelagem, sem reutilizar XML/JSON ou dados da referência.
+  Limites da referência: Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada.
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 47; página 8.
+  Origem verificável: Arquivo do próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: O comando relaciona uma descrição de banco de dados a alternativas da mesma categoria conceitual. Aplicação: As cinco opções são conjuntos de atributos candidatos à chave, avaliados pelas mesmas regras declaradas.
+  Limites da referência: Referência histórica de formato; não estabelece frequência editorial nem valida o conteúdo técnico atual. A questão autoral apresenta objetivo, cenário e alternativas próprios.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: seções 5.4.4 e 5.4.5 da documentação oficial PostgreSQL 15 consultadas por navegação em 26/11/2026.
+- Analítica: confrontadas as cinco chaves com as cardinalidades e a unicidade do par; construídos contraexemplos para as opções inadequadas. Não houve execução de SQL.
+- Editorial: lidos os exemplos FCC indicados nas extrações locais e conferidos os metadados em fontes.json.
+- Independência: comparada às seis questões de Banco de Dados do SIM-001; o objetivo desta é cardinalidade e identificação de vínculo, e não dependência parcial/normalização.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguardando auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

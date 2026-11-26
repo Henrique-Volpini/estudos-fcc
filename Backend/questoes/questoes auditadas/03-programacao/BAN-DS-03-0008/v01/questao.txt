@@ -1,0 +1,21 @@
+ID: BAN-DS-03-0008
+Versão: v01
+Matéria: Programação
+Tópico: Python: definição e chamada de funções
+
+ENUNCIADO
+Em Python 3, considere a execução do código a seguir em um processo novo, sem outras chamadas à função registrar:
+
+def registrar(codigo, historico=[]):
+    historico.append(codigo)
+    return len(historico)
+
+print(registrar("A"), registrar("B", []), registrar("C"), registrar("D"))
+
+A sequência de números exibida é
+
+A) 1 1 1 1
+B) 1 2 3 4
+C) 1 1 1 2
+D) 1 1 2 3
+E) 1 2 2 3

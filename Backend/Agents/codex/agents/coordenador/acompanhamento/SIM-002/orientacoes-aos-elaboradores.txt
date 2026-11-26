@@ -1,0 +1,35 @@
+EXECUÇÃO REAL - SIM-002
+
+Leia seu perfil, as regras gerais dos elaboradores, o modelo de entrega e plano.json nesta pasta. Trabalhe somente com seu código, IDs, números e tópicos atribuídos. A meta de cada elaborador está no plano. Os tópicos escolhidos cobrem diferentes recortes do programa, sem exigir que um único simulado esgote o edital.
+
+Produza predominantemente questões de dificuldade média, com cenários ou raciocínio quando apropriado. Use enunciados objetivos, cinco opções plausíveis e uma única resposta defensável. Varie a posição da resposta sem adotar uma sequência mecânica. Não acrescente pistas pelo enunciado, pela redação das opções ou por títulos internos expostos ao estudante.
+
+FUNDAMENTAÇÃO
+Consulte documentação primária para a solução e para todas as alternativas. Use navegação para confirmar fatos técnicos, versões e referências; não apenas complete links de memória. Em exemplo executável, pode conferir a saída em memória quando útil, sem criar infraestrutura ou arquivos de testes no projeto. Declare honestamente quais verificações foram documentais, analíticas ou executadas.
+Se um recorte do plano depender de material indisponível, prefira outro recorte do mesmo bloco que consiga fundamentar e informe a troca ao coordenador. Não altere a quantidade nem invada outro escopo.
+
+REFERÊNCIAS DE FORMATO FCC
+Consulte os PDFs ou extrações em Backend/Agents/conteudo/referencias-fcc/ e seus metadados em fontes.json. O caderno TRF4/2007 foi obtido no próprio órgão e é uma referência histórica. O caderno TRT4/2022 é uma cópia hospedada no Qconcursos; declare essa origem e os limites, sem afirmar que é um download da FCC ou uma assinatura de integridade oficial.
+Leia exemplos reais pertinentes, identifique questão e página e explique a característica editorial utilizada. Não copie nem apenas troque os nomes de uma questão existente. As referências orientam o formato, não a correção técnica atual. Para inglês técnico, obtenha referência FCC da competência correspondente caso os cadernos disponíveis não a contenham.
+
+ARQUIVOS POR QUESTÃO
+Backend/questoes/questoes pendentes/<nome-do-seu-perfil-sem-txt>/<ID>/controle.txt
+Backend/questoes/questoes pendentes/<nome-do-seu-perfil-sem-txt>/<ID>/v01/questao.txt
+Backend/questoes/questoes pendentes/<nome-do-seu-perfil-sem-txt>/<ID>/v01/gabarito-comentado.txt
+Use os modelos e marque PENDENTE_AUDITORIA somente se a entrega estiver completa. Registre sua identidade real como responsável. Não escreva pareceres nem aprovações em nome dos auditores.
+
+ENTREGA ESTRUTURADA AO COORDENADOR
+Além dos TXT, salve nesta pasta entregas/NN.json, substituindo NN pelo seu código. Esse registro evita interpretar novamente o texto para montar o simulado e deve corresponder exatamente aos TXT.
+Formato: objeto com elaborador, responsavel e questoes. Cada item de questoes usa os campos definidos em formato-do-simulado.txt: id, numero (global do plano), materia, topico, versao, enunciado, alternativas, gabarito, justificativas, resolucao e fontes.
+Acrescente, para o acompanhamento, autor, dificuldadeEstimada, verificacoes e referenciasEstilo (lista com orgao, cargo, ano, caderno, questao, pagina, origem e caracteristicaAplicada). Esses campos adicionais não são um parecer de auditoria.
+Inclua todas as fontes efetivamente consultadas, com título, URL ou arquivo e localizador. Não use placeholders, comentários JSON ou campos vazios na entrega concluída.
+
+LIMITES DA TAREFA
+Não altere os prompts, o software, as questões de outros elaboradores ou o plano. Não crie README, testes ou exemplos fictícios de interface. Estas são questões reais de estudo, autorais e pendentes de auditoria, destinadas ao SIM-002.
+Ao terminar, envie os IDs, a versão, a localização dos arquivos, o caminho de entregas/NN.json e eventuais pendências. Responda aos pedidos de revisão posteriores preservando as versões anteriores.
+
+RODIZIO E INDEPENDENCIA
+Antes de elaborar, leia as suas questoes anteriores em questoes-anteriores.json nesta pasta. Nao repita a mesma pergunta com nomes ou numeros trocados. Os objetivos do plano foram escolhidos para ampliar a cobertura. Uma tecnologia pode reaparecer com objetivo diferente.
+Use sua identidade real /root/s2_elab_NN, substituindo NN pelo seu codigo. Se precisar trocar um recorte por fonte indisponivel, informe o novo recorte ao coordenador e justifique; mantenha o mesmo bloco e quantidade.
+Referencias complementares de ingles e codigo recuperadas no primeiro simulado estao em ../SIM-001/auditoria/v01/. Podem ser consultadas, mas nao alteradas. Nao invente informacoes ausentes de caderno/pagina.
+Nao escreva letras-resposta no retorno final ao coordenador; elas ficam nos arquivos privados.

@@ -1,0 +1,27 @@
+ID: BAN-DS-11-0007
+Matéria: 11 — Segurança da Informação
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/11-seguranca-da-informacao.txt
+Tópico do conteúdo: - segurança de APIs e aplicações web conforme OWASP Top 10:2021;
+Objetivo da questão: Reconhecer falha de autorização por objeto e selecionar a verificação de propriedade no servidor conforme a política declarada e o OWASP A01:2021.
+Tarefa de origem: SIM-002; questão global 42; recorte atribuído em plano.json.
+Responsável pela elaboração: /root/s2_elab_11
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01: elaboração autoral concluída e conferida documental e analiticamente por /root/s2_elab_11; recorte mantido, primeira entrega pendente de auditoria.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0007 -> Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007
+ESTILO_FCC: Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/parecer-redacao-e-conformidade.txt

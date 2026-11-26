@@ -1,0 +1,869 @@
+Banestes - Desenvolvimento de Sistemas - Simulado 02 - GABARITO COMENTADO
+
+QUESTÃO 1 | BAN-DS-01-0005 | v01
+Gabarito: B
+RESOLUÇÃO
+O WIP inicial é 3 + 2 = 5, incluindo o item bloqueado. A conclusão de um item reduz o total para 4. A transferência dos dois itens entre etapas internas não cruza o ponto de finalização e, portanto, mantém o WIP em 4. Ao final, há um item em Implementação e três em Validação. A capacidade disponível pelo limite é 6 − 4 = 2 itens. Iniciar um também respeitaria o limite, mas o comando solicita a quantidade máxima.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende ao comando: um item poderia ser iniciado, mas não é o máximo. Esse valor mantém o WIP inicial de cinco e deixa de descontar a conclusão ocorrida em Validação.
+B) Atende ao comando: o WIP passa de cinco para quatro após a única conclusão. As duas mudanças de etapa preservam esse total; o limite de seis permite iniciar mais dois itens.
+C) Não atende ao comando: iniciar três elevaria o WIP de quatro para sete. O item bloqueado continua iniciado e não finalizado, logo não pode ser excluído da contagem.
+D) Não atende ao comando: iniciar quatro elevaria o WIP para oito. A passagem dos dois itens de Implementação para Validação não representa duas conclusões do fluxo.
+E) Não atende ao comando: iniciar cinco elevaria o WIP para nove. Esse valor resultaria de descontar indevidamente tanto o item bloqueado quanto as duas movimentações internas.
+FONTES
+The Kanban Guide — edição de maio de 2025, John Coleman e Daniel Vacanti | https://kanbanguides.org/the-kanban-guide/2025.5/ | Defining and Visualizing the Workflow, elementos 2–5; Actively Managing Items in a Workflow; Flow Metrics, definição de WIP. Consulta em 26/11/2026. Sustenta contagem de itens iniciados e não finalizados, controle de WIP e capacidade para puxar novos itens.
+FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 57, página 13, seção === PAGINA 13 === da extração local. Exemplo lido de cenário técnico delimitado com pedido de valor e cinco alternativas numéricas; somente formato.
+Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas | PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item métodos ágeis (Scrum, Kanban, XP e similares). Delimitação do escopo.
+
+QUESTÃO 2 | BAN-DS-01-0006 | v01
+Gabarito: E
+RESOLUÇÃO
+A divergência exclusiva ativa apenas Conferir cadastro. Ao concluir essa tarefa, um token chega a uma das duas entradas do gateway paralelo. Conforme a semântica do gateway paralelo convergente, sua execução exige ao menos um token em cada fluxo de sequência de entrada. Como Solicitar documento não foi iniciada e não há outra origem de tokens, a segunda entrada não recebe token. A sincronização não ocorre e nenhum token segue para Registrar resultado. A conclusão é obtida pelas regras de execução dos gateways, sem pressupor correção automática do modelo por uma ferramenta.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende ao comando: o gateway exclusivo envia o token somente a Conferir cadastro. Um gateway paralelo convergente não inicia retroativamente a tarefa do outro ramo nem transforma os ramos em sequência.
+B) Não atende ao comando: a sincronização do gateway paralelo exige token em cada entrada, mesmo que o gateway anterior tenha escolhido apenas um ramo. A escolha exclusiva não altera a semântica da convergência paralela.
+C) Não atende ao comando: a convergência não está habilitada com apenas uma entrada marcada. Além disso, o gateway descrito tem uma única saída; ele não produz dois tokens nessa saída por receber um token em uma entrada.
+D) Não atende ao comando: o token permanece aguardando a sincronização, sem ser descartado por falta de outro token. Não há no trecho descrito um evento de término que encerre a instância nessa situação.
+E) Atende ao comando: somente o ramo Conferir cadastro recebe um token. O gateway paralelo requer pelo menos um token em cada entrada, e a entrada de Solicitar documento permanecerá sem token.
+FONTES
+OMG — Business Process Model and Notation (BPMN), Version 2.0.2, formal/2013-12-09 | https://www.omg.org/spec/BPMN/2.0.2/PDF | Seção 10.6.2, páginas impressas 289–290 (páginas 319–320 do PDF), divergência exclusiva; seções 13.4.1–13.4.2 e tabelas 13.1–13.2, páginas impressas 434–435 (páginas 464–465 do PDF), semântica de tokens. Consulta via web em 26/11/2026.
+FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 32, página 8, seção === PAGINA 8 === da extração local. Introdução de contexto de TI seguida de cinco afirmações comparáveis sobre o comportamento de um mecanismo; somente formato.
+Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas | PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item BPMN. Delimitação do escopo.
+
+QUESTÃO 3 | BAN-DS-01-0007 | v01
+Gabarito: A
+RESOLUÇÃO
+I tem como objeto uma classe isolada, com dependências simuladas: teste de componente, também denominado teste de unidade. II tem como foco as interfaces e as interações entre dois componentes reais: integração de componentes. III toma como objeto a aplicação completa e verifica seu comportamento em relação à especificação: teste de sistema. O fato de o terceiro fluxo alcançar várias partes da aplicação não o torna apenas um teste das interfaces entre dois componentes. O comando classifica níveis pelo objeto e pelo objetivo; a execução manual ou automatizada não mudaria essa classificação.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende ao comando: I exercita uma classe isolada, II exercita a colaboração entre dois componentes reais e III avalia o comportamento da aplicação completa em relação à especificação do sistema.
+B) Não atende ao comando: I está classificada adequadamente, mas II não tem o sistema completo como objeto e III não se limita às interfaces entre componentes; esses dois níveis foram invertidos.
+C) Não atende ao comando: III está classificada adequadamente, mas I isola a classe por simulação das dependências e II usa componentes reais em colaboração; os dois primeiros níveis foram invertidos.
+D) Não atende ao comando: II corresponde à integração de componentes, mas uma classe isolada não é o sistema completo e o fluxo completo da aplicação não é uma unidade isolada.
+E) Não atende ao comando: I não exercita a integração entre componentes reais, II não avalia a aplicação completa e III ultrapassa o escopo de uma unidade isolada; nenhuma das três posições corresponde ao cenário.
+FONTES
+ISTQB — Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024 | https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf | Seções 2.2 e 2.2.1, páginas 28–29, especialmente os três primeiros níveis e os atributos usados para distingui-los. Download acessado a partir da página oficial CTFL em 26/11/2026.
+FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8, cenário de documentação de API e correspondência ordenada nas alternativas; questão 52, página 12, combinação ordenada de três termos para preencher as lacunas I, II e III. Leitura das extrações locais; somente formato.
+Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas | PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item tipos de testes de software, recorte unitários, de integração e de sistema. Delimitação do escopo.
+
+QUESTÃO 4 | BAN-DS-01-0008 | v01
+Gabarito: D
+RESOLUÇÃO
+H1 é uma referência aprovada que relaciona itens e versões; sua identidade permite reproduzir a configuração usada na homologação. Uma solicitação posterior não deve sobrescrevê-la automaticamente. É necessário analisar o impacto e obter a autorização prevista no processo, controlar as versões dos itens alterados e estabelecer a nova referência preservando a recuperação de H1. A baseline pode evoluir por mudanças controladas; seu estabelecimento não congela para sempre o desenvolvimento nem restringe o controle apenas ao código-fonte.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende ao comando: baseline identifica uma configuração aprovada de versões específicas; não acompanha automaticamente cada commit nem se confunde com o estado mais recente de desenvolvimento.
+B) Não atende ao comando: a aprovação cria uma referência sob controle de mudanças, sem proibir a evolução do sistema. Uma nova configuração pode ser estabelecida durante a homologação mediante os procedimentos pertinentes.
+C) Não atende ao comando: um commit registra uma versão ou alteração, mas não substitui a análise e a autorização pela autoridade competente. O cenário informa que a mudança ainda não foi autorizada.
+D) Atende ao comando: a alteração deve passar pelo controle previsto, com análise de impacto e autorização, novas versões identificadas e atualização controlada da referência; preservar H1 permite recuperar a configuração anteriormente submetida aos testes.
+E) Não atende ao comando: o controle pode abranger requisitos, scripts de construção, testes e documentação, além do código. Esses itens integram expressamente a baseline e são afetados pela mudança descrita.
+FONTES
+ISTQB — Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024 | https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf | Seção 5.4, Configuration Management, página 56: identificação de itens e versões, baseline aprovada, processo formal de controle de mudanças e recuperação de baseline anterior para reproduzir resultados. Consulta via web em 26/11/2026.
+NASA Software Engineering Handbook — SWE-081, Identify Software CM Items | https://swehb.nasa.gov/spaces/7150/pages/16450453/SWE-081%2B-%2BIdentify%2BSoftware%2BCM%2BItems | Seção 3, Guidance: lista de itens sob controle, identificadores de versões e características de baselines. Inclui requisitos, scripts de construção e casos de teste. Página do Handbook no espaço 7150, consultada via web em 26/11/2026; não apresentada como edição atual de NPR.
+NASA Software Engineering Handbook — SWE-082, Authorizing Changes, página atualizada em 10/10/2017 | https://swehb.nasa.gov/spaces/7150/pages/16450445/SWE-082%2B-%2BAuthorizing%2BChanges | Seções 1–3, especialmente Rationale, Change authority e Version maintenance: análise de impacto e autorização antes da implementação, registro de mudanças e preservação de versões. Consulta via web em 26/11/2026. Usada como orientação primária de engenharia, sem impor processos específicos da NASA à instituição do cenário.
+FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questões 32 e 33, página 8, seção === PAGINA 8 === da extração local: contextualização profissional em TI e cinco alternativas comparáveis para completar o comando; somente formato.
+Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas | PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item gestão da configuração de software. Delimitação do escopo.
+
+QUESTÃO 5 | BAN-DS-02-0004 | v01
+Gabarito: D
+RESOLUÇÃO
+O PETIC orienta estrategicamente a TIC a partir do planejamento institucional. Na situação apresentada, o PDTIC deve traduzir essa direção em necessidades, metas e ações executáveis e acompanháveis. A escolha coerente vincula os desdobramentos ao objetivo de atendimento e à diretriz de interoperabilidade, prevendo recursos, prazos e indicadores. O Guia SISP admite que o PDTIC incorpore elementos estratégicos; portanto, a distinção usada aqui não estabelece uma proibição geral de conteúdo estratégico no PDTIC. O enunciado delimita a entidade que mantém os dois documentos.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O PDTIC contém desdobramentos táticos em metas e ações; os planos operacionais devem estar alinhados a ele. Apenas repetir diretrizes e desvincular a execução deixa sem tratamento a passagem da orientação estratégica para sua realização.
+B) Não atende. A ordem de recebimento informa quando a demanda chegou, mas não demonstra sua contribuição para o objetivo de atendimento ou a diretriz de interoperabilidade. O alinhamento exige relacionar as necessidades às estratégias e usar critérios de priorização pertinentes.
+C) Não atende. A alternativa inverte o direcionamento apresentado: as escolhas de TIC devem apoiar a estratégia institucional e a de TIC. Adequar os objetivos a aquisições previamente escolhidas não demonstra que essas aquisições atendam às necessidades estratégicas.
+D) Atende. A relação entre necessidades, objetivos, metas e ações permite desdobrar no nível tático a orientação do PETIC. Recursos e prazos permitem planejar a execução; indicadores permitem acompanhar a contribuição para os resultados pretendidos.
+E) Não atende. A vigência pode ser compatibilizada, mas coincidência de datas não demonstra contribuição das iniciativas aos objetivos estratégicos. O vínculo de conteúdo entre os planos continua necessário.
+FONTES
+Guia de PDTIC do SISP, versão 2.1, Secretaria de Governo Digital, dezembro de 2021 | https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/sisp/guia-do-gestor/documentos/guia-de-pdtic-do-sisp-2-1/@@download/file/Guia%20de%20PDTIC%20do%20SISP%20v2.1.pdf | Seções 3.7.5 e 3.7.6, páginas impressas 24–26; processo 1.6, páginas 44–45; processo 3.3, páginas 82–84; seção 8, página 136, Modelo de Plano de Metas e Ações.
+Plano Diretor de TIC – Governo Digital | https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/sisp/guia-do-gestor/pdtic | Trecho "O que o PDTIC deve ter?" e FAQ sobre instrumento de alinhamento.
+Conteúdo programático local – Desenvolvimento de Sistemas | Bloco Gestão e Governança de Tecnologia da Informação: planejamento estratégico de TIC (PETIC, PDTIC).
+FCC – TRT4/2022 – Analista Judiciário – Tecnologia da Informação | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001, questão 59, página 14.
+
+QUESTÃO 6 | BAN-DS-02-0005 | v01
+Gabarito: B
+RESOLUÇÃO
+No mesmo horizonte de três anos, os benefícios monetários são 3 × R$ 180.000,00 = R$ 540.000,00. Os custos são R$ 240.000,00 + 3 × R$ 40.000,00 = R$ 360.000,00. O benefício líquido é R$ 540.000,00 − R$ 360.000,00 = R$ 180.000,00. Pela convenção explicitamente adotada no enunciado, ROI = (R$ 180.000,00 / R$ 360.000,00) × 100 = 50%. Não se aplica desconto nem se divide o percentual por três, pois o comando pede o retorno simples acumulado, sem anualização. Os valores são dados fictícios do problema e não provêm do estudo usado para conferir a fórmula.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. 33,33% resulta, aproximadamente, de 180.000 / 540.000 × 100, usando os benefícios totais como denominador. A fórmula fixada exige dividir o benefício líquido pelos custos totais de R$ 360.000,00.
+B) Atende. Os benefícios somam R$ 540.000,00 e os custos somam R$ 360.000,00. O benefício líquido é R$ 180.000,00, e 180.000 / 360.000 × 100 = 50%.
+C) Não atende. 75% resulta de 180.000 / 240.000 × 100, dividindo o benefício líquido apenas pelo custo inicial. O denominador deve incluir também os R$ 120.000,00 de operação e manutenção do período.
+D) Não atende. 125% resulta de (540.000 − 240.000) / 240.000 × 100, omitindo operação e manutenção tanto na apuração do benefício líquido quanto no denominador. Esses custos foram expressamente incluídos na avaliação.
+E) Não atende. 150% resulta de 540.000 / 360.000 × 100, comparando o benefício bruto ao custo total. O ROI adotado usa o benefício líquido, isto é, o benefício total após subtrair o custo total.
+FONTES
+Forrester Consulting – The Total Economic Impact of Microsoft Unified, março de 2025 | https://tei.forrester.com/go/microsoft/unified/?lang=en-us | Glossary → Financial Terminology → RETURN ON INVESTMENT (ROI); e Total Economic Impact Approach → Costs.
+Conteúdo programático local – Desenvolvimento de Sistemas | Bloco Gestão e Governança de Tecnologia da Informação: gestão financeira de TI (TCO, ROI, CAPEX, OPEX e FinOps).
+FCC – TRF4/2007 – Analista Judiciário – Informática | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | MODELO – Caderno de Prova, Cargo I, Tipo 001, questão 20, página 5.
+
+QUESTÃO 7 | BAN-DS-02-0006 | v01
+Gabarito: E
+RESOLUÇÃO
+O fiscal deve manter o registro das ocorrências da execução e, diante de providência que supere sua competência, comunicar a situação aos superiores a tempo da adoção das medidas convenientes. O relatório da empresa é subsídio técnico: não transfere atribuições exclusivas de fiscalização, não amplia a competência do servidor e não o exonera da responsabilidade prevista no § 4º, II. O cenário usa uma autarquia e declara o regime da Lei nº 14.133/2021, sem presumir sua aplicação ao Banestes. O corte de 11/11/2026 segue a publicação do edital de abertura; o art. 117 consultado possui a mesma redação nos textos original e atualizado da Câmara, corroborada por Planalto e Senado. Não foi utilizada alteração superveniente.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O apoio técnico contratado fornece subsídios ao fiscal; não autoriza a empresa a exercer atribuição própria e exclusiva da fiscalização. A situação além da competência do fiscal deve ser comunicada aos superiores, conforme art. 117, § 2º, em conjunto com o § 4º, I.
+B) Não atende. O art. 117, § 1º, exige registro próprio de todas as ocorrências relacionadas à execução, não apenas das que o fiscal consiga corrigir diretamente. Comunicar uma situação aos superiores não afasta o dever de registrá-la.
+C) Não atende. Um relatório técnico não amplia a competência do fiscal. O art. 117, § 2º, determina a comunicação aos superiores da situação que demande decisão ou providência além de sua competência.
+D) Não atende. O encaminhamento aos superiores é cabível, mas não produz a exoneração proposta. Pelo art. 117, § 4º, II, contratar apoio técnico não exime o fiscal de responsabilidade nos limites das informações recebidas do terceiro contratado.
+E) Atende. O registro próprio decorre do art. 117, § 1º. A informação aos superiores em tempo hábil, para que adotem as medidas convenientes, decorre do § 2º. As duas providências se complementam no cenário.
+FONTES
+Lei nº 14.133, de 1º de abril de 2021 – Presidência da República/Planalto | https://planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm | Art. 117, caput, §§ 1º e 2º e § 4º, I e II; art. 1º, caput e § 1º.
+Lei nº 14.133/2021 – publicação original – Câmara dos Deputados | https://www2.camara.leg.br/legin/fed/lei/2021/lei-14133-1-abril-2021-791222-publicacaooriginal-162591-pl.html | Art. 117, caput e §§ 1º–4º.
+Lei nº 14.133/2021 – texto atualizado – Câmara dos Deputados | https://www2.camara.leg.br/legin/fed/lei/2021/lei-14133-1-abril-2021-791222-normaatualizada-pl.html | Art. 117, caput e §§ 1º–4º, sem indicação de redação substitutiva no trecho.
+Lei nº 14.133/2021 – Legislação Federal – Senado Federal | https://legis.senado.gov.br/norma/33382036/publicacao/33383820 | Art. 117, §§ 1º e 2º e § 4º, I e II.
+Edital Banestes nº 01/2027 de Abertura de Inscrições – arquivo local | Página 27: data de 11 de novembro de 2026; página 35: observação sobre legislação vigente até a publicação; bloco Gestão e Governança de TIC no Anexo IV.
+DIO-ES – aviso do Edital de Abertura do Concurso Público Banestes 01/2027 | https://ioes.dio.es.gov.br/portal/edicoes/download/11623/35 | Edição de 11/11/2026, página 35, protocolo 1902136. Texto do aviso recuperado no índice da busca web; a abertura direta retornou HTTP 403.
+Governo do Espírito Santo – Banestes e Banescor lançam novos editais de concurso público com 645 vagas para cadastro de reserva | https://www.es.gov.br/banestes-e-banescor-lancam-novos-editais-de-concurso-publico-com-645-vagas-para-cadastro-de-reserva | Publicada em 12/11/2026; parágrafos sobre aviso no Diário Oficial em 11/11/2026 e disponibilização dos editais.
+Conteúdo programático local – Desenvolvimento de Sistemas | Gestão de contratos e fornecedores de TIC com foco na Lei nº 14.133/2021; observação final de legislação.
+FCC – TRT4/2022 – Analista Judiciário – Tecnologia da Informação | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001, questão 30, página 7.
+
+QUESTÃO 8 | BAN-DS-03-0008 | v01
+Gabarito: D
+RESOLUÇÃO
+A lista padrão é criada quando a definição da função é executada. A primeira chamada insere A nessa lista e retorna 1. A segunda recebe explicitamente outra lista vazia, insere B e retorna 1. A terceira reutiliza a lista padrão, que passa a conter A e C, retornando 2. A quarta acrescenta D à mesma lista e retorna 3. Como print separa os argumentos por espaços, a saída é 1 1 2 3.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. As chamadas que omitem historico reutilizam a lista padrão; ela não é recriada a cada chamada.
+B) Não atende. A lista explícita da segunda chamada é distinta da lista padrão; essa chamada não produz o segundo elemento da lista padrão.
+C) Não atende. A segunda chamada não reinicializa o argumento padrão. A terceira chamada já encontra o elemento A nessa lista.
+D) Atende. As chamadas com A, C e D acrescentam elementos à mesma lista padrão, produzindo comprimentos 1, 2 e 3. A chamada com B usa outra lista e produz 1.
+E) Não atende. A segunda chamada recebe uma lista vazia própria e retorna 1, não 2; apenas as demais compartilham a lista padrão.
+FONTES
+Python Software Foundation — The Python Tutorial, More Control Flow Tools | https://docs.python.org/3.12/tutorial/controlflow.html#default-argument-values | §4.9.1 Default Argument Values: avaliação única do padrão mutável e argumento explícito.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido) | https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76 | Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+Programa-base — Programação | Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;
+
+QUESTÃO 9 | BAN-DS-03-0009 | v01
+Gabarito: A
+RESOLUÇÃO
+A resolução começa pelos métodos aplicáveis sem boxing ou unboxing. Para a, de tipo int, escolher(long) é aplicável por ampliação primitiva; as outras candidatas exigem boxing. Para b, de tipo Integer, escolher(Integer) e escolher(Number) são aplicáveis nessa primeira fase, sendo Integer a opção mais específica. Para c, de tipo Number, escolher(Number) é aplicável; não há conversão implícita de Number para Integer. A concatenação resulta em LIN.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende. int é ampliado para long na primeira chamada; Integer seleciona a sobrecarga mais específica Integer na segunda; o argumento de tipo estático Number seleciona Number na terceira.
+B) Não atende. Para a, a ampliação de int para long já fornece método aplicável na primeira fase; a conversão por boxing para Integer não a substitui.
+C) Não atende. c tem tipo estático Number, que não é convertido implicitamente para Integer para selecionar essa sobrecarga. O objeto referenciado não muda essa resolução.
+D) Não atende. A conversão de int para Number exigiria boxing seguido de ampliação de referência. A sobrecarga long já é aplicável sem boxing.
+E) Não atende. Para b, as sobrecargas de referência são aplicáveis antes de considerar unboxing para long, e Integer é mais específica que Number.
+FONTES
+Oracle — Java Language Specification, Java SE 21, Chapter 15 | https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.12.2 | §15.12.2, §15.12.2.2 e §15.12.2.5: fases de aplicabilidade e método mais específico.
+Oracle — Java Language Specification, Java SE 21, Chapter 5 | https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.3 | §5.1.2, §5.1.5, §5.1.7, §5.1.8 e §5.3: ampliação primitiva, referência, boxing, unboxing e contextos de invocação.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido) | https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76 | Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+Programa-base — Programação | Linhas 39–58; recorte: sobrecarga e sobrescrita de métodos;
+
+QUESTÃO 10 | BAN-DS-03-0010 | v01
+Gabarito: B
+RESOLUÇÃO
+item e caixa inicialmente referem-se à mesma instância. Por isso, item.Valor += taxa muda o campo dessa instância de 10 para 13. A instrução seguinte modifica somente a cópia da referência armazenada em item: caixa continua apontando para a instância de valor 13. Já taxa é um parâmetro ref e corresponde à variável de Main; taxa += 2 altera essa variável para 5. A saída é 13 5.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. item recebe por valor uma cópia da referência. A atribuição de uma nova Caixa a item não substitui a referência guardada em caixa.
+B) Atende. A primeira instrução altera para 13 o objeto compartilhado; a reatribuição de item é local; ref faz taxa do chamador passar de 3 para 5.
+C) Não atende. O valor 13 considera corretamente a mutação do objeto, mas taxa é passada por ref e sua atualização é visível em Main.
+D) Não atende. A passagem da referência por valor permite alterar o objeto referido, e o parâmetro ref permite alterar taxa; as duas mudanças são observáveis.
+E) Não atende. A reatribuição local de item não muda caixa, enquanto a alteração de taxa, passada por ref, muda a variável de Main.
+FONTES
+Microsoft Learn — Method parameters and modifiers, C# reference | https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters | Introdução; Pass by value and pass by reference; exemplos de reatribuição e parâmetros ref. Sustenta cópia da referência, mutação compartilhada e alteração por ref.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido) | https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76 | Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+Programa-base — Programação | Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;
+
+QUESTÃO 11 | BAN-DS-03-0011 | v01
+Gabarito: E
+RESOLUÇÃO
+A expressão agrupa-se como (a && ++b) || ((b > 1) && ++c). Como a é zero, ++b não é avaliado e o primeiro grupo resulta em zero. O || precisa avaliar o segundo grupo. b > 1 é verdadeiro; então ++c eleva c de 4 a 5, valor não zero, e esse && resulta em 1. O || produz int 1. Não há leitura e modificação não sequenciadas de uma mesma variável nessa avaliação. São exibidos 2 5 1.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Como a vale zero, o primeiro && não avalia ++b; b permanece 2.
+B) Não atende. O primeiro && produz zero e o || avalia sua expressão à direita. Como b > 1 é verdadeiro, ++c é executado.
+C) Não atende. c passa a 5, mas o resultado de && e || é int 0 ou 1; r não recebe o valor 5 do operando.
+D) Não atende. ++b é omitido pelo primeiro curto-circuito. Como a expressão à esquerda de || é falsa, sua expressão à direita é avaliada e incrementa c.
+E) Atende. b fica 2; a avaliação de b > 1 && ++c incrementa c para 5 e produz 1; o resultado final de || também é 1.
+FONTES
+ISO/IEC JTC1/SC22/WG14 — N1570, Committee Draft, 12 April 2011 | https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf | §6.5.3.1 (incremento prefixado), §6.5.8 (relacionais), §6.5.13 e §6.5.14 (gramática, resultado lógico, ordem e curto-circuito), página impressa 99/PDF 117. Rascunho público de C11, identificado como tal.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido) | https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76 | Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+Programa-base — Programação | Linhas 39–58; recorte: operadores e precedência;
+
+QUESTÃO 12 | BAN-DS-03-0012 | v01
+Gabarito: C
+RESOLUÇÃO
+Sem o terceiro argumento, array_search usa comparação frouxa e retorna a primeira chave correspondente: a string numérica "12" corresponde ao inteiro 12, na chave 0. Com true, a comparação inclui o tipo, e a correspondência é a string "12", na chave 1. O retorno 0 é uma chave válida e não é idêntico a false; logo a condição $a !== false seleciona S. A concatenação produz 0:1:S.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. A chave inteira 0 é diferente do booleano false na comparação estrita !==, portanto a última parcela é S.
+B) Não atende. A primeira busca não usa comparação estrita e encontra o inteiro 12 na chave 0 antes da string da chave 1.
+C) Atende. A busca sem strict encontra a chave 0; a busca com true exige também o tipo string e encontra a chave 1; 0 !== false é verdadeiro.
+D) Não atende. Na segunda busca, strict=true impede que a string procurada corresponda ao inteiro da chave 0. A chave retornada é 1.
+E) Não atende. Inverte os resultados das buscas: a busca frouxa encontra 0 e a estrita encontra 1. Além disso, a chave 0 satisfaz a condição !== false.
+FONTES
+PHP Manual — array_search | https://www.php.net/manual/en/function.array-search.php | Description, strict, Return Values e Warning: primeira chave, comparação estrita e distinção entre chave 0 e false; utilizada apenas a documentação, sem comentários de usuários.
+PHP Manual — Comparison Operators | https://www.php.net/manual/en/language.operators.comparison.php | Tabela dos operadores ==, === e !==; comparação entre número e string numérica e operador ternário.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido) | https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76 | Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+Programa-base — Programação | Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;
+
+QUESTÃO 13 | BAN-DS-03-0013 | v01
+Gabarito: D
+RESOLUÇÃO
+O comando deve conter o predicado Nome = @nome e receber o valor de nome pela coleção Parameters. O provedor usa o formato @ para parâmetros nomeados. Add informa NVarChar e tamanho 80; Value = nome fornece o dado. Assim, apóstrofos pertencem ao valor do parâmetro e não são incorporados ao código SQL. As demais propostas interpolam a entrada, transformam o marcador em literal, omitem a coluna no filtro ou atribuem o valor errado ao parâmetro.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. A interpolação coloca a entrada dentro do texto SQL. Adicionar depois um parâmetro não utilizado pelo comando não desfaz essa interpolação; apóstrofos da entrada podem interferir no literal SQL.
+B) Não atende. As aspas simples tornam '@nome' um literal textual do SQL, em vez de um marcador de parâmetro. O predicado compara a coluna com esse texto literal.
+C) Não atende. O predicado compara o parâmetro com ele mesmo, sem usar a coluna Nome. Para o valor não nulo declarado, não filtra os clientes pelo nome solicitado.
+D) Atende. O marcador @nome fica no comando sem aspas SQL, e a coleção de parâmetros fornece tipo, tamanho e o valor da variável nome, separado do texto do comando.
+E) Não atende. O parâmetro existe e é utilizado, mas recebe a string literal "@nome", não o conteúdo da variável nome. A busca usa o valor errado.
+FONTES
+Microsoft Learn — Configuring parameters and parameter data types, ADO.NET | https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/configuring-parameters-and-parameter-data-types | Introdução; Working with parameter placeholders; Specifying parameter data types. Valor tratado como literal e parâmetros Microsoft.Data.SqlClient no formato @nome.
+Microsoft Learn — SqlParameterCollection.Add Method, Microsoft.Data.SqlClient | https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqlparametercollection.add?view=sqlclient-dotnet-standard-1.0 | Sobrecarga Add(String, SqlDbType, Int32): nome, tipo e tamanho; página lista também Microsoft.Data.SqlClient 5.2.
+Microsoft Learn — Commands and Parameters, ADO.NET | https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/commands-and-parameters | Objeto Command e fornecimento de valores por parâmetros; delimitação do uso de CommandType.Text.
+Microsoft Learn — Constants (Transact-SQL) | https://learn.microsoft.com/en-us/sql/t-sql/data-types/constants-transact-sql?view=sql-server-ver16 | Character string constants: aspas simples delimitam constantes e apóstrofos embutidos requerem tratamento no texto SQL; sustenta a análise dos distratores com interpolação ou marcador entre aspas.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, questão 33 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001; página 8. Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade.
+Programa-base — Programação | Linhas 39–58; recorte: acesso a banco de dados;
+
+QUESTÃO 14 | BAN-DS-03-0014 | v01
+Gabarito: B
+RESOLUÇÃO
+A falha inicial identifica a etapa red; a implementação que faz passar o teste novo e os anteriores produz green. A melhoria estrutural seguinte pode remover a duplicação sem mudar o comportamento observado, usando os testes para verificar a preservação. Esse é o papel de refactor. Acrescentar regras ou alterar expectativas funcionais exige tratar uma mudança de comportamento, em vez de classificá-la como simples refatoração.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Introduz novo comportamento e posterga seu teste; refatorar melhora a estrutura do comportamento já implementado.
+B) Atende. A remoção de duplicação é uma melhoria estrutural; preservar o comportamento e manter a suíte passando corresponde ao objetivo de refactor.
+C) Não atende. Enfraquecer as asserções pode ocultar alterações de comportamento. Isso não demonstra que a simplificação preservou os resultados exigidos.
+D) Não atende. Alterar a regra de tarifa e os resultados esperados muda o comportamento especificado; essa alteração funcional não é refatoração.
+E) Não atende. Antecipar funcionalidades futuras e adiar a execução dos testes mistura evolução funcional e melhoria estrutural, afastando-se do ciclo incremental descrito.
+FONTES
+Kent Beck — Canon TDD, 11 December 2023 | https://newsletter.kentbeck.com/p/canon-tdd | The Steps, itens 2 Write a Test, 3 Make it Pass e 4 Optionally Refactor; lista inicial e preservação dos testes anteriores. Artigo do criador do método.
+Martin Fowler — Test Driven Development, atualização de 11 December 2023 | https://martinfowler.com/bliki/TestDrivenDevelopment.html | Três passos Red–Green–Refactor e melhoria da estrutura do código novo e anterior; fonte autoral complementar.
+FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, questão 33 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001; página 8. Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade.
+Programa-base — Programação | Linhas 39–58; recorte: TDD e BDD;
+
+QUESTÃO 15 | BAN-DS-04-0007 | v01
+Gabarito: C
+RESOLUÇÃO
+A titularidade pertence ao par cliente-conta, caracterizando uma associação muitos-para-muitos. A tabela associativa armazena uma linha por par, com as duas referências e a data do vínculo. A chave (id_cliente, id_conta) impõe a unicidade exatamente no nível requerido. Não se deve tornar cada identificador individualmente único nem permitir que uma mudança de data crie outro registro do mesmo par.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Tornar id_cliente único permitiria no máximo uma linha de titularidade por cliente, impedindo que ele fosse titular de várias contas.
+B) Não atende. Tornar id_conta único permitiria no máximo um titular por conta, contrariando a possibilidade de contas com vários titulares.
+C) Atende. A combinação dos dois identificadores distingue cada vínculo e impede repetir o mesmo par. Cada identificador pode reaparecer em combinações diferentes, preservando os dois lados muitos.
+D) Não atende. A data não identifica um vínculo: o cenário admite vários vínculos na mesma data. Além de rejeitá-los, essa chave permitiria repetir um mesmo par usando datas diferentes.
+E) Não atende. A unicidade da tripla não impede repetir o mesmo par com outra data. Para a regra declarada, data_inicio é atributo do vínculo identificado pelo par, e não componente necessário de sua identificação.
+FONTES
+PostgreSQL 15 Documentation - 5.4. Constraints | https://www.postgresql.org/docs/15/ddl-constraints.html | 5.4.4 Primary Keys e 5.4.5 Foreign Keys, exemplo products/orders/order_items com duas chaves estrangeiras e chave primária composta. Fundamenta unicidade por combinação e implementação de associação muitos-para-muitos.
+FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 43, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo.
+FCC - Tribunal Regional Federal da 4ª Região - 2007 - Cargo I, Tipo 001 | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | Questão 47, página 8; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Origem e limites descritos em referenciasEstilo.
+Programa de conhecimentos específicos - Banco de Dados | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | modelo entidade-relacionamento;
+
+QUESTÃO 16 | BAN-DS-04-0008 | v01
+Gabarito: E
+RESOLUÇÃO
+O primeiro UPDATE leva o valor de 100 para 120. SAVEPOINT ajuste marca esse estado. A multiplicação produz 240, mas seu efeito é desfeito pelo primeiro ROLLBACK TO, que restaura 120. O acréscimo de 5 produz 125, também desfeito pelo retorno ao mesmo savepoint, ainda válido. Resta 120; o acréscimo final de 7 produz 127. O COMMIT confirma esse estado e o SELECT retorna 127. ROLLBACK TO não encerra a transação nem desfaz o que precede o savepoint.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O acréscimo de 20 ocorreu antes de ajuste e não é desfeito por ROLLBACK TO SAVEPOINT ajuste. Também permanece o acréscimo final de 7.
+B) Não atende. 120 é o valor registrado no savepoint e restaurado pelos dois rollbacks parciais. O último UPDATE acrescenta 7 antes do COMMIT.
+C) Não atende. 132 resultaria de somar 5 e 7 a 120, mas o segundo ROLLBACK TO descarta o acréscimo de 5.
+D) Não atende. 252 é o resultado de 120 * 2 + 5 + 7, que ignora os dois rollbacks parciais.
+E) Atende. Cada ROLLBACK TO restaura 120, e o savepoint continua válido após a primeira utilização. A última atualização produz 127, confirmado pelo COMMIT.
+FONTES
+PostgreSQL 15 Documentation - SAVEPOINT | https://www.postgresql.org/docs/15/sql-savepoint.html | Description, Notes e Examples: marco interno à transação e desfazimento das operações posteriores.
+PostgreSQL 15 Documentation - ROLLBACK TO SAVEPOINT | https://www.postgresql.org/docs/15/sql-rollback-to.html | Description: operações posteriores são desfeitas e o savepoint permanece válido para reutilização.
+PostgreSQL 15 Documentation - COMMIT | https://www.postgresql.org/docs/15/sql-commit.html | Description e Examples: confirmação da transação.
+PostgreSQL 14 Documentation - SAVEPOINT | https://www.postgresql.org/docs/14/sql-savepoint.html | Description e Notes: conferência na outra versão do programa.
+PostgreSQL 14 Documentation - ROLLBACK TO SAVEPOINT | https://www.postgresql.org/docs/14/sql-rollback-to.html | Description: mesmo comportamento de permanência do savepoint.
+PostgreSQL 14 Documentation - COMMIT | https://www.postgresql.org/docs/14/sql-commit.html | Description: confirmação da transação; conferência entre versões.
+FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 43, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo.
+Programa de conhecimentos específicos - Banco de Dados | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | controle de transações; PostgreSQL versões 14 e 15;
+
+QUESTÃO 17 | BAN-DS-04-0009 | v01
+Gabarito: A
+RESOLUÇÃO
+A primeira concessão dá a ana tanto SELECT quanto a opção de repassá-lo. A segunda cria para bruno uma concessão dependente dessa opção. No comando final, GRANT OPTION FOR delimita a retirada à opção de concessão de ana: seu SELECT permanece. CASCADE remove o privilégio dependente de bruno. Como não existem outras concessões, privilégios de PUBLIC ou associações a roles, bruno deixa de ter SELECT.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende. GRANT OPTION FOR retira de ana somente a faculdade de conceder SELECT, preservando sua leitura. CASCADE remove a concessão dependente feita a bruno, que não tem outra fonte para o privilégio.
+B) Não atende. A leitura de ana permanece, mas a de bruno depende da opção de concessão retirada; CASCADE alcança essa dependência.
+C) Não atende. A revogação especifica GRANT OPTION FOR, portanto não retira a leitura de ana. O privilégio de bruno, ao contrário, é dependente da concessão de ana e é removido.
+D) Não atende. Seria possível remover também a leitura de ana revogando o próprio SELECT. O comando apresentado revoga apenas sua opção de concessão.
+E) Não atende. A existência de privilégio dependente impediria a revogação com RESTRICT, mas CASCADE autoriza a remoção das concessões dependentes. A cadeia foi explicitamente delimitada no enunciado.
+FONTES
+PostgreSQL 15 Documentation - GRANT | https://www.postgresql.org/docs/15/sql-grant.html | GRANT on Database Objects: WITH GRANT OPTION permite repassar privilégios; descrição das fontes cumulativas de acesso.
+PostgreSQL 15 Documentation - REVOKE | https://www.postgresql.org/docs/15/sql-revoke.html | Description, parágrafos sobre GRANT OPTION FOR, dependent privileges e CASCADE; Notes, exemplo de concessão A → B → C.
+PostgreSQL 14 Documentation - GRANT | https://www.postgresql.org/docs/14/sql-grant.html | GRANT on Database Objects: conferência de WITH GRANT OPTION na versão 14.
+PostgreSQL 14 Documentation - REVOKE | https://www.postgresql.org/docs/14/sql-revoke.html | Description: distinção entre privilégio e opção de concessão; revogação de dependências com CASCADE.
+FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 41, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo.
+FCC - Tribunal Regional Federal da 4ª Região - 2007 - Cargo I, Tipo 001 | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | Questão 49, página 8; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Origem e limites descritos em referenciasEstilo.
+Programa de conhecimentos específicos - Banco de Dados | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | comandos SQL: DML, DDL e DCL; PostgreSQL versões 14 e 15;
+
+QUESTÃO 18 | BAN-DS-04-0010 | v01
+Gabarito: D
+RESOLUÇÃO
+No Oracle 19c, a cadeia de caracteres de comprimento zero é tratada como NULL; assim, os registros 1 e 2 têm apelido nulo. A condição IS NULL é verdadeira nessas duas linhas. O teste apelido = NULL produz UNKNOWN, inclusive para valores nulos. Com OR, TRUE combinado com UNKNOWN continua TRUE, selecionando 1 e 2. Para os registros 3 e 4, IS NULL é FALSE e FALSE OR UNKNOWN resulta UNKNOWN; o WHERE não seleciona essas linhas. ORDER BY id organiza a saída como 1, 2.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Além do NULL explícito do registro 1, a cadeia de comprimento zero inserida no registro 2 é tratada como NULL pelo Oracle 19c.
+B) Não atende. O texto '0' tem um caractere e não é NULL. Para o registro 3, IS NULL é falso e a igualdade a NULL produz UNKNOWN; a linha não satisfaz o WHERE.
+C) Não atende. Os registros 3 e 4 têm valores não nulos. Comparar seus valores com NULL não torna a condição verdadeira; produz UNKNOWN.
+D) Atende. Os registros 1 e 2 têm apelido nulo no Oracle 19c. Neles, IS NULL é verdadeiro e o OR resulta verdadeiro. Nos demais, a condição não é verdadeira.
+E) Não atende. A igualdade a NULL produz UNKNOWN, mas não anula um operando verdadeiro do OR. Nos registros 1 e 2, IS NULL basta para tornar a condição verdadeira.
+FONTES
+Oracle Database 19c SQL Language Reference - Nulls | https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Nulls.html | Texto inicial: valor de caractere com comprimento zero; Nulls with Comparison Conditions e Nulls in Conditions: comparação produz UNKNOWN e WHERE seleciona apenas condições verdadeiras.
+Oracle Database 19c SQL Language Reference - Null Conditions | https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Null-Conditions.html | Condições IS NULL e IS NOT NULL, tabela de condições e exemplo SELECT com WHERE IS NULL.
+Oracle Database 19c SQL Language Reference - Logical Conditions | https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Logical-Conditions.html | Logical Conditions, regra de OR e OR Truth Table: TRUE OR UNKNOWN = TRUE; FALSE OR UNKNOWN = UNKNOWN.
+FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 43, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo.
+Programa de conhecimentos específicos - Banco de Dados | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | comandos SQL: DML, DDL e DCL; Oracle 19c;
+
+QUESTÃO 19 | BAN-DS-04-0011 | v01
+Gabarito: B
+RESOLUÇÃO
+O grão declara o significado de uma linha: neste caso, um pagamento individual. Duas ocorrências com a mesma data, agência e canal continuam sendo duas linhas. valor_pago é a medida do evento; Data, Agência e Canal descrevem seu contexto. No esquema estrela, a fato guarda a medida e as referências às tabelas de dimensões. Uma agregação diária mudaria o significado da linha, e misturar totais mensais com eventos produziria uma fato com grãos incompatíveis.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O valor é uma medida do pagamento e varia entre eventos do mesmo canal. Armazená-lo como atributo de Canal não o mantém no grão da tabela fato proposto.
+B) Atende. Cada linha representa exatamente um pagamento; valor_pago mede esse evento, e as três chaves o vinculam ao contexto descritivo de Data, Agência e Canal, formando a estrutura em estrela.
+C) Não atende. A agregação por data, agência e canal reúne pagamentos distintos que compartilham essas dimensões. Isso muda o grão definido, embora a estrutura agregada possa ser útil em outra tabela fato.
+D) Não atende. A linha por evento preserva o grão, mas a proposta elimina as tabelas de dimensões e suas relações com a fato, deixando de implementar a estrutura em estrela solicitada.
+E) Não atende. Pagamentos individuais e totais mensais representam grãos diferentes. Misturá-los na mesma tabela fato viola o grão uniforme definido e pode levar à dupla contagem em somas sem distinção dessas linhas.
+FONTES
+Kimball Group - Grain - Dimensional Modeling Techniques | https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/grain/ | Declaração do significado de uma linha de fato; compatibilidade entre grão, dimensões e medidas; separação de grãos em tabelas físicas distintas.
+Kimball Group - Star Schemas and OLAP Cubes | https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/star-schema-olap-cube/ | Separação entre medidas e contexto descritivo; fato ligada a dimensões por relações de chave primária/estrangeira.
+FCC - Tribunal Regional Federal da 4ª Região - 2007 - Cargo I, Tipo 001 | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | Questão 52, página 9; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Origem e limites descritos em referenciasEstilo.
+Programa de conhecimentos específicos - Banco de Dados | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | conceitos de modelagem dimensional (fatos, dimensões, métricas, esquemas estrela e floco de neve);
+
+QUESTÃO 20 | BAN-DS-04-0012 | v01
+Gabarito: C
+RESOLUÇÃO
+INTO STRICT exige que o comando produza exatamente uma linha. Para Z não há correspondências: é levantada NO_DATA_FOUND antes do RETURN. Para Y existe uma linha com valor nulo; sua cardinalidade satisfaz STRICT e v_valor recebe NULL, que é retornado. Para X há duas correspondências; valores iguais não reduzem a quantidade de linhas e a função não usa DISTINCT. Assim, é levantada TOO_MANY_ROWS. As chamadas foram declaradas independentes para que a falha de uma transação não impeça observar as demais.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Esse comportamento corresponde ao SELECT INTO sem STRICT: ausência de linhas atribui NULL, e apenas a primeira linha entre várias é usada. A função apresentada exige exatamente uma linha.
+B) Não atende. NO_DATA_FOUND ocorre quando a consulta não retorna linhas. Para Y existe uma linha, cujo valor é NULL; STRICT verifica cardinalidade, sem proibir um valor nulo nessa variável.
+C) Atende. Z não retorna linhas e gera NO_DATA_FOUND. Y retorna exatamente uma linha, permitindo retornar NULL. X retorna duas linhas e gera TOO_MANY_ROWS, mesmo que os valores sejam iguais.
+D) Não atende. As duas linhas de X continuam sendo duas linhas. A consulta não usa DISTINCT nem agregação, e STRICT não escolhe simplesmente a primeira delas.
+E) Não atende. Com STRICT, a consulta sem linhas para Z não atribui silenciosamente NULL: ela gera NO_DATA_FOUND. Os comportamentos indicados para Y e X estão coerentes, mas o primeiro não.
+FONTES
+PostgreSQL 15 Documentation - 43.5. Basic Statements | https://www.postgresql.org/docs/15/plpgsql-statements.html | 43.5.3 Executing a Command with a Single-Row Result: SELECT INTO sem STRICT e com STRICT; NO_DATA_FOUND para zero linhas e TOO_MANY_ROWS para mais de uma.
+PostgreSQL 14 Documentation - 43.5. Basic Statements | https://www.postgresql.org/docs/14/plpgsql-statements.html | 43.5.3: conferência do mesmo comportamento na outra versão prevista no programa.
+FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 52, página 12; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo.
+Programa de conhecimentos específicos - Banco de Dados | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | SQL, PL/SQL e PL/pgSQL; PostgreSQL versões 14 e 15;
+
+QUESTÃO 21 | BAN-DS-05-0006 | v01
+Gabarito: D
+RESOLUÇÃO
+min-width estabelece um limite mínimo inclusivo. Em 580px vale apenas a regra básica: (1, 8px). Em 760px aplica-se a consulta de 600px: (2, 8px). Em 1100px aplicam-se as duas consultas. Com mesma origem, importância e especificidade, a declaração posterior de grid-template-columns prevalece: duas colunas. Como a última regra não declara gap, continua aplicável o gap de 24px da consulta de 960px. O terceiro par é (2, 24px).
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: em 1100px ambas as consultas se aplicam, e a declaração posterior de duas colunas prevalece sobre a de três colunas.
+B) Não atende: em 760px a condição min-width: 960px é falsa; não se aplicam suas três colunas nem seu gap de 24px.
+C) Não atende: em 760px somente a consulta de 600px se aplica, e ela não altera o gap básico de 8px.
+D) Atende: os resultados são uma coluna e 8px, duas colunas e 8px, duas colunas e 24px.
+E) Não atende: em 580px nenhuma das duas consultas se aplica; permanece uma coluna.
+FONTES
+W3C — Media Queries Level 3 — Recomendação de 21/05/2024 | https://www.w3.org/TR/mediaqueries-3/ | Seções 2, Media Queries, e 4.1, width: condições de aplicação e prefixo min-.
+W3C — CSS Cascading and Inheritance Level 3 — Recomendação de 11/02/2021 | https://www.w3.org/TR/css-cascade-3/#cascade-sort | Seção 6.1, Cascade Sorting Order, especialmente Specificity e Order of Appearance: desempate pela ordem de declaração, por propriedade.
+MDN — Using media queries | https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using | Trecho sobre range features e prefixos inclusivos min-/max-; consulta complementar em 26/11/2026.
+MDN — Specificity | https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Specificity | Seção Three-column comparison e desempate entre seletores de igual especificidade; consulta complementar em 26/11/2026.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação, A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8; referência editorial, não fundamentação técnica atual.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação, A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 44, página 10; referência editorial, não fundamentação técnica atual.
+
+QUESTÃO 22 | BAN-DS-05-0007 | v01
+Gabarito: A
+RESOLUÇÃO
+Resposta é uma união discriminada por estado, cujos valores literais são distintos. A condição verdadeira restringe r a Falha, permitindo o acesso a mensagem no ponto I. Esse ramo encerra a função com return. Para alcançar o ponto II, a condição deve ter sido falsa, eliminando Falha e restringindo r a Sucesso. Assim, valor é number e a chamada toFixed é compatível com o retorno string.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende: a comparação seleciona Falha no ponto I, e seu retorno deixa somente Sucesso no ponto II.
+B) Não atende: no ponto I a união já foi reduzida a Falha pela propriedade discriminante estado.
+C) Não atende: o retorno do ramo de erro impede que Falha alcance o ponto II; ali resta Sucesso.
+D) Não atende: os tipos foram invertidos; estado igual a erro seleciona Falha, não Sucesso.
+E) Não atende: I tem tipo Falha; II é alcançável por Sucesso, portanto não tem tipo never.
+FONTES
+TypeScript Handbook — Narrowing — documentação oficial | https://www.typescriptlang.org/docs/handbook/2/narrowing.html | Seções Control flow analysis e Discriminated unions: discriminação por literal e exclusão de ramo que retornou. Consultada em 26/11/2026; recorte aplicado ao TypeScript 5.9.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação, A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 42, página 10; referência editorial, não fundamentação técnica atual.
+
+QUESTÃO 23 | BAN-DS-05-0008 | v01
+Gabarito: E
+RESOLUÇÃO
+As chaves atuais continuam sendo 0 e 1. A instância de Linha com chave 0 preserva X, mas passa a receber Bia; a instância com chave 1 preserva Y e passa a receber Ana. Na ordem pedida, Ana exibe Y e Bia exibe X. Se o id for usado desde a montagem inicial, a identidade de cada Linha acompanha o cliente ao mudar de posição. A mudança posterior da estratégia de chave não recupera automaticamente notas já associadas às instâncias anteriores.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: a chave proposta é adequada, mas com a chave atual a nota X permanece na primeira posição, agora ocupada por Bia.
+B) Não atende: o resultado previsto é o da chave atual, mas manter o índice continua vinculando o estado à posição.
+C) Não atende: o resultado inicial está previsto corretamente, mas acrescentar o índice faz a chave mudar quando o cliente troca de posição.
+D) Não atende: o resultado inicial está previsto corretamente, mas uma chave aleatória muda entre renderizações e pode recriar os componentes, perdendo o estado.
+E) Atende: com índices, Ana passa à posição com Y e Bia à posição com X; o id estável permite identificar cada cliente ao reordenar.
+FONTES
+React — Rendering Lists — documentação oficial | https://react.dev/learn/rendering-lists | Seções Where to get your key, Rules of keys, Why does React need keys? e Pitfall: identificadores estáveis, índice e chaves geradas durante a renderização. Consultada em 26/11/2026; comportamento aplicado a React 19.
+React — Preserving and Resetting State — documentação oficial | https://react.dev/learn/preserving-and-resetting-state | Seções State is tied to a position in the render tree, Same component at the same position preserves state e Resetting state at the same position: vínculo entre identidade e estado. Consultada em 26/11/2026.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação, A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8; referência editorial, não fundamentação técnica atual.
+
+QUESTÃO 24 | BAN-DS-05-0009 | v01
+Gabarito: C
+RESOLUÇÃO
+A operação I foi concluída com criação de recurso: 201 Created comunica essa situação, e Location identifica o recurso principal criado. Em II, o trabalho foi aceito, mas não foi concluído: 202 Accepted expressa essa condição. A aceitação não garante conclusão futura. A indicação de estado e do recurso de acompanhamento é compatível com a orientação da RFC para 202. O comando pede os códigos específicos para essas situações, não um código genérico de sucesso.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: 201 descreve I, mas 204 indica solicitação concluída e ausência de conteúdo adicional; II permanece em processamento.
+B) Não atende: 200 expressa sucesso de forma geral, sem a indicação específica de criação pedida em I; 201 não descreve a geração pendente de II.
+C) Atende: 201 sinaliza criação concluída em I; 202 sinaliza aceitação para processamento ainda não concluído em II.
+D) Não atende: inverte as situações; I já foi concluída, enquanto II não concluiu a geração.
+E) Não atende: 202 descreve II, mas 204 não fornece o sinal específico de criação de recurso exigido em I.
+FONTES
+IETF — RFC 9110 — HTTP Semantics — junho de 2022 | https://www.rfc-editor.org/rfc/rfc9110.html | Seções 15.3.1 (200), 15.3.2 (201), 15.3.3 (202) e 15.3.5 (204): sucesso genérico, criação concluída, aceitação pendente e conclusão sem conteúdo adicional.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação, A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8; referência editorial, não fundamentação técnica atual.
+FCC — TRF4/2007 — Analista Judiciário, Informática, Cargo I Tipo 001 | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | Questão 65, página 10; identificação respectiva de dois conceitos.
+
+QUESTÃO 25 | BAN-DS-05-0010 | v01
+Gabarito: B
+RESOLUÇÃO
+A propriedade apelido tem valor undefined e é excluída da serialização do objeto. A propriedade ativo permanece com false. No array contatos, o primeiro elemento undefined é representado por null, o segundo já é null e o terceiro continua sendo a string vazia. Sem o parâmetro space, não são acrescentados espaços de formatação. O resultado é {"ativo":false,"contatos":[null,null,""]}.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: uma propriedade de objeto com valor undefined é omitida, e não convertida em uma propriedade com valor null.
+B) Atende: apelido é omitido, false é mantido, e o elemento undefined do array é representado por null sem remover a posição.
+C) Não atende: o elemento undefined do array não é eliminado; sua posição é serializada como null, mantendo três elementos.
+D) Não atende: undefined não é convertido no texto entre aspas undefined, nem em objeto nem em array.
+E) Não atende: o valor booleano false possui representação JSON e não provoca a omissão da propriedade ativo.
+FONTES
+Ecma International — ECMA-262, 16ª edição, ECMAScript 2025 — junho de 2025 | https://262.ecma-international.org/16.0/index.html#sec-json.stringify | Seção 25.5.2, especialmente notas 2 e 5; 25.5.2.5, SerializeJSONObject, passo 8; 25.5.2.6, SerializeJSONArray, passo 8: omissão no objeto e null no array.
+TC39 — ECMAScript Language Specification — edição de trabalho consultada em 26/11/2026 | https://tc39.es/ecma262/multipage/structured-data.html#sec-json.stringify | Seções JSON.stringify, SerializeJSONObject e SerializeJSONArray, conferidas complementarmente. A fundamentação da versão declarada usa a edição fixa ECMAScript 2025, não este rascunho.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação, A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 43, página 10; referência editorial, não fundamentação técnica atual.
+
+QUESTÃO 26 | BAN-DS-06-0005 | v01
+Gabarito: D
+RESOLUÇÃO
+I envolve interação do usuário e coordenação da resposta: controlador. II é uma regra de negócio, independente de como as parcelas serão exibidas: modelo. III define a apresentação dos resultados: visão. A regra reutilizada por outras interfaces permanece no modelo; os detalhes visuais ficam na visão. A sequência é controlador, modelo e visão.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: a recepção da interação e a escolha da tela em I são do controlador, enquanto a regra de negócio em II pertence ao modelo; III está corretamente associada à visão.
+B) Não atende: I está bem associada ao controlador, mas II e III estão trocadas; a visão apresenta valores e o modelo contém a regra de cálculo.
+C) Não atende: II está bem associada ao modelo, mas I não é apresentação e III não é coordenação da requisição; cabem, respectivamente, ao controlador e à visão.
+D) Atende: o controlador coordena a solicitação e escolhe a tela; o modelo executa a regra das parcelas; a visão cuida da apresentação visual dos resultados.
+E) Não atende: desloca a coordenação de I para o modelo, a regra de II para a visão e a apresentação de III para o controlador, confundindo as três responsabilidades.
+FONTES
+Microsoft Learn — Overview of ASP.NET Core MVC — documentação ASP.NET Core 10.0 | https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0 | MVC pattern; Model Responsibilities; View Responsibilities; Controller Responsibilities. Consulta em 26/11/2026. Sustenta a separação entre regra de negócio, apresentação e coordenação.
+Spring Framework — Annotated Controllers — documentação 7.1.0 exibida na consulta | https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller.html | Annotated Controllers, parágrafos iniciais e exemplo HelloController: mapeamento da requisição, disponibilização de dados no Model e retorno do nome da visão. Consulta em 26/11/2026; ilustra o fluxo, sem equiparar o objeto Model do framework a todo o domínio.
+Programa-base — Arquitetura de sistemas | Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 50, página 11, na extração local com marcadores de página; uso editorial.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8, na extração local com marcadores de página; uso editorial.
+
+QUESTÃO 27 | BAN-DS-06-0006 | v01
+Gabarito: A
+RESOLUÇÃO
+O contrato estabelece o que é trocado e o significado da interação. A troca de linguagem ou armazenamento pode ficar oculta aos consumidores se a interação acordada for preservada. Alterar situacao de restrição cadastral para aptidão contratual muda a informação fornecida. A manutenção de nome, tipo e endereço não elimina esse impacto: é necessário avaliar a compatibilidade da mudança contratual.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende: trocar a implementação pode preservar o serviço observável. Já mudar a informação que situacao representa altera o acordo semântico e exige análise de compatibilidade.
+B) Não atende: mensagens com os mesmos nomes e tipos podem transmitir significados diferentes; compatibilidade estrutural não assegura a preservação do significado cadastral contratado.
+C) Não atende: vincular consumidores às tabelas internas cria dependência do armazenamento que se pretende substituir; interpretar dados por conta própria não preserva a interação contratada.
+D) Não atende: consumidores não precisam adotar a linguagem do provedor para interagir pelo contrato. Essa exigência introduz uma dependência tecnológica sem resolver a mudança semântica.
+E) Não atende: alcançar o endereço garante apenas uma condição de comunicação; a conectividade não conserva o significado de situacao nem os efeitos esperados da consulta.
+FONTES
+OASIS — Reference Model for Service Oriented Architecture 1.0 — OASIS Standard, 12/10/2006 | https://docs.oasis-open.org/soa-rm/v1.0/soa-rm.pdf | Seção 3.1 Service, pp.12–13; seção 3.3.1 Service description, pp.20–22; seção 3.3.1.4 Service Interface, p.22; seção 3.3.2.2 Service Contract, p.24. Consulta em 26/11/2026. Sustenta ocultação da implementação e a descrição da interação, de seus efeitos e dos acordos entre participantes.
+W3C — Web Services Architecture — Working Group Note de 11/02/2004 | https://www.w3.org/TR/ws-arch/ | Seções 1.4.1 Agents and Services, 1.4.3 Service Description e 1.4.4 Semantics. Consulta em 26/11/2026. Distingue implementação concreta, mecânica das mensagens e significado/propósito do contrato. É uma nota histórica sobre Web Services, usada para esses conceitos, sem impor SOAP ou WSDL a toda SOA.
+Programa-base — Arquitetura de sistemas | Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 32, página 8, na extração local com marcadores de página; uso editorial.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8, na extração local com marcadores de página; uso editorial.
+
+QUESTÃO 28 | BAN-DS-06-0007 | v01
+Gabarito: E
+RESOLUÇÃO
+I descreve um API Gateway configurado para autenticação e encaminhamento. II descreve Service Discovery apoiado em registro e informações de saúde das instâncias. São funções distintas que podem cooperar: o gateway usa o nome do serviço para obter destinos internos por descoberta, mantendo seu ponto de entrada para os clientes externos. Não se exige que toda implementação de gateway ofereça nativamente todas essas funções.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: inverte as funções. O catálogo de instâncias apoia a descoberta; a autenticação e o encaminhamento de entrada descritos em I pertencem ao gateway configurado para isso.
+B) Não atende: embora associe os nomes a I e II, atribui à descoberta o recebimento das requisições de negócio para autenticar clientes, confundindo-a com o ponto de entrada.
+C) Não atende: a consulta à descoberta pelo gateway permite resolver mudanças de instância no lado dos serviços; não é necessário atualizar o cliente externo a cada troca de endereço interno.
+D) Não atende: inverte as funções e confunde credenciais com localização; autenticar um cliente não fornece, por si só, os endereços atuais das instâncias saudáveis.
+E) Atende: o gateway executa a função de entrada e encaminhamento de I, enquanto a descoberta resolve a localização de II; a consulta ao registro pelo gateway permite a cooperação entre ambos.
+FONTES
+Microsoft Learn — Use API gateways in microservices — Azure Architecture Center | https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway | What is an API gateway?; How to use an API gateway, itens Gateway routing e Gateway offloading; Choose an API gateway technology, suporte às funções exigidas. Consulta em 26/11/2026.
+HashiCorp Consul — Discover services overview | https://developer.hashicorp.com/consul/docs/discover | Introduction e Static lookups: catálogo registra endereços, incorpora resultados de health checks e permite localizar instâncias por DNS. Consulta em 26/11/2026.
+Spring Cloud Gateway — DiscoveryClient Route Definition Locator — documentação 5.1.0 exibida na consulta | https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway-server-webflux/the-discoveryclient-route-definition-locator.html | Parágrafos iniciais e Configuring Predicates and Filters for DiscoveryClient Routes: gateway cria rotas a partir de serviços registrados e encaminha por nome lógico. Consulta em 26/11/2026; exemplo de integração, sem exigir Spring no cenário.
+Programa-base — Arquitetura de sistemas | Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 32, página 8, na extração local com marcadores de página; uso editorial.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 33, página 8, na extração local com marcadores de página; uso editorial.
+
+QUESTÃO 29 | BAN-DS-06-0008 | v01
+Gabarito: B
+RESOLUÇÃO
+A implementação moderna deve assumir inicialmente as consultas. Uma fachada no endereço preservado pode selecionar o destino por funcionalidade: consultas para o novo sistema e demais operações para o legado. Outras responsabilidades são migradas em etapas. A retirada do legado depende de eliminar as funcionalidades e dependências ainda atendidas por ele; disponibilizar uma fachada ou migrar apenas consultas não é suficiente.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: exige que os clientes conheçam e alterem os destinos, violando a preservação do endereço de acesso requerida no cenário; a fachada pode ocultar essa distribuição temporária.
+B) Atende: põe a consulta nova em uso e mantém as funções não migradas operantes no legado, transferindo responsabilidades gradualmente até eliminar o que impede sua retirada.
+C) Não atende: adia a entrada em uso das consultas até uma transferência conjunta, contrariando a primeira etapa exigida e o caráter incremental solicitado.
+D) Não atende: a fachada pode ser uma etapa preparatória, mas manter todas as operações no legado não coloca a consulta nova em uso nem substitui essa responsabilidade.
+E) Não atende: a nova implementação só atende consultas nesta etapa. Dividir indiscriminadamente o tráfego pode enviar operações ainda não migradas a um destino que não as atende; receber a maioria do tráfego não comprova que o legado possa ser retirado.
+FONTES
+Microsoft Learn — Strangler Fig pattern — Azure Architecture Center | https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig | Solution, etapas 1 a 3; Problems and considerations, dependências entre sistemas; When to use this pattern. Consulta em 26/11/2026. Sustenta interceptação por fachada, coexistência, transferência gradual e condição de retirada do legado.
+AWS Prescriptive Guidance — Strangler fig pattern | https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html | Intent; Motivation, comparação com big bang; Issues and considerations, Proxy layer failure e Anti-corruption layer. Consulta em 26/11/2026. Corrobora a substituição incremental e a necessidade de tratar dependências e o papel temporário do proxy.
+Programa-base — Arquitetura de sistemas | Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 48, página 11, na extração local com marcadores de página; uso editorial.
+FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 32, página 8, na extração local com marcadores de página; uso editorial.
+
+QUESTÃO 30 | BAN-DS-07-0004 | v01
+Gabarito: C
+RESOLUÇÃO
+A reversão aproveita a versão 1 preservada no blue: basta direcionar a ele as novas requisições nas condições declaradas. O banco compartilhado já contém as gravações válidas, e a compatibilidade de esquema, dados e sessões foi explicitada. Portanto, o rollback da aplicação não exige restaurar um snapshot nem eliminar campos. A conclusão depende dessas premissas; uma mudança incompatível de esquema ou de estado exigiria outro planejamento.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O snapshot anterior exclui as gravações válidas posteriores, contrariando a preservação exigida. A compatibilidade declarada dispensa esse retorno do banco.
+B) Não atende. Reiniciar a mesma versão mantém o código com a regressão; não restaura a versão 1 nem usa o blue para receber o tráfego.
+C) Atende. O blue preservado executa a versão 1 e suporta a carga. O banco atual, seu esquema e as sessões são compatíveis com ela; a troca de tráfego reverte a aplicação sem desfazer gravações.
+D) Não atende. Remover campos usados pela versão 1 rompe a compatibilidade necessária ao blue. A simples escolha do ambiente anterior não neutraliza uma alteração destrutiva do esquema.
+E) Não atende. Copiar a versão 2 para o blue mantém a regressão e elimina a versão 1 desse ambiente. A cor ou o nome do ambiente não determina a versão executada.
+FONTES
+AWS Whitepaper — Blue/Green Deployments on AWS — Introduction | https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/introduction.html | Blue/Green Deployment Methodology, parágrafos sobre redirecionamento de tráfego e retorno ao ambiente blue
+AWS Whitepaper — Best Practices for Managing Data Synchronization and Schema Changes | https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/best-practices-for-managing-data-synchronization-and-schema-changes.html | Best Practices for Managing Data Synchronization and Schema Changes; Decoupling Schema Changes from Code Changes
+FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 32, página 8
+Metadados do acervo de referências FCC | fontes, id trt4-2022-ti-a14-001
+Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas | DEVOPS E DEVSECOPS: estratégias de blue/green deployment e canary releases. Observação final sobre legislação consultada.
+
+QUESTÃO 31 | BAN-DS-07-0005 | v01
+Gabarito: B
+RESOLUÇÃO
+A métrica revela a mudança no comportamento agregado das latências. O trace permite decompor uma requisição em operações e observar onde seu tempo se concentrou. O log registra o timeout e, pelo trace_id, acrescenta contexto à mesma execução. Essa correlação orienta a investigação, mas um trace amostrado não substitui a distribuição de latências nem o timeout identifica isoladamente a causa da demora.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O timeout registra o evento observado pela API, mas não demonstra sua causa. Demora na rede ou em outra dependência também pode participar do tempo da chamada; o trace não comprova um defeito de código no cadastro.
+B) Atende. A métrica sintetiza as latências da janela; os spans detalham operações daquela requisição; o log registra o timeout e seu trace_id permite correlacioná-lo a ela. Os sinais acrescentam perspectivas complementares.
+C) Não atende. A duração de uma requisição selecionada não fornece a distribuição das demais. As métricas do cenário abrangem todas as requisições; os traces são amostrados e detalham execuções específicas.
+D) Não atende. Um registro de log pode carregar TraceId e SpanId justamente para correlação com a execução. No cenário, o mesmo trace_id vincula o evento registrado à requisição investigada.
+E) Não atende. Uma requisição pode não ter sido exportada por causa da amostragem, mesmo sendo relevante. Sem uma política que declare essa garantia, não se pode pressupor retenção de todas as falhas.
+FONTES
+OpenTelemetry Documentation — Metrics | https://opentelemetry.io/docs/concepts/signals/metrics/ | Metrics, parágrafos iniciais; Metric Instruments, Histogram; Aggregation
+OpenTelemetry Documentation — Traces | https://opentelemetry.io/docs/concepts/signals/traces/ | Context Propagation; Spans; Span Context
+OpenTelemetry Documentation — Logs | https://opentelemetry.io/docs/concepts/signals/logs/ | Logs; OpenTelemetry logs for applications; Log Record, campos TraceId e SpanId
+OpenTelemetry Documentation — Sampling | https://opentelemetry.io/docs/concepts/sampling/ | Terminology; Why sampling?; Head Sampling, limitação quanto à seleção de todos os traces com erros
+FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 32, página 8
+Metadados do acervo de referências FCC | fontes, id trt4-2022-ti-a14-001
+Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas | DEVOPS E DEVSECOPS: observabilidade (logs, métricas e traces); Observação final sobre legislação consultada.
+
+QUESTÃO 32 | BAN-DS-07-0006 | v01
+Gabarito: E
+RESOLUÇÃO
+I é verdadeira: SAST inspeciona código e fluxos sem executar a aplicação. II é falsa: SCA precisa considerar os componentes diretos e transitivos efetivamente utilizados; a biblioteca intermediária não torna segura sua dependência. III é verdadeira: DAST interage com a aplicação em execução, e a autenticação configurada permite alcançar áreas protegidas. IV é falsa: nenhum resultado sem achados no SAST comprova, por si só, segurança das dependências ou cobertura do comportamento dinâmico. Assim, apenas I e III são verdadeiras.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. I é verdadeira, pois o SAST faz análise estática. II é falsa: dependências transitivas podem conter vulnerabilidades próprias e devem integrar a análise de composição.
+B) Não atende. II exclui indevidamente dependências transitivas. IV atribui ao resultado do SAST uma garantia que ele não oferece sobre composição e comportamento em execução.
+C) Não atende. III é verdadeira: o DAST pode atingir funcionalidades protegidas quando a autenticação foi configurada. IV é falsa, pois ausência de achados estáticos não torna os controles substituíveis.
+D) Não atende. III descreve o uso de DAST no ambiente previsto, mas II limita indevidamente a SCA às dependências diretas.
+E) Atende. I corresponde à análise estática sem execução da aplicação, e III corresponde ao teste dinâmico de funcionalidades autenticadas em homologação. II e IV ignoram limites e objetos distintos dos controles.
+FONTES
+OWASP DevSecOps Guideline — Static Application Security Testing (SAST) | https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-1-Static-Analysis/2-3-1-1-Static-Application-Security-Testing/ | Definição inicial; How SAST works mechanically; Strengths and limitations
+OWASP DevSecOps Guideline — Software Composition Analysis (SCA) | https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis/ | What SCA covers; Understanding transitive dependencies; Integrating SCA in the pipeline
+OWASP DevSecOps Guideline — Dynamic Application Security Testing (DAST) | https://owasp.github.io/DevSecOpsGuideline/2-Process/2-4-Test/2-4-2-Dynamic-Application-Security-Testing/ | Definição inicial; Strengths and limitations; Running DAST well; Handling authenticated flows
+FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 38, página 9
+Metadados do acervo de referências FCC | fontes, id trt4-2022-ti-a14-001
+Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas | DEVOPS E DEVSECOPS: segurança em pipelines (DevSecOps); Observação final sobre legislação consultada.
+
+QUESTÃO 33 | BAN-DS-08-0003 | v01
+Gabarito: C
+RESOLUÇÃO
+Em /srv/lotes, ana não é proprietária, mas pertence ao grupo equipe. Aplicam-se, portanto, os bits --x do grupo: há permissão de busca/travessia, mas não de leitura do diretório. A listagem dos nomes é negada; o nome saldo.csv já conhecido pode ser procurado.
+
+No arquivo saldo.csv, ana é proprietária. Aplica-se a classe r-- do proprietário, sem combinar seus bits com os rw- do grupo. O r permite abrir e ler o arquivo; a ausência de w impede abri-lo para acrescentar dados. A permissão de busca em todos os diretórios do caminho já foi assegurada. Sob as condições declaradas, a sequência é negada, permitida e negada.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: acerta a leitura do arquivo e a negativa de escrita, mas listar os nomes exige leitura no diretório. Para ana, /srv/lotes usa a classe de grupo, --x, que permite a busca pelo nome conhecido, sem permitir listar seus nomes.
+B) Não atende: acerta a negativa de listagem e a leitura, mas ana é proprietária de saldo.csv e usa os bits r-- do proprietário. Os bits rw- do grupo não se somam aos dela; falta w para acrescentar dados.
+C) Atende: a classe de grupo --x do diretório permite atravessá-lo e buscar saldo.csv pelo nome conhecido, sem listar seus nomes. No arquivo, a classe do proprietário r-- autoriza a leitura e nega a escrita necessária para acrescentar dados.
+D) Não atende: atribui duas permissões inexistentes. Falta r no diretório para listar nomes, e falta w na classe do proprietário do arquivo para acrescentar dados. A travessia pelo diretório e a leitura do arquivo são permitidas.
+E) Não atende: a ausência de r no diretório impede a listagem dos nomes, mas não impede a busca por um nome conhecido quando x está presente. Como ana tem r no arquivo, pode lê-lo pelo caminho informado.
+FONTES
+Red Hat — Red Hat Enterprise Linux 9 — Configuring basic system settings | https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/htmlsingle/configuring_basic_system_settings/index | Capítulo 9, Managing file system permissions; §9.1, Managing file permissions; §9.1.1, Base file permissions. Classes u/g/o, bits r/w/x e diferença entre acesso ao diretório e edição do arquivo. Página primária aberta em 26/11/2026.
+Linux man-pages — path_resolution(7) | https://man7.org/linux/man-pages/man7/path_resolution.7.html | DESCRIPTION: Step 2: walk along the path; Permissions; Bypassing permission checks: superuser and capabilities. Seleção da classe por identidade, uso de fsuid/fsgid, busca nos componentes do caminho e capacidades de bypass. Manual do projeto Linux man-pages, aberto em 26/11/2026.
+Oracle — Introduction to the Shell and Command Line on Oracle Linux — F50766-05, julho de 2024 | https://docs.oracle.com/en/learn/ol-shell-cmd/index.html | Learn About File Permissions, etapas 22–25, especialmente o parágrafo após a etapa 25: a participação no grupo não substitui os bits aplicáveis ao proprietário. Tutorial primário aberto em 26/11/2026; o cenário autoral é RHEL 9 e a fonte é corroborativa.
+GNU Coreutils — Structure of File Mode Bits | https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html | §27.1, trecho indexado do manual recuperado pela pesquisa em 26/11/2026: r permite listar o diretório, w permite alterar o arquivo, x permite acessar arquivos no diretório. As duas tentativas de abertura direta retornaram timeout; a solução também foi conferida nas páginas abertas da Red Hat e do Linux man-pages.
+Programa-base — Sistemas Operacionais | Bloco SISTEMAS OPERACIONAIS, linhas 116–131: Linux (Red Hat e Oracle Linux) e PowerShell. Lida também a observação final sobre legislação, linhas 213–217; as duas questões não cobram legislação.
+FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 52, página 12, marcador === PAGINA 12 === da extração local lida. Apresentação de metadados Linux em bloco e comando objetivo. Cópia secundária do Qconcursos; uso exclusivamente editorial.
+Metadados das referências reais da FCC | Entrada trt4-2022-ti-a14-001: origem copia_secundaria, URL do Qconcursos, caderno com 16 páginas. Consulta em 26/11/2026.
+
+QUESTÃO 34 | BAN-DS-08-0004 | v01
+Gabarito: D
+RESOLUÇÃO
+O pipeline recebe objetos, e $_ representa o objeto avaliado por Where-Object. As duas condições devem ser verdadeiras simultaneamente: Status igual a Running e Name iniciado por App. Para esse prefixo, usa-se -like 'App*', combinado com -and.
+
+AppZ e AppA satisfazem ambas as condições. AppB tem o prefixo, mas está parado. Sync e Base estão em execução, mas seus valores de Name não têm o prefixo. A ordenação crescente por Name produz AppA e AppZ. Select-Object Name, Status cria os objetos de saída com essas propriedades; ambos têm Status Running. Format-Table serve à apresentação e produz registros de formatação, inadequados ao requisito de reutilizar as propriedades Name e Status.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: -or aceita o serviço quando pelo menos uma condição é verdadeira. Inclui AppB, que está parado, e também Base e Sync, que estão em execução, mas não têm Name iniciado por App. Produz AppA, AppB, AppZ, Base e Sync.
+B) Não atende: a filtragem e a ordenação selecionam AppA e AppZ, mas Format-Table emite objetos internos de formatação que representam uma tabela. Sua saída não é a projeção de objetos com Name e Status exigida para o processamento posterior.
+C) Não atende: o padrão é aplicado a DisplayName. Assim, seleciona AppA e Sync; deixa de selecionar AppZ, cujo DisplayName é Coletor Z. O requisito usa a propriedade Name.
+D) Atende: -and exige simultaneamente Status igual a Running e Name compatível com App*. Sort-Object Name coloca AppA antes de AppZ, e Select-Object Name, Status produz objetos com as duas propriedades solicitadas.
+E) Não atende: -eq compara o nome com o texto literal App*, sem interpretar o asterisco como curinga. Nenhum Name da entrada é igual a esse texto, de modo que o pipeline não produz objetos.
+FONTES
+Microsoft Learn — about_Pipelines — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-5.1 | Long description; Using pipelines; How pipelines work — One-at-a-time processing. Fluxo de objetos entre cmdlets. Página primária aberta em 26/11/2026.
+Microsoft Learn — Get-Service — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-5.1 | Description; exemplos 1, 2, 3 e 5. Retorno de objetos de serviço, distinção entre Name e DisplayName e filtro por Status Running. Página primária aberta em 26/11/2026.
+Microsoft Learn — Where-Object — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-5.1 | Description; exemplo 1, Get stopped services, sobre $_; exemplo 6, Use multiple conditions. Filtragem de objetos por propriedades e combinação de condições. Página primária aberta em 26/11/2026.
+Microsoft Learn — about_Logical_Operators — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logical_operators?view=powershell-5.1 | Long description; definições Logical AND (-and) e Logical OR (-or). Sustenta a diferença de seleção entre as alternativas que usam conjunção e disjunção. Página primária aberta em 26/11/2026.
+Microsoft Learn — about_Comparison_Operators — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1 | Equality operators — -eq and -ne; Matching operators — -like and -notlike. Igualdade literal e correspondência por padrão com curinga. Página primária aberta em 26/11/2026.
+Microsoft Learn — Sort-Object — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-5.1 | Description; parâmetros -Property e -Descending. Ordenação pelos valores da propriedade; ordem padrão crescente. Página primária aberta em 26/11/2026.
+Microsoft Learn — Select-Object — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-5.1 | Description; exemplo 1, Select objects by property. A seleção de propriedades retorna novos objetos com as propriedades especificadas. Página primária aberta em 26/11/2026.
+Microsoft Learn — Format-Table — Windows PowerShell 5.1 | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-5.1 | Outputs — Microsoft.PowerShell.Commands.Internal.Format. O cmdlet retorna objetos de formatação que representam a tabela, e não a projeção de dados solicitada. Página primária aberta em 26/11/2026.
+Programa-base — Sistemas Operacionais | Bloco SISTEMAS OPERACIONAIS, linhas 116–131: Linux (Red Hat e Oracle Linux) e PowerShell. Lida também a observação final sobre legislação, linhas 213–217; as duas questões não cobram legislação.
+FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 47, página 11, marcador === PAGINA 11 === da extração local lida. Tarefa concreta com escolha entre cinco comandos. Cópia secundária do Qconcursos; uso exclusivamente editorial.
+Metadados das referências reais da FCC | Entrada trt4-2022-ti-a14-001: origem copia_secundaria, URL do Qconcursos, caderno com 16 páginas. Consulta em 26/11/2026.
+
+QUESTÃO 35 | BAN-DS-09-0004 | v01
+Gabarito: D
+RESOLUÇÃO
+ff02::1 representa todos os nós IPv6 do enlace, por multicast; IPv6 não define broadcast. fe80::20 é um endereço unicast link-local. L1 e L2 constituem zonas de enlace distintas, e roteadores não podem encaminhar entre enlaces pacotes com origem ou destino link-local. Uma rota estática ou um Hop Limit maior não altera essa restrição.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: IPv6 não possui endereços de broadcast. ff02::1 identifica um grupo multicast, embora a conclusão sobre o encaminhamento esteja correta.
+B) Não atende: ff02::2 identifica todos os roteadores do enlace, não todos os nós. A proibição de encaminhar o destino link-local para L2 está correta.
+C) Não atende: uma rota estática não amplia o escopo de fe80::20. Esse endereço identifica uma interface apenas no enlace correspondente, e R não pode encaminhar o pacote entre L1 e L2.
+D) Atende: ff02::1 é o grupo multicast de todos os nós com escopo de enlace. fe80::20 é link-local e não pode ser encaminhado de L1 para outro enlace.
+E) Não atende: Hop Limit maior que 1 não elimina os limites de escopo. Mesmo nessa condição, o destino link-local impede o encaminhamento de L1 para L2.
+FONTES
+Conteúdo programático — Redes de computadores | Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução.
+RFC 4291 — IP Version 6 Addressing Architecture, IETF/RFC Editor, fevereiro de 2006 | https://www.rfc-editor.org/rfc/rfc4291.html | Seção 2: inexistência de broadcast; seção 2.5.6: link-local e proibição de encaminhamento entre enlaces; seção 2.7.1: All Nodes e All Routers. Navegada em 26/11/2026.
+RFC 4007 — IPv6 Scoped Address Architecture, IETF/RFC Editor, março de 2005 | https://www.rfc-editor.org/rfc/rfc4007.html | Seções 4 e 5: escopo link-local e uma zona de enlace por link; seção 9: limites de zona no encaminhamento. Navegada em 26/11/2026.
+FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 56, página impressa e página da extração 13. Referência editorial; cópia secundária Qconcursos.
+Metadados de origem do acervo FCC | Registro trt4-2022-ti-a14-001: origem copia_secundaria, URL e arquivo.
+
+QUESTÃO 36 | BAN-DS-09-0005 | v01
+Gabarito: B
+RESOLUÇÃO
+O registro armazenado em t = 0 s vence em t = 300 s. Em t = 120 s, ele permanece válido e seu TTL restante é 180 segundos. A alteração em S não foi obtida por R, que reutiliza 192.0.2.40 conforme a configuração declarada. Recursão e autoridade são funções distintas: a resposta de cache de R tem AA = 0, pois R não é autoritativo para o nome consultado.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: obter 192.0.2.80 exigiria conhecer a alteração em S. Nas condições dadas, R reutiliza o registro ainda válido em cache; o pedido de recursão não obriga nova consulta ao autoritativo.
+B) Atende: R mantém 192.0.2.40 em cache; restam 300 − 120 = 180 segundos. Como R não é autoritativo para esse nome, a resposta tem AA igual a 0.
+C) Não atende: endereço e TTL estão corretos, mas AA não é herdado da origem do registro. AA igual a 1 indicaria autoridade do próprio servidor respondente, condição que R não possui.
+D) Não atende: responder com o cache não reinicia o prazo do registro. Dos 300 segundos recebidos, 120 já transcorreram; o TTL restante é 180 segundos.
+E) Não atende: a mudança em S não atualiza automaticamente o registro armazenado em R. Além de devolver o endereço novo indevidamente, a opção marca R como autoritativo por meio de AA igual a 1.
+FONTES
+Conteúdo programático — Redes de computadores | Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução.
+RFC 1034 — Domain Names: Concepts and Facilities, IETF/RFC Editor, novembro de 1987 | https://www.rfc-editor.org/rfc/rfc1034.html | Seção 4.3.1: recursão solicitada e disponível; seções 5.3.2 e 5.3.3: validade do cache e consulta inicial às informações locais. Navegada em 26/11/2026.
+RFC 1035 — Domain Names: Implementation and Specification, IETF/RFC Editor, novembro de 1987 | https://www.rfc-editor.org/rfc/rfc1035.html | Seção 3.2.1: intervalo de cache do RR; seção 4.1.1: AA indica autoridade do servidor respondente; seção 4.1.3: TTL em segundos. Navegada em 26/11/2026.
+RFC 9499 — DNS Terminology, BCP 219, IETF/RFC Editor, março de 2024 | https://www.rfc-editor.org/rfc/rfc9499.html | Seção 5: TTL máximo e possibilidade de redução/limpeza antecipada; seção 6: recursive resolver, recursive query e authoritative server. As condições do cenário afastam políticas diferentes de cache. Navegada em 26/11/2026.
+FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 55, página impressa e página da extração 13. Referência de cenário operacional e combinação ordenada de resultados; cópia secundária Qconcursos.
+Metadados de origem do acervo FCC | Registro trt4-2022-ti-a14-001: origem copia_secundaria, URL e arquivo.
+
+QUESTÃO 37 | BAN-DS-09-0006 | v01
+Gabarito: E
+RESOLUÇÃO
+N busca acesso pela porta e participa como suplicante. S atua como autenticador IEEE 802.1X: intermedeia a troca EAP e controla a autorização da porta. R verifica a identidade no serviço de autenticação. No protocolo RADIUS, o switch S é cliente do servidor R. Ser chamado de cliente 802.1X não torna N o cliente RADIUS. Esses papéis decorrem da implantação centralizada descrita; não se afirma que IEEE 802.1X sempre exige um servidor RADIUS externo.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: troca os papéis de S e R. S intermedeia a autenticação e controla a porta; R presta o serviço que verifica a identidade do suplicante.
+B) Não atende: inverte N e S. O notebook é a entidade autenticada, enquanto o switch exige a autenticação e aplica seu resultado ao acesso pela porta.
+C) Não atende: os três papéis IEEE 802.1X estão associados corretamente, mas N não é o cliente RADIUS nessa implantação. N troca EAPOL com S; S faz a comunicação RADIUS com R.
+D) Não atende: os três papéis IEEE 802.1X estão associados corretamente, mas R é o servidor RADIUS. O cliente RADIUS que lhe encaminha as solicitações é S.
+E) Atende: N é o suplicante, S é o autenticador e R é o servidor de autenticação. Na relação RADIUS estabelecida com R, S desempenha o papel de cliente.
+FONTES
+Conteúdo programático — Redes de computadores | Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução.
+RFC 3580 — IEEE 802.1X Remote Authentication Dial In User Service (RADIUS) Usage Guidelines, IETF/RFC Editor, setembro de 2003 | https://www.rfc-editor.org/rfc/rfc3580.html | Seção 1: autenticadores como clientes AAA/RADIUS em implantação centralizada e caráter opcional do backend; seção 1.1: Authenticator, Authentication Server e Supplicant; seção 3.27: EAP-Message. Documento informativo, usado para os papéis conceituais, sem substituir norma IEEE. Navegada em 26/11/2026.
+Cisco IOS — Configuring IEEE 802.1X Port-Based Authentication, documentação oficial, Release 15.0M | https://www.cisco.com/en/US/docs/ios-xml/ios/sec_usr_8021x/configuration/15-0m/config-ieee-802x-pba.html | Information About IEEE 802.1X Port-Based Authentication > IEEE 802.1X Authenticator > Device Roles: suplicante, autenticador, servidor e cliente RADIUS no dispositivo de acesso; encapsulamento EAPOL/RADIUS. Fonte usada para os papéis, sem pressupor comandos ou exceções de fabricante na questão. Navegada em 26/11/2026.
+FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 34, página impressa e página da extração 8. Referência de distinção de papéis em protocolo; cópia secundária Qconcursos.
+FCC — TRF4, Analista Judiciário, Informática, 2007, Cargo I, Tipo 001 | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | Questão 46, página impressa e página da extração 8. Referência histórica de identificação dos componentes de protocolo; origem primária no órgão.
+Metadados de origem do acervo FCC | Registros trt4-2022-ti-a14-001 e trf4-2007-informatica-i001: origens e URLs dos cadernos.
+
+QUESTÃO 38 | BAN-DS-10-0003 | v01
+Gabarito: C
+RESOLUÇÃO
+A concessão inicial segue DHCPDISCOVER → DHCPOFFER → DHCPREQUEST → DHCPACK, sequência conhecida como DORA. Após selecionar S2, o cliente transmite DHCPREQUEST em broadcast com a opção server identifier indicando S2 e a opção requested IP address com o endereço ofertado. S1 interpreta a seleção como rejeição implícita de sua oferta. S2 confirma a vinculação e responde DHCPACK. A oferta isolada não conclui a concessão. O cenário é de seleção inicial, não de renovação: em RENEWING o DHCPREQUEST é unicast e não contém server identifier. Não se está afirmando que toda mensagem DHCPREQUEST seja broadcast.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende: o DHCPREQUEST que seleciona uma oferta nessa concessão inicial deve ser transmitido em broadcast, permitindo que os demais servidores identifiquem a escolha. O DHCPACK de S2 está adequado. O unicast do DHCPREQUEST ocorre, por exemplo, na renovação em RENEWING, estado ausente do cenário.
+B) Não atende: inverte os papéis das mensagens. O cliente solicita os parâmetros com DHCPREQUEST; a confirmação DHCPACK é emitida pelo servidor, que não solicita sua própria oferta por DHCPREQUEST.
+C) Atende: o DHCPREQUEST em broadcast identifica S2 na opção server identifier e solicita a oferta escolhida; S2 responde DHCPACK para confirmar a concessão. A opção requested IP address deve conter o endereço da oferta de S2.
+D) Não atende: DHCPDECLINE comunica que o endereço oferecido está em uso; não é a mensagem para rejeitar uma oferta em favor de outra. S1 conhece a rejeição implicitamente ao receber DHCPREQUEST indicando S2. Não há conflito de endereços no cenário.
+E) Não atende: a primeira mensagem está adequada, mas DHCPOFFER é a proposta em resposta à descoberta. Depois da seleção por DHCPREQUEST, a confirmação bem-sucedida é DHCPACK, não uma nova oferta.
+FONTES
+Conteúdo programático — Serviços e gerenciamento de redes | Linhas 149–163: DHCP e ferramentas de monitoramento e logs, incluindo Prometheus.
+Questões anteriores do SIM-001 para controle de rodízio | Itens BAN-DS-10-0001 e BAN-DS-10-0002: SNMP/MIB e virtual hosts do Apache; objetivos distintos dos atuais.
+RFC 2131 — Dynamic Host Configuration Protocol, R. Droms, março de 1997 | https://www.rfc-editor.org/rfc/rfc2131.html | §3.1, passos 1–5, tabela 2 e figura 3, pp.13–17: sequência inicial e papéis das mensagens; §4.3.2, SELECTING, p.31: server identifier e requested IP address; §4.4.1, p.36: INIT; §4.4.5, p.40: DHCPREQUEST unicast em RENEWING, sem server identifier. Navegada em 26/11/2026.
+FCC/TRF4 2007 — Analista Judiciário, Informática, Cargo I, Tipo 001 | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | p.8, questão 44; extração local lida; origem primária do órgão identificada em fontes.json; referência histórica de formato.
+FCC/TRT4 2022 — Analista Judiciário, Tecnologia da Informação, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | p.8, questão 33; extração local lida; cópia secundária do Qconcursos, sem declaração de download ou integridade oficial da FCC.
+Metadados das referências reais FCC | Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; URLs, origem primária/secundária e identificação dos arquivos.
+
+QUESTÃO 39 | BAN-DS-10-0004 | v01
+Gabarito: A
+RESOLUÇÃO
+I cabe ao Prometheus: o servidor consulta os endpoints HTTP pelo modelo pull e armazena as amostras em séries temporais. II também cabe ao Prometheus: suas regras de alerta são avaliadas sobre os dados coletados, e os alertas resultantes são enviados ao Alertmanager. III cabe ao Alertmanager: ele recebe alertas, agrupa-os e encaminha notificações aos receptores configurados, além de oferecer deduplicação, silenciamento e inibição. O Alertmanager não assume a coleta e o armazenamento das métricas nem a avaliação das regras de alerta do servidor.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende: atribui I e II ao servidor Prometheus, responsável pela coleta, armazenamento e avaliação de regras, e III ao Alertmanager, responsável por agrupar alertas e rotear suas notificações.
+B) Não atende: I e III estão atribuídas adequadamente, mas II foi transferida ao Alertmanager. As regras sobre as séries temporais são avaliadas no Prometheus; o Alertmanager recebe os alertas já gerados.
+C) Não atende: II está atribuída adequadamente, mas I e III estão trocadas. O Prometheus coleta e armazena as métricas, enquanto o Alertmanager agrupa os alertas recebidos e encaminha as notificações.
+D) Não atende: I está atribuída adequadamente, mas II e III estão invertidas. O Prometheus avalia as regras de alerta, e o Alertmanager executa o agrupamento e o encaminhamento das notificações.
+E) Não atende: II e III estão atribuídas adequadamente, mas I foi transferida ao Alertmanager. A consulta periódica dos endpoints e o armazenamento das séries temporais são funções do servidor Prometheus.
+FONTES
+Conteúdo programático — Serviços e gerenciamento de redes | Linhas 149–163: DHCP e ferramentas de monitoramento e logs, incluindo Prometheus.
+Questões anteriores do SIM-001 para controle de rodízio | Itens BAN-DS-10-0001 e BAN-DS-10-0002: SNMP/MIB e virtual hosts do Apache; objetivos distintos dos atuais.
+Prometheus — Overview, documentação oficial | https://prometheus.io/docs/introduction/overview/ | Features: pull model over HTTP; Components: servidor que coleta e armazena séries temporais; Architecture: coleta, armazenamento e execução de regras para gerar alertas. Navegada em 26/11/2026.
+Prometheus — Alerting overview, documentação oficial | https://prometheus.io/docs/alerting/latest/overview/ | Parágrafo inicial e passos de configuração: regras de alerta no servidor Prometheus enviam alertas ao Alertmanager, que gerencia agregação e envio de notificações. Navegada em 26/11/2026.
+Prometheus — Alertmanager, documentação oficial | https://prometheus.io/docs/alerting/latest/alertmanager/ | Introdução e seções Architecture, Grouping, Inhibition e Silences: recebimento, agrupamento, deduplicação, roteamento e gerenciamento das notificações. Navegada em 26/11/2026.
+FCC/TRT4 2022 — Analista Judiciário, Tecnologia da Informação, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | p.8, questões 32 e 33; extração local lida; capacidades de produto e identificação ordenada em cenário técnico; cópia secundária do Qconcursos, sem declaração de download ou integridade oficial da FCC.
+Metadados das referências reais FCC | Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; URLs, origem primária/secundária e identificação dos arquivos.
+
+QUESTÃO 40 | BAN-DS-11-0005 | v01
+Gabarito: B
+RESOLUÇÃO
+O nome de referência é api.banco.example. O certificado apresenta como DNS-ID somente portal.banco.example, que não corresponde a essa referência. A RFC 9525 exclui o CN dessa verificação e separa a correspondência de identidade das demais verificações de certificado. A igualdade do endereço IP obtido no DNS não corrige a divergência. Na ausência de exceções configuradas, a tentativa do cliente automatizado deve ser interrompida e o erro registrado. A alternativa B expressa essa decisão pelo motivo pertinente.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. A validação do caminho de certificação e do período de validade não substitui a correspondência entre a identidade de referência e a identidade apresentada. O certificado pode passar nessas verificações e identificar outro serviço.
+B) Atende. A referência é api.banco.example, derivada da URL, enquanto o único DNS-ID apresentado é portal.banco.example. Não há correspondência. Como não existem exceções configuradas, o cliente automatizado deve interromper a tentativa com erro de certificado e registrar o erro.
+C) Não atende. A RFC 9525 não admite o Common Name como identificador da identidade do serviço. O CN coincidente não substitui o DNS-ID divergente de subjectAltName.
+D) Não atende. Quando o identificador de referência é um nome DNS, aplica-se a comparação de nomes DNS. A comparação com um iPAddress é exigida quando a referência é um endereço IP; resolver um nome para IP não transforma a referência da URL em IP-ID.
+E) Não atende. O endereço obtido por resolução DNS não torna os nomes intercambiáveis na verificação. A RFC 9525 exige a comparação com o identificador de referência construído independentemente do certificado; nomes intermediários da resolução não substituem essa referência.
+FONTES
+IETF — RFC 9525: Service Identity in TLS (novembro de 2023) | https://www.rfc-editor.org/rfc/rfc9525.html | Seções 1.3 e 1.4.1 (DNS-ID/SAN e exclusão do CN); 6, 6.1.1 (referência independente e resolução DNS), 6.3, 6.4 e 6.6 (comparação e falha); Apêndice A (remoção do CN-ID). Sustenta B, C, D e E e a distinção em A.
+IETF — RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile (maio de 2008) | https://www.rfc-editor.org/rfc/rfc5280.html | Seção 6.1.3(a), itens 1–4, página impressa 80: verificações básicas de assinatura, validade temporal, revogação e emissor; contrastadas com a verificação de identidade da RFC 9525.
+Conteúdo-base — Segurança da Informação | Bloco SEGURANÇA DA INFORMAÇÃO: certificados e assinaturas digitais; SSL/TLS.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 36 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 36, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+Metadados do acervo de referências FCC | Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+QUESTÃO 41 | BAN-DS-11-0006 | v01
+Gabarito: D
+RESOLUÇÃO
+I: senha e PIN verificados no servidor são dois segredos da categoria conhecimento; não há combinação de categorias. II: a senha é conhecimento e o token OTP é posse, formando dois fatores distintos. III: dois tokens OTP sem fator de ativação são dois autenticadores da mesma categoria, posse. IV: o dispositivo criptográfico é um fator de posse; seu PIN local, exigido em cada autenticação, acrescenta conhecimento, constituindo um autenticador multifator. Portanto, somente II e IV atendem ao comando, conforme a alternativa D. A conclusão é sobre as categorias dos fatores; não certifica atendimento integral a um nível de garantia do NIST.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. II combina conhecimento e posse, mas I exige dois segredos memorizados, ambos da categoria conhecimento. Duas entradas não criam duas categorias de fatores.
+B) Não atende. I usa somente conhecimento e III usa somente posse, embora cada processo solicite duas evidências. Nenhum deles combina categorias distintas.
+C) Não atende. II é uma combinação de conhecimento e posse, mas os dois tokens de III pertencem à mesma categoria de posse. A independência dos dispositivos não altera a categoria dos fatores.
+D) Atende. II combina a senha conhecida com a posse do token; IV combina a posse do dispositivo com o conhecimento do PIN de ativação, obrigatório a cada evento. São os dois processos com categorias distintas.
+E) Não atende. IV combina posse e conhecimento, mas III utiliza dois autenticadores de posse sem outro fator de ativação. Além disso, a combinação omite II, que também satisfaz o comando.
+FONTES
+NIST SP 800-63B-4 — Authentication Assurance Levels | https://pages.nist.gov/800-63-4/sp800-63b/aal/ | Seção 2.2 e 2.2.1: dois fatores distintos; autenticador multifator ou combinação de fatores separados; autenticador físico acompanhado de senha ou comparação biométrica. Sustenta a distinção entre quantidade de etapas e categorias.
+NIST SP 800-63B-4 — Authenticator and Verifier Requirements | https://pages.nist.gov/800-63-4/sp800-63b/authenticators/ | Seções 3.1.1 (senha e PIN como conhecimento), 3.1.4 (OTP de fator único como posse) e 3.1.7–3.1.7.1 (autenticador criptográfico multifator e ativação local em cada evento). Sustenta a classificação de I, II, III e IV.
+Conteúdo-base — Segurança da Informação | Bloco SEGURANÇA DA INFORMAÇÃO: controle de acesso: autenticação, autorização e auditoria; RBAC e MFA.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 38 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 38, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+Metadados do acervo de referências FCC | Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+QUESTÃO 42 | BAN-DS-11-0007 | v01
+Gabarito: A
+RESOLUÇÃO
+A falha é uma referência direta a objeto sem a autorização correspondente: o identificador permite selecionar um comprovante alheio apesar da política de propriedade. Autenticação e validação de token já funcionam, mas não resolvem essa decisão. É necessário conferir, em código confiável no servidor e em cada solicitação, a relação entre o cliente autenticado e o comprovante, recusando o acesso quando essa relação não autoriza a consulta. A alternativa A atende. Identificadores imprevisíveis, MFA, filtragem da interface e nova validação do token não substituem essa verificação.
+ANÁLISE DAS ALTERNATIVAS
+A) Atende. A política exige autorização por objeto baseada na relação entre cliente e comprovante. Conferir a propriedade no servidor em cada solicitação e negar a consulta quando ela não se comprova aplica essa política ao objeto solicitado.
+B) Não atende. UUIDs podem dificultar a descoberta de identificadores, mas não implementam a autorização exigida. Se o identificador de um objeto alheio for conhecido, a API continuará a retorná-lo. A dificuldade de adivinhação não substitui a conferência de permissões.
+C) Não atende. MFA reforça a autenticação da identidade; não concede ao cliente permissão para acessar todos os comprovantes. A condição de estar autenticado continua insuficiente para decidir se aquele objeto pode ser consultado.
+D) Não atende. A filtragem no aplicativo pode orientar a interface, mas o cliente pode alterar a requisição ou enviá-la por outra ferramenta. O controle deve existir no servidor, onde o solicitante não consegue modificar a decisão.
+E) Não atende. Validar o token não demonstra que o comprovante selecionado pertence ao cliente autenticado. A alternativa preserva a falta de vínculo entre o objeto solicitado e a identidade autorizada a consultá-lo.
+FONTES
+OWASP Top 10:2021 — A01:2021, Broken Access Control | https://top10.owasp.org/2021/A01_2021-Broken_Access_Control/ | Description: alteração de URL e acesso ao objeto de outro usuário por seu identificador. How to Prevent: controle em código confiável no servidor, negação por padrão e imposição de propriedade dos registros. Example Attack Scenarios, Scenario #1. Preservada a edição de 2021.
+OWASP Cheat Sheet Series — Authorization Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html | Introduction (autenticação versus autorização); Validate the Permissions on Every Request; Ensure Lookup IDs are Not Accessible Even When Guessed or Cannot Be Tampered With; Verify that Authorization Checks are Performed in the Right Location. Complementa a análise de B–E; não substitui o Top 10:2021 como classificação.
+Conteúdo-base — Segurança da Informação | Bloco SEGURANÇA DA INFORMAÇÃO: segurança de APIs e aplicações web conforme OWASP Top 10:2021.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 37 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 37, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+Metadados do acervo de referências FCC | Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+QUESTÃO 43 | BAN-DS-11-0008 | v01
+Gabarito: C
+RESOLUÇÃO
+O isolamento contém a propagação, mas não comprova a integridade da recuperação. A Rev. 3 permite iniciar procedimentos de recuperação durante ou depois dos processos de resposta, conforme RC.RP-01.R1; por isso o trabalho coordenado descrito é compatível com a fonte. RC.RP-03 recomenda verificar os ativos de restauração antes do uso. RC.RP-05 recomenda conferir os ativos restaurados e a adequação da restauração, remediando as causas-raiz antes da produção. A alternativa C reúne essas medidas. A elaboração utiliza o perfil de resposta e recuperação da Rev. 3, sem impor o ciclo de quatro fases da Rev. 2.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Ser anterior à detecção não comprova a integridade do backup: o comprometimento pode anteceder sua descoberta. RC.RP-03 determina a verificação dos ativos de restauração antes de usá-los, inclusive quanto a indicadores de comprometimento e corrupção.
+B) Não atende. O êxito operacional da cópia não substitui a verificação de integridade dos ativos restaurados. RC.RP-05 prevê conferir esses ativos e a adequação da restauração antes da produção.
+C) Atende. Reúne a verificação do backup antes de sua utilização, prevista em RC.RP-03, e a verificação dos ativos restaurados com remediação das causas-raiz antes da produção, prevista em RC.RP-05.
+D) Não atende. A vulnerabilidade explorada é uma causa a remediar antes do uso em produção. As verificações do backup e dos ativos não justificam recolocar em operação o sistema com o ponto de entrada preservado.
+E) Não atende. O isolamento é uma medida de contenção para limitar a expansão do incidente, conforme RS.MI-01; o silêncio de tráfego nesse estado não comprova integridade nem ausência de mecanismos persistentes nos dados ou sistemas restaurados.
+FONTES
+NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (abril de 2025) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | Seção 3.2, tabela 3: RS.MI-01.N1/C1, p.32 impressa (p.40 do PDF), contenção e isolamento; RS.MI-02.N1, p.33 impressa (p.41 do PDF), persistência e pontos de entrada; RC.RP-01.R1, RC.RP-03.R1 e RC.RP-05.R1/R2, p.34 impressa (p.42 do PDF), recuperação durante/depois da resposta, integridade antes do uso e causas-raiz antes da produção. Paginação do PDF contada a partir de 1.
+Conteúdo-base — Segurança da Informação | Bloco SEGURANÇA DA INFORMAÇÃO: gestão de incidentes conforme ABNT NBR ISO/IEC 27035-1:2023 e NIST SP 800-61 Rev. 3.
+FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 39 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 39, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+Metadados do acervo de referências FCC | Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+QUESTÃO 44 | BAN-DS-12-0003 | v01
+Gabarito: C
+RESOLUÇÃO
+A classificação exige observar dois aspectos do cenário. No aspecto da implantação, a nuvem privada e a nuvem pública de P permanecem infraestruturas distintas, ligadas por tecnologia que permite portabilidade: há composição híbrida. A nuvem privada pode estar no centro de dados de uma contratada; seu uso exclusivo é compatível com a definição do NIST. No aspecto dos provedores, a organização utiliza serviços públicos de P e de Q, empresas distintas: adota multicloud. As classificações podem coexistir. A execução de aplicações diferentes em P e Q não exige replicar uma mesma aplicação entre eles. Portanto, somente a alternativa C reconhece os dois aspectos sem impor condição inexistente.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. A integração permite portabilidade entre infraestruturas, mas não torna P e Q uma única empresa. A utilização dos dois provedores públicos caracteriza multicloud.
+B) Não atende. A localização externa não descaracteriza a nuvem privada: o NIST admite sua instalação dentro ou fora das dependências da organização. A integração declarada entre a nuvem privada e a pública caracteriza a composição híbrida.
+C) Atende. A nuvem privada e a pública de P continuam distintas e integradas com portabilidade, caracterizando nuvem híbrida. O uso de serviços dos provedores públicos P e Q caracteriza também multicloud.
+D) Não atende. A preservação das identidades é compatível com a definição de nuvem híbrida do NIST. Ela não desfaz a composição integrada expressamente descrita.
+E) Não atende. Multicloud considera o uso de mais de um provedor pela organização; não exige que cada aplicação seja executada nos dois. A distribuição de aplicações distintas entre P e Q satisfaz esse critério.
+FONTES
+Conteúdo programático — Computação em Nuvem | Linhas 191–199; observação de legislação nas linhas 213–217. Delimitação de escopo; a questão não cobra legislação.
+NIST SP 800-145 — The NIST Definition of Cloud Computing (página oficial da publicação) | https://csrc.nist.gov/pubs/sp/800/145/final | Identificação NIST SP 800-145; publicação em setembro de 2011; autores Peter Mell e Tim Grance. Consultada por navegação em 26/11/2026 para confirmar edição e autoria; as definições foram lidas nas entradas oficiais abaixo.
+NIST CSRC Glossary — Hybrid cloud | https://csrc.nist.gov/glossary/term/hybrid_cloud | Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026. Sustenta composição de infraestruturas distintas com identidade preservada e tecnologia que permite portabilidade.
+NIST CSRC Glossary — Private cloud | https://csrc.nist.gov/glossary/term/private_cloud | Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026. Sustenta uso exclusivo por uma organização e possibilidade de instalação dentro ou fora de suas dependências.
+NIST CSRC Glossary — Public cloud | https://csrc.nist.gov/glossary/term/public_cloud | Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026 como conferência do modelo público indicado no cenário.
+Google Cloud — What is multicloud? | https://cloud.google.com/learn/what-is-multicloud | Seções Multicloud definition e Multicloud versus hybrid cloud. Página informa atualização em 09/10/2026; consultada por navegação em 26/11/2026. Sustenta o uso de mais de um provedor público por uma organização, inclusive para cargas diferentes, e a coexistência com ambientes privados.
+FCC — TRT da 4ª Região, Analista Judiciário, TI, 2022 — referência editorial | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001; questão 48, página 11, e questão 59, página 14. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia do PDF hospedada no Qconcursos; não é apresentada como download da FCC nem como prova de integridade oficial.
+
+QUESTÃO 45 | BAN-DS-12-0004 | v01
+Gabarito: E
+RESOLUÇÃO
+A base de rateio é R$ 18.000,00 + R$ 12.000,00 = R$ 30.000,00. Cartões representa 18.000/30.000 = 60% e recebe 60% de R$ 6.000,00 = R$ 3.600,00. Crédito representa 40% e recebe R$ 2.400,00. Os custos totais atribuídos são, assim, R$ 21.600,00 para Cartões e R$ 14.400,00 para Crédito. Comparando cada total com seu orçamento, Cartões excede R$ 21.000,00 em R$ 600,00; Crédito permanece R$ 600,00 abaixo de R$ 15.000,00. A compensação global não dispensa o sinal de excesso por equipe exigido na política. A alternativa E atende aos dois resultados. O critério proporcional é uma decisão interna expressa no cenário, não uma regra universal de cobrança de provedores.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Esses totais resultam de dividir o custo compartilhado em partes iguais de R$ 3.000,00. A política exige proporção dos custos diretos, que são diferentes: 60% para Cartões e 40% para Crédito.
+B) Não atende. Os totais atribuídos estão certos, mas Cartões supera seu orçamento em R$ 600,00. A igualdade entre o custo global de R$ 36.000,00 e a soma dos orçamentos não elimina o excesso individual que a política manda sinalizar.
+C) Não atende. Os valores reproduzem apenas os custos diretos e deixam os R$ 6.000,00 compartilhados fora da atribuição. A política exige ratear integralmente esse custo e incluí-lo na comparação por equipe.
+D) Não atende. O excesso de R$ 3.000,00 decorre de lançar todo o custo compartilhado em Cartões. Pela proporção aprovada, Crédito deve receber R$ 2.400,00 e Cartões, R$ 3.600,00; portanto, esse lançamento não atende ao critério.
+E) Atende. As parcelas são R$ 3.600,00 para Cartões e R$ 2.400,00 para Crédito. Somadas aos custos diretos, produzem R$ 21.600,00 e R$ 14.400,00. Apenas Cartões ultrapassa seu orçamento, em R$ 600,00.
+FONTES
+Conteúdo programático — Computação em Nuvem | Linhas 191–199; observação de legislação nas linhas 213–217. Delimitação de escopo; a questão não cobra legislação.
+FinOps Foundation — FinOps Framework Capability: Allocation | https://framework.finops.org/framework/capabilities/allocation/ | Definition, itens 1–3 (allocation, tagging/metadata e shared cost strategies), em especial as possibilidades de rateio proporcional e por outros critérios; Functional Activities e Measures of Success & KPIs. Consultada por navegação em 26/11/2026. Fundamenta metadados para atribuição e política explícita para custos compartilhados; os valores e a política específica da questão são fictícios e autorais.
+FinOps Foundation — FinOps Framework Capability: Budgeting | https://www.finops.org/framework/capabilities/budgeting/ | Track and manage budgets e Definition, especialmente relação entre orçamento e estratégia de atribuição, responsáveis pelo orçamento e investigação de desvios. Consultada por navegação em 26/11/2026. Fundamenta acompanhamento por centro responsável; o limiar e a regra de sinalização são declarados no enunciado.
+FCC — TRF da 4ª Região, Analista Judiciário, Informática, 2007 — referência editorial histórica | https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf | Caderno Cargo I, Tipo 001; questão 20, página 5. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF obtido no próprio TRF4; referência histórica da construção de um problema quantitativo com condições declaradas.
+FCC — TRT da 4ª Região, Analista Judiciário, TI, 2022 — referência editorial | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001; questão 59, página 14. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de integridade oficial.
+
+QUESTÃO 46 | BAN-DS-13-0002 | v01
+Gabarito: C
+RESOLUÇÃO
+O cenário separa o servidor de gerenciamento Rancher do cluster Kubernetes registrado. O registro adiciona a integração com Rancher a um cluster que já existe; não transfere a execução de seus componentes para o servidor de gerenciamento. Mantidos o plano de controle, os nós e a rede, continuam disponíveis as funções Kubernetes de controle e agendamento. A documentação Rancher informa que os workloads dos clusters gerenciados continuam funcionando mesmo com a perda do servidor e que clusters registrados podem usar seus métodos anteriores de acesso. Como o enunciado também garante acesso direto à API com autenticação e permissões independentes, a Analista pode administrar os workloads por esse caminho. A indisponibilidade afeta a gestão por meio do Rancher, sem impor a parada do Kubernetes, a recriação dos Pods ou um novo registro para criar Deployments.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. O agendamento é função do kube-scheduler do cluster Kubernetes. Como o plano de controle permanece operacional, a indisponibilidade isolada do servidor Rancher não impede esse componente de selecionar nós para novos Pods.
+B) Não atende. A API Kubernetes admite operações de consulta e de alteração. O cenário fornece acesso direto com credenciais válidas e permissões para ambas; essas alterações não precisam atravessar o proxy do Rancher.
+C) Atende. O Rancher administra o cluster registrado sem substituir seu plano de controle Kubernetes. As condições de funcionamento do cluster e de acesso direto foram preservadas, permitindo manter os workloads e administrá-los pela API.
+D) Não atende. A perda do servidor de gerenciamento não exige recriar os Pods do cluster registrado. Os workloads existentes continuam funcionando; a recriação pode ocorrer por decisões dos controladores Kubernetes, mas não é requisito para desvincular sua execução da disponibilidade do Rancher.
+E) Não atende. Um Deployment é um recurso da API Kubernetes, reconciliado pelo controlador correspondente. Sua criação pelo acesso direto autorizado não exige novo registro no Rancher; o registro permite a integração de gerenciamento, não habilita a capacidade nativa de criar Deployments.
+FONTES
+Conteúdo programático — Versionamento de código com Git; Kubernetes e Rancher | Linhas 201–205, especialmente linha 203: orquestração de containers com Rancher gerenciamento de clusters Kubernetes com Rancher. Observação legislativa lida nas linhas 213–217; a questão não cobra legislação.
+SUSE Rancher Manager — Rancher is No Longer Needed | https://ranchermanager.docs.rancher.com/faq/rancher-is-no-longer-needed | Seções If the Rancher server is deleted, what happens to the workloads in my downstream clusters? e If the Rancher server is deleted, how do I access my downstream clusters?, item Registered/Imported clusters. Navegação em 26/11/2026. Fundamenta continuidade dos workloads e manutenção dos métodos de acesso de clusters registrados.
+SUSE Rancher Manager — Rancher Server and Components | https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/rancher-server-and-components | Arquitetura Rancher 2.x, parágrafos iniciais e recomendação de servidor em cluster separado dos downstream clusters. Navegação em 26/11/2026. Sustenta a distinção entre cluster de gerenciamento e cluster de workloads.
+SUSE Rancher Manager — Communicating with Downstream User Clusters | https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters | Seções 1. The Authentication Proxy e Imported Kubernetes Clusters. Navegação em 26/11/2026. A primeira distingue o encaminhamento de chamadas à API; a segunda esclarece que, na importação, Rancher conecta-se a um cluster já instalado e adiciona agentes de comunicação.
+Kubernetes — Cluster Architecture | https://kubernetes.io/docs/concepts/architecture/ | Seções Control plane components, kube-apiserver, kube-scheduler e kube-controller-manager; linhas 913–948 da página consultada. Navegação em 26/11/2026. Fundamenta funções nativas de API, controle e agendamento que permanecem no cluster.
+Kubernetes — Kubernetes Components | https://kubernetes.io/docs/concepts/overview/components/ | Visão de Control Plane Components: kube-apiserver, etcd, kube-scheduler e kube-controller-manager. Navegação em 26/11/2026. Conferência complementar da separação entre os componentes nativos do cluster e a camada Rancher.
+Kubernetes — Deployments | https://kubernetes.io/docs/concepts/workloads/controllers/deployment/ | Introdução de Deployments: atualização declarativa de Pods/ReplicaSets e convergência do estado atual ao desejado pelo controlador de Deployment; linhas 942–946 da página consultada. Navegação em 26/11/2026. Fundamenta a análise sobre criação e controle de Deployments pelo Kubernetes.
+FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001; questão 33, página 8, e questão 36, página 9. Extração local efetivamente lida. Metadados de origem conferidos em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos; sem afirmação de download da FCC ou de integridade oficial.
+
+QUESTÃO 47 | BAN-DS-14-0002 | v01
+Gabarito: E
+RESOLUÇÃO
+Os resultados esperados do teste de aceitação são derivados da regra de negócio, com contexto inicial, solicitação e efeitos verificáveis na tela. A mensagem e o total exibido constituem dois critérios observáveis; a verificação de ambos permite distinguir uma recusa sem alteração de uma recusa que modifica indevidamente o total.
+
+Em I, a conta está ativa e a soma é 800,00 + 200,00 = 1.000,00. Como o limite é inclusivo, ambas as condições de confirmação são satisfeitas: a mensagem deve ser “Confirmado” e o total deve ser 1.000,00.
+
+Em II, a conta está ativa, mas a soma seria 800,00 + 201,00 = 1.001,00, acima do limite. A mensagem deve ser “Recusado” e o total deve permanecer em 800,00.
+
+Em III, a soma seria 800,00 + 100,00 = 900,00, dentro do limite, mas a conta está inativa. Como as condições são cumulativas, a mensagem deve ser “Recusado” e o total deve permanecer em 800,00.
+
+As execuções independentes impedem que a confirmação de I altere a precondição dos demais casos. I representa o cenário positivo no limite; II e III exercitam, separadamente, a falha de cada condição de confirmação. Somente uma alternativa reproduz os três pares esperados.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende ao comando. Em I, a conta está ativa e 800,00 + 200,00 = 1.000,00. A expressão “não ultrapassar” admite a igualdade; portanto, esse caso deve confirmar o agendamento e apresentar total de 1.000,00, em vez de recusá-lo. Os resultados indicados para II e III respeitam as recusas previstas.
+B) Não atende ao comando. Em II, o valor solicitado isoladamente é inferior a 1.000,00, mas a regra compara a soma: 800,00 + 201,00 = 1.001,00. O agendamento deve ser recusado e o total deve permanecer em 800,00. Os pares indicados para I e III correspondem à regra.
+C) Não atende ao comando. Em III, a soma de 900,00 não ultrapassa o limite, mas a conta está inativa. A confirmação exige simultaneamente conta ativa e soma dentro do limite; a saída deve ser “Recusado” com total de 800,00. Os pares de I e II correspondem à regra.
+D) Não atende ao comando. As mensagens de II e III indicam corretamente a recusa, mas os totais incorporam os valores de solicitações recusadas. A regra exige que o total permaneça em 800,00 em ambos os casos. Verificar somente a mensagem deixaria de conferir esse resultado observável.
+E) Atende ao comando. I confirma no limite inclusivo e apresenta total de 1.000,00. II recusa porque a soma seria 1.001,00; III recusa porque a conta está inativa. Nas duas recusas, o total exibido permanece em 800,00, conforme a regra.
+FONTES
+Conhecimentos específicos – Desenvolvimento de Sistemas, arquivo-base do edital | Bloco LEVANTAMENTO DE REQUISITOS, TESTES, INTEGRAÇÃO E DOCUMENTAÇÃO TÉCNICA; observação final sobre legislação.
+ISTQB Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024 | https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf | Seção 2.2.1, p. 29, item Acceptance testing; seções 4.5.2 e 4.5.3, pp. 45–46. Navegação realizada em 26/11/2026.
+Cucumber – Gherkin Reference | https://cucumber.io/docs/gherkin/reference/ | Seções Rule, Example, Given, When e Then; especialmente Then, parágrafos sobre expected outcome e observable output. Navegação realizada em 26/11/2026.
+FCC – TRT da 4ª Região – Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação – Julho/2022 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Caderno A14, Tipo 001; questão 33, p. 8; questão 48, p. 11; identificação na capa, p. 1.
+Metadados das referências FCC | Registro trt4-2022-ti-a14-001, consultado em 26/11/2026.
+
+QUESTÃO 48 | BAN-DS-15-0002 | v01
+Gabarito: E
+RESOLUÇÃO
+A investigação é histórica: deve explicar a geração do relatório de setembro. A linhagem precisa ligar os lotes utilizados às saídas, passando pelas etapas que excluíram operações, converteram valores e produziram os agrupamentos. A identificação das regras daquela execução permite distinguir a conversão realizada da configuração alterada posteriormente. Esse encadeamento documenta a derivação dos totais; não equivale, por si, a comprovar que os valores ou as regras estavam corretos.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende. Identificar lotes é pertinente, mas aplicar retrospectivamente a regra vigente na investigação pode descrever uma conversão diferente da executada em setembro. É necessário preservar a identificação da regra efetivamente usada naquela geração.
+B) Não atende. Dicionário e estrutura descrevem os campos, mas tipos compatíveis não revelam quais filtros, conversões ou agrupamentos foram executados. Diferentes processamentos podem produzir saídas com o mesmo esquema.
+C) Não atende. Horários e estado de conclusão ajudam a acompanhar a execução. Esses registros, porém, não identificam os vínculos de utilização e produção de dados entre as etapas que deram origem aos totais.
+D) Não atende. Validações e aprovações registram avaliações sobre os resultados. Sua existência não estabelece quais arquivos alimentaram cada etapa nem quais transformações produziram os totais; qualidade avaliada e derivação documentada são informações distintas.
+E) Atende. O vínculo com os lotes utilizados, a sequência de entradas e saídas e a identificação das regras daquela execução permitem rastrear o caminho de formação do relatório de setembro, inclusive após uma mudança posterior no fluxo.
+FONTES
+Microsoft Learn — Data lineage in classic Data Catalog | https://learn.microsoft.com/en-us/purview/data-gov-classic-lineage | Use cases; Lineage experience in the classic Data Catalog; Lineage granularity: Entity level lineage, Column or attribute level lineage e Process execution status. Página atualizada em 12/11/2026; navegada em 26/11/2026.
+W3C — PROV Model Primer | https://www.w3.org/TR/prov-primer/ | Working Group Note de 30/04/2013; seções 1 (Introduction), 2.1–2.3 (Entities, Activities, Usage and Generation), 2.6 (Derivation and Revision), 2.7 (Plans) e 2.8 (Time). Navegado em 26/11/2026.
+W3C — PROV-DM: The PROV Data Model | https://www.w3.org/TR/prov-dm/ | W3C Recommendation de 30/04/2013; seção 1 (Introduction), 2.1.1 (Entity and Activity), 2.1.2 (Derivation) e 5.2.1 (Derivation). Navegado em 26/11/2026.
+Conteúdo programático — Conhecimentos específicos de Desenvolvimento de Sistemas | Bloco GOVERNANÇA DE DADOS, AUTENTICAÇÃO E CONTROLE DE ACESSO, linha 209; leitura em 26/11/2026.
+FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Questão 37, página 9, e questão 59, página 14; extração textual efetivamente lida, com marcadores de página; metadados e origem conferidos em Backend/Agents/conteudo/referencias-fcc/fontes.json, entrada trt4-2022-ti-a14-001.
+
+QUESTÃO 49 | BAN-DS-16-0003 | v01
+Gabarito: D
+RESOLUÇÃO
+O ensaio apresenta dois resultados: o sistema novo produz relatórios mais rapidamente, mas alguns totais não coincidem. A terceira frase informa que a mudança foi adiada apesar do benefício da rapidez para a revisão mensal; although marca essa concessão. A quarta frase estabelece que a equipe somente marcará outra data depois de explicar as diferenças. A última mantém a produção no sistema atual nesse intervalo. A inferência delimitada é que a rapidez não foi suficiente para justificar a migração enquanto os resultados divergentes permanecessem sem explicação. Não se pode inferir qual sistema errou, uma nova data específica ou uma decisão definitiva de abandonar a mudança.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende ao comando. A última frase determina que os funcionários continuarão a produzir relatórios com o sistema atual enquanto as diferenças não forem explicadas. O texto não prevê usar o sistema novo na revisão mensal para investigar essas diferenças.
+B) Não atende ao comando. O ensaio já mostrou que o sistema novo é mais rápido. O adiamento está associado aos totais divergentes; não há plano de acelerar o sistema atual nem de fazê-lo superar o novo.
+C) Não atende ao comando. A expressão only after estabelece a ordem inversa: a explicação das diferenças deve preceder a definição da nova data. A alternativa apresenta a data como condição para iniciar a análise.
+D) Atende ao comando. Mesmo reconhecendo o benefício dos relatórios mais rápidos para a revisão mensal, a equipe adia a mudança e condiciona uma nova data ao esclarecimento das diferenças. Assim, a vantagem de velocidade, isoladamente, não bastou para manter a migração.
+E) Não atende ao comando. O ensaio identifica divergências, mas não determina qual sistema produziu os totais incorretos. Tampouco há decisão de substituir os relatórios do sistema atual; ele continuará em uso por enquanto.
+FONTES
+Texto autoral sobre migração da produção de relatórios — /root/s2_elab_16 | ENUNCIADO, cinco frases do texto em inglês; fonte primária do cenário e dos limites da inferência. Nenhuma passagem externa foi adaptada.
+British Council — LearnEnglish: Contrasting ideas | https://learnenglish.britishcouncil.org/free-resources/grammar/c1/contrasting-ideas | Grammar explanation e subseção Although, though and even though; consulta em 26/11/2026. Sustenta a leitura concessiva de although; a conclusão sobre a migração decorre do texto autoral.
+Conteúdo programático de conhecimentos específicos — Desenvolvimento de Sistemas | Seção INGLÊS TÉCNICO.; delimitação do conteúdo.
+FCC/TRT da 7ª Região — Analista Judiciário, Tecnologia da Informação, 2009 — itens de inglês no Qconcursos | https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 | Q128175, identificador do acervo: comando de inferência e cinco interpretações em português; comandos e opções Q128171–Q128175 lidos em 26/11/2026. Origem secundária.
+Texto inglês associado aos itens FCC/TRT7/2009, imagem do acervo Qconcursos | Imagem integral visualizada: artigo adaptado sobre Intellipedia. Usada somente para conferir a relação entre texto inglês e itens de compreensão.
+Registro local da referência FCC de inglês TRT7/2009 | Identificação dos exemplos Q128171–Q128175 e limites dos metadados; confrontado com a página e a imagem reais.
+
+QUESTÃO 50 | BAN-DS-16-0004 | v01
+Gabarito: C
+RESOLUÇÃO
+A terceira frase divide as cópias testadas em dois conjuntos, apresentados em ordem: as que podem ser abertas e as que não podem. Na quarta frase, The latter remete ao segundo conjunto, isto é, às cópias que não podem ser abertas. São elas que entram no relatório e que a analista substitui. Na oração before she replaces them with new copies, she retoma a analista e them retoma as cópias desse segundo grupo, como objeto de replaces. New copies designa as cópias substitutas, não o referente de them. A resolução depende dessa cadeia de referências no inglês, sem pressupor regras técnicas de backup.
+ANÁLISE DAS ALTERNATIVAS
+A) Não atende ao comando. Os arquivos dos projetos aparecem como origem das cópias na primeira frase. A divisão em dois grupos e a substituição descritas depois se referem às cópias testadas, não aos arquivos de origem.
+B) Não atende ao comando. O conjunto das cópias testadas foi dividido em dois grupos. The latter seleciona o segundo grupo, de modo que them não abrange todas as cópias submetidas à verificação.
+C) Atende ao comando. Os grupos são apresentados na ordem: cópias que podem ser abertas e cópias que não podem. The latter retoma o segundo grupo, que é registrado e depois substituído. Them mantém esse mesmo referente como objeto de replaces.
+D) Não atende ao comando. As cópias que puderam ser abertas formam o primeiro dos dois grupos. The latter retoma o segundo grupo; a alternativa corresponderia ao primeiro, que não é o conjunto substituído na frase.
+E) Não atende ao comando. Em replaces them with new copies, them identifica o conjunto substituído; new copies identifica o que entra em seu lugar. A alternativa troca os dois papéis na construção.
+FONTES
+Texto autoral sobre verificação de cópias de segurança — /root/s2_elab_16 | ENUNCIADO, terceira e quarta frases: divisão em dois grupos, The latter e them; fonte primária do referente contextual. Nenhuma passagem externa foi adaptada.
+British Council — LearnEnglish: Personal pronouns | https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/personal-pronouns | Quadro Subject/Object e explicação do emprego de object pronouns como objeto verbal; consulta em 26/11/2026. Sustenta a identificação de them como pronome objeto.
+Merriam-Webster.com Dictionary — latter | https://www.merriam-webster.com/dictionary/latter | Acepção 2 e exemplo de emprego substantivado de the latter; consulta em 26/11/2026. Sustenta a retomada do segundo de dois grupos mencionados.
+Conteúdo programático de conhecimentos específicos — Desenvolvimento de Sistemas | Seção INGLÊS TÉCNICO.; delimitação do conteúdo.
+FCC/TRT da 7ª Região — Analista Judiciário, Tecnologia da Informação, 2009 — itens de inglês no Qconcursos | https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 | Q128172, identificador do acervo: interpretação contextual de segmento inglês com cinco opções em português; Q128174: compreensão textual. Comandos e opções Q128171–Q128175 lidos em 26/11/2026. Origem secundária.
+Texto inglês associado aos itens FCC/TRT7/2009, imagem do acervo Qconcursos | Imagem integral visualizada: artigo adaptado sobre Intellipedia. Usada somente para conferir a apresentação de texto inglês associado aos itens.
+Registro local da referência FCC de inglês TRT7/2009 | Identificação dos exemplos Q128171–Q128175 e limites dos metadados; confrontado com a página e a imagem reais.
+

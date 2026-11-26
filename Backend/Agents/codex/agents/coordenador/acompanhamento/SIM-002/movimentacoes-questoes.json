@@ -1,0 +1,358 @@
+{
+  "simulado": "SIM-002",
+  "responsavel": "/root",
+  "data": "2026-11-26",
+  "observacao": "Os caminhos nos pareceres e retornos originais identificam a localização no momento da avaliação. Plano e este mapa indicam a localização atual.",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0005",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0005",
+      "destino": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0005",
+      "sha256Textos": "17d8b75b662adf3e892308e30143e85d6ed893d6caf62121f729990a5bb59729"
+    },
+    {
+      "id": "BAN-DS-01-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0006",
+      "destino": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0006",
+      "sha256Textos": "ae824c29535e4d712e9422ef966f4a19c5eca513a7cdb109d313ae495da8f4f6"
+    },
+    {
+      "id": "BAN-DS-01-0007",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007",
+      "destino": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007",
+      "sha256Textos": "151ade9586d3032e3abc1c85950e1db817a3c8b71081d9c98e404528ffa327aa"
+    },
+    {
+      "id": "BAN-DS-01-0008",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0008",
+      "destino": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0008",
+      "sha256Textos": "3b52351a3bebfa455b80091fbc0373b39fb1b0432af6bf27bc119b87bbf5593a"
+    },
+    {
+      "id": "BAN-DS-02-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0004",
+      "destino": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004",
+      "sha256Textos": "b2046b2cdd568780eca0051e773fb77a4d4300309f861d885339daaee9782f2c"
+    },
+    {
+      "id": "BAN-DS-02-0005",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0005",
+      "destino": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0005",
+      "sha256Textos": "c5df42666d475e9753aab54bce4d815f78faaa878d395c6b9c7258157053e29d"
+    },
+    {
+      "id": "BAN-DS-02-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0006",
+      "destino": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0006",
+      "sha256Textos": "c87031db88cc566e7bade684e541158513b9276b60d3b807ebd421f493d9cb44"
+    },
+    {
+      "id": "BAN-DS-03-0008",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0008",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0008",
+      "sha256Textos": "11142338655ce9839013104838a8c8c41776be539a2f9a9a5b7227ff769740f5"
+    },
+    {
+      "id": "BAN-DS-03-0009",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0009",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009",
+      "sha256Textos": "a03e0a51c42e23c7ea0bee19345c6bbf34bfbdcbf394b20ec6570980378d0732"
+    },
+    {
+      "id": "BAN-DS-03-0010",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0010",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0010",
+      "sha256Textos": "96faf51b0eb419a42eba8f46d5ace0eeb6a2f9d1a4b2a869e1fd3ca020e7f34c"
+    },
+    {
+      "id": "BAN-DS-03-0011",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0011",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0011",
+      "sha256Textos": "d28b87bdf7ef5f29c7f5a7a14bd32b8103de5e28b0c4ba9aaa3b3edf0f6fd34a"
+    },
+    {
+      "id": "BAN-DS-03-0012",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0012",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0012",
+      "sha256Textos": "c7f0714456c1078816a2f0cd97cdece589558fdea97f2e6a2ccb9d6992bff8c6"
+    },
+    {
+      "id": "BAN-DS-03-0013",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0013",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0013",
+      "sha256Textos": "08ee03abc6dd41b0eeba95d3c2e2d924221e4b2be9dbc3ed4d2d2ef6096c4027"
+    },
+    {
+      "id": "BAN-DS-03-0014",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0014",
+      "destino": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0014",
+      "sha256Textos": "482f3bb45e51bed3ab0503114bef31ffdb41e441623479833cc4a05036819657"
+    },
+    {
+      "id": "BAN-DS-04-0007",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0007",
+      "destino": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0007",
+      "sha256Textos": "1234c7f3020d8825d10be4342b97a4a2469b834a15b65dc3749740669dcdde9b"
+    },
+    {
+      "id": "BAN-DS-04-0008",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0008",
+      "destino": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0008",
+      "sha256Textos": "65e40587b5a5628755ed9d5b8772058e1d3b62ac66a433e28e97e9ff4e295cd3"
+    },
+    {
+      "id": "BAN-DS-04-0009",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0009",
+      "destino": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0009",
+      "sha256Textos": "43faa758d478f80fe0fccbd5a95aeca3e5695f4232110a72dc45a7fdc1c39fb8"
+    },
+    {
+      "id": "BAN-DS-04-0010",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0010",
+      "destino": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0010",
+      "sha256Textos": "214e8b03ea42e99762e5fcd65f2f55b26bc84156084e0fdeea13a8a9a0002dc6"
+    },
+    {
+      "id": "BAN-DS-04-0011",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0011",
+      "destino": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0011",
+      "sha256Textos": "3d3b78689983144c4ea7b4f5a9fd953022f6d42d8de9de19ca07f0cd307b81bb"
+    },
+    {
+      "id": "BAN-DS-04-0012",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0012",
+      "destino": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0012",
+      "sha256Textos": "a4a465931830edfb5d3453011fe34f37f41bde17833db8d36ff1a466e3dc6d8a"
+    },
+    {
+      "id": "BAN-DS-05-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0006",
+      "destino": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0006",
+      "sha256Textos": "61f4ae02fbe327c3da4206d26332f97322b9445b283ab1bc066d2c438c89e046"
+    },
+    {
+      "id": "BAN-DS-05-0007",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0007",
+      "destino": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0007",
+      "sha256Textos": "57114c3bbb96862ae7751ea01717893b33257f328a3b7b9d0e886c75172ad94d"
+    },
+    {
+      "id": "BAN-DS-05-0008",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008",
+      "destino": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008",
+      "sha256Textos": "faa9fb28318c7bee2b7bcb22e2a3d485b91f17c0a2f4ef069d23311cefa3fbbb"
+    },
+    {
+      "id": "BAN-DS-05-0009",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009",
+      "destino": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009",
+      "sha256Textos": "84a29d8284b0b1042d38c1ed29ef9bb77aee5921bf2a1d38ea3d53822e3c6389"
+    },
+    {
+      "id": "BAN-DS-05-0010",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0010",
+      "destino": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0010",
+      "sha256Textos": "1d315e4cb265c82f442b37241fe8186631b3c0683b35fcc95c7b7ffb0e284301"
+    },
+    {
+      "id": "BAN-DS-06-0005",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0005",
+      "destino": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0005",
+      "sha256Textos": "8ff1f4561648ede3af4e119f6b02c10e340a908bc4278b9d8709709715469264"
+    },
+    {
+      "id": "BAN-DS-06-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0006",
+      "destino": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0006",
+      "sha256Textos": "80b71582b2ed0727bbc49bcd5b07750502ef38c1c879f5db96d4380c581badcf"
+    },
+    {
+      "id": "BAN-DS-06-0007",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0007",
+      "destino": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0007",
+      "sha256Textos": "4cd2b489cf721af612691f4d6eb12443ee74ca3a41d5da06d45e4af67c8aa571"
+    },
+    {
+      "id": "BAN-DS-06-0008",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0008",
+      "destino": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0008",
+      "sha256Textos": "37fda7c6a2a9d883dd1c0e2f1bb4fb1a81149cd4bd076951d2dd3f22437567ff"
+    },
+    {
+      "id": "BAN-DS-07-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0004",
+      "destino": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0004",
+      "sha256Textos": "8e6d240d7e1d48e732f4ceefe282a78adb3140477123f248ab1b3d390abfffe3"
+    },
+    {
+      "id": "BAN-DS-07-0005",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0005",
+      "destino": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0005",
+      "sha256Textos": "065e37d697761d00dcb54f1d49cb193afac146f7b245e1a59a486ed681e2c279"
+    },
+    {
+      "id": "BAN-DS-07-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0006",
+      "destino": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0006",
+      "sha256Textos": "ec0e1cbc1fbe05dcc106077c964e21a1b1cb3367e781f3551278807f43d8e139"
+    },
+    {
+      "id": "BAN-DS-08-0003",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0003",
+      "destino": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0003",
+      "sha256Textos": "0aa09abf2df3b43d4da546a6e2191c79fc4f6b5c9daf88b3d6ab0072b7455574"
+    },
+    {
+      "id": "BAN-DS-08-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0004",
+      "destino": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0004",
+      "sha256Textos": "b94e8bd0ec1b81006d9be0b38529f7316846bebe7a5f93a69570089274befdba"
+    },
+    {
+      "id": "BAN-DS-09-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0004",
+      "destino": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0004",
+      "sha256Textos": "ff1285009ea5a66d12492d5f2e88929c2fb1580f1f37231beef535f634982943"
+    },
+    {
+      "id": "BAN-DS-09-0005",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0005",
+      "destino": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0005",
+      "sha256Textos": "09c01a801d9cca78119b3efb65124a71067f3ac6beac7d3e9c1156784609e6e9"
+    },
+    {
+      "id": "BAN-DS-09-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0006",
+      "destino": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006",
+      "sha256Textos": "8365388d478b582190939e7165ff9ddf73f848575f7ffd470aed7d86f47d623f"
+    },
+    {
+      "id": "BAN-DS-10-0003",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003",
+      "destino": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003",
+      "sha256Textos": "a6f3eafdb17f1b30042ec7323742e754631382fff5a1593d585df88cba6afcb3"
+    },
+    {
+      "id": "BAN-DS-10-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0004",
+      "destino": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0004",
+      "sha256Textos": "34b40a58e13883ca452faa8325ec1e54c6a3fbdd365b2a27548b4f2020ac16cb"
+    },
+    {
+      "id": "BAN-DS-11-0005",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0005",
+      "destino": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0005",
+      "sha256Textos": "4c350a5ccdd9c26243679f0ef6d2a927f6bc2066036574b209bffa6dc9d7d4cd"
+    },
+    {
+      "id": "BAN-DS-11-0006",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0006",
+      "destino": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0006",
+      "sha256Textos": "055013de39427796948b86a09c2fb1f77c584acd530fc8dfff37aab8beb6c436"
+    },
+    {
+      "id": "BAN-DS-11-0007",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0007",
+      "destino": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007",
+      "sha256Textos": "cbe4fa6cefb6a04c794509023854f520d5e4541df42d55f36e76f0efdc187df1"
+    },
+    {
+      "id": "BAN-DS-11-0008",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0008",
+      "destino": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0008",
+      "sha256Textos": "46f428c0fe041cd43a8eb1549d9ea8de824db6b60f8348c51bd8c5d04db7f515"
+    },
+    {
+      "id": "BAN-DS-12-0003",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0003",
+      "destino": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0003",
+      "sha256Textos": "e36047b9fffc36fd9e974b53b334938eae30c8dee3a624dd35d7ad5a30cbb78b"
+    },
+    {
+      "id": "BAN-DS-12-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0004",
+      "destino": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004",
+      "sha256Textos": "1621ee7878c20c159a15fe7b73a8ca40a05cecc5f00c96842816dc12b4a50996"
+    },
+    {
+      "id": "BAN-DS-13-0002",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002",
+      "destino": "Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002",
+      "sha256Textos": "0b4285fe1952fad08831aadf2198d36202b6b3732102ff088a4ec2623caf1886"
+    },
+    {
+      "id": "BAN-DS-14-0002",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002",
+      "destino": "Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002",
+      "sha256Textos": "30e751568dc639e65c0b7f8da7225ed12d56ad7fcee66cbf00962342cd45d711"
+    },
+    {
+      "id": "BAN-DS-15-0002",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002",
+      "destino": "Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002",
+      "sha256Textos": "a7aca7262c16254368a256c67ca0e19e7840a6f6e59882dd00ebe92e52b96d4b"
+    },
+    {
+      "id": "BAN-DS-16-0003",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0003",
+      "destino": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0003",
+      "sha256Textos": "09c8a05f4a75c0a55a9cfbd7a2c3dcc8e8562eb0ce6ab78dcd2780df24310670"
+    },
+    {
+      "id": "BAN-DS-16-0004",
+      "versao": "v01",
+      "origem": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0004",
+      "destino": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0004",
+      "sha256Textos": "182dc37e8dd6e80ceac361b0397ae35b2d6af9132ae67045837b750c91f0da6a"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+ID: BAN-DS-09-0004
+Versão: v01
+Matéria: Redes de computadores
+Tópico: Endereçamento IPv6
+
+ENUNCIADO
+Duas LANs IPv6, L1 e L2, são enlaces distintos interligados somente por um roteador R, sem pontes ou túneis. H1 está em L1; H2 está em L2 e utiliza fe80::20 na interface desse enlace. Os endereços estão atribuídos e as interfaces estão operacionais.
+
+Uma aplicação em H1 precisa selecionar o endereço IPv6 que identifica todos os nós de L1 e avaliar se R pode encaminhar de L1 para L2 um pacote cujo destino seja fe80::20. Conforme a arquitetura de endereçamento IPv6, o endereço para todos os nós e a conclusão sobre esse encaminhamento são, respectivamente,
+
+A) ff02::1, como broadcast; R não pode encaminhar esse pacote para L2.
+B) ff02::2, como multicast; R não pode encaminhar esse pacote para L2.
+C) ff02::1, como multicast; R pode encaminhar esse pacote para L2 se houver rota estática.
+D) ff02::1, como multicast; R não pode encaminhar esse pacote para L2.
+E) ff02::1, como multicast; R pode encaminhar esse pacote para L2 se o Hop Limit recebido for maior que 1.

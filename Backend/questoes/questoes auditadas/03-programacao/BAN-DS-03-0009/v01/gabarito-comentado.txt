@@ -1,0 +1,34 @@
+ID: BAN-DS-03-0009
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Determinar o resultado exibido pelo código nas condições declaradas.
+
+RESOLUÇÃO
+A resolução começa pelos métodos aplicáveis sem boxing ou unboxing. Para a, de tipo int, escolher(long) é aplicável por ampliação primitiva; as outras candidatas exigem boxing. Para b, de tipo Integer, escolher(Integer) e escolher(Number) são aplicáveis nessa primeira fase, sendo Integer a opção mais específica. Para c, de tipo Number, escolher(Number) é aplicável; não há conversão implícita de Number para Integer. A concatenação resulta em LIN.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende. int é ampliado para long na primeira chamada; Integer seleciona a sobrecarga mais específica Integer na segunda; o argumento de tipo estático Number seleciona Number na terceira.
+B) Não atende. Para a, a ampliação de int para long já fornece método aplicável na primeira fase; a conversão por boxing para Integer não a substitui.
+C) Não atende. c tem tipo estático Number, que não é convertido implicitamente para Integer para selecionar essa sobrecarga. O objeto referenciado não muda essa resolução.
+D) Não atende. A conversão de int para Number exigiria boxing seguido de ampliação de referência. A sobrecarga long já é aplicável sem boxing.
+E) Não atende. Para b, as sobrecargas de referência são aplicáveis antes de considerar unboxing para long, e Integer é mais específica que Number.
+
+FONTES TÉCNICAS CONSULTADAS
+- Oracle — Java Language Specification, Java SE 21, Chapter 15. https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.12.2. Localizador: §15.12.2, §15.12.2.2 e §15.12.2.5: fases de aplicabilidade e método mais específico.
+- Oracle — Java Language Specification, Java SE 21, Chapter 5. https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.3. Localizador: §5.1.2, §5.1.5, §5.1.7, §5.1.8 e §5.3: ampliação primitiva, referência, boxing, unboxing e contextos de invocação.
+- Programa-base — Programação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 39–58; recorte: sobrecarga e sobrescrita de métodos;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2015.
+- Caderno, questão e página: Não obtido; Q566693 (identificador do acervo; número original não obtido); Não obtida; página HTML e imagem do programa.
+- Origem verificável: https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76; arquivo efetivamente consultado: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg.
+- Característica observada e aplicação autoral: Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.
+- Limites da referência: Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultadas a especificação Java SE 21 e as regras das fases de sobrecarga e conversões.
+- Analítica: conferidas as candidatas de cada chamada e o método mais específico; a novidade em relação ao SIM-001 é a prioridade da ampliação primitiva sobre boxing, sem cenário de sobrescrita.
+- Não executada: não foi realizada compilação nem execução do programa Java.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguarda auditoria independente.

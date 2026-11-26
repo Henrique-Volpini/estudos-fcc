@@ -1,0 +1,50 @@
+ID: BAN-DS-08-0003
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Determinar a sequência de operações permitidas e negadas nas condições declaradas.
+
+RESOLUÇÃO
+Em /srv/lotes, ana não é proprietária, mas pertence ao grupo equipe. Aplicam-se, portanto, os bits --x do grupo: há permissão de busca/travessia, mas não de leitura do diretório. A listagem dos nomes é negada; o nome saldo.csv já conhecido pode ser procurado.
+
+No arquivo saldo.csv, ana é proprietária. Aplica-se a classe r-- do proprietário, sem combinar seus bits com os rw- do grupo. O r permite abrir e ler o arquivo; a ausência de w impede abri-lo para acrescentar dados. A permissão de busca em todos os diretórios do caminho já foi assegurada. Sob as condições declaradas, a sequência é negada, permitida e negada.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: acerta a leitura do arquivo e a negativa de escrita, mas listar os nomes exige leitura no diretório. Para ana, /srv/lotes usa a classe de grupo, --x, que permite a busca pelo nome conhecido, sem permitir listar seus nomes.
+B) Não atende: acerta a negativa de listagem e a leitura, mas ana é proprietária de saldo.csv e usa os bits r-- do proprietário. Os bits rw- do grupo não se somam aos dela; falta w para acrescentar dados.
+C) Atende: a classe de grupo --x do diretório permite atravessá-lo e buscar saldo.csv pelo nome conhecido, sem listar seus nomes. No arquivo, a classe do proprietário r-- autoriza a leitura e nega a escrita necessária para acrescentar dados.
+D) Não atende: atribui duas permissões inexistentes. Falta r no diretório para listar nomes, e falta w na classe do proprietário do arquivo para acrescentar dados. A travessia pelo diretório e a leitura do arquivo são permitidas.
+E) Não atende: a ausência de r no diretório impede a listagem dos nomes, mas não impede a busca por um nome conhecido quando x está presente. Como ana tem r no arquivo, pode lê-lo pelo caminho informado.
+
+FONTES TÉCNICAS CONSULTADAS
+- Red Hat — Red Hat Enterprise Linux 9 — Configuring basic system settings
+  Fonte: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/htmlsingle/configuring_basic_system_settings/index
+  Localizador e suporte: Capítulo 9, Managing file system permissions; §9.1, Managing file permissions; §9.1.1, Base file permissions. Classes u/g/o, bits r/w/x e diferença entre acesso ao diretório e edição do arquivo. Página primária aberta em 26/11/2026.
+- Linux man-pages — path_resolution(7)
+  Fonte: https://man7.org/linux/man-pages/man7/path_resolution.7.html
+  Localizador e suporte: DESCRIPTION: Step 2: walk along the path; Permissions; Bypassing permission checks: superuser and capabilities. Seleção da classe por identidade, uso de fsuid/fsgid, busca nos componentes do caminho e capacidades de bypass. Manual do projeto Linux man-pages, aberto em 26/11/2026.
+- Oracle — Introduction to the Shell and Command Line on Oracle Linux — F50766-05, julho de 2024
+  Fonte: https://docs.oracle.com/en/learn/ol-shell-cmd/index.html
+  Localizador e suporte: Learn About File Permissions, etapas 22–25, especialmente o parágrafo após a etapa 25: a participação no grupo não substitui os bits aplicáveis ao proprietário. Tutorial primário aberto em 26/11/2026; o cenário autoral é RHEL 9 e a fonte é corroborativa.
+- GNU Coreutils — Structure of File Mode Bits
+  Fonte: https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html
+  Localizador e suporte: §27.1, trecho indexado do manual recuperado pela pesquisa em 26/11/2026: r permite listar o diretório, w permite alterar o arquivo, x permite acessar arquivos no diretório. As duas tentativas de abertura direta retornaram timeout; a solução também foi conferida nas páginas abertas da Red Hat e do Linux man-pages.
+- Programa-base — Sistemas Operacionais
+  Fonte: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: Bloco SISTEMAS OPERACIONAIS, linhas 116–131: Linux (Red Hat e Oracle Linux) e PowerShell. Lida também a observação final sobre legislação, linhas 213–217; as duas questões não cobram legislação.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 52; página 12.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 12 ===; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia hospedada em https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação nesta questão autoral: O exemplo apresenta um cenário de terminal Linux com metadados em bloco e solicita uma decisão objetiva entre cinco alternativas. A questão autoral apresenta metadados próprios de diretório e arquivo e pede uma sequência de resultados de acesso; não reproduz as lacunas nem os dados do exemplo.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, conforme fontes.json; foram lidos a extração local e os dados do caderno. Não se afirma download direto da FCC nem autenticação oficial de integridade. O exemplo fundamenta somente a construção editorial observada, sem provar frequência de formato ou correção técnica atual. A sintaxe de comando constante do exemplo histórico não foi adotada nem usada como fundamento técnico.
+- Metadados consultados: Backend/Agents/conteudo/referencias-fcc/fontes.json, entrada trt4-2022-ti-a14-001.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: páginas primárias da Red Hat, Linux man-pages e Oracle abertas; GNU consultado por trecho indexado, com timeout no acesso direto registrado na fonte.
+- Analítica: separadas a seleção da classe no diretório e no arquivo, a leitura do diretório, a busca por nome conhecido e a escrita no arquivo; conferidas as cinco sequências e a unicidade da proposta.
+- Analítica: explicitados usuário, grupo, fsuid/fsgid, ausência de ACL estendida e capacidades, travessia dos ancestrais e ausência de restrições adicionais; não foram executadas operações de arquivo em Linux.
+- Editorial: lidos o exemplo real FCC Q52/p.12, o cabeçalho A14 Tipo 001, os metadados de origem e as duas questões anteriores do elaborador; a questão não repete LRU nem sincronização.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Versão completa em PENDENTE_AUDITORIA, sujeita à avaliação independente.

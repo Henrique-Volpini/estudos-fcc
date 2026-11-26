@@ -1,0 +1,15 @@
+ID: BAN-DS-11-0007
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: OWASP Top 10:2021: autorização de acesso a objetos
+
+ENUNCIADO
+Uma API disponibiliza comprovantes por meio de GET /comprovantes/{id}, com identificadores numéricos sequenciais. A política estabelece que cada cliente pode consultar somente os próprios comprovantes. A autenticação funciona corretamente, e o servidor valida o token recebido. Entretanto, um cliente autenticado consegue obter o comprovante de outro cliente alterando o identificador na URL.
+
+Para corrigir a falha de controle de acesso descrita, de acordo com a categoria A01 do OWASP Top 10:2021, a equipe deve
+
+A) verificar no servidor, em cada solicitação, se o comprovante pertence ao cliente autenticado, negando a consulta quando essa condição não for satisfeita.
+B) substituir os identificadores sequenciais por UUIDs aleatórios, mantendo a consulta baseada apenas no identificador informado e na validade do token recebido.
+C) exigir MFA na autenticação de todos os clientes, mantendo a consulta de comprovantes condicionada apenas à presença de uma sessão autenticada.
+D) filtrar no aplicativo os links de comprovantes pelo cliente autenticado, mantendo a API apta a consultar qualquer identificador recebido de uma sessão válida.
+E) validar a assinatura e a expiração do token em cada consulta, mantendo o identificador de comprovante recebido como único critério para selecionar o documento.

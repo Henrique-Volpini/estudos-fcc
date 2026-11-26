@@ -1,0 +1,19 @@
+ID: BAN-DS-06-0005
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: MVC: responsabilidades de modelo, visão e controlador
+
+ENUNCIADO
+Uma aplicação web utiliza MVC com renderização de páginas no servidor. Na funcionalidade de simulação de empréstimos, foram identificadas as seguintes responsabilidades:
+
+I. Receber a solicitação, acionar a simulação e selecionar a tela de resposta.
+II. Aplicar a regra de cálculo das parcelas, que também será utilizada por outras interfaces da aplicação.
+III. Apresentar as parcelas na página, definindo o alinhamento e a formatação visual dos valores.
+
+Para preservar a separação de responsabilidades do padrão, I, II e III devem ser atribuídas, respectivamente, a
+
+A) modelo, controlador e visão.
+B) controlador, visão e modelo.
+C) visão, modelo e controlador.
+D) controlador, modelo e visão.
+E) modelo, visão e controlador.

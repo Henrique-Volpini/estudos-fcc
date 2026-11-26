@@ -1,0 +1,34 @@
+ID: BAN-DS-03-0014
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar a intervenção correspondente à etapa refactor do TDD.
+
+RESOLUÇÃO
+A falha inicial identifica a etapa red; a implementação que faz passar o teste novo e os anteriores produz green. A melhoria estrutural seguinte pode remover a duplicação sem mudar o comportamento observado, usando os testes para verificar a preservação. Esse é o papel de refactor. Acrescentar regras ou alterar expectativas funcionais exige tratar uma mudança de comportamento, em vez de classificá-la como simples refatoração.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Introduz novo comportamento e posterga seu teste; refatorar melhora a estrutura do comportamento já implementado.
+B) Atende. A remoção de duplicação é uma melhoria estrutural; preservar o comportamento e manter a suíte passando corresponde ao objetivo de refactor.
+C) Não atende. Enfraquecer as asserções pode ocultar alterações de comportamento. Isso não demonstra que a simplificação preservou os resultados exigidos.
+D) Não atende. Alterar a regra de tarifa e os resultados esperados muda o comportamento especificado; essa alteração funcional não é refatoração.
+E) Não atende. Antecipar funcionalidades futuras e adiar a execução dos testes mistura evolução funcional e melhoria estrutural, afastando-se do ciclo incremental descrito.
+
+FONTES TÉCNICAS CONSULTADAS
+- Kent Beck — Canon TDD, 11 December 2023. https://newsletter.kentbeck.com/p/canon-tdd. Localizador: The Steps, itens 2 Write a Test, 3 Make it Pass e 4 Optionally Refactor; lista inicial e preservação dos testes anteriores. Artigo do criador do método.
+- Martin Fowler — Test Driven Development, atualização de 11 December 2023. https://martinfowler.com/bliki/TestDrivenDevelopment.html. Localizador: Três passos Red–Green–Refactor e melhoria da estrutura do código novo e anterior; fonte autoral complementar.
+- Programa-base — Programação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 39–58; recorte: TDD e BDD;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; 33; 8.
+- Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo efetivamente consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt.
+- Característica observada e aplicação autoral: Situação de trabalho de um Analista, tarefa técnica delimitada e cinco soluções concorrentes. Aplicado em cenário autoral sem transpor conteúdo ou alternativas da prova.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultados o artigo Canon TDD de Kent Beck e a descrição autoral do ciclo por Martin Fowler.
+- Analítica: identificado o momento do ciclo no cenário e distinguida mudança de estrutura de mudança funcional em todas as alternativas.
+- Não executada: questão conceitual; nenhum teste de software foi criado nem executado.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguarda auditoria independente.

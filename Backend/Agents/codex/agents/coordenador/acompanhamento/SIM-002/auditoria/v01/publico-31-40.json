@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-07-0005",
+    "numero": 31,
+    "versao": "v01",
+    "enunciado": "Uma API disparou um alerta por aumento do percentil 95 da latência, calculado a partir das durações de todas as requisições de uma janela de cinco minutos. A equipe também coleta traces por amostragem. Um trace de requisição lenta, com spans correlacionados entre os serviços, mostra que a maior parte da duração ocorreu durante uma chamada ao serviço de cadastro. Nos logs da API, um registro com o mesmo trace_id informa timeout dessa chamada.\n\nA interpretação adequada dos sinais disponíveis é:",
+    "alternativas": {
+      "A": "A mensagem de timeout, correlacionada ao trace, demonstra que a causa da lentidão é um defeito no código do serviço de cadastro.",
+      "B": "As métricas resumem o comportamento observado no período; os spans localizam a demora na requisição coletada, e os logs acrescentam eventos correlacionados.",
+      "C": "O trace da requisição lenta fornece a distribuição de latência de todas as chamadas da janela, podendo substituir a métrica usada no alerta.",
+      "D": "Os logs com o mesmo trace_id devem ser tratados como eventos sem vínculo com a requisição, pois esse identificador relaciona apenas os spans entre si.",
+      "E": "A ausência de trace para uma requisição permite descartá-la da investigação de lentidão, pois a amostragem preserva necessariamente todas as chamadas com falha."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0006",
+    "numero": 32,
+    "versao": "v01",
+    "enunciado": "Uma equipe está incluindo controles de segurança na pipeline de uma aplicação web que utiliza bibliotecas de terceiros e possui funcionalidades autenticadas. A pipeline permite inspecionar o código e as dependências antes da implantação e executar a aplicação em um ambiente de homologação isolado, com contas de teste. Considere as propostas:\n\nI. Executar SAST sobre o código da aplicação permite procurar padrões e fluxos potencialmente vulneráveis sem executar a aplicação analisada.\nII. A SCA pode restringir a verificação de vulnerabilidades às dependências diretas, pois a ausência de alertas nelas também afasta vulnerabilidades nas dependências transitivas.\nIII. Executar DAST contra a aplicação em homologação, configurando a autenticação de teste, permite exercitar funcionalidades protegidas e analisar suas respostas.\nIV. A ausência de achados no SAST permite dispensar SCA e DAST, porque comprova a segurança das dependências e do comportamento da aplicação em execução.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "II e IV.",
+      "C": "III e IV.",
+      "D": "II e III.",
+      "E": "I e III."
+    }
+  },
+  {
+    "id": "BAN-DS-08-0003",
+    "numero": 33,
+    "versao": "v01",
+    "enunciado": "Em um servidor Red Hat Enterprise Linux 9, um administrador verifica os seguintes metadados, apresentados na ordem permissões, proprietário, grupo e caminho:\n\ndrwx--x---  root  equipe  /srv/lotes\n-r--rw----  ana   equipe  /srv/lotes/saldo.csv\n\nA usuária ana não é root. Seus processos usam UID efetivo e fsuid de ana, GID efetivo e fsgid de equipe, sem grupos suplementares nem capacidades especiais. Os diretórios ancestrais permitem a travessia, e o sistema de arquivos está montado para leitura e escrita. Não há ACLs estendidas, links simbólicos ou restrições adicionais por SELinux ou atributos de arquivo.\n\nConsidere acessos diretos, mantendo as permissões e as credenciais apresentadas. Para esses processos, as operações de listar os nomes contidos em /srv/lotes, ler saldo.csv por seu caminho completo conhecido e acrescentar dados ao conteúdo desse arquivo são, respectivamente,",
+    "alternativas": {
+      "A": "permitida, permitida e negada.",
+      "B": "negada, permitida e permitida.",
+      "C": "negada, permitida e negada.",
+      "D": "permitida, permitida e permitida.",
+      "E": "negada, negada e negada."
+    }
+  },
+  {
+    "id": "BAN-DS-08-0004",
+    "numero": 34,
+    "versao": "v01",
+    "enunciado": "Em uma sessão do Windows PowerShell 5.1, no Windows Server 2022, a variável $servicos contém os objetos retornados por Get-Service para cinco serviços. As propriedades relevantes, capturadas no mesmo instante, são:\n\nName  DisplayName    Status\nAppZ  Coletor Z      Running\nAppB  App Backup     Stopped\nAppA  App Agente     Running\nSync  App Sincronia  Running\nBase  Servico Base   Running\n\nUm Analista precisa produzir objetos com as propriedades Name e Status, referentes somente aos serviços em execução cujo Name começa por App, ordenados de forma crescente por Name. Esses objetos serão utilizados em processamento posterior, que acessará as duas propriedades. Considere os cmdlets e operadores padrão, sem redefinições.\n\nO pipeline que atende a esses requisitos é",
+    "alternativas": {
+      "A": "$servicos | Where-Object { ($_.Status -eq 'Running') -or ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status",
+      "B": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Format-Table Name, Status",
+      "C": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.DisplayName -like 'App*') } | Sort-Object Name | Select-Object Name, Status",
+      "D": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status",
+      "E": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -eq 'App*') } | Sort-Object Name | Select-Object Name, Status"
+    }
+  },
+  {
+    "id": "BAN-DS-09-0004",
+    "numero": 35,
+    "versao": "v01",
+    "enunciado": "Duas LANs IPv6, L1 e L2, são enlaces distintos interligados somente por um roteador R, sem pontes ou túneis. H1 está em L1; H2 está em L2 e utiliza fe80::20 na interface desse enlace. Os endereços estão atribuídos e as interfaces estão operacionais.\n\nUma aplicação em H1 precisa selecionar o endereço IPv6 que identifica todos os nós de L1 e avaliar se R pode encaminhar de L1 para L2 um pacote cujo destino seja fe80::20. Conforme a arquitetura de endereçamento IPv6, o endereço para todos os nós e a conclusão sobre esse encaminhamento são, respectivamente,",
+    "alternativas": {
+      "A": "ff02::1, como broadcast; R não pode encaminhar esse pacote para L2.",
+      "B": "ff02::2, como multicast; R não pode encaminhar esse pacote para L2.",
+      "C": "ff02::1, como multicast; R pode encaminhar esse pacote para L2 se houver rota estática.",
+      "D": "ff02::1, como multicast; R não pode encaminhar esse pacote para L2.",
+      "E": "ff02::1, como multicast; R pode encaminhar esse pacote para L2 se o Hop Limit recebido for maior que 1."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0005",
+    "numero": 36,
+    "versao": "v01",
+    "enunciado": "Em um ambiente de laboratório, o resolvedor DNS recursivo R não é autoritativo para a zona financeira.example. Em t = 0 s, R recebe do servidor autoritativo S o único registro A de api.financeira.example, com endereço 192.0.2.40 e TTL de 300 segundos, e o armazena em cache. Em t = 60 s, S altera esse registro para 192.0.2.80.\n\nR está configurado para reutilizar registros válidos do cache pelo TTL recebido. Não há limpeza do cache, redução de TTL, atualização antecipada ou outras consultas antes de t = 120 s. Nesse instante, um cliente sem cache local solicita a R a resolução recursiva do mesmo nome e tipo. Despreze os tempos de transmissão e processamento.\n\nO endereço do registro A devolvido por R, seu TTL restante e o valor do bit AA (Authoritative Answer) nessa resposta são, correta e respectivamente,",
+    "alternativas": {
+      "A": "192.0.2.80 — 300 segundos — 0.",
+      "B": "192.0.2.40 — 180 segundos — 0.",
+      "C": "192.0.2.40 — 180 segundos — 1.",
+      "D": "192.0.2.40 — 300 segundos — 0.",
+      "E": "192.0.2.80 — 180 segundos — 1."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0006",
+    "numero": 37,
+    "versao": "v01",
+    "enunciado": "Um notebook N conecta-se a uma porta Ethernet do switch S. A autenticação IEEE 802.1X utiliza EAP e um servidor RADIUS R separado do switch. S repassa as mensagens EAP entre N e R e controla a autorização da porta conforme o resultado recebido de R. Considere essa implantação centralizada, sem autenticação local no switch.\n\nOs papéis IEEE 802.1X de N, S e R e o equipamento que atua como cliente RADIUS nesse processo são, correta e respectivamente,",
+    "alternativas": {
+      "A": "suplicante — servidor de autenticação — autenticador — S.",
+      "B": "autenticador — suplicante — servidor de autenticação — S.",
+      "C": "suplicante — autenticador — servidor de autenticação — N.",
+      "D": "suplicante — autenticador — servidor de autenticação — R.",
+      "E": "suplicante — autenticador — servidor de autenticação — S."
+    }
+  },
+  {
+    "id": "BAN-DS-10-0003",
+    "numero": 38,
+    "versao": "v01",
+    "enunciado": "Um computador inicia um cliente DHCPv4 no estado INIT, sem endereço configurado, sem concessão anterior armazenada e sem servidor DHCP pré-configurado. Na mesma sub-rede, sem agente de retransmissão, ele transmite DHCPDISCOVER em broadcast e recebe duas ofertas válidas, de S1 e S2. O cliente seleciona a oferta de S2. Considere que a concessão será concluída sem perdas de mensagens ou conflito de endereços.\n\nPara solicitar a oferta escolhida, a próxima mensagem do cliente e a posterior mensagem de confirmação da concessão são, respectivamente,",
+    "alternativas": {
+      "A": "DHCPREQUEST, por unicast somente a S2; DHCPACK, enviado por S2.",
+      "B": "DHCPACK, em broadcast identificando S2 como escolhido; DHCPREQUEST, enviado por S2.",
+      "C": "DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPACK, enviado por S2.",
+      "D": "DHCPDECLINE, em broadcast identificando S1 como rejeitado; DHCPACK, enviado por S2.",
+      "E": "DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPOFFER, enviado por S2."
+    }
+  },
+  {
+    "id": "BAN-DS-10-0004",
+    "numero": 39,
+    "versao": "v01",
+    "enunciado": "Uma instituição utiliza Prometheus em modo servidor e Alertmanager para monitorar aplicações que já expõem métricas em endpoints HTTP. A equipe deve distribuir as seguintes atividades entre esses dois componentes:\n\nI. Consultar periodicamente os endpoints e armazenar as amostras coletadas como séries temporais.\nII. Avaliar regras sobre essas séries para gerar alertas quando as condições configuradas forem atendidas.\nIII. Agrupar os alertas recebidos e encaminhar as notificações aos destinatários definidos na configuração.\n\nNa arquitetura desses componentes, as atividades I, II e III cabem, correta e respectivamente, a",
+    "alternativas": {
+      "A": "Prometheus, Prometheus e Alertmanager.",
+      "B": "Prometheus, Alertmanager e Alertmanager.",
+      "C": "Alertmanager, Prometheus e Prometheus.",
+      "D": "Prometheus, Alertmanager e Prometheus.",
+      "E": "Alertmanager, Prometheus e Alertmanager."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0005",
+    "numero": 40,
+    "versao": "v01",
+    "enunciado": "Um cliente HTTPS automatizado acessa https://api.banco.example e verifica a identidade do servidor conforme a RFC 9525, sem exceções configuradas para divergências de identidade. O certificado apresentado possui somente portal.banco.example como dNSName na extensão subjectAltName e contém api.banco.example no campo Common Name (CN). A cadeia até uma âncora de confiança, o período de validade e as demais verificações do certificado foram aprovados. Os dois nomes DNS resolvem para o mesmo endereço IP.\n\nNessas condições, o cliente deve",
+    "alternativas": {
+      "A": "prosseguir com a conexão, pois a cadeia confiável e o período de validade aprovado bastam para autenticar o nome do serviço solicitado.",
+      "B": "interromper a tentativa, pois o identificador apresentado na extensão subjectAltName não corresponde ao nome de referência do serviço solicitado.",
+      "C": "prosseguir com a conexão, pois a correspondência do Common Name permite substituir o nome divergente apresentado na extensão subjectAltName.",
+      "D": "interromper a tentativa, pois o certificado precisa conter o endereço IP em subjectAltName mesmo quando a URL identifica o servidor por nome DNS.",
+      "E": "prosseguir com a conexão, pois nomes DNS que resolvem para o mesmo endereço IP são equivalentes para a verificação da identidade do serviço."
+    }
+  }
+]

@@ -1,0 +1,17 @@
+ID: BAN-DS-01-0006
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: BPMN: gateway exclusivo e gateway paralelo em fluxo delimitado
+
+ENUNCIADO
+Em um processo BPMN 2.0.2, um gateway exclusivo divergente recebe um único token e possui duas saídas: uma leva à tarefa Conferir cadastro e a outra, à tarefa Solicitar documento. As saídas dessas tarefas chegam a entradas distintas de um gateway paralelo convergente, que possui uma única saída para a tarefa Registrar resultado.
+
+Em uma execução, o gateway exclusivo seleciona apenas Conferir cadastro, e essa tarefa termina normalmente. Não existem outros fluxos, eventos ou mecanismos capazes de produzir tokens nesse trecho, nem laços de repetição.
+
+Nessas condições,
+
+A) Solicitar documento é iniciada após Conferir cadastro, pois a convergência paralela determina a execução sequencial dos dois ramos.
+B) Registrar resultado é iniciada uma vez, pois a escolha exclusiva dispensa o gateway paralelo de aguardar o ramo não selecionado.
+C) Registrar resultado é iniciada duas vezes, pois o gateway paralelo duplica o token recebido da tarefa Conferir cadastro.
+D) a instância é encerrada ao terminar Conferir cadastro, pois o gateway paralelo descarta tokens recebidos sem par na outra entrada.
+E) Registrar resultado não é iniciada, pois o gateway paralelo aguarda um token na entrada proveniente de Solicitar documento.

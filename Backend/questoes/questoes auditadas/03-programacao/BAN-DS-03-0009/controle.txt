@@ -1,0 +1,28 @@
+ID: BAN-DS-03-0009
+Matéria: 03 - Programação
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/03-programacao.txt
+Tópico do conteúdo: sobrecarga e sobrescrita de métodos;
+Recorte atribuído no plano: Java: sobrecarga de metodos e tipos estaticos
+Objetivo da questão: Resolver sobrecargas distinguindo ampliação primitiva, boxing e o tipo estático dos argumentos, com preferência pela primeira fase de aplicabilidade.
+Tarefa de origem: SIM-002; número global 9; elaboração autoral com rodízio de objetivos do SIM-001.
+Responsável pela elaboração: /root/s2_elab_03
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, elaboração concluída e entregue como PENDENTE_AUDITORIA por /root/s2_elab_03; fontes consultadas e conferência individual das cinco alternativas. Sem parecer ou aprovação do elaborador.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0009 -> Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009
+ESTILO_FCC: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/parecer-redacao-e-conformidade.txt

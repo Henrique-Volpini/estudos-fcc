@@ -1,0 +1,171 @@
+{
+  "elaborador": "16",
+  "responsavel": "/root/s2_elab_16",
+  "questoes": [
+    {
+      "id": "BAN-DS-16-0003",
+      "numero": 49,
+      "materia": "Inglês técnico",
+      "topico": "Compreensão de texto técnico autoral em inglês: inferência sobre migração",
+      "versao": "v01",
+      "enunciado": "Considere o texto abaixo.\n\nThe team planned to move report production to a new system on Monday. In a trial, the new system produced reports faster than the current one, but several totals did not match. The team postponed the move, although the faster reports would have helped with the monthly review. It will set a new date only after it has explained the differences. Until then, staff will continue to produce reports with the current system.\n\n(Texto autoral.)\n\nInfere-se do texto que",
+      "alternativas": {
+        "A": "a equipe pretende usar o sistema novo na revisão mensal para descobrir a origem das diferenças.",
+        "B": "o adiamento decorre da necessidade de tornar o sistema atual mais rápido que o sistema novo.",
+        "C": "a definição da nova data permitirá à equipe iniciar a análise dos totais que não coincidiram.",
+        "D": "a equipe considera a maior velocidade insuficiente para realizar a migração enquanto as diferenças não forem esclarecidas.",
+        "E": "a equipe concluiu que os totais do sistema atual estavam incorretos e decidiu substituir esses relatórios."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende ao comando. A última frase determina que os funcionários continuarão a produzir relatórios com o sistema atual enquanto as diferenças não forem explicadas. O texto não prevê usar o sistema novo na revisão mensal para investigar essas diferenças.",
+        "B": "Não atende ao comando. O ensaio já mostrou que o sistema novo é mais rápido. O adiamento está associado aos totais divergentes; não há plano de acelerar o sistema atual nem de fazê-lo superar o novo.",
+        "C": "Não atende ao comando. A expressão only after estabelece a ordem inversa: a explicação das diferenças deve preceder a definição da nova data. A alternativa apresenta a data como condição para iniciar a análise.",
+        "D": "Atende ao comando. Mesmo reconhecendo o benefício dos relatórios mais rápidos para a revisão mensal, a equipe adia a mudança e condiciona uma nova data ao esclarecimento das diferenças. Assim, a vantagem de velocidade, isoladamente, não bastou para manter a migração.",
+        "E": "Não atende ao comando. O ensaio identifica divergências, mas não determina qual sistema produziu os totais incorretos. Tampouco há decisão de substituir os relatórios do sistema atual; ele continuará em uso por enquanto."
+      },
+      "resolucao": "O ensaio apresenta dois resultados: o sistema novo produz relatórios mais rapidamente, mas alguns totais não coincidem. A terceira frase informa que a mudança foi adiada apesar do benefício da rapidez para a revisão mensal; although marca essa concessão. A quarta frase estabelece que a equipe somente marcará outra data depois de explicar as diferenças. A última mantém a produção no sistema atual nesse intervalo. A inferência delimitada é que a rapidez não foi suficiente para justificar a migração enquanto os resultados divergentes permanecessem sem explicação. Não se pode inferir qual sistema errou, uma nova data específica ou uma decisão definitiva de abandonar a mudança.",
+      "fontes": [
+        {
+          "titulo": "Texto autoral sobre migração da produção de relatórios — /root/s2_elab_16",
+          "arquivo": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0003/v01/questao.txt",
+          "localizador": "ENUNCIADO, cinco frases do texto em inglês; fonte primária do cenário e dos limites da inferência. Nenhuma passagem externa foi adaptada."
+        },
+        {
+          "titulo": "British Council — LearnEnglish: Contrasting ideas",
+          "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/contrasting-ideas",
+          "localizador": "Grammar explanation e subseção Although, though and even though; consulta em 26/11/2026. Sustenta a leitura concessiva de although; a conclusão sobre a migração decorre do texto autoral."
+        },
+        {
+          "titulo": "Conteúdo programático de conhecimentos específicos — Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Seção INGLÊS TÉCNICO.; delimitação do conteúdo."
+        },
+        {
+          "titulo": "FCC/TRT da 7ª Região — Analista Judiciário, Tecnologia da Informação, 2009 — itens de inglês no Qconcursos",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16",
+          "localizador": "Q128175, identificador do acervo: comando de inferência e cinco interpretações em português; comandos e opções Q128171–Q128175 lidos em 26/11/2026. Origem secundária."
+        },
+        {
+          "titulo": "Texto inglês associado aos itens FCC/TRT7/2009, imagem do acervo Qconcursos",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg",
+          "localizador": "Imagem integral visualizada: artigo adaptado sobre Intellipedia. Usada somente para conferir a relação entre texto inglês e itens de compreensão."
+        },
+        {
+          "titulo": "Registro local da referência FCC de inglês TRT7/2009",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt",
+          "localizador": "Identificação dos exemplos Q128171–Q128175 e limites dos metadados; confrontado com a página e a imagem reais."
+        }
+      ],
+      "autor": "/root/s2_elab_16",
+      "dificuldadeEstimada": "média",
+      "objetivo": "Inferir, a partir da concessão e da condição temporal, por que o ganho de velocidade não bastou para manter a migração planejada.",
+      "comandoPede": "Identificar a inferência sustentada pelo texto, sem acrescentar causas, datas ou diagnósticos não informados.",
+      "verificacoes": [
+        "Documental: escopo conferido no conteúdo programático e na atribuição das questões 49 e 50 do plano SIM-002; questões anteriores BAN-DS-16-0001 e BAN-DS-16-0002 lidas para evitar repetição dos objetivos.",
+        "Documental: a explicação do British Council foi consultada para a concessão introduzida por although. Não se exige conhecimento técnico externo sobre sistemas ou migração.",
+        "Documental de estilo: texto real visualizado na imagem e comandos e alternativas dos cinco itens de inglês lidos na página Qconcursos. A procedência secundária e os metadados ausentes foram registrados.",
+        "Analítica: confronto das cinco alternativas com as cinco frases do texto; apenas uma respeita simultaneamente o benefício reconhecido, o adiamento e a condição para uma nova data. Não houve execução de código para fundamentar a resposta."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 7ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2009,
+          "caderno": "Não obtido no acervo consultado",
+          "questao": "Q128175 — identificador do Qconcursos; número original não obtido",
+          "pagina": "Página original não obtida; item consultado em HTML",
+          "origem": "Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; texto associado visualizado em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg",
+          "caracteristicaObservada": "Texto em inglês seguido de comando inferencial e cinco formulações concorrentes em português.",
+          "caracteristicaAplicada": "Texto curto próprio, comando de inferência em português e cinco conclusões comparáveis que exigem respeitar os limites do texto.",
+          "limites": "Referência histórica de 2009, sem autenticação oficial, sem número original, página ou caderno recuperados e sem inferência de frequência atual ou equivalência de dificuldade com o Banestes. Não foram reproduzidos o texto ou as opções da referência."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-16-0004",
+      "numero": 50,
+      "materia": "Inglês técnico",
+      "topico": "Coesão em texto técnico autoral em inglês: referente de pronome",
+      "versao": "v01",
+      "enunciado": "Considere o texto abaixo.\n\nEvery night, an office makes backup copies of its project files. During a weekly check, an analyst tries to open several of the copies on a separate computer. She divides the tested copies into two groups: those that can be opened and those that cannot. The latter are recorded in a report before she replaces them with new copies. She keeps the report so that the support team can investigate why the check failed.\n\n(Texto autoral.)\n\nNo trecho “before she replaces them with new copies”, o pronome “them” refere-se especificamente",
+      "alternativas": {
+        "A": "aos arquivos dos projetos usados como origem para as cópias de segurança.",
+        "B": "a todas as cópias de segurança submetidas à verificação semanal.",
+        "C": "às cópias de segurança que não puderam ser abertas durante a verificação.",
+        "D": "às cópias de segurança que puderam ser abertas durante a verificação.",
+        "E": "às novas cópias de segurança utilizadas para substituir as anteriores."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende ao comando. Os arquivos dos projetos aparecem como origem das cópias na primeira frase. A divisão em dois grupos e a substituição descritas depois se referem às cópias testadas, não aos arquivos de origem.",
+        "B": "Não atende ao comando. O conjunto das cópias testadas foi dividido em dois grupos. The latter seleciona o segundo grupo, de modo que them não abrange todas as cópias submetidas à verificação.",
+        "C": "Atende ao comando. Os grupos são apresentados na ordem: cópias que podem ser abertas e cópias que não podem. The latter retoma o segundo grupo, que é registrado e depois substituído. Them mantém esse mesmo referente como objeto de replaces.",
+        "D": "Não atende ao comando. As cópias que puderam ser abertas formam o primeiro dos dois grupos. The latter retoma o segundo grupo; a alternativa corresponderia ao primeiro, que não é o conjunto substituído na frase.",
+        "E": "Não atende ao comando. Em replaces them with new copies, them identifica o conjunto substituído; new copies identifica o que entra em seu lugar. A alternativa troca os dois papéis na construção."
+      },
+      "resolucao": "A terceira frase divide as cópias testadas em dois conjuntos, apresentados em ordem: as que podem ser abertas e as que não podem. Na quarta frase, The latter remete ao segundo conjunto, isto é, às cópias que não podem ser abertas. São elas que entram no relatório e que a analista substitui. Na oração before she replaces them with new copies, she retoma a analista e them retoma as cópias desse segundo grupo, como objeto de replaces. New copies designa as cópias substitutas, não o referente de them. A resolução depende dessa cadeia de referências no inglês, sem pressupor regras técnicas de backup.",
+      "fontes": [
+        {
+          "titulo": "Texto autoral sobre verificação de cópias de segurança — /root/s2_elab_16",
+          "arquivo": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0004/v01/questao.txt",
+          "localizador": "ENUNCIADO, terceira e quarta frases: divisão em dois grupos, The latter e them; fonte primária do referente contextual. Nenhuma passagem externa foi adaptada."
+        },
+        {
+          "titulo": "British Council — LearnEnglish: Personal pronouns",
+          "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/personal-pronouns",
+          "localizador": "Quadro Subject/Object e explicação do emprego de object pronouns como objeto verbal; consulta em 26/11/2026. Sustenta a identificação de them como pronome objeto."
+        },
+        {
+          "titulo": "Merriam-Webster.com Dictionary — latter",
+          "url": "https://www.merriam-webster.com/dictionary/latter",
+          "localizador": "Acepção 2 e exemplo de emprego substantivado de the latter; consulta em 26/11/2026. Sustenta a retomada do segundo de dois grupos mencionados."
+        },
+        {
+          "titulo": "Conteúdo programático de conhecimentos específicos — Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Seção INGLÊS TÉCNICO.; delimitação do conteúdo."
+        },
+        {
+          "titulo": "FCC/TRT da 7ª Região — Analista Judiciário, Tecnologia da Informação, 2009 — itens de inglês no Qconcursos",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16",
+          "localizador": "Q128172, identificador do acervo: interpretação contextual de segmento inglês com cinco opções em português; Q128174: compreensão textual. Comandos e opções Q128171–Q128175 lidos em 26/11/2026. Origem secundária."
+        },
+        {
+          "titulo": "Texto inglês associado aos itens FCC/TRT7/2009, imagem do acervo Qconcursos",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg",
+          "localizador": "Imagem integral visualizada: artigo adaptado sobre Intellipedia. Usada somente para conferir a apresentação de texto inglês associado aos itens."
+        },
+        {
+          "titulo": "Registro local da referência FCC de inglês TRT7/2009",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt",
+          "localizador": "Identificação dos exemplos Q128171–Q128175 e limites dos metadados; confrontado com a página e a imagem reais."
+        }
+      ],
+      "autor": "/root/s2_elab_16",
+      "dificuldadeEstimada": "média",
+      "objetivo": "Identificar o referente de them pela cadeia de coesão que seleciona o segundo de dois grupos de cópias.",
+      "comandoPede": "Identificar especificamente o conjunto retomado por them no segmento destacado.",
+      "verificacoes": [
+        "Documental: escopo e atribuição conferidos; as questões anteriores cobravam razão de decisão textual e otherwise, não esta cadeia de referência pronominal.",
+        "Documental: quadro de pronomes e uso de object pronouns conferidos no British Council; sentido de latter relativo ao segundo de dois grupos conferido na acepção 2 da Merriam-Webster.",
+        "Documental de estilo: texto inglês real visualizado na imagem e comandos/opções Q128171–Q128175 lidos na página Qconcursos. Esses exemplos sustentam apresentação e leitura contextual em inglês, sem comprovar que o item Q128172 cobre referente pronominal.",
+        "Analítica: substituição de them por cada conjunto candidato e rastreamento de The latter; somente o segundo grupo é retomado integralmente. Todas as informações sobre a rotina de backup constam do próprio texto. Não houve execução de código para fundamentar a resposta."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 7ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2009,
+          "caderno": "Não obtido no acervo consultado",
+          "questao": "Q128172 e Q128174 — identificadores do Qconcursos; números originais não obtidos",
+          "pagina": "Páginas originais não obtidas; itens consultados em HTML",
+          "origem": "Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; texto associado visualizado em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg",
+          "caracteristicaObservada": "Leitura contextual de segmento inglês e compreensão do texto por comando e cinco interpretações em português.",
+          "caracteristicaAplicada": "Segmento inglês delimitado no comando, texto autossuficiente e cinco possíveis referentes formulados em português, com distratores extraídos de conjuntos mencionados no próprio texto.",
+          "limites": "Os exemplos não cobram especificamente referente pronominal; sustentam a apresentação e a interpretação contextual. Origem secundária e histórica, sem autenticação oficial, sem números originais, páginas ou caderno obtidos e sem inferência de frequência ou dificuldade atual. Texto e opções são novos."
+        }
+      ]
+    }
+  ]
+}

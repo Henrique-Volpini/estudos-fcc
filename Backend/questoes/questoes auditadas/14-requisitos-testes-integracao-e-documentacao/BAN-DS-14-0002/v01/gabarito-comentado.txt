@@ -1,0 +1,69 @@
+ID: BAN-DS-14-0002
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar os pares de resultados observáveis esperados nos três casos de teste de aceitação, na ordem apresentada.
+
+RESOLUÇÃO
+Os resultados esperados do teste de aceitação são derivados da regra de negócio, com contexto inicial, solicitação e efeitos verificáveis na tela. A mensagem e o total exibido constituem dois critérios observáveis; a verificação de ambos permite distinguir uma recusa sem alteração de uma recusa que modifica indevidamente o total.
+
+Em I, a conta está ativa e a soma é 800,00 + 200,00 = 1.000,00. Como o limite é inclusivo, ambas as condições de confirmação são satisfeitas: a mensagem deve ser “Confirmado” e o total deve ser 1.000,00.
+
+Em II, a conta está ativa, mas a soma seria 800,00 + 201,00 = 1.001,00, acima do limite. A mensagem deve ser “Recusado” e o total deve permanecer em 800,00.
+
+Em III, a soma seria 800,00 + 100,00 = 900,00, dentro do limite, mas a conta está inativa. Como as condições são cumulativas, a mensagem deve ser “Recusado” e o total deve permanecer em 800,00.
+
+As execuções independentes impedem que a confirmação de I altere a precondição dos demais casos. I representa o cenário positivo no limite; II e III exercitam, separadamente, a falha de cada condição de confirmação. Somente uma alternativa reproduz os três pares esperados.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando. Em I, a conta está ativa e 800,00 + 200,00 = 1.000,00. A expressão “não ultrapassar” admite a igualdade; portanto, esse caso deve confirmar o agendamento e apresentar total de 1.000,00, em vez de recusá-lo. Os resultados indicados para II e III respeitam as recusas previstas.
+B) Não atende ao comando. Em II, o valor solicitado isoladamente é inferior a 1.000,00, mas a regra compara a soma: 800,00 + 201,00 = 1.001,00. O agendamento deve ser recusado e o total deve permanecer em 800,00. Os pares indicados para I e III correspondem à regra.
+C) Não atende ao comando. Em III, a soma de 900,00 não ultrapassa o limite, mas a conta está inativa. A confirmação exige simultaneamente conta ativa e soma dentro do limite; a saída deve ser “Recusado” com total de 800,00. Os pares de I e II correspondem à regra.
+D) Não atende ao comando. As mensagens de II e III indicam corretamente a recusa, mas os totais incorporam os valores de solicitações recusadas. A regra exige que o total permaneça em 800,00 em ambos os casos. Verificar somente a mensagem deixaria de conferir esse resultado observável.
+E) Atende ao comando. I confirma no limite inclusivo e apresenta total de 1.000,00. II recusa porque a soma seria 1.001,00; III recusa porque a conta está inativa. Nas duas recusas, o total exibido permanece em 800,00, conforme a regra.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conhecimentos específicos – Desenvolvimento de Sistemas, arquivo-base do edital
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: Bloco LEVANTAMENTO DE REQUISITOS, TESTES, INTEGRAÇÃO E DOCUMENTAÇÃO TÉCNICA; observação final sobre legislação.
+  Sustenta: Delimita o bloco atribuído. A questão não exige norma, método ou versão que o bloco não especifique.
+- ISTQB Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024
+  URL: https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
+  Localizador: Seção 2.2.1, p. 29, item Acceptance testing; seções 4.5.2 e 4.5.3, pp. 45–46. Navegação realizada em 26/11/2026.
+  Sustenta: Testes de aceitação orientados às necessidades de negócio; critérios de aceitação como base para casos positivos e negativos, com precondições, entradas e pós-condições. Consulta conceitual, sem impor a certificação ou ATDD ao cenário.
+- Cucumber – Gherkin Reference
+  URL: https://cucumber.io/docs/gherkin/reference/
+  Localizador: Seções Rule, Example, Given, When e Then; especialmente Then, parágrafos sobre expected outcome e observable output. Navegação realizada em 26/11/2026.
+  Sustenta: Organização em contexto, ação e resultado esperado; escolha de mensagens e informações exibidas como resultados observáveis. A questão não cobra sintaxe Gherkin nem exige Cucumber.
+- FCC – TRT da 4ª Região – Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação – Julho/2022
+  URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador: Caderno A14, Tipo 001; questão 33, p. 8; questão 48, p. 11; identificação na capa, p. 1.
+  Sustenta: Referência editorial de cenário profissional, comando objetivo e alternativas em sequência correspondente. Extração local efetivamente lida de cópia secundária hospedada no Qconcursos.
+- Metadados das referências FCC
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador: Registro trt4-2022-ti-a14-001, consultado em 26/11/2026.
+  Sustenta: Origem secundária e identificação do caderno utilizado como referência de estilo; não certifica a correção técnica da questão autoral.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário – Área Apoio Especializado – Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; p. 8.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, de cópia secundária hospedada no Qconcursos; URL e origem registradas em fontes.json.
+  Característica observada e aplicação nesta questão autoral: Um profissional de TI atua em cenário delimitado; o comando pede correspondência em ordem, com alternativas paralelas. Aplicado à seleção dos três pares de saídas na ordem I, II e III, com dados e solução autorais.
+  Limites da referência: Exemplo editorial; não se utiliza sua solução antiga sobre Swagger como fonte técnica. A cópia não é apresentada como download da FCC nem como assinatura de integridade oficial; não se infere frequência de formatos.
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário – Área Apoio Especializado – Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 48; p. 11.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, de cópia secundária hospedada no Qconcursos; URL e origem registradas em fontes.json.
+  Característica observada e aplicação nesta questão autoral: Situação de uma Analista, características técnicas apresentadas de forma delimitada e comando direto com cinco opções. Aplicado ao cenário de preparação de testes e às três cláusulas explícitas da regra de negócio.
+  Limites da referência: Referência de construção editorial, sem copiar a pergunta ou adotar seu conteúdo sobre integração como solução técnica. A origem é secundária e o exemplo isolado não comprova predominância na banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: lidos o perfil 14, as regras gerais, o modelo de entrega, o formato do simulado, as orientações do SIM-002, a atribuição no plano e o bloco pertinente do arquivo-base.
+- Rodízio: lida BAN-DS-14-0001 em SIM-002/questoes-anteriores.json; o objetivo anterior era rastreabilidade. Esta questão deriva resultados de testes de aceitação de uma regra de negócio, sem reutilizar a pergunta anterior.
+- Documental técnica: navegados o PDF primário do ISTQB CTFL v4.0.1 e a referência oficial do Cucumber nos localizadores registrados; as fontes foram utilizadas conceitualmente, sem acrescentar obrigação metodológica ao edital.
+- Documental de estilo: lidas a capa e as questões 33, p. 8, e 48, p. 11, da extração TRT4/2022; conferidos os metadados de origem em fontes.json.
+- Analítica: calculadas as somas 1.000,00, 1.001,00 e 900,00; conferidos o limite inclusivo, a exigência simultânea das duas condições e a preservação do total nas recusas. Examinadas individualmente as cinco alternativas, com uma única sequência defensável.
+- Estrutural: conferidos ID, número global 47, versão v01, identidade real, estado PENDENTE_AUDITORIA, cinco alternativas e cinco justificativas; verificada a correspondência literal entre os campos da entrega JSON e os TXT gravados em UTF-8.
+- Não houve execução de um sistema de agendamento nem de código sob teste. A solução foi verificada por documentação e análise; a conferência em memória dos arquivos limita-se à estrutura e à correspondência do conteúdo.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. A versão aguarda auditoria independente de estilo, pistas e redação/conformidade; não foi autoaprovada.

@@ -1,0 +1,15 @@
+ID: BAN-DS-11-0008
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: NIST SP 800-61 Rev. 3: resposta e recuperação em incidente
+
+ENUNCIADO
+Após identificar ransomware em um servidor, uma equipe o isolou da rede para impedir a propagação do incidente. O plano autoriza recuperar o serviço enquanto outras atividades de resposta prosseguem. Há um backup anterior à detecção, ainda sem verificação de integridade.
+
+De acordo com a NIST SP 800-61 Rev. 3, para recuperar o serviço, a equipe deve
+
+A) selecionar esse backup pela anterioridade à detecção, dispensando sua verificação, e conferir os ativos restaurados antes de recolocar o serviço em produção.
+B) verificar esse backup antes de usá-lo e dispensar a verificação dos ativos restaurados se a ferramenta informar que a cópia terminou sem erros.
+C) verificar esse backup antes de restaurar e, antes da produção, verificar os ativos restaurados e remediar as causas-raiz do incidente.
+D) verificar esse backup e os ativos restaurados e retomar a produção antes de corrigir a vulnerabilidade explorada, preservando-a para o diagnóstico posterior.
+E) manter o isolamento durante a restauração e usar a ausência de tráfego malicioso nesse intervalo como validação da integridade do backup e dos ativos.

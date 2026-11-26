@@ -1,0 +1,27 @@
+ID: BAN-DS-10-0003
+Matéria: 10 - Serviços e gerenciamento de redes
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/10-servicos-e-gerenciamento-de-redes.txt
+Tópico do conteúdo: serviços de e-mail, DHCP e Web Proxy;
+Objetivo da questão: Interpretar a seleção de oferta e a confirmação na concessão inicial DHCPv4, delimitando o cenário em relação à renovação.
+Tarefa de origem: SIM-002, plano.json, questão global 38; DHCP: processo de concessao inicial (DORA).
+Responsável pela elaboração: /root/s2_elab_10
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, elaboração autoral concluída e conferida, /root/s2_elab_10; fontes primárias navegadas, referências FCC locais identificadas e comentários individuais completos; entregue para auditoria, sem autoaprovação.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003 -> Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003
+ESTILO_FCC: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/parecer-redacao-e-conformidade.txt

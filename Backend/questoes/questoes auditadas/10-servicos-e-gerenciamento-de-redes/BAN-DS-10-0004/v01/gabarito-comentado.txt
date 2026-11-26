@@ -1,0 +1,62 @@
+ID: BAN-DS-10-0004
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: identificar a associação correta nas condições declaradas.
+
+RESOLUÇÃO
+I cabe ao Prometheus: o servidor consulta os endpoints HTTP pelo modelo pull e armazena as amostras em séries temporais. II também cabe ao Prometheus: suas regras de alerta são avaliadas sobre os dados coletados, e os alertas resultantes são enviados ao Alertmanager. III cabe ao Alertmanager: ele recebe alertas, agrupa-os e encaminha notificações aos receptores configurados, além de oferecer deduplicação, silenciamento e inibição. O Alertmanager não assume a coleta e o armazenamento das métricas nem a avaliação das regras de alerta do servidor.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende: atribui I e II ao servidor Prometheus, responsável pela coleta, armazenamento e avaliação de regras, e III ao Alertmanager, responsável por agrupar alertas e rotear suas notificações.
+B) Não atende: I e III estão atribuídas adequadamente, mas II foi transferida ao Alertmanager. As regras sobre as séries temporais são avaliadas no Prometheus; o Alertmanager recebe os alertas já gerados.
+C) Não atende: II está atribuída adequadamente, mas I e III estão trocadas. O Prometheus coleta e armazena as métricas, enquanto o Alertmanager agrupa os alertas recebidos e encaminha as notificações.
+D) Não atende: I está atribuída adequadamente, mas II e III estão invertidas. O Prometheus avalia as regras de alerta, e o Alertmanager executa o agrupamento e o encaminhamento das notificações.
+E) Não atende: II e III estão atribuídas adequadamente, mas I foi transferida ao Alertmanager. A consulta periódica dos endpoints e o armazenamento das séries temporais são funções do servidor Prometheus.
+
+FONTES TÉCNICAS E DOCUMENTAIS CONSULTADAS
+- Conteúdo programático — Serviços e gerenciamento de redes
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: Linhas 149–163: DHCP e ferramentas de monitoramento e logs, incluindo Prometheus.
+- Questões anteriores do SIM-001 para controle de rodízio
+  Arquivo: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json
+  Localizador: Itens BAN-DS-10-0001 e BAN-DS-10-0002: SNMP/MIB e virtual hosts do Apache; objetivos distintos dos atuais.
+- Prometheus — Overview, documentação oficial
+  Url: https://prometheus.io/docs/introduction/overview/
+  Localizador: Features: pull model over HTTP; Components: servidor que coleta e armazena séries temporais; Architecture: coleta, armazenamento e execução de regras para gerar alertas. Navegada em 26/11/2026.
+- Prometheus — Alerting overview, documentação oficial
+  Url: https://prometheus.io/docs/alerting/latest/overview/
+  Localizador: Parágrafo inicial e passos de configuração: regras de alerta no servidor Prometheus enviam alertas ao Alertmanager, que gerencia agregação e envio de notificações. Navegada em 26/11/2026.
+- Prometheus — Alertmanager, documentação oficial
+  Url: https://prometheus.io/docs/alerting/latest/alertmanager/
+  Localizador: Introdução e seções Architecture, Grouping, Inhibition e Silences: recebimento, agrupamento, deduplicação, roteamento e gerenciamento das notificações. Navegada em 26/11/2026.
+- FCC/TRT4 2022 — Analista Judiciário, Tecnologia da Informação, A14, Tipo 001
+  Url: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador: p.8, questões 32 e 33; extração local lida; capacidades de produto e identificação ordenada em cenário técnico; cópia secundária do Qconcursos, sem declaração de download ou integridade oficial da FCC.
+- Metadados das referências reais FCC
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador: Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; URLs, origem primária/secundária e identificação dos arquivos.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, === PAGINA 8 ===, e metadados em fontes.json; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica observada e aplicação: Identificação expressa de um produto de infraestrutura e cobrança objetiva de suas capacidades. Na questão autoral, Prometheus e Alertmanager são nomeados e suas atribuições são associadas a três atividades concretas.
+  Limites da referência: Cópia secundária do Qconcursos; não se declara download direto da FCC nem assinatura ou integridade oficial. O exemplo sustenta a construção editorial, sem validar a técnica da questão autoral ou demonstrar frequência de formatos.
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, === PAGINA 8 ===, e metadados em fontes.json; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica observada e aplicação: Cenário de TI seguido da identificação de componentes em ordem determinada e cinco opções paralelas com respectivamente. A questão autoral utiliza três atividades em vez das duas anotações do exemplo; cenário e alternativas são novos.
+  Limites da referência: Cópia secundária do Qconcursos; não se declara download direto da FCC nem assinatura ou integridade oficial. O exemplo sustenta a construção editorial, sem validar a técnica da questão autoral ou demonstrar frequência de formatos.
+
+VERIFICAÇÕES REALIZADAS
+Responsável: /root/s2_elab_10
+Dificuldade estimada: média
+- Documental: páginas oficiais Overview, Alerting overview e Alertmanager efetivamente navegadas em 26/11/2026; conferidos coleta HTTP, armazenamento de séries, avaliação das regras e gerenciamento de notificações.
+- Editorial documental: lidas as extrações FCC TRT4/2022 Q32 e Q33, p.8, com identificação de cargo/caderno e metadados de origem secundária. Não foi alegada consulta direta a uma publicação da FCC.
+- Analítica: I, II e III foram associadas separadamente aos componentes e depois confrontadas com todas as cinco combinações; somente uma reúne as três atribuições documentadas.
+- Rodízio: lidas BAN-DS-10-0001 e BAN-DS-10-0002 em questoes-anteriores.json; o objetivo atual não repete SNMP/MIB nem seleção de virtual host Apache.
+- Conferência local de entrega: arquivos relidos como UTF-8, estrutura JSON e correspondência literal do enunciado, alternativas, resolução e justificativas com os TXT conferidas em memória. Não foram implantados Prometheus ou Alertmanager nem executadas consultas ou regras.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente de estilo, pistas e redação/conformidade.

@@ -1,0 +1,41 @@
+ID: BAN-DS-04-0011
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar a proposta que preserva uma linha por pagamento e organiza medidas e dimensões em estrela.
+
+RESOLUÇÃO
+O grão declara o significado de uma linha: neste caso, um pagamento individual. Duas ocorrências com a mesma data, agência e canal continuam sendo duas linhas. valor_pago é a medida do evento; Data, Agência e Canal descrevem seu contexto. No esquema estrela, a fato guarda a medida e as referências às tabelas de dimensões. Uma agregação diária mudaria o significado da linha, e misturar totais mensais com eventos produziria uma fato com grãos incompatíveis.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O valor é uma medida do pagamento e varia entre eventos do mesmo canal. Armazená-lo como atributo de Canal não o mantém no grão da tabela fato proposto.
+B) Atende. Cada linha representa exatamente um pagamento; valor_pago mede esse evento, e as três chaves o vinculam ao contexto descritivo de Data, Agência e Canal, formando a estrutura em estrela.
+C) Não atende. A agregação por data, agência e canal reúne pagamentos distintos que compartilham essas dimensões. Isso muda o grão definido, embora a estrutura agregada possa ser útil em outra tabela fato.
+D) Não atende. A linha por evento preserva o grão, mas a proposta elimina as tabelas de dimensões e suas relações com a fato, deixando de implementar a estrutura em estrela solicitada.
+E) Não atende. Pagamentos individuais e totais mensais representam grãos diferentes. Misturá-los na mesma tabela fato viola o grão uniforme definido e pode levar à dupla contagem em somas sem distinção dessas linhas.
+
+FONTES TÉCNICAS CONSULTADAS
+- Kimball Group - Grain - Dimensional Modeling Techniques
+  URL ou arquivo: https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/grain/
+  Localizador e suporte: Declaração do significado de uma linha de fato; compatibilidade entre grão, dimensões e medidas; separação de grãos em tabelas físicas distintas.
+- Kimball Group - Star Schemas and OLAP Cubes
+  URL ou arquivo: https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/star-schema-olap-cube/
+  Localizador e suporte: Separação entre medidas e contexto descritivo; fato ligada a dimensões por relações de chave primária/estrangeira.
+- Programa de conhecimentos específicos - Banco de Dados
+  URL ou arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: conceitos de modelagem dimensional (fatos, dimensões, métricas, esquemas estrela e floco de neve);
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 52; página 9.
+  Origem verificável: Arquivo do próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: O item de data warehouse pede a identificação de uma propriedade entre cinco afirmações concorrentes. Aplicação: O item autoral delimita a necessidade de análise e apresenta cinco propostas do mesmo modelo; exige compatibilidade de grão e estrutura, sem copiar as afirmações antigas.
+  Limites da referência: Referência histórica de formato; não estabelece frequência editorial nem valida o conteúdo técnico atual. A questão autoral apresenta objetivo, cenário e alternativas próprios.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultadas por navegação as páginas Grain e Star Schemas and OLAP Cubes do Kimball Group em 26/11/2026.
+- Analítica: comparadas as propostas quanto ao significado de cada linha e à separação entre fato e dimensões; verificado o caso de pagamentos distintos com contexto dimensional igual. Não houve implementação ou execução de banco.
+- Editorial: lida a Q52/p9 de TRF4/2007, referência histórica obtida no próprio órgão conforme fontes.json.
+- Independência: o SIM-001 incluiu estrela apenas como distrator de NoSQL; não avaliou grão, medidas ou a organização da fato e dimensões.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguardando auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

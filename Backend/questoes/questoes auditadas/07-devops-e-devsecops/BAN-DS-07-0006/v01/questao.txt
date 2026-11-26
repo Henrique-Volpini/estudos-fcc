@@ -1,0 +1,20 @@
+ID: BAN-DS-07-0006
+Versão: v01
+Matéria: DevOps e DevSecOps
+Tópico: DevSecOps: controles de segurança em pipeline (SAST, DAST e dependências)
+
+ENUNCIADO
+Uma equipe está incluindo controles de segurança na pipeline de uma aplicação web que utiliza bibliotecas de terceiros e possui funcionalidades autenticadas. A pipeline permite inspecionar o código e as dependências antes da implantação e executar a aplicação em um ambiente de homologação isolado, com contas de teste. Considere as propostas:
+
+I. Executar SAST sobre o código da aplicação permite procurar padrões e fluxos potencialmente vulneráveis sem executar a aplicação analisada.
+II. A SCA pode restringir a verificação de vulnerabilidades às dependências diretas, pois a ausência de alertas nelas também afasta vulnerabilidades nas dependências transitivas.
+III. Executar DAST contra a aplicação em homologação, configurando a autenticação de teste, permite exercitar funcionalidades protegidas e analisar suas respostas.
+IV. A ausência de achados no SAST permite dispensar SCA e DAST, porque comprova a segurança das dependências e do comportamento da aplicação em execução.
+
+Está correto o que se afirma APENAS em
+
+A) I e II.
+B) II e IV.
+C) III e IV.
+D) II e III.
+E) I e III.

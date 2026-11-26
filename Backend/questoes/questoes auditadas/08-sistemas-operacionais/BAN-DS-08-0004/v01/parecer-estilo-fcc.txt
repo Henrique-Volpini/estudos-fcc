@@ -1,0 +1,60 @@
+Simulado: SIM-002
+Questão: BAN-DS-08-0004
+Versão examinada: v01
+Responsável: /root/s2_auditor_estilo
+Perfil: ESTILO_FCC
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras gerais vigentes lidas.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo lido.
+- Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt — perfil lido.
+- Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0004/controle.txt — ID, versão completa e autoria conferidos; sem alteração.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/publico-31-40.json — v01, enunciado e alternativas deste ID integralmente lidos.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/estilo-31-40.json — v01, referências indicadas pelo elaborador, acessadas após a primeira leitura.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json — registro inicial deste ID anterior às referências.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/manifesto.json — pacote final v01, identificação, caminhos e hashMetodo.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/analises-estilo.json — análise individual deste ID pelo presente auditor.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/referencias-estilo-verificadas.json — registro da leitura atual dos exemplos.
+- Backend/Agents/conteudo/referencias-fcc/fontes.json — origem e hashes locais das provas.
+- Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0004/v01/questao.txt e Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0004/v01/gabarito-comentado.txt — v01; leitura mecânica exclusiva para hash normalizado, sem consulta semântica do gabarito.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt — exemplo 47, página 11.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt — exemplo 41, página 10.
+
+PRIMEIRA LEITURA SEM GABARITO
+Tabela de objetos de serviço e requisitos de filtro, ordenação e propriedades. Opções são pipelines completos, com diferenças em cmdlets ou predicados. A largura do código requer apresentação preservada, mas o texto fornecido permite leitura comparativa; não executar PowerShell.
+Registro prévio: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json. O corpo público foi lido antes das referências do elaborador; nenhuma letra-resposta ou resolução foi utilizada nesta análise de estilo.
+
+CRITÉRIOS EXAMINADOS
+- Leitura independente e identificação da versão: atendido. Registro inicial por ID anterior à consulta de estilo; ID, autoria e versão v01 conferidos no controle e no manifesto. Campos internos não foram tratados como conteúdo exibido ao candidato.
+- Identidade e origem das referências, com leitura dos exemplos reais: atendido. Os exemplos relacionados abaixo foram efetivamente lidos nas extrações ou no HTML com imagem associada; origem oficial do órgão foi distinguida de cópia secundária. A mera lista do elaborador não fundamentou a decisão.
+- Comando, apresentação do cenário, estrutura e organização das alternativas: atendido. T47 pede comando que cumpre uma tarefa Linux; T41 faz o mesmo em PostgreSQL. O item PowerShell fornece entrada e tarefa de seleção, ordenação e projeção, com cinco pipelines completos. A comparação é da seleção de comandos, sem alegar padrão específico de PowerShell.
+- Vocabulário, coerência da aplicação e autoria editorial: atendido. Name e DisplayName são distintos na tabela e o comando exige objetos utilizáveis depois. As alternativas mantêm o pipeline em nível comparável, variando uma parte por vez sem prosa desconectada.
+- Formato pertinente ao tipo de questão e competência comparada: atendido. Tabela de entrada e cinco linhas de comando com operadores/cmdlets preservados. A largura demanda manutenção do bloco na interface, mas não há defeito no texto fornecido; nenhum pipeline foi executado.
+- Amostra suficiente para os traços afirmados, sem impor regra universal: atendido. As referências sustentam apenas as características concretas descritas. Não se deduzem quota de formato, extensão obrigatória, dificuldade, incidência temática ou equivalência estatística. As diferenças e limitações estão explicitadas, inclusive quando a amostra apoia a competência sem documentar o subtipo exato.
+
+ACHADOS
+Nenhum achado impeditivo no escopo ESTILO_FCC.
+
+REFERÊNCIAS DE ESTILO
+T47: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno A14, Tipo 001; questão 47; página 11.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado: Tarefa de verificar instalação em Linux e cinco comandos candidatos.
+Limites: Cópia secundária do Qconcursos, conforme fontes.json. Identificação lida na capa; páginas referem-se aos marcadores da extração e à numeração exibida no texto. Coincidência de hash local não autentica origem nem integridade oficial. Amostra pontual de 2022, sem inferência de frequência, dificuldade calibrada ou correção técnica atual.
+
+T41: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno A14, Tipo 001; questão 41; página 10.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado: Tarefa de revogação em PostgreSQL e cinco comandos SQL candidatos.
+Limites: Cópia secundária do Qconcursos, conforme fontes.json. Identificação lida na capa; páginas referem-se aos marcadores da extração e à numeração exibida no texto. Coincidência de hash local não autentica origem nem integridade oficial. Amostra pontual de 2022, sem inferência de frequência, dificuldade calibrada ou correção técnica atual.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil ESTILO_FCC. Não houve certificação técnica de conceitos, normas, cálculos, código ou resposta. As limitações de procedência e representatividade descritas não foram convertidas em alegação de padrão universal.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA exclusivamente no perfil ESTILO_FCC: a comparação individual do comando, cenário, estrutura, vocabulário, alternativas e formato com os exemplos reais identificados não encontrou defeito editorial impeditivo. T47 pede comando que cumpre uma tarefa Linux; T41 faz o mesmo em PostgreSQL. O item PowerShell fornece entrada e tarefa de seleção, ordenação e projeção, com cinco pipelines completos. A comparação é da seleção de comandos, sem alegar padrão específico de PowerShell.
+A decisão vale para os textos v01 identificados pelo hash normalizado do manifesto, conferido nesta emissão. Não representa parecer de outro perfil nem validação técnica do gabarito.

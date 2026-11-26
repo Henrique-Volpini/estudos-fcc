@@ -1,0 +1,40 @@
+ID: BAN-DS-01-0007
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Identificar, na ordem I, II e III, o nível de teste correspondente a cada atividade.
+
+RESOLUÇÃO
+I tem como objeto uma classe isolada, com dependências simuladas: teste de componente, também denominado teste de unidade. II tem como foco as interfaces e as interações entre dois componentes reais: integração de componentes. III toma como objeto a aplicação completa e verifica seu comportamento em relação à especificação: teste de sistema. O fato de o terceiro fluxo alcançar várias partes da aplicação não o torna apenas um teste das interfaces entre dois componentes. O comando classifica níveis pelo objeto e pelo objetivo; a execução manual ou automatizada não mudaria essa classificação.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende ao comando: I exercita uma classe isolada, II exercita a colaboração entre dois componentes reais e III avalia o comportamento da aplicação completa em relação à especificação do sistema.
+B) Não atende ao comando: I está classificada adequadamente, mas II não tem o sistema completo como objeto e III não se limita às interfaces entre componentes; esses dois níveis foram invertidos.
+C) Não atende ao comando: III está classificada adequadamente, mas I isola a classe por simulação das dependências e II usa componentes reais em colaboração; os dois primeiros níveis foram invertidos.
+D) Não atende ao comando: II corresponde à integração de componentes, mas uma classe isolada não é o sistema completo e o fluxo completo da aplicação não é uma unidade isolada.
+E) Não atende ao comando: I não exercita a integração entre componentes reais, II não avalia a aplicação completa e III ultrapassa o escopo de uma unidade isolada; nenhuma das três posições corresponde ao cenário.
+
+FONTES TÉCNICAS CONSULTADAS E DELIMITAÇÃO DE ESCOPO
+- ISTQB — Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024. https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf. Localizador: Seções 2.2 e 2.2.1, páginas 28–29, especialmente os três primeiros níveis e os atributos usados para distingui-los. Download acessado a partir da página oficial CTFL em 26/11/2026.
+- FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 33, página 8, cenário de documentação de API e correspondência ordenada nas alternativas; questão 52, página 12, combinação ordenada de três termos para preencher as lacunas I, II e III. Leitura das extrações locais; somente formato.
+- Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item tipos de testes de software, recorte unitários, de integração e de sistema. Delimitação do escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Cenário profissional de TI e comando de correspondência ordenada, com alternativas construídas na mesma ordem dos elementos apresentados. A proposta aplica a correspondência a três objetos de teste autorais.
+- Limites da referência: O conteúdo da referência é documentação Swagger; não fundamenta os conceitos de teste. Trata-se de cópia secundária sem certificação de integridade oficial.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 52; página 12.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Três elementos identificados por I, II e III e cinco combinações de termos que devem ser lidas em ordem. A proposta conserva a leitura ordenada, apresentando três atividades em vez de lacunas em saída de comando.
+- Limites da referência: A questão real trata de metadados inode. O uso do formato não implica identidade temática nem comprova frequência do formato na FCC; a cópia é secundária.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura via web do syllabus ISTQB v4.0.1, seções 2.2–2.2.1; conferidos os conceitos de unidade, integração de componentes, sistema e a distinção em relação à integração com sistemas externos.
+- Analítica: cada atividade foi classificada antes de conferir as combinações, usando isolamento, interfaces reais e abrangência do objeto como critérios. As alternativas apresentam combinações distintas e apenas uma preserva as três classificações.
+- Editorial: leitura das questões 33 (página 8) e 52 (página 12) da extração local TRT4/2022; comparação com as questões anteriores do perfil, sem reciclagem do objetivo. Os testes do cenário são autorais e não foram implementados ou executados.
+
+PENDÊNCIAS
+Nenhuma de elaboração; versão sujeita à auditoria independente.

@@ -1,0 +1,32 @@
+ID: BAN-DS-05-0006
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: CSS: desenvolvimento responsivo e cascata
+
+ENUNCIADO
+Uma página adota uma regra básica para telas pequenas e acrescenta media queries para ampliar o leiaute. O elemento .painel utiliza exclusivamente o CSS abaixo, na ordem apresentada, em navegador com suporte às propriedades indicadas. Não há estilos inline, outras regras, animações ou transições.
+
+.painel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 960px) {
+  .painel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 600px) {
+  .painel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+Considere três larguras da viewport: 580px, 760px e 1100px. Em cada par (n, g), n indica a quantidade de colunas declaradas em grid-template-columns e g indica o valor de gap. Os pares correspondentes a essas larguras são, respectivamente,
+
+A) (1, 8px), (2, 8px) e (3, 24px).
+B) (1, 8px), (3, 24px) e (2, 24px).
+C) (1, 8px), (2, 24px) e (2, 24px).
+D) (1, 8px), (2, 8px) e (2, 24px).
+E) (2, 8px), (2, 8px) e (2, 24px).

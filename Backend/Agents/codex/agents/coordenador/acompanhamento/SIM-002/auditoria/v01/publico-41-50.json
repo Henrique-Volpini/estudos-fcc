@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-11-0006",
+    "numero": 41,
+    "versao": "v01",
+    "enunciado": "Uma equipe compara os processos de autenticação abaixo. Em cada processo, todos os elementos indicados são exigidos no mesmo evento de autenticação. Considere implementações adequadas, sem mecanismos alternativos de acesso, e segredos dos tokens independentes das senhas e dos PINs.\n\nI. Digitação de uma senha memorizada e de um PIN também memorizado, ambos verificados diretamente pelo servidor.\nII. Digitação de uma senha memorizada e de um código de uso único gerado por token físico, que não exige fator adicional para gerar o código.\nIII. Digitação de dois códigos de uso único, gerados por dois tokens físicos distintos, nenhum dos quais exige fator adicional para gerar seu código.\nIV. Uso de um dispositivo criptográfico com chave privada não exportável, cuja operação exige a entrada e a verificação de um PIN local em cada autenticação; o servidor verifica a resposta criptográfica produzida pelo dispositivo.\n\nA combinação de fatores de categorias distintas ocorre APENAS em",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "II e III.",
+      "D": "II e IV.",
+      "E": "III e IV."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0007",
+    "numero": 42,
+    "versao": "v01",
+    "enunciado": "Uma API disponibiliza comprovantes por meio de GET /comprovantes/{id}, com identificadores numéricos sequenciais. A política estabelece que cada cliente pode consultar somente os próprios comprovantes. A autenticação funciona corretamente, e o servidor valida o token recebido. Entretanto, um cliente autenticado consegue obter o comprovante de outro cliente alterando o identificador na URL.\n\nPara corrigir a falha de controle de acesso descrita, de acordo com a categoria A01 do OWASP Top 10:2021, a equipe deve",
+    "alternativas": {
+      "A": "verificar no servidor, em cada solicitação, se o comprovante pertence ao cliente autenticado, negando a consulta quando essa condição não for satisfeita.",
+      "B": "substituir os identificadores sequenciais por UUIDs aleatórios, mantendo a consulta baseada apenas no identificador informado e na validade do token recebido.",
+      "C": "exigir MFA na autenticação de todos os clientes, mantendo a consulta de comprovantes condicionada apenas à presença de uma sessão autenticada.",
+      "D": "filtrar no aplicativo os links de comprovantes pelo cliente autenticado, mantendo a API apta a consultar qualquer identificador recebido de uma sessão válida.",
+      "E": "validar a assinatura e a expiração do token em cada consulta, mantendo o identificador de comprovante recebido como único critério para selecionar o documento."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0008",
+    "numero": 43,
+    "versao": "v01",
+    "enunciado": "Após identificar ransomware em um servidor, uma equipe o isolou da rede para impedir a propagação do incidente. O plano autoriza recuperar o serviço enquanto outras atividades de resposta prosseguem. Há um backup anterior à detecção, ainda sem verificação de integridade.\n\nDe acordo com a NIST SP 800-61 Rev. 3, para recuperar o serviço, a equipe deve",
+    "alternativas": {
+      "A": "selecionar esse backup pela anterioridade à detecção, dispensando sua verificação, e conferir os ativos restaurados antes de recolocar o serviço em produção.",
+      "B": "verificar esse backup antes de usá-lo e dispensar a verificação dos ativos restaurados se a ferramenta informar que a cópia terminou sem erros.",
+      "C": "verificar esse backup antes de restaurar e, antes da produção, verificar os ativos restaurados e remediar as causas-raiz do incidente.",
+      "D": "verificar esse backup e os ativos restaurados e retomar a produção antes de corrigir a vulnerabilidade explorada, preservando-a para o diagnóstico posterior.",
+      "E": "manter o isolamento durante a restauração e usar a ausência de tráfego malicioso nesse intervalo como validação da integridade do backup e dos ativos."
+    }
+  },
+  {
+    "id": "BAN-DS-12-0003",
+    "numero": 44,
+    "versao": "v01",
+    "enunciado": "Em um cenário fictício, uma instituição utiliza uma nuvem privada, destinada exclusivamente à organização e instalada no centro de dados de uma empresa contratada. Ela está integrada à nuvem pública do provedor P por tecnologia que permite a portabilidade de dados e aplicações, preservando a identidade de cada nuvem. A instituição também utiliza a nuvem pública do provedor Q, empresa distinta de P, para executar outra aplicação. Cada aplicação usa apenas um dos dois provedores públicos.\n\nQuanto à implantação e à diversidade de provedores, o ambiente descrito",
+    "alternativas": {
+      "A": "é híbrido, mas não multicloud, pois a integração tecnológica transforma as nuvens envolvidas em um único provedor.",
+      "B": "é multicloud, mas não híbrido, pois a nuvem privada está instalada fora das dependências da instituição.",
+      "C": "é híbrido e multicloud, pois há integração entre nuvens privada e pública e utilização de dois provedores públicos distintos.",
+      "D": "é multicloud, mas não híbrido, pois a preservação da identidade de cada nuvem impede que elas componham uma nuvem híbrida.",
+      "E": "é híbrido, mas não multicloud, pois cada aplicação utiliza apenas um dos dois provedores públicos."
+    }
+  },
+  {
+    "id": "BAN-DS-12-0004",
+    "numero": 45,
+    "versao": "v01",
+    "enunciado": "Em um cenário fictício de governança de custos em nuvem, uma instituição identificou os custos diretos mensais por meio de metadados válidos de equipe. Os valores apurados e os orçamentos mensais são:\n\nEquipe   | Custos diretos | Orçamento\nCartões  | R$ 18.000,00   | R$ 21.000,00\nCrédito  | R$ 12.000,00   | R$ 15.000,00\n\nHá também um custo compartilhado de R$ 6.000,00, ainda não incluído nos custos diretos. A política interna aprovada determina que ele seja integralmente rateado entre as duas equipes na proporção dos respectivos custos diretos. O acompanhamento deve somar a parcela rateada ao custo direto de cada equipe e sinalizar quando esse total ultrapassar seu orçamento. Os orçamentos já contemplam custos compartilhados. Todos os valores são finais para o mês, sem outros custos ou ajustes.\n\nAplicando essa política, os custos totais atribuídos a Cartões e a Crédito e o resultado do acompanhamento são, respectivamente,",
+    "alternativas": {
+      "A": "R$ 21.000,00 e R$ 15.000,00; nenhum desvio por equipe deve ser sinalizado.",
+      "B": "R$ 21.600,00 e R$ 14.400,00; nenhum desvio por equipe deve ser sinalizado.",
+      "C": "R$ 18.000,00 e R$ 12.000,00; nenhum desvio por equipe deve ser sinalizado.",
+      "D": "R$ 24.000,00 e R$ 12.000,00; deve ser sinalizado excesso de R$ 3.000,00 em Cartões.",
+      "E": "R$ 21.600,00 e R$ 14.400,00; deve ser sinalizado excesso de R$ 600,00 em Cartões."
+    }
+  },
+  {
+    "id": "BAN-DS-13-0002",
+    "numero": 46,
+    "versao": "v01",
+    "enunciado": "Uma instituição utiliza o Rancher Manager 2.x, instalado em um cluster de gerenciamento, para administrar um cluster Kubernetes preexistente que foi registrado no Rancher. O servidor Rancher fica indisponível, mas o plano de controle, os nós e a rede do cluster registrado permanecem operacionais. Uma Analista dispõe de um kubeconfig previamente configurado para acessar diretamente a API desse cluster, com credenciais válidas e permissões para consultar e alterar seus workloads, sem depender da autenticação ou do proxy do Rancher.\n\nNessas condições, a Analista conclui corretamente que",
+    "alternativas": {
+      "A": "os Pods em execução continuam ativos, mas o agendamento de novos Pods depende do retorno do servidor Rancher.",
+      "B": "o acesso direto permite consultar os workloads, mas sua alteração exige o restabelecimento do proxy do Rancher.",
+      "C": "os workloads continuam sob o controle do Kubernetes, e sua administração pode prosseguir pelo acesso direto à API do cluster.",
+      "D": "o plano de controle mantém o estado desejado, mas os Pods precisam ser recriados para operar sem o servidor Rancher.",
+      "E": "o acesso direto permite manter os workloads existentes, mas novos Deployments exigem registrar novamente o cluster no Rancher."
+    }
+  },
+  {
+    "id": "BAN-DS-14-0002",
+    "numero": 47,
+    "versao": "v01",
+    "enunciado": "Um Analista prepara testes de aceitação para um serviço de agendamento de transferências. Para uma conta e uma data escolhida, a regra de negócio estabelece:\n\n– A solicitação é confirmada se, e somente se, a conta estiver ativa e a soma do total já agendado com o valor solicitado não ultrapassar R$ 1.000,00.\n– Na confirmação, a tela exibe a mensagem “Confirmado” e o total agendado passa a incluir o valor solicitado.\n– Na recusa, a tela exibe a mensagem “Recusado” e o total agendado permanece inalterado.\n\nApós responder à solicitação, a tela sempre apresenta o total agendado para a conta e a data escolhidas. Foram definidos os seguintes casos, com execuções independentes e sem operações concorrentes. Os valores estão em reais.\n\nCaso | Situação da conta | Total já agendado | Valor solicitado\nI    | Ativa             | 800,00            | 200,00\nII   | Ativa             | 800,00            | 201,00\nIII  | Inativa           | 800,00            | 100,00\n\nAs saídas a serem verificadas na tela em I, II e III, indicadas pelo par (mensagem; total agendado), são, respectivamente:",
+    "alternativas": {
+      "A": "(Recusado; 800,00), (Recusado; 800,00) e (Recusado; 800,00).",
+      "B": "(Confirmado; 1.000,00), (Confirmado; 1.001,00) e (Recusado; 800,00).",
+      "C": "(Confirmado; 1.000,00), (Recusado; 800,00) e (Confirmado; 900,00).",
+      "D": "(Confirmado; 1.000,00), (Recusado; 1.001,00) e (Recusado; 900,00).",
+      "E": "(Confirmado; 1.000,00), (Recusado; 800,00) e (Recusado; 800,00)."
+    }
+  },
+  {
+    "id": "BAN-DS-15-0002",
+    "numero": 48,
+    "versao": "v01",
+    "enunciado": "Uma instituição gera mensalmente um relatório de valores por agência a partir de arquivos de operações. O processamento exclui operações canceladas, converte valores em moeda estrangeira e agrupa os resultados por agência. As regras de conversão foram alteradas após a publicação do relatório de setembro. Ao investigar uma divergência nesse relatório, a equipe pretende reconstituir sua origem e as transformações então realizadas.\n\nPara atender a esse objetivo por meio da linhagem de dados, deve manter um registro que relacione o relatório de setembro",
+    "alternativas": {
+      "A": "aos lotes de entrada e ao fluxo atualmente configurado, utilizando as regras vigentes na data da investigação para descrever a conversão.",
+      "B": "ao dicionário dos campos e às estruturas dos arquivos, utilizando a compatibilidade dos tipos para identificar as etapas executadas na apuração.",
+      "C": "aos horários de início e término das cargas e ao seu estado de conclusão, utilizando essas informações para identificar a derivação dos totais.",
+      "D": "aos resultados das validações de consistência e às aprovações dos responsáveis, utilizando essas evidências para identificar os arquivos que deram origem aos totais.",
+      "E": "aos lotes efetivamente utilizados, encadeando as entradas e saídas de cada etapa e identificando as regras aplicadas na execução que gerou a publicação."
+    }
+  },
+  {
+    "id": "BAN-DS-16-0003",
+    "numero": 49,
+    "versao": "v01",
+    "enunciado": "Considere o texto abaixo.\n\nThe team planned to move report production to a new system on Monday. In a trial, the new system produced reports faster than the current one, but several totals did not match. The team postponed the move, although the faster reports would have helped with the monthly review. It will set a new date only after it has explained the differences. Until then, staff will continue to produce reports with the current system.\n\n(Texto autoral.)\n\nInfere-se do texto que",
+    "alternativas": {
+      "A": "a equipe pretende usar o sistema novo na revisão mensal para descobrir a origem das diferenças.",
+      "B": "o adiamento decorre da necessidade de tornar o sistema atual mais rápido que o sistema novo.",
+      "C": "a definição da nova data permitirá à equipe iniciar a análise dos totais que não coincidiram.",
+      "D": "a equipe considera a maior velocidade insuficiente para realizar a migração enquanto as diferenças não forem esclarecidas.",
+      "E": "a equipe concluiu que os totais do sistema atual estavam incorretos e decidiu substituir esses relatórios."
+    }
+  },
+  {
+    "id": "BAN-DS-16-0004",
+    "numero": 50,
+    "versao": "v01",
+    "enunciado": "Considere o texto abaixo.\n\nEvery night, an office makes backup copies of its project files. During a weekly check, an analyst tries to open several of the copies on a separate computer. She divides the tested copies into two groups: those that can be opened and those that cannot. The latter are recorded in a report before she replaces them with new copies. She keeps the report so that the support team can investigate why the check failed.\n\n(Texto autoral.)\n\nNo trecho “before she replaces them with new copies”, o pronome “them” refere-se especificamente",
+    "alternativas": {
+      "A": "aos arquivos dos projetos usados como origem para as cópias de segurança.",
+      "B": "a todas as cópias de segurança submetidas à verificação semanal.",
+      "C": "às cópias de segurança que não puderam ser abertas durante a verificação.",
+      "D": "às cópias de segurança que puderam ser abertas durante a verificação.",
+      "E": "às novas cópias de segurança utilizadas para substituir as anteriores."
+    }
+  }
+]

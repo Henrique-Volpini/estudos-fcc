@@ -1,0 +1,36 @@
+ID: BAN-DS-03-0010
+Versão: v01
+Matéria: Programação
+Tópico: C#: parâmetros de métodos
+
+ENUNCIADO
+Em C# 12 com .NET 8, considere o programa:
+
+using System;
+
+class Caixa {
+    public int Valor;
+}
+
+class Programa {
+    static void Ajustar(Caixa item, ref int taxa) {
+        item.Valor += taxa;
+        item = new Caixa { Valor = 100 };
+        taxa += 2;
+    }
+
+    static void Main() {
+        Caixa caixa = new Caixa { Valor = 10 };
+        int taxa = 3;
+        Ajustar(caixa, ref taxa);
+        Console.Write($"{caixa.Valor} {taxa}");
+    }
+}
+
+Os valores exibidos são
+
+A) 100 5
+B) 13 5
+C) 13 3
+D) 10 3
+E) 100 3

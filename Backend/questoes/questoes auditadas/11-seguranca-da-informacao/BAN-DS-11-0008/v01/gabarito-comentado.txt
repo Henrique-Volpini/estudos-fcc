@@ -1,0 +1,37 @@
+ID: BAN-DS-11-0008
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a conduta de recuperação compatível com a NIST SP 800-61 Rev. 3.
+Responsável pela elaboração: /root/s2_elab_11
+Dificuldade estimada: média
+
+RESOLUÇÃO
+O isolamento contém a propagação, mas não comprova a integridade da recuperação. A Rev. 3 permite iniciar procedimentos de recuperação durante ou depois dos processos de resposta, conforme RC.RP-01.R1; por isso o trabalho coordenado descrito é compatível com a fonte. RC.RP-03 recomenda verificar os ativos de restauração antes do uso. RC.RP-05 recomenda conferir os ativos restaurados e a adequação da restauração, remediando as causas-raiz antes da produção. A alternativa C reúne essas medidas. A elaboração utiliza o perfil de resposta e recuperação da Rev. 3, sem impor o ciclo de quatro fases da Rev. 2.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Ser anterior à detecção não comprova a integridade do backup: o comprometimento pode anteceder sua descoberta. RC.RP-03 determina a verificação dos ativos de restauração antes de usá-los, inclusive quanto a indicadores de comprometimento e corrupção.
+B) Não atende. O êxito operacional da cópia não substitui a verificação de integridade dos ativos restaurados. RC.RP-05 prevê conferir esses ativos e a adequação da restauração antes da produção.
+C) Atende. Reúne a verificação do backup antes de sua utilização, prevista em RC.RP-03, e a verificação dos ativos restaurados com remediação das causas-raiz antes da produção, prevista em RC.RP-05.
+D) Não atende. A vulnerabilidade explorada é uma causa a remediar antes do uso em produção. As verificações do backup e dos ativos não justificam recolocar em operação o sistema com o ponto de entrada preservado.
+E) Não atende. O isolamento é uma medida de contenção para limitar a expansão do incidente, conforme RS.MI-01; o silêncio de tráfego nesse estado não comprova integridade nem ausência de mecanismos persistentes nos dados ou sistemas restaurados.
+
+FONTES TÉCNICAS CONSULTADAS
+- NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (abril de 2025). https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf. Localizador e uso: Seção 3.2, tabela 3: RS.MI-01.N1/C1, p.32 impressa (p.40 do PDF), contenção e isolamento; RS.MI-02.N1, p.33 impressa (p.41 do PDF), persistência e pontos de entrada; RC.RP-01.R1, RC.RP-03.R1 e RC.RP-05.R1/R2, p.34 impressa (p.42 do PDF), recuperação durante/depois da resposta, integridade antes do uso e causas-raiz antes da produção. Paginação do PDF contada a partir de 1.
+- Conteúdo-base — Segurança da Informação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Bloco SEGURANÇA DA INFORMAÇÃO: gestão de incidentes conforme ABNT NBR ISO/IEC 27035-1:2023 e NIST SP 800-61 Rev. 3.
+- FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 39. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Questão 39, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+- Metadados do acervo de referências FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador e uso: Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 39; página impressa 9.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A questão 39 atribui expressamente a cobrança a uma publicação e propõe cinco alternativas do mesmo domínio técnico. A atribuição normativa foi aplicada à edição exata NIST SP 800-61 Rev. 3, com cenário autoral de recuperação e cinco condutas comparáveis; não se reproduziu o conteúdo da norma antiga do exemplo.
+- Limites da referência: Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultada diretamente a publicação final de abril de 2025, NIST SP 800-61r3, seção 3.2, tabela 3, com localizadores e páginas registrados, em 26/11/2026.
+- Analítica: distinguidas contenção, verificação do backup, verificação dos ativos restaurados e remediação antes da produção. Resolvidas as cinco alternativas; apenas uma reúne as medidas sem dispensar uma verificação necessária.
+- Editorial: lida a questão 39, página 9, na extração local de TRT4/2022. O exemplo usa outra norma e orienta somente a atribuição explícita e a redação de alternativas; sua resposta normativa não foi reaproveitada. Não houve simulação de ransomware, restauração executada nem inspeção de backup.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria; sem aprovação registrada pelo elaborador.

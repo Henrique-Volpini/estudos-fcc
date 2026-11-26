@@ -1,0 +1,27 @@
+ID: BAN-DS-09-0006
+Matéria: 09 — Redes de computadores
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/09-redes-de-computadores.txt
+Tópico do conteúdo: REDES DE COMPUTADORES: - padrões IEEE 802.1D, 802.1Q/p, 802.1D-2004, 802.1Q-2005, 802.1X, 802.3, 802.3u, 802.3z, 802.3ae e 802.3af;
+Objetivo da questão: Associar os papéis suplicante, autenticador e servidor de autenticação aos dispositivos e distinguir o cliente RADIUS.
+Tarefa de origem: SIM-002, questão global 37; plano.json e orientacoes-aos-elaboradores.txt da pasta de acompanhamento SIM-002.
+Responsável pela elaboração: /root/s2_elab_09
+Dificuldade estimada: fácil
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01: elaboração autoral concluída por /root/s2_elab_09, com fontes primárias navegadas, referência FCC local lida e conferência das cinco alternativas; encaminhada como PENDENTE_AUDITORIA.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0006 -> Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006
+ESTILO_FCC: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/parecer-redacao-e-conformidade.txt

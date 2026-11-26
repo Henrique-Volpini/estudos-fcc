@@ -1,0 +1,42 @@
+ID: BAN-DS-06-0005
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a atribuição correta das três responsabilidades, na ordem I, II e III.
+
+RESOLUÇÃO
+I envolve interação do usuário e coordenação da resposta: controlador. II é uma regra de negócio, independente de como as parcelas serão exibidas: modelo. III define a apresentação dos resultados: visão. A regra reutilizada por outras interfaces permanece no modelo; os detalhes visuais ficam na visão. A sequência é controlador, modelo e visão.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: a recepção da interação e a escolha da tela em I são do controlador, enquanto a regra de negócio em II pertence ao modelo; III está corretamente associada à visão.
+B) Não atende: I está bem associada ao controlador, mas II e III estão trocadas; a visão apresenta valores e o modelo contém a regra de cálculo.
+C) Não atende: II está bem associada ao modelo, mas I não é apresentação e III não é coordenação da requisição; cabem, respectivamente, ao controlador e à visão.
+D) Atende: o controlador coordena a solicitação e escolhe a tela; o modelo executa a regra das parcelas; a visão cuida da apresentação visual dos resultados.
+E) Não atende: desloca a coordenação de I para o modelo, a regra de II para a visão e a apresentação de III para o controlador, confundindo as três responsabilidades.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — Overview of ASP.NET Core MVC — documentação ASP.NET Core 10.0. https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0. Localizador: MVC pattern; Model Responsibilities; View Responsibilities; Controller Responsibilities. Consulta em 26/11/2026. Sustenta a separação entre regra de negócio, apresentação e coordenação.
+- Spring Framework — Annotated Controllers — documentação 7.1.0 exibida na consulta. https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller.html. Localizador: Annotated Controllers, parágrafos iniciais e exemplo HelloController: mapeamento da requisição, disponibilização de dados no Model e retorno do nome da visão. Consulta em 26/11/2026; ilustra o fluxo, sem equiparar o objeto Model do framework a todo o domínio.
+- Programa-base — Arquitetura de sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 50, página 11, na extração local com marcadores de página; uso editorial.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 33, página 8, na extração local com marcadores de página; uso editorial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 50; página 11.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Comando direto que associa uma responsabilidade técnica a um componente do MVC, seguido de cinco opções.
+  Aplicação nesta questão autoral: A questão autoral diferencia três responsabilidades em uma funcionalidade própria; não reproduz a pergunta sobre SQL da referência.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Cenário de uma atividade do Analista com correspondência solicitada pela expressão respectivamente e alternativas na mesma ordem.
+  Aplicação nesta questão autoral: O comando fixa a ordem I, II e III, e as cinco opções usam trincas de componentes com redação paralela.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: lidas as seções de responsabilidades no MVC da Microsoft e o exemplo de controlador do Spring. Analítica: conferidas as três responsabilidades e as cinco permutações; apenas uma preserva todas as associações. Não houve execução de aplicação. Editorial: lidas Q50/p.11 e Q33/p.8 do TRT4/2022 no acervo local. Independência: comparadas as quatro questões anteriores do elaborador 06 em SIM-002/questoes-anteriores.json; nenhuma cobrava MVC.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-03-0011",
+    "numero": 11,
+    "versao": "v01",
+    "enunciado": "Considere o programa em C11, sem entrada externa:\n\n#include <stdio.h>\n\nint main(void) {\n    int a = 0, b = 2, c = 4;\n    int r = a && ++b || b > 1 && ++c;\n    printf(\"%d %d %d\", b, c, r);\n    return 0;\n}\n\nA sequência exibida por printf é",
+    "alternativas": {
+      "A": "3 5 1",
+      "B": "2 4 0",
+      "C": "2 5 5",
+      "D": "3 4 1",
+      "E": "2 5 1"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0012",
+    "numero": 12,
+    "versao": "v01",
+    "enunciado": "Em PHP 8.2, considere:\n\n<?php\n$codigos = [12, \"12\", 24];\n$a = array_search(\"12\", $codigos);\n$b = array_search(\"12\", $codigos, true);\necho $a . \":\" . $b . \":\" . ($a !== false ? \"S\" : \"N\");\n\nO texto exibido é",
+    "alternativas": {
+      "A": "0:1:N",
+      "B": "1:1:S",
+      "C": "0:1:S",
+      "D": "0:0:S",
+      "E": "1:0:N"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0013",
+    "numero": 13,
+    "versao": "v01",
+    "enunciado": "Em uma aplicação C# com ADO.NET e o provedor Microsoft.Data.SqlClient, cmd é um SqlCommand recém-criado, associado a uma conexão aberta com SQL Server e com CommandType.Text. A tabela Cliente tem a coluna Nome do tipo nvarchar(80). A variável nome contém uma string não nula, com até 80 caracteres, que pode conter apóstrofos.\n\nUm Analista deve configurar cmd para obter os identificadores dos clientes cujo Nome seja igual ao conteúdo de nome, mantendo a entrada como dado separado do texto SQL. Considere SqlDbType disponível. Qual trecho atende a esses requisitos?",
+    "alternativas": {
+      "A": "cmd.CommandText = $\"SELECT Id FROM Cliente WHERE Nome = '{nome}'\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+      "B": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE Nome = '@nome'\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+      "C": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE @nome = @nome\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+      "D": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE Nome = @nome\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+      "E": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE Nome = @nome\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = \"@nome\";"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0014",
+    "numero": 14,
+    "versao": "v01",
+    "enunciado": "Uma equipe usa TDD para desenvolver uma regra de tarifas. Primeiro, escreve um teste para um comportamento ainda não implementado e verifica que ele falha pelo resultado esperado ainda não ser produzido. Depois, faz uma pequena alteração na implementação e confirma que o teste novo e todos os anteriores passam. Ao examinar o código, identifica uma duplicação que pretende remover no mesmo ciclo.\n\nA intervenção que corresponde à etapa refactor desse ciclo é",
+    "alternativas": {
+      "A": "implementar a próxima regra de tarifa e, depois de validá-la manualmente, escrever seu teste automatizado.",
+      "B": "remover a duplicação preservando o comportamento e executar novamente os testes para verificar que continuam passando.",
+      "C": "ampliar os resultados aceitos pelas asserções para que a implementação possa ser simplificada sem falhas na suíte.",
+      "D": "modificar a regra de tarifa para eliminar os casos especiais e ajustar os resultados esperados nos testes existentes.",
+      "E": "reescrever a implementação para atender às regras futuras e executar a suíte depois de concluir todas essas funcionalidades."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0007",
+    "numero": 15,
+    "versao": "v01",
+    "enunciado": "Em um modelo de contas, um cliente pode ser titular de várias contas, e uma conta pode ter vários titulares. Para cada par cliente-conta registra-se uma única data de início da titularidade, sem manter histórico de novos vínculos do mesmo par. Clientes distintos podem iniciar titularidades na mesma data, inclusive na mesma conta.\n\nNo mapeamento para o modelo relacional, foram definidas CLIENTE(id_cliente), CONTA(id_conta) e TITULARIDADE(id_cliente, id_conta, data_inicio). Os identificadores são as chaves primárias das duas primeiras tabelas. Em TITULARIDADE, id_cliente e id_conta são chaves estrangeiras para as respectivas tabelas.\n\nPara impedir a repetição de um par cliente-conta e permitir todas as titularidades admitidas, a chave primária de TITULARIDADE deve ser composta por",
+    "alternativas": {
+      "A": "id_cliente.",
+      "B": "id_conta.",
+      "C": "id_cliente e id_conta.",
+      "D": "data_inicio.",
+      "E": "id_cliente, id_conta e data_inicio."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0008",
+    "numero": 16,
+    "versao": "v01",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela limite possui id integer como chave primária e valor integer. Ela contém somente a linha (1, 100). Sem operações concorrentes, gatilhos ou erros, uma sessão executa:\n\nBEGIN;\nUPDATE limite SET valor = valor + 20 WHERE id = 1;\nSAVEPOINT ajuste;\nUPDATE limite SET valor = valor * 2 WHERE id = 1;\nROLLBACK TO SAVEPOINT ajuste;\nUPDATE limite SET valor = valor + 5 WHERE id = 1;\nROLLBACK TO SAVEPOINT ajuste;\nUPDATE limite SET valor = valor + 7 WHERE id = 1;\nCOMMIT;\nSELECT valor FROM limite WHERE id = 1;\n\nO valor retornado pelo SELECT é",
+    "alternativas": {
+      "A": "100.",
+      "B": "120.",
+      "C": "132.",
+      "D": "252.",
+      "E": "127."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0009",
+    "numero": 17,
+    "versao": "v01",
+    "enunciado": "No PostgreSQL 15, dono é proprietário da tabela public.relatorio. As roles ana e bruno não são proprietárias nem superusuárias, não pertencem a outras roles e, inicialmente, não possuem privilégios nessa tabela. PUBLIC também não possui privilégios nela. Ambas já dispõem das permissões de conexão e de uso do esquema necessárias ao acesso.\n\nSão executados, nesta ordem:\n\nPor dono:\nGRANT SELECT ON TABLE public.relatorio TO ana WITH GRANT OPTION;\n\nPor ana:\nGRANT SELECT ON TABLE public.relatorio TO bruno;\n\nPor dono:\nREVOKE GRANT OPTION FOR SELECT ON TABLE public.relatorio\nFROM ana CASCADE;\n\nNão há outras concessões ou alterações de privilégios. Após essa sequência, quanto ao privilégio SELECT na tabela,",
+    "alternativas": {
+      "A": "ana o mantém, e bruno o perde.",
+      "B": "ana e bruno o mantêm.",
+      "C": "ana o perde, e bruno o mantém.",
+      "D": "ana e bruno o perdem.",
+      "E": "o último comando é rejeitado porque ana já o concedeu a bruno."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0010",
+    "numero": 18,
+    "versao": "v01",
+    "enunciado": "Em um banco Oracle Database 19c, o script abaixo foi executado com sucesso:\n\nCREATE TABLE contato (\n    id NUMBER PRIMARY KEY,\n    apelido VARCHAR2(20)\n);\nINSERT INTO contato VALUES (1, NULL);\nINSERT INTO contato VALUES (2, '');\nINSERT INTO contato VALUES (3, '0');\nINSERT INTO contato VALUES (4, 'Ana');\nCOMMIT;\n\nSem outras alterações nos dados, executa-se:\n\nSELECT id\nFROM contato\nWHERE apelido IS NULL OR apelido = NULL\nORDER BY id;\n\nOs identificadores retornados são",
+    "alternativas": {
+      "A": "somente 1.",
+      "B": "somente 1, 2 e 3.",
+      "C": "1, 2, 3 e 4.",
+      "D": "somente 1 e 2.",
+      "E": "nenhum."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0011",
+    "numero": 19,
+    "versao": "v01",
+    "enunciado": "Uma instituição deseja analisar o valor pago por data, agência e canal de atendimento. O modelo dimensional deve preservar cada pagamento individualmente, inclusive quando dois pagamentos têm a mesma data, agência e canal. Cada pagamento possui um identificador próprio na origem, um único valor e exatamente uma data, uma agência e um canal.\n\nAs dimensões Data, Agência e Canal deverão ter, respectivamente, uma linha por data, por agência e por canal. Pagamentos do mesmo canal podem ter valores diferentes. Foi definido que a tabela fato terá o grão de um pagamento processado. Para implementar esse requisito em um esquema estrela, a proposta adequada é manter na tabela fato",
+    "alternativas": {
+      "A": "uma linha por pagamento, com as três chaves de dimensão, e armazenar o valor de cada pagamento como atributo da dimensão Canal.",
+      "B": "uma linha por pagamento, com valor_pago e chaves estrangeiras para as dimensões Data, Agência e Canal.",
+      "C": "uma linha por combinação de data, agência e canal, com a soma de valor_pago e chaves estrangeiras para as três dimensões.",
+      "D": "uma linha por pagamento, com valor_pago e as descrições de data, agência e canal em uma única tabela, sem tabelas de dimensões.",
+      "E": "linhas de pagamentos e linhas de totais mensais de agência, com valor_pago e chaves estrangeiras para as três dimensões."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0012",
+    "numero": 20,
+    "versao": "v01",
+    "enunciado": "No PostgreSQL 15, a tabela parametro possui as colunas chave text e valor integer, sem restrição de unicidade, e contém somente:\n\nchave | valor\nX     | 7\nX     | 7\nY     | NULL\n\nFoi criada a função:\n\nCREATE FUNCTION obter_valor(p_chave text)\nRETURNS integer\nLANGUAGE plpgsql\nAS $$\nDECLARE\n    v_valor integer;\nBEGIN\n    SELECT p.valor INTO STRICT v_valor\n    FROM parametro AS p\n    WHERE p.chave = p_chave;\n    RETURN v_valor;\nEND;\n$$;\n\nSão realizadas três chamadas independentes, cada uma em sua própria transação, sem alterações concorrentes: obter_valor('Z'), obter_valor('Y') e obter_valor('X').\n\nOs resultados ou exceções dessas chamadas são, respectivamente,",
+    "alternativas": {
+      "A": "NULL, NULL e 7.",
+      "B": "NO_DATA_FOUND, NO_DATA_FOUND e TOO_MANY_ROWS.",
+      "C": "NO_DATA_FOUND, NULL e TOO_MANY_ROWS.",
+      "D": "NO_DATA_FOUND, NULL e 7.",
+      "E": "NULL, NULL e TOO_MANY_ROWS."
+    }
+  }
+]

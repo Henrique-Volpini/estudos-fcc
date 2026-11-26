@@ -1,0 +1,20 @@
+ID: BAN-DS-03-0013
+Versão: v01
+Matéria: Programação
+Tópico: Acesso a dados com ADO.NET
+
+ENUNCIADO
+Em uma aplicação C# com ADO.NET e o provedor Microsoft.Data.SqlClient, cmd é um SqlCommand recém-criado, associado a uma conexão aberta com SQL Server e com CommandType.Text. A tabela Cliente tem a coluna Nome do tipo nvarchar(80). A variável nome contém uma string não nula, com até 80 caracteres, que pode conter apóstrofos.
+
+Um Analista deve configurar cmd para obter os identificadores dos clientes cujo Nome seja igual ao conteúdo de nome, mantendo a entrada como dado separado do texto SQL. Considere SqlDbType disponível. Qual trecho atende a esses requisitos?
+
+A) cmd.CommandText = $"SELECT Id FROM Cliente WHERE Nome = '{nome}'";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+B) cmd.CommandText = "SELECT Id FROM Cliente WHERE Nome = '@nome'";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+C) cmd.CommandText = "SELECT Id FROM Cliente WHERE @nome = @nome";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+D) cmd.CommandText = "SELECT Id FROM Cliente WHERE Nome = @nome";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+E) cmd.CommandText = "SELECT Id FROM Cliente WHERE Nome = @nome";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = "@nome";

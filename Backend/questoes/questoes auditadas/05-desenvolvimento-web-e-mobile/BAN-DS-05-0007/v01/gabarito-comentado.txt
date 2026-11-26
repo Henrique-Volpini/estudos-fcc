@@ -1,0 +1,34 @@
+ID: BAN-DS-05-0007
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Identificar os tipos de r nos pontos I e II, respectivamente.
+
+RESOLUÇÃO
+Resposta é uma união discriminada por estado, cujos valores literais são distintos. A condição verdadeira restringe r a Falha, permitindo o acesso a mensagem no ponto I. Esse ramo encerra a função com return. Para alcançar o ponto II, a condição deve ter sido falsa, eliminando Falha e restringindo r a Sucesso. Assim, valor é number e a chamada toFixed é compatível com o retorno string.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende: a comparação seleciona Falha no ponto I, e seu retorno deixa somente Sucesso no ponto II.
+B) Não atende: no ponto I a união já foi reduzida a Falha pela propriedade discriminante estado.
+C) Não atende: o retorno do ramo de erro impede que Falha alcance o ponto II; ali resta Sucesso.
+D) Não atende: os tipos foram invertidos; estado igual a erro seleciona Falha, não Sucesso.
+E) Não atende: I tem tipo Falha; II é alcançável por Sucesso, portanto não tem tipo never.
+
+FONTES TÉCNICAS CONSULTADAS
+- TypeScript Handbook — Narrowing — documentação oficial
+  URL: https://www.typescriptlang.org/docs/handbook/2/narrowing.html
+  Localizador e fundamentação: Seções Control flow analysis e Discriminated unions: discriminação por literal e exclusão de ramo que retornou. Consultada em 26/11/2026; recorte aplicado ao TypeScript 5.9.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 42; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Questão de TypeScript sobre tipo união, com comando conciso e opções técnicas comparáveis.
+  Aplicação nesta questão autoral: Código autoral completo para o recorte, seguido de cinco pares de tipos em ordem definida.
+  Limites da referência: A cópia não foi obtida da FCC nem do órgão. O registro de hash local não constitui assinatura oficial. O exemplo real cobra sintaxe de declaração; esta questão cobra narrowing e retorno antecipado. A referência não comprova o comportamento do compilador. O exemplo sustenta apenas as características descritas, sem demonstrar frequência na banca.
+
+VERIFICAÇÕES REALIZADAS
+Verificação documental das uniões discriminadas e da análise de alcançabilidade; rastreamento manual dos dois caminhos e das cinco opções. Não houve compilação ou execução do código.
+Comparação de independência temática com BAN-DS-05-0001 a BAN-DS-05-0005 em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json: os novos objetivos são diferentes de idempotência, ordem assíncrona, foco acessível, parâmetros OpenAPI e validade XSD cobrados anteriormente.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Questão aguardando auditoria independente; não há parecer ou aprovação emitido pelo elaborador.

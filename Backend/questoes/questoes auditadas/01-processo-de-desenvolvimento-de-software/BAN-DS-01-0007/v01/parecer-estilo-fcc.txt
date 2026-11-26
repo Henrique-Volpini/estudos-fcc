@@ -1,0 +1,60 @@
+Simulado: SIM-002
+Questão: BAN-DS-01-0007
+Versão examinada: v01
+Responsável: /root/s2_auditor_estilo
+Perfil: ESTILO_FCC
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras gerais vigentes lidas.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo lido.
+- Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt — perfil lido.
+- Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007/controle.txt — ID, versão completa e autoria conferidos; sem alteração.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/publico-01-10.json — v01, enunciado e alternativas deste ID integralmente lidos.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/estilo-01-10.json — v01, referências indicadas pelo elaborador, acessadas após a primeira leitura.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json — registro inicial deste ID anterior às referências.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/manifesto.json — pacote final v01, identificação, caminhos e hashMetodo.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/analises-estilo.json — análise individual deste ID pelo presente auditor.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/referencias-estilo-verificadas.json — registro da leitura atual dos exemplos.
+- Backend/Agents/conteudo/referencias-fcc/fontes.json — origem e hashes locais das provas.
+- Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007/v01/questao.txt e Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007/v01/gabarito-comentado.txt — v01; leitura mecânica exclusiva para hash normalizado, sem consulta semântica do gabarito.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt — exemplo 33, página 8.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt — exemplo 52, página 12.
+
+PRIMEIRA LEITURA SEM GABARITO
+Três atividades numeradas e pedido de associação respectivamente; alternativas são permutações de três níveis. Distinção entre componente, interfaces e aplicação aparece no objeto de cada atividade. Forma classificatória econômica e consistente; conferir referência de proposições/associações.
+Registro prévio: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json. O corpo público foi lido antes das referências do elaborador; nenhuma letra-resposta ou resolução foi utilizada nesta análise de estilo.
+
+CRITÉRIOS EXAMINADOS
+- Leitura independente e identificação da versão: atendido. Registro inicial por ID anterior à consulta de estilo; ID, autoria e versão v01 conferidos no controle e no manifesto. Campos internos não foram tratados como conteúdo exibido ao candidato.
+- Identidade e origem das referências, com leitura dos exemplos reais: atendido. Os exemplos relacionados abaixo foram efetivamente lidos nas extrações ou no HTML com imagem associada; origem oficial do órgão foi distinguida de cópia secundária. A mera lista do elaborador não fundamentou a decisão.
+- Comando, apresentação do cenário, estrutura e organização das alternativas: atendido. T33 solicita duas anotações respectivamente; T52 fixa três posições de resposta por lacunas identificadas. Aqui três atividades I–III recebem três classificações na ordem declarada. Os cinco conjuntos mantêm vocabulário e posição constantes, preservando a operação editorial de correspondência.
+- Vocabulário, coerência da aplicação e autoria editorial: atendido. As descrições tratam de objetos e objetivos de teste em situação própria. A substituição de lacunas por atividades explícitas não rompe o comando de associação; não se exige que todo item numerado seja julgado por APENAS.
+- Formato pertinente ao tipo de questão e competência comparada: atendido. I, II e III são objetos a classificar, não afirmações submetidas a subconjuntos. Trincas separadas por ponto e vírgula são legíveis e homogêneas.
+- Amostra suficiente para os traços afirmados, sem impor regra universal: atendido. As referências sustentam apenas as características concretas descritas. Não se deduzem quota de formato, extensão obrigatória, dificuldade, incidência temática ou equivalência estatística. As diferenças e limitações estão explicitadas, inclusive quando a amostra apoia a competência sem documentar o subtipo exato.
+
+ACHADOS
+Nenhum achado impeditivo no escopo ESTILO_FCC.
+
+REFERÊNCIAS DE ESTILO
+T33: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno A14, Tipo 001; questão 33; página 8.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado: Tarefa de Analista na documentação de API, duas anotações solicitadas respectivamente e cinco pares paralelos.
+Limites: Cópia secundária do Qconcursos, conforme fontes.json. Identificação lida na capa; páginas referem-se aos marcadores da extração e à numeração exibida no texto. Coincidência de hash local não autentica origem nem integridade oficial. Amostra pontual de 2022, sem inferência de frequência, dificuldade calibrada ou correção técnica atual.
+
+T52: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno A14, Tipo 001; questão 52; página 12.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado: Metadados de terminal Linux em bloco e três lacunas com trincas ordenadas nas alternativas.
+Limites: Cópia secundária do Qconcursos, conforme fontes.json. Identificação lida na capa; páginas referem-se aos marcadores da extração e à numeração exibida no texto. Coincidência de hash local não autentica origem nem integridade oficial. Amostra pontual de 2022, sem inferência de frequência, dificuldade calibrada ou correção técnica atual.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil ESTILO_FCC. Não houve certificação técnica de conceitos, normas, cálculos, código ou resposta. As limitações de procedência e representatividade descritas não foram convertidas em alegação de padrão universal.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA exclusivamente no perfil ESTILO_FCC: a comparação individual do comando, cenário, estrutura, vocabulário, alternativas e formato com os exemplos reais identificados não encontrou defeito editorial impeditivo. T33 solicita duas anotações respectivamente; T52 fixa três posições de resposta por lacunas identificadas. Aqui três atividades I–III recebem três classificações na ordem declarada. Os cinco conjuntos mantêm vocabulário e posição constantes, preservando a operação editorial de correspondência.
+A decisão vale para os textos v01 identificados pelo hash normalizado do manifesto, conferido nesta emissão. Não representa parecer de outro perfil nem validação técnica do gabarito.

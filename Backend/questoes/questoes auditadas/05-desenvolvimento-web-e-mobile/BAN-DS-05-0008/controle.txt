@@ -1,0 +1,28 @@
+ID: BAN-DS-05-0008
+Matéria: 05 - Desenvolvimento de aplicações web e mobile
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/05-desenvolvimento-web-e-mobile.txt
+Tópico do conteúdo: - frameworks JavaScript (React, React Native, Angular, Vue.js ou equivalentes) e ambiente de execução Node.js;
+Recorte do plano: React: chaves estaveis e identidade de itens de uma lista
+Objetivo da questão: Relacionar chaves de uma lista ao estado local preservado e selecionar uma chave estável para reordenações.
+Tarefa de origem: SIM-002; questão global 23, reservada em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/plano.json
+Responsável pela elaboração: /root/s2_elab_05
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, elaboração autoral concluída por /root/s2_elab_05, conforme tópico reservado do SIM-002; fontes técnicas navegadas e exemplos FCC lidos. Estado PENDENTE_AUDITORIA, sem parecer ou aprovação do elaborador.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008 -> Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008
+ESTILO_FCC: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/parecer-redacao-e-conformidade.txt

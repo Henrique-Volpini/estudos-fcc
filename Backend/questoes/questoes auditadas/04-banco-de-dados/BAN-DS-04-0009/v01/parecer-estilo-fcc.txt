@@ -1,0 +1,60 @@
+Simulado: SIM-002
+Questão: BAN-DS-04-0009
+Versão examinada: v01
+Responsável: /root/s2_auditor_estilo
+Perfil: ESTILO_FCC
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras gerais vigentes lidas.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo lido.
+- Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt — perfil lido.
+- Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0009/controle.txt — ID, versão completa e autoria conferidos; sem alteração.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/publico-11-20.json — v01, enunciado e alternativas deste ID integralmente lidos.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/estilo-11-20.json — v01, referências indicadas pelo elaborador, acessadas após a primeira leitura.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json — registro inicial deste ID anterior às referências.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/manifesto.json — pacote final v01, identificação, caminhos e hashMetodo.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/analises-estilo.json — análise individual deste ID pelo presente auditor.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/referencias-estilo-verificadas.json — registro da leitura atual dos exemplos.
+- Backend/Agents/conteudo/referencias-fcc/fontes.json — origem e hashes locais das provas.
+- Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0009/v01/questao.txt e Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0009/v01/gabarito-comentado.txt — v01; leitura mecânica exclusiva para hash normalizado, sem consulta semântica do gabarito.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt — exemplo 41, página 10.
+- Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt — exemplo 49, página 8.
+
+PRIMEIRA LEITURA SEM GABARITO
+Cenário de roles e comandos organizado por executor e ordem, com permissões de base explicitadas. As opções exprimem consequências sobre os mesmos sujeitos. Não há necessidade formal de diagrama; verificar referência de comandos SQL.
+Registro prévio: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json. O corpo público foi lido antes das referências do elaborador; nenhuma letra-resposta ou resolução foi utilizada nesta análise de estilo.
+
+CRITÉRIOS EXAMINADOS
+- Leitura independente e identificação da versão: atendido. Registro inicial por ID anterior à consulta de estilo; ID, autoria e versão v01 conferidos no controle e no manifesto. Campos internos não foram tratados como conteúdo exibido ao candidato.
+- Identidade e origem das referências, com leitura dos exemplos reais: atendido. Os exemplos relacionados abaixo foram efetivamente lidos nas extrações ou no HTML com imagem associada; origem oficial do órgão foi distinguida de cópia secundária. A mera lista do elaborador não fundamentou a decisão.
+- Comando, apresentação do cenário, estrutura e organização das alternativas: atendido. T41 situa revogação em PostgreSQL e oferece comandos; F49 associa concessão/revogação a termos SQL. O item autoral usa uma sequência explicitamente atribuída a atores e oferece efeitos sobre duas roles. A passagem de identificação de comando para consequência conserva o recorte administrativo e as opções comparáveis.
+- Vocabulário, coerência da aplicação e autoria editorial: atendido. Pré-condições e ordem dos emissores evitam depender de cenário omitido. Todas as opções se referem ao privilégio SELECT no mesmo objeto, sem copiar as frases dos exemplos.
+- Formato pertinente ao tipo de questão e competência comparada: atendido. Comandos SQL por executor, seguidos de consequências declarativas; nomes dos sujeitos constantes. Sem certificação de privilégios pelo auditor.
+- Amostra suficiente para os traços afirmados, sem impor regra universal: atendido. As referências sustentam apenas as características concretas descritas. Não se deduzem quota de formato, extensão obrigatória, dificuldade, incidência temática ou equivalência estatística. As diferenças e limitações estão explicitadas, inclusive quando a amostra apoia a competência sem documentar o subtipo exato.
+
+ACHADOS
+Nenhum achado impeditivo no escopo ESTILO_FCC.
+
+REFERÊNCIAS DE ESTILO
+T41: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno A14, Tipo 001; questão 41; página 10.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado: Tarefa de revogação em PostgreSQL e cinco comandos SQL candidatos.
+Limites: Cópia secundária do Qconcursos, conforme fontes.json. Identificação lida na capa; páginas referem-se aos marcadores da extração e à numeração exibida no texto. Coincidência de hash local não autentica origem nem integridade oficial. Amostra pontual de 2022, sem inferência de frequência, dificuldade calibrada ou correção técnica atual.
+
+F49: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007; caderno MODELO, Cargo I, Tipo 001; questão 49; página 8.
+Origem verificável: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt
+Traço observado: Concessão e retirada de privilégios SQL pedidas respectivamente, com cinco pares de declarações.
+Limites: Disponibilização no próprio órgão registrada em fontes.json; capa da extração identifica FCC, órgão, cargo, março de 2007 e caderno. Hash local coincide com o registro. Exemplo histórico, sem generalização para frequência atual, dificuldade ou validação técnica.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil ESTILO_FCC. Não houve certificação técnica de conceitos, normas, cálculos, código ou resposta. As limitações de procedência e representatividade descritas não foram convertidas em alegação de padrão universal.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA exclusivamente no perfil ESTILO_FCC: a comparação individual do comando, cenário, estrutura, vocabulário, alternativas e formato com os exemplos reais identificados não encontrou defeito editorial impeditivo. T41 situa revogação em PostgreSQL e oferece comandos; F49 associa concessão/revogação a termos SQL. O item autoral usa uma sequência explicitamente atribuída a atores e oferece efeitos sobre duas roles. A passagem de identificação de comando para consequência conserva o recorte administrativo e as opções comparáveis.
+A decisão vale para os textos v01 identificados pelo hash normalizado do manifesto, conferido nesta emissão. Não representa parecer de outro perfil nem validação técnica do gabarito.

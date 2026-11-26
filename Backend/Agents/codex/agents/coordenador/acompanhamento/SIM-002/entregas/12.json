@@ -1,0 +1,185 @@
+{
+    "elaborador":  "12",
+    "responsavel":  "/root/s2_elab_12",
+    "questoes":  [
+                     {
+                         "id":  "BAN-DS-12-0003",
+                         "numero":  44,
+                         "materia":  "Computação em nuvem",
+                         "topico":  "Nuvem hibrida e multicloud em cenario explicito",
+                         "versao":  "v01",
+                         "enunciado":  "Em um cenário fictício, uma instituição utiliza uma nuvem privada, destinada exclusivamente à organização e instalada no centro de dados de uma empresa contratada. Ela está integrada à nuvem pública do provedor P por tecnologia que permite a portabilidade de dados e aplicações, preservando a identidade de cada nuvem. A instituição também utiliza a nuvem pública do provedor Q, empresa distinta de P, para executar outra aplicação. Cada aplicação usa apenas um dos dois provedores públicos.\n\nQuanto à implantação e à diversidade de provedores, o ambiente descrito",
+                         "alternativas":  {
+                                              "A":  "é híbrido, mas não multicloud, pois a integração tecnológica transforma as nuvens envolvidas em um único provedor.",
+                                              "B":  "é multicloud, mas não híbrido, pois a nuvem privada está instalada fora das dependências da instituição.",
+                                              "C":  "é híbrido e multicloud, pois há integração entre nuvens privada e pública e utilização de dois provedores públicos distintos.",
+                                              "D":  "é multicloud, mas não híbrido, pois a preservação da identidade de cada nuvem impede que elas componham uma nuvem híbrida.",
+                                              "E":  "é híbrido, mas não multicloud, pois cada aplicação utiliza apenas um dos dois provedores públicos."
+                                          },
+                         "gabarito":  "C",
+                         "justificativas":  {
+                                                "A":  "Não atende. A integração permite portabilidade entre infraestruturas, mas não torna P e Q uma única empresa. A utilização dos dois provedores públicos caracteriza multicloud.",
+                                                "B":  "Não atende. A localização externa não descaracteriza a nuvem privada: o NIST admite sua instalação dentro ou fora das dependências da organização. A integração declarada entre a nuvem privada e a pública caracteriza a composição híbrida.",
+                                                "C":  "Atende. A nuvem privada e a pública de P continuam distintas e integradas com portabilidade, caracterizando nuvem híbrida. O uso de serviços dos provedores públicos P e Q caracteriza também multicloud.",
+                                                "D":  "Não atende. A preservação das identidades é compatível com a definição de nuvem híbrida do NIST. Ela não desfaz a composição integrada expressamente descrita.",
+                                                "E":  "Não atende. Multicloud considera o uso de mais de um provedor pela organização; não exige que cada aplicação seja executada nos dois. A distribuição de aplicações distintas entre P e Q satisfaz esse critério."
+                                            },
+                         "resolucao":  "A classificação exige observar dois aspectos do cenário. No aspecto da implantação, a nuvem privada e a nuvem pública de P permanecem infraestruturas distintas, ligadas por tecnologia que permite portabilidade: há composição híbrida. A nuvem privada pode estar no centro de dados de uma contratada; seu uso exclusivo é compatível com a definição do NIST. No aspecto dos provedores, a organização utiliza serviços públicos de P e de Q, empresas distintas: adota multicloud. As classificações podem coexistir. A execução de aplicações diferentes em P e Q não exige replicar uma mesma aplicação entre eles. Portanto, somente a alternativa C reconhece os dois aspectos sem impor condição inexistente.",
+                         "fontes":  [
+                                        {
+                                            "titulo":  "Conteúdo programático — Computação em Nuvem",
+                                            "arquivo":  "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+                                            "localizador":  "Linhas 191–199; observação de legislação nas linhas 213–217. Delimitação de escopo; a questão não cobra legislação."
+                                        },
+                                        {
+                                            "titulo":  "NIST SP 800-145 — The NIST Definition of Cloud Computing (página oficial da publicação)",
+                                            "url":  "https://csrc.nist.gov/pubs/sp/800/145/final",
+                                            "localizador":  "Identificação NIST SP 800-145; publicação em setembro de 2011; autores Peter Mell e Tim Grance. Consultada por navegação em 26/11/2026 para confirmar edição e autoria; as definições foram lidas nas entradas oficiais abaixo."
+                                        },
+                                        {
+                                            "titulo":  "NIST CSRC Glossary — Hybrid cloud",
+                                            "url":  "https://csrc.nist.gov/glossary/term/hybrid_cloud",
+                                            "localizador":  "Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026. Sustenta composição de infraestruturas distintas com identidade preservada e tecnologia que permite portabilidade."
+                                        },
+                                        {
+                                            "titulo":  "NIST CSRC Glossary — Private cloud",
+                                            "url":  "https://csrc.nist.gov/glossary/term/private_cloud",
+                                            "localizador":  "Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026. Sustenta uso exclusivo por uma organização e possibilidade de instalação dentro ou fora de suas dependências."
+                                        },
+                                        {
+                                            "titulo":  "NIST CSRC Glossary — Public cloud",
+                                            "url":  "https://csrc.nist.gov/glossary/term/public_cloud",
+                                            "localizador":  "Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026 como conferência do modelo público indicado no cenário."
+                                        },
+                                        {
+                                            "titulo":  "Google Cloud — What is multicloud?",
+                                            "url":  "https://cloud.google.com/learn/what-is-multicloud",
+                                            "localizador":  "Seções Multicloud definition e Multicloud versus hybrid cloud. Página informa atualização em 09/10/2026; consultada por navegação em 26/11/2026. Sustenta o uso de mais de um provedor público por uma organização, inclusive para cargas diferentes, e a coexistência com ambientes privados."
+                                        },
+                                        {
+                                            "titulo":  "FCC — TRT da 4ª Região, Analista Judiciário, TI, 2022 — referência editorial",
+                                            "url":  "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+                                            "arquivo":  "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+                                            "localizador":  "Caderno A14, Tipo 001; questão 48, página 11, e questão 59, página 14. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia do PDF hospedada no Qconcursos; não é apresentada como download da FCC nem como prova de integridade oficial."
+                                        }
+                                    ],
+                         "autor":  "/root/s2_elab_12",
+                         "dificuldadeEstimada":  "média",
+                         "verificacoes":  [
+                                              "Documental: leitura do perfil 12, das regras e do modelo; cotejo do recorte com o conteúdo programático e com as questões BAN-DS-12-0001 e BAN-DS-12-0002 do primeiro simulado. O novo objetivo não repete modelos de serviço ou elasticidade.",
+                                              "Documental: navegação efetiva nas fontes primárias NIST e Google Cloud registradas; leitura das questões FCC identificadas na extração do acervo e dos metadados de origem.",
+                                              "Analítica: aplicação separada dos critérios de composição híbrida e diversidade de provedores; conferência das cinco alternativas e da unicidade da resposta nas condições expressas.",
+                                              "Conferência de entrega: renderização dos TXT a partir dos mesmos dados do JSON e releitura dos arquivos para verificar identidade de conteúdo, ID, versão e codificação UTF-8. Não houve execução de infraestrutura de nuvem."
+                                          ],
+                         "referenciasEstilo":  [
+                                                   {
+                                                       "orgao":  "Tribunal Regional do Trabalho da 4ª Região",
+                                                       "cargo":  "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+                                                       "ano":  2022,
+                                                       "caderno":  "A14, Tipo 001",
+                                                       "questao":  48,
+                                                       "pagina":  11,
+                                                       "origem":  "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de integridade oficial.",
+                                                       "caracteristicaAplicada":  "A questão real apresenta condições técnicas e pede identificar o conceito correspondente. A autoral apresenta condições completas de implantação e uso de provedores e exige identificar os conceitos aplicáveis.",
+                                                       "limites":  "Referência de construção editorial; tema e alternativas autorais. Não comprova correção técnica atual nem frequência desse formato na FCC."
+                                                   },
+                                                   {
+                                                       "orgao":  "Tribunal Regional do Trabalho da 4ª Região",
+                                                       "cargo":  "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+                                                       "ano":  2022,
+                                                       "caderno":  "A14, Tipo 001",
+                                                       "questao":  59,
+                                                       "pagina":  14,
+                                                       "origem":  "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou integridade oficial.",
+                                                       "caracteristicaAplicada":  "A questão real exige relacionar dois conceitos em alternativas comparáveis. A autoral mantém o mesmo comando para as cinco opções, que relacionam composição híbrida e diversidade de provedores com uma justificativa concreta.",
+                                                       "limites":  "Referência de formato em TI; não transplanta afirmações sobre COBIT para nuvem nem generaliza um exemplo como regra da banca."
+                                                   }
+                                               ]
+                     },
+                     {
+                         "id":  "BAN-DS-12-0004",
+                         "numero":  45,
+                         "materia":  "Computação em nuvem",
+                         "topico":  "Governanca e controle de custos em nuvem: atribuicao e acompanhamento",
+                         "versao":  "v01",
+                         "enunciado":  "Em um cenário fictício de governança de custos em nuvem, uma instituição identificou os custos diretos mensais por meio de metadados válidos de equipe. Os valores apurados e os orçamentos mensais são:\n\nEquipe   | Custos diretos | Orçamento\nCartões  | R$ 18.000,00   | R$ 21.000,00\nCrédito  | R$ 12.000,00   | R$ 15.000,00\n\nHá também um custo compartilhado de R$ 6.000,00, ainda não incluído nos custos diretos. A política interna aprovada determina que ele seja integralmente rateado entre as duas equipes na proporção dos respectivos custos diretos. O acompanhamento deve somar a parcela rateada ao custo direto de cada equipe e sinalizar quando esse total ultrapassar seu orçamento. Os orçamentos já contemplam custos compartilhados. Todos os valores são finais para o mês, sem outros custos ou ajustes.\n\nAplicando essa política, os custos totais atribuídos a Cartões e a Crédito e o resultado do acompanhamento são, respectivamente,",
+                         "alternativas":  {
+                                              "A":  "R$ 21.000,00 e R$ 15.000,00; nenhum desvio por equipe deve ser sinalizado.",
+                                              "B":  "R$ 21.600,00 e R$ 14.400,00; nenhum desvio por equipe deve ser sinalizado.",
+                                              "C":  "R$ 18.000,00 e R$ 12.000,00; nenhum desvio por equipe deve ser sinalizado.",
+                                              "D":  "R$ 24.000,00 e R$ 12.000,00; deve ser sinalizado excesso de R$ 3.000,00 em Cartões.",
+                                              "E":  "R$ 21.600,00 e R$ 14.400,00; deve ser sinalizado excesso de R$ 600,00 em Cartões."
+                                          },
+                         "gabarito":  "E",
+                         "justificativas":  {
+                                                "A":  "Não atende. Esses totais resultam de dividir o custo compartilhado em partes iguais de R$ 3.000,00. A política exige proporção dos custos diretos, que são diferentes: 60% para Cartões e 40% para Crédito.",
+                                                "B":  "Não atende. Os totais atribuídos estão certos, mas Cartões supera seu orçamento em R$ 600,00. A igualdade entre o custo global de R$ 36.000,00 e a soma dos orçamentos não elimina o excesso individual que a política manda sinalizar.",
+                                                "C":  "Não atende. Os valores reproduzem apenas os custos diretos e deixam os R$ 6.000,00 compartilhados fora da atribuição. A política exige ratear integralmente esse custo e incluí-lo na comparação por equipe.",
+                                                "D":  "Não atende. O excesso de R$ 3.000,00 decorre de lançar todo o custo compartilhado em Cartões. Pela proporção aprovada, Crédito deve receber R$ 2.400,00 e Cartões, R$ 3.600,00; portanto, esse lançamento não atende ao critério.",
+                                                "E":  "Atende. As parcelas são R$ 3.600,00 para Cartões e R$ 2.400,00 para Crédito. Somadas aos custos diretos, produzem R$ 21.600,00 e R$ 14.400,00. Apenas Cartões ultrapassa seu orçamento, em R$ 600,00."
+                                            },
+                         "resolucao":  "A base de rateio é R$ 18.000,00 + R$ 12.000,00 = R$ 30.000,00. Cartões representa 18.000/30.000 = 60% e recebe 60% de R$ 6.000,00 = R$ 3.600,00. Crédito representa 40% e recebe R$ 2.400,00. Os custos totais atribuídos são, assim, R$ 21.600,00 para Cartões e R$ 14.400,00 para Crédito. Comparando cada total com seu orçamento, Cartões excede R$ 21.000,00 em R$ 600,00; Crédito permanece R$ 600,00 abaixo de R$ 15.000,00. A compensação global não dispensa o sinal de excesso por equipe exigido na política. A alternativa E atende aos dois resultados. O critério proporcional é uma decisão interna expressa no cenário, não uma regra universal de cobrança de provedores.",
+                         "fontes":  [
+                                        {
+                                            "titulo":  "Conteúdo programático — Computação em Nuvem",
+                                            "arquivo":  "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+                                            "localizador":  "Linhas 191–199; observação de legislação nas linhas 213–217. Delimitação de escopo; a questão não cobra legislação."
+                                        },
+                                        {
+                                            "titulo":  "FinOps Foundation — FinOps Framework Capability: Allocation",
+                                            "url":  "https://framework.finops.org/framework/capabilities/allocation/",
+                                            "localizador":  "Definition, itens 1–3 (allocation, tagging/metadata e shared cost strategies), em especial as possibilidades de rateio proporcional e por outros critérios; Functional Activities e Measures of Success \u0026 KPIs. Consultada por navegação em 26/11/2026. Fundamenta metadados para atribuição e política explícita para custos compartilhados; os valores e a política específica da questão são fictícios e autorais."
+                                        },
+                                        {
+                                            "titulo":  "FinOps Foundation — FinOps Framework Capability: Budgeting",
+                                            "url":  "https://www.finops.org/framework/capabilities/budgeting/",
+                                            "localizador":  "Track and manage budgets e Definition, especialmente relação entre orçamento e estratégia de atribuição, responsáveis pelo orçamento e investigação de desvios. Consultada por navegação em 26/11/2026. Fundamenta acompanhamento por centro responsável; o limiar e a regra de sinalização são declarados no enunciado."
+                                        },
+                                        {
+                                            "titulo":  "FCC — TRF da 4ª Região, Analista Judiciário, Informática, 2007 — referência editorial histórica",
+                                            "url":  "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+                                            "arquivo":  "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+                                            "localizador":  "Caderno Cargo I, Tipo 001; questão 20, página 5. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF obtido no próprio TRF4; referência histórica da construção de um problema quantitativo com condições declaradas."
+                                        },
+                                        {
+                                            "titulo":  "FCC — TRT da 4ª Região, Analista Judiciário, TI, 2022 — referência editorial",
+                                            "url":  "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+                                            "arquivo":  "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+                                            "localizador":  "Caderno A14, Tipo 001; questão 59, página 14. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de integridade oficial."
+                                        }
+                                    ],
+                         "autor":  "/root/s2_elab_12",
+                         "dificuldadeEstimada":  "média",
+                         "verificacoes":  [
+                                              "Documental: leitura do perfil 12, das regras, do modelo e do recorte de governança e controle de custos no conteúdo programático; consulta às questões anteriores para evitar repetição dos objetivos de modelos de serviço e elasticidade.",
+                                              "Documental: navegação efetiva nas duas capacidades do FinOps Framework registradas; leitura dos exemplos FCC e dos respectivos metadados de origem.",
+                                              "Analítica: apuração do rateio 60%/40%, dos totais de cada equipe e do excesso individual; conferência das cinco alternativas, da distribuição integral dos R$ 6.000,00 e da unicidade da resposta.",
+                                              "Conferência de entrega: renderização dos TXT a partir dos mesmos dados do JSON e releitura dos arquivos para verificar identidade de conteúdo, ID, versão e codificação UTF-8. Não houve execução de serviços ou consulta a faturas de provedor; os cálculos usam os dados fictícios declarados."
+                                          ],
+                         "referenciasEstilo":  [
+                                                   {
+                                                       "orgao":  "Tribunal Regional Federal da 4ª Região",
+                                                       "cargo":  "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+                                                       "ano":  2007,
+                                                       "caderno":  "Cargo I, Tipo 001",
+                                                       "questao":  20,
+                                                       "pagina":  5,
+                                                       "origem":  "Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF obtido no próprio órgão em https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+                                                       "caracteristicaAplicada":  "A questão real fixa uma situação quantitativa e solicita um resultado financeiro dedutível dos dados. A autoral apresenta custos, orçamentos e regra de rateio completos, exigindo cálculo e interpretação do desvio.",
+                                                       "limites":  "Referência histórica de formato, situada em Conhecimentos Gerais do caderno; não é fonte de práticas atuais de nuvem nem demonstra frequência de cobrança."
+                                                   },
+                                                   {
+                                                       "orgao":  "Tribunal Regional do Trabalho da 4ª Região",
+                                                       "cargo":  "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+                                                       "ano":  2022,
+                                                       "caderno":  "A14, Tipo 001",
+                                                       "questao":  59,
+                                                       "pagina":  14,
+                                                       "origem":  "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou integridade oficial.",
+                                                       "caracteristicaAplicada":  "A questão real usa alternativas que respondem, na mesma ordem, aos elementos solicitados. A autoral mantém paralelismo: total de Cartões, total de Crédito e resultado do acompanhamento.",
+                                                       "limites":  "Referência de comando e organização das alternativas; não fundamenta rateios ou práticas FinOps nem comprova correção técnica atual."
+                                                   }
+                                               ]
+                     }
+                 ]
+}

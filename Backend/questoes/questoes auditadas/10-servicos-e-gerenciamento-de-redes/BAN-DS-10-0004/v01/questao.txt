@@ -1,0 +1,19 @@
+ID: BAN-DS-10-0004
+Versão: v01
+Matéria: Serviços e gerenciamento de redes
+Tópico: Prometheus: coleta de métricas e papel do Alertmanager
+
+ENUNCIADO
+Uma instituição utiliza Prometheus em modo servidor e Alertmanager para monitorar aplicações que já expõem métricas em endpoints HTTP. A equipe deve distribuir as seguintes atividades entre esses dois componentes:
+
+I. Consultar periodicamente os endpoints e armazenar as amostras coletadas como séries temporais.
+II. Avaliar regras sobre essas séries para gerar alertas quando as condições configuradas forem atendidas.
+III. Agrupar os alertas recebidos e encaminhar as notificações aos destinatários definidos na configuração.
+
+Na arquitetura desses componentes, as atividades I, II e III cabem, correta e respectivamente, a
+
+A) Prometheus, Prometheus e Alertmanager.
+B) Prometheus, Alertmanager e Alertmanager.
+C) Alertmanager, Prometheus e Prometheus.
+D) Prometheus, Alertmanager e Prometheus.
+E) Alertmanager, Prometheus e Alertmanager.

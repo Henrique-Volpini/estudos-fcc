@@ -1,0 +1,15 @@
+ID: BAN-DS-02-0004
+Versão: v01
+Matéria: Gestão e Governança de Tecnologia da Informação
+Tópico: Alinhamento entre PETIC e PDTIC
+
+ENUNCIADO
+Uma entidade utiliza o Plano Estratégico de Tecnologia da Informação e Comunicação (PETIC) e o Plano Diretor de Tecnologia da Informação e Comunicação (PDTIC) como documentos distintos. O PETIC, alinhado ao planejamento institucional, estabelece o objetivo de reduzir o tempo de atendimento e a diretriz de interoperabilidade dos serviços digitais.
+
+Ao elaborar o PDTIC para desdobrar essa orientação, a equipe deve, de acordo com os conceitos do Guia de PDTIC do SISP, versão 2.1,
+
+A) reproduzir as diretrizes do PETIC no PDTIC e deixar a definição de metas e ações para planos operacionais sem vínculo com esse documento.
+B) consolidar as demandas no PDTIC por ordem de recebimento e considerar essa sequência como critério suficiente de alinhamento ao PETIC.
+C) selecionar no PDTIC as soluções de infraestrutura e reformular os objetivos do PETIC para acomodar as aquisições previamente escolhidas.
+D) relacionar necessidades aos objetivos do PETIC e desdobrá-las em metas e ações no PDTIC, com recursos, prazos e indicadores para acompanhamento.
+E) conferir ao PDTIC a mesma vigência do PETIC e usar essa coincidência temporal como evidência suficiente de alinhamento entre os planos.

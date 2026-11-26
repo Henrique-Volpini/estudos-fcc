@@ -1,0 +1,38 @@
+ID: BAN-DS-11-0007
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Identificar a medida que corrige a falha de autorização de acesso ao objeto.
+Responsável pela elaboração: /root/s2_elab_11
+Dificuldade estimada: média
+
+RESOLUÇÃO
+A falha é uma referência direta a objeto sem a autorização correspondente: o identificador permite selecionar um comprovante alheio apesar da política de propriedade. Autenticação e validação de token já funcionam, mas não resolvem essa decisão. É necessário conferir, em código confiável no servidor e em cada solicitação, a relação entre o cliente autenticado e o comprovante, recusando o acesso quando essa relação não autoriza a consulta. A alternativa A atende. Identificadores imprevisíveis, MFA, filtragem da interface e nova validação do token não substituem essa verificação.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende. A política exige autorização por objeto baseada na relação entre cliente e comprovante. Conferir a propriedade no servidor em cada solicitação e negar a consulta quando ela não se comprova aplica essa política ao objeto solicitado.
+B) Não atende. UUIDs podem dificultar a descoberta de identificadores, mas não implementam a autorização exigida. Se o identificador de um objeto alheio for conhecido, a API continuará a retorná-lo. A dificuldade de adivinhação não substitui a conferência de permissões.
+C) Não atende. MFA reforça a autenticação da identidade; não concede ao cliente permissão para acessar todos os comprovantes. A condição de estar autenticado continua insuficiente para decidir se aquele objeto pode ser consultado.
+D) Não atende. A filtragem no aplicativo pode orientar a interface, mas o cliente pode alterar a requisição ou enviá-la por outra ferramenta. O controle deve existir no servidor, onde o solicitante não consegue modificar a decisão.
+E) Não atende. Validar o token não demonstra que o comprovante selecionado pertence ao cliente autenticado. A alternativa preserva a falta de vínculo entre o objeto solicitado e a identidade autorizada a consultá-lo.
+
+FONTES TÉCNICAS CONSULTADAS
+- OWASP Top 10:2021 — A01:2021, Broken Access Control. https://top10.owasp.org/2021/A01_2021-Broken_Access_Control/. Localizador e uso: Description: alteração de URL e acesso ao objeto de outro usuário por seu identificador. How to Prevent: controle em código confiável no servidor, negação por padrão e imposição de propriedade dos registros. Example Attack Scenarios, Scenario #1. Preservada a edição de 2021.
+- OWASP Cheat Sheet Series — Authorization Cheat Sheet. https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html. Localizador e uso: Introduction (autenticação versus autorização); Validate the Permissions on Every Request; Ensure Lookup IDs are Not Accessible Even When Guessed or Cannot Be Tampered With; Verify that Authorization Checks are Performed in the Right Location. Complementa a análise de B–E; não substitui o Top 10:2021 como classificação.
+- Conteúdo-base — Segurança da Informação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Bloco SEGURANÇA DA INFORMAÇÃO: segurança de APIs e aplicações web conforme OWASP Top 10:2021.
+- FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 37. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Questão 37, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+- Metadados do acervo de referências FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador e uso: Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 37; página impressa 9.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A questão 37 situa um profissional em uma implantação, enuncia um objetivo e apresenta cinco alternativas técnicas. Foi aplicado o cenário funcional seguido de decisão técnica, com alternativas autorais de correção de uma API e sem copiar o padrão ou o vocabulário das alternativas originais.
+- Limites da referência: Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consulta à página específica A01 da edição OWASP Top 10:2021 e às seções pertinentes da folha de autorização, em 26/11/2026.
+- Analítica: aplicada a política somente-próprios ao objeto de cada requisição; conferidos os limites de UUID, MFA, interface e token. Apenas uma alternativa introduz a autorização por objeto no servidor.
+- Editorial: lida a questão 37, página 9, na extração local de TRT4/2022 e comparada sua estrutura de cenário técnico com objetivo. Não houve execução de API, exploração de sistema real nem teste de UUID ou de tokens.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria; sem aprovação registrada pelo elaborador.

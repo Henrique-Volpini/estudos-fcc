@@ -1,0 +1,746 @@
+Banestes - Desenvolvimento de Sistemas - Simulado 02
+50 questões de conhecimentos específicos.
+Selecione uma alternativa por questão. Na aplicação, a correção aparece após a resposta; depois você pode marcar sabia, chutei ou deduzi.
+
+QUESTÃO 1
+Uma equipe utiliza Kanban com o fluxo A fazer → Implementação → Validação → Concluído. O trabalho é considerado iniciado ao entrar em Implementação e finalizado ao entrar em Concluído. Há um único limite de WIP: no máximo seis itens iniciados e ainda não finalizados, sem exceções para itens bloqueados. Não há limites adicionais por etapa.
+
+Em determinado momento, há dez itens em A fazer, três em Implementação e dois em Validação, sendo um destes bloqueado. Em seguida, o item não bloqueado de Validação é concluído e dois itens passam de Implementação para Validação. Não ocorrem outras conclusões, cancelamentos ou entradas no fluxo.
+
+Sem novas conclusões ou cancelamentos, a quantidade máxima de itens de A fazer que pode ser iniciada, respeitando o limite estabelecido, é
+A) 1 item.
+B) 2 itens.
+C) 3 itens.
+D) 4 itens.
+E) 5 itens.
+
+QUESTÃO 2
+Em um processo BPMN 2.0.2, um gateway exclusivo divergente recebe um único token e possui duas saídas: uma leva à tarefa Conferir cadastro e a outra, à tarefa Solicitar documento. As saídas dessas tarefas chegam a entradas distintas de um gateway paralelo convergente, que possui uma única saída para a tarefa Registrar resultado.
+
+Em uma execução, o gateway exclusivo seleciona apenas Conferir cadastro, e essa tarefa termina normalmente. Não existem outros fluxos, eventos ou mecanismos capazes de produzir tokens nesse trecho, nem laços de repetição.
+
+Nessas condições,
+A) Solicitar documento é iniciada após Conferir cadastro, pois a convergência paralela determina a execução sequencial dos dois ramos.
+B) Registrar resultado é iniciada uma vez, pois a escolha exclusiva dispensa o gateway paralelo de aguardar o ramo não selecionado.
+C) Registrar resultado é iniciada duas vezes, pois o gateway paralelo duplica o token recebido da tarefa Conferir cadastro.
+D) a instância é encerrada ao terminar Conferir cadastro, pois o gateway paralelo descarta tokens recebidos sem par na outra entrada.
+E) Registrar resultado não é iniciada, pois o gateway paralelo aguarda um token na entrada proveniente de Solicitar documento.
+
+QUESTÃO 3
+Uma equipe de qualidade organiza três atividades para um sistema de transferências entre contas da própria instituição:
+
+I. Verificar a classe CalculadoraTarifa isoladamente, fornecendo entradas e comparando os valores retornados; suas dependências são substituídas por objetos simulados.
+II. Verificar as interfaces e as trocas de dados entre os componentes reais ServicoTransferencia e RepositorioContas, executados em conjunto; os demais componentes da aplicação ficam fora do objeto desse teste.
+III. Verificar o comportamento da aplicação completa, da interface de usuário à persistência, em ambiente representativo, confrontando o fluxo de transferência com a especificação do sistema. O objetivo não é avaliar interfaces com sistemas externos.
+
+Considerando o objeto e o objetivo de cada atividade, os níveis de teste em I, II e III são, respectivamente,
+A) unidade; integração de componentes; sistema.
+B) unidade; sistema; integração de componentes.
+C) integração de componentes; unidade; sistema.
+D) sistema; integração de componentes; unidade.
+E) integração de componentes; sistema; unidade.
+
+QUESTÃO 4
+Uma equipe aprovou formalmente a baseline H1 de um sistema para homologação. Ela identifica as versões do código-fonte, dos requisitos, dos scripts de construção e dos casos de teste utilizados. Durante a homologação, foi solicitada uma alteração de uma regra de cálculo, com impacto nesses itens. A alteração ainda não foi autorizada.
+
+Para tratar a solicitação por meio da gestão da configuração, a equipe deve
+A) atualizar os arquivos de H1 a cada commit de desenvolvimento, pois a baseline corresponde às versões mais recentes existentes no repositório.
+B) rejeitar a solicitação até o término da homologação, pois a aprovação de uma baseline impede a criação de uma nova configuração durante essa etapa.
+C) implementar a alteração e atualizar H1 antes da autorização, pois o registro do commit substitui a aprovação exigida pelo controle de mudanças.
+D) submeter a solicitação à análise e à autorização previstas, registrar as novas versões e estabelecer a baseline atualizada de modo controlado, preservando H1.
+E) controlar a alteração apenas no código-fonte, pois requisitos, scripts de construção e casos de teste não integram itens sujeitos ao controle de configuração.
+
+QUESTÃO 5
+Uma entidade utiliza o Plano Estratégico de Tecnologia da Informação e Comunicação (PETIC) e o Plano Diretor de Tecnologia da Informação e Comunicação (PDTIC) como documentos distintos. O PETIC, alinhado ao planejamento institucional, estabelece o objetivo de reduzir o tempo de atendimento e a diretriz de interoperabilidade dos serviços digitais.
+
+Ao elaborar o PDTIC para desdobrar essa orientação, a equipe deve, de acordo com os conceitos do Guia de PDTIC do SISP, versão 2.1,
+A) reproduzir as diretrizes do PETIC no PDTIC e deixar a definição de metas e ações para planos operacionais sem vínculo com esse documento.
+B) consolidar as demandas no PDTIC por ordem de recebimento e considerar essa sequência como critério suficiente de alinhamento ao PETIC.
+C) selecionar no PDTIC as soluções de infraestrutura e reformular os objetivos do PETIC para acomodar as aquisições previamente escolhidas.
+D) relacionar necessidades aos objetivos do PETIC e desdobrá-las em metas e ações no PDTIC, com recursos, prazos e indicadores para acompanhamento.
+E) conferir ao PDTIC a mesma vigência do PETIC e usar essa coincidência temporal como evidência suficiente de alinhamento entre os planos.
+
+QUESTÃO 6
+Uma entidade avalia uma iniciativa de automação durante três anos completos. Todos os valores a seguir são fictícios, monetários e incrementais em relação à manutenção da situação atual.
+
+A implantação custa R$ 240.000,00, uma única vez, no início do período. A operação e a manutenção custam R$ 40.000,00 em cada um dos três anos. A automação evita despesas de R$ 180.000,00 em cada um desses anos; esse benefício é informado antes da dedução dos custos da iniciativa.
+
+Não há outros custos ou benefícios, tributos adicionais, valor residual, inflação ou desconto financeiro a considerar. Adote o ROI simples acumulado do período, sem anualização, calculado por:
+
+ROI = [(benefícios totais − custos totais) / custos totais] × 100
+
+O ROI da iniciativa nesses três anos é de
+A) 33,33%.
+B) 50%.
+C) 75%.
+D) 125%.
+E) 150%.
+
+QUESTÃO 7
+Uma autarquia celebrou contrato de manutenção de sistemas regido pela Lei nº 14.133/2021 e designou um servidor como fiscal. Contratou também uma empresa especializada para assisti-lo com informações técnicas. Ao receber um relatório que aponta defeitos na execução, o fiscal identificou a necessidade de providência que ultrapassa sua competência.
+
+À luz do art. 117 dessa Lei, na redação vigente em 11/11/2026, o fiscal deve
+A) atribuir à empresa de apoio a decisão sobre providências que superem sua competência, mantendo com o fiscal apenas o recebimento dos relatórios.
+B) registrar apenas as ocorrências que consiga corrigir diretamente, comunicando aos superiores os demais defeitos para que eles mantenham o respectivo registro.
+C) decidir sobre a providência necessária, mesmo fora de sua competência, utilizando o relatório da empresa como autorização para ampliar suas atribuições.
+D) encaminhar o relatório aos superiores e considerar-se eximido da responsabilidade de fiscalização sobre as informações recebidas da empresa de apoio.
+E) anotar as ocorrências em registro próprio e informar, em tempo hábil, aos superiores a situação que ultrapassa sua competência.
+
+QUESTÃO 8
+Em Python 3, considere a execução do código a seguir em um processo novo, sem outras chamadas à função registrar:
+
+def registrar(codigo, historico=[]):
+    historico.append(codigo)
+    return len(historico)
+
+print(registrar("A"), registrar("B", []), registrar("C"), registrar("D"))
+
+A sequência de números exibida é
+A) 1 1 1 1
+B) 1 2 3 4
+C) 1 1 1 2
+D) 1 1 2 3
+E) 1 2 2 3
+
+QUESTÃO 9
+Considere o seguinte programa Java 21:
+
+public class Selecao {
+    static String escolher(long valor) { return "L"; }
+    static String escolher(Integer valor) { return "I"; }
+    static String escolher(Number valor) { return "N"; }
+
+    public static void main(String[] args) {
+        int a = 5;
+        Integer b = 5;
+        Number c = b;
+        System.out.print(escolher(a) + escolher(b) + escolher(c));
+    }
+}
+
+O texto exibido ao executar main é
+A) LIN
+B) IIN
+C) LII
+D) NIN
+E) LLN
+
+QUESTÃO 10
+Em C# 12 com .NET 8, considere o programa:
+
+using System;
+
+class Caixa {
+    public int Valor;
+}
+
+class Programa {
+    static void Ajustar(Caixa item, ref int taxa) {
+        item.Valor += taxa;
+        item = new Caixa { Valor = 100 };
+        taxa += 2;
+    }
+
+    static void Main() {
+        Caixa caixa = new Caixa { Valor = 10 };
+        int taxa = 3;
+        Ajustar(caixa, ref taxa);
+        Console.Write($"{caixa.Valor} {taxa}");
+    }
+}
+
+Os valores exibidos são
+A) 100 5
+B) 13 5
+C) 13 3
+D) 10 3
+E) 100 3
+
+QUESTÃO 11
+Considere o programa em C11, sem entrada externa:
+
+#include <stdio.h>
+
+int main(void) {
+    int a = 0, b = 2, c = 4;
+    int r = a && ++b || b > 1 && ++c;
+    printf("%d %d %d", b, c, r);
+    return 0;
+}
+
+A sequência exibida por printf é
+A) 3 5 1
+B) 2 4 0
+C) 2 5 5
+D) 3 4 1
+E) 2 5 1
+
+QUESTÃO 12
+Em PHP 8.2, considere:
+
+<?php
+$codigos = [12, "12", 24];
+$a = array_search("12", $codigos);
+$b = array_search("12", $codigos, true);
+echo $a . ":" . $b . ":" . ($a !== false ? "S" : "N");
+
+O texto exibido é
+A) 0:1:N
+B) 1:1:S
+C) 0:1:S
+D) 0:0:S
+E) 1:0:N
+
+QUESTÃO 13
+Em uma aplicação C# com ADO.NET e o provedor Microsoft.Data.SqlClient, cmd é um SqlCommand recém-criado, associado a uma conexão aberta com SQL Server e com CommandType.Text. A tabela Cliente tem a coluna Nome do tipo nvarchar(80). A variável nome contém uma string não nula, com até 80 caracteres, que pode conter apóstrofos.
+
+Um Analista deve configurar cmd para obter os identificadores dos clientes cujo Nome seja igual ao conteúdo de nome, mantendo a entrada como dado separado do texto SQL. Considere SqlDbType disponível. Qual trecho atende a esses requisitos?
+A) cmd.CommandText = $"SELECT Id FROM Cliente WHERE Nome = '{nome}'";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+B) cmd.CommandText = "SELECT Id FROM Cliente WHERE Nome = '@nome'";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+C) cmd.CommandText = "SELECT Id FROM Cliente WHERE @nome = @nome";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+D) cmd.CommandText = "SELECT Id FROM Cliente WHERE Nome = @nome";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = nome;
+E) cmd.CommandText = "SELECT Id FROM Cliente WHERE Nome = @nome";
+cmd.Parameters.Add("@nome", SqlDbType.NVarChar, 80).Value = "@nome";
+
+QUESTÃO 14
+Uma equipe usa TDD para desenvolver uma regra de tarifas. Primeiro, escreve um teste para um comportamento ainda não implementado e verifica que ele falha pelo resultado esperado ainda não ser produzido. Depois, faz uma pequena alteração na implementação e confirma que o teste novo e todos os anteriores passam. Ao examinar o código, identifica uma duplicação que pretende remover no mesmo ciclo.
+
+A intervenção que corresponde à etapa refactor desse ciclo é
+A) implementar a próxima regra de tarifa e, depois de validá-la manualmente, escrever seu teste automatizado.
+B) remover a duplicação preservando o comportamento e executar novamente os testes para verificar que continuam passando.
+C) ampliar os resultados aceitos pelas asserções para que a implementação possa ser simplificada sem falhas na suíte.
+D) modificar a regra de tarifa para eliminar os casos especiais e ajustar os resultados esperados nos testes existentes.
+E) reescrever a implementação para atender às regras futuras e executar a suíte depois de concluir todas essas funcionalidades.
+
+QUESTÃO 15
+Em um modelo de contas, um cliente pode ser titular de várias contas, e uma conta pode ter vários titulares. Para cada par cliente-conta registra-se uma única data de início da titularidade, sem manter histórico de novos vínculos do mesmo par. Clientes distintos podem iniciar titularidades na mesma data, inclusive na mesma conta.
+
+No mapeamento para o modelo relacional, foram definidas CLIENTE(id_cliente), CONTA(id_conta) e TITULARIDADE(id_cliente, id_conta, data_inicio). Os identificadores são as chaves primárias das duas primeiras tabelas. Em TITULARIDADE, id_cliente e id_conta são chaves estrangeiras para as respectivas tabelas.
+
+Para impedir a repetição de um par cliente-conta e permitir todas as titularidades admitidas, a chave primária de TITULARIDADE deve ser composta por
+A) id_cliente.
+B) id_conta.
+C) id_cliente e id_conta.
+D) data_inicio.
+E) id_cliente, id_conta e data_inicio.
+
+QUESTÃO 16
+Em um banco PostgreSQL 15, a tabela limite possui id integer como chave primária e valor integer. Ela contém somente a linha (1, 100). Sem operações concorrentes, gatilhos ou erros, uma sessão executa:
+
+BEGIN;
+UPDATE limite SET valor = valor + 20 WHERE id = 1;
+SAVEPOINT ajuste;
+UPDATE limite SET valor = valor * 2 WHERE id = 1;
+ROLLBACK TO SAVEPOINT ajuste;
+UPDATE limite SET valor = valor + 5 WHERE id = 1;
+ROLLBACK TO SAVEPOINT ajuste;
+UPDATE limite SET valor = valor + 7 WHERE id = 1;
+COMMIT;
+SELECT valor FROM limite WHERE id = 1;
+
+O valor retornado pelo SELECT é
+A) 100.
+B) 120.
+C) 132.
+D) 252.
+E) 127.
+
+QUESTÃO 17
+No PostgreSQL 15, dono é proprietário da tabela public.relatorio. As roles ana e bruno não são proprietárias nem superusuárias, não pertencem a outras roles e, inicialmente, não possuem privilégios nessa tabela. PUBLIC também não possui privilégios nela. Ambas já dispõem das permissões de conexão e de uso do esquema necessárias ao acesso.
+
+São executados, nesta ordem:
+
+Por dono:
+GRANT SELECT ON TABLE public.relatorio TO ana WITH GRANT OPTION;
+
+Por ana:
+GRANT SELECT ON TABLE public.relatorio TO bruno;
+
+Por dono:
+REVOKE GRANT OPTION FOR SELECT ON TABLE public.relatorio
+FROM ana CASCADE;
+
+Não há outras concessões ou alterações de privilégios. Após essa sequência, quanto ao privilégio SELECT na tabela,
+A) ana o mantém, e bruno o perde.
+B) ana e bruno o mantêm.
+C) ana o perde, e bruno o mantém.
+D) ana e bruno o perdem.
+E) o último comando é rejeitado porque ana já o concedeu a bruno.
+
+QUESTÃO 18
+Em um banco Oracle Database 19c, o script abaixo foi executado com sucesso:
+
+CREATE TABLE contato (
+    id NUMBER PRIMARY KEY,
+    apelido VARCHAR2(20)
+);
+INSERT INTO contato VALUES (1, NULL);
+INSERT INTO contato VALUES (2, '');
+INSERT INTO contato VALUES (3, '0');
+INSERT INTO contato VALUES (4, 'Ana');
+COMMIT;
+
+Sem outras alterações nos dados, executa-se:
+
+SELECT id
+FROM contato
+WHERE apelido IS NULL OR apelido = NULL
+ORDER BY id;
+
+Os identificadores retornados são
+A) somente 1.
+B) somente 1, 2 e 3.
+C) 1, 2, 3 e 4.
+D) somente 1 e 2.
+E) nenhum.
+
+QUESTÃO 19
+Uma instituição deseja analisar o valor pago por data, agência e canal de atendimento. O modelo dimensional deve preservar cada pagamento individualmente, inclusive quando dois pagamentos têm a mesma data, agência e canal. Cada pagamento possui um identificador próprio na origem, um único valor e exatamente uma data, uma agência e um canal.
+
+As dimensões Data, Agência e Canal deverão ter, respectivamente, uma linha por data, por agência e por canal. Pagamentos do mesmo canal podem ter valores diferentes. Foi definido que a tabela fato terá o grão de um pagamento processado. Para implementar esse requisito em um esquema estrela, a proposta adequada é manter na tabela fato
+A) uma linha por pagamento, com as três chaves de dimensão, e armazenar o valor de cada pagamento como atributo da dimensão Canal.
+B) uma linha por pagamento, com valor_pago e chaves estrangeiras para as dimensões Data, Agência e Canal.
+C) uma linha por combinação de data, agência e canal, com a soma de valor_pago e chaves estrangeiras para as três dimensões.
+D) uma linha por pagamento, com valor_pago e as descrições de data, agência e canal em uma única tabela, sem tabelas de dimensões.
+E) linhas de pagamentos e linhas de totais mensais de agência, com valor_pago e chaves estrangeiras para as três dimensões.
+
+QUESTÃO 20
+No PostgreSQL 15, a tabela parametro possui as colunas chave text e valor integer, sem restrição de unicidade, e contém somente:
+
+chave | valor
+X     | 7
+X     | 7
+Y     | NULL
+
+Foi criada a função:
+
+CREATE FUNCTION obter_valor(p_chave text)
+RETURNS integer
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    v_valor integer;
+BEGIN
+    SELECT p.valor INTO STRICT v_valor
+    FROM parametro AS p
+    WHERE p.chave = p_chave;
+    RETURN v_valor;
+END;
+$$;
+
+São realizadas três chamadas independentes, cada uma em sua própria transação, sem alterações concorrentes: obter_valor('Z'), obter_valor('Y') e obter_valor('X').
+
+Os resultados ou exceções dessas chamadas são, respectivamente,
+A) NULL, NULL e 7.
+B) NO_DATA_FOUND, NO_DATA_FOUND e TOO_MANY_ROWS.
+C) NO_DATA_FOUND, NULL e TOO_MANY_ROWS.
+D) NO_DATA_FOUND, NULL e 7.
+E) NULL, NULL e TOO_MANY_ROWS.
+
+QUESTÃO 21
+Uma página adota uma regra básica para telas pequenas e acrescenta media queries para ampliar o leiaute. O elemento .painel utiliza exclusivamente o CSS abaixo, na ordem apresentada, em navegador com suporte às propriedades indicadas. Não há estilos inline, outras regras, animações ou transições.
+
+.painel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 960px) {
+  .painel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+@media (min-width: 600px) {
+  .painel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+Considere três larguras da viewport: 580px, 760px e 1100px. Em cada par (n, g), n indica a quantidade de colunas declaradas em grid-template-columns e g indica o valor de gap. Os pares correspondentes a essas larguras são, respectivamente,
+A) (1, 8px), (2, 8px) e (3, 24px).
+B) (1, 8px), (3, 24px) e (2, 24px).
+C) (1, 8px), (2, 24px) e (2, 24px).
+D) (1, 8px), (2, 8px) e (2, 24px).
+E) (2, 8px), (2, 8px) e (2, 24px).
+
+QUESTÃO 22
+Considere o código a seguir, em TypeScript 5.9 com strict habilitado.
+
+type Sucesso = { estado: "ok"; valor: number };
+type Falha = { estado: "erro"; mensagem: string };
+type Resposta = Sucesso | Falha;
+
+function apresentar(r: Resposta): string {
+  if (r.estado === "erro") {
+    return r.mensagem;          // ponto I
+  }
+  return r.valor.toFixed(2);    // ponto II
+}
+
+Os comentários I e II indicam os respectivos acessos a r nessas instruções. Pela análise de fluxo de controle, os tipos de r nesses pontos são, respectivamente,
+A) Falha e Sucesso.
+B) Resposta e Sucesso.
+C) Falha e Resposta.
+D) Sucesso e Falha.
+E) Resposta e never.
+
+QUESTÃO 23
+Uma aplicação em React 19 renderiza uma lista pelo trecho:
+
+clientes.map((cliente, indice) => (
+  <Linha key={indice} cliente={cliente} />
+))
+
+Cada Linha é do mesmo tipo de componente, definido fora do componente da lista, e mantém uma nota em estado local, inicializado com useState(""). A atualização das propriedades não redefine essa nota. Inicialmente, os clientes estão na ordem Ana, Bia, e as notas digitadas são, respectivamente, "X" e "Y". Em seguida, a lista é atualizada para Bia, Ana, preservando o componente pai. Cada cliente possui um id único e imutável.
+
+Com a chave atual, as notas exibidas nas linhas de Ana e Bia após a inversão e a chave que deve ser adotada desde a montagem inicial para manter a nota vinculada ao cliente em futuras reordenações são, respectivamente,
+A) "X" e "Y"; key={cliente.id}.
+B) "Y" e "X"; key={indice}.
+C) "Y" e "X"; key={cliente.id + ":" + indice}.
+D) "Y" e "X"; key={Math.random()}.
+E) "Y" e "X"; key={cliente.id}.
+
+QUESTÃO 24
+Uma API RESTful utiliza a semântica HTTP da RFC 9110. Considere duas operações independentes.
+
+I. POST /clientes conclui o cadastro e cria um novo recurso de cliente antes de responder. A resposta identifica o recurso criado pelo cabeçalho Location.
+
+II. POST /relatorios aceita uma solicitação de geração e a coloca em uma fila. Ao responder, a geração ainda não terminou e poderá falhar posteriormente. O corpo da resposta informa a situação atual e uma URI para acompanhá-la.
+
+Os códigos de status que comunicam especificamente as situações I e II são, respectivamente,
+A) 201 Created e 204 No Content.
+B) 200 OK e 201 Created.
+C) 201 Created e 202 Accepted.
+D) 202 Accepted e 201 Created.
+E) 204 No Content e 202 Accepted.
+
+QUESTÃO 25
+Uma aplicação prepara um corpo JSON com o código abaixo, em ambiente JavaScript compatível com ECMAScript 2025. Considere as funções e os protótipos nativos sem alterações.
+
+const carga = {
+  apelido: undefined,
+  ativo: false,
+  contatos: [undefined, null, ""]
+};
+const texto = JSON.stringify(carga);
+
+O conteúdo da string texto é
+A) {"apelido":null,"ativo":false,"contatos":[null,null,""]}
+B) {"ativo":false,"contatos":[null,null,""]}
+C) {"ativo":false,"contatos":[null,""]}
+D) {"apelido":"undefined","ativo":false,"contatos":["undefined",null,""]}
+E) {"contatos":[null,null,""]}
+
+QUESTÃO 26
+Uma aplicação web utiliza MVC com renderização de páginas no servidor. Na funcionalidade de simulação de empréstimos, foram identificadas as seguintes responsabilidades:
+
+I. Receber a solicitação, acionar a simulação e selecionar a tela de resposta.
+II. Aplicar a regra de cálculo das parcelas, que também será utilizada por outras interfaces da aplicação.
+III. Apresentar as parcelas na página, definindo o alinhamento e a formatação visual dos valores.
+
+Para preservar a separação de responsabilidades do padrão, I, II e III devem ser atribuídas, respectivamente, a
+A) modelo, controlador e visão.
+B) controlador, visão e modelo.
+C) visão, modelo e controlador.
+D) controlador, modelo e visão.
+E) modelo, visão e controlador.
+
+QUESTÃO 27
+Em uma arquitetura orientada a serviços, sistemas independentes consomem um serviço de consulta cadastral. O contrato descreve o campo situacao como a indicação de existência de restrição cadastral. A equipe provedora pretende substituir a linguagem e o banco de dados da implementação sem exigir alterações dos consumidores. Também propõe que situacao passe a indicar aptidão para contratar um produto, mantendo o nome e o tipo do campo e o endereço do serviço. Na avaliação dessas mudanças, a equipe deve
+A) preservar a interação contratada na substituição interna e avaliar a mudança de significado de situacao como alteração contratual, verificando seu impacto sobre os consumidores.
+B) preservar o nome e o tipo de situacao na substituição interna e considerar seu novo significado compatível, pois a estrutura das mensagens continuará sendo a mesma.
+C) publicar as tabelas do novo banco como parte da interação contratada e orientar os consumidores a consultá-las, transferindo a interpretação de situacao para cada sistema consumidor.
+D) exigir que os consumidores adotem a linguagem da nova implementação e manter a descrição das mensagens, obtendo assim independência em relação à implementação interna do serviço.
+E) manter o endereço do serviço e atualizar a implementação e o significado de situacao, considerando o contrato preservado enquanto os consumidores conseguirem estabelecer conexão com esse endereço.
+
+QUESTÃO 28
+Em um ambiente de microsserviços, a equipe definiu duas funções:
+
+I. Oferecer um ponto de entrada para clientes externos, validar suas credenciais e encaminhar as requisições aos serviços correspondentes.
+II. Permitir que componentes localizem, pelo nome lógico de um serviço, os endereços das instâncias registradas e saudáveis, que mudam durante a expansão e a substituição de instâncias.
+
+Considerando API Gateway e Service Discovery, a atribuição adequada dessas funções e a relação entre os mecanismos são:
+A) I cabe ao Service Discovery; II cabe ao API Gateway, que mantém o catálogo de instâncias para que a descoberta possa autenticar as solicitações externas.
+B) I cabe ao API Gateway; II cabe ao Service Discovery, que recebe as requisições de negócio dos clientes externos para aplicar a autenticação antes do gateway.
+C) I cabe ao API Gateway; II cabe ao Service Discovery, sendo necessário atualizar os clientes externos sempre que o endereço de uma instância do serviço for alterado.
+D) I cabe ao Service Discovery; II cabe ao API Gateway, sendo a localização dinâmica de instâncias uma consequência da validação de credenciais dos clientes externos.
+E) I cabe ao API Gateway; II cabe ao Service Discovery, que pode ser consultado pelo gateway para localizar instâncias sem expor seus endereços aos clientes externos.
+
+QUESTÃO 29
+Uma instituição vai modernizar um sistema legado que atende consultas, alterações cadastrais e liquidações. A nova implementação das consultas já está pronta e deve entrar em uso na primeira etapa; as outras funcionalidades continuarão no legado. As integrações e os dados necessários à coexistência foram preparados, e é possível interceptar as requisições. A instituição quer preservar o endereço de acesso dos clientes durante as etapas e retirar o legado ao final. Para aplicar o padrão Strangler Fig nessas condições, a equipe deve
+A) publicar endereços distintos para o legado e para cada nova funcionalidade, transferindo aos clientes a escolha do destino e a atualização desse endereço a cada etapa da modernização.
+B) introduzir uma fachada que encaminhe consultas à nova implementação e demais operações ao legado, ampliando a substituição por etapas e retirando o legado quando não restarem funcionalidades ou dependências dele.
+C) manter todas as requisições no legado até concluir as novas versões de consultas, alterações cadastrais e liquidações, realizando então a transferência conjunta das funcionalidades e a retirada da implementação anterior.
+D) introduzir uma fachada que preserve o endereço dos clientes e encaminhe todas as operações ao legado, considerando concluída a substituição das consultas quando a nova fachada estiver disponível para acesso.
+E) encaminhar uma porcentagem crescente de todas as requisições à nova implementação, independentemente da funcionalidade solicitada, e retirar o legado quando o sistema moderno receber a maioria do tráfego.
+
+QUESTÃO 30
+Uma equipe utiliza blue/green deployment. O ambiente blue mantém a versão 1, operacional e com capacidade para toda a carga, enquanto o green recebeu a versão 2 e passou a atender o tráfego de produção. Ambos usam o mesmo banco de dados e o mesmo repositório externo de sessões, cujo formato é compatível com ambas as versões. A migração de esquema foi apenas aditiva e sua compatibilidade com a versão 1 foi validada. As gravações feitas pela versão 2 são válidas e também podem ser lidas e atualizadas pela versão 1.
+
+Foi detectada uma regressão da versão 2 restrita à formatação das respostas, sem corrupção de dados. Não há requisições em andamento. Para reverter rapidamente a aplicação, aproveitando os ambientes existentes e preservando as gravações já confirmadas, a equipe deve
+A) redirecionar o tráfego ao blue e restaurar o banco a um snapshot anterior à ativação do green, para realinhar os dados à versão 1.
+B) manter o tráfego no green e reiniciar suas instâncias com a versão 2, para refazer a associação da aplicação ao banco compartilhado.
+C) redirecionar o tráfego ao blue e conservar o banco em seu estado atual, mantendo o esquema compatível durante a janela de rollback.
+D) redirecionar o tráfego ao blue e remover os campos ainda utilizados pela versão 1, para concluir a migração iniciada na implantação do green.
+E) replicar a versão 2 do green para o blue e então redirecionar o tráfego ao blue, para restaurar o ambiente anteriormente usado em produção.
+
+QUESTÃO 31
+Uma API disparou um alerta por aumento do percentil 95 da latência, calculado a partir das durações de todas as requisições de uma janela de cinco minutos. A equipe também coleta traces por amostragem. Um trace de requisição lenta, com spans correlacionados entre os serviços, mostra que a maior parte da duração ocorreu durante uma chamada ao serviço de cadastro. Nos logs da API, um registro com o mesmo trace_id informa timeout dessa chamada.
+
+A interpretação adequada dos sinais disponíveis é:
+A) A mensagem de timeout, correlacionada ao trace, demonstra que a causa da lentidão é um defeito no código do serviço de cadastro.
+B) As métricas resumem o comportamento observado no período; os spans localizam a demora na requisição coletada, e os logs acrescentam eventos correlacionados.
+C) O trace da requisição lenta fornece a distribuição de latência de todas as chamadas da janela, podendo substituir a métrica usada no alerta.
+D) Os logs com o mesmo trace_id devem ser tratados como eventos sem vínculo com a requisição, pois esse identificador relaciona apenas os spans entre si.
+E) A ausência de trace para uma requisição permite descartá-la da investigação de lentidão, pois a amostragem preserva necessariamente todas as chamadas com falha.
+
+QUESTÃO 32
+Uma equipe está incluindo controles de segurança na pipeline de uma aplicação web que utiliza bibliotecas de terceiros e possui funcionalidades autenticadas. A pipeline permite inspecionar o código e as dependências antes da implantação e executar a aplicação em um ambiente de homologação isolado, com contas de teste. Considere as propostas:
+
+I. Executar SAST sobre o código da aplicação permite procurar padrões e fluxos potencialmente vulneráveis sem executar a aplicação analisada.
+II. A SCA pode restringir a verificação de vulnerabilidades às dependências diretas, pois a ausência de alertas nelas também afasta vulnerabilidades nas dependências transitivas.
+III. Executar DAST contra a aplicação em homologação, configurando a autenticação de teste, permite exercitar funcionalidades protegidas e analisar suas respostas.
+IV. A ausência de achados no SAST permite dispensar SCA e DAST, porque comprova a segurança das dependências e do comportamento da aplicação em execução.
+
+Está correto o que se afirma APENAS em
+A) I e II.
+B) II e IV.
+C) III e IV.
+D) II e III.
+E) I e III.
+
+QUESTÃO 33
+Em um servidor Red Hat Enterprise Linux 9, um administrador verifica os seguintes metadados, apresentados na ordem permissões, proprietário, grupo e caminho:
+
+drwx--x---  root  equipe  /srv/lotes
+-r--rw----  ana   equipe  /srv/lotes/saldo.csv
+
+A usuária ana não é root. Seus processos usam UID efetivo e fsuid de ana, GID efetivo e fsgid de equipe, sem grupos suplementares nem capacidades especiais. Os diretórios ancestrais permitem a travessia, e o sistema de arquivos está montado para leitura e escrita. Não há ACLs estendidas, links simbólicos ou restrições adicionais por SELinux ou atributos de arquivo.
+
+Considere acessos diretos, mantendo as permissões e as credenciais apresentadas. Para esses processos, as operações de listar os nomes contidos em /srv/lotes, ler saldo.csv por seu caminho completo conhecido e acrescentar dados ao conteúdo desse arquivo são, respectivamente,
+A) permitida, permitida e negada.
+B) negada, permitida e permitida.
+C) negada, permitida e negada.
+D) permitida, permitida e permitida.
+E) negada, negada e negada.
+
+QUESTÃO 34
+Em uma sessão do Windows PowerShell 5.1, no Windows Server 2022, a variável $servicos contém os objetos retornados por Get-Service para cinco serviços. As propriedades relevantes, capturadas no mesmo instante, são:
+
+Name  DisplayName    Status
+AppZ  Coletor Z      Running
+AppB  App Backup     Stopped
+AppA  App Agente     Running
+Sync  App Sincronia  Running
+Base  Servico Base   Running
+
+Um Analista precisa produzir objetos com as propriedades Name e Status, referentes somente aos serviços em execução cujo Name começa por App, ordenados de forma crescente por Name. Esses objetos serão utilizados em processamento posterior, que acessará as duas propriedades. Considere os cmdlets e operadores padrão, sem redefinições.
+
+O pipeline que atende a esses requisitos é
+A) $servicos | Where-Object { ($_.Status -eq 'Running') -or ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status
+B) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Format-Table Name, Status
+C) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.DisplayName -like 'App*') } | Sort-Object Name | Select-Object Name, Status
+D) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status
+E) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -eq 'App*') } | Sort-Object Name | Select-Object Name, Status
+
+QUESTÃO 35
+Duas LANs IPv6, L1 e L2, são enlaces distintos interligados somente por um roteador R, sem pontes ou túneis. H1 está em L1; H2 está em L2 e utiliza fe80::20 na interface desse enlace. Os endereços estão atribuídos e as interfaces estão operacionais.
+
+Uma aplicação em H1 precisa selecionar o endereço IPv6 que identifica todos os nós de L1 e avaliar se R pode encaminhar de L1 para L2 um pacote cujo destino seja fe80::20. Conforme a arquitetura de endereçamento IPv6, o endereço para todos os nós e a conclusão sobre esse encaminhamento são, respectivamente,
+A) ff02::1, como broadcast; R não pode encaminhar esse pacote para L2.
+B) ff02::2, como multicast; R não pode encaminhar esse pacote para L2.
+C) ff02::1, como multicast; R pode encaminhar esse pacote para L2 se houver rota estática.
+D) ff02::1, como multicast; R não pode encaminhar esse pacote para L2.
+E) ff02::1, como multicast; R pode encaminhar esse pacote para L2 se o Hop Limit recebido for maior que 1.
+
+QUESTÃO 36
+Em um ambiente de laboratório, o resolvedor DNS recursivo R não é autoritativo para a zona financeira.example. Em t = 0 s, R recebe do servidor autoritativo S o único registro A de api.financeira.example, com endereço 192.0.2.40 e TTL de 300 segundos, e o armazena em cache. Em t = 60 s, S altera esse registro para 192.0.2.80.
+
+R está configurado para reutilizar registros válidos do cache pelo TTL recebido. Não há limpeza do cache, redução de TTL, atualização antecipada ou outras consultas antes de t = 120 s. Nesse instante, um cliente sem cache local solicita a R a resolução recursiva do mesmo nome e tipo. Despreze os tempos de transmissão e processamento.
+
+O endereço do registro A devolvido por R, seu TTL restante e o valor do bit AA (Authoritative Answer) nessa resposta são, correta e respectivamente,
+A) 192.0.2.80 — 300 segundos — 0.
+B) 192.0.2.40 — 180 segundos — 0.
+C) 192.0.2.40 — 180 segundos — 1.
+D) 192.0.2.40 — 300 segundos — 0.
+E) 192.0.2.80 — 180 segundos — 1.
+
+QUESTÃO 37
+Um notebook N conecta-se a uma porta Ethernet do switch S. A autenticação IEEE 802.1X utiliza EAP e um servidor RADIUS R separado do switch. S repassa as mensagens EAP entre N e R e controla a autorização da porta conforme o resultado recebido de R. Considere essa implantação centralizada, sem autenticação local no switch.
+
+Os papéis IEEE 802.1X de N, S e R e o equipamento que atua como cliente RADIUS nesse processo são, correta e respectivamente,
+A) suplicante — servidor de autenticação — autenticador — S.
+B) autenticador — suplicante — servidor de autenticação — S.
+C) suplicante — autenticador — servidor de autenticação — N.
+D) suplicante — autenticador — servidor de autenticação — R.
+E) suplicante — autenticador — servidor de autenticação — S.
+
+QUESTÃO 38
+Um computador inicia um cliente DHCPv4 no estado INIT, sem endereço configurado, sem concessão anterior armazenada e sem servidor DHCP pré-configurado. Na mesma sub-rede, sem agente de retransmissão, ele transmite DHCPDISCOVER em broadcast e recebe duas ofertas válidas, de S1 e S2. O cliente seleciona a oferta de S2. Considere que a concessão será concluída sem perdas de mensagens ou conflito de endereços.
+
+Para solicitar a oferta escolhida, a próxima mensagem do cliente e a posterior mensagem de confirmação da concessão são, respectivamente,
+A) DHCPREQUEST, por unicast somente a S2; DHCPACK, enviado por S2.
+B) DHCPACK, em broadcast identificando S2 como escolhido; DHCPREQUEST, enviado por S2.
+C) DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPACK, enviado por S2.
+D) DHCPDECLINE, em broadcast identificando S1 como rejeitado; DHCPACK, enviado por S2.
+E) DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPOFFER, enviado por S2.
+
+QUESTÃO 39
+Uma instituição utiliza Prometheus em modo servidor e Alertmanager para monitorar aplicações que já expõem métricas em endpoints HTTP. A equipe deve distribuir as seguintes atividades entre esses dois componentes:
+
+I. Consultar periodicamente os endpoints e armazenar as amostras coletadas como séries temporais.
+II. Avaliar regras sobre essas séries para gerar alertas quando as condições configuradas forem atendidas.
+III. Agrupar os alertas recebidos e encaminhar as notificações aos destinatários definidos na configuração.
+
+Na arquitetura desses componentes, as atividades I, II e III cabem, correta e respectivamente, a
+A) Prometheus, Prometheus e Alertmanager.
+B) Prometheus, Alertmanager e Alertmanager.
+C) Alertmanager, Prometheus e Prometheus.
+D) Prometheus, Alertmanager e Prometheus.
+E) Alertmanager, Prometheus e Alertmanager.
+
+QUESTÃO 40
+Um cliente HTTPS automatizado acessa https://api.banco.example e verifica a identidade do servidor conforme a RFC 9525, sem exceções configuradas para divergências de identidade. O certificado apresentado possui somente portal.banco.example como dNSName na extensão subjectAltName e contém api.banco.example no campo Common Name (CN). A cadeia até uma âncora de confiança, o período de validade e as demais verificações do certificado foram aprovados. Os dois nomes DNS resolvem para o mesmo endereço IP.
+
+Nessas condições, o cliente deve
+A) prosseguir com a conexão, pois a cadeia confiável e o período de validade aprovado bastam para autenticar o nome do serviço solicitado.
+B) interromper a tentativa, pois o identificador apresentado na extensão subjectAltName não corresponde ao nome de referência do serviço solicitado.
+C) prosseguir com a conexão, pois a correspondência do Common Name permite substituir o nome divergente apresentado na extensão subjectAltName.
+D) interromper a tentativa, pois o certificado precisa conter o endereço IP em subjectAltName mesmo quando a URL identifica o servidor por nome DNS.
+E) prosseguir com a conexão, pois nomes DNS que resolvem para o mesmo endereço IP são equivalentes para a verificação da identidade do serviço.
+
+QUESTÃO 41
+Uma equipe compara os processos de autenticação abaixo. Em cada processo, todos os elementos indicados são exigidos no mesmo evento de autenticação. Considere implementações adequadas, sem mecanismos alternativos de acesso, e segredos dos tokens independentes das senhas e dos PINs.
+
+I. Digitação de uma senha memorizada e de um PIN também memorizado, ambos verificados diretamente pelo servidor.
+II. Digitação de uma senha memorizada e de um código de uso único gerado por token físico, que não exige fator adicional para gerar o código.
+III. Digitação de dois códigos de uso único, gerados por dois tokens físicos distintos, nenhum dos quais exige fator adicional para gerar seu código.
+IV. Uso de um dispositivo criptográfico com chave privada não exportável, cuja operação exige a entrada e a verificação de um PIN local em cada autenticação; o servidor verifica a resposta criptográfica produzida pelo dispositivo.
+
+A combinação de fatores de categorias distintas ocorre APENAS em
+A) I e II.
+B) I e III.
+C) II e III.
+D) II e IV.
+E) III e IV.
+
+QUESTÃO 42
+Uma API disponibiliza comprovantes por meio de GET /comprovantes/{id}, com identificadores numéricos sequenciais. A política estabelece que cada cliente pode consultar somente os próprios comprovantes. A autenticação funciona corretamente, e o servidor valida o token recebido. Entretanto, um cliente autenticado consegue obter o comprovante de outro cliente alterando o identificador na URL.
+
+Para corrigir a falha de controle de acesso descrita, de acordo com a categoria A01 do OWASP Top 10:2021, a equipe deve
+A) verificar no servidor, em cada solicitação, se o comprovante pertence ao cliente autenticado, negando a consulta quando essa condição não for satisfeita.
+B) substituir os identificadores sequenciais por UUIDs aleatórios, mantendo a consulta baseada apenas no identificador informado e na validade do token recebido.
+C) exigir MFA na autenticação de todos os clientes, mantendo a consulta de comprovantes condicionada apenas à presença de uma sessão autenticada.
+D) filtrar no aplicativo os links de comprovantes pelo cliente autenticado, mantendo a API apta a consultar qualquer identificador recebido de uma sessão válida.
+E) validar a assinatura e a expiração do token em cada consulta, mantendo o identificador de comprovante recebido como único critério para selecionar o documento.
+
+QUESTÃO 43
+Após identificar ransomware em um servidor, uma equipe o isolou da rede para impedir a propagação do incidente. O plano autoriza recuperar o serviço enquanto outras atividades de resposta prosseguem. Há um backup anterior à detecção, ainda sem verificação de integridade.
+
+De acordo com a NIST SP 800-61 Rev. 3, para recuperar o serviço, a equipe deve
+A) selecionar esse backup pela anterioridade à detecção, dispensando sua verificação, e conferir os ativos restaurados antes de recolocar o serviço em produção.
+B) verificar esse backup antes de usá-lo e dispensar a verificação dos ativos restaurados se a ferramenta informar que a cópia terminou sem erros.
+C) verificar esse backup antes de restaurar e, antes da produção, verificar os ativos restaurados e remediar as causas-raiz do incidente.
+D) verificar esse backup e os ativos restaurados e retomar a produção antes de corrigir a vulnerabilidade explorada, preservando-a para o diagnóstico posterior.
+E) manter o isolamento durante a restauração e usar a ausência de tráfego malicioso nesse intervalo como validação da integridade do backup e dos ativos.
+
+QUESTÃO 44
+Em um cenário fictício, uma instituição utiliza uma nuvem privada, destinada exclusivamente à organização e instalada no centro de dados de uma empresa contratada. Ela está integrada à nuvem pública do provedor P por tecnologia que permite a portabilidade de dados e aplicações, preservando a identidade de cada nuvem. A instituição também utiliza a nuvem pública do provedor Q, empresa distinta de P, para executar outra aplicação. Cada aplicação usa apenas um dos dois provedores públicos.
+
+Quanto à implantação e à diversidade de provedores, o ambiente descrito
+A) é híbrido, mas não multicloud, pois a integração tecnológica transforma as nuvens envolvidas em um único provedor.
+B) é multicloud, mas não híbrido, pois a nuvem privada está instalada fora das dependências da instituição.
+C) é híbrido e multicloud, pois há integração entre nuvens privada e pública e utilização de dois provedores públicos distintos.
+D) é multicloud, mas não híbrido, pois a preservação da identidade de cada nuvem impede que elas componham uma nuvem híbrida.
+E) é híbrido, mas não multicloud, pois cada aplicação utiliza apenas um dos dois provedores públicos.
+
+QUESTÃO 45
+Em um cenário fictício de governança de custos em nuvem, uma instituição identificou os custos diretos mensais por meio de metadados válidos de equipe. Os valores apurados e os orçamentos mensais são:
+
+Equipe   | Custos diretos | Orçamento
+Cartões  | R$ 18.000,00   | R$ 21.000,00
+Crédito  | R$ 12.000,00   | R$ 15.000,00
+
+Há também um custo compartilhado de R$ 6.000,00, ainda não incluído nos custos diretos. A política interna aprovada determina que ele seja integralmente rateado entre as duas equipes na proporção dos respectivos custos diretos. O acompanhamento deve somar a parcela rateada ao custo direto de cada equipe e sinalizar quando esse total ultrapassar seu orçamento. Os orçamentos já contemplam custos compartilhados. Todos os valores são finais para o mês, sem outros custos ou ajustes.
+
+Aplicando essa política, os custos totais atribuídos a Cartões e a Crédito e o resultado do acompanhamento são, respectivamente,
+A) R$ 21.000,00 e R$ 15.000,00; nenhum desvio por equipe deve ser sinalizado.
+B) R$ 21.600,00 e R$ 14.400,00; nenhum desvio por equipe deve ser sinalizado.
+C) R$ 18.000,00 e R$ 12.000,00; nenhum desvio por equipe deve ser sinalizado.
+D) R$ 24.000,00 e R$ 12.000,00; deve ser sinalizado excesso de R$ 3.000,00 em Cartões.
+E) R$ 21.600,00 e R$ 14.400,00; deve ser sinalizado excesso de R$ 600,00 em Cartões.
+
+QUESTÃO 46
+Uma instituição utiliza o Rancher Manager 2.x, instalado em um cluster de gerenciamento, para administrar um cluster Kubernetes preexistente que foi registrado no Rancher. O servidor Rancher fica indisponível, mas o plano de controle, os nós e a rede do cluster registrado permanecem operacionais. Uma Analista dispõe de um kubeconfig previamente configurado para acessar diretamente a API desse cluster, com credenciais válidas e permissões para consultar e alterar seus workloads, sem depender da autenticação ou do proxy do Rancher.
+
+Nessas condições, a Analista conclui corretamente que
+A) os Pods em execução continuam ativos, mas o agendamento de novos Pods depende do retorno do servidor Rancher.
+B) o acesso direto permite consultar os workloads, mas sua alteração exige o restabelecimento do proxy do Rancher.
+C) os workloads continuam sob o controle do Kubernetes, e sua administração pode prosseguir pelo acesso direto à API do cluster.
+D) o plano de controle mantém o estado desejado, mas os Pods precisam ser recriados para operar sem o servidor Rancher.
+E) o acesso direto permite manter os workloads existentes, mas novos Deployments exigem registrar novamente o cluster no Rancher.
+
+QUESTÃO 47
+Um Analista prepara testes de aceitação para um serviço de agendamento de transferências. Para uma conta e uma data escolhida, a regra de negócio estabelece:
+
+– A solicitação é confirmada se, e somente se, a conta estiver ativa e a soma do total já agendado com o valor solicitado não ultrapassar R$ 1.000,00.
+– Na confirmação, a tela exibe a mensagem “Confirmado” e o total agendado passa a incluir o valor solicitado.
+– Na recusa, a tela exibe a mensagem “Recusado” e o total agendado permanece inalterado.
+
+Após responder à solicitação, a tela sempre apresenta o total agendado para a conta e a data escolhidas. Foram definidos os seguintes casos, com execuções independentes e sem operações concorrentes. Os valores estão em reais.
+
+Caso | Situação da conta | Total já agendado | Valor solicitado
+I    | Ativa             | 800,00            | 200,00
+II   | Ativa             | 800,00            | 201,00
+III  | Inativa           | 800,00            | 100,00
+
+As saídas a serem verificadas na tela em I, II e III, indicadas pelo par (mensagem; total agendado), são, respectivamente:
+A) (Recusado; 800,00), (Recusado; 800,00) e (Recusado; 800,00).
+B) (Confirmado; 1.000,00), (Confirmado; 1.001,00) e (Recusado; 800,00).
+C) (Confirmado; 1.000,00), (Recusado; 800,00) e (Confirmado; 900,00).
+D) (Confirmado; 1.000,00), (Recusado; 1.001,00) e (Recusado; 900,00).
+E) (Confirmado; 1.000,00), (Recusado; 800,00) e (Recusado; 800,00).
+
+QUESTÃO 48
+Uma instituição gera mensalmente um relatório de valores por agência a partir de arquivos de operações. O processamento exclui operações canceladas, converte valores em moeda estrangeira e agrupa os resultados por agência. As regras de conversão foram alteradas após a publicação do relatório de setembro. Ao investigar uma divergência nesse relatório, a equipe pretende reconstituir sua origem e as transformações então realizadas.
+
+Para atender a esse objetivo por meio da linhagem de dados, deve manter um registro que relacione o relatório de setembro
+A) aos lotes de entrada e ao fluxo atualmente configurado, utilizando as regras vigentes na data da investigação para descrever a conversão.
+B) ao dicionário dos campos e às estruturas dos arquivos, utilizando a compatibilidade dos tipos para identificar as etapas executadas na apuração.
+C) aos horários de início e término das cargas e ao seu estado de conclusão, utilizando essas informações para identificar a derivação dos totais.
+D) aos resultados das validações de consistência e às aprovações dos responsáveis, utilizando essas evidências para identificar os arquivos que deram origem aos totais.
+E) aos lotes efetivamente utilizados, encadeando as entradas e saídas de cada etapa e identificando as regras aplicadas na execução que gerou a publicação.
+
+QUESTÃO 49
+Considere o texto abaixo.
+
+The team planned to move report production to a new system on Monday. In a trial, the new system produced reports faster than the current one, but several totals did not match. The team postponed the move, although the faster reports would have helped with the monthly review. It will set a new date only after it has explained the differences. Until then, staff will continue to produce reports with the current system.
+
+(Texto autoral.)
+
+Infere-se do texto que
+A) a equipe pretende usar o sistema novo na revisão mensal para descobrir a origem das diferenças.
+B) o adiamento decorre da necessidade de tornar o sistema atual mais rápido que o sistema novo.
+C) a definição da nova data permitirá à equipe iniciar a análise dos totais que não coincidiram.
+D) a equipe considera a maior velocidade insuficiente para realizar a migração enquanto as diferenças não forem esclarecidas.
+E) a equipe concluiu que os totais do sistema atual estavam incorretos e decidiu substituir esses relatórios.
+
+QUESTÃO 50
+Considere o texto abaixo.
+
+Every night, an office makes backup copies of its project files. During a weekly check, an analyst tries to open several of the copies on a separate computer. She divides the tested copies into two groups: those that can be opened and those that cannot. The latter are recorded in a report before she replaces them with new copies. She keeps the report so that the support team can investigate why the check failed.
+
+(Texto autoral.)
+
+No trecho “before she replaces them with new copies”, o pronome “them” refere-se especificamente
+A) aos arquivos dos projetos usados como origem para as cópias de segurança.
+B) a todas as cópias de segurança submetidas à verificação semanal.
+C) às cópias de segurança que não puderam ser abertas durante a verificação.
+D) às cópias de segurança que puderam ser abertas durante a verificação.
+E) às novas cópias de segurança utilizadas para substituir as anteriores.
+

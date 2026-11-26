@@ -1,0 +1,15 @@
+ID: BAN-DS-12-0003
+Versão: v01
+Matéria: Computação em nuvem
+Tópico: Nuvem hibrida e multicloud em cenario explicito
+
+ENUNCIADO
+Em um cenário fictício, uma instituição utiliza uma nuvem privada, destinada exclusivamente à organização e instalada no centro de dados de uma empresa contratada. Ela está integrada à nuvem pública do provedor P por tecnologia que permite a portabilidade de dados e aplicações, preservando a identidade de cada nuvem. A instituição também utiliza a nuvem pública do provedor Q, empresa distinta de P, para executar outra aplicação. Cada aplicação usa apenas um dos dois provedores públicos.
+
+Quanto à implantação e à diversidade de provedores, o ambiente descrito
+
+A) é híbrido, mas não multicloud, pois a integração tecnológica transforma as nuvens envolvidas em um único provedor.
+B) é multicloud, mas não híbrido, pois a nuvem privada está instalada fora das dependências da instituição.
+C) é híbrido e multicloud, pois há integração entre nuvens privada e pública e utilização de dois provedores públicos distintos.
+D) é multicloud, mas não híbrido, pois a preservação da identidade de cada nuvem impede que elas componham uma nuvem híbrida.
+E) é híbrido, mas não multicloud, pois cada aplicação utiliza apenas um dos dois provedores públicos.

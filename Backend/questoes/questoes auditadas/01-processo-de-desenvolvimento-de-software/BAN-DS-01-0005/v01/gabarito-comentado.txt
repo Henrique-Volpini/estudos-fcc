@@ -1,0 +1,34 @@
+ID: BAN-DS-01-0005
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar a quantidade máxima de novos itens que pode ser iniciada sob o limite de WIP declarado.
+
+RESOLUÇÃO
+O WIP inicial é 3 + 2 = 5, incluindo o item bloqueado. A conclusão de um item reduz o total para 4. A transferência dos dois itens entre etapas internas não cruza o ponto de finalização e, portanto, mantém o WIP em 4. Ao final, há um item em Implementação e três em Validação. A capacidade disponível pelo limite é 6 − 4 = 2 itens. Iniciar um também respeitaria o limite, mas o comando solicita a quantidade máxima.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando: um item poderia ser iniciado, mas não é o máximo. Esse valor mantém o WIP inicial de cinco e deixa de descontar a conclusão ocorrida em Validação.
+B) Atende ao comando: o WIP passa de cinco para quatro após a única conclusão. As duas mudanças de etapa preservam esse total; o limite de seis permite iniciar mais dois itens.
+C) Não atende ao comando: iniciar três elevaria o WIP de quatro para sete. O item bloqueado continua iniciado e não finalizado, logo não pode ser excluído da contagem.
+D) Não atende ao comando: iniciar quatro elevaria o WIP para oito. A passagem dos dois itens de Implementação para Validação não representa duas conclusões do fluxo.
+E) Não atende ao comando: iniciar cinco elevaria o WIP para nove. Esse valor resultaria de descontar indevidamente tanto o item bloqueado quanto as duas movimentações internas.
+
+FONTES TÉCNICAS CONSULTADAS E DELIMITAÇÃO DE ESCOPO
+- The Kanban Guide — edição de maio de 2025, John Coleman e Daniel Vacanti. https://kanbanguides.org/the-kanban-guide/2025.5/. Localizador: Defining and Visualizing the Workflow, elementos 2–5; Actively Managing Items in a Workflow; Flow Metrics, definição de WIP. Consulta em 26/11/2026. Sustenta contagem de itens iniciados e não finalizados, controle de WIP e capacidade para puxar novos itens.
+- FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 57, página 13, seção === PAGINA 13 === da extração local. Exemplo lido de cenário técnico delimitado com pedido de valor e cinco alternativas numéricas; somente formato.
+- Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item métodos ágeis (Scrum, Kanban, XP e similares). Delimitação do escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 57; página 13.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Cenário técnico com condições delimitadas, comando para determinar um valor e cinco alternativas numéricas curtas. A questão autoral aplica esse formato à contagem de WIP após três tipos de ocorrência.
+- Limites da referência: A referência trata de ICMP e orienta apenas a construção editorial. A cópia não é apresentada como download da FCC nem como certificação de integridade oficial; não sustenta a correção técnica de Kanban.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura via web do Kanban Guide, edição maio/2025, nas seções indicadas; conferidas as regras que sustentam a resposta e os quatro distratores.
+- Analítica: recontagem do WIP por estado e por eventos, obtendo quatro itens iniciados e não finalizados e duas vagas; conferidas individualmente as cinco quantidades propostas.
+- Editorial: leitura da questão 57, página 13, da extração local TRT4/2022; comparação com BAN-DS-01-0001 a BAN-DS-01-0004 do histórico SIM-001, sem repetição do objetivo. Não houve execução de software ou simulação de fluxo.
+
+PENDÊNCIAS
+Nenhuma de elaboração; versão sujeita à auditoria independente.

@@ -1,0 +1,21 @@
+ID: BAN-DS-02-0005
+Versão: v01
+Matéria: Gestão e Governança de Tecnologia da Informação
+Tópico: ROI de iniciativa de TI com custos e benefícios declarados
+
+ENUNCIADO
+Uma entidade avalia uma iniciativa de automação durante três anos completos. Todos os valores a seguir são fictícios, monetários e incrementais em relação à manutenção da situação atual.
+
+A implantação custa R$ 240.000,00, uma única vez, no início do período. A operação e a manutenção custam R$ 40.000,00 em cada um dos três anos. A automação evita despesas de R$ 180.000,00 em cada um desses anos; esse benefício é informado antes da dedução dos custos da iniciativa.
+
+Não há outros custos ou benefícios, tributos adicionais, valor residual, inflação ou desconto financeiro a considerar. Adote o ROI simples acumulado do período, sem anualização, calculado por:
+
+ROI = [(benefícios totais − custos totais) / custos totais] × 100
+
+O ROI da iniciativa nesses três anos é de
+
+A) 33,33%.
+B) 50%.
+C) 75%.
+D) 125%.
+E) 150%.

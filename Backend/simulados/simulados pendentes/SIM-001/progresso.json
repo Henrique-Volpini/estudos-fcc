@@ -4,7 +4,23 @@
   "simuladoHash": "8aeb1d232293f1b9e8747917891419997162b6261081c5d83085bfcb862da88f",
   "indiceAtual": 0,
   "iniciadoEm": "2026-11-26T22:05:32.036Z",
-  "atualizadoEm": "2026-11-26T22:05:32.037Z",
+  "atualizadoEm": "2026-11-26T22:35:17.504Z",
   "finalizadoEm": null,
-  "respostas": {}
+  "respostas": {
+    "BAN-DS-01-0003": {
+      "alternativa": "E",
+      "classificacao": "chutei",
+      "respondidaEm": "2026-11-26T22:17:10.806Z"
+    },
+    "BAN-DS-01-0001": {
+      "alternativa": "B",
+      "classificacao": "chutei",
+      "respondidaEm": "2026-11-26T22:29:11.418Z"
+    },
+    "BAN-DS-03-0001": {
+      "alternativa": "B",
+      "classificacao": null,
+      "respondidaEm": "2026-11-26T22:33:15.676Z"
+    }
+  }
 }

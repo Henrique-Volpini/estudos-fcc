@@ -1,0 +1,19 @@
+ID: BAN-DS-05-0009
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: Desenvolvimento de APIs RESTful: respostas HTTP
+
+ENUNCIADO
+Uma API RESTful utiliza a semântica HTTP da RFC 9110. Considere duas operações independentes.
+
+I. POST /clientes conclui o cadastro e cria um novo recurso de cliente antes de responder. A resposta identifica o recurso criado pelo cabeçalho Location.
+
+II. POST /relatorios aceita uma solicitação de geração e a coloca em uma fila. Ao responder, a geração ainda não terminou e poderá falhar posteriormente. O corpo da resposta informa a situação atual e uma URI para acompanhá-la.
+
+Os códigos de status que comunicam especificamente as situações I e II são, respectivamente,
+
+A) 201 Created e 204 No Content.
+B) 200 OK e 201 Created.
+C) 201 Created e 202 Accepted.
+D) 202 Accepted e 201 Created.
+E) 204 No Content e 202 Accepted.

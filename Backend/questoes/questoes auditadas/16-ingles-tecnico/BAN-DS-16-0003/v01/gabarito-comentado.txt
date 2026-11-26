@@ -1,0 +1,39 @@
+ID: BAN-DS-16-0003
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a inferência sustentada pelo texto, sem acrescentar causas, datas ou diagnósticos não informados.
+
+RESOLUÇÃO
+O ensaio apresenta dois resultados: o sistema novo produz relatórios mais rapidamente, mas alguns totais não coincidem. A terceira frase informa que a mudança foi adiada apesar do benefício da rapidez para a revisão mensal; although marca essa concessão. A quarta frase estabelece que a equipe somente marcará outra data depois de explicar as diferenças. A última mantém a produção no sistema atual nesse intervalo. A inferência delimitada é que a rapidez não foi suficiente para justificar a migração enquanto os resultados divergentes permanecessem sem explicação. Não se pode inferir qual sistema errou, uma nova data específica ou uma decisão definitiva de abandonar a mudança.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando. A última frase determina que os funcionários continuarão a produzir relatórios com o sistema atual enquanto as diferenças não forem explicadas. O texto não prevê usar o sistema novo na revisão mensal para investigar essas diferenças.
+B) Não atende ao comando. O ensaio já mostrou que o sistema novo é mais rápido. O adiamento está associado aos totais divergentes; não há plano de acelerar o sistema atual nem de fazê-lo superar o novo.
+C) Não atende ao comando. A expressão only after estabelece a ordem inversa: a explicação das diferenças deve preceder a definição da nova data. A alternativa apresenta a data como condição para iniciar a análise.
+D) Atende ao comando. Mesmo reconhecendo o benefício dos relatórios mais rápidos para a revisão mensal, a equipe adia a mudança e condiciona uma nova data ao esclarecimento das diferenças. Assim, a vantagem de velocidade, isoladamente, não bastou para manter a migração.
+E) Não atende ao comando. O ensaio identifica divergências, mas não determina qual sistema produziu os totais incorretos. Tampouco há decisão de substituir os relatórios do sistema atual; ele continuará em uso por enquanto.
+
+FONTES TÉCNICAS CONSULTADAS
+- Texto autoral sobre migração da produção de relatórios — /root/s2_elab_16. Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0003/v01/questao.txt — ENUNCIADO, cinco frases do texto em inglês; fonte primária do cenário e dos limites da inferência. Nenhuma passagem externa foi adaptada.
+- British Council — LearnEnglish: Contrasting ideas. https://learnenglish.britishcouncil.org/free-resources/grammar/c1/contrasting-ideas — Grammar explanation e subseção Although, though and even though; consulta em 26/11/2026. Sustenta a leitura concessiva de although; a conclusão sobre a migração decorre do texto autoral.
+- Conteúdo programático de conhecimentos específicos — Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt — Seção INGLÊS TÉCNICO.; delimitação do conteúdo.
+- FCC/TRT da 7ª Região — Analista Judiciário, Tecnologia da Informação, 2009 — itens de inglês no Qconcursos. https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 — Q128175, identificador do acervo: comando de inferência e cinco interpretações em português; comandos e opções Q128171–Q128175 lidos em 26/11/2026. Origem secundária.
+- Texto inglês associado aos itens FCC/TRT7/2009, imagem do acervo Qconcursos. Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg — Imagem integral visualizada: artigo adaptado sobre Intellipedia. Usada somente para conferir a relação entre texto inglês e itens de compreensão.
+- Registro local da referência FCC de inglês TRT7/2009. Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt — Identificação dos exemplos Q128171–Q128175 e limites dos metadados; confrontado com a página e a imagem reais.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 7ª Região; Analista Judiciário — Tecnologia da Informação; 2009.
+- Caderno, questão e página: Não obtido no acervo consultado; Q128175 — identificador do Qconcursos; número original não obtido; Página original não obtida; item consultado em HTML.
+- Origem verificável: Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; texto associado visualizado em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg
+- Característica observada: Texto em inglês seguido de comando inferencial e cinco formulações concorrentes em português.
+- Aplicação nesta questão autoral: Texto curto próprio, comando de inferência em português e cinco conclusões comparáveis que exigem respeitar os limites do texto.
+- Limites da referência: Referência histórica de 2009, sem autenticação oficial, sem número original, página ou caderno recuperados e sem inferência de frequência atual ou equivalência de dificuldade com o Banestes. Não foram reproduzidos o texto ou as opções da referência.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: escopo conferido no conteúdo programático e na atribuição das questões 49 e 50 do plano SIM-002; questões anteriores BAN-DS-16-0001 e BAN-DS-16-0002 lidas para evitar repetição dos objetivos.
+- Documental: a explicação do British Council foi consultada para a concessão introduzida por although. Não se exige conhecimento técnico externo sobre sistemas ou migração.
+- Documental de estilo: texto real visualizado na imagem e comandos e alternativas dos cinco itens de inglês lidos na página Qconcursos. A procedência secundária e os metadados ausentes foram registrados.
+- Analítica: confronto das cinco alternativas com as cinco frases do texto; apenas uma respeita simultaneamente o benefício reconhecido, o adiamento e a condição para uma nova data. Não houve execução de código para fundamentar a resposta.
+
+PENDÊNCIAS
+Auditoria posterior de estilo FCC, pistas de resposta e redação/conformidade. Nenhuma pendência de elaboração.

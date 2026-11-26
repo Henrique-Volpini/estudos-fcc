@@ -1,0 +1,38 @@
+ID: BAN-DS-11-0006
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar todos e somente os processos que combinam fatores de categorias distintas.
+Responsável pela elaboração: /root/s2_elab_11
+Dificuldade estimada: média
+
+RESOLUÇÃO
+I: senha e PIN verificados no servidor são dois segredos da categoria conhecimento; não há combinação de categorias. II: a senha é conhecimento e o token OTP é posse, formando dois fatores distintos. III: dois tokens OTP sem fator de ativação são dois autenticadores da mesma categoria, posse. IV: o dispositivo criptográfico é um fator de posse; seu PIN local, exigido em cada autenticação, acrescenta conhecimento, constituindo um autenticador multifator. Portanto, somente II e IV atendem ao comando, conforme a alternativa D. A conclusão é sobre as categorias dos fatores; não certifica atendimento integral a um nível de garantia do NIST.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. II combina conhecimento e posse, mas I exige dois segredos memorizados, ambos da categoria conhecimento. Duas entradas não criam duas categorias de fatores.
+B) Não atende. I usa somente conhecimento e III usa somente posse, embora cada processo solicite duas evidências. Nenhum deles combina categorias distintas.
+C) Não atende. II é uma combinação de conhecimento e posse, mas os dois tokens de III pertencem à mesma categoria de posse. A independência dos dispositivos não altera a categoria dos fatores.
+D) Atende. II combina a senha conhecida com a posse do token; IV combina a posse do dispositivo com o conhecimento do PIN de ativação, obrigatório a cada evento. São os dois processos com categorias distintas.
+E) Não atende. IV combina posse e conhecimento, mas III utiliza dois autenticadores de posse sem outro fator de ativação. Além disso, a combinação omite II, que também satisfaz o comando.
+
+FONTES TÉCNICAS CONSULTADAS
+- NIST SP 800-63B-4 — Authentication Assurance Levels. https://pages.nist.gov/800-63-4/sp800-63b/aal/. Localizador e uso: Seção 2.2 e 2.2.1: dois fatores distintos; autenticador multifator ou combinação de fatores separados; autenticador físico acompanhado de senha ou comparação biométrica. Sustenta a distinção entre quantidade de etapas e categorias.
+- NIST SP 800-63B-4 — Authenticator and Verifier Requirements. https://pages.nist.gov/800-63-4/sp800-63b/authenticators/. Localizador e uso: Seções 3.1.1 (senha e PIN como conhecimento), 3.1.4 (OTP de fator único como posse) e 3.1.7–3.1.7.1 (autenticador criptográfico multifator e ativação local em cada evento). Sustenta a classificação de I, II, III e IV.
+- Conteúdo-base — Segurança da Informação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Bloco SEGURANÇA DA INFORMAÇÃO: controle de acesso: autenticação, autorização e auditoria; RBAC e MFA.
+- FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 38. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Questão 38, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato.
+- Metadados do acervo de referências FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador e uso: Entrada trt4-2022-ti-a14-001, origem copia_secundaria.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 38; página impressa 9.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A questão 38 organiza quatro itens numerados e pede uma combinação limitada aos itens pertinentes, com cinco opções. A estrutura foi aplicada a quatro processos autorais de autenticação; o comando usa APENAS e as alternativas trazem pares comparáveis, sem aproveitar o conteúdo normativo antigo da referência.
+- Limites da referência: Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultadas as seções indicadas da NIST SP 800-63B-4, em 26/11/2026; essa fonte apoia o conceito de MFA, sem substituir edição normativa exigida no recorte de incidentes.
+- Analítica: classificados I–IV por conhecimento e posse; conferidas as cinco combinações. O fato de dois autenticadores serem independentes não os transforma em duas categorias. Somente uma alternativa reúne todos e somente os processos adequados.
+- Editorial: lida a questão 38, página 9, no caderno TRT4/2022 por extração local. Não houve execução de autenticadores, implementação de MFA ou aferição de nível de garantia.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria; sem aprovação registrada pelo elaborador.

@@ -1,0 +1,261 @@
+{
+  "elaborador": "07",
+  "responsavel": "/root/s2_elab_07",
+  "questoes": [
+    {
+      "id": "BAN-DS-07-0004",
+      "numero": 30,
+      "materia": "DevOps e DevSecOps",
+      "topico": "Blue/green deployment: troca de tráfego e rollback",
+      "versao": "v01",
+      "enunciado": "Uma equipe utiliza blue/green deployment. O ambiente blue mantém a versão 1, operacional e com capacidade para toda a carga, enquanto o green recebeu a versão 2 e passou a atender o tráfego de produção. Ambos usam o mesmo banco de dados e o mesmo repositório externo de sessões, cujo formato é compatível com ambas as versões. A migração de esquema foi apenas aditiva e sua compatibilidade com a versão 1 foi validada. As gravações feitas pela versão 2 são válidas e também podem ser lidas e atualizadas pela versão 1.\n\nFoi detectada uma regressão da versão 2 restrita à formatação das respostas, sem corrupção de dados. Não há requisições em andamento. Para reverter rapidamente a aplicação, aproveitando os ambientes existentes e preservando as gravações já confirmadas, a equipe deve",
+      "alternativas": {
+        "A": "redirecionar o tráfego ao blue e restaurar o banco a um snapshot anterior à ativação do green, para realinhar os dados à versão 1.",
+        "B": "manter o tráfego no green e reiniciar suas instâncias com a versão 2, para refazer a associação da aplicação ao banco compartilhado.",
+        "C": "redirecionar o tráfego ao blue e conservar o banco em seu estado atual, mantendo o esquema compatível durante a janela de rollback.",
+        "D": "redirecionar o tráfego ao blue e remover os campos ainda utilizados pela versão 1, para concluir a migração iniciada na implantação do green.",
+        "E": "replicar a versão 2 do green para o blue e então redirecionar o tráfego ao blue, para restaurar o ambiente anteriormente usado em produção."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. O snapshot anterior exclui as gravações válidas posteriores, contrariando a preservação exigida. A compatibilidade declarada dispensa esse retorno do banco.",
+        "B": "Não atende. Reiniciar a mesma versão mantém o código com a regressão; não restaura a versão 1 nem usa o blue para receber o tráfego.",
+        "C": "Atende. O blue preservado executa a versão 1 e suporta a carga. O banco atual, seu esquema e as sessões são compatíveis com ela; a troca de tráfego reverte a aplicação sem desfazer gravações.",
+        "D": "Não atende. Remover campos usados pela versão 1 rompe a compatibilidade necessária ao blue. A simples escolha do ambiente anterior não neutraliza uma alteração destrutiva do esquema.",
+        "E": "Não atende. Copiar a versão 2 para o blue mantém a regressão e elimina a versão 1 desse ambiente. A cor ou o nome do ambiente não determina a versão executada."
+      },
+      "resolucao": "A reversão aproveita a versão 1 preservada no blue: basta direcionar a ele as novas requisições nas condições declaradas. O banco compartilhado já contém as gravações válidas, e a compatibilidade de esquema, dados e sessões foi explicitada. Portanto, o rollback da aplicação não exige restaurar um snapshot nem eliminar campos. A conclusão depende dessas premissas; uma mudança incompatível de esquema ou de estado exigiria outro planejamento.",
+      "fontes": [
+        {
+          "titulo": "AWS Whitepaper — Blue/Green Deployments on AWS — Introduction",
+          "url": "https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/introduction.html",
+          "localizador": "Blue/Green Deployment Methodology, parágrafos sobre redirecionamento de tráfego e retorno ao ambiente blue",
+          "sustenta": "Troca de tráfego entre ambientes e rollback da aplicação pela volta ao ambiente anterior preservado.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "AWS Whitepaper — Best Practices for Managing Data Synchronization and Schema Changes",
+          "url": "https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/best-practices-for-managing-data-synchronization-and-schema-changes.html",
+          "localizador": "Best Practices for Managing Data Synchronization and Schema Changes; Decoupling Schema Changes from Code Changes",
+          "sustenta": "Dados atuais para rollback, banco compartilhado e compatibilidade entre versões; remoções de esquema podem tornar a versão anterior inoperante.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 32, página 8",
+          "sustenta": "Formato editorial de contexto tecnológico seguido de cinco afirmações sobre funcionamento, com os limites registrados na referência de estilo.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "fontes, id trt4-2022-ti-a14-001",
+          "sustenta": "Identificação da cópia secundária e dos arquivos locais consultados.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "DEVOPS E DEVSECOPS: estratégias de blue/green deployment e canary releases. Observação final sobre legislação consultada.",
+          "sustenta": "Delimitação do tópico cobrado.",
+          "consultadoEm": "2026-11-26"
+        }
+      ],
+      "autor": "/root/s2_elab_07",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: páginas primárias da AWS navegadas em 26/11/2026 e exemplo FCC lido na extração local. Analítica: cada alternativa foi confrontada com versão executada, destino do tráfego, persistência dos dados e compatibilidade do esquema. Não houve execução de deployment, migração ou teste de software. Conferida a distinção em relação aos objetivos das três questões anteriores do elaborador 07.",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Contextualização de uma tecnologia em cenário de microsserviços, seguida de cinco afirmações sobre seu funcionamento. Aplicação autoral: o cenário operacional delimita blue/green e as cinco opções apresentam ações comparáveis para o mesmo objetivo, sem reproduzir o conteúdo de Spring Cloud Config.",
+          "limites": "Cópia secundária hospedada no Qconcursos, identificada em fontes.json; a extração textual local foi efetivamente lida. Não se afirma download da FCC nem integridade oficial. O exemplo sustenta apenas o formato observado, sem comprovar frequência editorial ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-07-0005",
+      "numero": 31,
+      "materia": "DevOps e DevSecOps",
+      "topico": "Observabilidade: papéis complementares de logs, métricas e traces",
+      "versao": "v01",
+      "enunciado": "Uma API disparou um alerta por aumento do percentil 95 da latência, calculado a partir das durações de todas as requisições de uma janela de cinco minutos. A equipe também coleta traces por amostragem. Um trace de requisição lenta, com spans correlacionados entre os serviços, mostra que a maior parte da duração ocorreu durante uma chamada ao serviço de cadastro. Nos logs da API, um registro com o mesmo trace_id informa timeout dessa chamada.\n\nA interpretação adequada dos sinais disponíveis é:",
+      "alternativas": {
+        "A": "A mensagem de timeout, correlacionada ao trace, demonstra que a causa da lentidão é um defeito no código do serviço de cadastro.",
+        "B": "As métricas resumem o comportamento observado no período; os spans localizam a demora na requisição coletada, e os logs acrescentam eventos correlacionados.",
+        "C": "O trace da requisição lenta fornece a distribuição de latência de todas as chamadas da janela, podendo substituir a métrica usada no alerta.",
+        "D": "Os logs com o mesmo trace_id devem ser tratados como eventos sem vínculo com a requisição, pois esse identificador relaciona apenas os spans entre si.",
+        "E": "A ausência de trace para uma requisição permite descartá-la da investigação de lentidão, pois a amostragem preserva necessariamente todas as chamadas com falha."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. O timeout registra o evento observado pela API, mas não demonstra sua causa. Demora na rede ou em outra dependência também pode participar do tempo da chamada; o trace não comprova um defeito de código no cadastro.",
+        "B": "Atende. A métrica sintetiza as latências da janela; os spans detalham operações daquela requisição; o log registra o timeout e seu trace_id permite correlacioná-lo a ela. Os sinais acrescentam perspectivas complementares.",
+        "C": "Não atende. A duração de uma requisição selecionada não fornece a distribuição das demais. As métricas do cenário abrangem todas as requisições; os traces são amostrados e detalham execuções específicas.",
+        "D": "Não atende. Um registro de log pode carregar TraceId e SpanId justamente para correlação com a execução. No cenário, o mesmo trace_id vincula o evento registrado à requisição investigada.",
+        "E": "Não atende. Uma requisição pode não ter sido exportada por causa da amostragem, mesmo sendo relevante. Sem uma política que declare essa garantia, não se pode pressupor retenção de todas as falhas."
+      },
+      "resolucao": "A métrica revela a mudança no comportamento agregado das latências. O trace permite decompor uma requisição em operações e observar onde seu tempo se concentrou. O log registra o timeout e, pelo trace_id, acrescenta contexto à mesma execução. Essa correlação orienta a investigação, mas um trace amostrado não substitui a distribuição de latências nem o timeout identifica isoladamente a causa da demora.",
+      "fontes": [
+        {
+          "titulo": "OpenTelemetry Documentation — Metrics",
+          "url": "https://opentelemetry.io/docs/concepts/signals/metrics/",
+          "localizador": "Metrics, parágrafos iniciais; Metric Instruments, Histogram; Aggregation",
+          "sustenta": "Medições em tempo de execução, distribuição de latências e agregação em janelas temporais.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "OpenTelemetry Documentation — Traces",
+          "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+          "localizador": "Context Propagation; Spans; Span Context",
+          "sustenta": "Operações representadas por spans, tempos inicial e final, relação entre serviços e identificação do trace.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "OpenTelemetry Documentation — Logs",
+          "url": "https://opentelemetry.io/docs/concepts/signals/logs/",
+          "localizador": "Logs; OpenTelemetry logs for applications; Log Record, campos TraceId e SpanId",
+          "sustenta": "Registros de eventos e correlação de logs com uma requisição por identificadores de trace e span.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "OpenTelemetry Documentation — Sampling",
+          "url": "https://opentelemetry.io/docs/concepts/sampling/",
+          "localizador": "Terminology; Why sampling?; Head Sampling, limitação quanto à seleção de todos os traces com erros",
+          "sustenta": "Traces podem não ser exportados; a amostragem não implica retenção de toda requisição com falha.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 32, página 8",
+          "sustenta": "Formato editorial de contexto tecnológico seguido de cinco afirmações completas, com os limites registrados na referência de estilo.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "fontes, id trt4-2022-ti-a14-001",
+          "sustenta": "Identificação da cópia secundária e dos arquivos locais consultados.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "DEVOPS E DEVSECOPS: observabilidade (logs, métricas e traces); Observação final sobre legislação consultada.",
+          "sustenta": "Delimitação do tópico cobrado.",
+          "consultadoEm": "2026-11-26"
+        }
+      ],
+      "autor": "/root/s2_elab_07",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: documentação primária do OpenTelemetry navegada em 26/11/2026, incluindo spans, agregação, correlação de logs e amostragem; exemplo FCC lido na extração local. Analítica: diferenciação entre cobertura das métricas da janela e de um trace selecionado; análise de correlação sem inferir causa não demonstrada. Não houve coleta real de telemetria ou execução de software. Conferido que o objetivo não repete as questões anteriores do elaborador 07.",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Enunciado contextualizado com identificação de uma propriedade correta e cinco afirmações completas. Aplicação autoral: os dados do incidente delimitam a análise e as alternativas oferecem interpretações comparáveis. O conteúdo e os exemplos de telemetria são autorais.",
+          "limites": "Cópia secundária hospedada no Qconcursos, identificada em fontes.json; a extração textual local foi efetivamente lida. Não se afirma download da FCC nem integridade oficial. O exemplo sustenta apenas o formato observado, sem comprovar frequência editorial ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-07-0006",
+      "numero": 32,
+      "materia": "DevOps e DevSecOps",
+      "topico": "DevSecOps: controles de segurança em pipeline (SAST, DAST e dependências)",
+      "versao": "v01",
+      "enunciado": "Uma equipe está incluindo controles de segurança na pipeline de uma aplicação web que utiliza bibliotecas de terceiros e possui funcionalidades autenticadas. A pipeline permite inspecionar o código e as dependências antes da implantação e executar a aplicação em um ambiente de homologação isolado, com contas de teste. Considere as propostas:\n\nI. Executar SAST sobre o código da aplicação permite procurar padrões e fluxos potencialmente vulneráveis sem executar a aplicação analisada.\nII. A SCA pode restringir a verificação de vulnerabilidades às dependências diretas, pois a ausência de alertas nelas também afasta vulnerabilidades nas dependências transitivas.\nIII. Executar DAST contra a aplicação em homologação, configurando a autenticação de teste, permite exercitar funcionalidades protegidas e analisar suas respostas.\nIV. A ausência de achados no SAST permite dispensar SCA e DAST, porque comprova a segurança das dependências e do comportamento da aplicação em execução.\n\nEstá correto o que se afirma APENAS em",
+      "alternativas": {
+        "A": "I e II.",
+        "B": "II e IV.",
+        "C": "III e IV.",
+        "D": "II e III.",
+        "E": "I e III."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende. I é verdadeira, pois o SAST faz análise estática. II é falsa: dependências transitivas podem conter vulnerabilidades próprias e devem integrar a análise de composição.",
+        "B": "Não atende. II exclui indevidamente dependências transitivas. IV atribui ao resultado do SAST uma garantia que ele não oferece sobre composição e comportamento em execução.",
+        "C": "Não atende. III é verdadeira: o DAST pode atingir funcionalidades protegidas quando a autenticação foi configurada. IV é falsa, pois ausência de achados estáticos não torna os controles substituíveis.",
+        "D": "Não atende. III descreve o uso de DAST no ambiente previsto, mas II limita indevidamente a SCA às dependências diretas.",
+        "E": "Atende. I corresponde à análise estática sem execução da aplicação, e III corresponde ao teste dinâmico de funcionalidades autenticadas em homologação. II e IV ignoram limites e objetos distintos dos controles."
+      },
+      "resolucao": "I é verdadeira: SAST inspeciona código e fluxos sem executar a aplicação. II é falsa: SCA precisa considerar os componentes diretos e transitivos efetivamente utilizados; a biblioteca intermediária não torna segura sua dependência. III é verdadeira: DAST interage com a aplicação em execução, e a autenticação configurada permite alcançar áreas protegidas. IV é falsa: nenhum resultado sem achados no SAST comprova, por si só, segurança das dependências ou cobertura do comportamento dinâmico. Assim, apenas I e III são verdadeiras.",
+      "fontes": [
+        {
+          "titulo": "OWASP DevSecOps Guideline — Static Application Security Testing (SAST)",
+          "url": "https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-1-Static-Analysis/2-3-1-1-Static-Application-Security-Testing/",
+          "localizador": "Definição inicial; How SAST works mechanically; Strengths and limitations",
+          "sustenta": "Análise de código sem executar a aplicação e limites da análise estática diante do contexto de execução.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "OWASP DevSecOps Guideline — Software Composition Analysis (SCA)",
+          "url": "https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis/",
+          "localizador": "What SCA covers; Understanding transitive dependencies; Integrating SCA in the pipeline",
+          "sustenta": "Inventário e análise de vulnerabilidades de dependências diretas e transitivas, com verificações no ciclo de entrega.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "OWASP DevSecOps Guideline — Dynamic Application Security Testing (DAST)",
+          "url": "https://owasp.github.io/DevSecOpsGuideline/2-Process/2-4-Test/2-4-2-Dynamic-Application-Security-Testing/",
+          "localizador": "Definição inicial; Strengths and limitations; Running DAST well; Handling authenticated flows",
+          "sustenta": "Teste externo de aplicação em execução e autenticação configurada para cobrir funcionalidades protegidas.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 38, página 9",
+          "sustenta": "Formato editorial com itens numerados e seleção de subconjuntos, com os limites registrados na referência de estilo.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "fontes, id trt4-2022-ti-a14-001",
+          "sustenta": "Identificação da cópia secundária e dos arquivos locais consultados.",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "DEVOPS E DEVSECOPS: segurança em pipelines (DevSecOps); Observação final sobre legislação consultada.",
+          "sustenta": "Delimitação do tópico cobrado.",
+          "consultadoEm": "2026-11-26"
+        }
+      ],
+      "autor": "/root/s2_elab_07",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: páginas primárias da OWASP DevSecOps Guideline navegadas em 26/11/2026 e exemplo FCC lido na extração local. Analítica: avaliação explícita das proposições I a IV e das cinco combinações, com uma única combinação formada apenas pelas duas proposições verdadeiras. Não houve execução de scanners ou de pipeline. Conferido objetivo distinto das questões anteriores do elaborador 07.",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 38,
+          "pagina": 9,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Contextualização em aplicações de uma organização, quatro itens numerados e alternativas que selecionam subconjuntos dos itens. Aplicação autoral: quatro propostas autorais em cenário de pipeline; o comando delimita a seleção das verdadeiras e as opções mantêm pares comparáveis.",
+          "limites": "Cópia secundária hospedada no Qconcursos, identificada em fontes.json; a extração textual local foi efetivamente lida. Não se afirma download da FCC nem integridade oficial. O exemplo sustenta apenas o formato observado, sem comprovar frequência editorial ou correção técnica atual."
+        }
+      ]
+    }
+  ]
+}

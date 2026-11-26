@@ -1,0 +1,20 @@
+ID: BAN-DS-11-0006
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: MFA: fatores de autenticação
+
+ENUNCIADO
+Uma equipe compara os processos de autenticação abaixo. Em cada processo, todos os elementos indicados são exigidos no mesmo evento de autenticação. Considere implementações adequadas, sem mecanismos alternativos de acesso, e segredos dos tokens independentes das senhas e dos PINs.
+
+I. Digitação de uma senha memorizada e de um PIN também memorizado, ambos verificados diretamente pelo servidor.
+II. Digitação de uma senha memorizada e de um código de uso único gerado por token físico, que não exige fator adicional para gerar o código.
+III. Digitação de dois códigos de uso único, gerados por dois tokens físicos distintos, nenhum dos quais exige fator adicional para gerar seu código.
+IV. Uso de um dispositivo criptográfico com chave privada não exportável, cuja operação exige a entrada e a verificação de um PIN local em cada autenticação; o servidor verifica a resposta criptográfica produzida pelo dispositivo.
+
+A combinação de fatores de categorias distintas ocorre APENAS em
+
+A) I e II.
+B) I e III.
+C) II e III.
+D) II e IV.
+E) III e IV.

@@ -1,0 +1,42 @@
+ID: BAN-DS-06-0006
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Identificar a decisão adequada sobre preservação da interação e avaliação da mudança contratual.
+
+RESOLUÇÃO
+O contrato estabelece o que é trocado e o significado da interação. A troca de linguagem ou armazenamento pode ficar oculta aos consumidores se a interação acordada for preservada. Alterar situacao de restrição cadastral para aptidão contratual muda a informação fornecida. A manutenção de nome, tipo e endereço não elimina esse impacto: é necessário avaliar a compatibilidade da mudança contratual.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende: trocar a implementação pode preservar o serviço observável. Já mudar a informação que situacao representa altera o acordo semântico e exige análise de compatibilidade.
+B) Não atende: mensagens com os mesmos nomes e tipos podem transmitir significados diferentes; compatibilidade estrutural não assegura a preservação do significado cadastral contratado.
+C) Não atende: vincular consumidores às tabelas internas cria dependência do armazenamento que se pretende substituir; interpretar dados por conta própria não preserva a interação contratada.
+D) Não atende: consumidores não precisam adotar a linguagem do provedor para interagir pelo contrato. Essa exigência introduz uma dependência tecnológica sem resolver a mudança semântica.
+E) Não atende: alcançar o endereço garante apenas uma condição de comunicação; a conectividade não conserva o significado de situacao nem os efeitos esperados da consulta.
+
+FONTES TÉCNICAS CONSULTADAS
+- OASIS — Reference Model for Service Oriented Architecture 1.0 — OASIS Standard, 12/10/2006. https://docs.oasis-open.org/soa-rm/v1.0/soa-rm.pdf. Localizador: Seção 3.1 Service, pp.12–13; seção 3.3.1 Service description, pp.20–22; seção 3.3.1.4 Service Interface, p.22; seção 3.3.2.2 Service Contract, p.24. Consulta em 26/11/2026. Sustenta ocultação da implementação e a descrição da interação, de seus efeitos e dos acordos entre participantes.
+- W3C — Web Services Architecture — Working Group Note de 11/02/2004. https://www.w3.org/TR/ws-arch/. Localizador: Seções 1.4.1 Agents and Services, 1.4.3 Service Description e 1.4.4 Semantics. Consulta em 26/11/2026. Distingue implementação concreta, mecânica das mensagens e significado/propósito do contrato. É uma nota histórica sobre Web Services, usada para esses conceitos, sem impor SOAP ou WSDL a toda SOA.
+- Programa-base — Arquitetura de sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 32, página 8, na extração local com marcadores de página; uso editorial.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 33, página 8, na extração local com marcadores de página; uso editorial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Apresentação de um contexto de microsserviços e comando completado por afirmações técnicas sobre o recurso descrito.
+  Aplicação nesta questão autoral: O cenário de serviço cadastral conduz a cinco decisões técnicas comparáveis, cada uma distinguindo preservação do contrato e dependências indevidas.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Cenário operacional protagonizado por um Analista, com detalhes necessários à escolha de uma solução.
+  Aplicação nesta questão autoral: A troca de implementação e o significado concreto do campo são dados autorais usados para avaliar o contrato; não são reproduzidas as anotações cobradas na prova.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: consultados o modelo de referência OASIS e as seções indicadas da nota W3C, distinguindo contrato, descrição de interface e implementação. Analítica: separadas mudanças internas e alteração semântica observável; examinadas as cinco decisões propostas. Não houve execução de serviço. Editorial: lidas Q32 e Q33/p.8 do TRT4/2022 no acervo local. Independência: as questões anteriores do elaborador 06 não cobravam contratos SOA.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

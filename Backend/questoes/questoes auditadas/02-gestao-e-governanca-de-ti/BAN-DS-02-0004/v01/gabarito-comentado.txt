@@ -1,0 +1,46 @@
+ID: BAN-DS-02-0004
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a conduta que desdobra no PDTIC a orientação estratégica do PETIC.
+
+RESOLUÇÃO
+O PETIC orienta estrategicamente a TIC a partir do planejamento institucional. Na situação apresentada, o PDTIC deve traduzir essa direção em necessidades, metas e ações executáveis e acompanháveis. A escolha coerente vincula os desdobramentos ao objetivo de atendimento e à diretriz de interoperabilidade, prevendo recursos, prazos e indicadores. O Guia SISP admite que o PDTIC incorpore elementos estratégicos; portanto, a distinção usada aqui não estabelece uma proibição geral de conteúdo estratégico no PDTIC. O enunciado delimita a entidade que mantém os dois documentos.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O PDTIC contém desdobramentos táticos em metas e ações; os planos operacionais devem estar alinhados a ele. Apenas repetir diretrizes e desvincular a execução deixa sem tratamento a passagem da orientação estratégica para sua realização.
+B) Não atende. A ordem de recebimento informa quando a demanda chegou, mas não demonstra sua contribuição para o objetivo de atendimento ou a diretriz de interoperabilidade. O alinhamento exige relacionar as necessidades às estratégias e usar critérios de priorização pertinentes.
+C) Não atende. A alternativa inverte o direcionamento apresentado: as escolhas de TIC devem apoiar a estratégia institucional e a de TIC. Adequar os objetivos a aquisições previamente escolhidas não demonstra que essas aquisições atendam às necessidades estratégicas.
+D) Atende. A relação entre necessidades, objetivos, metas e ações permite desdobrar no nível tático a orientação do PETIC. Recursos e prazos permitem planejar a execução; indicadores permitem acompanhar a contribuição para os resultados pretendidos.
+E) Não atende. A vigência pode ser compatibilizada, mas coincidência de datas não demonstra contribuição das iniciativas aos objetivos estratégicos. O vínculo de conteúdo entre os planos continua necessário.
+
+FONTES TÉCNICAS CONSULTADAS
+- Guia de PDTIC do SISP, versão 2.1, Secretaria de Governo Digital, dezembro de 2021. Seções 3.7.5 e 3.7.6, páginas impressas 24–26; processo 1.6, páginas 44–45; processo 3.3, páginas 82–84; seção 8, página 136, Modelo de Plano de Metas e Ações. Consulta: 2026-11-26.
+  URL: https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/sisp/guia-do-gestor/documentos/guia-de-pdtic-do-sisp-2-1/@@download/file/Guia%20de%20PDTIC%20do%20SISP%20v2.1.pdf
+  Fundamentação: Distinção e integração PETIC/PDTIC, metas e ações, critérios de priorização e acompanhamento.
+- Plano Diretor de TIC – Governo Digital. Trecho "O que o PDTIC deve ter?" e FAQ sobre instrumento de alinhamento. Consulta: 2026-11-26.
+  URL: https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/sisp/guia-do-gestor/pdtic
+  Fundamentação: Inventário priorizado, metas e ações, planejamento de recursos e processo formal de acompanhamento; usado como apoio conceitual, sem transpor obrigação do SISP à entidade do cenário.
+- Conteúdo programático local – Desenvolvimento de Sistemas. Bloco Gestão e Governança de Tecnologia da Informação: planejamento estratégico de TIC (PETIC, PDTIC). Consulta: 2026-11-26.
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+- FCC – TRT4/2022 – Analista Judiciário – Tecnologia da Informação. Caderno A14, Tipo 001, questão 59, página 14. Consulta: 2026-11-26.
+  URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf
+  Fundamentação: Referência editorial; limites e aplicação registrados em referenciasEstilo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário – Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 59; página 14.
+- Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Uma Analista aplica conceitos de governança em um contexto breve; o comando é completado por cinco alternativas comparáveis.
+- Aplicação nesta questão autoral: Contexto breve de planejamento de TIC, comando afirmativo e cinco procedimentos comparáveis. Não foram reutilizados princípios COBIT ou alternativas da referência.
+- Limites da referência: Referência de formato de uma questão específica; a cópia foi hospedada pelo Qconcursos, não obtida diretamente da FCC. Não foi verificada assinatura digital nem autenticidade oficial do arquivo. O conteúdo antigo não foi usado como fonte de correção técnica atual nem como evidência de frequência da banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: Guia SISP 2.1 consultado via navegação web, especialmente distinção e alinhamento dos instrumentos. Não se atribuiu ao guia força de lei nem se estendeu a regulamentação federal do SISP a qualquer entidade.
+- Analítica: cada alternativa foi confrontada com o cenário; o vínculo entre estratégia e execução diferencia a resposta de cópia textual, ordem de chegada, aquisições predeterminadas e mera coincidência de vigência.
+- Editorial: questão real FCC consultada por extração e imagem recortada do PDF local, renderizada em memória; questão 59, página 14.
+- Rodízio: comparadas BAN-DS-02-0001 a 0003 em questoes-anteriores.json; a nova questão não repete classificação COBIT, comparação TCO ou compromissos OLA.
+- Não houve execução de sistema, teste de software ou simulação institucional; a verificação foi documental e analítica.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria independente.

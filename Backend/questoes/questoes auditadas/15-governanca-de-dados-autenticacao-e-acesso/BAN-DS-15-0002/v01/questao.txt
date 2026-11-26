@@ -1,0 +1,15 @@
+ID: BAN-DS-15-0002
+Versão: v01
+Matéria: Governança de dados, autenticação e controle de acesso
+Tópico: Governanca de dados: linhagem da origem e das transformacoes
+
+ENUNCIADO
+Uma instituição gera mensalmente um relatório de valores por agência a partir de arquivos de operações. O processamento exclui operações canceladas, converte valores em moeda estrangeira e agrupa os resultados por agência. As regras de conversão foram alteradas após a publicação do relatório de setembro. Ao investigar uma divergência nesse relatório, a equipe pretende reconstituir sua origem e as transformações então realizadas.
+
+Para atender a esse objetivo por meio da linhagem de dados, deve manter um registro que relacione o relatório de setembro
+
+A) aos lotes de entrada e ao fluxo atualmente configurado, utilizando as regras vigentes na data da investigação para descrever a conversão.
+B) ao dicionário dos campos e às estruturas dos arquivos, utilizando a compatibilidade dos tipos para identificar as etapas executadas na apuração.
+C) aos horários de início e término das cargas e ao seu estado de conclusão, utilizando essas informações para identificar a derivação dos totais.
+D) aos resultados das validações de consistência e às aprovações dos responsáveis, utilizando essas evidências para identificar os arquivos que deram origem aos totais.
+E) aos lotes efetivamente utilizados, encadeando as entradas e saídas de cada etapa e identificando as regras aplicadas na execução que gerou a publicação.

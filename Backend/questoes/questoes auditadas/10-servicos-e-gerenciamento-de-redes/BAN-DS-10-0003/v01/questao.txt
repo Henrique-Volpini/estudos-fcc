@@ -1,0 +1,15 @@
+ID: BAN-DS-10-0003
+Versão: v01
+Matéria: Serviços e gerenciamento de redes
+Tópico: DHCP: concessão inicial de endereços
+
+ENUNCIADO
+Um computador inicia um cliente DHCPv4 no estado INIT, sem endereço configurado, sem concessão anterior armazenada e sem servidor DHCP pré-configurado. Na mesma sub-rede, sem agente de retransmissão, ele transmite DHCPDISCOVER em broadcast e recebe duas ofertas válidas, de S1 e S2. O cliente seleciona a oferta de S2. Considere que a concessão será concluída sem perdas de mensagens ou conflito de endereços.
+
+Para solicitar a oferta escolhida, a próxima mensagem do cliente e a posterior mensagem de confirmação da concessão são, respectivamente,
+
+A) DHCPREQUEST, por unicast somente a S2; DHCPACK, enviado por S2.
+B) DHCPACK, em broadcast identificando S2 como escolhido; DHCPREQUEST, enviado por S2.
+C) DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPACK, enviado por S2.
+D) DHCPDECLINE, em broadcast identificando S1 como rejeitado; DHCPACK, enviado por S2.
+E) DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPOFFER, enviado por S2.

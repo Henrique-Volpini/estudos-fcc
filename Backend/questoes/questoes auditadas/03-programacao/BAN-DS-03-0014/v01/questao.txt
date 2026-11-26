@@ -1,0 +1,15 @@
+ID: BAN-DS-03-0014
+Versão: v01
+Matéria: Programação
+Tópico: Desenvolvimento guiado por testes
+
+ENUNCIADO
+Uma equipe usa TDD para desenvolver uma regra de tarifas. Primeiro, escreve um teste para um comportamento ainda não implementado e verifica que ele falha pelo resultado esperado ainda não ser produzido. Depois, faz uma pequena alteração na implementação e confirma que o teste novo e todos os anteriores passam. Ao examinar o código, identifica uma duplicação que pretende remover no mesmo ciclo.
+
+A intervenção que corresponde à etapa refactor desse ciclo é
+
+A) implementar a próxima regra de tarifa e, depois de validá-la manualmente, escrever seu teste automatizado.
+B) remover a duplicação preservando o comportamento e executar novamente os testes para verificar que continuam passando.
+C) ampliar os resultados aceitos pelas asserções para que a implementação possa ser simplificada sem falhas na suíte.
+D) modificar a regra de tarifa para eliminar os casos especiais e ajustar os resultados esperados nos testes existentes.
+E) reescrever a implementação para atender às regras futuras e executar a suíte depois de concluir todas essas funcionalidades.

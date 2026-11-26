@@ -1,0 +1,44 @@
+ID: BAN-DS-09-0006
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar, na ordem pedida, os três papéis IEEE 802.1X e o cliente RADIUS da implantação descrita.
+
+RESOLUÇÃO
+N busca acesso pela porta e participa como suplicante. S atua como autenticador IEEE 802.1X: intermedeia a troca EAP e controla a autorização da porta. R verifica a identidade no serviço de autenticação. No protocolo RADIUS, o switch S é cliente do servidor R. Ser chamado de cliente 802.1X não torna N o cliente RADIUS. Esses papéis decorrem da implantação centralizada descrita; não se afirma que IEEE 802.1X sempre exige um servidor RADIUS externo.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: troca os papéis de S e R. S intermedeia a autenticação e controla a porta; R presta o serviço que verifica a identidade do suplicante.
+B) Não atende: inverte N e S. O notebook é a entidade autenticada, enquanto o switch exige a autenticação e aplica seu resultado ao acesso pela porta.
+C) Não atende: os três papéis IEEE 802.1X estão associados corretamente, mas N não é o cliente RADIUS nessa implantação. N troca EAPOL com S; S faz a comunicação RADIUS com R.
+D) Não atende: os três papéis IEEE 802.1X estão associados corretamente, mas R é o servidor RADIUS. O cliente RADIUS que lhe encaminha as solicitações é S.
+E) Atende: N é o suplicante, S é o autenticador e R é o servidor de autenticação. Na relação RADIUS estabelecida com R, S desempenha o papel de cliente.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conteúdo programático — Redes de computadores. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução.
+- RFC 3580 — IEEE 802.1X Remote Authentication Dial In User Service (RADIUS) Usage Guidelines, IETF/RFC Editor, setembro de 2003. https://www.rfc-editor.org/rfc/rfc3580.html. Localizador e uso: Seção 1: autenticadores como clientes AAA/RADIUS em implantação centralizada e caráter opcional do backend; seção 1.1: Authenticator, Authentication Server e Supplicant; seção 3.27: EAP-Message. Documento informativo, usado para os papéis conceituais, sem substituir norma IEEE. Navegada em 26/11/2026.
+- Cisco IOS — Configuring IEEE 802.1X Port-Based Authentication, documentação oficial, Release 15.0M. https://www.cisco.com/en/US/docs/ios-xml/ios/sec_usr_8021x/configuration/15-0m/config-ieee-802x-pba.html. Localizador e uso: Information About IEEE 802.1X Port-Based Authentication > IEEE 802.1X Authenticator > Device Roles: suplicante, autenticador, servidor e cliente RADIUS no dispositivo de acesso; encapsulamento EAPOL/RADIUS. Fonte usada para os papéis, sem pressupor comandos ou exceções de fabricante na questão. Navegada em 26/11/2026.
+- FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Questão 34, página impressa e página da extração 8. Referência de distinção de papéis em protocolo; cópia secundária Qconcursos.
+- FCC — TRF4, Analista Judiciário, Informática, 2007, Cargo I, Tipo 001. https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Localizador e uso: Questão 46, página impressa e página da extração 8. Referência histórica de identificação dos componentes de protocolo; origem primária no órgão.
+- Metadados de origem do acervo FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador e uso: Registros trt4-2022-ti-a14-001 e trf4-2007-informatica-i001: origens e URLs dos cadernos.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 34; página 8.
+- Origem verificável: Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente no mesmo diretório. Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A referência diferencia funções e relações entre participantes de um protocolo. Aplicou-se essa distinção aos papéis IEEE 802.1X e à relação RADIUS, com distratores baseados na troca de responsabilidades, sem reutilizar o enunciado OAuth.
+- Limites da referência: Cópia hospedada no Qconcursos; não se afirma download da FCC nem assinatura de integridade oficial. Exemplo pontual de construção editorial, sem inferência de frequência e sem usar o gabarito antigo como prova técnica atual.
+
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+- Caderno, questão e página: Cargo I, Tipo 001; questão 46; página 8.
+- Origem verificável: Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente no mesmo diretório. Obtido no próprio TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A referência pede identificar componentes de protocolo por alternativas nominais. Aplicou-se a comparação de associações ordenadas de componentes e papéis, acrescentando um cenário autoral de acesso Ethernet.
+- Limites da referência: Referência histórica de 2007 obtida no órgão. O exemplo sustenta somente a forma de associar funções/componentes; não prova incidência atual nem substitui documentação técnica.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: RFC 3580 e documentação oficial Cisco efetivamente navegadas para os três papéis IEEE 802.1X, intermediação EAP e relação cliente/servidor RADIUS.
+- Analítica: rastreamento N–S–R e associação de cada papel; distingue-se o cliente suplicante do cliente RADIUS sem pressupor RADIUS obrigatório em toda implantação.
+- Editorial: leitura efetiva de FCC TRT4/2022, questão 34, página 8, e FCC TRF4/2007, questão 46, página 8; alternativas autorais com associação ordenada de papéis.
+- Não houve autenticação real nem captura de pacotes; verificação documental e analítica.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

@@ -1,0 +1,17 @@
+ID: BAN-DS-09-0005
+Versão: v01
+Matéria: Redes de computadores
+Tópico: DNS
+
+ENUNCIADO
+Em um ambiente de laboratório, o resolvedor DNS recursivo R não é autoritativo para a zona financeira.example. Em t = 0 s, R recebe do servidor autoritativo S o único registro A de api.financeira.example, com endereço 192.0.2.40 e TTL de 300 segundos, e o armazena em cache. Em t = 60 s, S altera esse registro para 192.0.2.80.
+
+R está configurado para reutilizar registros válidos do cache pelo TTL recebido. Não há limpeza do cache, redução de TTL, atualização antecipada ou outras consultas antes de t = 120 s. Nesse instante, um cliente sem cache local solicita a R a resolução recursiva do mesmo nome e tipo. Despreze os tempos de transmissão e processamento.
+
+O endereço do registro A devolvido por R, seu TTL restante e o valor do bit AA (Authoritative Answer) nessa resposta são, correta e respectivamente,
+
+A) 192.0.2.80 — 300 segundos — 0.
+B) 192.0.2.40 — 180 segundos — 0.
+C) 192.0.2.40 — 180 segundos — 1.
+D) 192.0.2.40 — 300 segundos — 0.
+E) 192.0.2.80 — 180 segundos — 1.

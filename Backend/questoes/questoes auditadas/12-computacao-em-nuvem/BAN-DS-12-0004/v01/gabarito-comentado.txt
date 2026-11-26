@@ -1,0 +1,43 @@
+ID: BAN-DS-12-0004
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar os custos totais atribuídos a cada equipe e o excesso que a política de acompanhamento manda sinalizar.
+
+RESOLUÇÃO
+A base de rateio é R$ 18.000,00 + R$ 12.000,00 = R$ 30.000,00. Cartões representa 18.000/30.000 = 60% e recebe 60% de R$ 6.000,00 = R$ 3.600,00. Crédito representa 40% e recebe R$ 2.400,00. Os custos totais atribuídos são, assim, R$ 21.600,00 para Cartões e R$ 14.400,00 para Crédito. Comparando cada total com seu orçamento, Cartões excede R$ 21.000,00 em R$ 600,00; Crédito permanece R$ 600,00 abaixo de R$ 15.000,00. A compensação global não dispensa o sinal de excesso por equipe exigido na política. A alternativa E atende aos dois resultados. O critério proporcional é uma decisão interna expressa no cenário, não uma regra universal de cobrança de provedores.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Esses totais resultam de dividir o custo compartilhado em partes iguais de R$ 3.000,00. A política exige proporção dos custos diretos, que são diferentes: 60% para Cartões e 40% para Crédito.
+B) Não atende. Os totais atribuídos estão certos, mas Cartões supera seu orçamento em R$ 600,00. A igualdade entre o custo global de R$ 36.000,00 e a soma dos orçamentos não elimina o excesso individual que a política manda sinalizar.
+C) Não atende. Os valores reproduzem apenas os custos diretos e deixam os R$ 6.000,00 compartilhados fora da atribuição. A política exige ratear integralmente esse custo e incluí-lo na comparação por equipe.
+D) Não atende. O excesso de R$ 3.000,00 decorre de lançar todo o custo compartilhado em Cartões. Pela proporção aprovada, Crédito deve receber R$ 2.400,00 e Cartões, R$ 3.600,00; portanto, esse lançamento não atende ao critério.
+E) Atende. As parcelas são R$ 3.600,00 para Cartões e R$ 2.400,00 para Crédito. Somadas aos custos diretos, produzem R$ 21.600,00 e R$ 14.400,00. Apenas Cartões ultrapassa seu orçamento, em R$ 600,00.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conteúdo programático — Computação em Nuvem. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Linhas 191–199; observação de legislação nas linhas 213–217. Delimitação de escopo; a questão não cobra legislação.
+- FinOps Foundation — FinOps Framework Capability: Allocation. https://framework.finops.org/framework/capabilities/allocation/. Localizador e uso: Definition, itens 1–3 (allocation, tagging/metadata e shared cost strategies), em especial as possibilidades de rateio proporcional e por outros critérios; Functional Activities e Measures of Success & KPIs. Consultada por navegação em 26/11/2026. Fundamenta metadados para atribuição e política explícita para custos compartilhados; os valores e a política específica da questão são fictícios e autorais.
+- FinOps Foundation — FinOps Framework Capability: Budgeting. https://www.finops.org/framework/capabilities/budgeting/. Localizador e uso: Track and manage budgets e Definition, especialmente relação entre orçamento e estratégia de atribuição, responsáveis pelo orçamento e investigação de desvios. Consultada por navegação em 26/11/2026. Fundamenta acompanhamento por centro responsável; o limiar e a regra de sinalização são declarados no enunciado.
+- FCC — TRF da 4ª Região, Analista Judiciário, Informática, 2007 — referência editorial histórica. https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; arquivo consultado: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Localizador e uso: Caderno Cargo I, Tipo 001; questão 20, página 5. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF obtido no próprio TRF4; referência histórica da construção de um problema quantitativo com condições declaradas.
+- FCC — TRT da 4ª Região, Analista Judiciário, TI, 2022 — referência editorial. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Caderno A14, Tipo 001; questão 59, página 14. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de integridade oficial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+- Caderno, questão e página: Cargo I, Tipo 001; questão 20; página 5.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF obtido no próprio órgão em https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A questão real fixa uma situação quantitativa e solicita um resultado financeiro dedutível dos dados. A autoral apresenta custos, orçamentos e regra de rateio completos, exigindo cálculo e interpretação do desvio.
+- Limites da referência: Referência histórica de formato, situada em Conhecimentos Gerais do caderno; não é fonte de práticas atuais de nuvem nem demonstra frequência de cobrança.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 59; página 14.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou integridade oficial.
+- Característica observada e aplicação nesta questão autoral: A questão real usa alternativas que respondem, na mesma ordem, aos elementos solicitados. A autoral mantém paralelismo: total de Cartões, total de Crédito e resultado do acompanhamento.
+- Limites da referência: Referência de comando e organização das alternativas; não fundamenta rateios ou práticas FinOps nem comprova correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura do perfil 12, das regras, do modelo e do recorte de governança e controle de custos no conteúdo programático; consulta às questões anteriores para evitar repetição dos objetivos de modelos de serviço e elasticidade.
+- Documental: navegação efetiva nas duas capacidades do FinOps Framework registradas; leitura dos exemplos FCC e dos respectivos metadados de origem.
+- Analítica: apuração do rateio 60%/40%, dos totais de cada equipe e do excesso individual; conferência das cinco alternativas, da distribuição integral dos R$ 6.000,00 e da unicidade da resposta.
+- Conferência de entrega: renderização dos TXT a partir dos mesmos dados do JSON e releitura dos arquivos para verificar identidade de conteúdo, ID, versão e codificação UTF-8. Não houve execução de serviços ou consulta a faturas de provedor; os cálculos usam os dados fictícios declarados.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

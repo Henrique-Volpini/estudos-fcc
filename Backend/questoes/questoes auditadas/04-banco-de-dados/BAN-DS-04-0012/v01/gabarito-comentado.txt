@@ -1,0 +1,41 @@
+ID: BAN-DS-04-0012
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Determinar o resultado ou exceção de três chamadas independentes à função.
+
+RESOLUÇÃO
+INTO STRICT exige que o comando produza exatamente uma linha. Para Z não há correspondências: é levantada NO_DATA_FOUND antes do RETURN. Para Y existe uma linha com valor nulo; sua cardinalidade satisfaz STRICT e v_valor recebe NULL, que é retornado. Para X há duas correspondências; valores iguais não reduzem a quantidade de linhas e a função não usa DISTINCT. Assim, é levantada TOO_MANY_ROWS. As chamadas foram declaradas independentes para que a falha de uma transação não impeça observar as demais.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Esse comportamento corresponde ao SELECT INTO sem STRICT: ausência de linhas atribui NULL, e apenas a primeira linha entre várias é usada. A função apresentada exige exatamente uma linha.
+B) Não atende. NO_DATA_FOUND ocorre quando a consulta não retorna linhas. Para Y existe uma linha, cujo valor é NULL; STRICT verifica cardinalidade, sem proibir um valor nulo nessa variável.
+C) Atende. Z não retorna linhas e gera NO_DATA_FOUND. Y retorna exatamente uma linha, permitindo retornar NULL. X retorna duas linhas e gera TOO_MANY_ROWS, mesmo que os valores sejam iguais.
+D) Não atende. As duas linhas de X continuam sendo duas linhas. A consulta não usa DISTINCT nem agregação, e STRICT não escolhe simplesmente a primeira delas.
+E) Não atende. Com STRICT, a consulta sem linhas para Z não atribui silenciosamente NULL: ela gera NO_DATA_FOUND. Os comportamentos indicados para Y e X estão coerentes, mas o primeiro não.
+
+FONTES TÉCNICAS CONSULTADAS
+- PostgreSQL 15 Documentation - 43.5. Basic Statements
+  URL ou arquivo: https://www.postgresql.org/docs/15/plpgsql-statements.html
+  Localizador e suporte: 43.5.3 Executing a Command with a Single-Row Result: SELECT INTO sem STRICT e com STRICT; NO_DATA_FOUND para zero linhas e TOO_MANY_ROWS para mais de uma.
+- PostgreSQL 14 Documentation - 43.5. Basic Statements
+  URL ou arquivo: https://www.postgresql.org/docs/14/plpgsql-statements.html
+  Localizador e suporte: 43.5.3: conferência do mesmo comportamento na outra versão prevista no programa.
+- Programa de conhecimentos específicos - Banco de Dados
+  URL ou arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: SQL, PL/SQL e PL/pgSQL; PostgreSQL versões 14 e 15;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 52; página 12.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: O exemplo fornece dados técnicos e pede três elementos na ordem indicada, com cinco sequências concorrentes. Aplicação: As três chamadas são explicitadas na ordem do comando, e cada opção traz três resultados nessa mesma ordem; não foram reutilizados os dados, lacunas ou conteúdo Linux da referência.
+  Limites da referência: Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultada por navegação a seção 43.5.3 de PL/pgSQL nas versões PostgreSQL 14 e 15 em 26/11/2026; enunciado fixado em 15.
+- Analítica: contadas separadamente zero, uma e duas linhas para Z, Y e X. Conferida a diferença entre linha com NULL e ausência de linha, bem como a ausência de DISTINCT. Não houve criação ou execução da função em PostgreSQL.
+- Editorial: lida a Q52/p12 da extração TRT4/2022; origem secundária identificada por fontes.json.
+- Independência: o SIM-001 não avaliou SELECT INTO STRICT, cardinalidade de resultado procedural ou suas exceções.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguardando auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

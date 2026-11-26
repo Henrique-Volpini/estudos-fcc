@@ -1,0 +1,18 @@
+ID: BAN-DS-06-0007
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: API Gateway e Service Discovery: responsabilidades distintas
+
+ENUNCIADO
+Em um ambiente de microsserviços, a equipe definiu duas funções:
+
+I. Oferecer um ponto de entrada para clientes externos, validar suas credenciais e encaminhar as requisições aos serviços correspondentes.
+II. Permitir que componentes localizem, pelo nome lógico de um serviço, os endereços das instâncias registradas e saudáveis, que mudam durante a expansão e a substituição de instâncias.
+
+Considerando API Gateway e Service Discovery, a atribuição adequada dessas funções e a relação entre os mecanismos são:
+
+A) I cabe ao Service Discovery; II cabe ao API Gateway, que mantém o catálogo de instâncias para que a descoberta possa autenticar as solicitações externas.
+B) I cabe ao API Gateway; II cabe ao Service Discovery, que recebe as requisições de negócio dos clientes externos para aplicar a autenticação antes do gateway.
+C) I cabe ao API Gateway; II cabe ao Service Discovery, sendo necessário atualizar os clientes externos sempre que o endereço de uma instância do serviço for alterado.
+D) I cabe ao Service Discovery; II cabe ao API Gateway, sendo a localização dinâmica de instâncias uma consequência da validação de credenciais dos clientes externos.
+E) I cabe ao API Gateway; II cabe ao Service Discovery, que pode ser consultado pelo gateway para localizar instâncias sem expor seus endereços aos clientes externos.

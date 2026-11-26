@@ -1,0 +1,35 @@
+ID: BAN-DS-07-0006
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar a combinação que reúne somente as proposições verdadeiras.
+
+RESOLUÇÃO
+I é verdadeira: SAST inspeciona código e fluxos sem executar a aplicação. II é falsa: SCA precisa considerar os componentes diretos e transitivos efetivamente utilizados; a biblioteca intermediária não torna segura sua dependência. III é verdadeira: DAST interage com a aplicação em execução, e a autenticação configurada permite alcançar áreas protegidas. IV é falsa: nenhum resultado sem achados no SAST comprova, por si só, segurança das dependências ou cobertura do comportamento dinâmico. Assim, apenas I e III são verdadeiras.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. I é verdadeira, pois o SAST faz análise estática. II é falsa: dependências transitivas podem conter vulnerabilidades próprias e devem integrar a análise de composição.
+B) Não atende. II exclui indevidamente dependências transitivas. IV atribui ao resultado do SAST uma garantia que ele não oferece sobre composição e comportamento em execução.
+C) Não atende. III é verdadeira: o DAST pode atingir funcionalidades protegidas quando a autenticação foi configurada. IV é falsa, pois ausência de achados estáticos não torna os controles substituíveis.
+D) Não atende. III descreve o uso de DAST no ambiente previsto, mas II limita indevidamente a SCA às dependências diretas.
+E) Atende. I corresponde à análise estática sem execução da aplicação, e III corresponde ao teste dinâmico de funcionalidades autenticadas em homologação. II e IV ignoram limites e objetos distintos dos controles.
+
+FONTES TÉCNICAS E EDITORIAIS CONSULTADAS
+- OWASP DevSecOps Guideline — Static Application Security Testing (SAST). https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-1-Static-Analysis/2-3-1-1-Static-Application-Security-Testing/. Localizador: Definição inicial; How SAST works mechanically; Strengths and limitations. Sustenta: Análise de código sem executar a aplicação e limites da análise estática diante do contexto de execução. Consulta: 2026-11-26.
+- OWASP DevSecOps Guideline — Software Composition Analysis (SCA). https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis/. Localizador: What SCA covers; Understanding transitive dependencies; Integrating SCA in the pipeline. Sustenta: Inventário e análise de vulnerabilidades de dependências diretas e transitivas, com verificações no ciclo de entrega. Consulta: 2026-11-26.
+- OWASP DevSecOps Guideline — Dynamic Application Security Testing (DAST). https://owasp.github.io/DevSecOpsGuideline/2-Process/2-4-Test/2-4-2-Dynamic-Application-Security-Testing/. Localizador: Definição inicial; Strengths and limitations; Running DAST well; Handling authenticated flows. Sustenta: Teste externo de aplicação em execução e autenticação configurada para cobrir funcionalidades protegidas. Consulta: 2026-11-26.
+- FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 38, página 9. Sustenta: Formato editorial com itens numerados e seleção de subconjuntos, com os limites registrados na referência de estilo. Consulta: 2026-11-26.
+- Metadados do acervo de referências FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador: fontes, id trt4-2022-ti-a14-001. Sustenta: Identificação da cópia secundária e dos arquivos locais consultados. Consulta: 2026-11-26.
+- Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: DEVOPS E DEVSECOPS: segurança em pipelines (DevSecOps); Observação final sobre legislação consultada.. Sustenta: Delimitação do tópico cobrado. Consulta: 2026-11-26.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 38; página 9.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf.
+- Característica observada e aplicação nesta questão autoral: Contextualização em aplicações de uma organização, quatro itens numerados e alternativas que selecionam subconjuntos dos itens. Aplicação autoral: quatro propostas autorais em cenário de pipeline; o comando delimita a seleção das verdadeiras e as opções mantêm pares comparáveis.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, identificada em fontes.json; a extração textual local foi efetivamente lida. Não se afirma download da FCC nem integridade oficial. O exemplo sustenta apenas o formato observado, sem comprovar frequência editorial ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+Documental: páginas primárias da OWASP DevSecOps Guideline navegadas em 26/11/2026 e exemplo FCC lido na extração local. Analítica: avaliação explícita das proposições I a IV e das cinco combinações, com uma única combinação formada apenas pelas duas proposições verdadeiras. Não houve execução de scanners ou de pipeline. Conferido objetivo distinto das questões anteriores do elaborador 07.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Auditorias posteriores ainda não realizadas; a proposta permanece PENDENTE_AUDITORIA.

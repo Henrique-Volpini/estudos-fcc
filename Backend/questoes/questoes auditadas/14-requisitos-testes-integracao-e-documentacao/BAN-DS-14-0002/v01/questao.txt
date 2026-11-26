@@ -1,0 +1,26 @@
+ID: BAN-DS-14-0002
+Versão: v01
+Matéria: Levantamento de requisitos, testes, integração e documentação técnica
+Tópico: Teste de aceitação derivado de regra de negócio com critérios observáveis
+
+ENUNCIADO
+Um Analista prepara testes de aceitação para um serviço de agendamento de transferências. Para uma conta e uma data escolhida, a regra de negócio estabelece:
+
+– A solicitação é confirmada se, e somente se, a conta estiver ativa e a soma do total já agendado com o valor solicitado não ultrapassar R$ 1.000,00.
+– Na confirmação, a tela exibe a mensagem “Confirmado” e o total agendado passa a incluir o valor solicitado.
+– Na recusa, a tela exibe a mensagem “Recusado” e o total agendado permanece inalterado.
+
+Após responder à solicitação, a tela sempre apresenta o total agendado para a conta e a data escolhidas. Foram definidos os seguintes casos, com execuções independentes e sem operações concorrentes. Os valores estão em reais.
+
+Caso | Situação da conta | Total já agendado | Valor solicitado
+I    | Ativa             | 800,00            | 200,00
+II   | Ativa             | 800,00            | 201,00
+III  | Inativa           | 800,00            | 100,00
+
+As saídas a serem verificadas na tela em I, II e III, indicadas pelo par (mensagem; total agendado), são, respectivamente:
+
+A) (Recusado; 800,00), (Recusado; 800,00) e (Recusado; 800,00).
+B) (Confirmado; 1.000,00), (Confirmado; 1.001,00) e (Recusado; 800,00).
+C) (Confirmado; 1.000,00), (Recusado; 800,00) e (Confirmado; 900,00).
+D) (Confirmado; 1.000,00), (Recusado; 1.001,00) e (Recusado; 900,00).
+E) (Confirmado; 1.000,00), (Recusado; 800,00) e (Recusado; 800,00).

@@ -1,0 +1,477 @@
+{
+  "elaborador": "03",
+  "responsavel": "/root/s2_elab_03",
+  "questoes": [
+    {
+      "id": "BAN-DS-03-0008",
+      "numero": 8,
+      "topico": "Python: definição e chamada de funções",
+      "enunciado": "Em Python 3, considere a execução do código a seguir em um processo novo, sem outras chamadas à função registrar:\n\ndef registrar(codigo, historico=[]):\n    historico.append(codigo)\n    return len(historico)\n\nprint(registrar(\"A\"), registrar(\"B\", []), registrar(\"C\"), registrar(\"D\"))\n\nA sequência de números exibida é",
+      "alternativas": {
+        "A": "1 1 1 1",
+        "B": "1 2 3 4",
+        "C": "1 1 1 2",
+        "D": "1 1 2 3",
+        "E": "1 2 2 3"
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. As chamadas que omitem historico reutilizam a lista padrão; ela não é recriada a cada chamada.",
+        "B": "Não atende. A lista explícita da segunda chamada é distinta da lista padrão; essa chamada não produz o segundo elemento da lista padrão.",
+        "C": "Não atende. A segunda chamada não reinicializa o argumento padrão. A terceira chamada já encontra o elemento A nessa lista.",
+        "D": "Atende. As chamadas com A, C e D acrescentam elementos à mesma lista padrão, produzindo comprimentos 1, 2 e 3. A chamada com B usa outra lista e produz 1.",
+        "E": "Não atende. A segunda chamada recebe uma lista vazia própria e retorna 1, não 2; apenas as demais compartilham a lista padrão."
+      },
+      "resolucao": "A lista padrão é criada quando a definição da função é executada. A primeira chamada insere A nessa lista e retorna 1. A segunda recebe explicitamente outra lista vazia, insere B e retorna 1. A terceira reutiliza a lista padrão, que passa a conter A e C, retornando 2. A quarta acrescenta D à mesma lista e retorna 3. Como print separa os argumentos por espaços, a saída é 1 1 2 3.",
+      "fontes": [
+        {
+          "titulo": "Python Software Foundation — The Python Tutorial, More Control Flow Tools",
+          "url": "https://docs.python.org/3.12/tutorial/controlflow.html#default-argument-values",
+          "localizador": "§4.9.1 Default Argument Values: avaliação única do padrão mutável e argumento explícito."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido)",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "localizador": "Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultada a documentação oficial do Python 3.12 sobre valores padrão; a regra usada também vale no Python 3 da execução declarada.",
+        "Analítica: rastreadas separadamente a lista padrão e a lista explícita, com conferência individual das cinco sequências.",
+        "Executada em memória: CPython 3.14.10, sem entrada externa, com o código integral do enunciado em namespace novo; saída observada '1 1 2 3\\n'. Nenhum arquivo de teste foi criado."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2015,
+          "caderno": "Não obtido",
+          "questao": "Q566693 (identificador do acervo; número original não obtido)",
+          "pagina": "Não obtida; página HTML e imagem do programa",
+          "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+          "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-03-0009",
+      "numero": 9,
+      "topico": "Java: sobrecarga de métodos",
+      "enunciado": "Considere o seguinte programa Java 21:\n\npublic class Selecao {\n    static String escolher(long valor) { return \"L\"; }\n    static String escolher(Integer valor) { return \"I\"; }\n    static String escolher(Number valor) { return \"N\"; }\n\n    public static void main(String[] args) {\n        int a = 5;\n        Integer b = 5;\n        Number c = b;\n        System.out.print(escolher(a) + escolher(b) + escolher(c));\n    }\n}\n\nO texto exibido ao executar main é",
+      "alternativas": {
+        "A": "LIN",
+        "B": "IIN",
+        "C": "LII",
+        "D": "NIN",
+        "E": "LLN"
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Atende. int é ampliado para long na primeira chamada; Integer seleciona a sobrecarga mais específica Integer na segunda; o argumento de tipo estático Number seleciona Number na terceira.",
+        "B": "Não atende. Para a, a ampliação de int para long já fornece método aplicável na primeira fase; a conversão por boxing para Integer não a substitui.",
+        "C": "Não atende. c tem tipo estático Number, que não é convertido implicitamente para Integer para selecionar essa sobrecarga. O objeto referenciado não muda essa resolução.",
+        "D": "Não atende. A conversão de int para Number exigiria boxing seguido de ampliação de referência. A sobrecarga long já é aplicável sem boxing.",
+        "E": "Não atende. Para b, as sobrecargas de referência são aplicáveis antes de considerar unboxing para long, e Integer é mais específica que Number."
+      },
+      "resolucao": "A resolução começa pelos métodos aplicáveis sem boxing ou unboxing. Para a, de tipo int, escolher(long) é aplicável por ampliação primitiva; as outras candidatas exigem boxing. Para b, de tipo Integer, escolher(Integer) e escolher(Number) são aplicáveis nessa primeira fase, sendo Integer a opção mais específica. Para c, de tipo Number, escolher(Number) é aplicável; não há conversão implícita de Number para Integer. A concatenação resulta em LIN.",
+      "fontes": [
+        {
+          "titulo": "Oracle — Java Language Specification, Java SE 21, Chapter 15",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html#jls-15.12.2",
+          "localizador": "§15.12.2, §15.12.2.2 e §15.12.2.5: fases de aplicabilidade e método mais específico."
+        },
+        {
+          "titulo": "Oracle — Java Language Specification, Java SE 21, Chapter 5",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html#jls-5.3",
+          "localizador": "§5.1.2, §5.1.5, §5.1.7, §5.1.8 e §5.3: ampliação primitiva, referência, boxing, unboxing e contextos de invocação."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido)",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "localizador": "Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: sobrecarga e sobrescrita de métodos;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultadas a especificação Java SE 21 e as regras das fases de sobrecarga e conversões.",
+        "Analítica: conferidas as candidatas de cada chamada e o método mais específico; a novidade em relação ao SIM-001 é a prioridade da ampliação primitiva sobre boxing, sem cenário de sobrescrita.",
+        "Não executada: não foi realizada compilação nem execução do programa Java."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2015,
+          "caderno": "Não obtido",
+          "questao": "Q566693 (identificador do acervo; número original não obtido)",
+          "pagina": "Não obtida; página HTML e imagem do programa",
+          "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+          "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-03-0010",
+      "numero": 10,
+      "topico": "C#: parâmetros de métodos",
+      "enunciado": "Em C# 12 com .NET 8, considere o programa:\n\nusing System;\n\nclass Caixa {\n    public int Valor;\n}\n\nclass Programa {\n    static void Ajustar(Caixa item, ref int taxa) {\n        item.Valor += taxa;\n        item = new Caixa { Valor = 100 };\n        taxa += 2;\n    }\n\n    static void Main() {\n        Caixa caixa = new Caixa { Valor = 10 };\n        int taxa = 3;\n        Ajustar(caixa, ref taxa);\n        Console.Write($\"{caixa.Valor} {taxa}\");\n    }\n}\n\nOs valores exibidos são",
+      "alternativas": {
+        "A": "100 5",
+        "B": "13 5",
+        "C": "13 3",
+        "D": "10 3",
+        "E": "100 3"
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. item recebe por valor uma cópia da referência. A atribuição de uma nova Caixa a item não substitui a referência guardada em caixa.",
+        "B": "Atende. A primeira instrução altera para 13 o objeto compartilhado; a reatribuição de item é local; ref faz taxa do chamador passar de 3 para 5.",
+        "C": "Não atende. O valor 13 considera corretamente a mutação do objeto, mas taxa é passada por ref e sua atualização é visível em Main.",
+        "D": "Não atende. A passagem da referência por valor permite alterar o objeto referido, e o parâmetro ref permite alterar taxa; as duas mudanças são observáveis.",
+        "E": "Não atende. A reatribuição local de item não muda caixa, enquanto a alteração de taxa, passada por ref, muda a variável de Main."
+      },
+      "resolucao": "item e caixa inicialmente referem-se à mesma instância. Por isso, item.Valor += taxa muda o campo dessa instância de 10 para 13. A instrução seguinte modifica somente a cópia da referência armazenada em item: caixa continua apontando para a instância de valor 13. Já taxa é um parâmetro ref e corresponde à variável de Main; taxa += 2 altera essa variável para 5. A saída é 13 5.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Method parameters and modifiers, C# reference",
+          "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters",
+          "localizador": "Introdução; Pass by value and pass by reference; exemplos de reatribuição e parâmetros ref. Sustenta cópia da referência, mutação compartilhada e alteração por ref."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido)",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "localizador": "Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultada a referência oficial de C# sobre passagem por valor, tipos de referência e modificador ref.",
+        "Analítica: rastreadas a instância inicial, a nova instância local e a variável taxa do chamador; verificadas todas as alternativas.",
+        "Não executada: a saída foi determinada por análise, sem compilar ou executar C#."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2015,
+          "caderno": "Não obtido",
+          "questao": "Q566693 (identificador do acervo; número original não obtido)",
+          "pagina": "Não obtida; página HTML e imagem do programa",
+          "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+          "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-03-0011",
+      "numero": 11,
+      "topico": "C: operadores e expressões lógicas",
+      "enunciado": "Considere o programa em C11, sem entrada externa:\n\n#include <stdio.h>\n\nint main(void) {\n    int a = 0, b = 2, c = 4;\n    int r = a && ++b || b > 1 && ++c;\n    printf(\"%d %d %d\", b, c, r);\n    return 0;\n}\n\nA sequência exibida por printf é",
+      "alternativas": {
+        "A": "3 5 1",
+        "B": "2 4 0",
+        "C": "2 5 5",
+        "D": "3 4 1",
+        "E": "2 5 1"
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende. Como a vale zero, o primeiro && não avalia ++b; b permanece 2.",
+        "B": "Não atende. O primeiro && produz zero e o || avalia sua expressão à direita. Como b > 1 é verdadeiro, ++c é executado.",
+        "C": "Não atende. c passa a 5, mas o resultado de && e || é int 0 ou 1; r não recebe o valor 5 do operando.",
+        "D": "Não atende. ++b é omitido pelo primeiro curto-circuito. Como a expressão à esquerda de || é falsa, sua expressão à direita é avaliada e incrementa c.",
+        "E": "Atende. b fica 2; a avaliação de b > 1 && ++c incrementa c para 5 e produz 1; o resultado final de || também é 1."
+      },
+      "resolucao": "A expressão agrupa-se como (a && ++b) || ((b > 1) && ++c). Como a é zero, ++b não é avaliado e o primeiro grupo resulta em zero. O || precisa avaliar o segundo grupo. b > 1 é verdadeiro; então ++c eleva c de 4 a 5, valor não zero, e esse && resulta em 1. O || produz int 1. Não há leitura e modificação não sequenciadas de uma mesma variável nessa avaliação. São exibidos 2 5 1.",
+      "fontes": [
+        {
+          "titulo": "ISO/IEC JTC1/SC22/WG14 — N1570, Committee Draft, 12 April 2011",
+          "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+          "localizador": "§6.5.3.1 (incremento prefixado), §6.5.8 (relacionais), §6.5.13 e §6.5.14 (gramática, resultado lógico, ordem e curto-circuito), página impressa 99/PDF 117. Rascunho público de C11, identificado como tal."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido)",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "localizador": "Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: operadores e precedência;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultado o rascunho primário N1570 do WG14, especialmente §6.5.13–14.",
+        "Analítica: aplicada a gramática dos operadores e seguido cada ponto de curto-circuito; conferidas a ausência de efeitos não sequenciados e as cinco saídas.",
+        "Não executada: não foi usado compilador C; resultado obtido por análise documental e manual."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2015,
+          "caderno": "Não obtido",
+          "questao": "Q566693 (identificador do acervo; número original não obtido)",
+          "pagina": "Não obtida; página HTML e imagem do programa",
+          "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+          "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-03-0012",
+      "numero": 12,
+      "topico": "PHP: pesquisa em arrays",
+      "enunciado": "Em PHP 8.2, considere:\n\n<?php\n$codigos = [12, \"12\", 24];\n$a = array_search(\"12\", $codigos);\n$b = array_search(\"12\", $codigos, true);\necho $a . \":\" . $b . \":\" . ($a !== false ? \"S\" : \"N\");\n\nO texto exibido é",
+      "alternativas": {
+        "A": "0:1:N",
+        "B": "1:1:S",
+        "C": "0:1:S",
+        "D": "0:0:S",
+        "E": "1:0:N"
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. A chave inteira 0 é diferente do booleano false na comparação estrita !==, portanto a última parcela é S.",
+        "B": "Não atende. A primeira busca não usa comparação estrita e encontra o inteiro 12 na chave 0 antes da string da chave 1.",
+        "C": "Atende. A busca sem strict encontra a chave 0; a busca com true exige também o tipo string e encontra a chave 1; 0 !== false é verdadeiro.",
+        "D": "Não atende. Na segunda busca, strict=true impede que a string procurada corresponda ao inteiro da chave 0. A chave retornada é 1.",
+        "E": "Não atende. Inverte os resultados das buscas: a busca frouxa encontra 0 e a estrita encontra 1. Além disso, a chave 0 satisfaz a condição !== false."
+      },
+      "resolucao": "Sem o terceiro argumento, array_search usa comparação frouxa e retorna a primeira chave correspondente: a string numérica \"12\" corresponde ao inteiro 12, na chave 0. Com true, a comparação inclui o tipo, e a correspondência é a string \"12\", na chave 1. O retorno 0 é uma chave válida e não é idêntico a false; logo a condição $a !== false seleciona S. A concatenação produz 0:1:S.",
+      "fontes": [
+        {
+          "titulo": "PHP Manual — array_search",
+          "url": "https://www.php.net/manual/en/function.array-search.php",
+          "localizador": "Description, strict, Return Values e Warning: primeira chave, comparação estrita e distinção entre chave 0 e false; utilizada apenas a documentação, sem comentários de usuários."
+        },
+        {
+          "titulo": "PHP Manual — Comparison Operators",
+          "url": "https://www.php.net/manual/en/language.operators.comparison.php",
+          "localizador": "Tabela dos operadores ==, === e !==; comparação entre número e string numérica e operador ternário."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2015, questão Q566693 (identificador do acervo; número original não obtido)",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "localizador": "Caderno Não obtido; página Não obtida; página HTML e imagem do programa. Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultadas as páginas oficiais array_search e Comparison Operators, nas seções normativas do manual.",
+        "Analítica: conferidas a ordem das chaves 0, 1 e 2, as duas formas de pesquisa e a comparação estrita do retorno.",
+        "Não executada: não foi executado interpretador PHP; a saída foi determinada pelo manual e por rastreamento."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2015,
+          "caderno": "Não obtido",
+          "questao": "Q566693 (identificador do acervo; número original não obtido)",
+          "pagina": "Não obtida; página HTML e imagem do programa",
+          "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+          "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+          "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-03-0013",
+      "numero": 13,
+      "topico": "Acesso a dados com ADO.NET",
+      "enunciado": "Em uma aplicação C# com ADO.NET e o provedor Microsoft.Data.SqlClient, cmd é um SqlCommand recém-criado, associado a uma conexão aberta com SQL Server e com CommandType.Text. A tabela Cliente tem a coluna Nome do tipo nvarchar(80). A variável nome contém uma string não nula, com até 80 caracteres, que pode conter apóstrofos.\n\nUm Analista deve configurar cmd para obter os identificadores dos clientes cujo Nome seja igual ao conteúdo de nome, mantendo a entrada como dado separado do texto SQL. Considere SqlDbType disponível. Qual trecho atende a esses requisitos?",
+      "alternativas": {
+        "A": "cmd.CommandText = $\"SELECT Id FROM Cliente WHERE Nome = '{nome}'\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+        "B": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE Nome = '@nome'\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+        "C": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE @nome = @nome\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+        "D": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE Nome = @nome\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = nome;",
+        "E": "cmd.CommandText = \"SELECT Id FROM Cliente WHERE Nome = @nome\";\ncmd.Parameters.Add(\"@nome\", SqlDbType.NVarChar, 80).Value = \"@nome\";"
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. A interpolação coloca a entrada dentro do texto SQL. Adicionar depois um parâmetro não utilizado pelo comando não desfaz essa interpolação; apóstrofos da entrada podem interferir no literal SQL.",
+        "B": "Não atende. As aspas simples tornam '@nome' um literal textual do SQL, em vez de um marcador de parâmetro. O predicado compara a coluna com esse texto literal.",
+        "C": "Não atende. O predicado compara o parâmetro com ele mesmo, sem usar a coluna Nome. Para o valor não nulo declarado, não filtra os clientes pelo nome solicitado.",
+        "D": "Atende. O marcador @nome fica no comando sem aspas SQL, e a coleção de parâmetros fornece tipo, tamanho e o valor da variável nome, separado do texto do comando.",
+        "E": "Não atende. O parâmetro existe e é utilizado, mas recebe a string literal \"@nome\", não o conteúdo da variável nome. A busca usa o valor errado."
+      },
+      "resolucao": "O comando deve conter o predicado Nome = @nome e receber o valor de nome pela coleção Parameters. O provedor usa o formato @ para parâmetros nomeados. Add informa NVarChar e tamanho 80; Value = nome fornece o dado. Assim, apóstrofos pertencem ao valor do parâmetro e não são incorporados ao código SQL. As demais propostas interpolam a entrada, transformam o marcador em literal, omitem a coluna no filtro ou atribuem o valor errado ao parâmetro.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Configuring parameters and parameter data types, ADO.NET",
+          "url": "https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/configuring-parameters-and-parameter-data-types",
+          "localizador": "Introdução; Working with parameter placeholders; Specifying parameter data types. Valor tratado como literal e parâmetros Microsoft.Data.SqlClient no formato @nome."
+        },
+        {
+          "titulo": "Microsoft Learn — SqlParameterCollection.Add Method, Microsoft.Data.SqlClient",
+          "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqlparametercollection.add?view=sqlclient-dotnet-standard-1.0",
+          "localizador": "Sobrecarga Add(String, SqlDbType, Int32): nome, tipo e tamanho; página lista também Microsoft.Data.SqlClient 5.2."
+        },
+        {
+          "titulo": "Microsoft Learn — Commands and Parameters, ADO.NET",
+          "url": "https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/commands-and-parameters",
+          "localizador": "Objeto Command e fornecimento de valores por parâmetros; delimitação do uso de CommandType.Text."
+        },
+        {
+          "titulo": "Microsoft Learn — Constants (Transact-SQL)",
+          "url": "https://learn.microsoft.com/en-us/sql/t-sql/data-types/constants-transact-sql?view=sql-server-ver16",
+          "localizador": "Character string constants: aspas simples delimitam constantes e apóstrofos embutidos requerem tratamento no texto SQL; sustenta a análise dos distratores com interpolação ou marcador entre aspas."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, questão 33",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Caderno A14, Tipo 001; página 8. Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: acesso a banco de dados;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultada a documentação Microsoft de parâmetros ADO.NET e a assinatura oficial de Add(String, SqlDbType, Int32).",
+        "Analítica: comparados o texto do predicado, o reconhecimento do marcador e o valor atribuído em cada trecho. Hipóteses sobre conexão, nulidade, tamanho e coluna estão expressas.",
+        "Não executada: não houve acesso a banco, compilação do trecho ou criação de infraestrutura de teste."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": "33",
+          "pagina": "8",
+          "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "caracteristicaAplicada": "Situação de trabalho de um Analista, tarefa técnica delimitada e cinco soluções concorrentes. Aplicado em cenário autoral sem transpor conteúdo ou alternativas da prova.",
+          "limites": "Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-03-0014",
+      "numero": 14,
+      "topico": "Desenvolvimento guiado por testes",
+      "enunciado": "Uma equipe usa TDD para desenvolver uma regra de tarifas. Primeiro, escreve um teste para um comportamento ainda não implementado e verifica que ele falha pelo resultado esperado ainda não ser produzido. Depois, faz uma pequena alteração na implementação e confirma que o teste novo e todos os anteriores passam. Ao examinar o código, identifica uma duplicação que pretende remover no mesmo ciclo.\n\nA intervenção que corresponde à etapa refactor desse ciclo é",
+      "alternativas": {
+        "A": "implementar a próxima regra de tarifa e, depois de validá-la manualmente, escrever seu teste automatizado.",
+        "B": "remover a duplicação preservando o comportamento e executar novamente os testes para verificar que continuam passando.",
+        "C": "ampliar os resultados aceitos pelas asserções para que a implementação possa ser simplificada sem falhas na suíte.",
+        "D": "modificar a regra de tarifa para eliminar os casos especiais e ajustar os resultados esperados nos testes existentes.",
+        "E": "reescrever a implementação para atender às regras futuras e executar a suíte depois de concluir todas essas funcionalidades."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. Introduz novo comportamento e posterga seu teste; refatorar melhora a estrutura do comportamento já implementado.",
+        "B": "Atende. A remoção de duplicação é uma melhoria estrutural; preservar o comportamento e manter a suíte passando corresponde ao objetivo de refactor.",
+        "C": "Não atende. Enfraquecer as asserções pode ocultar alterações de comportamento. Isso não demonstra que a simplificação preservou os resultados exigidos.",
+        "D": "Não atende. Alterar a regra de tarifa e os resultados esperados muda o comportamento especificado; essa alteração funcional não é refatoração.",
+        "E": "Não atende. Antecipar funcionalidades futuras e adiar a execução dos testes mistura evolução funcional e melhoria estrutural, afastando-se do ciclo incremental descrito."
+      },
+      "resolucao": "A falha inicial identifica a etapa red; a implementação que faz passar o teste novo e os anteriores produz green. A melhoria estrutural seguinte pode remover a duplicação sem mudar o comportamento observado, usando os testes para verificar a preservação. Esse é o papel de refactor. Acrescentar regras ou alterar expectativas funcionais exige tratar uma mudança de comportamento, em vez de classificá-la como simples refatoração.",
+      "fontes": [
+        {
+          "titulo": "Kent Beck — Canon TDD, 11 December 2023",
+          "url": "https://newsletter.kentbeck.com/p/canon-tdd",
+          "localizador": "The Steps, itens 2 Write a Test, 3 Make it Pass e 4 Optionally Refactor; lista inicial e preservação dos testes anteriores. Artigo do criador do método."
+        },
+        {
+          "titulo": "Martin Fowler — Test Driven Development, atualização de 11 December 2023",
+          "url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+          "localizador": "Três passos Red–Green–Refactor e melhoria da estrutura do código novo e anterior; fonte autoral complementar."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, questão 33",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Caderno A14, Tipo 001; página 8. Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade."
+        },
+        {
+          "titulo": "Programa-base — Programação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 39–58; recorte: TDD e BDD;"
+        }
+      ],
+      "verificacoes": [
+        "Documental: consultados o artigo Canon TDD de Kent Beck e a descrição autoral do ciclo por Martin Fowler.",
+        "Analítica: identificado o momento do ciclo no cenário e distinguida mudança de estrutura de mudança funcional em todas as alternativas.",
+        "Não executada: questão conceitual; nenhum teste de software foi criado nem executado."
+      ],
+      "materia": "Programação",
+      "versao": "v01",
+      "autor": "/root/s2_elab_03",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": "33",
+          "pagina": "8",
+          "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "caracteristicaAplicada": "Situação de trabalho de um Analista, tarefa técnica delimitada e cinco soluções concorrentes. Aplicado em cenário autoral sem transpor conteúdo ou alternativas da prova.",
+          "limites": "Cópia secundária hospedada no Qconcursos, registrada em fontes.json. Extração TXT da página 8 efetivamente lida. Não se afirma download da FCC nem certificação de integridade oficial; o exemplo orienta formato, sem medir frequência ou dificuldade."
+        }
+      ]
+    }
+  ]
+}

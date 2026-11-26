@@ -1,0 +1,27 @@
+ID: BAN-DS-04-0009
+Versão: v01
+Matéria: Banco de Dados
+Tópico: PostgreSQL 14/15: privilégios SQL GRANT e REVOKE
+
+ENUNCIADO
+No PostgreSQL 15, dono é proprietário da tabela public.relatorio. As roles ana e bruno não são proprietárias nem superusuárias, não pertencem a outras roles e, inicialmente, não possuem privilégios nessa tabela. PUBLIC também não possui privilégios nela. Ambas já dispõem das permissões de conexão e de uso do esquema necessárias ao acesso.
+
+São executados, nesta ordem:
+
+Por dono:
+GRANT SELECT ON TABLE public.relatorio TO ana WITH GRANT OPTION;
+
+Por ana:
+GRANT SELECT ON TABLE public.relatorio TO bruno;
+
+Por dono:
+REVOKE GRANT OPTION FOR SELECT ON TABLE public.relatorio
+FROM ana CASCADE;
+
+Não há outras concessões ou alterações de privilégios. Após essa sequência, quanto ao privilégio SELECT na tabela,
+
+A) ana o mantém, e bruno o perde.
+B) ana e bruno o mantêm.
+C) ana o perde, e bruno o mantém.
+D) ana e bruno o perdem.
+E) o último comando é rejeitado porque ana já o concedeu a bruno.

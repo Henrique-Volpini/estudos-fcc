@@ -1,0 +1,63 @@
+ID: BAN-DS-08-0004
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar o pipeline que satisfaz simultaneamente os requisitos de filtragem, ordenação e propriedades de saída.
+
+RESOLUÇÃO
+O pipeline recebe objetos, e $_ representa o objeto avaliado por Where-Object. As duas condições devem ser verdadeiras simultaneamente: Status igual a Running e Name iniciado por App. Para esse prefixo, usa-se -like 'App*', combinado com -and.
+
+AppZ e AppA satisfazem ambas as condições. AppB tem o prefixo, mas está parado. Sync e Base estão em execução, mas seus valores de Name não têm o prefixo. A ordenação crescente por Name produz AppA e AppZ. Select-Object Name, Status cria os objetos de saída com essas propriedades; ambos têm Status Running. Format-Table serve à apresentação e produz registros de formatação, inadequados ao requisito de reutilizar as propriedades Name e Status.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: -or aceita o serviço quando pelo menos uma condição é verdadeira. Inclui AppB, que está parado, e também Base e Sync, que estão em execução, mas não têm Name iniciado por App. Produz AppA, AppB, AppZ, Base e Sync.
+B) Não atende: a filtragem e a ordenação selecionam AppA e AppZ, mas Format-Table emite objetos internos de formatação que representam uma tabela. Sua saída não é a projeção de objetos com Name e Status exigida para o processamento posterior.
+C) Não atende: o padrão é aplicado a DisplayName. Assim, seleciona AppA e Sync; deixa de selecionar AppZ, cujo DisplayName é Coletor Z. O requisito usa a propriedade Name.
+D) Atende: -and exige simultaneamente Status igual a Running e Name compatível com App*. Sort-Object Name coloca AppA antes de AppZ, e Select-Object Name, Status produz objetos com as duas propriedades solicitadas.
+E) Não atende: -eq compara o nome com o texto literal App*, sem interpretar o asterisco como curinga. Nenhum Name da entrada é igual a esse texto, de modo que o pipeline não produz objetos.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — about_Pipelines — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-5.1
+  Localizador e suporte: Long description; Using pipelines; How pipelines work — One-at-a-time processing. Fluxo de objetos entre cmdlets. Página primária aberta em 26/11/2026.
+- Microsoft Learn — Get-Service — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-5.1
+  Localizador e suporte: Description; exemplos 1, 2, 3 e 5. Retorno de objetos de serviço, distinção entre Name e DisplayName e filtro por Status Running. Página primária aberta em 26/11/2026.
+- Microsoft Learn — Where-Object — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-5.1
+  Localizador e suporte: Description; exemplo 1, Get stopped services, sobre $_; exemplo 6, Use multiple conditions. Filtragem de objetos por propriedades e combinação de condições. Página primária aberta em 26/11/2026.
+- Microsoft Learn — about_Logical_Operators — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logical_operators?view=powershell-5.1
+  Localizador e suporte: Long description; definições Logical AND (-and) e Logical OR (-or). Sustenta a diferença de seleção entre as alternativas que usam conjunção e disjunção. Página primária aberta em 26/11/2026.
+- Microsoft Learn — about_Comparison_Operators — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1
+  Localizador e suporte: Equality operators — -eq and -ne; Matching operators — -like and -notlike. Igualdade literal e correspondência por padrão com curinga. Página primária aberta em 26/11/2026.
+- Microsoft Learn — Sort-Object — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-5.1
+  Localizador e suporte: Description; parâmetros -Property e -Descending. Ordenação pelos valores da propriedade; ordem padrão crescente. Página primária aberta em 26/11/2026.
+- Microsoft Learn — Select-Object — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-5.1
+  Localizador e suporte: Description; exemplo 1, Select objects by property. A seleção de propriedades retorna novos objetos com as propriedades especificadas. Página primária aberta em 26/11/2026.
+- Microsoft Learn — Format-Table — Windows PowerShell 5.1
+  Fonte: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-5.1
+  Localizador e suporte: Outputs — Microsoft.PowerShell.Commands.Internal.Format. O cmdlet retorna objetos de formatação que representam a tabela, e não a projeção de dados solicitada. Página primária aberta em 26/11/2026.
+- Programa-base — Sistemas Operacionais
+  Fonte: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: Bloco SISTEMAS OPERACIONAIS, linhas 116–131: Linux (Red Hat e Oracle Linux) e PowerShell. Lida também a observação final sobre legislação, linhas 213–217; as duas questões não cobram legislação.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 47; página 11.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 11 ===; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia hospedada em https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação nesta questão autoral: O exemplo parte de uma tarefa técnica concreta e pede escolher o comando que a executa, com cinco alternativas em código. A questão autoral aplica essa construção à escolha de um pipeline, com entrada declarada e critérios de seleção, ordenação e preservação de propriedades.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, conforme fontes.json; foram lidos a extração local e os dados do caderno. Não se afirma download direto da FCC nem autenticação oficial de integridade. O exemplo fundamenta somente a construção editorial observada, sem provar frequência de formato ou correção técnica atual. O exemplo é de comando Linux, e não comprova uma convenção específica de questões FCC sobre PowerShell.
+- Metadados consultados: Backend/Agents/conteudo/referencias-fcc/fontes.json, entrada trt4-2022-ti-a14-001.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: abertas as oito páginas primárias Microsoft Learn com view=powershell-5.1; conferidos o pipeline de objetos, os cmdlets e os operadores usados nas cinco alternativas.
+- Analítica: avaliados os cinco serviços contra as duas condições e conferida a distinção entre Name e DisplayName, igualdade e padrão, seleção de propriedades e formatação.
+- Executada em memória: Windows PowerShell 5.1.26100.9818, Microsoft Windows NT 10.0.26200.0. Foram criados cinco PSCustomObject com Name e DisplayName da tabela e Status do enum System.ServiceProcess.ServiceControllerStatus, após carregar o assembly System.ServiceProcess. Não foi executado Get-Service nem uma sessão em Windows Server 2022.
+- Resultados observados em memória: A produziu AppA, AppB, AppZ, Base, Sync; B produziu objetos Microsoft.PowerShell.Commands.Internal.Format; C produziu AppA, Sync; D produziu AppA, AppZ, ambos Running, com as propriedades Name e Status; E produziu zero objetos. Nenhum serviço foi alterado e nenhum arquivo de teste foi criado.
+- Editorial: lidos o exemplo real FCC Q47/p.11, o cabeçalho A14 Tipo 001, os metadados de origem e as questões anteriores do elaborador; o objetivo de PowerShell é novo no rodízio.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Versão completa em PENDENTE_AUDITORIA, sujeita à avaliação independente.

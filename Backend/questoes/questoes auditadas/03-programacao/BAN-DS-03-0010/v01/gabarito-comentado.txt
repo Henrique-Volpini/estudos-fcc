@@ -1,0 +1,33 @@
+ID: BAN-DS-03-0010
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar o resultado exibido pelo código nas condições declaradas.
+
+RESOLUÇÃO
+item e caixa inicialmente referem-se à mesma instância. Por isso, item.Valor += taxa muda o campo dessa instância de 10 para 13. A instrução seguinte modifica somente a cópia da referência armazenada em item: caixa continua apontando para a instância de valor 13. Já taxa é um parâmetro ref e corresponde à variável de Main; taxa += 2 altera essa variável para 5. A saída é 13 5.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. item recebe por valor uma cópia da referência. A atribuição de uma nova Caixa a item não substitui a referência guardada em caixa.
+B) Atende. A primeira instrução altera para 13 o objeto compartilhado; a reatribuição de item é local; ref faz taxa do chamador passar de 3 para 5.
+C) Não atende. O valor 13 considera corretamente a mutação do objeto, mas taxa é passada por ref e sua atualização é visível em Main.
+D) Não atende. A passagem da referência por valor permite alterar o objeto referido, e o parâmetro ref permite alterar taxa; as duas mudanças são observáveis.
+E) Não atende. A reatribuição local de item não muda caixa, enquanto a alteração de taxa, passada por ref, muda a variável de Main.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — Method parameters and modifiers, C# reference. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters. Localizador: Introdução; Pass by value and pass by reference; exemplos de reatribuição e parâmetros ref. Sustenta cópia da referência, mutação compartilhada e alteração por ref.
+- Programa-base — Programação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2015.
+- Caderno, questão e página: Não obtido; Q566693 (identificador do acervo; número original não obtido); Não obtida; página HTML e imagem do programa.
+- Origem verificável: https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76; arquivo efetivamente consultado: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg.
+- Característica observada e aplicação autoral: Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.
+- Limites da referência: Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultada a referência oficial de C# sobre passagem por valor, tipos de referência e modificador ref.
+- Analítica: rastreadas a instância inicial, a nova instância local e a variável taxa do chamador; verificadas todas as alternativas.
+- Não executada: a saída foi determinada por análise, sem compilar ou executar C#.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguarda auditoria independente.

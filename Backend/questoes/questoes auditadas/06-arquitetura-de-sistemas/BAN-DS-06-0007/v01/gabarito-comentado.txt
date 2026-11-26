@@ -1,0 +1,43 @@
+ID: BAN-DS-06-0007
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar a atribuição adequada das funções I e II e uma relação tecnicamente correta entre os mecanismos.
+
+RESOLUÇÃO
+I descreve um API Gateway configurado para autenticação e encaminhamento. II descreve Service Discovery apoiado em registro e informações de saúde das instâncias. São funções distintas que podem cooperar: o gateway usa o nome do serviço para obter destinos internos por descoberta, mantendo seu ponto de entrada para os clientes externos. Não se exige que toda implementação de gateway ofereça nativamente todas essas funções.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: inverte as funções. O catálogo de instâncias apoia a descoberta; a autenticação e o encaminhamento de entrada descritos em I pertencem ao gateway configurado para isso.
+B) Não atende: embora associe os nomes a I e II, atribui à descoberta o recebimento das requisições de negócio para autenticar clientes, confundindo-a com o ponto de entrada.
+C) Não atende: a consulta à descoberta pelo gateway permite resolver mudanças de instância no lado dos serviços; não é necessário atualizar o cliente externo a cada troca de endereço interno.
+D) Não atende: inverte as funções e confunde credenciais com localização; autenticar um cliente não fornece, por si só, os endereços atuais das instâncias saudáveis.
+E) Atende: o gateway executa a função de entrada e encaminhamento de I, enquanto a descoberta resolve a localização de II; a consulta ao registro pelo gateway permite a cooperação entre ambos.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — Use API gateways in microservices — Azure Architecture Center. https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway. Localizador: What is an API gateway?; How to use an API gateway, itens Gateway routing e Gateway offloading; Choose an API gateway technology, suporte às funções exigidas. Consulta em 26/11/2026.
+- HashiCorp Consul — Discover services overview. https://developer.hashicorp.com/consul/docs/discover. Localizador: Introduction e Static lookups: catálogo registra endereços, incorpora resultados de health checks e permite localizar instâncias por DNS. Consulta em 26/11/2026.
+- Spring Cloud Gateway — DiscoveryClient Route Definition Locator — documentação 5.1.0 exibida na consulta. https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway-server-webflux/the-discoveryclient-route-definition-locator.html. Localizador: Parágrafos iniciais e Configuring Predicates and Filters for DiscoveryClient Routes: gateway cria rotas a partir de serviços registrados e encaminha por nome lógico. Consulta em 26/11/2026; exemplo de integração, sem exigir Spring no cenário.
+- Programa-base — Arquitetura de sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 32, página 8, na extração local com marcadores de página; uso editorial.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 33, página 8, na extração local com marcadores de página; uso editorial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Cenário breve sobre um ambiente de microsserviços, seguido de alternativas com afirmações técnicas sobre funções de um componente.
+  Aplicação nesta questão autoral: As opções avaliam a atribuição das funções e uma relação operacional entre os dois mecanismos, sem cobrar comandos de um fornecedor.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Correspondência entre elementos de um cenário, com ordem fixada e alternativas comparáveis.
+  Aplicação nesta questão autoral: As cinco opções mantêm a sequência I/II e acrescentam uma consequência a ser avaliada, exigindo conferir a alternativa por inteiro.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: conferidos ponto de entrada e encaminhamento na Microsoft, registro/endereço/saúde na HashiCorp e integração gateway-descoberta na documentação Spring. Analítica: contrastadas as atribuições e as afirmações adicionais das cinco alternativas, sem presumir que as funções sejam mutuamente exclusivas em um mesmo produto. Não houve execução de infraestrutura. Editorial: lidas Q32 e Q33/p.8 do TRT4/2022 no acervo local. Independência: a questão anterior sobre resiliência cobrava timeout, retry e circuit breaker, com objetivo distinto.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

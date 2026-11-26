@@ -1,0 +1,488 @@
+{
+  "elaborador": "04",
+  "responsavel": "/root/s2_elab_04",
+  "questoes": [
+    {
+      "id": "BAN-DS-04-0007",
+      "numero": 15,
+      "materia": "Banco de Dados",
+      "topico": "Modelagem entidade-relacionamento: associação muitos-para-muitos",
+      "versao": "v01",
+      "enunciado": "Em um modelo de contas, um cliente pode ser titular de várias contas, e uma conta pode ter vários titulares. Para cada par cliente-conta registra-se uma única data de início da titularidade, sem manter histórico de novos vínculos do mesmo par. Clientes distintos podem iniciar titularidades na mesma data, inclusive na mesma conta.\n\nNo mapeamento para o modelo relacional, foram definidas CLIENTE(id_cliente), CONTA(id_conta) e TITULARIDADE(id_cliente, id_conta, data_inicio). Os identificadores são as chaves primárias das duas primeiras tabelas. Em TITULARIDADE, id_cliente e id_conta são chaves estrangeiras para as respectivas tabelas.\n\nPara impedir a repetição de um par cliente-conta e permitir todas as titularidades admitidas, a chave primária de TITULARIDADE deve ser composta por",
+      "alternativas": {
+        "A": "id_cliente.",
+        "B": "id_conta.",
+        "C": "id_cliente e id_conta.",
+        "D": "data_inicio.",
+        "E": "id_cliente, id_conta e data_inicio."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. Tornar id_cliente único permitiria no máximo uma linha de titularidade por cliente, impedindo que ele fosse titular de várias contas.",
+        "B": "Não atende. Tornar id_conta único permitiria no máximo um titular por conta, contrariando a possibilidade de contas com vários titulares.",
+        "C": "Atende. A combinação dos dois identificadores distingue cada vínculo e impede repetir o mesmo par. Cada identificador pode reaparecer em combinações diferentes, preservando os dois lados muitos.",
+        "D": "Não atende. A data não identifica um vínculo: o cenário admite vários vínculos na mesma data. Além de rejeitá-los, essa chave permitiria repetir um mesmo par usando datas diferentes.",
+        "E": "Não atende. A unicidade da tripla não impede repetir o mesmo par com outra data. Para a regra declarada, data_inicio é atributo do vínculo identificado pelo par, e não componente necessário de sua identificação."
+      },
+      "resolucao": "A titularidade pertence ao par cliente-conta, caracterizando uma associação muitos-para-muitos. A tabela associativa armazena uma linha por par, com as duas referências e a data do vínculo. A chave (id_cliente, id_conta) impõe a unicidade exatamente no nível requerido. Não se deve tornar cada identificador individualmente único nem permitir que uma mudança de data crie outro registro do mesmo par.",
+      "fontes": [
+        {
+          "titulo": "PostgreSQL 15 Documentation - 5.4. Constraints",
+          "url": "https://www.postgresql.org/docs/15/ddl-constraints.html",
+          "localizador": "5.4.4 Primary Keys e 5.4.5 Foreign Keys, exemplo products/orders/order_items com duas chaves estrangeiras e chave primária composta. Fundamenta unicidade por combinação e implementação de associação muitos-para-muitos."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 43, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional Federal da 4ª Região - 2007 - Cargo I, Tipo 001",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Questão 47, página 8; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "Programa de conhecimentos específicos - Banco de Dados",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | modelo entidade-relacionamento;"
+        }
+      ],
+      "autor": "/root/s2_elab_04",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: seções 5.4.4 e 5.4.5 da documentação oficial PostgreSQL 15 consultadas por navegação em 26/11/2026.",
+        "Analítica: confrontadas as cinco chaves com as cardinalidades e a unicidade do par; construídos contraexemplos para as opções inadequadas. Não houve execução de SQL.",
+        "Editorial: lidos os exemplos FCC indicados nas extrações locais e conferidos os metadados em fontes.json.",
+        "Independência: comparada às seis questões de Banco de Dados do SIM-001; o objetivo desta é cardinalidade e identificação de vínculo, e não dependência parcial/normalização."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 43,
+          "pagina": 10,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "O exemplo apresenta uma estrutura de origem antes do comando e cinco representações concorrentes. Aplicação: O enunciado fornece as regras e a estrutura relacional, e as opções apresentam composições concorrentes de chave; o objetivo é de modelagem, sem reutilizar XML/JSON ou dados da referência.",
+          "limites": "Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada."
+        },
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 47,
+          "pagina": 8,
+          "origem": "Arquivo do próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "O comando relaciona uma descrição de banco de dados a alternativas da mesma categoria conceitual. Aplicação: As cinco opções são conjuntos de atributos candidatos à chave, avaliados pelas mesmas regras declaradas.",
+          "limites": "Referência histórica de formato; não estabelece frequência editorial nem valida o conteúdo técnico atual. A questão autoral apresenta objetivo, cenário e alternativas próprios."
+        }
+      ],
+      "estado": "PENDENTE_AUDITORIA",
+      "objetivo": "Mapear a associação muitos-para-muitos e identificar a chave da entidade associativa sem impor unicidade a cada participante isoladamente.",
+      "topicoConteudo": "modelo entidade-relacionamento;",
+      "comando": "Identificar a chave primária adequada à tabela associativa nas regras declaradas."
+    },
+    {
+      "id": "BAN-DS-04-0008",
+      "numero": 16,
+      "materia": "Banco de Dados",
+      "topico": "PostgreSQL 14/15: SAVEPOINT e ROLLBACK TO SAVEPOINT",
+      "versao": "v01",
+      "enunciado": "Em um banco PostgreSQL 15, a tabela limite possui id integer como chave primária e valor integer. Ela contém somente a linha (1, 100). Sem operações concorrentes, gatilhos ou erros, uma sessão executa:\n\nBEGIN;\nUPDATE limite SET valor = valor + 20 WHERE id = 1;\nSAVEPOINT ajuste;\nUPDATE limite SET valor = valor * 2 WHERE id = 1;\nROLLBACK TO SAVEPOINT ajuste;\nUPDATE limite SET valor = valor + 5 WHERE id = 1;\nROLLBACK TO SAVEPOINT ajuste;\nUPDATE limite SET valor = valor + 7 WHERE id = 1;\nCOMMIT;\nSELECT valor FROM limite WHERE id = 1;\n\nO valor retornado pelo SELECT é",
+      "alternativas": {
+        "A": "100.",
+        "B": "120.",
+        "C": "132.",
+        "D": "252.",
+        "E": "127."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende. O acréscimo de 20 ocorreu antes de ajuste e não é desfeito por ROLLBACK TO SAVEPOINT ajuste. Também permanece o acréscimo final de 7.",
+        "B": "Não atende. 120 é o valor registrado no savepoint e restaurado pelos dois rollbacks parciais. O último UPDATE acrescenta 7 antes do COMMIT.",
+        "C": "Não atende. 132 resultaria de somar 5 e 7 a 120, mas o segundo ROLLBACK TO descarta o acréscimo de 5.",
+        "D": "Não atende. 252 é o resultado de 120 * 2 + 5 + 7, que ignora os dois rollbacks parciais.",
+        "E": "Atende. Cada ROLLBACK TO restaura 120, e o savepoint continua válido após a primeira utilização. A última atualização produz 127, confirmado pelo COMMIT."
+      },
+      "resolucao": "O primeiro UPDATE leva o valor de 100 para 120. SAVEPOINT ajuste marca esse estado. A multiplicação produz 240, mas seu efeito é desfeito pelo primeiro ROLLBACK TO, que restaura 120. O acréscimo de 5 produz 125, também desfeito pelo retorno ao mesmo savepoint, ainda válido. Resta 120; o acréscimo final de 7 produz 127. O COMMIT confirma esse estado e o SELECT retorna 127. ROLLBACK TO não encerra a transação nem desfaz o que precede o savepoint.",
+      "fontes": [
+        {
+          "titulo": "PostgreSQL 15 Documentation - SAVEPOINT",
+          "url": "https://www.postgresql.org/docs/15/sql-savepoint.html",
+          "localizador": "Description, Notes e Examples: marco interno à transação e desfazimento das operações posteriores."
+        },
+        {
+          "titulo": "PostgreSQL 15 Documentation - ROLLBACK TO SAVEPOINT",
+          "url": "https://www.postgresql.org/docs/15/sql-rollback-to.html",
+          "localizador": "Description: operações posteriores são desfeitas e o savepoint permanece válido para reutilização."
+        },
+        {
+          "titulo": "PostgreSQL 15 Documentation - COMMIT",
+          "url": "https://www.postgresql.org/docs/15/sql-commit.html",
+          "localizador": "Description e Examples: confirmação da transação."
+        },
+        {
+          "titulo": "PostgreSQL 14 Documentation - SAVEPOINT",
+          "url": "https://www.postgresql.org/docs/14/sql-savepoint.html",
+          "localizador": "Description e Notes: conferência na outra versão do programa."
+        },
+        {
+          "titulo": "PostgreSQL 14 Documentation - ROLLBACK TO SAVEPOINT",
+          "url": "https://www.postgresql.org/docs/14/sql-rollback-to.html",
+          "localizador": "Description: mesmo comportamento de permanência do savepoint."
+        },
+        {
+          "titulo": "PostgreSQL 14 Documentation - COMMIT",
+          "url": "https://www.postgresql.org/docs/14/sql-commit.html",
+          "localizador": "Description: confirmação da transação; conferência entre versões."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 43, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "Programa de conhecimentos específicos - Banco de Dados",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | controle de transações; PostgreSQL versões 14 e 15;"
+        }
+      ],
+      "autor": "/root/s2_elab_04",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultadas por navegação as páginas SAVEPOINT, ROLLBACK TO SAVEPOINT e COMMIT das versões 14 e 15 em 26/11/2026; enunciado fixado em PostgreSQL 15.",
+        "Analítica: rastreada a sequência 100 → 120 → 240 → 120 → 125 → 120 → 127, e conferido o motivo de cada distrator. Não houve execução em PostgreSQL nem simulação apresentada como execução do SGBD.",
+        "Editorial: lida a Q43, p10, da extração TRT4/2022 e conferida sua origem secundária em fontes.json.",
+        "Independência: o SIM-001 cobrou visibilidade concorrente em READ COMMITTED; aqui o objetivo é rollback parcial e reutilização de savepoint em uma sessão."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 43,
+          "pagina": 10,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "O enunciado exibe um fragmento técnico destacado e pede sua representação entre cinco alternativas. Aplicação: O bloco SQL precede o comando de resultado; as alternativas são valores comparáveis, sem copiar o fragmento XML/JSON da referência.",
+          "limites": "Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada."
+        }
+      ],
+      "estado": "PENDENTE_AUDITORIA",
+      "objetivo": "Rastrear alterações antes e depois de um savepoint, reconhecendo sua permanência após ROLLBACK TO.",
+      "topicoConteudo": "controle de transações; PostgreSQL versões 14 e 15;",
+      "comando": "Determinar o valor retornado após dois retornos ao mesmo savepoint e COMMIT."
+    },
+    {
+      "id": "BAN-DS-04-0009",
+      "numero": 17,
+      "materia": "Banco de Dados",
+      "topico": "PostgreSQL 14/15: privilégios SQL GRANT e REVOKE",
+      "versao": "v01",
+      "enunciado": "No PostgreSQL 15, dono é proprietário da tabela public.relatorio. As roles ana e bruno não são proprietárias nem superusuárias, não pertencem a outras roles e, inicialmente, não possuem privilégios nessa tabela. PUBLIC também não possui privilégios nela. Ambas já dispõem das permissões de conexão e de uso do esquema necessárias ao acesso.\n\nSão executados, nesta ordem:\n\nPor dono:\nGRANT SELECT ON TABLE public.relatorio TO ana WITH GRANT OPTION;\n\nPor ana:\nGRANT SELECT ON TABLE public.relatorio TO bruno;\n\nPor dono:\nREVOKE GRANT OPTION FOR SELECT ON TABLE public.relatorio\nFROM ana CASCADE;\n\nNão há outras concessões ou alterações de privilégios. Após essa sequência, quanto ao privilégio SELECT na tabela,",
+      "alternativas": {
+        "A": "ana o mantém, e bruno o perde.",
+        "B": "ana e bruno o mantêm.",
+        "C": "ana o perde, e bruno o mantém.",
+        "D": "ana e bruno o perdem.",
+        "E": "o último comando é rejeitado porque ana já o concedeu a bruno."
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Atende. GRANT OPTION FOR retira de ana somente a faculdade de conceder SELECT, preservando sua leitura. CASCADE remove a concessão dependente feita a bruno, que não tem outra fonte para o privilégio.",
+        "B": "Não atende. A leitura de ana permanece, mas a de bruno depende da opção de concessão retirada; CASCADE alcança essa dependência.",
+        "C": "Não atende. A revogação especifica GRANT OPTION FOR, portanto não retira a leitura de ana. O privilégio de bruno, ao contrário, é dependente da concessão de ana e é removido.",
+        "D": "Não atende. Seria possível remover também a leitura de ana revogando o próprio SELECT. O comando apresentado revoga apenas sua opção de concessão.",
+        "E": "Não atende. A existência de privilégio dependente impediria a revogação com RESTRICT, mas CASCADE autoriza a remoção das concessões dependentes. A cadeia foi explicitamente delimitada no enunciado."
+      },
+      "resolucao": "A primeira concessão dá a ana tanto SELECT quanto a opção de repassá-lo. A segunda cria para bruno uma concessão dependente dessa opção. No comando final, GRANT OPTION FOR delimita a retirada à opção de concessão de ana: seu SELECT permanece. CASCADE remove o privilégio dependente de bruno. Como não existem outras concessões, privilégios de PUBLIC ou associações a roles, bruno deixa de ter SELECT.",
+      "fontes": [
+        {
+          "titulo": "PostgreSQL 15 Documentation - GRANT",
+          "url": "https://www.postgresql.org/docs/15/sql-grant.html",
+          "localizador": "GRANT on Database Objects: WITH GRANT OPTION permite repassar privilégios; descrição das fontes cumulativas de acesso."
+        },
+        {
+          "titulo": "PostgreSQL 15 Documentation - REVOKE",
+          "url": "https://www.postgresql.org/docs/15/sql-revoke.html",
+          "localizador": "Description, parágrafos sobre GRANT OPTION FOR, dependent privileges e CASCADE; Notes, exemplo de concessão A → B → C."
+        },
+        {
+          "titulo": "PostgreSQL 14 Documentation - GRANT",
+          "url": "https://www.postgresql.org/docs/14/sql-grant.html",
+          "localizador": "GRANT on Database Objects: conferência de WITH GRANT OPTION na versão 14."
+        },
+        {
+          "titulo": "PostgreSQL 14 Documentation - REVOKE",
+          "url": "https://www.postgresql.org/docs/14/sql-revoke.html",
+          "localizador": "Description: distinção entre privilégio e opção de concessão; revogação de dependências com CASCADE."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 41, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional Federal da 4ª Região - 2007 - Cargo I, Tipo 001",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Questão 49, página 8; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "Programa de conhecimentos específicos - Banco de Dados",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | comandos SQL: DML, DDL e DCL; PostgreSQL versões 14 e 15;"
+        }
+      ],
+      "autor": "/root/s2_elab_04",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: GRANT e REVOKE das versões PostgreSQL 14 e 15 consultados por navegação em 26/11/2026, incluindo os parágrafos de dependência e opção de concessão.",
+        "Analítica: construída a cadeia dono → ana → bruno e conferidos separadamente privilégio, opção de concessão e dependência. As cinco opções foram confrontadas com o comando efetivo. Não houve execução SQL.",
+        "Editorial: lidas Q41/p10 de TRT4/2022 e Q49/p8 de TRF4/2007; origem secundária e histórica registradas.",
+        "Independência: nenhuma questão de privilégios GRANT/REVOKE foi usada no SIM-001."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 41,
+          "pagina": 10,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "O exemplo delimita PostgreSQL, uma tarefa administrativa e comandos de privilégios em cinco opções. Aplicação: Mantida a precisão de objeto, ator e comando, com um cenário autoral de dependência de concessões em vez da identificação sintática de REVOKE ALL.",
+          "limites": "Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada."
+        },
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 49,
+          "pagina": 8,
+          "origem": "Arquivo do próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "As opções são comparáveis e o comando associa efeitos administrativos a declarações SQL. Aplicação: As opções comparam efeitos da mesma sequência sobre duas roles identificadas, sem repetir os pares de palavras da prova histórica.",
+          "limites": "Referência histórica de formato; não estabelece frequência editorial nem valida o conteúdo técnico atual. A questão autoral apresenta objetivo, cenário e alternativas próprios."
+        }
+      ],
+      "estado": "PENDENTE_AUDITORIA",
+      "objetivo": "Distinguir revogação da opção de concessão e do privilégio de leitura, considerando dependência de concessões e CASCADE.",
+      "topicoConteudo": "comandos SQL: DML, DDL e DCL; PostgreSQL versões 14 e 15;",
+      "comando": "Determinar quem mantém o privilégio SELECT após revogação da opção de concessão em cadeia delimitada."
+    },
+    {
+      "id": "BAN-DS-04-0010",
+      "numero": 18,
+      "materia": "Banco de Dados",
+      "topico": "Oracle 19c: valores NULL e condições IS NULL",
+      "versao": "v01",
+      "enunciado": "Em um banco Oracle Database 19c, o script abaixo foi executado com sucesso:\n\nCREATE TABLE contato (\n    id NUMBER PRIMARY KEY,\n    apelido VARCHAR2(20)\n);\nINSERT INTO contato VALUES (1, NULL);\nINSERT INTO contato VALUES (2, '');\nINSERT INTO contato VALUES (3, '0');\nINSERT INTO contato VALUES (4, 'Ana');\nCOMMIT;\n\nSem outras alterações nos dados, executa-se:\n\nSELECT id\nFROM contato\nWHERE apelido IS NULL OR apelido = NULL\nORDER BY id;\n\nOs identificadores retornados são",
+      "alternativas": {
+        "A": "somente 1.",
+        "B": "somente 1, 2 e 3.",
+        "C": "1, 2, 3 e 4.",
+        "D": "somente 1 e 2.",
+        "E": "nenhum."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. Além do NULL explícito do registro 1, a cadeia de comprimento zero inserida no registro 2 é tratada como NULL pelo Oracle 19c.",
+        "B": "Não atende. O texto '0' tem um caractere e não é NULL. Para o registro 3, IS NULL é falso e a igualdade a NULL produz UNKNOWN; a linha não satisfaz o WHERE.",
+        "C": "Não atende. Os registros 3 e 4 têm valores não nulos. Comparar seus valores com NULL não torna a condição verdadeira; produz UNKNOWN.",
+        "D": "Atende. Os registros 1 e 2 têm apelido nulo no Oracle 19c. Neles, IS NULL é verdadeiro e o OR resulta verdadeiro. Nos demais, a condição não é verdadeira.",
+        "E": "Não atende. A igualdade a NULL produz UNKNOWN, mas não anula um operando verdadeiro do OR. Nos registros 1 e 2, IS NULL basta para tornar a condição verdadeira."
+      },
+      "resolucao": "No Oracle 19c, a cadeia de caracteres de comprimento zero é tratada como NULL; assim, os registros 1 e 2 têm apelido nulo. A condição IS NULL é verdadeira nessas duas linhas. O teste apelido = NULL produz UNKNOWN, inclusive para valores nulos. Com OR, TRUE combinado com UNKNOWN continua TRUE, selecionando 1 e 2. Para os registros 3 e 4, IS NULL é FALSE e FALSE OR UNKNOWN resulta UNKNOWN; o WHERE não seleciona essas linhas. ORDER BY id organiza a saída como 1, 2.",
+      "fontes": [
+        {
+          "titulo": "Oracle Database 19c SQL Language Reference - Nulls",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Nulls.html",
+          "localizador": "Texto inicial: valor de caractere com comprimento zero; Nulls with Comparison Conditions e Nulls in Conditions: comparação produz UNKNOWN e WHERE seleciona apenas condições verdadeiras."
+        },
+        {
+          "titulo": "Oracle Database 19c SQL Language Reference - Null Conditions",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Null-Conditions.html",
+          "localizador": "Condições IS NULL e IS NOT NULL, tabela de condições e exemplo SELECT com WHERE IS NULL."
+        },
+        {
+          "titulo": "Oracle Database 19c SQL Language Reference - Logical Conditions",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Logical-Conditions.html",
+          "localizador": "Logical Conditions, regra de OR e OR Truth Table: TRUE OR UNKNOWN = TRUE; FALSE OR UNKNOWN = UNKNOWN."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 43, página 10; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "Programa de conhecimentos específicos - Banco de Dados",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | comandos SQL: DML, DDL e DCL; Oracle 19c;"
+        }
+      ],
+      "autor": "/root/s2_elab_04",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: páginas oficiais Nulls, Null Conditions e Logical Conditions do Oracle Database 19c consultadas por navegação em 26/11/2026, incluindo a tabela-verdade de OR; não generalizado o tratamento de cadeia vazia para outros SGBDs.",
+        "Analítica: avaliada a condição linha a linha, distinguindo NULL de '0' e TRUE de UNKNOWN. Não houve execução em Oracle.",
+        "Editorial: lida a Q43/p10 de TRT4/2022 e conferidos os limites da cópia secundária.",
+        "Independência: o SIM-001 não contém questão Oracle sobre cadeia vazia, comparação com NULL ou IS NULL."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 43,
+          "pagina": 10,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "Um fragmento técnico é apresentado antes da pergunta; as cinco opções apresentam representações concorrentes. Aplicação: Apresentado script SQL completo e consulta, seguido de cinco conjuntos de identificadores comparáveis; dados e objetivo são autorais.",
+          "limites": "Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada."
+        }
+      ],
+      "estado": "PENDENTE_AUDITORIA",
+      "objetivo": "Avaliar IS NULL, comparação com NULL e texto de comprimento zero no Oracle 19c.",
+      "topicoConteudo": "comandos SQL: DML, DDL e DCL; Oracle 19c;",
+      "comando": "Determinar os identificadores selecionados pela condição com IS NULL e comparação por igualdade a NULL."
+    },
+    {
+      "id": "BAN-DS-04-0011",
+      "numero": 19,
+      "materia": "Banco de Dados",
+      "topico": "Modelagem dimensional: grão da tabela fato e esquema estrela",
+      "versao": "v01",
+      "enunciado": "Uma instituição deseja analisar o valor pago por data, agência e canal de atendimento. O modelo dimensional deve preservar cada pagamento individualmente, inclusive quando dois pagamentos têm a mesma data, agência e canal. Cada pagamento possui um identificador próprio na origem, um único valor e exatamente uma data, uma agência e um canal.\n\nAs dimensões Data, Agência e Canal deverão ter, respectivamente, uma linha por data, por agência e por canal. Pagamentos do mesmo canal podem ter valores diferentes. Foi definido que a tabela fato terá o grão de um pagamento processado. Para implementar esse requisito em um esquema estrela, a proposta adequada é manter na tabela fato",
+      "alternativas": {
+        "A": "uma linha por pagamento, com as três chaves de dimensão, e armazenar o valor de cada pagamento como atributo da dimensão Canal.",
+        "B": "uma linha por pagamento, com valor_pago e chaves estrangeiras para as dimensões Data, Agência e Canal.",
+        "C": "uma linha por combinação de data, agência e canal, com a soma de valor_pago e chaves estrangeiras para as três dimensões.",
+        "D": "uma linha por pagamento, com valor_pago e as descrições de data, agência e canal em uma única tabela, sem tabelas de dimensões.",
+        "E": "linhas de pagamentos e linhas de totais mensais de agência, com valor_pago e chaves estrangeiras para as três dimensões."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. O valor é uma medida do pagamento e varia entre eventos do mesmo canal. Armazená-lo como atributo de Canal não o mantém no grão da tabela fato proposto.",
+        "B": "Atende. Cada linha representa exatamente um pagamento; valor_pago mede esse evento, e as três chaves o vinculam ao contexto descritivo de Data, Agência e Canal, formando a estrutura em estrela.",
+        "C": "Não atende. A agregação por data, agência e canal reúne pagamentos distintos que compartilham essas dimensões. Isso muda o grão definido, embora a estrutura agregada possa ser útil em outra tabela fato.",
+        "D": "Não atende. A linha por evento preserva o grão, mas a proposta elimina as tabelas de dimensões e suas relações com a fato, deixando de implementar a estrutura em estrela solicitada.",
+        "E": "Não atende. Pagamentos individuais e totais mensais representam grãos diferentes. Misturá-los na mesma tabela fato viola o grão uniforme definido e pode levar à dupla contagem em somas sem distinção dessas linhas."
+      },
+      "resolucao": "O grão declara o significado de uma linha: neste caso, um pagamento individual. Duas ocorrências com a mesma data, agência e canal continuam sendo duas linhas. valor_pago é a medida do evento; Data, Agência e Canal descrevem seu contexto. No esquema estrela, a fato guarda a medida e as referências às tabelas de dimensões. Uma agregação diária mudaria o significado da linha, e misturar totais mensais com eventos produziria uma fato com grãos incompatíveis.",
+      "fontes": [
+        {
+          "titulo": "Kimball Group - Grain - Dimensional Modeling Techniques",
+          "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/grain/",
+          "localizador": "Declaração do significado de uma linha de fato; compatibilidade entre grão, dimensões e medidas; separação de grãos em tabelas físicas distintas."
+        },
+        {
+          "titulo": "Kimball Group - Star Schemas and OLAP Cubes",
+          "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/star-schema-olap-cube/",
+          "localizador": "Separação entre medidas e contexto descritivo; fato ligada a dimensões por relações de chave primária/estrangeira."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional Federal da 4ª Região - 2007 - Cargo I, Tipo 001",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Questão 52, página 9; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "Programa de conhecimentos específicos - Banco de Dados",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | conceitos de modelagem dimensional (fatos, dimensões, métricas, esquemas estrela e floco de neve);"
+        }
+      ],
+      "autor": "/root/s2_elab_04",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultadas por navegação as páginas Grain e Star Schemas and OLAP Cubes do Kimball Group em 26/11/2026.",
+        "Analítica: comparadas as propostas quanto ao significado de cada linha e à separação entre fato e dimensões; verificado o caso de pagamentos distintos com contexto dimensional igual. Não houve implementação ou execução de banco.",
+        "Editorial: lida a Q52/p9 de TRF4/2007, referência histórica obtida no próprio órgão conforme fontes.json.",
+        "Independência: o SIM-001 incluiu estrela apenas como distrator de NoSQL; não avaliou grão, medidas ou a organização da fato e dimensões."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 52,
+          "pagina": 9,
+          "origem": "Arquivo do próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "O item de data warehouse pede a identificação de uma propriedade entre cinco afirmações concorrentes. Aplicação: O item autoral delimita a necessidade de análise e apresenta cinco propostas do mesmo modelo; exige compatibilidade de grão e estrutura, sem copiar as afirmações antigas.",
+          "limites": "Referência histórica de formato; não estabelece frequência editorial nem valida o conteúdo técnico atual. A questão autoral apresenta objetivo, cenário e alternativas próprios."
+        }
+      ],
+      "estado": "PENDENTE_AUDITORIA",
+      "objetivo": "Compatibilizar o grão de evento com a medida e as dimensões em um esquema estrela.",
+      "topicoConteudo": "conceitos de modelagem dimensional (fatos, dimensões, métricas, esquemas estrela e floco de neve);",
+      "comando": "Identificar a proposta que preserva uma linha por pagamento e organiza medidas e dimensões em estrela."
+    },
+    {
+      "id": "BAN-DS-04-0012",
+      "numero": 20,
+      "materia": "Banco de Dados",
+      "topico": "PL/pgSQL: SELECT INTO STRICT e quantidade de linhas",
+      "versao": "v01",
+      "enunciado": "No PostgreSQL 15, a tabela parametro possui as colunas chave text e valor integer, sem restrição de unicidade, e contém somente:\n\nchave | valor\nX     | 7\nX     | 7\nY     | NULL\n\nFoi criada a função:\n\nCREATE FUNCTION obter_valor(p_chave text)\nRETURNS integer\nLANGUAGE plpgsql\nAS $$\nDECLARE\n    v_valor integer;\nBEGIN\n    SELECT p.valor INTO STRICT v_valor\n    FROM parametro AS p\n    WHERE p.chave = p_chave;\n    RETURN v_valor;\nEND;\n$$;\n\nSão realizadas três chamadas independentes, cada uma em sua própria transação, sem alterações concorrentes: obter_valor('Z'), obter_valor('Y') e obter_valor('X').\n\nOs resultados ou exceções dessas chamadas são, respectivamente,",
+      "alternativas": {
+        "A": "NULL, NULL e 7.",
+        "B": "NO_DATA_FOUND, NO_DATA_FOUND e TOO_MANY_ROWS.",
+        "C": "NO_DATA_FOUND, NULL e TOO_MANY_ROWS.",
+        "D": "NO_DATA_FOUND, NULL e 7.",
+        "E": "NULL, NULL e TOO_MANY_ROWS."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. Esse comportamento corresponde ao SELECT INTO sem STRICT: ausência de linhas atribui NULL, e apenas a primeira linha entre várias é usada. A função apresentada exige exatamente uma linha.",
+        "B": "Não atende. NO_DATA_FOUND ocorre quando a consulta não retorna linhas. Para Y existe uma linha, cujo valor é NULL; STRICT verifica cardinalidade, sem proibir um valor nulo nessa variável.",
+        "C": "Atende. Z não retorna linhas e gera NO_DATA_FOUND. Y retorna exatamente uma linha, permitindo retornar NULL. X retorna duas linhas e gera TOO_MANY_ROWS, mesmo que os valores sejam iguais.",
+        "D": "Não atende. As duas linhas de X continuam sendo duas linhas. A consulta não usa DISTINCT nem agregação, e STRICT não escolhe simplesmente a primeira delas.",
+        "E": "Não atende. Com STRICT, a consulta sem linhas para Z não atribui silenciosamente NULL: ela gera NO_DATA_FOUND. Os comportamentos indicados para Y e X estão coerentes, mas o primeiro não."
+      },
+      "resolucao": "INTO STRICT exige que o comando produza exatamente uma linha. Para Z não há correspondências: é levantada NO_DATA_FOUND antes do RETURN. Para Y existe uma linha com valor nulo; sua cardinalidade satisfaz STRICT e v_valor recebe NULL, que é retornado. Para X há duas correspondências; valores iguais não reduzem a quantidade de linhas e a função não usa DISTINCT. Assim, é levantada TOO_MANY_ROWS. As chamadas foram declaradas independentes para que a falha de uma transação não impeça observar as demais.",
+      "fontes": [
+        {
+          "titulo": "PostgreSQL 15 Documentation - 43.5. Basic Statements",
+          "url": "https://www.postgresql.org/docs/15/plpgsql-statements.html",
+          "localizador": "43.5.3 Executing a Command with a Single-Row Result: SELECT INTO sem STRICT e com STRICT; NO_DATA_FOUND para zero linhas e TOO_MANY_ROWS para mais de uma."
+        },
+        {
+          "titulo": "PostgreSQL 14 Documentation - 43.5. Basic Statements",
+          "url": "https://www.postgresql.org/docs/14/plpgsql-statements.html",
+          "localizador": "43.5.3: conferência do mesmo comportamento na outra versão prevista no programa."
+        },
+        {
+          "titulo": "FCC - Tribunal Regional do Trabalho da 4ª Região - 2022 - A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 52, página 12; arquivo efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Origem e limites descritos em referenciasEstilo."
+        },
+        {
+          "titulo": "Programa de conhecimentos específicos - Banco de Dados",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | SQL, PL/SQL e PL/pgSQL; PostgreSQL versões 14 e 15;"
+        }
+      ],
+      "autor": "/root/s2_elab_04",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultada por navegação a seção 43.5.3 de PL/pgSQL nas versões PostgreSQL 14 e 15 em 26/11/2026; enunciado fixado em 15.",
+        "Analítica: contadas separadamente zero, uma e duas linhas para Z, Y e X. Conferida a diferença entre linha com NULL e ausência de linha, bem como a ausência de DISTINCT. Não houve criação ou execução da função em PostgreSQL.",
+        "Editorial: lida a Q52/p12 da extração TRT4/2022; origem secundária identificada por fontes.json.",
+        "Independência: o SIM-001 não avaliou SELECT INTO STRICT, cardinalidade de resultado procedural ou suas exceções."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 52,
+          "pagina": 12,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "O exemplo fornece dados técnicos e pede três elementos na ordem indicada, com cinco sequências concorrentes. Aplicação: As três chamadas são explicitadas na ordem do comando, e cada opção traz três resultados nessa mesma ordem; não foram reutilizados os dados, lacunas ou conteúdo Linux da referência.",
+          "limites": "Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada."
+        }
+      ],
+      "estado": "PENDENTE_AUDITORIA",
+      "objetivo": "Distinguir ausência de linhas, linha com NULL e múltiplas linhas com valores iguais em SELECT INTO STRICT.",
+      "topicoConteudo": "SQL, PL/SQL e PL/pgSQL; PostgreSQL versões 14 e 15;",
+      "comando": "Determinar o resultado ou exceção de três chamadas independentes à função."
+    }
+  ]
+}

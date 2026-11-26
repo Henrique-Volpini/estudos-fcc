@@ -1,0 +1,15 @@
+ID: BAN-DS-02-0006
+Versão: v01
+Matéria: Gestão e Governança de Tecnologia da Informação
+Tópico: Lei 14.133/2021: acompanhamento e fiscalização contratual (art. 117)
+
+ENUNCIADO
+Uma autarquia celebrou contrato de manutenção de sistemas regido pela Lei nº 14.133/2021 e designou um servidor como fiscal. Contratou também uma empresa especializada para assisti-lo com informações técnicas. Ao receber um relatório que aponta defeitos na execução, o fiscal identificou a necessidade de providência que ultrapassa sua competência.
+
+À luz do art. 117 dessa Lei, na redação vigente em 11/11/2026, o fiscal deve
+
+A) atribuir à empresa de apoio a decisão sobre providências que superem sua competência, mantendo com o fiscal apenas o recebimento dos relatórios.
+B) registrar apenas as ocorrências que consiga corrigir diretamente, comunicando aos superiores os demais defeitos para que eles mantenham o respectivo registro.
+C) decidir sobre a providência necessária, mesmo fora de sua competência, utilizando o relatório da empresa como autorização para ampliar suas atribuições.
+D) encaminhar o relatório aos superiores e considerar-se eximido da responsabilidade de fiscalização sobre as informações recebidas da empresa de apoio.
+E) anotar as ocorrências em registro próprio e informar, em tempo hábil, aos superiores a situação que ultrapassa sua competência.

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-01-0005",
+    "numero": 1,
+    "versao": "v01",
+    "enunciado": "Uma equipe utiliza Kanban com o fluxo A fazer → Implementação → Validação → Concluído. O trabalho é considerado iniciado ao entrar em Implementação e finalizado ao entrar em Concluído. Há um único limite de WIP: no máximo seis itens iniciados e ainda não finalizados, sem exceções para itens bloqueados. Não há limites adicionais por etapa.\n\nEm determinado momento, há dez itens em A fazer, três em Implementação e dois em Validação, sendo um destes bloqueado. Em seguida, o item não bloqueado de Validação é concluído e dois itens passam de Implementação para Validação. Não ocorrem outras conclusões, cancelamentos ou entradas no fluxo.\n\nSem novas conclusões ou cancelamentos, a quantidade máxima de itens de A fazer que pode ser iniciada, respeitando o limite estabelecido, é",
+    "alternativas": {
+      "A": "1 item.",
+      "B": "2 itens.",
+      "C": "3 itens.",
+      "D": "4 itens.",
+      "E": "5 itens."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0006",
+    "numero": 2,
+    "versao": "v01",
+    "enunciado": "Em um processo BPMN 2.0.2, um gateway exclusivo divergente recebe um único token e possui duas saídas: uma leva à tarefa Conferir cadastro e a outra, à tarefa Solicitar documento. As saídas dessas tarefas chegam a entradas distintas de um gateway paralelo convergente, que possui uma única saída para a tarefa Registrar resultado.\n\nEm uma execução, o gateway exclusivo seleciona apenas Conferir cadastro, e essa tarefa termina normalmente. Não existem outros fluxos, eventos ou mecanismos capazes de produzir tokens nesse trecho, nem laços de repetição.\n\nNessas condições,",
+    "alternativas": {
+      "A": "Solicitar documento é iniciada após Conferir cadastro, pois a convergência paralela determina a execução sequencial dos dois ramos.",
+      "B": "Registrar resultado é iniciada uma vez, pois a escolha exclusiva dispensa o gateway paralelo de aguardar o ramo não selecionado.",
+      "C": "Registrar resultado é iniciada duas vezes, pois o gateway paralelo duplica o token recebido da tarefa Conferir cadastro.",
+      "D": "a instância é encerrada ao terminar Conferir cadastro, pois o gateway paralelo descarta tokens recebidos sem par na outra entrada.",
+      "E": "Registrar resultado não é iniciada, pois o gateway paralelo aguarda um token na entrada proveniente de Solicitar documento."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0007",
+    "numero": 3,
+    "versao": "v01",
+    "enunciado": "Uma equipe de qualidade organiza três atividades para um sistema de transferências entre contas da própria instituição:\n\nI. Verificar a classe CalculadoraTarifa isoladamente, fornecendo entradas e comparando os valores retornados; suas dependências são substituídas por objetos simulados.\nII. Verificar as interfaces e as trocas de dados entre os componentes reais ServicoTransferencia e RepositorioContas, executados em conjunto; os demais componentes da aplicação ficam fora do objeto desse teste.\nIII. Verificar o comportamento da aplicação completa, da interface de usuário à persistência, em ambiente representativo, confrontando o fluxo de transferência com a especificação do sistema. O objetivo não é avaliar interfaces com sistemas externos.\n\nConsiderando o objeto e o objetivo de cada atividade, os níveis de teste em I, II e III são, respectivamente,",
+    "alternativas": {
+      "A": "unidade; integração de componentes; sistema.",
+      "B": "unidade; sistema; integração de componentes.",
+      "C": "integração de componentes; unidade; sistema.",
+      "D": "sistema; integração de componentes; unidade.",
+      "E": "integração de componentes; sistema; unidade."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0008",
+    "numero": 4,
+    "versao": "v01",
+    "enunciado": "Uma equipe aprovou formalmente a baseline H1 de um sistema para homologação. Ela identifica as versões do código-fonte, dos requisitos, dos scripts de construção e dos casos de teste utilizados. Durante a homologação, foi solicitada uma alteração de uma regra de cálculo, com impacto nesses itens. A alteração ainda não foi autorizada.\n\nPara tratar a solicitação por meio da gestão da configuração, a equipe deve",
+    "alternativas": {
+      "A": "atualizar os arquivos de H1 a cada commit de desenvolvimento, pois a baseline corresponde às versões mais recentes existentes no repositório.",
+      "B": "rejeitar a solicitação até o término da homologação, pois a aprovação de uma baseline impede a criação de uma nova configuração durante essa etapa.",
+      "C": "implementar a alteração e atualizar H1 antes da autorização, pois o registro do commit substitui a aprovação exigida pelo controle de mudanças.",
+      "D": "submeter a solicitação à análise e à autorização previstas, registrar as novas versões e estabelecer a baseline atualizada de modo controlado, preservando H1.",
+      "E": "controlar a alteração apenas no código-fonte, pois requisitos, scripts de construção e casos de teste não integram itens sujeitos ao controle de configuração."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0004",
+    "numero": 5,
+    "versao": "v01",
+    "enunciado": "Uma entidade utiliza o Plano Estratégico de Tecnologia da Informação e Comunicação (PETIC) e o Plano Diretor de Tecnologia da Informação e Comunicação (PDTIC) como documentos distintos. O PETIC, alinhado ao planejamento institucional, estabelece o objetivo de reduzir o tempo de atendimento e a diretriz de interoperabilidade dos serviços digitais.\n\nAo elaborar o PDTIC para desdobrar essa orientação, a equipe deve, de acordo com os conceitos do Guia de PDTIC do SISP, versão 2.1,",
+    "alternativas": {
+      "A": "reproduzir as diretrizes do PETIC no PDTIC e deixar a definição de metas e ações para planos operacionais sem vínculo com esse documento.",
+      "B": "consolidar as demandas no PDTIC por ordem de recebimento e considerar essa sequência como critério suficiente de alinhamento ao PETIC.",
+      "C": "selecionar no PDTIC as soluções de infraestrutura e reformular os objetivos do PETIC para acomodar as aquisições previamente escolhidas.",
+      "D": "relacionar necessidades aos objetivos do PETIC e desdobrá-las em metas e ações no PDTIC, com recursos, prazos e indicadores para acompanhamento.",
+      "E": "conferir ao PDTIC a mesma vigência do PETIC e usar essa coincidência temporal como evidência suficiente de alinhamento entre os planos."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0005",
+    "numero": 6,
+    "versao": "v01",
+    "enunciado": "Uma entidade avalia uma iniciativa de automação durante três anos completos. Todos os valores a seguir são fictícios, monetários e incrementais em relação à manutenção da situação atual.\n\nA implantação custa R$ 240.000,00, uma única vez, no início do período. A operação e a manutenção custam R$ 40.000,00 em cada um dos três anos. A automação evita despesas de R$ 180.000,00 em cada um desses anos; esse benefício é informado antes da dedução dos custos da iniciativa.\n\nNão há outros custos ou benefícios, tributos adicionais, valor residual, inflação ou desconto financeiro a considerar. Adote o ROI simples acumulado do período, sem anualização, calculado por:\n\nROI = [(benefícios totais − custos totais) / custos totais] × 100\n\nO ROI da iniciativa nesses três anos é de",
+    "alternativas": {
+      "A": "33,33%.",
+      "B": "50%.",
+      "C": "75%.",
+      "D": "125%.",
+      "E": "150%."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0006",
+    "numero": 7,
+    "versao": "v01",
+    "enunciado": "Uma autarquia celebrou contrato de manutenção de sistemas regido pela Lei nº 14.133/2021 e designou um servidor como fiscal. Contratou também uma empresa especializada para assisti-lo com informações técnicas. Ao receber um relatório que aponta defeitos na execução, o fiscal identificou a necessidade de providência que ultrapassa sua competência.\n\nÀ luz do art. 117 dessa Lei, na redação vigente em 11/11/2026, o fiscal deve",
+    "alternativas": {
+      "A": "atribuir à empresa de apoio a decisão sobre providências que superem sua competência, mantendo com o fiscal apenas o recebimento dos relatórios.",
+      "B": "registrar apenas as ocorrências que consiga corrigir diretamente, comunicando aos superiores os demais defeitos para que eles mantenham o respectivo registro.",
+      "C": "decidir sobre a providência necessária, mesmo fora de sua competência, utilizando o relatório da empresa como autorização para ampliar suas atribuições.",
+      "D": "encaminhar o relatório aos superiores e considerar-se eximido da responsabilidade de fiscalização sobre as informações recebidas da empresa de apoio.",
+      "E": "anotar as ocorrências em registro próprio e informar, em tempo hábil, aos superiores a situação que ultrapassa sua competência."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0008",
+    "numero": 8,
+    "versao": "v01",
+    "enunciado": "Em Python 3, considere a execução do código a seguir em um processo novo, sem outras chamadas à função registrar:\n\ndef registrar(codigo, historico=[]):\n    historico.append(codigo)\n    return len(historico)\n\nprint(registrar(\"A\"), registrar(\"B\", []), registrar(\"C\"), registrar(\"D\"))\n\nA sequência de números exibida é",
+    "alternativas": {
+      "A": "1 1 1 1",
+      "B": "1 2 3 4",
+      "C": "1 1 1 2",
+      "D": "1 1 2 3",
+      "E": "1 2 2 3"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0009",
+    "numero": 9,
+    "versao": "v01",
+    "enunciado": "Considere o seguinte programa Java 21:\n\npublic class Selecao {\n    static String escolher(long valor) { return \"L\"; }\n    static String escolher(Integer valor) { return \"I\"; }\n    static String escolher(Number valor) { return \"N\"; }\n\n    public static void main(String[] args) {\n        int a = 5;\n        Integer b = 5;\n        Number c = b;\n        System.out.print(escolher(a) + escolher(b) + escolher(c));\n    }\n}\n\nO texto exibido ao executar main é",
+    "alternativas": {
+      "A": "LIN",
+      "B": "IIN",
+      "C": "LII",
+      "D": "NIN",
+      "E": "LLN"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0010",
+    "numero": 10,
+    "versao": "v01",
+    "enunciado": "Em C# 12 com .NET 8, considere o programa:\n\nusing System;\n\nclass Caixa {\n    public int Valor;\n}\n\nclass Programa {\n    static void Ajustar(Caixa item, ref int taxa) {\n        item.Valor += taxa;\n        item = new Caixa { Valor = 100 };\n        taxa += 2;\n    }\n\n    static void Main() {\n        Caixa caixa = new Caixa { Valor = 10 };\n        int taxa = 3;\n        Ajustar(caixa, ref taxa);\n        Console.Write($\"{caixa.Valor} {taxa}\");\n    }\n}\n\nOs valores exibidos são",
+    "alternativas": {
+      "A": "100 5",
+      "B": "13 5",
+      "C": "13 3",
+      "D": "10 3",
+      "E": "100 3"
+    }
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "elaborador": "15",
+  "responsavel": "/root/s2_elab_15",
+  "questoes": [
+    {
+      "id": "BAN-DS-15-0002",
+      "numero": 48,
+      "materia": "Governança de dados, autenticação e controle de acesso",
+      "topico": "Governanca de dados: linhagem da origem e das transformacoes",
+      "versao": "v01",
+      "enunciado": "Uma instituição gera mensalmente um relatório de valores por agência a partir de arquivos de operações. O processamento exclui operações canceladas, converte valores em moeda estrangeira e agrupa os resultados por agência. As regras de conversão foram alteradas após a publicação do relatório de setembro. Ao investigar uma divergência nesse relatório, a equipe pretende reconstituir sua origem e as transformações então realizadas.\n\nPara atender a esse objetivo por meio da linhagem de dados, deve manter um registro que relacione o relatório de setembro",
+      "alternativas": {
+        "A": "aos lotes de entrada e ao fluxo atualmente configurado, utilizando as regras vigentes na data da investigação para descrever a conversão.",
+        "B": "ao dicionário dos campos e às estruturas dos arquivos, utilizando a compatibilidade dos tipos para identificar as etapas executadas na apuração.",
+        "C": "aos horários de início e término das cargas e ao seu estado de conclusão, utilizando essas informações para identificar a derivação dos totais.",
+        "D": "aos resultados das validações de consistência e às aprovações dos responsáveis, utilizando essas evidências para identificar os arquivos que deram origem aos totais.",
+        "E": "aos lotes efetivamente utilizados, encadeando as entradas e saídas de cada etapa e identificando as regras aplicadas na execução que gerou a publicação."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende. Identificar lotes é pertinente, mas aplicar retrospectivamente a regra vigente na investigação pode descrever uma conversão diferente da executada em setembro. É necessário preservar a identificação da regra efetivamente usada naquela geração.",
+        "B": "Não atende. Dicionário e estrutura descrevem os campos, mas tipos compatíveis não revelam quais filtros, conversões ou agrupamentos foram executados. Diferentes processamentos podem produzir saídas com o mesmo esquema.",
+        "C": "Não atende. Horários e estado de conclusão ajudam a acompanhar a execução. Esses registros, porém, não identificam os vínculos de utilização e produção de dados entre as etapas que deram origem aos totais.",
+        "D": "Não atende. Validações e aprovações registram avaliações sobre os resultados. Sua existência não estabelece quais arquivos alimentaram cada etapa nem quais transformações produziram os totais; qualidade avaliada e derivação documentada são informações distintas.",
+        "E": "Atende. O vínculo com os lotes utilizados, a sequência de entradas e saídas e a identificação das regras daquela execução permitem rastrear o caminho de formação do relatório de setembro, inclusive após uma mudança posterior no fluxo."
+      },
+      "resolucao": "A investigação é histórica: deve explicar a geração do relatório de setembro. A linhagem precisa ligar os lotes utilizados às saídas, passando pelas etapas que excluíram operações, converteram valores e produziram os agrupamentos. A identificação das regras daquela execução permite distinguir a conversão realizada da configuração alterada posteriormente. Esse encadeamento documenta a derivação dos totais; não equivale, por si, a comprovar que os valores ou as regras estavam corretos.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Data lineage in classic Data Catalog",
+          "url": "https://learn.microsoft.com/en-us/purview/data-gov-classic-lineage",
+          "localizador": "Use cases; Lineage experience in the classic Data Catalog; Lineage granularity: Entity level lineage, Column or attribute level lineage e Process execution status. Página atualizada em 12/11/2026; navegada em 26/11/2026.",
+          "sustenta": "Linhagem entre fontes, processos e destinos; transformações e atributos derivados; distinção entre vínculos de dados e informações operacionais. Fundamenta a resolução e os comentários de B, C e E.",
+          "limites": "Documentação primária de fornecedor, usada para conceitos. A página trata do catálogo clássico e informa aposentadoria dessas capacidades de governança; a questão não cobra o produto, seus conectores ou seu ciclo de vida."
+        },
+        {
+          "titulo": "W3C — PROV Model Primer",
+          "url": "https://www.w3.org/TR/prov-primer/",
+          "localizador": "Working Group Note de 30/04/2013; seções 1 (Introduction), 2.1–2.3 (Entities, Activities, Usage and Generation), 2.6 (Derivation and Revision), 2.7 (Plans) e 2.8 (Time). Navegado em 26/11/2026.",
+          "sustenta": "Distinção entre metadados em geral e proveniência; identificação de entidades, atividades, versões, procedimentos e contexto temporal. Fundamenta a necessidade de descrever a geração histórica e os comentários de A e D.",
+          "limites": "Nota introdutória explicativa, não uma exigência normativa do edital. Seus exemplos de notação não são cobrados; a questão permanece conceitual."
+        },
+        {
+          "titulo": "W3C — PROV-DM: The PROV Data Model",
+          "url": "https://www.w3.org/TR/prov-dm/",
+          "localizador": "W3C Recommendation de 30/04/2013; seção 1 (Introduction), 2.1.1 (Entity and Activity), 2.1.2 (Derivation) e 5.2.1 (Derivation). Navegado em 26/11/2026.",
+          "sustenta": "Conceito de proveniência e derivação; explicitação do caminho por uso, atividade e geração. Corrobora a resolução e a análise de E sem transformar sintaxe PROV em conteúdo de prova.",
+          "limites": "Modelo primário usado como fundamento conceitual. Não se exige conhecer nomes de relações, identificadores, linguagem ou implementação do padrão."
+        },
+        {
+          "titulo": "Conteúdo programático — Conhecimentos específicos de Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco GOVERNANÇA DE DADOS, AUTENTICAÇÃO E CONTROLE DE ACESSO, linha 209; leitura em 26/11/2026.",
+          "sustenta": "Delimitação do bloco; o item avalia governança de dados e rastreabilidade da origem e das transformações, conforme o recorte atribuído no SIM-002."
+        },
+        {
+          "titulo": "FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 37, página 9, e questão 59, página 14; extração textual efetivamente lida, com marcadores de página; metadados e origem conferidos em Backend/Agents/conteudo/referencias-fcc/fontes.json, entrada trt4-2022-ti-a14-001.",
+          "sustenta": "Referência editorial de cenário profissional com decisão objetiva e de alternativas paralelas que completam um comando.",
+          "limites": "Cópia secundária hospedada no Qconcursos; não é apresentada como download da FCC nem como assinatura de integridade oficial. Os itens de 2022 orientam somente o formato, não a correção técnica atual nem uma frequência geral da banca."
+        }
+      ],
+      "autor": "/root/s2_elab_15",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação efetiva das três fontes técnicas primárias em 26/11/2026; foram usados os conceitos de linhagem, proveniência e derivação, sem cobrar sintaxe ou tecnologia adicional ao bloco.",
+        "Editorial documental: leitura da extração local do caderno TRT4/2022, A14, Tipo 001, questões 37/página 9 e 59/página 14, e consulta aos metadados de origem em fontes.json. Não houve conferência visual do PDF nem certificação de integridade oficial.",
+        "Analítica: resolução do cenário e comparação individual das cinco alternativas. Os registros descritos nos distratores não atendem à reconstrução histórica completa; a proposta selecionada relaciona as entradas, as etapas e as regras da geração investigada.",
+        "Rodízio: leitura de BAN-DS-15-0001 em questoes-anteriores.json. O item anterior cobra RBAC e separação dinâmica de funções; este item cobra linhagem de dados e contexto histórico de transformações.",
+        "Conferência de entrega: leitura de retorno dos quatro arquivos UTF-8, identificação e versão conferidas e correspondência literal entre enunciado, alternativas, resolução, justificativas e fontes dos TXT e do JSON. Não foram criados arquivos de teste ou executados cálculos de dados."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 37,
+          "pagina": 9,
+          "origem": "Cópia secundária Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura de Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "O item real apresenta atuação profissional e um objetivo técnico antes de um comando de identificação. A questão autoral apresenta uma investigação de relatório e pede selecionar o registro adequado ao objetivo, com cenário e conteúdo próprios.",
+          "limites": "Cópia secundária hospedada no Qconcursos; não é apresentada como download da FCC nem como assinatura de integridade oficial. Os itens de 2022 orientam somente o formato, não a correção técnica atual nem uma frequência geral da banca."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 59,
+          "pagina": 14,
+          "origem": "Cópia secundária Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura de Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "O item real usa cinco complementos comparáveis de uma frase do enunciado. A questão autoral aplica o paralelismo com cinco complementos iniciados por relações entre o relatório e registros de governança; não reproduz os pares de conceitos do exemplo.",
+          "limites": "Cópia secundária hospedada no Qconcursos; não é apresentada como download da FCC nem como assinatura de integridade oficial. Os itens de 2022 orientam somente o formato, não a correção técnica atual nem uma frequência geral da banca."
+        }
+      ]
+    }
+  ]
+}

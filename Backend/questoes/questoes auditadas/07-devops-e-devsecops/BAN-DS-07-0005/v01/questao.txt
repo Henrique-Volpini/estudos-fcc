@@ -1,0 +1,15 @@
+ID: BAN-DS-07-0005
+Versão: v01
+Matéria: DevOps e DevSecOps
+Tópico: Observabilidade: papéis complementares de logs, métricas e traces
+
+ENUNCIADO
+Uma API disparou um alerta por aumento do percentil 95 da latência, calculado a partir das durações de todas as requisições de uma janela de cinco minutos. A equipe também coleta traces por amostragem. Um trace de requisição lenta, com spans correlacionados entre os serviços, mostra que a maior parte da duração ocorreu durante uma chamada ao serviço de cadastro. Nos logs da API, um registro com o mesmo trace_id informa timeout dessa chamada.
+
+A interpretação adequada dos sinais disponíveis é:
+
+A) A mensagem de timeout, correlacionada ao trace, demonstra que a causa da lentidão é um defeito no código do serviço de cadastro.
+B) As métricas resumem o comportamento observado no período; os spans localizam a demora na requisição coletada, e os logs acrescentam eventos correlacionados.
+C) O trace da requisição lenta fornece a distribuição de latência de todas as chamadas da janela, podendo substituir a métrica usada no alerta.
+D) Os logs com o mesmo trace_id devem ser tratados como eventos sem vínculo com a requisição, pois esse identificador relaciona apenas os spans entre si.
+E) A ausência de trace para uma requisição permite descartá-la da investigação de lentidão, pois a amostragem preserva necessariamente todas as chamadas com falha.

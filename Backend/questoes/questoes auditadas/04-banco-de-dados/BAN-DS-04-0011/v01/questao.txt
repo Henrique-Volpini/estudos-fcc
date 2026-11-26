@@ -1,0 +1,15 @@
+ID: BAN-DS-04-0011
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Modelagem dimensional: grão da tabela fato e esquema estrela
+
+ENUNCIADO
+Uma instituição deseja analisar o valor pago por data, agência e canal de atendimento. O modelo dimensional deve preservar cada pagamento individualmente, inclusive quando dois pagamentos têm a mesma data, agência e canal. Cada pagamento possui um identificador próprio na origem, um único valor e exatamente uma data, uma agência e um canal.
+
+As dimensões Data, Agência e Canal deverão ter, respectivamente, uma linha por data, por agência e por canal. Pagamentos do mesmo canal podem ter valores diferentes. Foi definido que a tabela fato terá o grão de um pagamento processado. Para implementar esse requisito em um esquema estrela, a proposta adequada é manter na tabela fato
+
+A) uma linha por pagamento, com as três chaves de dimensão, e armazenar o valor de cada pagamento como atributo da dimensão Canal.
+B) uma linha por pagamento, com valor_pago e chaves estrangeiras para as dimensões Data, Agência e Canal.
+C) uma linha por combinação de data, agência e canal, com a soma de valor_pago e chaves estrangeiras para as três dimensões.
+D) uma linha por pagamento, com valor_pago e as descrições de data, agência e canal em uma única tabela, sem tabelas de dimensões.
+E) linhas de pagamentos e linhas de totais mensais de agência, com valor_pago e chaves estrangeiras para as três dimensões.

@@ -1,0 +1,60 @@
+ID: BAN-DS-10-0003
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: identificar a associação correta nas condições declaradas.
+
+RESOLUÇÃO
+A concessão inicial segue DHCPDISCOVER → DHCPOFFER → DHCPREQUEST → DHCPACK, sequência conhecida como DORA. Após selecionar S2, o cliente transmite DHCPREQUEST em broadcast com a opção server identifier indicando S2 e a opção requested IP address com o endereço ofertado. S1 interpreta a seleção como rejeição implícita de sua oferta. S2 confirma a vinculação e responde DHCPACK. A oferta isolada não conclui a concessão. O cenário é de seleção inicial, não de renovação: em RENEWING o DHCPREQUEST é unicast e não contém server identifier. Não se está afirmando que toda mensagem DHCPREQUEST seja broadcast.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: o DHCPREQUEST que seleciona uma oferta nessa concessão inicial deve ser transmitido em broadcast, permitindo que os demais servidores identifiquem a escolha. O DHCPACK de S2 está adequado. O unicast do DHCPREQUEST ocorre, por exemplo, na renovação em RENEWING, estado ausente do cenário.
+B) Não atende: inverte os papéis das mensagens. O cliente solicita os parâmetros com DHCPREQUEST; a confirmação DHCPACK é emitida pelo servidor, que não solicita sua própria oferta por DHCPREQUEST.
+C) Atende: o DHCPREQUEST em broadcast identifica S2 na opção server identifier e solicita a oferta escolhida; S2 responde DHCPACK para confirmar a concessão. A opção requested IP address deve conter o endereço da oferta de S2.
+D) Não atende: DHCPDECLINE comunica que o endereço oferecido está em uso; não é a mensagem para rejeitar uma oferta em favor de outra. S1 conhece a rejeição implicitamente ao receber DHCPREQUEST indicando S2. Não há conflito de endereços no cenário.
+E) Não atende: a primeira mensagem está adequada, mas DHCPOFFER é a proposta em resposta à descoberta. Depois da seleção por DHCPREQUEST, a confirmação bem-sucedida é DHCPACK, não uma nova oferta.
+
+FONTES TÉCNICAS E DOCUMENTAIS CONSULTADAS
+- Conteúdo programático — Serviços e gerenciamento de redes
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: Linhas 149–163: DHCP e ferramentas de monitoramento e logs, incluindo Prometheus.
+- Questões anteriores do SIM-001 para controle de rodízio
+  Arquivo: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json
+  Localizador: Itens BAN-DS-10-0001 e BAN-DS-10-0002: SNMP/MIB e virtual hosts do Apache; objetivos distintos dos atuais.
+- RFC 2131 — Dynamic Host Configuration Protocol, R. Droms, março de 1997
+  Url: https://www.rfc-editor.org/rfc/rfc2131.html
+  Localizador: §3.1, passos 1–5, tabela 2 e figura 3, pp.13–17: sequência inicial e papéis das mensagens; §4.3.2, SELECTING, p.31: server identifier e requested IP address; §4.4.1, p.36: INIT; §4.4.5, p.40: DHCPREQUEST unicast em RENEWING, sem server identifier. Navegada em 26/11/2026.
+- FCC/TRF4 2007 — Analista Judiciário, Informática, Cargo I, Tipo 001
+  Url: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt
+  Localizador: p.8, questão 44; extração local lida; origem primária do órgão identificada em fontes.json; referência histórica de formato.
+- FCC/TRT4 2022 — Analista Judiciário, Tecnologia da Informação, A14, Tipo 001
+  Url: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador: p.8, questão 33; extração local lida; cópia secundária do Qconcursos, sem declaração de download ou integridade oficial da FCC.
+- Metadados das referências reais FCC
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador: Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; URLs, origem primária/secundária e identificação dos arquivos.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 44; página 8.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, === PAGINA 8 ===, e metadados em fontes.json; PDF obtido no próprio TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Característica observada e aplicação: Comando objetivo de serviços de rede com cinco alternativas técnicas comparáveis. A questão autoral amplia a cobrança para interpretar a seleção de oferta na concessão inicial, sem reutilizar o comando nem as alternativas do exemplo.
+  Limites da referência: Referência histórica de formato consultada pela extração local; não comprova frequência da banca nem substitui a RFC para a solução técnica.
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, === PAGINA 8 ===, e metadados em fontes.json; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica observada e aplicação: Cenário técnico delimitado, seguido de identificação ordenada com comando respectivamente e cinco opções paralelas. Na questão DHCP, a associação ordenada relaciona a mensagem do cliente à confirmação pelo servidor.
+  Limites da referência: Cópia secundária do Qconcursos; não se declara download direto da FCC nem assinatura ou integridade oficial. O exemplo sustenta a construção editorial, sem validar a técnica da questão autoral ou demonstrar frequência de formatos.
+
+VERIFICAÇÕES REALIZADAS
+Responsável: /root/s2_elab_10
+Dificuldade estimada: média
+- Documental: RFC 2131 efetivamente aberta e lida via navegação em 26/11/2026, especialmente §3.1, §4.3.2 e §4.4.1; consultado §4.4.5 para delimitar a diferença da renovação.
+- Editorial documental: lidas as extrações FCC TRF4/2007 Q44 p.8 e TRT4/2022 Q33 p.8, suas identificações e os metadados de origem; somente os traços indicados foram utilizados.
+- Analítica: cada alternativa foi confrontada com o estado inicial e com a mensagem de confirmação; hipóteses sem perda e sem conflito afastam retransmissão, DHCPNAK e DHCPDECLINE como continuação bem-sucedida.
+- Rodízio: lidas BAN-DS-10-0001 e BAN-DS-10-0002 em questoes-anteriores.json; nenhuma pergunta anterior cobra DHCP.
+- Conferência local de entrega: arquivos relidos como UTF-8, estrutura JSON e correspondência literal do enunciado, alternativas, resolução e justificativas com os TXT conferidas em memória. Não houve execução de cliente ou servidor DHCP nem captura de rede.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente de estilo, pistas e redação/conformidade.

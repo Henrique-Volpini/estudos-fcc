@@ -1,0 +1,44 @@
+ID: BAN-DS-04-0010
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Determinar os identificadores selecionados pela condição com IS NULL e comparação por igualdade a NULL.
+
+RESOLUÇÃO
+No Oracle 19c, a cadeia de caracteres de comprimento zero é tratada como NULL; assim, os registros 1 e 2 têm apelido nulo. A condição IS NULL é verdadeira nessas duas linhas. O teste apelido = NULL produz UNKNOWN, inclusive para valores nulos. Com OR, TRUE combinado com UNKNOWN continua TRUE, selecionando 1 e 2. Para os registros 3 e 4, IS NULL é FALSE e FALSE OR UNKNOWN resulta UNKNOWN; o WHERE não seleciona essas linhas. ORDER BY id organiza a saída como 1, 2.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Além do NULL explícito do registro 1, a cadeia de comprimento zero inserida no registro 2 é tratada como NULL pelo Oracle 19c.
+B) Não atende. O texto '0' tem um caractere e não é NULL. Para o registro 3, IS NULL é falso e a igualdade a NULL produz UNKNOWN; a linha não satisfaz o WHERE.
+C) Não atende. Os registros 3 e 4 têm valores não nulos. Comparar seus valores com NULL não torna a condição verdadeira; produz UNKNOWN.
+D) Atende. Os registros 1 e 2 têm apelido nulo no Oracle 19c. Neles, IS NULL é verdadeiro e o OR resulta verdadeiro. Nos demais, a condição não é verdadeira.
+E) Não atende. A igualdade a NULL produz UNKNOWN, mas não anula um operando verdadeiro do OR. Nos registros 1 e 2, IS NULL basta para tornar a condição verdadeira.
+
+FONTES TÉCNICAS CONSULTADAS
+- Oracle Database 19c SQL Language Reference - Nulls
+  URL ou arquivo: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Nulls.html
+  Localizador e suporte: Texto inicial: valor de caractere com comprimento zero; Nulls with Comparison Conditions e Nulls in Conditions: comparação produz UNKNOWN e WHERE seleciona apenas condições verdadeiras.
+- Oracle Database 19c SQL Language Reference - Null Conditions
+  URL ou arquivo: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Null-Conditions.html
+  Localizador e suporte: Condições IS NULL e IS NOT NULL, tabela de condições e exemplo SELECT com WHERE IS NULL.
+- Oracle Database 19c SQL Language Reference - Logical Conditions
+  URL ou arquivo: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Logical-Conditions.html
+  Localizador e suporte: Logical Conditions, regra de OR e OR Truth Table: TRUE OR UNKNOWN = TRUE; FALSE OR UNKNOWN = UNKNOWN.
+- Programa de conhecimentos específicos - Banco de Dados
+  URL ou arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: comandos SQL: DML, DDL e DCL; Oracle 19c;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 43; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: Um fragmento técnico é apresentado antes da pergunta; as cinco opções apresentam representações concorrentes. Aplicação: Apresentado script SQL completo e consulta, seguido de cinco conjuntos de identificadores comparáveis; dados e objetivo são autorais.
+  Limites da referência: Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: páginas oficiais Nulls, Null Conditions e Logical Conditions do Oracle Database 19c consultadas por navegação em 26/11/2026, incluindo a tabela-verdade de OR; não generalizado o tratamento de cadeia vazia para outros SGBDs.
+- Analítica: avaliada a condição linha a linha, distinguindo NULL de '0' e TRUE de UNKNOWN. Não houve execução em Oracle.
+- Editorial: lida a Q43/p10 de TRT4/2022 e conferidos os limites da cópia secundária.
+- Independência: o SIM-001 não contém questão Oracle sobre cadeia vazia, comparação com NULL ou IS NULL.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguardando auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

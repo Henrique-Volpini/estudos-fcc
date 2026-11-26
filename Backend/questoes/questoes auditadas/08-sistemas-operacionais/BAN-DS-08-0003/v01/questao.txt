@@ -1,0 +1,20 @@
+ID: BAN-DS-08-0003
+Versão: v01
+Matéria: Sistemas Operacionais
+Tópico: Linux: permissões de arquivos e diretórios e acesso efetivo
+
+ENUNCIADO
+Em um servidor Red Hat Enterprise Linux 9, um administrador verifica os seguintes metadados, apresentados na ordem permissões, proprietário, grupo e caminho:
+
+drwx--x---  root  equipe  /srv/lotes
+-r--rw----  ana   equipe  /srv/lotes/saldo.csv
+
+A usuária ana não é root. Seus processos usam UID efetivo e fsuid de ana, GID efetivo e fsgid de equipe, sem grupos suplementares nem capacidades especiais. Os diretórios ancestrais permitem a travessia, e o sistema de arquivos está montado para leitura e escrita. Não há ACLs estendidas, links simbólicos ou restrições adicionais por SELinux ou atributos de arquivo.
+
+Considere acessos diretos, mantendo as permissões e as credenciais apresentadas. Para esses processos, as operações de listar os nomes contidos em /srv/lotes, ler saldo.csv por seu caminho completo conhecido e acrescentar dados ao conteúdo desse arquivo são, respectivamente,
+
+A) permitida, permitida e negada.
+B) negada, permitida e permitida.
+C) negada, permitida e negada.
+D) permitida, permitida e permitida.
+E) negada, negada e negada.

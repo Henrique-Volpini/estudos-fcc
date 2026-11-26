@@ -1,0 +1,42 @@
+ID: BAN-DS-01-0008
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar o tratamento adequado de solicitação de alteração sobre itens de uma baseline aprovada.
+
+RESOLUÇÃO
+H1 é uma referência aprovada que relaciona itens e versões; sua identidade permite reproduzir a configuração usada na homologação. Uma solicitação posterior não deve sobrescrevê-la automaticamente. É necessário analisar o impacto e obter a autorização prevista no processo, controlar as versões dos itens alterados e estabelecer a nova referência preservando a recuperação de H1. A baseline pode evoluir por mudanças controladas; seu estabelecimento não congela para sempre o desenvolvimento nem restringe o controle apenas ao código-fonte.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando: baseline identifica uma configuração aprovada de versões específicas; não acompanha automaticamente cada commit nem se confunde com o estado mais recente de desenvolvimento.
+B) Não atende ao comando: a aprovação cria uma referência sob controle de mudanças, sem proibir a evolução do sistema. Uma nova configuração pode ser estabelecida durante a homologação mediante os procedimentos pertinentes.
+C) Não atende ao comando: um commit registra uma versão ou alteração, mas não substitui a análise e a autorização pela autoridade competente. O cenário informa que a mudança ainda não foi autorizada.
+D) Atende ao comando: a alteração deve passar pelo controle previsto, com análise de impacto e autorização, novas versões identificadas e atualização controlada da referência; preservar H1 permite recuperar a configuração anteriormente submetida aos testes.
+E) Não atende ao comando: o controle pode abranger requisitos, scripts de construção, testes e documentação, além do código. Esses itens integram expressamente a baseline e são afetados pela mudança descrita.
+
+FONTES TÉCNICAS CONSULTADAS E DELIMITAÇÃO DE ESCOPO
+- ISTQB — Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024. https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf. Localizador: Seção 5.4, Configuration Management, página 56: identificação de itens e versões, baseline aprovada, processo formal de controle de mudanças e recuperação de baseline anterior para reproduzir resultados. Consulta via web em 26/11/2026.
+- NASA Software Engineering Handbook — SWE-081, Identify Software CM Items. https://swehb.nasa.gov/spaces/7150/pages/16450453/SWE-081%2B-%2BIdentify%2BSoftware%2BCM%2BItems. Localizador: Seção 3, Guidance: lista de itens sob controle, identificadores de versões e características de baselines. Inclui requisitos, scripts de construção e casos de teste. Página do Handbook no espaço 7150, consultada via web em 26/11/2026; não apresentada como edição atual de NPR.
+- NASA Software Engineering Handbook — SWE-082, Authorizing Changes, página atualizada em 10/10/2017. https://swehb.nasa.gov/spaces/7150/pages/16450445/SWE-082%2B-%2BAuthorizing%2BChanges. Localizador: Seções 1–3, especialmente Rationale, Change authority e Version maintenance: análise de impacto e autorização antes da implementação, registro de mudanças e preservação de versões. Consulta via web em 26/11/2026. Usada como orientação primária de engenharia, sem impor processos específicos da NASA à instituição do cenário.
+- FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questões 32 e 33, página 8, seção === PAGINA 8 === da extração local: contextualização profissional em TI e cinco alternativas comparáveis para completar o comando; somente formato.
+- Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item gestão da configuração de software. Delimitação do escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Delimitação de um problema de configuração em TI e cinco alternativas sobre o mesmo mecanismo. A proposta muda integralmente o objeto para controle de baseline e apresenta cursos de ação comparáveis.
+- Limites da referência: A questão real cobra Spring Cloud Config, e o exemplo não sustenta a solução técnica de gestão da configuração. A cópia é secundária, sem alegação de download oficial da FCC ou certificação oficial de integridade.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Apresentação de tarefa concreta de um profissional de TI, com informações necessárias antes do comando. A proposta usa uma situação autoral de homologação e solicita o tratamento adequado da mudança.
+- Limites da referência: A referência é de documentação de API e foi usada para a contextualização; a solução depende das fontes primárias de configuração. Não se generaliza uma regra editorial a partir do exemplo.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura via web do syllabus ISTQB v4.0.1, seção 5.4, e das páginas primárias NASA SWE-081 e SWE-082; conferidas as regras de identificação, composição de baseline, autorização e preservação de versões. As páginas NASA consultadas são referências de engenharia, sem alegação de vigência de uma versão não verificada de NPR.
+- Analítica: conferidos os cinco cursos de ação em relação à baseline aprovada e à solicitação ainda não autorizada. A solução conserva a referência anterior e admite evolução controlada dos quatro tipos de itens impactados.
+- Editorial: leitura das questões 32 e 33, página 8, da extração local TRT4/2022 e comparação com o histórico do perfil. Não houve alteração de repositório de exemplo nem execução de procedimento de configuração.
+
+PENDÊNCIAS
+Nenhuma de elaboração; versão sujeita à auditoria independente.

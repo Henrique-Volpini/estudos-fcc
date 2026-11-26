@@ -1,0 +1,410 @@
+{
+  "simulado": "SIM-002",
+  "responsavel": "/root/s2_auditor_pistas",
+  "perfil": "PISTAS_DE_RESPOSTA",
+  "data": "2026-11-26",
+  "fase": "Registro inicial dos 49 itens disponíveis: leitura somente dos arquivos publico-*.json antes de qualquer chave, comentário ou entrega. O complemento do nº 48 preserva a leitura cega em relação à própria chave, conforme campo complemento48.",
+  "complemento48": "A questão nº 48 foi recebida depois do confronto das 49 anteriores. Sua observação foi acrescentada após leitura exclusiva do texto público e antes de consultar a própria letra proposta ou comentário.",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0005",
+      "numero": 1,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas são quantidades no mesmo padrão. As definições de início, término e WIP e os movimentos são dados para raciocinar sobre o fluxo; singular em '1 item' acompanha o numeral, sem denunciar resposta. Nenhuma opção favorecida pela forma."
+    },
+    {
+      "id": "BAN-DS-01-0006",
+      "numero": 2,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As cinco alternativas apresentam consequência e justificativa referentes aos gateways. Repetições dos nomes das tarefas são necessárias à identificação dos ramos. Há variação de consequência, sem quebra de concordância ou comentário corretivo que selecione uma opção."
+    },
+    {
+      "id": "BAN-DS-01-0007",
+      "numero": 3,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas permutam os mesmos três níveis em estrutura paralela. 'Componentes' e 'sistema' também descrevem o objeto avaliado; relacionar descrições e níveis é a competência pedida, sem correspondência editorial exterior a ela."
+    },
+    {
+      "id": "BAN-DS-01-0008",
+      "numero": 4,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as alternativas descrevem tratamento da alteração. Uma opção lista ações em vez de concluir com 'pois', mas essa diferença isolada não permite escolhê-la sem avaliar baseline e autorização. Não há marca, encaixe gramatical exclusivo ou comentário público."
+    },
+    {
+      "id": "BAN-DS-02-0004",
+      "numero": 5,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções têm verbos no infinitivo e tratam dos mesmos planos. O maior detalhamento de recursos e acompanhamento em uma opção representa conteúdo da proposta, sem sinal externo de correção; não há vazamento ou sigla exclusiva reveladora."
+    },
+    {
+      "id": "BAN-DS-02-0005",
+      "numero": 6,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Fórmula e exclusões delimitam o cálculo solicitado. Todas as alternativas são percentuais; a diferença de casas decimais é compatível com resultados numéricos e não identifica uma resposta por si só. Não efetuei cálculo."
+    },
+    {
+      "id": "BAN-DS-02-0006",
+      "numero": 7,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções completam 'o fiscal deve' com infinitivos e tratam de atribuições e registros. Repetições de competência e superiores são pertinentes ao caso. Não há indicação pública de alternativa correta ou defeito gramatical eliminatório."
+    },
+    {
+      "id": "BAN-DS-03-0008",
+      "numero": 8,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Código e chamadas constituem o objeto da análise, sem execução. As alternativas são quatro números em formato uniforme; letras usadas como entradas não funcionam como rótulos de resposta. Nenhuma vantagem editorial identificada."
+    },
+    {
+      "id": "BAN-DS-03-0009",
+      "numero": 9,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas são cadeias de três letras sem tratamento singular. As letras retornadas pelos métodos distinguem as sobrecargas como dado necessário; não expõem a seleção de sobrecarga nem a resposta sem conhecimento da linguagem."
+    },
+    {
+      "id": "BAN-DS-03-0010",
+      "numero": 10,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções são pares numéricos no mesmo padrão. Nomes de variáveis e valor 100 compõem o programa apresentado; não são metadados corretivos. A seleção depende do mecanismo de passagem de argumentos, sem pista formal."
+    },
+    {
+      "id": "BAN-DS-03-0011",
+      "numero": 11,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas mantêm três números na ordem pedida. Os incrementos e operadores são material a interpretar; não há comentário que forneça a saída ou nome de variável denunciador. Não executei nem calculei o programa."
+    },
+    {
+      "id": "BAN-DS-03-0012",
+      "numero": 12,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As cinco saídas propostas têm o mesmo formato com dois separadores e letra final. Diferenças de tipos e comparação integram o código avaliado; nenhuma opção possui marca ou explicação adicional que a favoreça."
+    },
+    {
+      "id": "BAN-DS-03-0013",
+      "numero": 13,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as opções apresentam duas instruções com a mesma configuração do parâmetro. A distinção entre entrada e texto SQL é o requisito técnico central; aspas, interpolação e valor do parâmetro exigem essa competência e não são defeitos de linguagem natural que eliminem distratores."
+    },
+    {
+      "id": "BAN-DS-03-0014",
+      "numero": 14,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "O caso anuncia duplicação e pergunta por refactor. A retomada de 'remover a duplicação' corresponde ao comportamento submetido à classificação; não é por si só pista acidental. As opções são ações no infinitivo e ainda exigem distinguir preservação de comportamento e alteração funcional."
+    },
+    {
+      "id": "BAN-DS-04-0007",
+      "numero": 15,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas listam atributos no mesmo padrão, com variação de cardinalidade exigida pelo tema. 'Composta por' admite sintaticamente qualquer lista apresentada e não descarta as opções de um atributo por concordância. Dados de pares e datas delimitam a modelagem."
+    },
+    {
+      "id": "BAN-DS-04-0008",
+      "numero": 16,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Cinco valores numéricos com pontuação uniforme. Os comandos repetidos de rollback são operações para interpretação, sem comentário de saída ou destaque em alternativa. Não refiz as operações."
+    },
+    {
+      "id": "BAN-DS-04-0009",
+      "numero": 17,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Quatro alternativas combinam manutenção/perda e uma propõe rejeição do comando. Esta variação é consequência tecnicamente possível a avaliar, sem depender de outra alternativa ou produzir encaixe gramatical exclusivo."
+    },
+    {
+      "id": "BAN-DS-04-0010",
+      "numero": 18,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções descrevem conjuntos de identificadores, inclusive conjunto vazio, em formato compatível com o comando. A ausência de 'somente' em uma enumeração completa não cria vantagem concreta. Literais e NULL são dados necessários."
+    },
+    {
+      "id": "BAN-DS-04-0011",
+      "numero": 19,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas propõem grão, medidas e dimensões. O enunciado explicita requisitos para julgar a modelagem; coincidência de 'uma linha por pagamento' ocorre em várias opções e não individualiza resposta. Ausentes rótulos de correção e concordância seletiva."
+    },
+    {
+      "id": "BAN-DS-04-0012",
+      "numero": 20,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas combinam os mesmos nomes de exceção, NULL e número em três posições. O uso de nomes técnicos idênticos é necessário para informar resultados; não há comentário que dê o resultado ou opção editorialmente singular."
+    },
+    {
+      "id": "BAN-DS-05-0006",
+      "numero": 21,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as opções são três pares de mesma sintaxe. Valores e ordem das media queries são dados do problema e não apresentação corretiva. O termo 'declaradas' delimita o que contar, sem antecipar a combinação; não executei CSS."
+    },
+    {
+      "id": "BAN-DS-05-0007",
+      "numero": 22,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Os comentários 'ponto I' e 'ponto II' apenas localizam acessos, sem declarar tipos ou correção. Alternativas são pares de tipos existentes no código; relacioná-los ao fluxo é a análise pretendida, não correspondência externa reveladora."
+    },
+    {
+      "id": "BAN-DS-05-0008",
+      "numero": 23,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas combinam notas e expressões key. A mesma chave baseada em id aparece em mais de uma opção e a inversão de notas aparece em várias; não há combinação distinguível só por palavra repetida ou formatação."
+    },
+    {
+      "id": "BAN-DS-05-0009",
+      "numero": 24,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as alternativas contêm dois códigos HTTP e suas designações. As palavras inglesas são nomes padronizados dos códigos cujo significado é objeto da questão; associação entre situações e semântica não é pista editorial acidental."
+    },
+    {
+      "id": "BAN-DS-05-0010",
+      "numero": 25,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas são strings JSON com apresentação uniforme. Diferenças de comprimento decorrem das chaves e valores a avaliar, sem comentário de correção. Literal 'undefined' no código não identifica sozinho seu tratamento na serialização."
+    },
+    {
+      "id": "BAN-DS-06-0005",
+      "numero": 26,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Opções permutam os mesmos três componentes de MVC. Os verbos das atividades descrevem responsabilidades para classificação; nenhuma opção é completada exclusivamente pela gramática ou por rótulo interno exposto."
+    },
+    {
+      "id": "BAN-DS-06-0006",
+      "numero": 27,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as propostas tratam de mudanças internas ou do campo situacao com detalhamento comparável. A oposição entre estrutura e significado é precisamente o cenário avaliado; não há tratamento editorial que dispense raciocinar sobre contrato."
+    },
+    {
+      "id": "BAN-DS-06-0007",
+      "numero": 28,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As cinco opções têm atribuições e uma relação entre mecanismos. Várias repetem o mesmo pareamento, exigindo avaliar a oração final. API Gateway e Service Discovery são nomes do conteúdo e não rótulos externos corretivos."
+    },
+    {
+      "id": "BAN-DS-06-0008",
+      "numero": 29,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas são propostas de migração com extensão semelhante. Os requisitos de endereço e etapas fornecem condições legítimas para a avaliação do padrão; a palavra 'fachada' aparece em mais de uma opção e não permite seleção textual exclusiva."
+    },
+    {
+      "id": "BAN-DS-07-0004",
+      "numero": 30,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções descrevem ações de reversão e dados em formato paralelo. Condições de compatibilidade e preservação são premissas da decisão; sua retomada nas opções precisa ser interpretada tecnicamente e não constitui comentário com a resposta."
+    },
+    {
+      "id": "BAN-DS-07-0005",
+      "numero": 31,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas interpretam sinais de observabilidade e seus limites. Diferenças entre afirmações cautelosas e conclusivas pertencem ao objeto de interpretação; não há marca de correção, definição pública que enumere a alternativa ou quebra sintática eliminatória."
+    },
+    {
+      "id": "BAN-DS-07-0006",
+      "numero": 32,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas combinam dois números romanos de modo uniforme. I e III descrevem capacidades e II e IV fazem alegações mais abrangentes, mas julgar essas alegações exige o alcance dos controles; a polaridade isolada não sustenta pista formal."
+    },
+    {
+      "id": "BAN-DS-08-0003",
+      "numero": 33,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções são trios de permitida/negada com concordância uniforme com 'operações'. Metadados de permissões são dados deliberadamente pedidos no problema, distintos de metadados de controle da questão; não expõem a opção indicada."
+    },
+    {
+      "id": "BAN-DS-08-0004",
+      "numero": 34,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Cinco pipelines em estrutura quase idêntica. Name/DisplayName e objetos/formatação são requisitos a relacionar aos cmdlets; os nomes das propriedades não equivalem a marca de correção. Não executei os comandos."
+    },
+    {
+      "id": "BAN-DS-09-0004",
+      "numero": 35,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas têm endereço, classificação e encaminhamento no mesmo formato. Nomes de endereços e protocolos são os próprios objetos avaliados; nenhuma opção contém comentário corretivo ou condição de concordância exclusiva."
+    },
+    {
+      "id": "BAN-DS-09-0005",
+      "numero": 36,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as opções contêm endereço, TTL e bit AA no mesmo padrão. 'Não autoritativo' é dado necessário para a arquitetura descrita; a leitura técnica dos três resultados permanece necessária, sem correspondência lexical que individualize resposta."
+    },
+    {
+      "id": "BAN-DS-09-0006",
+      "numero": 37,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções usam três papéis e um equipamento final em padrão uniforme. 'Servidor RADIUS' no caso é identificação técnica do equipamento, e não rótulo exposto de resposta; várias opções conservam esse papel e diferem no cliente RADIUS."
+    },
+    {
+      "id": "BAN-DS-10-0003",
+      "numero": 38,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As cinco alternativas descrevem duas mensagens e destinação. Nomes DHCPREQUEST/DHCPACK e a escolha S2 são matéria do fluxo solicitado; não há exemplo resolvido ou alternativa ligada a outra por mecanismo revelador."
+    },
+    {
+      "id": "BAN-DS-10-0004",
+      "numero": 39,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções são trios com os mesmos dois componentes. A ocorrência de 'alertas' junto de Alertmanager não discrimina a atribuição entre avaliação e notificação; conhecer as responsabilidades dos componentes continua necessário."
+    },
+    {
+      "id": "BAN-DS-11-0005",
+      "numero": 40,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Há opções de prosseguir e interromper, todas com justificativa. As verificações aprovadas delimitam a dúvida sobre identidade; nomes DNS e campos do certificado são dados do caso. Nenhuma instrução corretiva ou destaque aponta a opção."
+    },
+    {
+      "id": "BAN-DS-11-0006",
+      "numero": 41,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As respostas combinam dois processos no mesmo formato. IV tem descrição mais longa para indicar PIN local e operação criptográfica; isso é informação substantiva para classificar fatores, sem indicação automática de que IV integra a resposta."
+    },
+    {
+      "id": "BAN-DS-11-0007",
+      "numero": 42,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as opções são ações de controle de acesso com condição de manutenção ou negação. A palavra 'mantendo' em distratores não os descarta gramaticalmente: é preciso avaliar se a condição mantida conserva a falha. A regra de propriedade é requisito legítimo do caso."
+    },
+    {
+      "id": "BAN-DS-11-0008",
+      "numero": 43,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções apresentam escolhas sobre verificação e recuperação, todas com detalhes. 'Verificar' aparece em várias e não cria correspondência exclusiva. Avaliar dispensas e preservação de vulnerabilidade requer o procedimento de resposta, sem marca de correção."
+    },
+    {
+      "id": "BAN-DS-12-0003",
+      "numero": 44,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas classificam ambiente e justificam a classificação. 'Híbrido' e 'multicloud' aparecem distribuídos entre as opções; integração, local físico e provedores são dados a interpretar, sem rótulo que substitua a competência."
+    },
+    {
+      "id": "BAN-DS-12-0004",
+      "numero": 45,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Cinco alternativas informam dois valores e conclusão de acompanhamento. Há repetição de um par com conclusões distintas; coincidência dos valores com números do enunciado não é uma marca. A política explicitada é dado para aplicação, sem recalcular neste perfil."
+    },
+    {
+      "id": "BAN-DS-13-0002",
+      "numero": 46,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as opções descrevem continuidade ou dependência de componentes. A explicitação do acesso direto válido delimita as condições técnicas; repetir 'acesso direto' em várias opções não aponta uma única resposta e exige compreender a separação de controles."
+    },
+    {
+      "id": "BAN-DS-14-0002",
+      "numero": 47,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Alternativas são três pares com mensagens e totais no mesmo padrão. As regras de confirmação, recusa e limite são especificação para derivar casos de aceitação; fornecê-las é parte legítima da aplicação e não solução involuntária."
+    },
+    {
+      "id": "BAN-DS-15-0002",
+      "numero": 48,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As alternativas completam o mesmo vínculo iniciado por 'relacione o relatório de setembro' e descrevem registros de dados com extensão próxima. 'Efetivamente utilizados' e a enumeração de etapas são conteúdo do registro proposto, sem marca corretiva; o contraste entre regras atuais e regras da execução depende de compreender a finalidade de linhagem histórica, não apenas de concordância ou vocabulário exclusivo."
+    },
+    {
+      "id": "BAN-DS-16-0003",
+      "numero": 49,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "As opções são inferências em português sobre o texto inglês. A alternativa com explicação mais extensa não possui marca externa ou reprodução literal exclusiva; a relação entre velocidade, adiamento e diferenças depende da compreensão linguística legitimamente cobrada."
+    },
+    {
+      "id": "BAN-DS-16-0004",
+      "numero": 50,
+      "versao": "v01",
+      "chaveConsultada": false,
+      "alternativaFavorecidaPelaForma": null,
+      "observacao": "Todas as alternativas completam 'refere-se especificamente' e apresentam referentes plurais. A referência de 'them' exige resolver 'the latter' e a cadeia textual em inglês, competência expressamente cobrada; concordância plural não seleciona uma opção exclusiva."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+PLANO E ACOMPANHAMENTO - SIM-002
+Meta: 50 questões específicas.
+Estado: SIMULADO_PRONTO_NAO_RESOLVIDO
+Elaboradas: 50/50. Aprovadas nos três perfis: 50/50. Pareceres favoráveis nas versões atuais:150.
+Pendências de produção: nenhuma.
+
+01 | Processo de desenvolvimento de software | 4 | concluídas e aprovadas em conformidade | /root/s2_elab_01
+02 | Gestão e Governança de Tecnologia da Informação | 3 | concluídas e aprovadas em conformidade | /root/s2_elab_02
+03 | Programação | 7 | concluídas e aprovadas em conformidade | /root/s2_elab_03
+04 | Banco de Dados | 6 | concluídas e aprovadas em conformidade | /root/s2_elab_04
+05 | Desenvolvimento de aplicações web e mobile | 5 | concluídas e aprovadas em conformidade | /root/s2_elab_05
+06 | Arquitetura de sistemas | 4 | concluídas e aprovadas em conformidade | /root/s2_elab_06
+07 | DevOps e DevSecOps | 3 | concluídas e aprovadas em conformidade | /root/s2_elab_07
+08 | Sistemas Operacionais | 2 | concluídas e aprovadas em conformidade | /root/s2_elab_08
+09 | Redes de computadores | 3 | concluídas e aprovadas em conformidade | /root/s2_elab_09
+10 | Serviços e gerenciamento de redes | 2 | concluídas e aprovadas em conformidade | /root/s2_elab_10
+11 | Segurança da Informação | 4 | concluídas e aprovadas em conformidade | /root/s2_elab_11
+12 | Computação em nuvem | 2 | concluídas e aprovadas em conformidade | /root/s2_elab_12
+13 | Git, Kubernetes, Rancher, deploy e CI/CD | 1 | concluídas e aprovadas em conformidade | /root/s2_elab_13
+14 | Levantamento de requisitos, testes, integração e documentação técnica | 1 | concluídas e aprovadas em conformidade | /root/s2_elab_14
+15 | Governança de dados, autenticação e controle de acesso | 1 | concluídas e aprovadas em conformidade | /root/s2_elab_15
+16 | Inglês técnico | 2 | concluídas e aprovadas em conformidade | /root/s2_elab_16
+
+Entrega: Backend/simulados/simulados pendentes/SIM-002
+Arquivos: simulado.json, simulado.txt, gabarito-comentado.txt e controle.txt.
+Situação: completo e pendente de resolução pelo estudante.
+Detalhes, histórico e retornos identificados: plano.json.
+Caminhos originais de auditoria preservados nos pareceres; relocação registrada em movimentacoes-questoes.json.
+
+Verificacao final: validador estrutural aprovado; API reconhece SIM-002 pendente com50 questoes em ordem e0 respostas.6 fontes locais representadas como localizadores. Conteudo do SIM-001 preservado.

@@ -1,0 +1,42 @@
+ID: BAN-DS-06-0008
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar a estratégia que aplica Strangler Fig sob as restrições expressas.
+
+RESOLUÇÃO
+A implementação moderna deve assumir inicialmente as consultas. Uma fachada no endereço preservado pode selecionar o destino por funcionalidade: consultas para o novo sistema e demais operações para o legado. Outras responsabilidades são migradas em etapas. A retirada do legado depende de eliminar as funcionalidades e dependências ainda atendidas por ele; disponibilizar uma fachada ou migrar apenas consultas não é suficiente.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: exige que os clientes conheçam e alterem os destinos, violando a preservação do endereço de acesso requerida no cenário; a fachada pode ocultar essa distribuição temporária.
+B) Atende: põe a consulta nova em uso e mantém as funções não migradas operantes no legado, transferindo responsabilidades gradualmente até eliminar o que impede sua retirada.
+C) Não atende: adia a entrada em uso das consultas até uma transferência conjunta, contrariando a primeira etapa exigida e o caráter incremental solicitado.
+D) Não atende: a fachada pode ser uma etapa preparatória, mas manter todas as operações no legado não coloca a consulta nova em uso nem substitui essa responsabilidade.
+E) Não atende: a nova implementação só atende consultas nesta etapa. Dividir indiscriminadamente o tráfego pode enviar operações ainda não migradas a um destino que não as atende; receber a maioria do tráfego não comprova que o legado possa ser retirado.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — Strangler Fig pattern — Azure Architecture Center. https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig. Localizador: Solution, etapas 1 a 3; Problems and considerations, dependências entre sistemas; When to use this pattern. Consulta em 26/11/2026. Sustenta interceptação por fachada, coexistência, transferência gradual e condição de retirada do legado.
+- AWS Prescriptive Guidance — Strangler fig pattern. https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html. Localizador: Intent; Motivation, comparação com big bang; Issues and considerations, Proxy layer failure e Anti-corruption layer. Consulta em 26/11/2026. Corrobora a substituição incremental e a necessidade de tratar dependências e o papel temporário do proxy.
+- Programa-base — Arquitetura de sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 48, página 11, na extração local com marcadores de página; uso editorial.
+- FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 32, página 8, na extração local com marcadores de página; uso editorial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 48; página 11.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Enunciado que reúne características de um processo em contexto de atuação de uma Analista e exige selecionar a abordagem compatível.
+  Aplicação nesta questão autoral: O cenário reúne restrições de uma migração; as opções são ações de modernização comparáveis que devem atender conjuntamente a essas restrições. Não são reproduzidas as etapas do teste de integração da referência.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Contexto técnico definido seguido de cinco afirmações sobre comportamento e limitações de um mecanismo.
+  Aplicação nesta questão autoral: As alternativas descrevem estratégias concretas e suas consequências, sem transformar a escolha arquitetural em preferência universal.
+  Limites da referência: Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: consultadas as orientações Microsoft e AWS sobre migração incremental, fachada e dependências. Analítica: conferidas a entrada da consulta na primeira etapa, a continuidade das funções não migradas, a estabilidade do endereço e a condição para retirada do legado em cada alternativa. O cenário declara integrações e dados preparados, sem presumir que a fachada resolva consistência de dados. Não houve execução de migração. Editorial: lidas Q48/p.11 e Q32/p.8 do TRT4/2022 no acervo local. Independência: as questões anteriores do elaborador 06 não cobravam migração incremental do legado.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

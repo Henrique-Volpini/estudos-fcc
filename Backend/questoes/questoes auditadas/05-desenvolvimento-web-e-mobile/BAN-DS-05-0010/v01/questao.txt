@@ -1,0 +1,22 @@
+ID: BAN-DS-05-0010
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: JSON em integrações: serialização em JavaScript
+
+ENUNCIADO
+Uma aplicação prepara um corpo JSON com o código abaixo, em ambiente JavaScript compatível com ECMAScript 2025. Considere as funções e os protótipos nativos sem alterações.
+
+const carga = {
+  apelido: undefined,
+  ativo: false,
+  contatos: [undefined, null, ""]
+};
+const texto = JSON.stringify(carga);
+
+O conteúdo da string texto é
+
+A) {"apelido":null,"ativo":false,"contatos":[null,null,""]}
+B) {"ativo":false,"contatos":[null,null,""]}
+C) {"ativo":false,"contatos":[null,""]}
+D) {"apelido":"undefined","ativo":false,"contatos":["undefined",null,""]}
+E) {"contatos":[null,null,""]}

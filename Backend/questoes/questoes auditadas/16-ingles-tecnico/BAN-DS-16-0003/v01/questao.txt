@@ -1,0 +1,19 @@
+ID: BAN-DS-16-0003
+Versão: v01
+Matéria: Inglês técnico
+Tópico: Compreensão de texto técnico autoral em inglês: inferência sobre migração
+
+ENUNCIADO
+Considere o texto abaixo.
+
+The team planned to move report production to a new system on Monday. In a trial, the new system produced reports faster than the current one, but several totals did not match. The team postponed the move, although the faster reports would have helped with the monthly review. It will set a new date only after it has explained the differences. Until then, staff will continue to produce reports with the current system.
+
+(Texto autoral.)
+
+Infere-se do texto que
+
+A) a equipe pretende usar o sistema novo na revisão mensal para descobrir a origem das diferenças.
+B) o adiamento decorre da necessidade de tornar o sistema atual mais rápido que o sistema novo.
+C) a definição da nova data permitirá à equipe iniciar a análise dos totais que não coincidiram.
+D) a equipe considera a maior velocidade insuficiente para realizar a migração enquanto as diferenças não forem esclarecidas.
+E) a equipe concluiu que os totais do sistema atual estavam incorretos e decidiu substituir esses relatórios.

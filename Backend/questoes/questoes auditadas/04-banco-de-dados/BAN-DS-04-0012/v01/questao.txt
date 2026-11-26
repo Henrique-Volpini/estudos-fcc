@@ -1,0 +1,38 @@
+ID: BAN-DS-04-0012
+Versão: v01
+Matéria: Banco de Dados
+Tópico: PL/pgSQL: SELECT INTO STRICT e quantidade de linhas
+
+ENUNCIADO
+No PostgreSQL 15, a tabela parametro possui as colunas chave text e valor integer, sem restrição de unicidade, e contém somente:
+
+chave | valor
+X     | 7
+X     | 7
+Y     | NULL
+
+Foi criada a função:
+
+CREATE FUNCTION obter_valor(p_chave text)
+RETURNS integer
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    v_valor integer;
+BEGIN
+    SELECT p.valor INTO STRICT v_valor
+    FROM parametro AS p
+    WHERE p.chave = p_chave;
+    RETURN v_valor;
+END;
+$$;
+
+São realizadas três chamadas independentes, cada uma em sua própria transação, sem alterações concorrentes: obter_valor('Z'), obter_valor('Y') e obter_valor('X').
+
+Os resultados ou exceções dessas chamadas são, respectivamente,
+
+A) NULL, NULL e 7.
+B) NO_DATA_FOUND, NO_DATA_FOUND e TOO_MANY_ROWS.
+C) NO_DATA_FOUND, NULL e TOO_MANY_ROWS.
+D) NO_DATA_FOUND, NULL e 7.
+E) NULL, NULL e TOO_MANY_ROWS.

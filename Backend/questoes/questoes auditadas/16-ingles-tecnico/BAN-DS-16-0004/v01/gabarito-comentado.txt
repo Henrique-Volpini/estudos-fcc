@@ -1,0 +1,40 @@
+ID: BAN-DS-16-0004
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar especificamente o conjunto retomado por them no segmento destacado.
+
+RESOLUÇÃO
+A terceira frase divide as cópias testadas em dois conjuntos, apresentados em ordem: as que podem ser abertas e as que não podem. Na quarta frase, The latter remete ao segundo conjunto, isto é, às cópias que não podem ser abertas. São elas que entram no relatório e que a analista substitui. Na oração before she replaces them with new copies, she retoma a analista e them retoma as cópias desse segundo grupo, como objeto de replaces. New copies designa as cópias substitutas, não o referente de them. A resolução depende dessa cadeia de referências no inglês, sem pressupor regras técnicas de backup.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando. Os arquivos dos projetos aparecem como origem das cópias na primeira frase. A divisão em dois grupos e a substituição descritas depois se referem às cópias testadas, não aos arquivos de origem.
+B) Não atende ao comando. O conjunto das cópias testadas foi dividido em dois grupos. The latter seleciona o segundo grupo, de modo que them não abrange todas as cópias submetidas à verificação.
+C) Atende ao comando. Os grupos são apresentados na ordem: cópias que podem ser abertas e cópias que não podem. The latter retoma o segundo grupo, que é registrado e depois substituído. Them mantém esse mesmo referente como objeto de replaces.
+D) Não atende ao comando. As cópias que puderam ser abertas formam o primeiro dos dois grupos. The latter retoma o segundo grupo; a alternativa corresponderia ao primeiro, que não é o conjunto substituído na frase.
+E) Não atende ao comando. Em replaces them with new copies, them identifica o conjunto substituído; new copies identifica o que entra em seu lugar. A alternativa troca os dois papéis na construção.
+
+FONTES TÉCNICAS CONSULTADAS
+- Texto autoral sobre verificação de cópias de segurança — /root/s2_elab_16. Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0004/v01/questao.txt — ENUNCIADO, terceira e quarta frases: divisão em dois grupos, The latter e them; fonte primária do referente contextual. Nenhuma passagem externa foi adaptada.
+- British Council — LearnEnglish: Personal pronouns. https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/personal-pronouns — Quadro Subject/Object e explicação do emprego de object pronouns como objeto verbal; consulta em 26/11/2026. Sustenta a identificação de them como pronome objeto.
+- Merriam-Webster.com Dictionary — latter. https://www.merriam-webster.com/dictionary/latter — Acepção 2 e exemplo de emprego substantivado de the latter; consulta em 26/11/2026. Sustenta a retomada do segundo de dois grupos mencionados.
+- Conteúdo programático de conhecimentos específicos — Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt — Seção INGLÊS TÉCNICO.; delimitação do conteúdo.
+- FCC/TRT da 7ª Região — Analista Judiciário, Tecnologia da Informação, 2009 — itens de inglês no Qconcursos. https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 — Q128172, identificador do acervo: interpretação contextual de segmento inglês com cinco opções em português; Q128174: compreensão textual. Comandos e opções Q128171–Q128175 lidos em 26/11/2026. Origem secundária.
+- Texto inglês associado aos itens FCC/TRT7/2009, imagem do acervo Qconcursos. Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg — Imagem integral visualizada: artigo adaptado sobre Intellipedia. Usada somente para conferir a apresentação de texto inglês associado aos itens.
+- Registro local da referência FCC de inglês TRT7/2009. Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt — Identificação dos exemplos Q128171–Q128175 e limites dos metadados; confrontado com a página e a imagem reais.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 7ª Região; Analista Judiciário — Tecnologia da Informação; 2009.
+- Caderno, questão e página: Não obtido no acervo consultado; Q128172 e Q128174 — identificadores do Qconcursos; números originais não obtidos; Páginas originais não obtidas; itens consultados em HTML.
+- Origem verificável: Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; texto associado visualizado em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg
+- Característica observada: Leitura contextual de segmento inglês e compreensão do texto por comando e cinco interpretações em português.
+- Aplicação nesta questão autoral: Segmento inglês delimitado no comando, texto autossuficiente e cinco possíveis referentes formulados em português, com distratores extraídos de conjuntos mencionados no próprio texto.
+- Limites da referência: Os exemplos não cobram especificamente referente pronominal; sustentam a apresentação e a interpretação contextual. Origem secundária e histórica, sem autenticação oficial, sem números originais, páginas ou caderno obtidos e sem inferência de frequência ou dificuldade atual. Texto e opções são novos.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: escopo e atribuição conferidos; as questões anteriores cobravam razão de decisão textual e otherwise, não esta cadeia de referência pronominal.
+- Documental: quadro de pronomes e uso de object pronouns conferidos no British Council; sentido de latter relativo ao segundo de dois grupos conferido na acepção 2 da Merriam-Webster.
+- Documental de estilo: texto inglês real visualizado na imagem e comandos/opções Q128171–Q128175 lidos na página Qconcursos. Esses exemplos sustentam apresentação e leitura contextual em inglês, sem comprovar que o item Q128172 cobre referente pronominal.
+- Analítica: substituição de them por cada conjunto candidato e rastreamento de The latter; somente o segundo grupo é retomado integralmente. Todas as informações sobre a rotina de backup constam do próprio texto. Não houve execução de código para fundamentar a resposta.
+
+PENDÊNCIAS
+Auditoria posterior de estilo FCC, pistas de resposta e redação/conformidade. Nenhuma pendência de elaboração.

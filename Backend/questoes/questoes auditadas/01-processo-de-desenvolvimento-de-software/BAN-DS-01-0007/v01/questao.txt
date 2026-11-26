@@ -1,0 +1,19 @@
+ID: BAN-DS-01-0007
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: Tipos de testes: distinguir unidade, integração e sistema em cenário
+
+ENUNCIADO
+Uma equipe de qualidade organiza três atividades para um sistema de transferências entre contas da própria instituição:
+
+I. Verificar a classe CalculadoraTarifa isoladamente, fornecendo entradas e comparando os valores retornados; suas dependências são substituídas por objetos simulados.
+II. Verificar as interfaces e as trocas de dados entre os componentes reais ServicoTransferencia e RepositorioContas, executados em conjunto; os demais componentes da aplicação ficam fora do objeto desse teste.
+III. Verificar o comportamento da aplicação completa, da interface de usuário à persistência, em ambiente representativo, confrontando o fluxo de transferência com a especificação do sistema. O objetivo não é avaliar interfaces com sistemas externos.
+
+Considerando o objeto e o objetivo de cada atividade, os níveis de teste em I, II e III são, respectivamente,
+
+A) unidade; integração de componentes; sistema.
+B) unidade; sistema; integração de componentes.
+C) integração de componentes; unidade; sistema.
+D) sistema; integração de componentes; unidade.
+E) integração de componentes; sistema; unidade.

@@ -1,0 +1,49 @@
+Simulado: SIM-002
+Questão: BAN-DS-11-0007
+Versão examinada: v01
+Responsável: /root/s2_auditor_pistas
+Perfil: PISTAS_DE_RESPOSTA
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt.
+- Backend/Agents/codex/agents/auditores/02-pistas-de-resposta.txt.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/manifesto.json: identificação, versão, caminhos e hash do pacote SIM-002/v01.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/publico-41-50.json: somente texto público de BAN-DS-11-0007/v01 na primeira leitura.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-pistas.json: registro da observação individual antes da respectiva chave.
+- Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0007/controle.txt: identificação e versão atual completa conferidas.
+- Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0007/v01/questao.txt: v01, coincidência integral de ENUNCIADO e alternativas com o público.
+- Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0007/v01/gabarito-comentado.txt: v01, somente letra proposta para confronto; comentários não examinados.
+- Hash SHA256 dos textos, conforme método do manifesto: cbe4fa6cefb6a04c794509023854f520d5e4541df42d55f36e76f0efdc187df1.
+
+PRIMEIRA LEITURA SEM GABARITO
+Leitura inicial exclusiva do texto público, registrada antes de consultar qualquer chave, comentário ou entrega. Todas as opções são ações de controle de acesso com condição de manutenção ou negação. A palavra 'mantendo' em distratores não os descarta gramaticalmente: é preciso avaliar se a condição mantida conserva a falha. A regra de propriedade é requisito legítimo do caso.
+Alternativa favorecida exclusivamente pela forma: nenhuma identificada.
+
+CRITÉRIOS EXAMINADOS
+- Revelação por explicação, comentário, exemplo resolvido ou expressão pública: atendido. No enunciado e nas cinco alternativas não identifiquei solução exposta ou comentário de correção. O comando examinado é: "Para corrigir a falha de controle de acesso descrita, de acordo com a categoria A01 do OWASP Top 10:2021, a equipe deve".
+- Correspondência exclusiva de palavras, siglas ou construções: atendido. A análise individual acima distingue os dados e termos legitimamente cobrados de um mecanismo de seleção por redação. Relacionar os elementos apresentados exige controle de acesso ao objeto na API; não identifiquei associação acidental que dispense essa competência.
+- Concordância ou encaixe gramatical exclusivo: atendido. As opções são ações de correção acompanhadas das condições de acesso; nenhuma é a única que completa gramaticalmente o comando. As diferenças entre as opções foram examinadas sem converter validade técnica em critério de gramática.
+- Tratamento editorial singular com vantagem concreta: atendido. As opções usam ações de correção acompanhadas das condições de acesso; diferenças de conteúdo, extensão ou repetição não fornecem, isoladamente, mecanismo para reconhecer a alternativa proposta.
+- Distratores descartáveis por linguagem, construção, falta de relação com o comando ou dependência reveladora: atendido. Os cinco respondem ao mesmo objeto: controle de acesso ao objeto na API. Não identifiquei descarte que decorra apenas de erro na língua do comando ou de ligação formal com outra alternativa; avaliar o conteúdo das propostas pertence ao conhecimento ou raciocínio solicitado.
+- Marcas de correção, rótulos, comentários, formatação, nomes de variáveis ou metadados expostos: atendido. Os nomes, números e símbolos presentes integram controle de acesso ao objeto na API; não identifiquei neles rótulo de correção. Considerada a apresentação informada pelo coordenador (número, matéria ampla, enunciado e alternativas), o tópico, objetivo, controle e comentários internos não aparecem antes da resposta e não foram tratados como vazamento.
+- Comando negativo e destaque, concordância ou composição reveladores: Não aplicável: o comando solicita uma resposta afirmativa ou uma classificação/resultado; não pede exceção, opção incorreta ou opção que NÃO atende.
+
+CONFRONTO COM O GABARITO PROPOSTO
+Após registrar a primeira leitura, consultei somente a letra proposta. O confronto não revelou pista formal dirigida à opção indicada nem a outra opção. Não resolvi a questão, refiz cálculos, executei código ou certifiquei conceitos ou normas para validar a resposta.
+
+ACHADOS
+Nenhum achado impeditivo no escopo avaliado.
+
+REFERÊNCIAS DE ESTILO
+Não aplicável: este parecer não realiza comparação editorial com provas FCC.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil PISTAS_DE_RESPOSTA.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA exclusivamente no perfil PISTAS_DE_RESPOSTA: todos os critérios obrigatórios foram examinados e a observação individual registrada antes da respectiva chave foi confrontada sem identificação de vantagem involuntária pela forma. Os dados e distinções relevantes integram controle de acesso ao objeto na API; esta decisão não certifica o gabarito técnico nem substitui os demais perfis.

@@ -1,0 +1,259 @@
+{
+  "simulado": "SIM-002",
+  "responsavel": "/root/s2_auditor_redacao",
+  "perfil": "REDACAO_E_CONFORMIDADE",
+  "data": "2026-11-26",
+  "metodo": "Primeira leitura integral dos cinco lotes públicos, sem consulta prévia a gabaritos, comentários ou entregas. Observações individuais registradas antes da conferência documental.",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0005",
+      "versao": "v01",
+      "observacoes": "O fluxo nomeia início e fim, o limite global e o tratamento do bloqueio. Comando afirmativo pede quantidade máxima; sequência temporal e referência de 'um destes' a itens em Validação são claras. Opções numéricas completas, distintas e paralelas; nenhuma corrupção ou instrução interna no texto público."
+    },
+    {
+      "id": "BAN-DS-01-0006",
+      "versao": "v01",
+      "observacoes": "Gateway, tarefas e ligações são identificados por nome e direção. 'Nessas condições' completa-se com cinco afirmações sobre a execução. Negações descrevem o cenário, sem comando negativo; as opções mantêm relação com o trecho e não se duplicam textualmente."
+    },
+    {
+      "id": "BAN-DS-01-0007",
+      "versao": "v01",
+      "observacoes": "As três atividades estão separadas por I–III; o comando fixa a ordem de associação. O pronome 'suas' remete à classe na atividade I. Alternativas são ternas de níveis, com paralelismo e sequências distintas. Não há defeito linguístico impeditivo aparente."
+    },
+    {
+      "id": "BAN-DS-01-0008",
+      "versao": "v01",
+      "observacoes": "A baseline e os itens que ela identifica são explicitados; o pronome 'Ela' retoma H1. Comando de conduta, sem negação, completa-se por verbos no infinitivo nas cinco opções. Redação íntegra, sem sobreposição textual demonstrável."
+    },
+    {
+      "id": "BAN-DS-02-0004",
+      "versao": "v01",
+      "observacoes": "PETIC e PDTIC são expandidos e diferenciados no cenário; a referência ao Guia fornece versão. 'Desdobrá-las' retoma necessidades sem ambiguidade. Cinco ações paralelas completam o comando afirmativo, sem duplicação textual."
+    },
+    {
+      "id": "BAN-DS-02-0005",
+      "versao": "v01",
+      "observacoes": "Valores, período, incidência dos custos e forma de benefício são discriminados. Fórmula e convenções do ROI estão no enunciado. Opções são percentuais distintos e uniformes; as negações delimitam premissas, sem alterar o comando positivo."
+    },
+    {
+      "id": "BAN-DS-02-0006",
+      "versao": "v01",
+      "observacoes": "Fiscal, apoio e superiores têm funções textualmente distinguíveis; 'sua competência' retoma o fiscal no contexto. Lei, artigo e data de referência são identificados. As opções são ações completas que complementam 'deve'; não há erro de redação ou duplicação evidente."
+    },
+    {
+      "id": "BAN-DS-03-0008",
+      "versao": "v01",
+      "observacoes": "Python 3, processo novo e ausência de chamadas anteriores delimitam o trecho. Código com indentação preservada; comando pede somente sequência exibida. As cinco sequências numéricas são distintas e paralelas; não foi executado o código."
+    },
+    {
+      "id": "BAN-DS-03-0009",
+      "versao": "v01",
+      "observacoes": "A versão Java 21 e o programa completo estão identificados. Chamada de main e saída solicitada são claras; opções são cadeias de igual formato, distintas. Grafia técnica e formatação do código preservadas, sem execução."
+    },
+    {
+      "id": "BAN-DS-03-0010",
+      "versao": "v01",
+      "observacoes": "C# 12 e .NET 8 são explicitados; classes e rotina principal estão presentes no trecho. Comando solicita os valores exibidos, com opções em pares distintos. Código legível e sem restos de template; não executado."
+    },
+    {
+      "id": "BAN-DS-03-0011",
+      "versao": "v01",
+      "observacoes": "O trecho é identificado como C11 e sem entrada externa; printf define a ordem dos valores solicitados. Alternativas são trincas distintas e de mesma forma. Ausência de frases truncadas ou comando negativo; código apenas lido, sem execução."
+    },
+    {
+      "id": "BAN-DS-03-0012",
+      "versao": "v01",
+      "observacoes": "PHP 8.2 é informado; o trecho e o pedido de texto exibido têm limites claros. Dois-pontos e letras de saída estão preservados nas cinco cadeias. Não há duplicação de opção nem ambiguidade linguística observada; código não executado."
+    },
+    {
+      "id": "BAN-DS-03-0013",
+      "versao": "v01",
+      "observacoes": "Cenário identifica conexão, provedor, comando e restrições da variável. O comando explicita igualdade de Nome e separação de entrada do SQL. Cinco trechos de duas linhas paralelas; diferenças de aspas e valores são significativas, sem correção editorial indevida."
+    },
+    {
+      "id": "BAN-DS-03-0014",
+      "versao": "v01",
+      "observacoes": "O ciclo de trabalho é descrito em ordem temporal; 'ele' remete ao teste e 'continuam' aos testes. Pedido de intervenção na etapa refactor é inequívoco. Cinco verbos no infinitivo completam o comando; sem sobreposição textual."
+    },
+    {
+      "id": "BAN-DS-04-0007",
+      "versao": "v01",
+      "observacoes": "Relações, cardinalidades e nomes de tabelas/colunas estão definidos. O comando distingue repetição do par e todas as titularidades admitidas. Alternativas são conjuntos de colunas, completos e distintos; as restrições negativas são premissas claras."
+    },
+    {
+      "id": "BAN-DS-04-0008",
+      "versao": "v01",
+      "observacoes": "PostgreSQL 15, estado inicial e ausência de concorrência, gatilhos e erros delimitam a sessão. Comandos SQL em ordem e pedido do último SELECT identificáveis; cinco valores distintos. Não houve execução nem cálculo de validação."
+    },
+    {
+      "id": "BAN-DS-04-0009",
+      "versao": "v01",
+      "observacoes": "Papéis e pré-condições são discriminados e cada bloco SQL identifica quem o executa. 'O' nas opções remete a privilégio SELECT, anunciado no comando. As alternativas descrevem situações distintas de forma legível; nenhuma duplicação textual."
+    },
+    {
+      "id": "BAN-DS-04-0010",
+      "versao": "v01",
+      "observacoes": "Oracle Database 19c e sucesso da preparação são declarados; criação, inserções e consulta se distinguem. O pedido de identificadores retornados é claro e opções representam conjuntos distintos, inclusive vazio. Aspas vazias e NULL preservados."
+    },
+    {
+      "id": "BAN-DS-04-0011",
+      "versao": "v01",
+      "observacoes": "Grão da fato e das dimensões, atributos e requisito de preservação individual são explícitos. O comando de implementação completa-se com cinco descrições nominais de estrutura. Vocabulário consistente e sem duplicação textual impeditiva."
+    },
+    {
+      "id": "BAN-DS-04-0012",
+      "versao": "v01",
+      "observacoes": "Tabela textual tem cabeçalhos chave/valor e três linhas legíveis; função e chamadas são identificadas com versão e isolamento das transações. 'Respectivamente' fixa a ordem das ternas. Exceções e NULL preservados; nenhuma execução."
+    },
+    {
+      "id": "BAN-DS-05-0006",
+      "versao": "v01",
+      "observacoes": "CSS é apresentado em ordem, com exclusão de regras concorrentes. Viewports e significado de n e g são definidos; 'respectivamente' associa três pares às larguras. Opções distintas e completas, preservando unidades e sintaxe; código não executado."
+    },
+    {
+      "id": "BAN-DS-05-0007",
+      "versao": "v01",
+      "observacoes": "TypeScript 5.9 e strict são declarados; comentários marcam I e II e o texto explica que indicam acessos a r. O comando pede tipos em ordem fixa. As cinco duplas são paralelas e distintas; não há referência pronominal incerta."
+    },
+    {
+      "id": "BAN-DS-05-0008",
+      "versao": "v01",
+      "observacoes": "React 19, estado local, ordem inicial, inversão e persistência do pai são explicitados. O comando identifica primeiro Ana/Bia e depois a chave desde a montagem. Opções têm dois valores e uma expressão key, em formato paralelo; não executadas."
+    },
+    {
+      "id": "BAN-DS-05-0009",
+      "versao": "v01",
+      "observacoes": "As operações independentes I e II têm estados finais distintos descritos e semântica HTTP identificada por RFC. 'Respectivamente' liga as duplas aos itens; 'acompanhá-la' retoma geração/situação de modo suficiente à tarefa. Opções de status completas e distintas."
+    },
+    {
+      "id": "BAN-DS-05-0010",
+      "versao": "v01",
+      "observacoes": "Ambiente ECMAScript 2025 e funções nativas inalteradas delimitam o fragmento. O comando pede o conteúdo da string, e alternativas mantêm literal JSON legível e diferenças de ausência, null e string. Nenhuma execução ou alteração da sintaxe técnica."
+    },
+    {
+      "id": "BAN-DS-06-0005",
+      "versao": "v01",
+      "observacoes": "Cenário MVC no servidor e três responsabilidades numeradas definem o problema. Ordem I–III é expressa e alternativas são ternas paralelas. Comando afirmativo e referências textuais claras, sem restos internos."
+    },
+    {
+      "id": "BAN-DS-06-0006",
+      "versao": "v01",
+      "observacoes": "Duas mudanças estão distinguidas: implementação interna e significado do campo situacao. 'Seu impacto' na opção remete à mudança contratual. As cinco ações respondem à mesma avaliação; nomes técnicos consistentes e sem duplicação textual."
+    },
+    {
+      "id": "BAN-DS-06-0007",
+      "versao": "v01",
+      "observacoes": "Funções I e II e os dois mecanismos são identificados. O comando requer atribuição e relação, contempladas em cada alternativa. Frases completas e paralelas, sem sobreposição literal que produza opções iguais."
+    },
+    {
+      "id": "BAN-DS-06-0008",
+      "versao": "v01",
+      "observacoes": "Etapas, funcionalidade pronta, coexistência e objetivo de acesso são claros. O comando 'deve' recebe cinco intervenções completas e distintas. 'Dele' remete ao legado; referência pronominal suficiente e nenhuma corrupção textual."
+    },
+    {
+      "id": "BAN-DS-07-0004",
+      "versao": "v01",
+      "observacoes": "Ambientes, versões, banco, sessões, compatibilidade e ausência de requisições em andamento estão identificados. Comando delimita reversão rápida com preservação das gravações. Alternativas são ações paralelas, sem comando negativo nem duplicação."
+    },
+    {
+      "id": "BAN-DS-07-0005",
+      "versao": "v01",
+      "observacoes": "Janela e população da métrica diferem explicitamente da amostragem de traces; evento de log tem identificador definido. Comando pede interpretação em cinco frases completas. Termos e referências preservados; nenhuma sobreposição textual ou fragmento desconexo."
+    },
+    {
+      "id": "BAN-DS-07-0006",
+      "versao": "v01",
+      "observacoes": "Quatro propostas I–IV estão separadas e o comando destaca APENAS, indicando seleção do conjunto completo. As cinco duplas de assertivas são distintas e paralelas. Premissas de inspeção, homologação e autenticação são identificáveis; redação íntegra."
+    },
+    {
+      "id": "BAN-DS-08-0003",
+      "versao": "v01",
+      "observacoes": "Metadados têm ordem das colunas explicitada, caminhos completos e credenciais discriminadas. O comando define três operações e mantém sua ordem nas opções. Restrições negativas do cenário estão claras; trincas permitida/negada são distintas e paralelas."
+    },
+    {
+      "id": "BAN-DS-08-0004",
+      "versao": "v01",
+      "observacoes": "Versões de PowerShell e Windows, instante da captura e nomes das três colunas são informados. O requisito distingue Name de DisplayName e objetos de propriedades para uso posterior. Cada opção é um pipeline completo; sintaxe preservada e não executada."
+    },
+    {
+      "id": "BAN-DS-09-0004",
+      "versao": "v01",
+      "observacoes": "L1, L2, R, H1 e H2 são apresentados; as duas tarefas são associadas no comando ao endereço e à conclusão de encaminhamento. Negações são premissas e afirmações das opções, sem comando invertido. Cinco pares completos e textualmente distintos."
+    },
+    {
+      "id": "BAN-DS-09-0005",
+      "versao": "v01",
+      "observacoes": "Linha temporal t=0,60,120 s e estado dos caches são explícitos; comando ordena endereço, TTL e AA. As cinco trincas têm unidades e separadores consistentes, sem duplicação. 'Nesse instante' retoma inequivocamente t=120 s."
+    },
+    {
+      "id": "BAN-DS-09-0006",
+      "versao": "v01",
+      "observacoes": "N, S e R têm equipamentos e implantação identificados. Comando pede quatro componentes em ordem: três papéis e cliente RADIUS. Opções de quatro termos distintas e paralelas; sem referências pronominais ambíguas."
+    },
+    {
+      "id": "BAN-DS-10-0003",
+      "versao": "v01",
+      "observacoes": "Estado INIT, ofertas e seleção de S2 delimitam a sequência. O comando distingue mensagem do cliente e confirmação posterior. Cinco pares legíveis e relacionados ao mesmo pedido, com destino/modo de envio especificados; sem truncamento."
+    },
+    {
+      "id": "BAN-DS-10-0004",
+      "versao": "v01",
+      "observacoes": "Prometheus em modo servidor e Alertmanager são nomeados; atividades I–III descrevem coleta, avaliação e notificação. Comando associa componentes em ordem fixa. Cinco ternas distintas, sem negação problemática ou instrução interna exposta."
+    },
+    {
+      "id": "BAN-DS-11-0005",
+      "versao": "v01",
+      "observacoes": "Nome solicitado, campos do certificado, exceções e verificações já aprovadas são discriminados; RFC identificada. O comando 'cliente deve' completa-se em ações paralelas com justificativa. Termos dNSName, subjectAltName e CN são consistentes e legíveis."
+    },
+    {
+      "id": "BAN-DS-11-0006",
+      "versao": "v01",
+      "observacoes": "Premissas do evento e independência dos segredos são declaradas; quatro processos I–IV se distinguem. APENAS destaca a seleção exclusiva do conjunto. Cinco duplas paralelas; 'nenhum dos quais' refere-se claramente aos dois tokens do item III."
+    },
+    {
+      "id": "BAN-DS-11-0007",
+      "versao": "v01",
+      "observacoes": "Política, autenticação e alteração de identificador estão descritas; endpoint e referência OWASP identificados. O comando pede correção da falha descrita e as cinco ações são completas. Negações na opção são condições claras, sem sobreposição textual."
+    },
+    {
+      "id": "BAN-DS-11-0008",
+      "versao": "v01",
+      "observacoes": "Servidor isolado, possibilidade de recuperação simultânea e estado não verificado do backup são explícitos. Comando de recuperação referencia documento e revisão. Alternativas consistem em intervenções completas e distintas; não há erro de redação impeditivo observado."
+    },
+    {
+      "id": "BAN-DS-12-0003",
+      "versao": "v01",
+      "observacoes": "Nuvem privada, integração com P e aplicação em Q são diferenciadas. O comando distingue implantação e diversidade de provedores. Opções completam a mesma frase, com classificação e motivo; pronome 'Ela' é compreensível como a nuvem privada integrada."
+    },
+    {
+      "id": "BAN-DS-12-0004",
+      "versao": "v01",
+      "observacoes": "Tabela identifica equipes, custos e orçamento; política de rateio e limiar de sinalização são explícitos. O comando fixa ordem Cartões/Crédito e resultado. Alternativas têm dois valores e uma conclusão; valores iguais em parte de opções não tornam a conclusão duplicada."
+    },
+    {
+      "id": "BAN-DS-13-0002",
+      "versao": "v01",
+      "observacoes": "Rancher, cluster registrado e plano de controle operacional estão identificados. Kubeconfig direto, credenciais e permissões delimitam o cenário. Comando afirmativo e alternativas paralelas sobre operação/administração, sem frases truncadas ou duplicação."
+    },
+    {
+      "id": "BAN-DS-14-0002",
+      "versao": "v01",
+      "observacoes": "Regras de confirmação/recusa, atualização e exibição são separadas; casos independentes têm tabela com unidades e cabeçalhos. Comando define o par e a ordem I–III. Cinco ternas distintas e paralelas; negação integra condição objetiva, sem inversão de comando."
+    },
+    {
+      "id": "BAN-DS-15-0002",
+      "versao": "v01",
+      "observacoes": "O relatório de setembro e a mudança posterior de conversão delimitam a referência temporal. O pedido exige registro relacionado àquela publicação e todas as opções o completam com 'aos'. Pronomes e encadeamento são claros; opções não se duplicam."
+    },
+    {
+      "id": "BAN-DS-16-0003",
+      "versao": "v01",
+      "observacoes": "Texto inglês identificado como autoral e separado do comando em português. Tempos verbais e referência de 'It' à equipe estão íntegros. Cinco afirmações em português completam a inferência pedida, sem instruções internas ou repetição textual."
+    },
+    {
+      "id": "BAN-DS-16-0004",
+      "versao": "v01",
+      "observacoes": "Texto inglês autoral e trecho citado para análise pronominal estão identificados. O comando delimita especificamente them na oração indicada. Alternativas são referentes nominais paralelos e distintos; texto inglês legível, sem traduzi-lo ou resolver o referente."
+    }
+  ]
+}

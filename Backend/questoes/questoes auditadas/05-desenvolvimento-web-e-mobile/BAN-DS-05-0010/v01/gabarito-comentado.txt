@@ -1,0 +1,37 @@
+ID: BAN-DS-05-0010
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar o conteúdo da string produzida por JSON.stringify.
+
+RESOLUÇÃO
+A propriedade apelido tem valor undefined e é excluída da serialização do objeto. A propriedade ativo permanece com false. No array contatos, o primeiro elemento undefined é representado por null, o segundo já é null e o terceiro continua sendo a string vazia. Sem o parâmetro space, não são acrescentados espaços de formatação. O resultado é {"ativo":false,"contatos":[null,null,""]}.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: uma propriedade de objeto com valor undefined é omitida, e não convertida em uma propriedade com valor null.
+B) Atende: apelido é omitido, false é mantido, e o elemento undefined do array é representado por null sem remover a posição.
+C) Não atende: o elemento undefined do array não é eliminado; sua posição é serializada como null, mantendo três elementos.
+D) Não atende: undefined não é convertido no texto entre aspas undefined, nem em objeto nem em array.
+E) Não atende: o valor booleano false possui representação JSON e não provoca a omissão da propriedade ativo.
+
+FONTES TÉCNICAS CONSULTADAS
+- Ecma International — ECMA-262, 16ª edição, ECMAScript 2025 — junho de 2025
+  URL: https://262.ecma-international.org/16.0/index.html#sec-json.stringify
+  Localizador e fundamentação: Seção 25.5.2, especialmente notas 2 e 5; 25.5.2.5, SerializeJSONObject, passo 8; 25.5.2.6, SerializeJSONArray, passo 8: omissão no objeto e null no array.
+- TC39 — ECMAScript Language Specification — edição de trabalho consultada em 26/11/2026
+  URL: https://tc39.es/ecma262/multipage/structured-data.html#sec-json.stringify
+  Localizador e fundamentação: Seções JSON.stringify, SerializeJSONObject e SerializeJSONArray, conferidas complementarmente. A fundamentação da versão declarada usa a edição fixa ECMAScript 2025, não este rascunho.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 43; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Fragmento técnico seguido da seleção de uma representação JSON entre cinco opções de mesma natureza.
+  Aplicação nesta questão autoral: Objeto e array autorais, com cinco conteúdos JSON comparáveis e comando direto sobre a representação obtida.
+  Limites da referência: A cópia não foi obtida da FCC nem do órgão. O registro de hash local não constitui assinatura oficial. O exemplo real converte XML em JSON; a questão nova avalia o algoritmo JSON.stringify e não repete a conversão do caderno. O exemplo sustenta apenas as características descritas, sem demonstrar frequência na banca.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental na edição fixa ECMA-262/2025 e análise das cinco opções. Conferência executada em memória por stdin no Node.js v26.12.1, em 26/11/2026: entrada foi o objeto carga do enunciado e a chamada JSON.stringify(carga); saída observada: {"ativo":false,"contatos":[null,null,""]}. Nenhum arquivo ou infraestrutura de teste foi criado.
+Comparação de independência temática com BAN-DS-05-0001 a BAN-DS-05-0005 em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json: os novos objetivos são diferentes de idempotência, ordem assíncrona, foco acessível, parâmetros OpenAPI e validade XSD cobrados anteriormente.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Questão aguardando auditoria independente; não há parecer ou aprovação emitido pelo elaborador.

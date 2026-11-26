@@ -1,0 +1,247 @@
+{
+  "elaborador": "09",
+  "responsavel": "/root/s2_elab_09",
+  "questoes": [
+    {
+      "id": "BAN-DS-09-0004",
+      "numero": 35,
+      "materia": "Redes de computadores",
+      "topico": "Endereçamento IPv6",
+      "versao": "v01",
+      "enunciado": "Duas LANs IPv6, L1 e L2, são enlaces distintos interligados somente por um roteador R, sem pontes ou túneis. H1 está em L1; H2 está em L2 e utiliza fe80::20 na interface desse enlace. Os endereços estão atribuídos e as interfaces estão operacionais.\n\nUma aplicação em H1 precisa selecionar o endereço IPv6 que identifica todos os nós de L1 e avaliar se R pode encaminhar de L1 para L2 um pacote cujo destino seja fe80::20. Conforme a arquitetura de endereçamento IPv6, o endereço para todos os nós e a conclusão sobre esse encaminhamento são, respectivamente,",
+      "alternativas": {
+        "A": "ff02::1, como broadcast; R não pode encaminhar esse pacote para L2.",
+        "B": "ff02::2, como multicast; R não pode encaminhar esse pacote para L2.",
+        "C": "ff02::1, como multicast; R pode encaminhar esse pacote para L2 se houver rota estática.",
+        "D": "ff02::1, como multicast; R não pode encaminhar esse pacote para L2.",
+        "E": "ff02::1, como multicast; R pode encaminhar esse pacote para L2 se o Hop Limit recebido for maior que 1."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende: IPv6 não possui endereços de broadcast. ff02::1 identifica um grupo multicast, embora a conclusão sobre o encaminhamento esteja correta.",
+        "B": "Não atende: ff02::2 identifica todos os roteadores do enlace, não todos os nós. A proibição de encaminhar o destino link-local para L2 está correta.",
+        "C": "Não atende: uma rota estática não amplia o escopo de fe80::20. Esse endereço identifica uma interface apenas no enlace correspondente, e R não pode encaminhar o pacote entre L1 e L2.",
+        "D": "Atende: ff02::1 é o grupo multicast de todos os nós com escopo de enlace. fe80::20 é link-local e não pode ser encaminhado de L1 para outro enlace.",
+        "E": "Não atende: Hop Limit maior que 1 não elimina os limites de escopo. Mesmo nessa condição, o destino link-local impede o encaminhamento de L1 para L2."
+      },
+      "resolucao": "ff02::1 representa todos os nós IPv6 do enlace, por multicast; IPv6 não define broadcast. fe80::20 é um endereço unicast link-local. L1 e L2 constituem zonas de enlace distintas, e roteadores não podem encaminhar entre enlaces pacotes com origem ou destino link-local. Uma rota estática ou um Hop Limit maior não altera essa restrição.",
+      "fontes": [
+        {
+          "titulo": "Conteúdo programático — Redes de computadores",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução."
+        },
+        {
+          "titulo": "RFC 4291 — IP Version 6 Addressing Architecture, IETF/RFC Editor, fevereiro de 2006",
+          "url": "https://www.rfc-editor.org/rfc/rfc4291.html",
+          "localizador": "Seção 2: inexistência de broadcast; seção 2.5.6: link-local e proibição de encaminhamento entre enlaces; seção 2.7.1: All Nodes e All Routers. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "RFC 4007 — IPv6 Scoped Address Architecture, IETF/RFC Editor, março de 2005",
+          "url": "https://www.rfc-editor.org/rfc/rfc4007.html",
+          "localizador": "Seções 4 e 5: escopo link-local e uma zona de enlace por link; seção 9: limites de zona no encaminhamento. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 56, página impressa e página da extração 13. Referência editorial; cópia secundária Qconcursos."
+        },
+        {
+          "titulo": "Metadados de origem do acervo FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registro trt4-2022-ti-a14-001: origem copia_secundaria, URL e arquivo."
+        }
+      ],
+      "autor": "/root/s2_elab_09",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: RFC 4291 e RFC 4007 navegadas para conferir os tipos de endereço, os grupos ff02::1 e ff02::2 e os limites entre enlaces.",
+        "Analítica: comparação individual das cinco opções; as permissões sugeridas por rota estática e Hop Limit não ultrapassam o escopo link-local.",
+        "Editorial: leitura efetiva da extração FCC TRT4/2022, questão 56, página 13; enunciado, topologia e opções são autorais.",
+        "Não houve execução de tráfego nem simulação de rede; a conclusão é documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 56,
+          "pagina": 13,
+          "origem": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente no mesmo diretório. Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "A referência combina, em cada opção, atributos de um elemento de protocolo. Aplicou-se a avaliação conjunta do endereço/grupo e da consequência para o encaminhamento, mantendo as opções na mesma ordem de informações e com um único comando.",
+          "limites": "Cópia hospedada no Qconcursos; não se afirma download da FCC nem assinatura de integridade oficial. Exemplo pontual de construção editorial, sem inferência de frequência e sem usar o gabarito antigo como prova técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-09-0005",
+      "numero": 36,
+      "materia": "Redes de computadores",
+      "topico": "DNS",
+      "versao": "v01",
+      "enunciado": "Em um ambiente de laboratório, o resolvedor DNS recursivo R não é autoritativo para a zona financeira.example. Em t = 0 s, R recebe do servidor autoritativo S o único registro A de api.financeira.example, com endereço 192.0.2.40 e TTL de 300 segundos, e o armazena em cache. Em t = 60 s, S altera esse registro para 192.0.2.80.\n\nR está configurado para reutilizar registros válidos do cache pelo TTL recebido. Não há limpeza do cache, redução de TTL, atualização antecipada ou outras consultas antes de t = 120 s. Nesse instante, um cliente sem cache local solicita a R a resolução recursiva do mesmo nome e tipo. Despreze os tempos de transmissão e processamento.\n\nO endereço do registro A devolvido por R, seu TTL restante e o valor do bit AA (Authoritative Answer) nessa resposta são, correta e respectivamente,",
+      "alternativas": {
+        "A": "192.0.2.80 — 300 segundos — 0.",
+        "B": "192.0.2.40 — 180 segundos — 0.",
+        "C": "192.0.2.40 — 180 segundos — 1.",
+        "D": "192.0.2.40 — 300 segundos — 0.",
+        "E": "192.0.2.80 — 180 segundos — 1."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende: obter 192.0.2.80 exigiria conhecer a alteração em S. Nas condições dadas, R reutiliza o registro ainda válido em cache; o pedido de recursão não obriga nova consulta ao autoritativo.",
+        "B": "Atende: R mantém 192.0.2.40 em cache; restam 300 − 120 = 180 segundos. Como R não é autoritativo para esse nome, a resposta tem AA igual a 0.",
+        "C": "Não atende: endereço e TTL estão corretos, mas AA não é herdado da origem do registro. AA igual a 1 indicaria autoridade do próprio servidor respondente, condição que R não possui.",
+        "D": "Não atende: responder com o cache não reinicia o prazo do registro. Dos 300 segundos recebidos, 120 já transcorreram; o TTL restante é 180 segundos.",
+        "E": "Não atende: a mudança em S não atualiza automaticamente o registro armazenado em R. Além de devolver o endereço novo indevidamente, a opção marca R como autoritativo por meio de AA igual a 1."
+      },
+      "resolucao": "O registro armazenado em t = 0 s vence em t = 300 s. Em t = 120 s, ele permanece válido e seu TTL restante é 180 segundos. A alteração em S não foi obtida por R, que reutiliza 192.0.2.40 conforme a configuração declarada. Recursão e autoridade são funções distintas: a resposta de cache de R tem AA = 0, pois R não é autoritativo para o nome consultado.",
+      "fontes": [
+        {
+          "titulo": "Conteúdo programático — Redes de computadores",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução."
+        },
+        {
+          "titulo": "RFC 1034 — Domain Names: Concepts and Facilities, IETF/RFC Editor, novembro de 1987",
+          "url": "https://www.rfc-editor.org/rfc/rfc1034.html",
+          "localizador": "Seção 4.3.1: recursão solicitada e disponível; seções 5.3.2 e 5.3.3: validade do cache e consulta inicial às informações locais. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "RFC 1035 — Domain Names: Implementation and Specification, IETF/RFC Editor, novembro de 1987",
+          "url": "https://www.rfc-editor.org/rfc/rfc1035.html",
+          "localizador": "Seção 3.2.1: intervalo de cache do RR; seção 4.1.1: AA indica autoridade do servidor respondente; seção 4.1.3: TTL em segundos. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "RFC 9499 — DNS Terminology, BCP 219, IETF/RFC Editor, março de 2024",
+          "url": "https://www.rfc-editor.org/rfc/rfc9499.html",
+          "localizador": "Seção 5: TTL máximo e possibilidade de redução/limpeza antecipada; seção 6: recursive resolver, recursive query e authoritative server. As condições do cenário afastam políticas diferentes de cache. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 55, página impressa e página da extração 13. Referência de cenário operacional e combinação ordenada de resultados; cópia secundária Qconcursos."
+        },
+        {
+          "titulo": "Metadados de origem do acervo FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registro trt4-2022-ti-a14-001: origem copia_secundaria, URL e arquivo."
+        }
+      ],
+      "autor": "/root/s2_elab_09",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: RFCs 1034, 1035 e 9499 efetivamente navegadas para recursão, cache, TTL e AA; o cenário explicita políticas que poderiam mudar o resultado.",
+        "Analítica: expiração em t = 300 s e TTL restante de 180 s em t = 120 s; confronto separado de endereço, TTL e autoridade nas cinco alternativas.",
+        "Editorial: leitura efetiva da extração FCC TRT4/2022, questão 55, página 13; aproveitou-se apenas a estrutura de cenário e combinação ordenada de informações.",
+        "Não houve consulta a um serviço DNS real nem execução de resolvedor; os valores são dados autorais de laboratório e a verificação é documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 55,
+          "pagina": 13,
+          "origem": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente no mesmo diretório. Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "A referência delimita uma situação operacional e exige a escolha de três informações na ordem do comando. Aplicou-se esse encadeamento a endereço, TTL e AA, com todas as alternativas contendo os mesmos três campos. Não se reproduziram o código, as lacunas ou os dados do exemplo.",
+          "limites": "Cópia hospedada no Qconcursos; não se afirma download da FCC nem assinatura de integridade oficial. Exemplo pontual de construção editorial, sem inferência de frequência e sem usar o gabarito antigo como prova técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-09-0006",
+      "numero": 37,
+      "materia": "Redes de computadores",
+      "topico": "IEEE 802.1X",
+      "versao": "v01",
+      "enunciado": "Um notebook N conecta-se a uma porta Ethernet do switch S. A autenticação IEEE 802.1X utiliza EAP e um servidor RADIUS R separado do switch. S repassa as mensagens EAP entre N e R e controla a autorização da porta conforme o resultado recebido de R. Considere essa implantação centralizada, sem autenticação local no switch.\n\nOs papéis IEEE 802.1X de N, S e R e o equipamento que atua como cliente RADIUS nesse processo são, correta e respectivamente,",
+      "alternativas": {
+        "A": "suplicante — servidor de autenticação — autenticador — S.",
+        "B": "autenticador — suplicante — servidor de autenticação — S.",
+        "C": "suplicante — autenticador — servidor de autenticação — N.",
+        "D": "suplicante — autenticador — servidor de autenticação — R.",
+        "E": "suplicante — autenticador — servidor de autenticação — S."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende: troca os papéis de S e R. S intermedeia a autenticação e controla a porta; R presta o serviço que verifica a identidade do suplicante.",
+        "B": "Não atende: inverte N e S. O notebook é a entidade autenticada, enquanto o switch exige a autenticação e aplica seu resultado ao acesso pela porta.",
+        "C": "Não atende: os três papéis IEEE 802.1X estão associados corretamente, mas N não é o cliente RADIUS nessa implantação. N troca EAPOL com S; S faz a comunicação RADIUS com R.",
+        "D": "Não atende: os três papéis IEEE 802.1X estão associados corretamente, mas R é o servidor RADIUS. O cliente RADIUS que lhe encaminha as solicitações é S.",
+        "E": "Atende: N é o suplicante, S é o autenticador e R é o servidor de autenticação. Na relação RADIUS estabelecida com R, S desempenha o papel de cliente."
+      },
+      "resolucao": "N busca acesso pela porta e participa como suplicante. S atua como autenticador IEEE 802.1X: intermedeia a troca EAP e controla a autorização da porta. R verifica a identidade no serviço de autenticação. No protocolo RADIUS, o switch S é cliente do servidor R. Ser chamado de cliente 802.1X não torna N o cliente RADIUS. Esses papéis decorrem da implantação centralizada descrita; não se afirma que IEEE 802.1X sempre exige um servidor RADIUS externo.",
+      "fontes": [
+        {
+          "titulo": "Conteúdo programático — Redes de computadores",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução."
+        },
+        {
+          "titulo": "RFC 3580 — IEEE 802.1X Remote Authentication Dial In User Service (RADIUS) Usage Guidelines, IETF/RFC Editor, setembro de 2003",
+          "url": "https://www.rfc-editor.org/rfc/rfc3580.html",
+          "localizador": "Seção 1: autenticadores como clientes AAA/RADIUS em implantação centralizada e caráter opcional do backend; seção 1.1: Authenticator, Authentication Server e Supplicant; seção 3.27: EAP-Message. Documento informativo, usado para os papéis conceituais, sem substituir norma IEEE. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "Cisco IOS — Configuring IEEE 802.1X Port-Based Authentication, documentação oficial, Release 15.0M",
+          "url": "https://www.cisco.com/en/US/docs/ios-xml/ios/sec_usr_8021x/configuration/15-0m/config-ieee-802x-pba.html",
+          "localizador": "Information About IEEE 802.1X Port-Based Authentication > IEEE 802.1X Authenticator > Device Roles: suplicante, autenticador, servidor e cliente RADIUS no dispositivo de acesso; encapsulamento EAPOL/RADIUS. Fonte usada para os papéis, sem pressupor comandos ou exceções de fabricante na questão. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 34, página impressa e página da extração 8. Referência de distinção de papéis em protocolo; cópia secundária Qconcursos."
+        },
+        {
+          "titulo": "FCC — TRF4, Analista Judiciário, Informática, 2007, Cargo I, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Questão 46, página impressa e página da extração 8. Referência histórica de identificação dos componentes de protocolo; origem primária no órgão."
+        },
+        {
+          "titulo": "Metadados de origem do acervo FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registros trt4-2022-ti-a14-001 e trf4-2007-informatica-i001: origens e URLs dos cadernos."
+        }
+      ],
+      "autor": "/root/s2_elab_09",
+      "dificuldadeEstimada": "fácil",
+      "verificacoes": [
+        "Documental: RFC 3580 e documentação oficial Cisco efetivamente navegadas para os três papéis IEEE 802.1X, intermediação EAP e relação cliente/servidor RADIUS.",
+        "Analítica: rastreamento N–S–R e associação de cada papel; distingue-se o cliente suplicante do cliente RADIUS sem pressupor RADIUS obrigatório em toda implantação.",
+        "Editorial: leitura efetiva de FCC TRT4/2022, questão 34, página 8, e FCC TRF4/2007, questão 46, página 8; alternativas autorais com associação ordenada de papéis.",
+        "Não houve autenticação real nem captura de pacotes; verificação documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 34,
+          "pagina": 8,
+          "origem": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente no mesmo diretório. Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "A referência diferencia funções e relações entre participantes de um protocolo. Aplicou-se essa distinção aos papéis IEEE 802.1X e à relação RADIUS, com distratores baseados na troca de responsabilidades, sem reutilizar o enunciado OAuth.",
+          "limites": "Cópia hospedada no Qconcursos; não se afirma download da FCC nem assinatura de integridade oficial. Exemplo pontual de construção editorial, sem inferência de frequência e sem usar o gabarito antigo como prova técnica atual."
+        },
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 46,
+          "pagina": 8,
+          "origem": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente no mesmo diretório. Obtido no próprio TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "A referência pede identificar componentes de protocolo por alternativas nominais. Aplicou-se a comparação de associações ordenadas de componentes e papéis, acrescentando um cenário autoral de acesso Ethernet.",
+          "limites": "Referência histórica de 2007 obtida no órgão. O exemplo sustenta somente a forma de associar funções/componentes; não prova incidência atual nem substitui documentação técnica."
+        }
+      ]
+    }
+  ]
+}

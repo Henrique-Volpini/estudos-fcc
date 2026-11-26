@@ -1,0 +1,36 @@
+ID: BAN-DS-07-0005
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar a interpretação tecnicamente adequada dos três sinais no cenário.
+
+RESOLUÇÃO
+A métrica revela a mudança no comportamento agregado das latências. O trace permite decompor uma requisição em operações e observar onde seu tempo se concentrou. O log registra o timeout e, pelo trace_id, acrescenta contexto à mesma execução. Essa correlação orienta a investigação, mas um trace amostrado não substitui a distribuição de latências nem o timeout identifica isoladamente a causa da demora.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O timeout registra o evento observado pela API, mas não demonstra sua causa. Demora na rede ou em outra dependência também pode participar do tempo da chamada; o trace não comprova um defeito de código no cadastro.
+B) Atende. A métrica sintetiza as latências da janela; os spans detalham operações daquela requisição; o log registra o timeout e seu trace_id permite correlacioná-lo a ela. Os sinais acrescentam perspectivas complementares.
+C) Não atende. A duração de uma requisição selecionada não fornece a distribuição das demais. As métricas do cenário abrangem todas as requisições; os traces são amostrados e detalham execuções específicas.
+D) Não atende. Um registro de log pode carregar TraceId e SpanId justamente para correlação com a execução. No cenário, o mesmo trace_id vincula o evento registrado à requisição investigada.
+E) Não atende. Uma requisição pode não ter sido exportada por causa da amostragem, mesmo sendo relevante. Sem uma política que declare essa garantia, não se pode pressupor retenção de todas as falhas.
+
+FONTES TÉCNICAS E EDITORIAIS CONSULTADAS
+- OpenTelemetry Documentation — Metrics. https://opentelemetry.io/docs/concepts/signals/metrics/. Localizador: Metrics, parágrafos iniciais; Metric Instruments, Histogram; Aggregation. Sustenta: Medições em tempo de execução, distribuição de latências e agregação em janelas temporais. Consulta: 2026-11-26.
+- OpenTelemetry Documentation — Traces. https://opentelemetry.io/docs/concepts/signals/traces/. Localizador: Context Propagation; Spans; Span Context. Sustenta: Operações representadas por spans, tempos inicial e final, relação entre serviços e identificação do trace. Consulta: 2026-11-26.
+- OpenTelemetry Documentation — Logs. https://opentelemetry.io/docs/concepts/signals/logs/. Localizador: Logs; OpenTelemetry logs for applications; Log Record, campos TraceId e SpanId. Sustenta: Registros de eventos e correlação de logs com uma requisição por identificadores de trace e span. Consulta: 2026-11-26.
+- OpenTelemetry Documentation — Sampling. https://opentelemetry.io/docs/concepts/sampling/. Localizador: Terminology; Why sampling?; Head Sampling, limitação quanto à seleção de todos os traces com erros. Sustenta: Traces podem não ser exportados; a amostragem não implica retenção de toda requisição com falha. Consulta: 2026-11-26.
+- FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 32, página 8. Sustenta: Formato editorial de contexto tecnológico seguido de cinco afirmações completas, com os limites registrados na referência de estilo. Consulta: 2026-11-26.
+- Metadados do acervo de referências FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador: fontes, id trt4-2022-ti-a14-001. Sustenta: Identificação da cópia secundária e dos arquivos locais consultados. Consulta: 2026-11-26.
+- Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: DEVOPS E DEVSECOPS: observabilidade (logs, métricas e traces); Observação final sobre legislação consultada.. Sustenta: Delimitação do tópico cobrado. Consulta: 2026-11-26.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf.
+- Característica observada e aplicação nesta questão autoral: Enunciado contextualizado com identificação de uma propriedade correta e cinco afirmações completas. Aplicação autoral: os dados do incidente delimitam a análise e as alternativas oferecem interpretações comparáveis. O conteúdo e os exemplos de telemetria são autorais.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, identificada em fontes.json; a extração textual local foi efetivamente lida. Não se afirma download da FCC nem integridade oficial. O exemplo sustenta apenas o formato observado, sem comprovar frequência editorial ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+Documental: documentação primária do OpenTelemetry navegada em 26/11/2026, incluindo spans, agregação, correlação de logs e amostragem; exemplo FCC lido na extração local. Analítica: diferenciação entre cobertura das métricas da janela e de um trace selecionado; análise de correlação sem inferir causa não demonstrada. Não houve coleta real de telemetria ou execução de software. Conferido que o objetivo não repete as questões anteriores do elaborador 07.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Auditorias posteriores ainda não realizadas; a proposta permanece PENDENTE_AUDITORIA.

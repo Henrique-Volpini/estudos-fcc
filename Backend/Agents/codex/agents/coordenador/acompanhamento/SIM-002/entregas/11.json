@@ -1,0 +1,289 @@
+{
+  "elaborador": "11",
+  "responsavel": "/root/s2_elab_11",
+  "questoes": [
+    {
+      "id": "BAN-DS-11-0005",
+      "numero": 40,
+      "materia": "Segurança da Informação",
+      "topico": "TLS: validação de certificado e identidade do servidor",
+      "versao": "v01",
+      "enunciado": "Um cliente HTTPS automatizado acessa https://api.banco.example e verifica a identidade do servidor conforme a RFC 9525, sem exceções configuradas para divergências de identidade. O certificado apresentado possui somente portal.banco.example como dNSName na extensão subjectAltName e contém api.banco.example no campo Common Name (CN). A cadeia até uma âncora de confiança, o período de validade e as demais verificações do certificado foram aprovados. Os dois nomes DNS resolvem para o mesmo endereço IP.\n\nNessas condições, o cliente deve",
+      "alternativas": {
+        "A": "prosseguir com a conexão, pois a cadeia confiável e o período de validade aprovado bastam para autenticar o nome do serviço solicitado.",
+        "B": "interromper a tentativa, pois o identificador apresentado na extensão subjectAltName não corresponde ao nome de referência do serviço solicitado.",
+        "C": "prosseguir com a conexão, pois a correspondência do Common Name permite substituir o nome divergente apresentado na extensão subjectAltName.",
+        "D": "interromper a tentativa, pois o certificado precisa conter o endereço IP em subjectAltName mesmo quando a URL identifica o servidor por nome DNS.",
+        "E": "prosseguir com a conexão, pois nomes DNS que resolvem para o mesmo endereço IP são equivalentes para a verificação da identidade do serviço."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. A validação do caminho de certificação e do período de validade não substitui a correspondência entre a identidade de referência e a identidade apresentada. O certificado pode passar nessas verificações e identificar outro serviço.",
+        "B": "Atende. A referência é api.banco.example, derivada da URL, enquanto o único DNS-ID apresentado é portal.banco.example. Não há correspondência. Como não existem exceções configuradas, o cliente automatizado deve interromper a tentativa com erro de certificado e registrar o erro.",
+        "C": "Não atende. A RFC 9525 não admite o Common Name como identificador da identidade do serviço. O CN coincidente não substitui o DNS-ID divergente de subjectAltName.",
+        "D": "Não atende. Quando o identificador de referência é um nome DNS, aplica-se a comparação de nomes DNS. A comparação com um iPAddress é exigida quando a referência é um endereço IP; resolver um nome para IP não transforma a referência da URL em IP-ID.",
+        "E": "Não atende. O endereço obtido por resolução DNS não torna os nomes intercambiáveis na verificação. A RFC 9525 exige a comparação com o identificador de referência construído independentemente do certificado; nomes intermediários da resolução não substituem essa referência."
+      },
+      "resolucao": "O nome de referência é api.banco.example. O certificado apresenta como DNS-ID somente portal.banco.example, que não corresponde a essa referência. A RFC 9525 exclui o CN dessa verificação e separa a correspondência de identidade das demais verificações de certificado. A igualdade do endereço IP obtido no DNS não corrige a divergência. Na ausência de exceções configuradas, a tentativa do cliente automatizado deve ser interrompida e o erro registrado. A alternativa B expressa essa decisão pelo motivo pertinente.",
+      "fontes": [
+        {
+          "titulo": "IETF — RFC 9525: Service Identity in TLS (novembro de 2023)",
+          "url": "https://www.rfc-editor.org/rfc/rfc9525.html",
+          "localizador": "Seções 1.3 e 1.4.1 (DNS-ID/SAN e exclusão do CN); 6, 6.1.1 (referência independente e resolução DNS), 6.3, 6.4 e 6.6 (comparação e falha); Apêndice A (remoção do CN-ID). Sustenta B, C, D e E e a distinção em A."
+        },
+        {
+          "titulo": "IETF — RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile (maio de 2008)",
+          "url": "https://www.rfc-editor.org/rfc/rfc5280.html",
+          "localizador": "Seção 6.1.3(a), itens 1–4, página impressa 80: verificações básicas de assinatura, validade temporal, revogação e emissor; contrastadas com a verificação de identidade da RFC 9525."
+        },
+        {
+          "titulo": "Conteúdo-base — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SEGURANÇA DA INFORMAÇÃO: certificados e assinaturas digitais; SSL/TLS."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 36",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 36, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato."
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Entrada trt4-2022-ti-a14-001, origem copia_secundaria."
+        }
+      ],
+      "autor": "/root/s2_elab_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consulta direta às RFCs 9525 e 5280 pelos URLs registrados, em 26/11/2026.",
+        "Analítica: conferidos o nome de referência, o único DNS-ID, a insuficiência do CN e do IP comum, e a distinção entre caminho confiável e identidade. As cinco alternativas foram resolvidas individualmente; somente uma atende às premissas.",
+        "Editorial: lida a questão 36, página 9, na extração local do caderno TRT4/2022; comparados comando conclusivo e alternativas técnicas. Não houve conexão TLS executada nem emissão ou validação experimental de certificados."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 36,
+          "pagina": 9,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "A questão 36 apresenta uma análise técnica e solicita a conclusão correta em cinco alternativas declarativas. Foi aplicada essa construção a um cenário autoral com dados explícitos de certificado e uma decisão justificada, sem reproduzir a questão de assinatura digital.",
+          "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-11-0006",
+      "numero": 41,
+      "materia": "Segurança da Informação",
+      "topico": "MFA: fatores de autenticação",
+      "versao": "v01",
+      "enunciado": "Uma equipe compara os processos de autenticação abaixo. Em cada processo, todos os elementos indicados são exigidos no mesmo evento de autenticação. Considere implementações adequadas, sem mecanismos alternativos de acesso, e segredos dos tokens independentes das senhas e dos PINs.\n\nI. Digitação de uma senha memorizada e de um PIN também memorizado, ambos verificados diretamente pelo servidor.\nII. Digitação de uma senha memorizada e de um código de uso único gerado por token físico, que não exige fator adicional para gerar o código.\nIII. Digitação de dois códigos de uso único, gerados por dois tokens físicos distintos, nenhum dos quais exige fator adicional para gerar seu código.\nIV. Uso de um dispositivo criptográfico com chave privada não exportável, cuja operação exige a entrada e a verificação de um PIN local em cada autenticação; o servidor verifica a resposta criptográfica produzida pelo dispositivo.\n\nA combinação de fatores de categorias distintas ocorre APENAS em",
+      "alternativas": {
+        "A": "I e II.",
+        "B": "I e III.",
+        "C": "II e III.",
+        "D": "II e IV.",
+        "E": "III e IV."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. II combina conhecimento e posse, mas I exige dois segredos memorizados, ambos da categoria conhecimento. Duas entradas não criam duas categorias de fatores.",
+        "B": "Não atende. I usa somente conhecimento e III usa somente posse, embora cada processo solicite duas evidências. Nenhum deles combina categorias distintas.",
+        "C": "Não atende. II é uma combinação de conhecimento e posse, mas os dois tokens de III pertencem à mesma categoria de posse. A independência dos dispositivos não altera a categoria dos fatores.",
+        "D": "Atende. II combina a senha conhecida com a posse do token; IV combina a posse do dispositivo com o conhecimento do PIN de ativação, obrigatório a cada evento. São os dois processos com categorias distintas.",
+        "E": "Não atende. IV combina posse e conhecimento, mas III utiliza dois autenticadores de posse sem outro fator de ativação. Além disso, a combinação omite II, que também satisfaz o comando."
+      },
+      "resolucao": "I: senha e PIN verificados no servidor são dois segredos da categoria conhecimento; não há combinação de categorias. II: a senha é conhecimento e o token OTP é posse, formando dois fatores distintos. III: dois tokens OTP sem fator de ativação são dois autenticadores da mesma categoria, posse. IV: o dispositivo criptográfico é um fator de posse; seu PIN local, exigido em cada autenticação, acrescenta conhecimento, constituindo um autenticador multifator. Portanto, somente II e IV atendem ao comando, conforme a alternativa D. A conclusão é sobre as categorias dos fatores; não certifica atendimento integral a um nível de garantia do NIST.",
+      "fontes": [
+        {
+          "titulo": "NIST SP 800-63B-4 — Authentication Assurance Levels",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b/aal/",
+          "localizador": "Seção 2.2 e 2.2.1: dois fatores distintos; autenticador multifator ou combinação de fatores separados; autenticador físico acompanhado de senha ou comparação biométrica. Sustenta a distinção entre quantidade de etapas e categorias."
+        },
+        {
+          "titulo": "NIST SP 800-63B-4 — Authenticator and Verifier Requirements",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+          "localizador": "Seções 3.1.1 (senha e PIN como conhecimento), 3.1.4 (OTP de fator único como posse) e 3.1.7–3.1.7.1 (autenticador criptográfico multifator e ativação local em cada evento). Sustenta a classificação de I, II, III e IV."
+        },
+        {
+          "titulo": "Conteúdo-base — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SEGURANÇA DA INFORMAÇÃO: controle de acesso: autenticação, autorização e auditoria; RBAC e MFA."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 38",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 38, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato."
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Entrada trt4-2022-ti-a14-001, origem copia_secundaria."
+        }
+      ],
+      "autor": "/root/s2_elab_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultadas as seções indicadas da NIST SP 800-63B-4, em 26/11/2026; essa fonte apoia o conceito de MFA, sem substituir edição normativa exigida no recorte de incidentes.",
+        "Analítica: classificados I–IV por conhecimento e posse; conferidas as cinco combinações. O fato de dois autenticadores serem independentes não os transforma em duas categorias. Somente uma alternativa reúne todos e somente os processos adequados.",
+        "Editorial: lida a questão 38, página 9, no caderno TRT4/2022 por extração local. Não houve execução de autenticadores, implementação de MFA ou aferição de nível de garantia."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 38,
+          "pagina": 9,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "A questão 38 organiza quatro itens numerados e pede uma combinação limitada aos itens pertinentes, com cinco opções. A estrutura foi aplicada a quatro processos autorais de autenticação; o comando usa APENAS e as alternativas trazem pares comparáveis, sem aproveitar o conteúdo normativo antigo da referência.",
+          "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-11-0007",
+      "numero": 42,
+      "materia": "Segurança da Informação",
+      "topico": "OWASP Top 10:2021: autorização de acesso a objetos",
+      "versao": "v01",
+      "enunciado": "Uma API disponibiliza comprovantes por meio de GET /comprovantes/{id}, com identificadores numéricos sequenciais. A política estabelece que cada cliente pode consultar somente os próprios comprovantes. A autenticação funciona corretamente, e o servidor valida o token recebido. Entretanto, um cliente autenticado consegue obter o comprovante de outro cliente alterando o identificador na URL.\n\nPara corrigir a falha de controle de acesso descrita, de acordo com a categoria A01 do OWASP Top 10:2021, a equipe deve",
+      "alternativas": {
+        "A": "verificar no servidor, em cada solicitação, se o comprovante pertence ao cliente autenticado, negando a consulta quando essa condição não for satisfeita.",
+        "B": "substituir os identificadores sequenciais por UUIDs aleatórios, mantendo a consulta baseada apenas no identificador informado e na validade do token recebido.",
+        "C": "exigir MFA na autenticação de todos os clientes, mantendo a consulta de comprovantes condicionada apenas à presença de uma sessão autenticada.",
+        "D": "filtrar no aplicativo os links de comprovantes pelo cliente autenticado, mantendo a API apta a consultar qualquer identificador recebido de uma sessão válida.",
+        "E": "validar a assinatura e a expiração do token em cada consulta, mantendo o identificador de comprovante recebido como único critério para selecionar o documento."
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Atende. A política exige autorização por objeto baseada na relação entre cliente e comprovante. Conferir a propriedade no servidor em cada solicitação e negar a consulta quando ela não se comprova aplica essa política ao objeto solicitado.",
+        "B": "Não atende. UUIDs podem dificultar a descoberta de identificadores, mas não implementam a autorização exigida. Se o identificador de um objeto alheio for conhecido, a API continuará a retorná-lo. A dificuldade de adivinhação não substitui a conferência de permissões.",
+        "C": "Não atende. MFA reforça a autenticação da identidade; não concede ao cliente permissão para acessar todos os comprovantes. A condição de estar autenticado continua insuficiente para decidir se aquele objeto pode ser consultado.",
+        "D": "Não atende. A filtragem no aplicativo pode orientar a interface, mas o cliente pode alterar a requisição ou enviá-la por outra ferramenta. O controle deve existir no servidor, onde o solicitante não consegue modificar a decisão.",
+        "E": "Não atende. Validar o token não demonstra que o comprovante selecionado pertence ao cliente autenticado. A alternativa preserva a falta de vínculo entre o objeto solicitado e a identidade autorizada a consultá-lo."
+      },
+      "resolucao": "A falha é uma referência direta a objeto sem a autorização correspondente: o identificador permite selecionar um comprovante alheio apesar da política de propriedade. Autenticação e validação de token já funcionam, mas não resolvem essa decisão. É necessário conferir, em código confiável no servidor e em cada solicitação, a relação entre o cliente autenticado e o comprovante, recusando o acesso quando essa relação não autoriza a consulta. A alternativa A atende. Identificadores imprevisíveis, MFA, filtragem da interface e nova validação do token não substituem essa verificação.",
+      "fontes": [
+        {
+          "titulo": "OWASP Top 10:2021 — A01:2021, Broken Access Control",
+          "url": "https://top10.owasp.org/2021/A01_2021-Broken_Access_Control/",
+          "localizador": "Description: alteração de URL e acesso ao objeto de outro usuário por seu identificador. How to Prevent: controle em código confiável no servidor, negação por padrão e imposição de propriedade dos registros. Example Attack Scenarios, Scenario #1. Preservada a edição de 2021."
+        },
+        {
+          "titulo": "OWASP Cheat Sheet Series — Authorization Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+          "localizador": "Introduction (autenticação versus autorização); Validate the Permissions on Every Request; Ensure Lookup IDs are Not Accessible Even When Guessed or Cannot Be Tampered With; Verify that Authorization Checks are Performed in the Right Location. Complementa a análise de B–E; não substitui o Top 10:2021 como classificação."
+        },
+        {
+          "titulo": "Conteúdo-base — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SEGURANÇA DA INFORMAÇÃO: segurança de APIs e aplicações web conforme OWASP Top 10:2021."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 37",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 37, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato."
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Entrada trt4-2022-ti-a14-001, origem copia_secundaria."
+        }
+      ],
+      "autor": "/root/s2_elab_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consulta à página específica A01 da edição OWASP Top 10:2021 e às seções pertinentes da folha de autorização, em 26/11/2026.",
+        "Analítica: aplicada a política somente-próprios ao objeto de cada requisição; conferidos os limites de UUID, MFA, interface e token. Apenas uma alternativa introduz a autorização por objeto no servidor.",
+        "Editorial: lida a questão 37, página 9, na extração local de TRT4/2022 e comparada sua estrutura de cenário técnico com objetivo. Não houve execução de API, exploração de sistema real nem teste de UUID ou de tokens."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 37,
+          "pagina": 9,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "A questão 37 situa um profissional em uma implantação, enuncia um objetivo e apresenta cinco alternativas técnicas. Foi aplicado o cenário funcional seguido de decisão técnica, com alternativas autorais de correção de uma API e sem copiar o padrão ou o vocabulário das alternativas originais.",
+          "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-11-0008",
+      "numero": 43,
+      "materia": "Segurança da Informação",
+      "topico": "NIST SP 800-61 Rev. 3: resposta e recuperação em incidente",
+      "versao": "v01",
+      "enunciado": "Após identificar ransomware em um servidor, uma equipe o isolou da rede para impedir a propagação do incidente. O plano autoriza recuperar o serviço enquanto outras atividades de resposta prosseguem. Há um backup anterior à detecção, ainda sem verificação de integridade.\n\nDe acordo com a NIST SP 800-61 Rev. 3, para recuperar o serviço, a equipe deve",
+      "alternativas": {
+        "A": "selecionar esse backup pela anterioridade à detecção, dispensando sua verificação, e conferir os ativos restaurados antes de recolocar o serviço em produção.",
+        "B": "verificar esse backup antes de usá-lo e dispensar a verificação dos ativos restaurados se a ferramenta informar que a cópia terminou sem erros.",
+        "C": "verificar esse backup antes de restaurar e, antes da produção, verificar os ativos restaurados e remediar as causas-raiz do incidente.",
+        "D": "verificar esse backup e os ativos restaurados e retomar a produção antes de corrigir a vulnerabilidade explorada, preservando-a para o diagnóstico posterior.",
+        "E": "manter o isolamento durante a restauração e usar a ausência de tráfego malicioso nesse intervalo como validação da integridade do backup e dos ativos."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. Ser anterior à detecção não comprova a integridade do backup: o comprometimento pode anteceder sua descoberta. RC.RP-03 determina a verificação dos ativos de restauração antes de usá-los, inclusive quanto a indicadores de comprometimento e corrupção.",
+        "B": "Não atende. O êxito operacional da cópia não substitui a verificação de integridade dos ativos restaurados. RC.RP-05 prevê conferir esses ativos e a adequação da restauração antes da produção.",
+        "C": "Atende. Reúne a verificação do backup antes de sua utilização, prevista em RC.RP-03, e a verificação dos ativos restaurados com remediação das causas-raiz antes da produção, prevista em RC.RP-05.",
+        "D": "Não atende. A vulnerabilidade explorada é uma causa a remediar antes do uso em produção. As verificações do backup e dos ativos não justificam recolocar em operação o sistema com o ponto de entrada preservado.",
+        "E": "Não atende. O isolamento é uma medida de contenção para limitar a expansão do incidente, conforme RS.MI-01; o silêncio de tráfego nesse estado não comprova integridade nem ausência de mecanismos persistentes nos dados ou sistemas restaurados."
+      },
+      "resolucao": "O isolamento contém a propagação, mas não comprova a integridade da recuperação. A Rev. 3 permite iniciar procedimentos de recuperação durante ou depois dos processos de resposta, conforme RC.RP-01.R1; por isso o trabalho coordenado descrito é compatível com a fonte. RC.RP-03 recomenda verificar os ativos de restauração antes do uso. RC.RP-05 recomenda conferir os ativos restaurados e a adequação da restauração, remediando as causas-raiz antes da produção. A alternativa C reúne essas medidas. A elaboração utiliza o perfil de resposta e recuperação da Rev. 3, sem impor o ciclo de quatro fases da Rev. 2.",
+      "fontes": [
+        {
+          "titulo": "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (abril de 2025)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf",
+          "localizador": "Seção 3.2, tabela 3: RS.MI-01.N1/C1, p.32 impressa (p.40 do PDF), contenção e isolamento; RS.MI-02.N1, p.33 impressa (p.41 do PDF), persistência e pontos de entrada; RC.RP-01.R1, RC.RP-03.R1 e RC.RP-05.R1/R2, p.34 impressa (p.42 do PDF), recuperação durante/depois da resposta, integridade antes do uso e causas-raiz antes da produção. Paginação do PDF contada a partir de 1."
+        },
+        {
+          "titulo": "Conteúdo-base — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SEGURANÇA DA INFORMAÇÃO: gestão de incidentes conforme ABNT NBR ISO/IEC 27035-1:2023 e NIST SP 800-61 Rev. 3."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001 — questão 39",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 39, página impressa 9; extração local marcada === PAGINA 9 ===. Cópia secundária Qconcursos; usada somente para formato."
+        },
+        {
+          "titulo": "Metadados do acervo de referências FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Entrada trt4-2022-ti-a14-001, origem copia_secundaria."
+        }
+      ],
+      "autor": "/root/s2_elab_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultada diretamente a publicação final de abril de 2025, NIST SP 800-61r3, seção 3.2, tabela 3, com localizadores e páginas registrados, em 26/11/2026.",
+        "Analítica: distinguidas contenção, verificação do backup, verificação dos ativos restaurados e remediação antes da produção. Resolvidas as cinco alternativas; apenas uma reúne as medidas sem dispensar uma verificação necessária.",
+        "Editorial: lida a questão 39, página 9, na extração local de TRT4/2022. O exemplo usa outra norma e orienta somente a atribuição explícita e a redação de alternativas; sua resposta normativa não foi reaproveitada. Não houve simulação de ransomware, restauração executada nem inspeção de backup."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 39,
+          "pagina": 9,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "caracteristicaAplicada": "A questão 39 atribui expressamente a cobrança a uma publicação e propõe cinco alternativas do mesmo domínio técnico. A atribuição normativa foi aplicada à edição exata NIST SP 800-61 Rev. 3, com cenário autoral de recuperação e cinco condutas comparáveis; não se reproduziu o conteúdo da norma antiga do exemplo.",
+          "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+        }
+      ]
+    }
+  ]
+}

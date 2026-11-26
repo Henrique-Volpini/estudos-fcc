@@ -1,0 +1,339 @@
+{
+  "elaborador": "06",
+  "responsavel": "/root/s2_elab_06",
+  "questoes": [
+    {
+      "id": "BAN-DS-06-0005",
+      "numero": 26,
+      "materia": "Arquitetura de sistemas",
+      "topico": "MVC: responsabilidades de modelo, visão e controlador",
+      "versao": "v01",
+      "enunciado": "Uma aplicação web utiliza MVC com renderização de páginas no servidor. Na funcionalidade de simulação de empréstimos, foram identificadas as seguintes responsabilidades:\n\nI. Receber a solicitação, acionar a simulação e selecionar a tela de resposta.\nII. Aplicar a regra de cálculo das parcelas, que também será utilizada por outras interfaces da aplicação.\nIII. Apresentar as parcelas na página, definindo o alinhamento e a formatação visual dos valores.\n\nPara preservar a separação de responsabilidades do padrão, I, II e III devem ser atribuídas, respectivamente, a",
+      "alternativas": {
+        "A": "modelo, controlador e visão.",
+        "B": "controlador, visão e modelo.",
+        "C": "visão, modelo e controlador.",
+        "D": "controlador, modelo e visão.",
+        "E": "modelo, visão e controlador."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende: a recepção da interação e a escolha da tela em I são do controlador, enquanto a regra de negócio em II pertence ao modelo; III está corretamente associada à visão.",
+        "B": "Não atende: I está bem associada ao controlador, mas II e III estão trocadas; a visão apresenta valores e o modelo contém a regra de cálculo.",
+        "C": "Não atende: II está bem associada ao modelo, mas I não é apresentação e III não é coordenação da requisição; cabem, respectivamente, ao controlador e à visão.",
+        "D": "Atende: o controlador coordena a solicitação e escolhe a tela; o modelo executa a regra das parcelas; a visão cuida da apresentação visual dos resultados.",
+        "E": "Não atende: desloca a coordenação de I para o modelo, a regra de II para a visão e a apresentação de III para o controlador, confundindo as três responsabilidades."
+      },
+      "resolucao": "I envolve interação do usuário e coordenação da resposta: controlador. II é uma regra de negócio, independente de como as parcelas serão exibidas: modelo. III define a apresentação dos resultados: visão. A regra reutilizada por outras interfaces permanece no modelo; os detalhes visuais ficam na visão. A sequência é controlador, modelo e visão.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Overview of ASP.NET Core MVC — documentação ASP.NET Core 10.0",
+          "url": "https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0",
+          "localizador": "MVC pattern; Model Responsibilities; View Responsibilities; Controller Responsibilities. Consulta em 26/11/2026. Sustenta a separação entre regra de negócio, apresentação e coordenação."
+        },
+        {
+          "titulo": "Spring Framework — Annotated Controllers — documentação 7.1.0 exibida na consulta",
+          "url": "https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller.html",
+          "localizador": "Annotated Controllers, parágrafos iniciais e exemplo HelloController: mapeamento da requisição, disponibilização de dados no Model e retorno do nome da visão. Consulta em 26/11/2026; ilustra o fluxo, sem equiparar o objeto Model do framework a todo o domínio."
+        },
+        {
+          "titulo": "Programa-base — Arquitetura de sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 50, página 11, na extração local com marcadores de página; uso editorial."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 33, página 8, na extração local com marcadores de página; uso editorial."
+        }
+      ],
+      "verificacoes": "Documental: lidas as seções de responsabilidades no MVC da Microsoft e o exemplo de controlador do Spring. Analítica: conferidas as três responsabilidades e as cinco permutações; apenas uma preserva todas as associações. Não houve execução de aplicação. Editorial: lidas Q50/p.11 e Q33/p.8 do TRT4/2022 no acervo local. Independência: comparadas as quatro questões anteriores do elaborador 06 em SIM-002/questoes-anteriores.json; nenhuma cobrava MVC.",
+      "autor": "/root/s2_elab_06",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 50,
+          "pagina": 11,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Comando direto que associa uma responsabilidade técnica a um componente do MVC, seguido de cinco opções.",
+          "caracteristicaAplicada": "A questão autoral diferencia três responsabilidades em uma funcionalidade própria; não reproduz a pergunta sobre SQL da referência.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Cenário de uma atividade do Analista com correspondência solicitada pela expressão respectivamente e alternativas na mesma ordem.",
+          "caracteristicaAplicada": "O comando fixa a ordem I, II e III, e as cinco opções usam trincas de componentes com redação paralela.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-06-0006",
+      "numero": 27,
+      "materia": "Arquitetura de sistemas",
+      "topico": "SOA: contratos e desacoplamento de serviços",
+      "versao": "v01",
+      "enunciado": "Em uma arquitetura orientada a serviços, sistemas independentes consomem um serviço de consulta cadastral. O contrato descreve o campo situacao como a indicação de existência de restrição cadastral. A equipe provedora pretende substituir a linguagem e o banco de dados da implementação sem exigir alterações dos consumidores. Também propõe que situacao passe a indicar aptidão para contratar um produto, mantendo o nome e o tipo do campo e o endereço do serviço. Na avaliação dessas mudanças, a equipe deve",
+      "alternativas": {
+        "A": "preservar a interação contratada na substituição interna e avaliar a mudança de significado de situacao como alteração contratual, verificando seu impacto sobre os consumidores.",
+        "B": "preservar o nome e o tipo de situacao na substituição interna e considerar seu novo significado compatível, pois a estrutura das mensagens continuará sendo a mesma.",
+        "C": "publicar as tabelas do novo banco como parte da interação contratada e orientar os consumidores a consultá-las, transferindo a interpretação de situacao para cada sistema consumidor.",
+        "D": "exigir que os consumidores adotem a linguagem da nova implementação e manter a descrição das mensagens, obtendo assim independência em relação à implementação interna do serviço.",
+        "E": "manter o endereço do serviço e atualizar a implementação e o significado de situacao, considerando o contrato preservado enquanto os consumidores conseguirem estabelecer conexão com esse endereço."
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Atende: trocar a implementação pode preservar o serviço observável. Já mudar a informação que situacao representa altera o acordo semântico e exige análise de compatibilidade.",
+        "B": "Não atende: mensagens com os mesmos nomes e tipos podem transmitir significados diferentes; compatibilidade estrutural não assegura a preservação do significado cadastral contratado.",
+        "C": "Não atende: vincular consumidores às tabelas internas cria dependência do armazenamento que se pretende substituir; interpretar dados por conta própria não preserva a interação contratada.",
+        "D": "Não atende: consumidores não precisam adotar a linguagem do provedor para interagir pelo contrato. Essa exigência introduz uma dependência tecnológica sem resolver a mudança semântica.",
+        "E": "Não atende: alcançar o endereço garante apenas uma condição de comunicação; a conectividade não conserva o significado de situacao nem os efeitos esperados da consulta."
+      },
+      "resolucao": "O contrato estabelece o que é trocado e o significado da interação. A troca de linguagem ou armazenamento pode ficar oculta aos consumidores se a interação acordada for preservada. Alterar situacao de restrição cadastral para aptidão contratual muda a informação fornecida. A manutenção de nome, tipo e endereço não elimina esse impacto: é necessário avaliar a compatibilidade da mudança contratual.",
+      "fontes": [
+        {
+          "titulo": "OASIS — Reference Model for Service Oriented Architecture 1.0 — OASIS Standard, 12/10/2006",
+          "url": "https://docs.oasis-open.org/soa-rm/v1.0/soa-rm.pdf",
+          "localizador": "Seção 3.1 Service, pp.12–13; seção 3.3.1 Service description, pp.20–22; seção 3.3.1.4 Service Interface, p.22; seção 3.3.2.2 Service Contract, p.24. Consulta em 26/11/2026. Sustenta ocultação da implementação e a descrição da interação, de seus efeitos e dos acordos entre participantes."
+        },
+        {
+          "titulo": "W3C — Web Services Architecture — Working Group Note de 11/02/2004",
+          "url": "https://www.w3.org/TR/ws-arch/",
+          "localizador": "Seções 1.4.1 Agents and Services, 1.4.3 Service Description e 1.4.4 Semantics. Consulta em 26/11/2026. Distingue implementação concreta, mecânica das mensagens e significado/propósito do contrato. É uma nota histórica sobre Web Services, usada para esses conceitos, sem impor SOAP ou WSDL a toda SOA."
+        },
+        {
+          "titulo": "Programa-base — Arquitetura de sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 32, página 8, na extração local com marcadores de página; uso editorial."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 33, página 8, na extração local com marcadores de página; uso editorial."
+        }
+      ],
+      "verificacoes": "Documental: consultados o modelo de referência OASIS e as seções indicadas da nota W3C, distinguindo contrato, descrição de interface e implementação. Analítica: separadas mudanças internas e alteração semântica observável; examinadas as cinco decisões propostas. Não houve execução de serviço. Editorial: lidas Q32 e Q33/p.8 do TRT4/2022 no acervo local. Independência: as questões anteriores do elaborador 06 não cobravam contratos SOA.",
+      "autor": "/root/s2_elab_06",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Apresentação de um contexto de microsserviços e comando completado por afirmações técnicas sobre o recurso descrito.",
+          "caracteristicaAplicada": "O cenário de serviço cadastral conduz a cinco decisões técnicas comparáveis, cada uma distinguindo preservação do contrato e dependências indevidas.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Cenário operacional protagonizado por um Analista, com detalhes necessários à escolha de uma solução.",
+          "caracteristicaAplicada": "A troca de implementação e o significado concreto do campo são dados autorais usados para avaliar o contrato; não são reproduzidas as anotações cobradas na prova.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-06-0007",
+      "numero": 28,
+      "materia": "Arquitetura de sistemas",
+      "topico": "API Gateway e Service Discovery: responsabilidades distintas",
+      "versao": "v01",
+      "enunciado": "Em um ambiente de microsserviços, a equipe definiu duas funções:\n\nI. Oferecer um ponto de entrada para clientes externos, validar suas credenciais e encaminhar as requisições aos serviços correspondentes.\nII. Permitir que componentes localizem, pelo nome lógico de um serviço, os endereços das instâncias registradas e saudáveis, que mudam durante a expansão e a substituição de instâncias.\n\nConsiderando API Gateway e Service Discovery, a atribuição adequada dessas funções e a relação entre os mecanismos são:",
+      "alternativas": {
+        "A": "I cabe ao Service Discovery; II cabe ao API Gateway, que mantém o catálogo de instâncias para que a descoberta possa autenticar as solicitações externas.",
+        "B": "I cabe ao API Gateway; II cabe ao Service Discovery, que recebe as requisições de negócio dos clientes externos para aplicar a autenticação antes do gateway.",
+        "C": "I cabe ao API Gateway; II cabe ao Service Discovery, sendo necessário atualizar os clientes externos sempre que o endereço de uma instância do serviço for alterado.",
+        "D": "I cabe ao Service Discovery; II cabe ao API Gateway, sendo a localização dinâmica de instâncias uma consequência da validação de credenciais dos clientes externos.",
+        "E": "I cabe ao API Gateway; II cabe ao Service Discovery, que pode ser consultado pelo gateway para localizar instâncias sem expor seus endereços aos clientes externos."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende: inverte as funções. O catálogo de instâncias apoia a descoberta; a autenticação e o encaminhamento de entrada descritos em I pertencem ao gateway configurado para isso.",
+        "B": "Não atende: embora associe os nomes a I e II, atribui à descoberta o recebimento das requisições de negócio para autenticar clientes, confundindo-a com o ponto de entrada.",
+        "C": "Não atende: a consulta à descoberta pelo gateway permite resolver mudanças de instância no lado dos serviços; não é necessário atualizar o cliente externo a cada troca de endereço interno.",
+        "D": "Não atende: inverte as funções e confunde credenciais com localização; autenticar um cliente não fornece, por si só, os endereços atuais das instâncias saudáveis.",
+        "E": "Atende: o gateway executa a função de entrada e encaminhamento de I, enquanto a descoberta resolve a localização de II; a consulta ao registro pelo gateway permite a cooperação entre ambos."
+      },
+      "resolucao": "I descreve um API Gateway configurado para autenticação e encaminhamento. II descreve Service Discovery apoiado em registro e informações de saúde das instâncias. São funções distintas que podem cooperar: o gateway usa o nome do serviço para obter destinos internos por descoberta, mantendo seu ponto de entrada para os clientes externos. Não se exige que toda implementação de gateway ofereça nativamente todas essas funções.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Use API gateways in microservices — Azure Architecture Center",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway",
+          "localizador": "What is an API gateway?; How to use an API gateway, itens Gateway routing e Gateway offloading; Choose an API gateway technology, suporte às funções exigidas. Consulta em 26/11/2026."
+        },
+        {
+          "titulo": "HashiCorp Consul — Discover services overview",
+          "url": "https://developer.hashicorp.com/consul/docs/discover",
+          "localizador": "Introduction e Static lookups: catálogo registra endereços, incorpora resultados de health checks e permite localizar instâncias por DNS. Consulta em 26/11/2026."
+        },
+        {
+          "titulo": "Spring Cloud Gateway — DiscoveryClient Route Definition Locator — documentação 5.1.0 exibida na consulta",
+          "url": "https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway-server-webflux/the-discoveryclient-route-definition-locator.html",
+          "localizador": "Parágrafos iniciais e Configuring Predicates and Filters for DiscoveryClient Routes: gateway cria rotas a partir de serviços registrados e encaminha por nome lógico. Consulta em 26/11/2026; exemplo de integração, sem exigir Spring no cenário."
+        },
+        {
+          "titulo": "Programa-base — Arquitetura de sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 32, página 8, na extração local com marcadores de página; uso editorial."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 33, página 8, na extração local com marcadores de página; uso editorial."
+        }
+      ],
+      "verificacoes": "Documental: conferidos ponto de entrada e encaminhamento na Microsoft, registro/endereço/saúde na HashiCorp e integração gateway-descoberta na documentação Spring. Analítica: contrastadas as atribuições e as afirmações adicionais das cinco alternativas, sem presumir que as funções sejam mutuamente exclusivas em um mesmo produto. Não houve execução de infraestrutura. Editorial: lidas Q32 e Q33/p.8 do TRT4/2022 no acervo local. Independência: a questão anterior sobre resiliência cobrava timeout, retry e circuit breaker, com objetivo distinto.",
+      "autor": "/root/s2_elab_06",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Cenário breve sobre um ambiente de microsserviços, seguido de alternativas com afirmações técnicas sobre funções de um componente.",
+          "caracteristicaAplicada": "As opções avaliam a atribuição das funções e uma relação operacional entre os dois mecanismos, sem cobrar comandos de um fornecedor.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Correspondência entre elementos de um cenário, com ordem fixada e alternativas comparáveis.",
+          "caracteristicaAplicada": "As cinco opções mantêm a sequência I/II e acrescentam uma consequência a ser avaliada, exigindo conferir a alternativa por inteiro.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-06-0008",
+      "numero": 29,
+      "materia": "Arquitetura de sistemas",
+      "topico": "Integração legada: migração incremental pelo padrão Strangler Fig",
+      "versao": "v01",
+      "enunciado": "Uma instituição vai modernizar um sistema legado que atende consultas, alterações cadastrais e liquidações. A nova implementação das consultas já está pronta e deve entrar em uso na primeira etapa; as outras funcionalidades continuarão no legado. As integrações e os dados necessários à coexistência foram preparados, e é possível interceptar as requisições. A instituição quer preservar o endereço de acesso dos clientes durante as etapas e retirar o legado ao final. Para aplicar o padrão Strangler Fig nessas condições, a equipe deve",
+      "alternativas": {
+        "A": "publicar endereços distintos para o legado e para cada nova funcionalidade, transferindo aos clientes a escolha do destino e a atualização desse endereço a cada etapa da modernização.",
+        "B": "introduzir uma fachada que encaminhe consultas à nova implementação e demais operações ao legado, ampliando a substituição por etapas e retirando o legado quando não restarem funcionalidades ou dependências dele.",
+        "C": "manter todas as requisições no legado até concluir as novas versões de consultas, alterações cadastrais e liquidações, realizando então a transferência conjunta das funcionalidades e a retirada da implementação anterior.",
+        "D": "introduzir uma fachada que preserve o endereço dos clientes e encaminhe todas as operações ao legado, considerando concluída a substituição das consultas quando a nova fachada estiver disponível para acesso.",
+        "E": "encaminhar uma porcentagem crescente de todas as requisições à nova implementação, independentemente da funcionalidade solicitada, e retirar o legado quando o sistema moderno receber a maioria do tráfego."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende: exige que os clientes conheçam e alterem os destinos, violando a preservação do endereço de acesso requerida no cenário; a fachada pode ocultar essa distribuição temporária.",
+        "B": "Atende: põe a consulta nova em uso e mantém as funções não migradas operantes no legado, transferindo responsabilidades gradualmente até eliminar o que impede sua retirada.",
+        "C": "Não atende: adia a entrada em uso das consultas até uma transferência conjunta, contrariando a primeira etapa exigida e o caráter incremental solicitado.",
+        "D": "Não atende: a fachada pode ser uma etapa preparatória, mas manter todas as operações no legado não coloca a consulta nova em uso nem substitui essa responsabilidade.",
+        "E": "Não atende: a nova implementação só atende consultas nesta etapa. Dividir indiscriminadamente o tráfego pode enviar operações ainda não migradas a um destino que não as atende; receber a maioria do tráfego não comprova que o legado possa ser retirado."
+      },
+      "resolucao": "A implementação moderna deve assumir inicialmente as consultas. Uma fachada no endereço preservado pode selecionar o destino por funcionalidade: consultas para o novo sistema e demais operações para o legado. Outras responsabilidades são migradas em etapas. A retirada do legado depende de eliminar as funcionalidades e dependências ainda atendidas por ele; disponibilizar uma fachada ou migrar apenas consultas não é suficiente.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Strangler Fig pattern — Azure Architecture Center",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig",
+          "localizador": "Solution, etapas 1 a 3; Problems and considerations, dependências entre sistemas; When to use this pattern. Consulta em 26/11/2026. Sustenta interceptação por fachada, coexistência, transferência gradual e condição de retirada do legado."
+        },
+        {
+          "titulo": "AWS Prescriptive Guidance — Strangler fig pattern",
+          "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html",
+          "localizador": "Intent; Motivation, comparação com big bang; Issues and considerations, Proxy layer failure e Anti-corruption layer. Consulta em 26/11/2026. Corrobora a substituição incremental e a necessidade de tratar dependências e o papel temporário do proxy."
+        },
+        {
+          "titulo": "Programa-base — Arquitetura de sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco ARQUITETURA DE SISTEMAS; item exato transcrito em Tópico do conteúdo no controle da questão. Observação final sobre o marco temporal da legislação também lida; estas questões não cobram legislação."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 48, página 11, na extração local com marcadores de página; uso editorial."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 32, página 8, na extração local com marcadores de página; uso editorial."
+        }
+      ],
+      "verificacoes": "Documental: consultadas as orientações Microsoft e AWS sobre migração incremental, fachada e dependências. Analítica: conferidas a entrada da consulta na primeira etapa, a continuidade das funções não migradas, a estabilidade do endereço e a condição para retirada do legado em cada alternativa. O cenário declara integrações e dados preparados, sem presumir que a fachada resolva consistência de dados. Não houve execução de migração. Editorial: lidas Q48/p.11 e Q32/p.8 do TRT4/2022 no acervo local. Independência: as questões anteriores do elaborador 06 não cobravam migração incremental do legado.",
+      "autor": "/root/s2_elab_06",
+      "dificuldadeEstimada": "média",
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 48,
+          "pagina": 11,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Enunciado que reúne características de um processo em contexto de atuação de uma Analista e exige selecionar a abordagem compatível.",
+          "caracteristicaAplicada": "O cenário reúne restrições de uma migração; as opções são ações de modernização comparáveis que devem atender conjuntamente a essas restrições. Não são reproduzidas as etapas do teste de integração da referência.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem e arquivo PDF identificados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Contexto técnico definido seguido de cinco afirmações sobre comportamento e limitações de um mecanismo.",
+          "caracteristicaAplicada": "As alternativas descrevem estratégias concretas e suas consequências, sem transformar a escolha arquitetural em preferência universal.",
+          "limites": "Referência editorial de uma cópia secundária, não obtida diretamente da FCC ou do órgão. O hash registrado no acervo não é uma assinatura de integridade oficial. O exemplo não demonstra frequência de formato na banca e não substitui as fontes técnicas atuais."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+ID: BAN-DS-05-0006
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Determinar, na ordem das três larguras, os pares quantidade de colunas e valor de gap.
+
+RESOLUÇÃO
+min-width estabelece um limite mínimo inclusivo. Em 580px vale apenas a regra básica: (1, 8px). Em 760px aplica-se a consulta de 600px: (2, 8px). Em 1100px aplicam-se as duas consultas. Com mesma origem, importância e especificidade, a declaração posterior de grid-template-columns prevalece: duas colunas. Como a última regra não declara gap, continua aplicável o gap de 24px da consulta de 960px. O terceiro par é (2, 24px).
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: em 1100px ambas as consultas se aplicam, e a declaração posterior de duas colunas prevalece sobre a de três colunas.
+B) Não atende: em 760px a condição min-width: 960px é falsa; não se aplicam suas três colunas nem seu gap de 24px.
+C) Não atende: em 760px somente a consulta de 600px se aplica, e ela não altera o gap básico de 8px.
+D) Atende: os resultados são uma coluna e 8px, duas colunas e 8px, duas colunas e 24px.
+E) Não atende: em 580px nenhuma das duas consultas se aplica; permanece uma coluna.
+
+FONTES TÉCNICAS CONSULTADAS
+- W3C — Media Queries Level 3 — Recomendação de 21/05/2024
+  URL: https://www.w3.org/TR/mediaqueries-3/
+  Localizador e fundamentação: Seções 2, Media Queries, e 4.1, width: condições de aplicação e prefixo min-.
+- W3C — CSS Cascading and Inheritance Level 3 — Recomendação de 11/02/2021
+  URL: https://www.w3.org/TR/css-cascade-3/#cascade-sort
+  Localizador e fundamentação: Seção 6.1, Cascade Sorting Order, especialmente Specificity e Order of Appearance: desempate pela ordem de declaração, por propriedade.
+- MDN — Using media queries
+  URL: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using
+  Localizador e fundamentação: Trecho sobre range features e prefixos inclusivos min-/max-; consulta complementar em 26/11/2026.
+- MDN — Specificity
+  URL: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Specificity
+  Localizador e fundamentação: Seção Three-column comparison e desempate entre seletores de igual especificidade; consulta complementar em 26/11/2026.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Cenário técnico delimitado, seguido de comando com correspondência respectiva entre valores e alternativas paralelas.
+  Aplicação nesta questão autoral: Os três pares têm ordem explicitamente fixada pelo comando e a mesma estrutura nas cinco opções.
+  Limites da referência: A cópia não foi obtida da FCC nem do órgão. O registro de hash local não constitui assinatura oficial. A referência usa anotações de API, não regras CSS. O exemplo sustenta apenas as características descritas, sem demonstrar frequência na banca.
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 44; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Comando direto sobre formatação de uma página e cinco alternativas de código comparáveis.
+  Aplicação nesta questão autoral: O CSS completo acompanha um comando objetivo sobre seus efeitos.
+  Limites da referência: A cópia não foi obtida da FCC nem do órgão. O registro de hash local não constitui assinatura oficial. A questão real trata de jQuery e não verifica media queries ou cascata. O exemplo sustenta apenas as características descritas, sem demonstrar frequência na banca.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental das condições min-width e da cascata; análise manual de cada propriedade nas três larguras. O CSS não foi executado em navegador. Comparação editorial com as questões FCC identificadas, sem afirmar aprovação de auditoria.
+Comparação de independência temática com BAN-DS-05-0001 a BAN-DS-05-0005 em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json: os novos objetivos são diferentes de idempotência, ordem assíncrona, foco acessível, parâmetros OpenAPI e validade XSD cobrados anteriormente.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Questão aguardando auditoria independente; não há parecer ou aprovação emitido pelo elaborador.

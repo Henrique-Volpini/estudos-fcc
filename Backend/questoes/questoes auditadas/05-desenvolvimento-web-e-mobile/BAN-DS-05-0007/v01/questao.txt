@@ -1,0 +1,26 @@
+ID: BAN-DS-05-0007
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: TypeScript: uniões e análise de fluxo
+
+ENUNCIADO
+Considere o código a seguir, em TypeScript 5.9 com strict habilitado.
+
+type Sucesso = { estado: "ok"; valor: number };
+type Falha = { estado: "erro"; mensagem: string };
+type Resposta = Sucesso | Falha;
+
+function apresentar(r: Resposta): string {
+  if (r.estado === "erro") {
+    return r.mensagem;          // ponto I
+  }
+  return r.valor.toFixed(2);    // ponto II
+}
+
+Os comentários I e II indicam os respectivos acessos a r nessas instruções. Pela análise de fluxo de controle, os tipos de r nesses pontos são, respectivamente,
+
+A) Falha e Sucesso.
+B) Resposta e Sucesso.
+C) Falha e Resposta.
+D) Sucesso e Falha.
+E) Resposta e never.

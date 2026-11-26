@@ -1,0 +1,15 @@
+ID: BAN-DS-09-0006
+Versão: v01
+Matéria: Redes de computadores
+Tópico: IEEE 802.1X
+
+ENUNCIADO
+Um notebook N conecta-se a uma porta Ethernet do switch S. A autenticação IEEE 802.1X utiliza EAP e um servidor RADIUS R separado do switch. S repassa as mensagens EAP entre N e R e controla a autorização da porta conforme o resultado recebido de R. Considere essa implantação centralizada, sem autenticação local no switch.
+
+Os papéis IEEE 802.1X de N, S e R e o equipamento que atua como cliente RADIUS nesse processo são, correta e respectivamente,
+
+A) suplicante — servidor de autenticação — autenticador — S.
+B) autenticador — suplicante — servidor de autenticação — S.
+C) suplicante — autenticador — servidor de autenticação — N.
+D) suplicante — autenticador — servidor de autenticação — R.
+E) suplicante — autenticador — servidor de autenticação — S.

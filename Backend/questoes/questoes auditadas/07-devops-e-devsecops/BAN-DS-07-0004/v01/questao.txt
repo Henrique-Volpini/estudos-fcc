@@ -1,0 +1,15 @@
+ID: BAN-DS-07-0004
+Versão: v01
+Matéria: DevOps e DevSecOps
+Tópico: Blue/green deployment: troca de tráfego e rollback
+
+ENUNCIADO
+Uma equipe utiliza blue/green deployment. O ambiente blue mantém a versão 1, operacional e com capacidade para toda a carga, enquanto o green recebeu a versão 2 e passou a atender o tráfego de produção. Ambos usam o mesmo banco de dados e o mesmo repositório externo de sessões, cujo formato é compatível com ambas as versões. A migração de esquema foi apenas aditiva e sua compatibilidade com a versão 1 foi validada. As gravações feitas pela versão 2 são válidas e também podem ser lidas e atualizadas pela versão 1.
+
+Foi detectada uma regressão da versão 2 restrita à formatação das respostas, sem corrupção de dados. Não há requisições em andamento. Para reverter rapidamente a aplicação, aproveitando os ambientes existentes e preservando as gravações já confirmadas, a equipe deve
+
+A) redirecionar o tráfego ao blue e restaurar o banco a um snapshot anterior à ativação do green, para realinhar os dados à versão 1.
+B) manter o tráfego no green e reiniciar suas instâncias com a versão 2, para refazer a associação da aplicação ao banco compartilhado.
+C) redirecionar o tráfego ao blue e conservar o banco em seu estado atual, mantendo o esquema compatível durante a janela de rollback.
+D) redirecionar o tráfego ao blue e remover os campos ainda utilizados pela versão 1, para concluir a migração iniciada na implantação do green.
+E) replicar a versão 2 do green para o blue e então redirecionar o tráfego ao blue, para restaurar o ambiente anteriormente usado em produção.

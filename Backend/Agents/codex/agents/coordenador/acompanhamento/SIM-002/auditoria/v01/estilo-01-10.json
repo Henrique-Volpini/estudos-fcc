@@ -1,0 +1,200 @@
+[
+  {
+    "id": "BAN-DS-01-0005",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 57,
+        "pagina": 13,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+        "caracteristicaAplicada": "Cenário técnico com condições delimitadas, comando para determinar um valor e cinco alternativas numéricas curtas. A questão autoral aplica esse formato à contagem de WIP após três tipos de ocorrência.",
+        "limites": "A referência trata de ICMP e orienta apenas a construção editorial. A cópia não é apresentada como download da FCC nem como certificação de integridade oficial; não sustenta a correção técnica de Kanban."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-01-0006",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 32,
+        "pagina": 8,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+        "caracteristicaAplicada": "Contexto de um mecanismo de TI seguido de cinco afirmações sobre seu comportamento. Na questão autoral, o contexto delimita a circulação de um token e as alternativas descrevem efeitos concorrentes do mesmo modelo.",
+        "limites": "O exemplo versa sobre Spring Cloud Config e não comprova semântica de BPMN. A origem é uma cópia secundária, sem alegação de download oficial da FCC ou certificação oficial de integridade."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-01-0007",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 33,
+        "pagina": 8,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+        "caracteristicaAplicada": "Cenário profissional de TI e comando de correspondência ordenada, com alternativas construídas na mesma ordem dos elementos apresentados. A proposta aplica a correspondência a três objetos de teste autorais.",
+        "limites": "O conteúdo da referência é documentação Swagger; não fundamenta os conceitos de teste. Trata-se de cópia secundária sem certificação de integridade oficial."
+      },
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 52,
+        "pagina": 12,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+        "caracteristicaAplicada": "Três elementos identificados por I, II e III e cinco combinações de termos que devem ser lidas em ordem. A proposta conserva a leitura ordenada, apresentando três atividades em vez de lacunas em saída de comando.",
+        "limites": "A questão real trata de metadados inode. O uso do formato não implica identidade temática nem comprova frequência do formato na FCC; a cópia é secundária."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-01-0008",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 32,
+        "pagina": 8,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+        "caracteristicaAplicada": "Delimitação de um problema de configuração em TI e cinco alternativas sobre o mesmo mecanismo. A proposta muda integralmente o objeto para controle de baseline e apresenta cursos de ação comparáveis.",
+        "limites": "A questão real cobra Spring Cloud Config, e o exemplo não sustenta a solução técnica de gestão da configuração. A cópia é secundária, sem alegação de download oficial da FCC ou certificação oficial de integridade."
+      },
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 33,
+        "pagina": 8,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+        "caracteristicaAplicada": "Apresentação de tarefa concreta de um profissional de TI, com informações necessárias antes do comando. A proposta usa uma situação autoral de homologação e solicita o tratamento adequado da mudança.",
+        "limites": "A referência é de documentação de API e foi usada para a contextualização; a solução depende das fontes primárias de configuração. Não se generaliza uma regra editorial a partir do exemplo."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-02-0004",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário – Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 59,
+        "pagina": 14,
+        "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+        "caracteristicaObservada": "Uma Analista aplica conceitos de governança em um contexto breve; o comando é completado por cinco alternativas comparáveis.",
+        "caracteristicaAplicada": "Contexto breve de planejamento de TIC, comando afirmativo e cinco procedimentos comparáveis. Não foram reutilizados princípios COBIT ou alternativas da referência.",
+        "limites": "Referência de formato de uma questão específica; a cópia foi hospedada pelo Qconcursos, não obtida diretamente da FCC. Não foi verificada assinatura digital nem autenticidade oficial do arquivo. O conteúdo antigo não foi usado como fonte de correção técnica atual nem como evidência de frequência da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-02-0005",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional Federal da 4ª Região",
+        "cargo": "Analista Judiciário – Informática",
+        "ano": 2007,
+        "caderno": "MODELO – Cargo I, Tipo 001",
+        "questao": 20,
+        "pagina": 5,
+        "origem": "Fonte primária do órgão TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+        "caracteristicaObservada": "Problema numérico autoral da FCC com cenário de aquisição, base de custo explicitada e cinco respostas percentuais curtas.",
+        "caracteristicaAplicada": "Cenário financeiro com valores completos e comando de resultado percentual; dados, horizonte, fórmula, objetivo e distratores foram criados para ROI de TI.",
+        "limites": "Referência histórica de 2007, obtida no próprio TRF4. Sustenta apenas o formato de problema numérico e alternativas percentuais; não demonstra incidência atual de ROI, não fornece os valores fictícios desta questão e não substitui a fonte de gestão financeira."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-02-0006",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário – Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 30,
+        "pagina": 7,
+        "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+        "caracteristicaObservada": "Comando afirmativo delimitado a um instituto da Lei nº 14.133/2021 e cinco afirmações comparáveis, cada uma sobre uma conduta jurídica.",
+        "caracteristicaAplicada": "Comando afirmativo sobre recorte do art. 117 aplicado a cenário de manutenção de sistemas; cinco condutas comparáveis. O instituto, o cenário, os dados e as alternativas são novos.",
+        "limites": "Referência de formato de uma questão específica; a cópia foi hospedada pelo Qconcursos, não obtida diretamente da FCC. Não foi verificada assinatura digital nem autenticidade oficial do arquivo. O conteúdo antigo não foi usado como fonte de correção técnica atual nem como evidência de frequência da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-03-0008",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2015,
+        "caderno": "Não obtido",
+        "questao": "Q566693 (identificador do acervo; número original não obtido)",
+        "pagina": "Não obtida; página HTML e imagem do programa",
+        "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+        "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+        "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+        "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-03-0009",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2015,
+        "caderno": "Não obtido",
+        "questao": "Q566693 (identificador do acervo; número original não obtido)",
+        "pagina": "Não obtida; página HTML e imagem do programa",
+        "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+        "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+        "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+        "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-03-0010",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2015,
+        "caderno": "Não obtido",
+        "questao": "Q566693 (identificador do acervo; número original não obtido)",
+        "pagina": "Não obtida; página HTML e imagem do programa",
+        "origem": "https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76",
+        "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg",
+        "caracteristicaAplicada": "Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.",
+        "limites": "Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC."
+      }
+    ]
+  }
+]

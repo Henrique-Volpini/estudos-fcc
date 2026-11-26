@@ -1,0 +1,17 @@
+ID: BAN-DS-01-0005
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: Kanban: limite de trabalho em progresso (WIP) e fluxo
+
+ENUNCIADO
+Uma equipe utiliza Kanban com o fluxo A fazer → Implementação → Validação → Concluído. O trabalho é considerado iniciado ao entrar em Implementação e finalizado ao entrar em Concluído. Há um único limite de WIP: no máximo seis itens iniciados e ainda não finalizados, sem exceções para itens bloqueados. Não há limites adicionais por etapa.
+
+Em determinado momento, há dez itens em A fazer, três em Implementação e dois em Validação, sendo um destes bloqueado. Em seguida, o item não bloqueado de Validação é concluído e dois itens passam de Implementação para Validação. Não ocorrem outras conclusões, cancelamentos ou entradas no fluxo.
+
+Sem novas conclusões ou cancelamentos, a quantidade máxima de itens de A fazer que pode ser iniciada, respeitando o limite estabelecido, é
+
+A) 1 item.
+B) 2 itens.
+C) 3 itens.
+D) 4 itens.
+E) 5 itens.

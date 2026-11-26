@@ -1,0 +1,40 @@
+ID: BAN-DS-05-0009
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar os códigos de status que comunicam especificamente as situações I e II.
+
+RESOLUÇÃO
+A operação I foi concluída com criação de recurso: 201 Created comunica essa situação, e Location identifica o recurso principal criado. Em II, o trabalho foi aceito, mas não foi concluído: 202 Accepted expressa essa condição. A aceitação não garante conclusão futura. A indicação de estado e do recurso de acompanhamento é compatível com a orientação da RFC para 202. O comando pede os códigos específicos para essas situações, não um código genérico de sucesso.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: 201 descreve I, mas 204 indica solicitação concluída e ausência de conteúdo adicional; II permanece em processamento.
+B) Não atende: 200 expressa sucesso de forma geral, sem a indicação específica de criação pedida em I; 201 não descreve a geração pendente de II.
+C) Atende: 201 sinaliza criação concluída em I; 202 sinaliza aceitação para processamento ainda não concluído em II.
+D) Não atende: inverte as situações; I já foi concluída, enquanto II não concluiu a geração.
+E) Não atende: 202 descreve II, mas 204 não fornece o sinal específico de criação de recurso exigido em I.
+
+FONTES TÉCNICAS CONSULTADAS
+- IETF — RFC 9110 — HTTP Semantics — junho de 2022
+  URL: https://www.rfc-editor.org/rfc/rfc9110.html
+  Localizador e fundamentação: Seções 15.3.1 (200), 15.3.2 (201), 15.3.3 (202) e 15.3.5 (204): sucesso genérico, criação concluída, aceitação pendente e conclusão sem conteúdo adicional.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Cenário de documentação de API e comando que pede dois elementos respectivamente.
+  Aplicação nesta questão autoral: Operações de API numeradas e cinco pares de códigos na mesma ordem.
+  Limites da referência: A cópia não foi obtida da FCC nem do órgão. O registro de hash local não constitui assinatura oficial. O exemplo trata de anotações Swagger, sem sustentar os códigos HTTP aqui cobrados. O exemplo sustenta apenas as características descritas, sem demonstrar frequência na banca.
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 65; página 10.
+  Origem verificável: Arquivo disponibilizado no próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; procedência registrada em fontes.json.
+  Característica observada: Apresentação de dois papéis e comando com respectivamente, seguido de cinco pares paralelos.
+  Aplicação nesta questão autoral: As operações I e II são associadas a um par de códigos na ordem explícita do comando.
+  Limites da referência: Referência histórica de 2007, obtida no órgão. Sustenta o formato de correspondência, não a semântica HTTP atual nem uma frequência de uso pela banca.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental de 200, 201, 202 e 204 e comparação manual com os dois fatos declarados. Não houve envio de requisições ou execução de servidor.
+Comparação de independência temática com BAN-DS-05-0001 a BAN-DS-05-0005 em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json: os novos objetivos são diferentes de idempotência, ordem assíncrona, foco acessível, parâmetros OpenAPI e validade XSD cobrados anteriormente.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Questão aguardando auditoria independente; não há parecer ou aprovação emitido pelo elaborador.

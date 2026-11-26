@@ -1,0 +1,27 @@
+ID: BAN-DS-12-0004
+Matéria: 12 — Computação em nuvem
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/12-computacao-em-nuvem.txt
+Tópico do conteúdo: - governança de nuvem; - controle de custos;
+Objetivo da questão: Aplicar atribuição de custos diretos e rateio explícito de custos compartilhados, confrontando os totais por equipe com os respectivos orçamentos.
+Tarefa de origem: SIM-002, questão global 45; Governanca e controle de custos em nuvem: atribuicao e acompanhamento.
+Responsável pela elaboração: /root/s2_elab_12
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, /root/s2_elab_12: elaboração autoral concluída para SIM-002, fontes primárias navegadas, exemplos FCC lidos e conteúdo conferido; estado PENDENTE_AUDITORIA.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0004 -> Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004
+ESTILO_FCC: Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/parecer-redacao-e-conformidade.txt

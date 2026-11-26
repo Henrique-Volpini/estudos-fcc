@@ -1,0 +1,32 @@
+ID: BAN-DS-04-0010
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Oracle 19c: valores NULL e condições IS NULL
+
+ENUNCIADO
+Em um banco Oracle Database 19c, o script abaixo foi executado com sucesso:
+
+CREATE TABLE contato (
+    id NUMBER PRIMARY KEY,
+    apelido VARCHAR2(20)
+);
+INSERT INTO contato VALUES (1, NULL);
+INSERT INTO contato VALUES (2, '');
+INSERT INTO contato VALUES (3, '0');
+INSERT INTO contato VALUES (4, 'Ana');
+COMMIT;
+
+Sem outras alterações nos dados, executa-se:
+
+SELECT id
+FROM contato
+WHERE apelido IS NULL OR apelido = NULL
+ORDER BY id;
+
+Os identificadores retornados são
+
+A) somente 1.
+B) somente 1, 2 e 3.
+C) 1, 2, 3 e 4.
+D) somente 1 e 2.
+E) nenhum.

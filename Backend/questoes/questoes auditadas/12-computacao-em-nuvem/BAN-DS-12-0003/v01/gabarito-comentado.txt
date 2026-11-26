@@ -1,0 +1,45 @@
+ID: BAN-DS-12-0003
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a caracterização correta do ambiente quanto à composição híbrida e à diversidade de provedores.
+
+RESOLUÇÃO
+A classificação exige observar dois aspectos do cenário. No aspecto da implantação, a nuvem privada e a nuvem pública de P permanecem infraestruturas distintas, ligadas por tecnologia que permite portabilidade: há composição híbrida. A nuvem privada pode estar no centro de dados de uma contratada; seu uso exclusivo é compatível com a definição do NIST. No aspecto dos provedores, a organização utiliza serviços públicos de P e de Q, empresas distintas: adota multicloud. As classificações podem coexistir. A execução de aplicações diferentes em P e Q não exige replicar uma mesma aplicação entre eles. Portanto, somente a alternativa C reconhece os dois aspectos sem impor condição inexistente.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. A integração permite portabilidade entre infraestruturas, mas não torna P e Q uma única empresa. A utilização dos dois provedores públicos caracteriza multicloud.
+B) Não atende. A localização externa não descaracteriza a nuvem privada: o NIST admite sua instalação dentro ou fora das dependências da organização. A integração declarada entre a nuvem privada e a pública caracteriza a composição híbrida.
+C) Atende. A nuvem privada e a pública de P continuam distintas e integradas com portabilidade, caracterizando nuvem híbrida. O uso de serviços dos provedores públicos P e Q caracteriza também multicloud.
+D) Não atende. A preservação das identidades é compatível com a definição de nuvem híbrida do NIST. Ela não desfaz a composição integrada expressamente descrita.
+E) Não atende. Multicloud considera o uso de mais de um provedor pela organização; não exige que cada aplicação seja executada nos dois. A distribuição de aplicações distintas entre P e Q satisfaz esse critério.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conteúdo programático — Computação em Nuvem. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Linhas 191–199; observação de legislação nas linhas 213–217. Delimitação de escopo; a questão não cobra legislação.
+- NIST SP 800-145 — The NIST Definition of Cloud Computing (página oficial da publicação). https://csrc.nist.gov/pubs/sp/800/145/final. Localizador e uso: Identificação NIST SP 800-145; publicação em setembro de 2011; autores Peter Mell e Tim Grance. Consultada por navegação em 26/11/2026 para confirmar edição e autoria; as definições foram lidas nas entradas oficiais abaixo.
+- NIST CSRC Glossary — Hybrid cloud. https://csrc.nist.gov/glossary/term/hybrid_cloud. Localizador e uso: Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026. Sustenta composição de infraestruturas distintas com identidade preservada e tecnologia que permite portabilidade.
+- NIST CSRC Glossary — Private cloud. https://csrc.nist.gov/glossary/term/private_cloud. Localizador e uso: Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026. Sustenta uso exclusivo por uma organização e possibilidade de instalação dentro ou fora de suas dependências.
+- NIST CSRC Glossary — Public cloud. https://csrc.nist.gov/glossary/term/public_cloud. Localizador e uso: Definitions; definição atribuída ao NIST SP 800-145. Consultada por navegação em 26/11/2026 como conferência do modelo público indicado no cenário.
+- Google Cloud — What is multicloud?. https://cloud.google.com/learn/what-is-multicloud. Localizador e uso: Seções Multicloud definition e Multicloud versus hybrid cloud. Página informa atualização em 09/10/2026; consultada por navegação em 26/11/2026. Sustenta o uso de mais de um provedor público por uma organização, inclusive para cargas diferentes, e a coexistência com ambientes privados.
+- FCC — TRT da 4ª Região, Analista Judiciário, TI, 2022 — referência editorial. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Caderno A14, Tipo 001; questão 48, página 11, e questão 59, página 14. Extração local efetivamente lida; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia do PDF hospedada no Qconcursos; não é apresentada como download da FCC nem como prova de integridade oficial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 48; página 11.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de integridade oficial.
+- Característica observada e aplicação nesta questão autoral: A questão real apresenta condições técnicas e pede identificar o conceito correspondente. A autoral apresenta condições completas de implantação e uso de provedores e exige identificar os conceitos aplicáveis.
+- Limites da referência: Referência de construção editorial; tema e alternativas autorais. Não comprova correção técnica atual nem frequência desse formato na FCC.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 59; página 14.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou integridade oficial.
+- Característica observada e aplicação nesta questão autoral: A questão real exige relacionar dois conceitos em alternativas comparáveis. A autoral mantém o mesmo comando para as cinco opções, que relacionam composição híbrida e diversidade de provedores com uma justificativa concreta.
+- Limites da referência: Referência de formato em TI; não transplanta afirmações sobre COBIT para nuvem nem generaliza um exemplo como regra da banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura do perfil 12, das regras e do modelo; cotejo do recorte com o conteúdo programático e com as questões BAN-DS-12-0001 e BAN-DS-12-0002 do primeiro simulado. O novo objetivo não repete modelos de serviço ou elasticidade.
+- Documental: navegação efetiva nas fontes primárias NIST e Google Cloud registradas; leitura das questões FCC identificadas na extração do acervo e dos metadados de origem.
+- Analítica: aplicação separada dos critérios de composição híbrida e diversidade de provedores; conferência das cinco alternativas e da unicidade da resposta nas condições expressas.
+- Conferência de entrega: renderização dos TXT a partir dos mesmos dados do JSON e releitura dos arquivos para verificar identidade de conteúdo, ID, versão e codificação UTF-8. Não houve execução de infraestrutura de nuvem.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-05-0006",
+    "numero": 21,
+    "versao": "v01",
+    "enunciado": "Uma página adota uma regra básica para telas pequenas e acrescenta media queries para ampliar o leiaute. O elemento .painel utiliza exclusivamente o CSS abaixo, na ordem apresentada, em navegador com suporte às propriedades indicadas. Não há estilos inline, outras regras, animações ou transições.\n\n.painel {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 8px;\n}\n@media (min-width: 960px) {\n  .painel {\n    grid-template-columns: repeat(3, 1fr);\n    gap: 24px;\n  }\n}\n@media (min-width: 600px) {\n  .painel {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\nConsidere três larguras da viewport: 580px, 760px e 1100px. Em cada par (n, g), n indica a quantidade de colunas declaradas em grid-template-columns e g indica o valor de gap. Os pares correspondentes a essas larguras são, respectivamente,",
+    "alternativas": {
+      "A": "(1, 8px), (2, 8px) e (3, 24px).",
+      "B": "(1, 8px), (3, 24px) e (2, 24px).",
+      "C": "(1, 8px), (2, 24px) e (2, 24px).",
+      "D": "(1, 8px), (2, 8px) e (2, 24px).",
+      "E": "(2, 8px), (2, 8px) e (2, 24px)."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0007",
+    "numero": 22,
+    "versao": "v01",
+    "enunciado": "Considere o código a seguir, em TypeScript 5.9 com strict habilitado.\n\ntype Sucesso = { estado: \"ok\"; valor: number };\ntype Falha = { estado: \"erro\"; mensagem: string };\ntype Resposta = Sucesso | Falha;\n\nfunction apresentar(r: Resposta): string {\n  if (r.estado === \"erro\") {\n    return r.mensagem;          // ponto I\n  }\n  return r.valor.toFixed(2);    // ponto II\n}\n\nOs comentários I e II indicam os respectivos acessos a r nessas instruções. Pela análise de fluxo de controle, os tipos de r nesses pontos são, respectivamente,",
+    "alternativas": {
+      "A": "Falha e Sucesso.",
+      "B": "Resposta e Sucesso.",
+      "C": "Falha e Resposta.",
+      "D": "Sucesso e Falha.",
+      "E": "Resposta e never."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0008",
+    "numero": 23,
+    "versao": "v01",
+    "enunciado": "Uma aplicação em React 19 renderiza uma lista pelo trecho:\n\nclientes.map((cliente, indice) => (\n  <Linha key={indice} cliente={cliente} />\n))\n\nCada Linha é do mesmo tipo de componente, definido fora do componente da lista, e mantém uma nota em estado local, inicializado com useState(\"\"). A atualização das propriedades não redefine essa nota. Inicialmente, os clientes estão na ordem Ana, Bia, e as notas digitadas são, respectivamente, \"X\" e \"Y\". Em seguida, a lista é atualizada para Bia, Ana, preservando o componente pai. Cada cliente possui um id único e imutável.\n\nCom a chave atual, as notas exibidas nas linhas de Ana e Bia após a inversão e a chave que deve ser adotada desde a montagem inicial para manter a nota vinculada ao cliente em futuras reordenações são, respectivamente,",
+    "alternativas": {
+      "A": "\"X\" e \"Y\"; key={cliente.id}.",
+      "B": "\"Y\" e \"X\"; key={indice}.",
+      "C": "\"Y\" e \"X\"; key={cliente.id + \":\" + indice}.",
+      "D": "\"Y\" e \"X\"; key={Math.random()}.",
+      "E": "\"Y\" e \"X\"; key={cliente.id}."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0009",
+    "numero": 24,
+    "versao": "v01",
+    "enunciado": "Uma API RESTful utiliza a semântica HTTP da RFC 9110. Considere duas operações independentes.\n\nI. POST /clientes conclui o cadastro e cria um novo recurso de cliente antes de responder. A resposta identifica o recurso criado pelo cabeçalho Location.\n\nII. POST /relatorios aceita uma solicitação de geração e a coloca em uma fila. Ao responder, a geração ainda não terminou e poderá falhar posteriormente. O corpo da resposta informa a situação atual e uma URI para acompanhá-la.\n\nOs códigos de status que comunicam especificamente as situações I e II são, respectivamente,",
+    "alternativas": {
+      "A": "201 Created e 204 No Content.",
+      "B": "200 OK e 201 Created.",
+      "C": "201 Created e 202 Accepted.",
+      "D": "202 Accepted e 201 Created.",
+      "E": "204 No Content e 202 Accepted."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0010",
+    "numero": 25,
+    "versao": "v01",
+    "enunciado": "Uma aplicação prepara um corpo JSON com o código abaixo, em ambiente JavaScript compatível com ECMAScript 2025. Considere as funções e os protótipos nativos sem alterações.\n\nconst carga = {\n  apelido: undefined,\n  ativo: false,\n  contatos: [undefined, null, \"\"]\n};\nconst texto = JSON.stringify(carga);\n\nO conteúdo da string texto é",
+    "alternativas": {
+      "A": "{\"apelido\":null,\"ativo\":false,\"contatos\":[null,null,\"\"]}",
+      "B": "{\"ativo\":false,\"contatos\":[null,null,\"\"]}",
+      "C": "{\"ativo\":false,\"contatos\":[null,\"\"]}",
+      "D": "{\"apelido\":\"undefined\",\"ativo\":false,\"contatos\":[\"undefined\",null,\"\"]}",
+      "E": "{\"contatos\":[null,null,\"\"]}"
+    }
+  },
+  {
+    "id": "BAN-DS-06-0005",
+    "numero": 26,
+    "versao": "v01",
+    "enunciado": "Uma aplicação web utiliza MVC com renderização de páginas no servidor. Na funcionalidade de simulação de empréstimos, foram identificadas as seguintes responsabilidades:\n\nI. Receber a solicitação, acionar a simulação e selecionar a tela de resposta.\nII. Aplicar a regra de cálculo das parcelas, que também será utilizada por outras interfaces da aplicação.\nIII. Apresentar as parcelas na página, definindo o alinhamento e a formatação visual dos valores.\n\nPara preservar a separação de responsabilidades do padrão, I, II e III devem ser atribuídas, respectivamente, a",
+    "alternativas": {
+      "A": "modelo, controlador e visão.",
+      "B": "controlador, visão e modelo.",
+      "C": "visão, modelo e controlador.",
+      "D": "controlador, modelo e visão.",
+      "E": "modelo, visão e controlador."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0006",
+    "numero": 27,
+    "versao": "v01",
+    "enunciado": "Em uma arquitetura orientada a serviços, sistemas independentes consomem um serviço de consulta cadastral. O contrato descreve o campo situacao como a indicação de existência de restrição cadastral. A equipe provedora pretende substituir a linguagem e o banco de dados da implementação sem exigir alterações dos consumidores. Também propõe que situacao passe a indicar aptidão para contratar um produto, mantendo o nome e o tipo do campo e o endereço do serviço. Na avaliação dessas mudanças, a equipe deve",
+    "alternativas": {
+      "A": "preservar a interação contratada na substituição interna e avaliar a mudança de significado de situacao como alteração contratual, verificando seu impacto sobre os consumidores.",
+      "B": "preservar o nome e o tipo de situacao na substituição interna e considerar seu novo significado compatível, pois a estrutura das mensagens continuará sendo a mesma.",
+      "C": "publicar as tabelas do novo banco como parte da interação contratada e orientar os consumidores a consultá-las, transferindo a interpretação de situacao para cada sistema consumidor.",
+      "D": "exigir que os consumidores adotem a linguagem da nova implementação e manter a descrição das mensagens, obtendo assim independência em relação à implementação interna do serviço.",
+      "E": "manter o endereço do serviço e atualizar a implementação e o significado de situacao, considerando o contrato preservado enquanto os consumidores conseguirem estabelecer conexão com esse endereço."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0007",
+    "numero": 28,
+    "versao": "v01",
+    "enunciado": "Em um ambiente de microsserviços, a equipe definiu duas funções:\n\nI. Oferecer um ponto de entrada para clientes externos, validar suas credenciais e encaminhar as requisições aos serviços correspondentes.\nII. Permitir que componentes localizem, pelo nome lógico de um serviço, os endereços das instâncias registradas e saudáveis, que mudam durante a expansão e a substituição de instâncias.\n\nConsiderando API Gateway e Service Discovery, a atribuição adequada dessas funções e a relação entre os mecanismos são:",
+    "alternativas": {
+      "A": "I cabe ao Service Discovery; II cabe ao API Gateway, que mantém o catálogo de instâncias para que a descoberta possa autenticar as solicitações externas.",
+      "B": "I cabe ao API Gateway; II cabe ao Service Discovery, que recebe as requisições de negócio dos clientes externos para aplicar a autenticação antes do gateway.",
+      "C": "I cabe ao API Gateway; II cabe ao Service Discovery, sendo necessário atualizar os clientes externos sempre que o endereço de uma instância do serviço for alterado.",
+      "D": "I cabe ao Service Discovery; II cabe ao API Gateway, sendo a localização dinâmica de instâncias uma consequência da validação de credenciais dos clientes externos.",
+      "E": "I cabe ao API Gateway; II cabe ao Service Discovery, que pode ser consultado pelo gateway para localizar instâncias sem expor seus endereços aos clientes externos."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0008",
+    "numero": 29,
+    "versao": "v01",
+    "enunciado": "Uma instituição vai modernizar um sistema legado que atende consultas, alterações cadastrais e liquidações. A nova implementação das consultas já está pronta e deve entrar em uso na primeira etapa; as outras funcionalidades continuarão no legado. As integrações e os dados necessários à coexistência foram preparados, e é possível interceptar as requisições. A instituição quer preservar o endereço de acesso dos clientes durante as etapas e retirar o legado ao final. Para aplicar o padrão Strangler Fig nessas condições, a equipe deve",
+    "alternativas": {
+      "A": "publicar endereços distintos para o legado e para cada nova funcionalidade, transferindo aos clientes a escolha do destino e a atualização desse endereço a cada etapa da modernização.",
+      "B": "introduzir uma fachada que encaminhe consultas à nova implementação e demais operações ao legado, ampliando a substituição por etapas e retirando o legado quando não restarem funcionalidades ou dependências dele.",
+      "C": "manter todas as requisições no legado até concluir as novas versões de consultas, alterações cadastrais e liquidações, realizando então a transferência conjunta das funcionalidades e a retirada da implementação anterior.",
+      "D": "introduzir uma fachada que preserve o endereço dos clientes e encaminhe todas as operações ao legado, considerando concluída a substituição das consultas quando a nova fachada estiver disponível para acesso.",
+      "E": "encaminhar uma porcentagem crescente de todas as requisições à nova implementação, independentemente da funcionalidade solicitada, e retirar o legado quando o sistema moderno receber a maioria do tráfego."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0004",
+    "numero": 30,
+    "versao": "v01",
+    "enunciado": "Uma equipe utiliza blue/green deployment. O ambiente blue mantém a versão 1, operacional e com capacidade para toda a carga, enquanto o green recebeu a versão 2 e passou a atender o tráfego de produção. Ambos usam o mesmo banco de dados e o mesmo repositório externo de sessões, cujo formato é compatível com ambas as versões. A migração de esquema foi apenas aditiva e sua compatibilidade com a versão 1 foi validada. As gravações feitas pela versão 2 são válidas e também podem ser lidas e atualizadas pela versão 1.\n\nFoi detectada uma regressão da versão 2 restrita à formatação das respostas, sem corrupção de dados. Não há requisições em andamento. Para reverter rapidamente a aplicação, aproveitando os ambientes existentes e preservando as gravações já confirmadas, a equipe deve",
+    "alternativas": {
+      "A": "redirecionar o tráfego ao blue e restaurar o banco a um snapshot anterior à ativação do green, para realinhar os dados à versão 1.",
+      "B": "manter o tráfego no green e reiniciar suas instâncias com a versão 2, para refazer a associação da aplicação ao banco compartilhado.",
+      "C": "redirecionar o tráfego ao blue e conservar o banco em seu estado atual, mantendo o esquema compatível durante a janela de rollback.",
+      "D": "redirecionar o tráfego ao blue e remover os campos ainda utilizados pela versão 1, para concluir a migração iniciada na implantação do green.",
+      "E": "replicar a versão 2 do green para o blue e então redirecionar o tráfego ao blue, para restaurar o ambiente anteriormente usado em produção."
+    }
+  }
+]

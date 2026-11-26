@@ -1,0 +1,228 @@
+CONTROLE - SIM-002
+Estado: PRONTO_NAO_RESOLVIDO
+Responsável pela coordenação: /root
+Quantidade: 50 questões específicas
+Distribuição: decisão de treino; não representa incidência oficial.
+Aprovação: três perfis de conformidade por questão; não é certificação técnica do gabarito.
+Pasta entregue: Backend/simulados/simulados pendentes/SIM-002
+Arquivos: simulado.json; simulado.txt; gabarito-comentado.txt; controle.txt
+Progresso e resultado: gerados pela aplicação quando o estudante responder.
+DISTRIBUIÇÃO
+01 | Processo de desenvolvimento de software | 4
+02 | Gestão e Governança de Tecnologia da Informação | 3
+03 | Programação | 7
+04 | Banco de Dados | 6
+05 | Desenvolvimento de aplicações web e mobile | 5
+06 | Arquitetura de sistemas | 4
+07 | DevOps e DevSecOps | 3
+08 | Sistemas Operacionais | 2
+09 | Redes de computadores | 3
+10 | Serviços e gerenciamento de redes | 2
+11 | Segurança da Informação | 4
+12 | Computação em nuvem | 2
+13 | Git, Kubernetes, Rancher, deploy e CI/CD | 1
+14 | Levantamento de requisitos, testes, integração e documentação técnica | 1
+15 | Governança de dados, autenticação e controle de acesso | 1
+16 | Inglês técnico | 2
+
+MAPEAMENTO E PARECERES
+01 | BAN-DS-01-0005 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0005/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0005/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0005/v01/parecer-redacao-e-conformidade.txt
+02 | BAN-DS-01-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0006/v01/parecer-redacao-e-conformidade.txt
+03 | BAN-DS-01-0007 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0007/v01/parecer-redacao-e-conformidade.txt
+04 | BAN-DS-01-0008 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0008/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0008/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0008/v01/parecer-redacao-e-conformidade.txt
+05 | BAN-DS-02-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/parecer-redacao-e-conformidade.txt
+06 | BAN-DS-02-0005 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0005/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0005/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0005/v01/parecer-redacao-e-conformidade.txt
+07 | BAN-DS-02-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0006/v01/parecer-redacao-e-conformidade.txt
+08 | BAN-DS-03-0008 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0008/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0008/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0008/v01/parecer-redacao-e-conformidade.txt
+09 | BAN-DS-03-0009 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0009/v01/parecer-redacao-e-conformidade.txt
+10 | BAN-DS-03-0010 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0010/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0010/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0010/v01/parecer-redacao-e-conformidade.txt
+11 | BAN-DS-03-0011 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0011/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0011/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0011/v01/parecer-redacao-e-conformidade.txt
+12 | BAN-DS-03-0012 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0012/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0012/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0012/v01/parecer-redacao-e-conformidade.txt
+13 | BAN-DS-03-0013 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0013/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0013/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0013/v01/parecer-redacao-e-conformidade.txt
+14 | BAN-DS-03-0014 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0014/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0014/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0014/v01/parecer-redacao-e-conformidade.txt
+15 | BAN-DS-04-0007 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0007/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0007/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0007/v01/parecer-redacao-e-conformidade.txt
+16 | BAN-DS-04-0008 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0008/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0008/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0008/v01/parecer-redacao-e-conformidade.txt
+17 | BAN-DS-04-0009 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0009/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0009/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0009/v01/parecer-redacao-e-conformidade.txt
+18 | BAN-DS-04-0010 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0010/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0010/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0010/v01/parecer-redacao-e-conformidade.txt
+19 | BAN-DS-04-0011 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0011/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0011/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0011/v01/parecer-redacao-e-conformidade.txt
+20 | BAN-DS-04-0012 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0012/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0012/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0012/v01/parecer-redacao-e-conformidade.txt
+21 | BAN-DS-05-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0006/v01/parecer-redacao-e-conformidade.txt
+22 | BAN-DS-05-0007 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0007/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0007/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0007/v01/parecer-redacao-e-conformidade.txt
+23 | BAN-DS-05-0008 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0008/v01/parecer-redacao-e-conformidade.txt
+24 | BAN-DS-05-0009 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009/v01/parecer-redacao-e-conformidade.txt
+25 | BAN-DS-05-0010 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0010/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0010/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0010/v01/parecer-redacao-e-conformidade.txt
+26 | BAN-DS-06-0005 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0005/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0005/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0005/v01/parecer-redacao-e-conformidade.txt
+27 | BAN-DS-06-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0006/v01/parecer-redacao-e-conformidade.txt
+28 | BAN-DS-06-0007 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0007/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0007/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0007/v01/parecer-redacao-e-conformidade.txt
+29 | BAN-DS-06-0008 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0008/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0008/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0008/v01/parecer-redacao-e-conformidade.txt
+30 | BAN-DS-07-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0004/v01/parecer-redacao-e-conformidade.txt
+31 | BAN-DS-07-0005 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0005/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0005/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0005/v01/parecer-redacao-e-conformidade.txt
+32 | BAN-DS-07-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0006/v01/parecer-redacao-e-conformidade.txt
+33 | BAN-DS-08-0003 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0003/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0003/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0003/v01/parecer-redacao-e-conformidade.txt
+34 | BAN-DS-08-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0004/v01/parecer-redacao-e-conformidade.txt
+35 | BAN-DS-09-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0004/v01/parecer-redacao-e-conformidade.txt
+36 | BAN-DS-09-0005 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0005/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0005/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0005/v01/parecer-redacao-e-conformidade.txt
+37 | BAN-DS-09-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0006/v01/parecer-redacao-e-conformidade.txt
+38 | BAN-DS-10-0003 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0003/v01/parecer-redacao-e-conformidade.txt
+39 | BAN-DS-10-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0004/v01/parecer-redacao-e-conformidade.txt
+40 | BAN-DS-11-0005 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0005/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0005/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0005/v01/parecer-redacao-e-conformidade.txt
+41 | BAN-DS-11-0006 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0006/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0006/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0006/v01/parecer-redacao-e-conformidade.txt
+42 | BAN-DS-11-0007 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0007/v01/parecer-redacao-e-conformidade.txt
+43 | BAN-DS-11-0008 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0008/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0008/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0008/v01/parecer-redacao-e-conformidade.txt
+44 | BAN-DS-12-0003 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0003/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0003/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0003/v01/parecer-redacao-e-conformidade.txt
+45 | BAN-DS-12-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0004/v01/parecer-redacao-e-conformidade.txt
+46 | BAN-DS-13-0002 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/parecer-redacao-e-conformidade.txt
+47 | BAN-DS-14-0002 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002/v01/parecer-redacao-e-conformidade.txt
+48 | BAN-DS-15-0002 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/parecer-redacao-e-conformidade.txt
+49 | BAN-DS-16-0003 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0003/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0003/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0003/v01/parecer-redacao-e-conformidade.txt
+50 | BAN-DS-16-0004 | v01 | APROVADA_CONFORMIDADE
+  ESTILO_FCC | /root/s2_auditor_estilo | APROVADA | Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0004/v01/parecer-estilo-fcc.txt
+  PISTAS_DE_RESPOSTA | /root/s2_auditor_pistas | APROVADA | Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0004/v01/parecer-pistas-de-resposta.txt
+  REDACAO_E_CONFORMIDADE | /root/s2_auditor_redacao | APROVADA | Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0004/v01/parecer-redacao-e-conformidade.txt

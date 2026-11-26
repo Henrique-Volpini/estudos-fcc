@@ -1,0 +1,15 @@
+ID: BAN-DS-13-0002
+Versão: v01
+Matéria: Git, Kubernetes, Rancher, deploy e CI/CD
+Tópico: Rancher: gerenciamento de clusters Kubernetes e responsabilidades
+
+ENUNCIADO
+Uma instituição utiliza o Rancher Manager 2.x, instalado em um cluster de gerenciamento, para administrar um cluster Kubernetes preexistente que foi registrado no Rancher. O servidor Rancher fica indisponível, mas o plano de controle, os nós e a rede do cluster registrado permanecem operacionais. Uma Analista dispõe de um kubeconfig previamente configurado para acessar diretamente a API desse cluster, com credenciais válidas e permissões para consultar e alterar seus workloads, sem depender da autenticação ou do proxy do Rancher.
+
+Nessas condições, a Analista conclui corretamente que
+
+A) os Pods em execução continuam ativos, mas o agendamento de novos Pods depende do retorno do servidor Rancher.
+B) o acesso direto permite consultar os workloads, mas sua alteração exige o restabelecimento do proxy do Rancher.
+C) os workloads continuam sob o controle do Kubernetes, e sua administração pode prosseguir pelo acesso direto à API do cluster.
+D) o plano de controle mantém o estado desejado, mas os Pods precisam ser recriados para operar sem o servidor Rancher.
+E) o acesso direto permite manter os workloads existentes, mas novos Deployments exigem registrar novamente o cluster no Rancher.

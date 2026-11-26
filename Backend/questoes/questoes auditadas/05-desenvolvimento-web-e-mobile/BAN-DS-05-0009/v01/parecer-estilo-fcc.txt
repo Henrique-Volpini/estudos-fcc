@@ -1,0 +1,60 @@
+Simulado: SIM-002
+Questão: BAN-DS-05-0009
+Versão examinada: v01
+Responsável: /root/s2_auditor_estilo
+Perfil: ESTILO_FCC
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras gerais vigentes lidas.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo lido.
+- Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt — perfil lido.
+- Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009/controle.txt — ID, versão completa e autoria conferidos; sem alteração.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/publico-21-30.json — v01, enunciado e alternativas deste ID integralmente lidos.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/estilo-21-30.json — v01, referências indicadas pelo elaborador, acessadas após a primeira leitura.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json — registro inicial deste ID anterior às referências.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/manifesto.json — pacote final v01, identificação, caminhos e hashMetodo.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/analises-estilo.json — análise individual deste ID pelo presente auditor.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/referencias-estilo-verificadas.json — registro da leitura atual dos exemplos.
+- Backend/Agents/conteudo/referencias-fcc/fontes.json — origem e hashes locais das provas.
+- Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009/v01/questao.txt e Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0009/v01/gabarito-comentado.txt — v01; leitura mecânica exclusiva para hash normalizado, sem consulta semântica do gabarito.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt — exemplo 33, página 8.
+- Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt — exemplo 65, página 10.
+
+PRIMEIRA LEITURA SEM GABARITO
+Duas operações HTTP descritas em I e II, com resultado imediato ou processamento ainda pendente. Pedido de códigos respectivamente e opções com dois rótulos de status. Estrutura de associação clara; não certificar a semântica dos códigos.
+Registro prévio: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-estilo.json. O corpo público foi lido antes das referências do elaborador; nenhuma letra-resposta ou resolução foi utilizada nesta análise de estilo.
+
+CRITÉRIOS EXAMINADOS
+- Leitura independente e identificação da versão: atendido. Registro inicial por ID anterior à consulta de estilo; ID, autoria e versão v01 conferidos no controle e no manifesto. Campos internos não foram tratados como conteúdo exibido ao candidato.
+- Identidade e origem das referências, com leitura dos exemplos reais: atendido. Os exemplos relacionados abaixo foram efetivamente lidos nas extrações ou no HTML com imagem associada; origem oficial do órgão foi distinguida de cópia secundária. A mera lista do elaborador não fundamentou a decisão.
+- Comando, apresentação do cenário, estrutura e organização das alternativas: atendido. T33 pede duas anotações de API respectivamente e F65 associa dois papéis de linguagens a dois termos. O item HTTP numera duas situações e oferece pares de códigos com os rótulos em ordem. Mantém-se a correspondência, com situações e vocabulário próprios.
+- Vocabulário, coerência da aplicação e autoria editorial: atendido. I e II descrevem momento da resposta e situação do recurso; o comando pede códigos para essas mesmas situações. Não se usa a referência histórica como prova de HTTP atual.
+- Formato pertinente ao tipo de questão e competência comparada: atendido. Duas operações I/II e cinco pares nominais. São situações a associar, não proposições a selecionar por APENAS; código executável não é necessário.
+- Amostra suficiente para os traços afirmados, sem impor regra universal: atendido. As referências sustentam apenas as características concretas descritas. Não se deduzem quota de formato, extensão obrigatória, dificuldade, incidência temática ou equivalência estatística. As diferenças e limitações estão explicitadas, inclusive quando a amostra apoia a competência sem documentar o subtipo exato.
+
+ACHADOS
+Nenhum achado impeditivo no escopo ESTILO_FCC.
+
+REFERÊNCIAS DE ESTILO
+T33: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno A14, Tipo 001; questão 33; página 8.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado: Tarefa de Analista na documentação de API, duas anotações solicitadas respectivamente e cinco pares paralelos.
+Limites: Cópia secundária do Qconcursos, conforme fontes.json. Identificação lida na capa; páginas referem-se aos marcadores da extração e à numeração exibida no texto. Coincidência de hash local não autentica origem nem integridade oficial. Amostra pontual de 2022, sem inferência de frequência, dificuldade calibrada ou correção técnica atual.
+
+F65: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007; caderno MODELO, Cargo I, Tipo 001; questão 65; página 10.
+Origem verificável: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+Material lido: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt
+Traço observado: Dois papéis de linguagens Web descritos antes do comando respectivamente, com cinco pares nominais.
+Limites: Disponibilização no próprio órgão registrada em fontes.json; capa da extração identifica FCC, órgão, cargo, março de 2007 e caderno. Hash local coincide com o registro. Exemplo histórico, sem generalização para frequência atual, dificuldade ou validação técnica.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil ESTILO_FCC. Não houve certificação técnica de conceitos, normas, cálculos, código ou resposta. As limitações de procedência e representatividade descritas não foram convertidas em alegação de padrão universal.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA exclusivamente no perfil ESTILO_FCC: a comparação individual do comando, cenário, estrutura, vocabulário, alternativas e formato com os exemplos reais identificados não encontrou defeito editorial impeditivo. T33 pede duas anotações de API respectivamente e F65 associa dois papéis de linguagens a dois termos. O item HTTP numera duas situações e oferece pares de códigos com os rótulos em ordem. Mantém-se a correspondência, com situações e vocabulário próprios.
+A decisão vale para os textos v01 identificados pelo hash normalizado do manifesto, conferido nesta emissão. Não representa parecer de outro perfil nem validação técnica do gabarito.

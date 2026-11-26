@@ -1,0 +1,21 @@
+ID: BAN-DS-05-0008
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: React: identidade e estado em listas
+
+ENUNCIADO
+Uma aplicação em React 19 renderiza uma lista pelo trecho:
+
+clientes.map((cliente, indice) => (
+  <Linha key={indice} cliente={cliente} />
+))
+
+Cada Linha é do mesmo tipo de componente, definido fora do componente da lista, e mantém uma nota em estado local, inicializado com useState(""). A atualização das propriedades não redefine essa nota. Inicialmente, os clientes estão na ordem Ana, Bia, e as notas digitadas são, respectivamente, "X" e "Y". Em seguida, a lista é atualizada para Bia, Ana, preservando o componente pai. Cada cliente possui um id único e imutável.
+
+Com a chave atual, as notas exibidas nas linhas de Ana e Bia após a inversão e a chave que deve ser adotada desde a montagem inicial para manter a nota vinculada ao cliente em futuras reordenações são, respectivamente,
+
+A) "X" e "Y"; key={cliente.id}.
+B) "Y" e "X"; key={indice}.
+C) "Y" e "X"; key={cliente.id + ":" + indice}.
+D) "Y" e "X"; key={Math.random()}.
+E) "Y" e "X"; key={cliente.id}.

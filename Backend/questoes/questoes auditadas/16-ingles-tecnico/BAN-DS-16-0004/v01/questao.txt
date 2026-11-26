@@ -1,0 +1,19 @@
+ID: BAN-DS-16-0004
+Versão: v01
+Matéria: Inglês técnico
+Tópico: Coesão em texto técnico autoral em inglês: referente de pronome
+
+ENUNCIADO
+Considere o texto abaixo.
+
+Every night, an office makes backup copies of its project files. During a weekly check, an analyst tries to open several of the copies on a separate computer. She divides the tested copies into two groups: those that can be opened and those that cannot. The latter are recorded in a report before she replaces them with new copies. She keeps the report so that the support team can investigate why the check failed.
+
+(Texto autoral.)
+
+No trecho “before she replaces them with new copies”, o pronome “them” refere-se especificamente
+
+A) aos arquivos dos projetos usados como origem para as cópias de segurança.
+B) a todas as cópias de segurança submetidas à verificação semanal.
+C) às cópias de segurança que não puderam ser abertas durante a verificação.
+D) às cópias de segurança que puderam ser abertas durante a verificação.
+E) às novas cópias de segurança utilizadas para substituir as anteriores.

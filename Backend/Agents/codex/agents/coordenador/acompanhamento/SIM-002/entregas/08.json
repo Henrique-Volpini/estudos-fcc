@@ -1,0 +1,195 @@
+{
+  "elaborador": "08",
+  "responsavel": "/root/s2_elab_08",
+  "questoes": [
+    {
+      "id": "BAN-DS-08-0003",
+      "numero": 33,
+      "materia": "Sistemas Operacionais",
+      "topico": "Linux: permissões de arquivos e diretórios e acesso efetivo",
+      "versao": "v01",
+      "enunciado": "Em um servidor Red Hat Enterprise Linux 9, um administrador verifica os seguintes metadados, apresentados na ordem permissões, proprietário, grupo e caminho:\n\ndrwx--x---  root  equipe  /srv/lotes\n-r--rw----  ana   equipe  /srv/lotes/saldo.csv\n\nA usuária ana não é root. Seus processos usam UID efetivo e fsuid de ana, GID efetivo e fsgid de equipe, sem grupos suplementares nem capacidades especiais. Os diretórios ancestrais permitem a travessia, e o sistema de arquivos está montado para leitura e escrita. Não há ACLs estendidas, links simbólicos ou restrições adicionais por SELinux ou atributos de arquivo.\n\nConsidere acessos diretos, mantendo as permissões e as credenciais apresentadas. Para esses processos, as operações de listar os nomes contidos em /srv/lotes, ler saldo.csv por seu caminho completo conhecido e acrescentar dados ao conteúdo desse arquivo são, respectivamente,",
+      "alternativas": {
+        "A": "permitida, permitida e negada.",
+        "B": "negada, permitida e permitida.",
+        "C": "negada, permitida e negada.",
+        "D": "permitida, permitida e permitida.",
+        "E": "negada, negada e negada."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende: acerta a leitura do arquivo e a negativa de escrita, mas listar os nomes exige leitura no diretório. Para ana, /srv/lotes usa a classe de grupo, --x, que permite a busca pelo nome conhecido, sem permitir listar seus nomes.",
+        "B": "Não atende: acerta a negativa de listagem e a leitura, mas ana é proprietária de saldo.csv e usa os bits r-- do proprietário. Os bits rw- do grupo não se somam aos dela; falta w para acrescentar dados.",
+        "C": "Atende: a classe de grupo --x do diretório permite atravessá-lo e buscar saldo.csv pelo nome conhecido, sem listar seus nomes. No arquivo, a classe do proprietário r-- autoriza a leitura e nega a escrita necessária para acrescentar dados.",
+        "D": "Não atende: atribui duas permissões inexistentes. Falta r no diretório para listar nomes, e falta w na classe do proprietário do arquivo para acrescentar dados. A travessia pelo diretório e a leitura do arquivo são permitidas.",
+        "E": "Não atende: a ausência de r no diretório impede a listagem dos nomes, mas não impede a busca por um nome conhecido quando x está presente. Como ana tem r no arquivo, pode lê-lo pelo caminho informado."
+      },
+      "resolucao": "Em /srv/lotes, ana não é proprietária, mas pertence ao grupo equipe. Aplicam-se, portanto, os bits --x do grupo: há permissão de busca/travessia, mas não de leitura do diretório. A listagem dos nomes é negada; o nome saldo.csv já conhecido pode ser procurado.\n\nNo arquivo saldo.csv, ana é proprietária. Aplica-se a classe r-- do proprietário, sem combinar seus bits com os rw- do grupo. O r permite abrir e ler o arquivo; a ausência de w impede abri-lo para acrescentar dados. A permissão de busca em todos os diretórios do caminho já foi assegurada. Sob as condições declaradas, a sequência é negada, permitida e negada.",
+      "fontes": [
+        {
+          "titulo": "Red Hat — Red Hat Enterprise Linux 9 — Configuring basic system settings",
+          "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/htmlsingle/configuring_basic_system_settings/index",
+          "localizador": "Capítulo 9, Managing file system permissions; §9.1, Managing file permissions; §9.1.1, Base file permissions. Classes u/g/o, bits r/w/x e diferença entre acesso ao diretório e edição do arquivo. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Linux man-pages — path_resolution(7)",
+          "url": "https://man7.org/linux/man-pages/man7/path_resolution.7.html",
+          "localizador": "DESCRIPTION: Step 2: walk along the path; Permissions; Bypassing permission checks: superuser and capabilities. Seleção da classe por identidade, uso de fsuid/fsgid, busca nos componentes do caminho e capacidades de bypass. Manual do projeto Linux man-pages, aberto em 26/11/2026."
+        },
+        {
+          "titulo": "Oracle — Introduction to the Shell and Command Line on Oracle Linux — F50766-05, julho de 2024",
+          "url": "https://docs.oracle.com/en/learn/ol-shell-cmd/index.html",
+          "localizador": "Learn About File Permissions, etapas 22–25, especialmente o parágrafo após a etapa 25: a participação no grupo não substitui os bits aplicáveis ao proprietário. Tutorial primário aberto em 26/11/2026; o cenário autoral é RHEL 9 e a fonte é corroborativa."
+        },
+        {
+          "titulo": "GNU Coreutils — Structure of File Mode Bits",
+          "url": "https://www.gnu.org/software/coreutils/manual/html_node/Mode-Structure.html",
+          "localizador": "§27.1, trecho indexado do manual recuperado pela pesquisa em 26/11/2026: r permite listar o diretório, w permite alterar o arquivo, x permite acessar arquivos no diretório. As duas tentativas de abertura direta retornaram timeout; a solução também foi conferida nas páginas abertas da Red Hat e do Linux man-pages."
+        },
+        {
+          "titulo": "Programa-base — Sistemas Operacionais",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SISTEMAS OPERACIONAIS, linhas 116–131: Linux (Red Hat e Oracle Linux) e PowerShell. Lida também a observação final sobre legislação, linhas 213–217; as duas questões não cobram legislação."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 52, página 12, marcador === PAGINA 12 === da extração local lida. Apresentação de metadados Linux em bloco e comando objetivo. Cópia secundária do Qconcursos; uso exclusivamente editorial."
+        },
+        {
+          "titulo": "Metadados das referências reais da FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Entrada trt4-2022-ti-a14-001: origem copia_secundaria, URL do Qconcursos, caderno com 16 páginas. Consulta em 26/11/2026."
+        }
+      ],
+      "autor": "/root/s2_elab_08",
+      "dificuldadeEstimada": "média",
+      "estado": "PENDENTE_AUDITORIA",
+      "verificacoes": [
+        "Documental: páginas primárias da Red Hat, Linux man-pages e Oracle abertas; GNU consultado por trecho indexado, com timeout no acesso direto registrado na fonte.",
+        "Analítica: separadas a seleção da classe no diretório e no arquivo, a leitura do diretório, a busca por nome conhecido e a escrita no arquivo; conferidas as cinco sequências e a unicidade da proposta.",
+        "Analítica: explicitados usuário, grupo, fsuid/fsgid, ausência de ACL estendida e capacidades, travessia dos ancestrais e ausência de restrições adicionais; não foram executadas operações de arquivo em Linux.",
+        "Editorial: lidos o exemplo real FCC Q52/p.12, o cabeçalho A14 Tipo 001, os metadados de origem e as duas questões anteriores do elaborador; a questão não repete LRU nem sincronização."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 52,
+          "pagina": 12,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 12 ===; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia hospedada em https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "O exemplo apresenta um cenário de terminal Linux com metadados em bloco e solicita uma decisão objetiva entre cinco alternativas. A questão autoral apresenta metadados próprios de diretório e arquivo e pede uma sequência de resultados de acesso; não reproduz as lacunas nem os dados do exemplo.",
+          "limites": "Cópia secundária hospedada no Qconcursos, conforme fontes.json; foram lidos a extração local e os dados do caderno. Não se afirma download direto da FCC nem autenticação oficial de integridade. O exemplo fundamenta somente a construção editorial observada, sem provar frequência de formato ou correção técnica atual. A sintaxe de comando constante do exemplo histórico não foi adotada nem usada como fundamento técnico."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-08-0004",
+      "numero": 34,
+      "materia": "Sistemas Operacionais",
+      "topico": "PowerShell: pipeline de objetos e filtragem de serviços",
+      "versao": "v01",
+      "enunciado": "Em uma sessão do Windows PowerShell 5.1, no Windows Server 2022, a variável $servicos contém os objetos retornados por Get-Service para cinco serviços. As propriedades relevantes, capturadas no mesmo instante, são:\n\nName  DisplayName    Status\nAppZ  Coletor Z      Running\nAppB  App Backup     Stopped\nAppA  App Agente     Running\nSync  App Sincronia  Running\nBase  Servico Base   Running\n\nUm Analista precisa produzir objetos com as propriedades Name e Status, referentes somente aos serviços em execução cujo Name começa por App, ordenados de forma crescente por Name. Esses objetos serão utilizados em processamento posterior, que acessará as duas propriedades. Considere os cmdlets e operadores padrão, sem redefinições.\n\nO pipeline que atende a esses requisitos é",
+      "alternativas": {
+        "A": "$servicos | Where-Object { ($_.Status -eq 'Running') -or ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status",
+        "B": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Format-Table Name, Status",
+        "C": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.DisplayName -like 'App*') } | Sort-Object Name | Select-Object Name, Status",
+        "D": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status",
+        "E": "$servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -eq 'App*') } | Sort-Object Name | Select-Object Name, Status"
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende: -or aceita o serviço quando pelo menos uma condição é verdadeira. Inclui AppB, que está parado, e também Base e Sync, que estão em execução, mas não têm Name iniciado por App. Produz AppA, AppB, AppZ, Base e Sync.",
+        "B": "Não atende: a filtragem e a ordenação selecionam AppA e AppZ, mas Format-Table emite objetos internos de formatação que representam uma tabela. Sua saída não é a projeção de objetos com Name e Status exigida para o processamento posterior.",
+        "C": "Não atende: o padrão é aplicado a DisplayName. Assim, seleciona AppA e Sync; deixa de selecionar AppZ, cujo DisplayName é Coletor Z. O requisito usa a propriedade Name.",
+        "D": "Atende: -and exige simultaneamente Status igual a Running e Name compatível com App*. Sort-Object Name coloca AppA antes de AppZ, e Select-Object Name, Status produz objetos com as duas propriedades solicitadas.",
+        "E": "Não atende: -eq compara o nome com o texto literal App*, sem interpretar o asterisco como curinga. Nenhum Name da entrada é igual a esse texto, de modo que o pipeline não produz objetos."
+      },
+      "resolucao": "O pipeline recebe objetos, e $_ representa o objeto avaliado por Where-Object. As duas condições devem ser verdadeiras simultaneamente: Status igual a Running e Name iniciado por App. Para esse prefixo, usa-se -like 'App*', combinado com -and.\n\nAppZ e AppA satisfazem ambas as condições. AppB tem o prefixo, mas está parado. Sync e Base estão em execução, mas seus valores de Name não têm o prefixo. A ordenação crescente por Name produz AppA e AppZ. Select-Object Name, Status cria os objetos de saída com essas propriedades; ambos têm Status Running. Format-Table serve à apresentação e produz registros de formatação, inadequados ao requisito de reutilizar as propriedades Name e Status.",
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — about_Pipelines — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-5.1",
+          "localizador": "Long description; Using pipelines; How pipelines work — One-at-a-time processing. Fluxo de objetos entre cmdlets. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — Get-Service — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-5.1",
+          "localizador": "Description; exemplos 1, 2, 3 e 5. Retorno de objetos de serviço, distinção entre Name e DisplayName e filtro por Status Running. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — Where-Object — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object?view=powershell-5.1",
+          "localizador": "Description; exemplo 1, Get stopped services, sobre $_; exemplo 6, Use multiple conditions. Filtragem de objetos por propriedades e combinação de condições. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — about_Logical_Operators — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logical_operators?view=powershell-5.1",
+          "localizador": "Long description; definições Logical AND (-and) e Logical OR (-or). Sustenta a diferença de seleção entre as alternativas que usam conjunção e disjunção. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — about_Comparison_Operators — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1",
+          "localizador": "Equality operators — -eq and -ne; Matching operators — -like and -notlike. Igualdade literal e correspondência por padrão com curinga. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — Sort-Object — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-5.1",
+          "localizador": "Description; parâmetros -Property e -Descending. Ordenação pelos valores da propriedade; ordem padrão crescente. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — Select-Object — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-5.1",
+          "localizador": "Description; exemplo 1, Select objects by property. A seleção de propriedades retorna novos objetos com as propriedades especificadas. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Microsoft Learn — Format-Table — Windows PowerShell 5.1",
+          "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-5.1",
+          "localizador": "Outputs — Microsoft.PowerShell.Commands.Internal.Format. O cmdlet retorna objetos de formatação que representam a tabela, e não a projeção de dados solicitada. Página primária aberta em 26/11/2026."
+        },
+        {
+          "titulo": "Programa-base — Sistemas Operacionais",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SISTEMAS OPERACIONAIS, linhas 116–131: Linux (Red Hat e Oracle Linux) e PowerShell. Lida também a observação final sobre legislação, linhas 213–217; as duas questões não cobram legislação."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 47, página 11, marcador === PAGINA 11 === da extração local lida. Tarefa concreta com escolha entre cinco comandos. Cópia secundária do Qconcursos; uso exclusivamente editorial."
+        },
+        {
+          "titulo": "Metadados das referências reais da FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Entrada trt4-2022-ti-a14-001: origem copia_secundaria, URL do Qconcursos, caderno com 16 páginas. Consulta em 26/11/2026."
+        }
+      ],
+      "autor": "/root/s2_elab_08",
+      "dificuldadeEstimada": "média",
+      "estado": "PENDENTE_AUDITORIA",
+      "verificacoes": [
+        "Documental: abertas as oito páginas primárias Microsoft Learn com view=powershell-5.1; conferidos o pipeline de objetos, os cmdlets e os operadores usados nas cinco alternativas.",
+        "Analítica: avaliados os cinco serviços contra as duas condições e conferida a distinção entre Name e DisplayName, igualdade e padrão, seleção de propriedades e formatação.",
+        "Executada em memória: Windows PowerShell 5.1.26100.9818, Microsoft Windows NT 10.0.26200.0. Foram criados cinco PSCustomObject com Name e DisplayName da tabela e Status do enum System.ServiceProcess.ServiceControllerStatus, após carregar o assembly System.ServiceProcess. Não foi executado Get-Service nem uma sessão em Windows Server 2022.",
+        "Resultados observados em memória: A produziu AppA, AppB, AppZ, Base, Sync; B produziu objetos Microsoft.PowerShell.Commands.Internal.Format; C produziu AppA, Sync; D produziu AppA, AppZ, ambos Running, com as propriedades Name e Status; E produziu zero objetos. Nenhum serviço foi alterado e nenhum arquivo de teste foi criado.",
+        "Editorial: lidos o exemplo real FCC Q47/p.11, o cabeçalho A14 Tipo 001, os metadados de origem e as questões anteriores do elaborador; o objetivo de PowerShell é novo no rodízio."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 47,
+          "pagina": 11,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 11 ===; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia hospedada em https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "O exemplo parte de uma tarefa técnica concreta e pede escolher o comando que a executa, com cinco alternativas em código. A questão autoral aplica essa construção à escolha de um pipeline, com entrada declarada e critérios de seleção, ordenação e preservação de propriedades.",
+          "limites": "Cópia secundária hospedada no Qconcursos, conforme fontes.json; foram lidos a extração local e os dados do caderno. Não se afirma download direto da FCC nem autenticação oficial de integridade. O exemplo fundamenta somente a construção editorial observada, sem provar frequência de formato ou correção técnica atual. O exemplo é de comando Linux, e não comprova uma convenção específica de questões FCC sobre PowerShell."
+        }
+      ]
+    }
+  ]
+}

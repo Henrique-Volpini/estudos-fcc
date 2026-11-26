@@ -1,0 +1,21 @@
+ID: BAN-DS-03-0012
+Versão: v01
+Matéria: Programação
+Tópico: PHP: pesquisa em arrays
+
+ENUNCIADO
+Em PHP 8.2, considere:
+
+<?php
+$codigos = [12, "12", 24];
+$a = array_search("12", $codigos);
+$b = array_search("12", $codigos, true);
+echo $a . ":" . $b . ":" . ($a !== false ? "S" : "N");
+
+O texto exibido é
+
+A) 0:1:N
+B) 1:1:S
+C) 0:1:S
+D) 0:0:S
+E) 1:0:N

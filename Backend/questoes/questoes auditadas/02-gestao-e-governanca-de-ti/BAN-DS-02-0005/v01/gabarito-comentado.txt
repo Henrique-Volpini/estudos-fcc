@@ -1,0 +1,43 @@
+ID: BAN-DS-02-0005
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar o ROI simples acumulado nos três anos, pela fórmula e hipóteses declaradas.
+
+RESOLUÇÃO
+No mesmo horizonte de três anos, os benefícios monetários são 3 × R$ 180.000,00 = R$ 540.000,00. Os custos são R$ 240.000,00 + 3 × R$ 40.000,00 = R$ 360.000,00. O benefício líquido é R$ 540.000,00 − R$ 360.000,00 = R$ 180.000,00. Pela convenção explicitamente adotada no enunciado, ROI = (R$ 180.000,00 / R$ 360.000,00) × 100 = 50%. Não se aplica desconto nem se divide o percentual por três, pois o comando pede o retorno simples acumulado, sem anualização. Os valores são dados fictícios do problema e não provêm do estudo usado para conferir a fórmula.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. 33,33% resulta, aproximadamente, de 180.000 / 540.000 × 100, usando os benefícios totais como denominador. A fórmula fixada exige dividir o benefício líquido pelos custos totais de R$ 360.000,00.
+B) Atende. Os benefícios somam R$ 540.000,00 e os custos somam R$ 360.000,00. O benefício líquido é R$ 180.000,00, e 180.000 / 360.000 × 100 = 50%.
+C) Não atende. 75% resulta de 180.000 / 240.000 × 100, dividindo o benefício líquido apenas pelo custo inicial. O denominador deve incluir também os R$ 120.000,00 de operação e manutenção do período.
+D) Não atende. 125% resulta de (540.000 − 240.000) / 240.000 × 100, omitindo operação e manutenção tanto na apuração do benefício líquido quanto no denominador. Esses custos foram expressamente incluídos na avaliação.
+E) Não atende. 150% resulta de 540.000 / 360.000 × 100, comparando o benefício bruto ao custo total. O ROI adotado usa o benefício líquido, isto é, o benefício total após subtrair o custo total.
+
+FONTES TÉCNICAS CONSULTADAS
+- Forrester Consulting – The Total Economic Impact of Microsoft Unified, março de 2025. Glossary → Financial Terminology → RETURN ON INVESTMENT (ROI); e Total Economic Impact Approach → Costs. Consulta: 2026-11-26.
+  URL: https://tei.forrester.com/go/microsoft/unified/?lang=en-us
+  Fundamentação: Fonte primária da metodologia publicada pelo próprio autor do estudo: retorno percentual como benefícios líquidos divididos pelos custos; custos abrangem implantação e continuidade. Estudo encomendado pela Microsoft; não foram usados seus resultados comerciais ou taxas de desconto.
+- Conteúdo programático local – Desenvolvimento de Sistemas. Bloco Gestão e Governança de Tecnologia da Informação: gestão financeira de TI (TCO, ROI, CAPEX, OPEX e FinOps). Consulta: 2026-11-26.
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+- FCC – TRF4/2007 – Analista Judiciário – Informática. MODELO – Caderno de Prova, Cargo I, Tipo 001, questão 20, página 5. Consulta: 2026-11-26.
+  URL: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf
+  Fundamentação: Referência histórica de problema financeiro com base de cálculo explícita e alternativas percentuais.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário – Informática; 2007.
+- Caderno, questão e página: MODELO – Cargo I, Tipo 001; questão 20; página 5.
+- Origem verificável: Fonte primária do órgão TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Problema numérico autoral da FCC com cenário de aquisição, base de custo explicitada e cinco respostas percentuais curtas.
+- Aplicação nesta questão autoral: Cenário financeiro com valores completos e comando de resultado percentual; dados, horizonte, fórmula, objetivo e distratores foram criados para ROI de TI.
+- Limites da referência: Referência histórica de 2007, obtida no próprio TRF4. Sustenta apenas o formato de problema numérico e alternativas percentuais; não demonstra incidência atual de ROI, não fornece os valores fictícios desta questão e não substitui a fonte de gestão financeira.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultada a definição de ROI na metodologia original de Forrester. O enunciado explicita a convenção de cálculo e exclui desconto e anualização, pois essas escolhas podem variar entre análises financeiras.
+- Analítica: somados todos os custos e benefícios no mesmo horizonte; cada percentual distrator foi reconstruído a partir de uma confusão de base de cálculo ou omissão de custo.
+- Aritmética executada em memória com Python 3.14: implantação=240000; custoAnual=40000; beneficioAnual=180000; anos=3; custos=360000; beneficios=540000; liquido=180000; ROI=50.0. Trata-se de conferência aritmética, sem criar arquivo de teste.
+- Editorial: lida e inspecionada em imagem recortada renderizada em memória a questão 20, página 5, do PDF TRF4/2007 local.
+- Rodízio: a questão anterior BAN-DS-02-0002 pedia comparação de TCO entre duas soluções; esta exige retorno líquido relativo de uma única iniciativa e delimita a convenção de ROI.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria independente.

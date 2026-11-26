@@ -1,0 +1,34 @@
+ID: BAN-DS-07-0004
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a ação que reverte a aplicação e preserva as gravações válidas nas condições descritas.
+
+RESOLUÇÃO
+A reversão aproveita a versão 1 preservada no blue: basta direcionar a ele as novas requisições nas condições declaradas. O banco compartilhado já contém as gravações válidas, e a compatibilidade de esquema, dados e sessões foi explicitada. Portanto, o rollback da aplicação não exige restaurar um snapshot nem eliminar campos. A conclusão depende dessas premissas; uma mudança incompatível de esquema ou de estado exigiria outro planejamento.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O snapshot anterior exclui as gravações válidas posteriores, contrariando a preservação exigida. A compatibilidade declarada dispensa esse retorno do banco.
+B) Não atende. Reiniciar a mesma versão mantém o código com a regressão; não restaura a versão 1 nem usa o blue para receber o tráfego.
+C) Atende. O blue preservado executa a versão 1 e suporta a carga. O banco atual, seu esquema e as sessões são compatíveis com ela; a troca de tráfego reverte a aplicação sem desfazer gravações.
+D) Não atende. Remover campos usados pela versão 1 rompe a compatibilidade necessária ao blue. A simples escolha do ambiente anterior não neutraliza uma alteração destrutiva do esquema.
+E) Não atende. Copiar a versão 2 para o blue mantém a regressão e elimina a versão 1 desse ambiente. A cor ou o nome do ambiente não determina a versão executada.
+
+FONTES TÉCNICAS E EDITORIAIS CONSULTADAS
+- AWS Whitepaper — Blue/Green Deployments on AWS — Introduction. https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/introduction.html. Localizador: Blue/Green Deployment Methodology, parágrafos sobre redirecionamento de tráfego e retorno ao ambiente blue. Sustenta: Troca de tráfego entre ambientes e rollback da aplicação pela volta ao ambiente anterior preservado. Consulta: 2026-11-26.
+- AWS Whitepaper — Best Practices for Managing Data Synchronization and Schema Changes. https://docs.aws.amazon.com/whitepapers/latest/blue-green-deployments/best-practices-for-managing-data-synchronization-and-schema-changes.html. Localizador: Best Practices for Managing Data Synchronization and Schema Changes; Decoupling Schema Changes from Code Changes. Sustenta: Dados atuais para rollback, banco compartilhado e compatibilidade entre versões; remoções de esquema podem tornar a versão anterior inoperante. Consulta: 2026-11-26.
+- FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14 Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 32, página 8. Sustenta: Formato editorial de contexto tecnológico seguido de cinco afirmações sobre funcionamento, com os limites registrados na referência de estilo. Consulta: 2026-11-26.
+- Metadados do acervo de referências FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador: fontes, id trt4-2022-ti-a14-001. Sustenta: Identificação da cópia secundária e dos arquivos locais consultados. Consulta: 2026-11-26.
+- Conteúdo programático — Conhecimentos específicos — Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: DEVOPS E DEVSECOPS: estratégias de blue/green deployment e canary releases. Observação final sobre legislação consultada.. Sustenta: Delimitação do tópico cobrado. Consulta: 2026-11-26.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf.
+- Característica observada e aplicação nesta questão autoral: Contextualização de uma tecnologia em cenário de microsserviços, seguida de cinco afirmações sobre seu funcionamento. Aplicação autoral: o cenário operacional delimita blue/green e as cinco opções apresentam ações comparáveis para o mesmo objetivo, sem reproduzir o conteúdo de Spring Cloud Config.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, identificada em fontes.json; a extração textual local foi efetivamente lida. Não se afirma download da FCC nem integridade oficial. O exemplo sustenta apenas o formato observado, sem comprovar frequência editorial ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+Documental: páginas primárias da AWS navegadas em 26/11/2026 e exemplo FCC lido na extração local. Analítica: cada alternativa foi confrontada com versão executada, destino do tráfego, persistência dos dados e compatibilidade do esquema. Não houve execução de deployment, migração ou teste de software. Conferida a distinção em relação aos objetivos das três questões anteriores do elaborador 07.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Auditorias posteriores ainda não realizadas; a proposta permanece PENDENTE_AUDITORIA.

@@ -1,0 +1,192 @@
+{
+  "elaborador": "10",
+  "responsavel": "/root/s2_elab_10",
+  "questoes": [
+    {
+      "id": "BAN-DS-10-0003",
+      "numero": 38,
+      "materia": "Serviços e gerenciamento de redes",
+      "topico": "DHCP: concessão inicial de endereços",
+      "versao": "v01",
+      "enunciado": "Um computador inicia um cliente DHCPv4 no estado INIT, sem endereço configurado, sem concessão anterior armazenada e sem servidor DHCP pré-configurado. Na mesma sub-rede, sem agente de retransmissão, ele transmite DHCPDISCOVER em broadcast e recebe duas ofertas válidas, de S1 e S2. O cliente seleciona a oferta de S2. Considere que a concessão será concluída sem perdas de mensagens ou conflito de endereços.\n\nPara solicitar a oferta escolhida, a próxima mensagem do cliente e a posterior mensagem de confirmação da concessão são, respectivamente,",
+      "alternativas": {
+        "A": "DHCPREQUEST, por unicast somente a S2; DHCPACK, enviado por S2.",
+        "B": "DHCPACK, em broadcast identificando S2 como escolhido; DHCPREQUEST, enviado por S2.",
+        "C": "DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPACK, enviado por S2.",
+        "D": "DHCPDECLINE, em broadcast identificando S1 como rejeitado; DHCPACK, enviado por S2.",
+        "E": "DHCPREQUEST, em broadcast identificando S2 como escolhido; DHCPOFFER, enviado por S2."
+      },
+      "gabarito": "C",
+      "resolucao": "A concessão inicial segue DHCPDISCOVER → DHCPOFFER → DHCPREQUEST → DHCPACK, sequência conhecida como DORA. Após selecionar S2, o cliente transmite DHCPREQUEST em broadcast com a opção server identifier indicando S2 e a opção requested IP address com o endereço ofertado. S1 interpreta a seleção como rejeição implícita de sua oferta. S2 confirma a vinculação e responde DHCPACK. A oferta isolada não conclui a concessão. O cenário é de seleção inicial, não de renovação: em RENEWING o DHCPREQUEST é unicast e não contém server identifier. Não se está afirmando que toda mensagem DHCPREQUEST seja broadcast.",
+      "justificativas": {
+        "A": "Não atende: o DHCPREQUEST que seleciona uma oferta nessa concessão inicial deve ser transmitido em broadcast, permitindo que os demais servidores identifiquem a escolha. O DHCPACK de S2 está adequado. O unicast do DHCPREQUEST ocorre, por exemplo, na renovação em RENEWING, estado ausente do cenário.",
+        "B": "Não atende: inverte os papéis das mensagens. O cliente solicita os parâmetros com DHCPREQUEST; a confirmação DHCPACK é emitida pelo servidor, que não solicita sua própria oferta por DHCPREQUEST.",
+        "C": "Atende: o DHCPREQUEST em broadcast identifica S2 na opção server identifier e solicita a oferta escolhida; S2 responde DHCPACK para confirmar a concessão. A opção requested IP address deve conter o endereço da oferta de S2.",
+        "D": "Não atende: DHCPDECLINE comunica que o endereço oferecido está em uso; não é a mensagem para rejeitar uma oferta em favor de outra. S1 conhece a rejeição implicitamente ao receber DHCPREQUEST indicando S2. Não há conflito de endereços no cenário.",
+        "E": "Não atende: a primeira mensagem está adequada, mas DHCPOFFER é a proposta em resposta à descoberta. Depois da seleção por DHCPREQUEST, a confirmação bem-sucedida é DHCPACK, não uma nova oferta."
+      },
+      "fontes": [
+        {
+          "titulo": "Conteúdo programático — Serviços e gerenciamento de redes",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 149–163: DHCP e ferramentas de monitoramento e logs, incluindo Prometheus."
+        },
+        {
+          "titulo": "Questões anteriores do SIM-001 para controle de rodízio",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json",
+          "localizador": "Itens BAN-DS-10-0001 e BAN-DS-10-0002: SNMP/MIB e virtual hosts do Apache; objetivos distintos dos atuais."
+        },
+        {
+          "titulo": "RFC 2131 — Dynamic Host Configuration Protocol, R. Droms, março de 1997",
+          "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+          "localizador": "§3.1, passos 1–5, tabela 2 e figura 3, pp.13–17: sequência inicial e papéis das mensagens; §4.3.2, SELECTING, p.31: server identifier e requested IP address; §4.4.1, p.36: INIT; §4.4.5, p.40: DHCPREQUEST unicast em RENEWING, sem server identifier. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "FCC/TRF4 2007 — Analista Judiciário, Informática, Cargo I, Tipo 001",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+          "localizador": "p.8, questão 44; extração local lida; origem primária do órgão identificada em fontes.json; referência histórica de formato."
+        },
+        {
+          "titulo": "FCC/TRT4 2022 — Analista Judiciário, Tecnologia da Informação, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "p.8, questão 33; extração local lida; cópia secundária do Qconcursos, sem declaração de download ou integridade oficial da FCC."
+        },
+        {
+          "titulo": "Metadados das referências reais FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; URLs, origem primária/secundária e identificação dos arquivos."
+        }
+      ],
+      "autor": "/root/s2_elab_10",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: RFC 2131 efetivamente aberta e lida via navegação em 26/11/2026, especialmente §3.1, §4.3.2 e §4.4.1; consultado §4.4.5 para delimitar a diferença da renovação.",
+        "Editorial documental: lidas as extrações FCC TRF4/2007 Q44 p.8 e TRT4/2022 Q33 p.8, suas identificações e os metadados de origem; somente os traços indicados foram utilizados.",
+        "Analítica: cada alternativa foi confrontada com o estado inicial e com a mensagem de confirmação; hipóteses sem perda e sem conflito afastam retransmissão, DHCPNAK e DHCPDECLINE como continuação bem-sucedida.",
+        "Rodízio: lidas BAN-DS-10-0001 e BAN-DS-10-0002 em questoes-anteriores.json; nenhuma pergunta anterior cobra DHCP.",
+        "Conferência local de entrega: arquivos relidos como UTF-8, estrutura JSON e correspondência literal do enunciado, alternativas, resolução e justificativas com os TXT conferidas em memória. Não houve execução de cliente ou servidor DHCP nem captura de rede."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 44,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, === PAGINA 8 ===, e metadados em fontes.json; PDF obtido no próprio TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "caracteristicaAplicada": "Comando objetivo de serviços de rede com cinco alternativas técnicas comparáveis. A questão autoral amplia a cobrança para interpretar a seleção de oferta na concessão inicial, sem reutilizar o comando nem as alternativas do exemplo.",
+          "limites": "Referência histórica de formato consultada pela extração local; não comprova frequência da banca nem substitui a RFC para a solução técnica."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, === PAGINA 8 ===, e metadados em fontes.json; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Cenário técnico delimitado, seguido de identificação ordenada com comando respectivamente e cinco opções paralelas. Na questão DHCP, a associação ordenada relaciona a mensagem do cliente à confirmação pelo servidor.",
+          "limites": "Cópia secundária do Qconcursos; não se declara download direto da FCC nem assinatura ou integridade oficial. O exemplo sustenta a construção editorial, sem validar a técnica da questão autoral ou demonstrar frequência de formatos."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-10-0004",
+      "numero": 39,
+      "materia": "Serviços e gerenciamento de redes",
+      "topico": "Prometheus: coleta de métricas e papel do Alertmanager",
+      "versao": "v01",
+      "enunciado": "Uma instituição utiliza Prometheus em modo servidor e Alertmanager para monitorar aplicações que já expõem métricas em endpoints HTTP. A equipe deve distribuir as seguintes atividades entre esses dois componentes:\n\nI. Consultar periodicamente os endpoints e armazenar as amostras coletadas como séries temporais.\nII. Avaliar regras sobre essas séries para gerar alertas quando as condições configuradas forem atendidas.\nIII. Agrupar os alertas recebidos e encaminhar as notificações aos destinatários definidos na configuração.\n\nNa arquitetura desses componentes, as atividades I, II e III cabem, correta e respectivamente, a",
+      "alternativas": {
+        "A": "Prometheus, Prometheus e Alertmanager.",
+        "B": "Prometheus, Alertmanager e Alertmanager.",
+        "C": "Alertmanager, Prometheus e Prometheus.",
+        "D": "Prometheus, Alertmanager e Prometheus.",
+        "E": "Alertmanager, Prometheus e Alertmanager."
+      },
+      "gabarito": "A",
+      "resolucao": "I cabe ao Prometheus: o servidor consulta os endpoints HTTP pelo modelo pull e armazena as amostras em séries temporais. II também cabe ao Prometheus: suas regras de alerta são avaliadas sobre os dados coletados, e os alertas resultantes são enviados ao Alertmanager. III cabe ao Alertmanager: ele recebe alertas, agrupa-os e encaminha notificações aos receptores configurados, além de oferecer deduplicação, silenciamento e inibição. O Alertmanager não assume a coleta e o armazenamento das métricas nem a avaliação das regras de alerta do servidor.",
+      "justificativas": {
+        "A": "Atende: atribui I e II ao servidor Prometheus, responsável pela coleta, armazenamento e avaliação de regras, e III ao Alertmanager, responsável por agrupar alertas e rotear suas notificações.",
+        "B": "Não atende: I e III estão atribuídas adequadamente, mas II foi transferida ao Alertmanager. As regras sobre as séries temporais são avaliadas no Prometheus; o Alertmanager recebe os alertas já gerados.",
+        "C": "Não atende: II está atribuída adequadamente, mas I e III estão trocadas. O Prometheus coleta e armazena as métricas, enquanto o Alertmanager agrupa os alertas recebidos e encaminha as notificações.",
+        "D": "Não atende: I está atribuída adequadamente, mas II e III estão invertidas. O Prometheus avalia as regras de alerta, e o Alertmanager executa o agrupamento e o encaminhamento das notificações.",
+        "E": "Não atende: II e III estão atribuídas adequadamente, mas I foi transferida ao Alertmanager. A consulta periódica dos endpoints e o armazenamento das séries temporais são funções do servidor Prometheus."
+      },
+      "fontes": [
+        {
+          "titulo": "Conteúdo programático — Serviços e gerenciamento de redes",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 149–163: DHCP e ferramentas de monitoramento e logs, incluindo Prometheus."
+        },
+        {
+          "titulo": "Questões anteriores do SIM-001 para controle de rodízio",
+          "arquivo": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json",
+          "localizador": "Itens BAN-DS-10-0001 e BAN-DS-10-0002: SNMP/MIB e virtual hosts do Apache; objetivos distintos dos atuais."
+        },
+        {
+          "titulo": "Prometheus — Overview, documentação oficial",
+          "url": "https://prometheus.io/docs/introduction/overview/",
+          "localizador": "Features: pull model over HTTP; Components: servidor que coleta e armazena séries temporais; Architecture: coleta, armazenamento e execução de regras para gerar alertas. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "Prometheus — Alerting overview, documentação oficial",
+          "url": "https://prometheus.io/docs/alerting/latest/overview/",
+          "localizador": "Parágrafo inicial e passos de configuração: regras de alerta no servidor Prometheus enviam alertas ao Alertmanager, que gerencia agregação e envio de notificações. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "Prometheus — Alertmanager, documentação oficial",
+          "url": "https://prometheus.io/docs/alerting/latest/alertmanager/",
+          "localizador": "Introdução e seções Architecture, Grouping, Inhibition e Silences: recebimento, agrupamento, deduplicação, roteamento e gerenciamento das notificações. Navegada em 26/11/2026."
+        },
+        {
+          "titulo": "FCC/TRT4 2022 — Analista Judiciário, Tecnologia da Informação, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "p.8, questões 32 e 33; extração local lida; capacidades de produto e identificação ordenada em cenário técnico; cópia secundária do Qconcursos, sem declaração de download ou integridade oficial da FCC."
+        },
+        {
+          "titulo": "Metadados das referências reais FCC",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; URLs, origem primária/secundária e identificação dos arquivos."
+        }
+      ],
+      "autor": "/root/s2_elab_10",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: páginas oficiais Overview, Alerting overview e Alertmanager efetivamente navegadas em 26/11/2026; conferidos coleta HTTP, armazenamento de séries, avaliação das regras e gerenciamento de notificações.",
+        "Editorial documental: lidas as extrações FCC TRT4/2022 Q32 e Q33, p.8, com identificação de cargo/caderno e metadados de origem secundária. Não foi alegada consulta direta a uma publicação da FCC.",
+        "Analítica: I, II e III foram associadas separadamente aos componentes e depois confrontadas com todas as cinco combinações; somente uma reúne as três atribuições documentadas.",
+        "Rodízio: lidas BAN-DS-10-0001 e BAN-DS-10-0002 em questoes-anteriores.json; o objetivo atual não repete SNMP/MIB nem seleção de virtual host Apache.",
+        "Conferência local de entrega: arquivos relidos como UTF-8, estrutura JSON e correspondência literal do enunciado, alternativas, resolução e justificativas com os TXT conferidas em memória. Não foram implantados Prometheus ou Alertmanager nem executadas consultas ou regras."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, === PAGINA 8 ===, e metadados em fontes.json; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Identificação expressa de um produto de infraestrutura e cobrança objetiva de suas capacidades. Na questão autoral, Prometheus e Alertmanager são nomeados e suas atribuições são associadas a três atividades concretas.",
+          "limites": "Cópia secundária do Qconcursos; não se declara download direto da FCC nem assinatura ou integridade oficial. O exemplo sustenta a construção editorial, sem validar a técnica da questão autoral ou demonstrar frequência de formatos."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, === PAGINA 8 ===, e metadados em fontes.json; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Cenário de TI seguido da identificação de componentes em ordem determinada e cinco opções paralelas com respectivamente. A questão autoral utiliza três atividades em vez das duas anotações do exemplo; cenário e alternativas são novos.",
+          "limites": "Cópia secundária do Qconcursos; não se declara download direto da FCC nem assinatura ou integridade oficial. O exemplo sustenta a construção editorial, sem validar a técnica da questão autoral ou demonstrar frequência de formatos."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+ID: BAN-DS-03-0009
+Versão: v01
+Matéria: Programação
+Tópico: Java: sobrecarga de métodos
+
+ENUNCIADO
+Considere o seguinte programa Java 21:
+
+public class Selecao {
+    static String escolher(long valor) { return "L"; }
+    static String escolher(Integer valor) { return "I"; }
+    static String escolher(Number valor) { return "N"; }
+
+    public static void main(String[] args) {
+        int a = 5;
+        Integer b = 5;
+        Number c = b;
+        System.out.print(escolher(a) + escolher(b) + escolher(c));
+    }
+}
+
+O texto exibido ao executar main é
+
+A) LIN
+B) IIN
+C) LII
+D) NIN
+E) LLN

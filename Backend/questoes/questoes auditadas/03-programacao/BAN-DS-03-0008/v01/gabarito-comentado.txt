@@ -1,0 +1,33 @@
+ID: BAN-DS-03-0008
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Determinar o resultado exibido pelo código nas condições declaradas.
+
+RESOLUÇÃO
+A lista padrão é criada quando a definição da função é executada. A primeira chamada insere A nessa lista e retorna 1. A segunda recebe explicitamente outra lista vazia, insere B e retorna 1. A terceira reutiliza a lista padrão, que passa a conter A e C, retornando 2. A quarta acrescenta D à mesma lista e retorna 3. Como print separa os argumentos por espaços, a saída é 1 1 2 3.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. As chamadas que omitem historico reutilizam a lista padrão; ela não é recriada a cada chamada.
+B) Não atende. A lista explícita da segunda chamada é distinta da lista padrão; essa chamada não produz o segundo elemento da lista padrão.
+C) Não atende. A segunda chamada não reinicializa o argumento padrão. A terceira chamada já encontra o elemento A nessa lista.
+D) Atende. As chamadas com A, C e D acrescentam elementos à mesma lista padrão, produzindo comprimentos 1, 2 e 3. A chamada com B usa outra lista e produz 1.
+E) Não atende. A segunda chamada recebe uma lista vazia própria e retorna 1, não 2; apenas as demais compartilham a lista padrão.
+
+FONTES TÉCNICAS CONSULTADAS
+- Python Software Foundation — The Python Tutorial, More Control Flow Tools. https://docs.python.org/3.12/tutorial/controlflow.html#default-argument-values. Localizador: §4.9.1 Default Argument Values: avaliação única do padrão mutável e argumento explícito.
+- Programa-base — Programação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 39–58; recorte: conhecimento das linguagens PHP, Python, C, Java e C#;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2015.
+- Caderno, questão e página: Não obtido; Q566693 (identificador do acervo; número original não obtido); Não obtida; página HTML e imagem do programa.
+- Origem verificável: https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76; arquivo efetivamente consultado: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg.
+- Característica observada e aplicação autoral: Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.
+- Limites da referência: Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultada a documentação oficial do Python 3.12 sobre valores padrão; a regra usada também vale no Python 3 da execução declarada.
+- Analítica: rastreadas separadamente a lista padrão e a lista explícita, com conferência individual das cinco sequências.
+- Executada em memória: CPython 3.14.10, sem entrada externa, com o código integral do enunciado em namespace novo; saída observada '1 1 2 3\n'. Nenhum arquivo de teste foi criado.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguarda auditoria independente.

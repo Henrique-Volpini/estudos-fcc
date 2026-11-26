@@ -1,0 +1,15 @@
+ID: BAN-DS-01-0008
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: Gestão de configuração: baseline e controle de mudanças
+
+ENUNCIADO
+Uma equipe aprovou formalmente a baseline H1 de um sistema para homologação. Ela identifica as versões do código-fonte, dos requisitos, dos scripts de construção e dos casos de teste utilizados. Durante a homologação, foi solicitada uma alteração de uma regra de cálculo, com impacto nesses itens. A alteração ainda não foi autorizada.
+
+Para tratar a solicitação por meio da gestão da configuração, a equipe deve
+
+A) atualizar os arquivos de H1 a cada commit de desenvolvimento, pois a baseline corresponde às versões mais recentes existentes no repositório.
+B) rejeitar a solicitação até o término da homologação, pois a aprovação de uma baseline impede a criação de uma nova configuração durante essa etapa.
+C) implementar a alteração e atualizar H1 antes da autorização, pois o registro do commit substitui a aprovação exigida pelo controle de mudanças.
+D) submeter a solicitação à análise e à autorização previstas, registrar as novas versões e estabelecer a baseline atualizada de modo controlado, preservando H1.
+E) controlar a alteração apenas no código-fonte, pois requisitos, scripts de construção e casos de teste não integram itens sujeitos ao controle de configuração.

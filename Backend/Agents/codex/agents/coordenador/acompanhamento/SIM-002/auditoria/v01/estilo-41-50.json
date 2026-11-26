@@ -1,0 +1,229 @@
+[
+  {
+    "id": "BAN-DS-11-0006",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 38,
+        "pagina": 9,
+        "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+        "caracteristicaAplicada": "A questão 38 organiza quatro itens numerados e pede uma combinação limitada aos itens pertinentes, com cinco opções. A estrutura foi aplicada a quatro processos autorais de autenticação; o comando usa APENAS e as alternativas trazem pares comparáveis, sem aproveitar o conteúdo normativo antigo da referência.",
+        "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-11-0007",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 37,
+        "pagina": 9,
+        "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+        "caracteristicaAplicada": "A questão 37 situa um profissional em uma implantação, enuncia um objetivo e apresenta cinco alternativas técnicas. Foi aplicado o cenário funcional seguido de decisão técnica, com alternativas autorais de correção de uma API e sem copiar o padrão ou o vocabulário das alternativas originais.",
+        "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-11-0008",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 39,
+        "pagina": 9,
+        "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; procedência registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json",
+        "caracteristicaAplicada": "A questão 39 atribui expressamente a cobrança a uma publicação e propõe cinco alternativas do mesmo domínio técnico. A atribuição normativa foi aplicada à edição exata NIST SP 800-61 Rev. 3, com cenário autoral de recuperação e cinco condutas comparáveis; não se reproduziu o conteúdo da norma antiga do exemplo.",
+        "limites": "Foi consultada a extração local, com marcador de página 9, do caderno identificado nos metadados locais. O PDF é uma cópia hospedada no Qconcursos; não foi tratado como download da FCC nem como prova de integridade oficial. A referência sustenta apenas a construção editorial observada, não a correção técnica atual nem uma frequência geral de formatos da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-12-0003",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 48,
+        "pagina": 11,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de integridade oficial.",
+        "caracteristicaAplicada": "A questão real apresenta condições técnicas e pede identificar o conceito correspondente. A autoral apresenta condições completas de implantação e uso de provedores e exige identificar os conceitos aplicáveis.",
+        "limites": "Referência de construção editorial; tema e alternativas autorais. Não comprova correção técnica atual nem frequência desse formato na FCC."
+      },
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 59,
+        "pagina": 14,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou integridade oficial.",
+        "caracteristicaAplicada": "A questão real exige relacionar dois conceitos em alternativas comparáveis. A autoral mantém o mesmo comando para as cinco opções, que relacionam composição híbrida e diversidade de provedores com uma justificativa concreta.",
+        "limites": "Referência de formato em TI; não transplanta afirmações sobre COBIT para nuvem nem generaliza um exemplo como regra da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-12-0004",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional Federal da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+        "ano": 2007,
+        "caderno": "Cargo I, Tipo 001",
+        "questao": 20,
+        "pagina": 5,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF obtido no próprio órgão em https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+        "caracteristicaAplicada": "A questão real fixa uma situação quantitativa e solicita um resultado financeiro dedutível dos dados. A autoral apresenta custos, orçamentos e regra de rateio completos, exigindo cálculo e interpretação do desvio.",
+        "limites": "Referência histórica de formato, situada em Conhecimentos Gerais do caderno; não é fonte de práticas atuais de nuvem nem demonstra frequência de cobrança."
+      },
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 59,
+        "pagina": 14,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou integridade oficial.",
+        "caracteristicaAplicada": "A questão real usa alternativas que respondem, na mesma ordem, aos elementos solicitados. A autoral mantém paralelismo: total de Cartões, total de Crédito e resultado do acompanhamento.",
+        "limites": "Referência de comando e organização das alternativas; não fundamenta rateios ou práticas FinOps nem comprova correção técnica atual."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-13-0002",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 33,
+        "pagina": 8,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF de origem https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Cópia secundária hospedada no Qconcursos, sem afirmação de download da FCC ou de integridade oficial.",
+        "caracteristicaAplicada": "O exemplo real apresenta um Analista em um cenário técnico delimitado e solicita uma conclusão objetiva. A autoral também fixa o ambiente, a ocorrência e as condições necessárias antes do comando, preservando autoria do cenário e do conteúdo.",
+        "limites": "Referência editorial de cenário e comando; não fundamenta Rancher ou Kubernetes e não demonstra frequência de cobrança."
+      },
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 36,
+        "pagina": 9,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; mesmo PDF de origem hospedado no Qconcursos e identificado na referência anterior. Cópia secundária, sem certificação de integridade oficial.",
+        "caracteristicaAplicada": "O exemplo real pede a conclusão correta de um Analista e oferece cinco afirmações técnicas com relações entre conceitos. A autoral adota esse comando e cinco consequências comparáveis de um mesmo incidente, com distratores que confundem gestão Rancher e execução Kubernetes.",
+        "limites": "Referência da organização da questão, não de correção técnica atual nem de uma regra universal de estilo FCC. A questão real trata de assinatura digital; o conteúdo autoral e suas alternativas não foram transpostos."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-14-0002",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário – Área Apoio Especializado – Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 33,
+        "pagina": 8,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, de cópia secundária hospedada no Qconcursos; URL e origem registradas em fontes.json.",
+        "caracteristicaAplicada": "Um profissional de TI atua em cenário delimitado; o comando pede correspondência em ordem, com alternativas paralelas. Aplicado à seleção dos três pares de saídas na ordem I, II e III, com dados e solução autorais.",
+        "limites": "Exemplo editorial; não se utiliza sua solução antiga sobre Swagger como fonte técnica. A cópia não é apresentada como download da FCC nem como assinatura de integridade oficial; não se infere frequência de formatos."
+      },
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário – Área Apoio Especializado – Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 48,
+        "pagina": 11,
+        "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, de cópia secundária hospedada no Qconcursos; URL e origem registradas em fontes.json.",
+        "caracteristicaAplicada": "Situação de uma Analista, características técnicas apresentadas de forma delimitada e comando direto com cinco opções. Aplicado ao cenário de preparação de testes e às três cláusulas explícitas da regra de negócio.",
+        "limites": "Referência de construção editorial, sem copiar a pergunta ou adotar seu conteúdo sobre integração como solução técnica. A origem é secundária e o exemplo isolado não comprova predominância na banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-15-0002",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 37,
+        "pagina": 9,
+        "origem": "Cópia secundária Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura de Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+        "caracteristicaAplicada": "O item real apresenta atuação profissional e um objetivo técnico antes de um comando de identificação. A questão autoral apresenta uma investigação de relatório e pede selecionar o registro adequado ao objetivo, com cenário e conteúdo próprios.",
+        "limites": "Cópia secundária hospedada no Qconcursos; não é apresentada como download da FCC nem como assinatura de integridade oficial. Os itens de 2022 orientam somente o formato, não a correção técnica atual nem uma frequência geral da banca."
+      },
+      {
+        "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+        "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, Tipo 001",
+        "questao": 59,
+        "pagina": 14,
+        "origem": "Cópia secundária Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura de Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; origem conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+        "caracteristicaAplicada": "O item real usa cinco complementos comparáveis de uma frase do enunciado. A questão autoral aplica o paralelismo com cinco complementos iniciados por relações entre o relatório e registros de governança; não reproduz os pares de conceitos do exemplo.",
+        "limites": "Cópia secundária hospedada no Qconcursos; não é apresentada como download da FCC nem como assinatura de integridade oficial. Os itens de 2022 orientam somente o formato, não a correção técnica atual nem uma frequência geral da banca."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-16-0003",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 7ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2009,
+        "caderno": "Não obtido no acervo consultado",
+        "questao": "Q128175 — identificador do Qconcursos; número original não obtido",
+        "pagina": "Página original não obtida; item consultado em HTML",
+        "origem": "Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; texto associado visualizado em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg",
+        "caracteristicaObservada": "Texto em inglês seguido de comando inferencial e cinco formulações concorrentes em português.",
+        "caracteristicaAplicada": "Texto curto próprio, comando de inferência em português e cinco conclusões comparáveis que exigem respeitar os limites do texto.",
+        "limites": "Referência histórica de 2009, sem autenticação oficial, sem número original, página ou caderno recuperados e sem inferência de frequência atual ou equivalência de dificuldade com o Banestes. Não foram reproduzidos o texto ou as opções da referência."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-16-0004",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "Tribunal Regional do Trabalho da 7ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2009,
+        "caderno": "Não obtido no acervo consultado",
+        "questao": "Q128172 e Q128174 — identificadores do Qconcursos; números originais não obtidos",
+        "pagina": "Páginas originais não obtidas; itens consultados em HTML",
+        "origem": "Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; texto associado visualizado em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg",
+        "caracteristicaObservada": "Leitura contextual de segmento inglês e compreensão do texto por comando e cinco interpretações em português.",
+        "caracteristicaAplicada": "Segmento inglês delimitado no comando, texto autossuficiente e cinco possíveis referentes formulados em português, com distratores extraídos de conjuntos mencionados no próprio texto.",
+        "limites": "Os exemplos não cobram especificamente referente pronominal; sustentam a apresentação e a interpretação contextual. Origem secundária e histórica, sem autenticação oficial, sem números originais, páginas ou caderno obtidos e sem inferência de frequência ou dificuldade atual. Texto e opções são novos."
+      }
+    ]
+  }
+]

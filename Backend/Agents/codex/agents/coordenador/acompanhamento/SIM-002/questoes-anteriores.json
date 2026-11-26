@@ -1,0 +1,702 @@
+[
+  {
+    "id": "BAN-DS-01-0001",
+    "numero": 1,
+    "materia": "Processo de desenvolvimento de software",
+    "topico": "Métodos ágeis (Scrum)",
+    "enunciado": "Uma equipe desenvolve um aplicativo bancário segundo o Scrum Guide 2020. Ao final de uma Sprint, precisa discutir uma mudança nas necessidades dos clientes e os resultados obtidos no produto. Também identificou falhas recorrentes de comunicação e integração durante o trabalho. A utilização dos eventos Sprint Review e Sprint Retrospective está adequada ao Guia quando a equipe, respectivamente,",
+    "alternativas": {
+      "A": "define a meta da próxima Sprint com os stakeholders e planeja melhorias em suas interações e processos.",
+      "B": "inspeciona os resultados com os stakeholders para adaptar o produto e define a meta da próxima Sprint.",
+      "C": "inspeciona os resultados com os stakeholders para adaptar o produto e planeja melhorias em suas interações e processos.",
+      "D": "planeja melhorias em suas interações e processos e inspeciona os resultados com os stakeholders para adaptar o produto.",
+      "E": "inspeciona o progresso diário em direção à meta da Sprint e ajusta o plano de trabalho do próximo dia."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0002",
+    "numero": 2,
+    "materia": "Processo de desenvolvimento de software",
+    "topico": "UML 2.5",
+    "enunciado": "Em um diagrama de classes UML 2.5, existe uma associação binária simples entre Agencia e Carteira. A multiplicidade escrita junto à extremidade Agencia é 0..1; junto à extremidade Carteira, é 1..*. Considere exclusivamente essas restrições de multiplicidade. Cada alternativa descreve todos os objetos existentes e todas as ligações entre eles. A configuração compatível com o modelo é:",
+    "alternativas": {
+      "A": "Uma agência sem carteiras e duas carteiras sem ligação com agência.",
+      "B": "Duas agências ligadas à mesma carteira, sem outras carteiras ou ligações.",
+      "C": "Duas agências, cada uma ligada a uma carteira distinta, e uma terceira agência sem carteiras.",
+      "D": "Uma agência ligada a duas carteiras, sendo uma delas também ligada a uma segunda agência.",
+      "E": "Uma agência ligada a duas carteiras e uma terceira carteira sem ligação com agência."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0003",
+    "numero": 3,
+    "materia": "Processo de desenvolvimento de software",
+    "topico": "Versionamento semântico",
+    "enunciado": "Uma biblioteca segue a especificação Semantic Versioning 2.0.0 e está publicada na versão normal 3.7.4. Sua próxima publicação reunirá uma correção de defeito compatível com versões anteriores, uma nova operação compatível na API pública e a remoção de outra operação dessa API, ainda utilizada pelos clientes. Essa remoção exige alteração nos programas clientes para que continuem funcionando. O menor número de versão normal que expressa corretamente esse conjunto de mudanças é",
+    "alternativas": {
+      "A": "3.8.0.",
+      "B": "4.0.0.",
+      "C": "3.7.5.",
+      "D": "4.7.4.",
+      "E": "4.0.1."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0004",
+    "numero": 4,
+    "materia": "Processo de desenvolvimento de software",
+    "topico": "Engenharia de requisitos",
+    "enunciado": "Durante a especificação de um sistema bancário, uma analista registrou os seguintes requisitos:\n\nI. O sistema deve emitir um comprovante de transferência contendo o identificador da operação, a data e o valor transferido.\nII. O sistema deve permitir ao cliente cancelar um agendamento ainda não executado e apresentar a confirmação do cancelamento.\nIII. Sob o perfil de carga homologado de 1.000 usuários simultâneos, pelo menos 95% das consultas de saldo devem apresentar resposta em até 2 segundos.\nIV. O serviço de consulta de saldo deve apresentar disponibilidade mensal de, no mínimo, 99,9%, considerando todas as interrupções no mês.\n\nQuanto à natureza do que é exigido, são requisitos funcionais e requisitos de qualidade, respectivamente,",
+    "alternativas": {
+      "A": "I e III; II e IV.",
+      "B": "II e IV; I e III.",
+      "C": "III e IV; I e II.",
+      "D": "I e II; III e IV.",
+      "E": "I e IV; II e III."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0001",
+    "numero": 5,
+    "materia": "Gestão e Governança de Tecnologia da Informação",
+    "topico": "COBIT 2019",
+    "enunciado": "Em uma organização que adota o COBIT 2019, foram descritas as seguintes atividades:\n\nI. O colegiado responsável examina necessidades das partes interessadas, fixa prioridades para investimentos de informação e tecnologia e acompanha os resultados em relação à direção estabelecida.\nII. A unidade de TI organiza recursos e planos para executar a direção recebida.\nIII. Uma equipe verifica o desempenho de informação e tecnologia em relação a metas internas e sua conformidade com requisitos externos.\n\nA classificação das atividades I, II e III nos domínios do COBIT 2019 é, correta e respectivamente,",
+    "alternativas": {
+      "A": "governança (EDM); gestão (BAI); gestão (MEA).",
+      "B": "gestão (APO); gestão (APO); governança (EDM).",
+      "C": "governança (EDM); gestão (APO); gestão (DSS).",
+      "D": "governança (EDM); gestão (APO); gestão (MEA).",
+      "E": "gestão (MEA); gestão (BAI); governança (EDM)."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0002",
+    "numero": 6,
+    "materia": "Gestão e Governança de Tecnologia da Informação",
+    "topico": "Gestão financeira de TI",
+    "enunciado": "Uma organização compara duas soluções de infraestrutura, X e Y, com capacidade e níveis de serviço equivalentes, para uso durante três anos. Foram estimados os seguintes custos, em reais:\n\nItem                                      X             Y\nAquisição e instalação, uma única vez     140.000       200.000\nOperação, por ano                         30.000        16.000\nManutenção e suporte, por ano             20.000         8.000\n\nOs custos anuais incidem em cada um dos três anos. Não há outros custos, valor residual, inflação ou desconto financeiro a considerar. Com base no custo total de propriedade (TCO), a solução de menor custo no período e a diferença entre os TCOs são, respectivamente,",
+    "alternativas": {
+      "A": "X e R$ 60.000,00.",
+      "B": "Y e R$ 26.000,00.",
+      "C": "X e R$ 18.000,00.",
+      "D": "Y e R$ 78.000,00.",
+      "E": "Y e R$ 18.000,00."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0003",
+    "numero": 7,
+    "materia": "Gestão e Governança de Tecnologia da Informação",
+    "topico": "Gestão de níveis de serviço",
+    "enunciado": "Uma prestadora de serviços de TI acordou com um cliente externo o prazo máximo de quatro horas para tratar um incidente, contado da abertura à conclusão da validação do restabelecimento. Para apoiar esse atendimento, pactuou com suas equipes internas os limites de 40 minutos para triagem, 150 minutos para restabelecimento e 70 minutos para validação.\n\nAs etapas ocorrem sucessivamente, sem sobreposição, intervalos ou pausas. Cada limite interno é contado do início da respectiva etapa, e todos os prazos usam minutos corridos. Na gestão de níveis de serviço, esses compromissos internos são",
+    "alternativas": {
+      "A": "OLAs compatíveis com o prazo global, pois o limite de cada etapa, considerado isoladamente, é inferior às quatro horas acordadas com o cliente.",
+      "B": "SLAs compatíveis com o prazo global, pois a passagem entre equipes reinicia a contagem das quatro horas acordadas com o cliente.",
+      "C": "OLAs incompatíveis com o prazo global, pois todas as metas internas podem ser cumpridas e o atendimento, ainda assim, alcançar 260 minutos.",
+      "D": "contratos de apoio compatíveis com o prazo global, pois estabelecem metas de fornecedores externos para executar as etapas do atendimento.",
+      "E": "OLAs compatíveis com o prazo global, pois a soma dos limites internos amplia automaticamente o prazo acordado com o cliente para 260 minutos."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0001",
+    "numero": 8,
+    "materia": "Programação",
+    "topico": "Python: compartilhamento e mutação de listas",
+    "enunciado": "Em Python 3.12, um desenvolvedor executou o código abaixo para preparar uma lista de trabalho:\n\norigem = [[1], [2]]\ncopia = origem[:]\ncopia[0].append(3)\ncopia.append([4])\nprint(origem)\n\nA saída produzida por esse código é",
+    "alternativas": {
+      "A": "[[1], [2], [4]]",
+      "B": "[[1, 3], [2], [4]]",
+      "C": "[[1, 3], [2]]",
+      "D": "[[1], [2]]",
+      "E": "[[1, 3], [2, 4]]"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0002",
+    "numero": 9,
+    "materia": "Programação",
+    "topico": "Java: sobrescrita e despacho de métodos",
+    "enunciado": "Considere o programa Java 21 abaixo:\n\npublic class Exemplo {\n    static class Base {\n        String nome() { return \"base\"; }\n    }\n    static class Derivada extends Base {\n        @Override String nome() { return \"derivada\"; }\n    }\n    static String identificar(Base item) { return \"base\"; }\n    static String identificar(Derivada item) { return \"derivada\"; }\n    public static void main(String[] args) {\n        Base item = new Derivada();\n        System.out.print(item.nome() + \"/\" + identificar(item));\n    }\n}\n\nO texto exibido ao executar o método main é",
+    "alternativas": {
+      "A": "base/base",
+      "B": "derivada/derivada",
+      "C": "base/derivada",
+      "D": "Não há saída, pois a chamada identificar(item) é ambígua.",
+      "E": "derivada/base"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0003",
+    "numero": 10,
+    "materia": "Programação",
+    "topico": "C#: recursos de linguagem e execução de coleções",
+    "enunciado": "Em uma aplicação C# 12 com .NET 8, considere o programa:\n\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\nclass Exemplo {\n    static void Main() {\n        var valores = new List<int> { 2, 4, 6 };\n        var consulta = valores.Where(n => n > 3);\n        valores.Add(8);\n        Console.Write(consulta.Count());\n    }\n}\n\nO valor exibido é",
+    "alternativas": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3",
+      "E": "4"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0004",
+    "numero": 11,
+    "materia": "Programação",
+    "topico": "C: ponteiros e vetores com comportamento definido",
+    "enunciado": "Considere o programa em C11:\n\n#include <stdio.h>\n\nint main(void) {\n    int v[] = {3, 5, 7, 9};\n    int *p = v + 1;\n    *(p + 1) = *p + v[0];\n    printf(\"%d %d\", v[2], *(p - 1));\n    return 0;\n}\n\nA sequência exibida por printf é",
+    "alternativas": {
+      "A": "7 3",
+      "B": "8 3",
+      "C": "8 5",
+      "D": "10 3",
+      "E": "8 7"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0005",
+    "numero": 12,
+    "materia": "Programação",
+    "topico": "PHP: comportamento básico de linguagem conforme versão declarada",
+    "enunciado": "Um desenvolvedor executou o código abaixo em PHP 8.2:\n\n<?php\n$codigo = \"42\";\n$numero = 42;\necho ($codigo == $numero ? \"S\" : \"N\");\necho ($codigo === $numero ? \"S\" : \"N\");\n\nQual é o resultado da execução?",
+    "alternativas": {
+      "A": "É exibido SN.",
+      "B": "É exibido SS.",
+      "C": "É exibido NS.",
+      "D": "É exibido NN.",
+      "E": "É lançado TypeError ao comparar a string com o inteiro."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0006",
+    "numero": 13,
+    "materia": "Programação",
+    "topico": "Orientação a objetos e responsabilidade de classes",
+    "enunciado": "Em um sistema bancário, a classe CalculadoraTarifa calcula tarifas, gera relatórios em PDF e grava resultados no banco. As regras de cálculo, o leiaute dos relatórios e a forma de armazenamento são alterados por demandas independentes. Para aplicar o princípio da responsabilidade única, a organização mais adequada é",
+    "alternativas": {
+      "A": "mover os três métodos para uma classe utilitária estática, mantendo nela cálculo, geração de PDF e gravação.",
+      "B": "criar uma subclasse para cada formato de relatório, mantendo em cada subclasse o cálculo e o acesso ao banco.",
+      "C": "definir uma interface com os três métodos e exigir que toda implementação realize cálculo, PDF e armazenamento.",
+      "D": "extrair cálculo, geração do PDF e persistência para componentes distintos, que colaborem por interfaces.",
+      "E": "tornar privados os métodos de PDF e gravação, mantendo as três tarefas na classe de cálculo."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0007",
+    "numero": 14,
+    "materia": "Programação",
+    "topico": "Tratamento de exceções em cenário com condições explícitas",
+    "enunciado": "Considere o programa Java 21 abaixo:\n\npublic class Exemplo {\n    public static void main(String[] args) {\n        int divisor = 0;\n        try {\n            int valor = 12 / divisor;\n            System.out.print(\"T\");\n        } catch (ArithmeticException ex) {\n            System.out.print(\"C\");\n        } finally {\n            System.out.print(\"F\");\n        }\n        System.out.print(\"S\");\n    }\n}\n\nExecutando main, a sequência de caracteres exibida é",
+    "alternativas": {
+      "A": "TFS",
+      "B": "CFS",
+      "C": "CF",
+      "D": "FS",
+      "E": "CS"
+    }
+  },
+  {
+    "id": "BAN-DS-04-0001",
+    "numero": 15,
+    "materia": "Banco de Dados",
+    "topico": "Comandos SQL: LEFT JOIN e funções de contagem",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela agencia possui a coluna id como chave primária, e a tabela conta possui as colunas id, chave primária, e agencia_id. Considere somente os seguintes registros:\n\nagencia\nid\n10\n20\n30\n\nconta\nid | agencia_id\n1  | 10\n2  | 10\n3  | 20\n\nUm analista executou:\n\nSELECT a.id, COUNT(*) AS linhas, COUNT(c.id) AS contas\nFROM agencia AS a\nLEFT JOIN conta AS c ON c.agencia_id = a.id\nGROUP BY a.id\nORDER BY a.id;\n\nNa linha em que a.id é igual a 30, os valores das colunas linhas e contas são, respectivamente,",
+    "alternativas": {
+      "A": "0 e 0.",
+      "B": "0 e 1.",
+      "C": "1 e 0.",
+      "D": "1 e 1.",
+      "E": "3 e 0."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0002",
+    "numero": 16,
+    "materia": "Banco de Dados",
+    "topico": "Funções analíticas: RANK e PARTITION BY",
+    "enunciado": "No PostgreSQL 15, uma tabela classificacao possui as colunas id, chave primária, setor e pontos, todas não nulas. Seus registros são:\n\nid | setor | pontos\n1  | N     | 90\n2  | N     | 90\n3  | N     | 70\n4  | S     | 80\n5  | S     | 60\n\nConsidere a consulta:\n\nSELECT id,\n       RANK() OVER (PARTITION BY setor ORDER BY pontos DESC) AS posicao\nFROM classificacao\nORDER BY id;\n\nOs valores de posicao retornados para os ids de 1 a 5, nessa ordem, são",
+    "alternativas": {
+      "A": "1, 2, 3, 1 e 2.",
+      "B": "1, 1, 2, 1 e 2.",
+      "C": "1, 1, 4, 3 e 5.",
+      "D": "1, 1, 3, 1 e 2.",
+      "E": "2, 2, 1, 2 e 1."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0003",
+    "numero": 17,
+    "materia": "Banco de Dados",
+    "topico": "Controle de transações: Read Committed no PostgreSQL 15",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela conta contém inicialmente a linha (id = 7, saldo = 1000). Duas sessões executam a seguinte sequência, sem outras operações concorrentes:\n\n1. A inicia uma transação com isolamento READ COMMITTED e consulta o saldo da conta 7, obtendo 1000.\n2. B inicia outra transação e atualiza esse saldo para 1300, mas ainda não executa COMMIT.\n3. A executa um segundo SELECT saldo FROM conta WHERE id = 7.\n4. B executa COMMIT.\n5. A executa um terceiro SELECT saldo FROM conta WHERE id = 7, ainda na transação iniciada no passo 1.\n\nA não faz alterações nos dados, e seus SELECTs não contêm FOR UPDATE nem FOR SHARE. Nesse cenário, o comportamento esperado é:",
+    "alternativas": {
+      "A": "O segundo e o terceiro SELECTs de A retornam 1300.",
+      "B": "O segundo SELECT de A retorna 1000, e o terceiro retorna 1300.",
+      "C": "O segundo e o terceiro SELECTs de A retornam 1000.",
+      "D": "O segundo SELECT de A aguarda o COMMIT de B; depois, ambos retornam 1300.",
+      "E": "O segundo SELECT de A retorna 1000, e o terceiro é abortado por detectar uma leitura não repetível."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0004",
+    "numero": 18,
+    "materia": "Banco de Dados",
+    "topico": "Normalização: dependência parcial e segunda forma normal",
+    "enunciado": "Uma relação em primeira forma normal é representada por:\n\nALOCACAO(cod_empregado, cod_projeto, nome_empregado, horas)\n\nSua única chave candidata é (cod_empregado, cod_projeto). Considere as dependências funcionais:\n\ncod_empregado -> nome_empregado\n(cod_empregado, cod_projeto) -> horas\n\nNão há outras dependências funcionais além das decorrentes dessas e da chave. Para eliminar a dependência parcial indicada e preservar a associação de cada empregado com seus projetos e respectivas horas, a decomposição adequada é:",
+    "alternativas": {
+      "A": "EMPREGADO(cod_empregado, nome_empregado) e ALOCACAO(cod_empregado, cod_projeto, horas).",
+      "B": "EMPREGADO(cod_empregado, horas) e PROJETO(cod_projeto, nome_empregado).",
+      "C": "EMPREGADO(cod_empregado, cod_projeto, nome_empregado) e HORAS(cod_empregado, cod_projeto, horas).",
+      "D": "PROJETO(cod_projeto, horas) e EMPREGADO(cod_empregado, nome_empregado).",
+      "E": "ALOCACAO(cod_empregado, cod_projeto) e CADASTRO(cod_empregado, nome_empregado, horas)."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0005",
+    "numero": 19,
+    "materia": "Banco de Dados",
+    "topico": "Common Table Expressions e agregação em SQL",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela movimento possui as colunas agencia e valor, ambas não nulas, e contém somente os registros:\n\nagencia | valor\nA       | 40\nA       | 70\nB       | 50\nC       | 30\nC       | 60\n\nConsidere:\n\nWITH totais AS (\n    SELECT agencia, SUM(valor) AS total\n    FROM movimento\n    GROUP BY agencia\n)\nSELECT COUNT(*) AS quantidade, SUM(total) AS soma\nFROM totais\nWHERE total >= 90;\n\nOs valores retornados nas colunas quantidade e soma são, respectivamente,",
+    "alternativas": {
+      "A": "5 e 250.",
+      "B": "3 e 250.",
+      "C": "2 e 110.",
+      "D": "1 e 110.",
+      "E": "2 e 200."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0006",
+    "numero": 20,
+    "materia": "Banco de Dados",
+    "topico": "Bancos NoSQL em nível conceitual: escolha de modelo",
+    "enunciado": "Uma equipe precisa investigar conexões entre clientes, contas e dispositivos. A consulta predominante parte de um dispositivo e percorre sucessivamente suas ligações para localizar clientes conectados por caminhos com quantidade variável de etapas. Considerando os modelos de dados em nível conceitual, aquele mais diretamente orientado à representação desses vínculos e à realização dessas travessias é o modelo",
+    "alternativas": {
+      "A": "orientado a documentos.",
+      "B": "chave-valor.",
+      "C": "de colunas largas.",
+      "D": "de grafos.",
+      "E": "dimensional em estrela."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0001",
+    "numero": 21,
+    "materia": "Desenvolvimento de aplicações web e mobile",
+    "topico": "Princípios de design de APIs: idempotência",
+    "enunciado": "Um aplicativo envia uma requisição PUT para atualizar o endereço de correspondência de um cliente em um recurso identificado por uma URI. A conexão é interrompida antes da leitura da resposta. O cliente considera reenviar a mesma requisição, com o mesmo conteúdo. Supondo uma implementação conforme a semântica HTTP definida na RFC 9110, é correto afirmar que",
+    "alternativas": {
+      "A": "a idempotência exige que a repetição produza o mesmo código de status e o mesmo corpo de resposta.",
+      "B": "a repetição deve criar outro recurso, pois cada requisição PUT representa uma nova operação de inclusão.",
+      "C": "a idempotência depende de desabilitar o armazenamento da resposta em cache antes do reenvio.",
+      "D": "a repetição tem o mesmo efeito pretendido sobre o recurso, embora a resposta recebida possa ser diferente.",
+      "E": "o método é seguro e idempotente, pois a atualização solicitada não pode modificar o estado do servidor."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0002",
+    "numero": 22,
+    "materia": "Desenvolvimento de aplicações web e mobile",
+    "topico": "JavaScript e desenvolvimento web: ordem de execução assíncrona",
+    "enunciado": "Um desenvolvedor executa integralmente o trecho abaixo como um único script clássico em uma página ativa, em navegador compatível com o HTML Standard. Não há outros registros no console, exceções ou interrupções durante a execução.\n\nconsole.log('inicio');\nPromise.resolve().then(() => {\n  console.log('promessa');\n  queueMicrotask(() => console.log('micro'));\n});\nsetTimeout(() => console.log('temporizador'), 0);\nconsole.log('fim');\n\nA sequência de mensagens produzida por esse trecho é",
+    "alternativas": {
+      "A": "inicio, promessa, micro, fim, temporizador.",
+      "B": "inicio, fim, promessa, micro, temporizador.",
+      "C": "inicio, fim, temporizador, promessa, micro.",
+      "D": "inicio, fim, promessa, temporizador, micro.",
+      "E": "inicio, promessa, fim, temporizador, micro."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0003",
+    "numero": 23,
+    "materia": "Desenvolvimento de aplicações web e mobile",
+    "topico": "Acessibilidade digital conforme WCAG 2.2: foco não encoberto",
+    "enunciado": "Na avaliação de acessibilidade de um portal, uma analista examina o efeito de faixas fixas da interface sobre componentes que recebem foco pelo teclado. Considerando os critérios 2.4.11 e 2.4.12 das WCAG 2.2, avalie as afirmações.\n\nI. O critério 2.4.11, de nível AA, exige que o componente com foco não fique totalmente oculto por conteúdo criado pelo autor.\nII. O critério 2.4.11 é atendido se apenas o indicador de foco permanecer visível, mesmo que o próprio componente esteja inteiramente oculto.\nIII. A exigência de que nenhuma parte do componente com foco seja ocultada por conteúdo criado pelo autor corresponde ao critério 2.4.12, de nível AAA.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "I e II.",
+      "D": "II e III.",
+      "E": "I e III."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0004",
+    "numero": 24,
+    "materia": "Desenvolvimento de aplicações web e mobile",
+    "topico": "Contratos de API OpenAPI: localização e obrigatoriedade de parâmetros",
+    "enunciado": "Uma equipe documenta uma operação GET em OpenAPI 3.0.3 para consultar o cliente identificado no caminho /clientes/{clienteId}. A operação também aceita, opcionalmente, detalhes=true na consulta da URL para ampliar os dados retornados. Foram declarados os seguintes parâmetros:\n\nparameters:\n  - name: clienteId\n    in: path\n    required: false\n    schema:\n      type: integer\n  - name: detalhes\n    in: query\n    required: false\n    schema:\n      type: boolean\n\nPara que essas declarações atendam à especificação e preservem a intenção descrita, as configurações de localização e obrigatoriedade deverão ser",
+    "alternativas": {
+      "A": "clienteId em query, required: false; detalhes em query, required: false.",
+      "B": "clienteId em path, required: false; detalhes em query, required: true.",
+      "C": "clienteId em path, required: true; detalhes em query, required: false.",
+      "D": "clienteId em path, required: true; detalhes em path, required: true.",
+      "E": "clienteId em header, required: true; detalhes em query, required: false."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0005",
+    "numero": 25,
+    "materia": "Desenvolvimento de aplicações web e mobile",
+    "topico": "XML Schema: ocorrências de elementos, tipos e atributos obrigatórios",
+    "enunciado": "Uma aplicação valida documentos XML de acordo com o esquema XSD 1.0 completo abaixo, sem namespace de destino:\n\n<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"lote\">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name=\"item\" type=\"xs:string\"\n                    minOccurs=\"0\" maxOccurs=\"3\"/>\n      </xs:sequence>\n      <xs:attribute name=\"codigo\" type=\"xs:integer\" use=\"required\"/>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>\n\nConsiderando apenas a validade em relação a esse esquema, o documento aceito é",
+    "alternativas": {
+      "A": "<lote codigo=\"7\"/>",
+      "B": "<lote><item>A</item></lote>",
+      "C": "<lote codigo=\"7\"><item>A</item><item>B</item><item>C</item><item>D</item></lote>",
+      "D": "<lote codigo=\"sete\"><item>A</item></lote>",
+      "E": "<lote codigo=\"7\"><item>A</item><extra>B</extra></lote>"
+    }
+  },
+  {
+    "id": "BAN-DS-06-0001",
+    "numero": 26,
+    "materia": "Arquitetura de sistemas",
+    "topico": "Arquitetura hexagonal: portas e adaptadores",
+    "enunciado": "Uma instituição utiliza o mesmo caso de uso de concessão de limite por uma API HTTP e por processamento em lote. As regras de concessão devem permanecer no núcleo da aplicação, sem duplicação, e o caso de uso deve ignorar detalhes de HTTP e SQL. Também é necessário substituir a persistência SQL por uma implementação em memória durante a verificação dessas regras, sem alterar o caso de uso. Na arquitetura hexagonal, uma organização compatível com esses requisitos consiste em",
+    "alternativas": {
+      "A": "definir a interface do caso de uso no adaptador HTTP e fazer o núcleo depender desse adaptador, permitindo que o processamento em lote reutilize a interface.",
+      "B": "manter a coordenação do caso de uso no núcleo e distribuir as regras de concessão entre os adaptadores HTTP e de lote, compartilhando a persistência SQL.",
+      "C": "expor o caso de uso por uma porta de entrada e expressar a persistência por uma porta de saída do núcleo, conectando implementações externas por adaptadores.",
+      "D": "definir uma porta de persistência no núcleo e manter no caso de uso a montagem de instruções SQL, implementando essa porta também para o armazenamento em memória.",
+      "E": "utilizar a implementação em memória como porta de entrada e delegar ao adaptador HTTP a execução das regras e o acionamento da persistência do caso de uso."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0002",
+    "numero": 27,
+    "materia": "Arquitetura de sistemas",
+    "topico": "Integração orientada a eventos",
+    "enunciado": "Um serviço de relatórios recebe eventos de contratos celebrados e incrementa um acumulado em seu banco de dados local. O intermediário de mensagens oferece entrega pelo menos uma vez, com confirmação manual; uma reentrega conserva o identificador do evento. O processo consumidor pode falhar e reiniciar entre quaisquer duas etapas. O banco local oferece transações e restrições de unicidade, mas não há transação distribuída com o intermediário. Para que cada evento produza seu efeito no acumulado uma única vez, mesmo após reinícios, o consumidor deve",
+    "alternativas": {
+      "A": "confirmar a entrega ao intermediário antes de incrementar o acumulado e registrar o identificador, contando com a reentrega para recuperar falhas no banco.",
+      "B": "incrementar o acumulado em uma transação e registrar o identificador em outra, confirmando a entrega ao intermediário somente após concluir as duas transações.",
+      "C": "registrar o identificador em uma transação e incrementar o acumulado em outra, descartando as entregas cujos identificadores já estejam registrados no banco.",
+      "D": "registrar o identificador com unicidade e incrementar o acumulado na mesma transação local; confirmar após o commit e, nas reentregas, suprimir o efeito já registrado.",
+      "E": "conservar os identificadores processados em um cache em memória, incrementar o acumulado no banco e confirmar a entrega ao intermediário após concluir a atualização."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0003",
+    "numero": 28,
+    "materia": "Arquitetura de sistemas",
+    "topico": "Circuit breaker, tentativas e timeouts",
+    "enunciado": "Uma aplicação realiza consultas idempotentes a um serviço remoto. O projeto de resiliência deve atender às seguintes necessidades:\n\nI. Limitar o tempo durante o qual o cliente aguarda a conclusão de cada chamada remota.\nII. Fazer novas tentativas diante de falhas transitórias, com espera entre elas e número máximo de repetições, respeitando o prazo total da operação.\nIII. Após atingir um limiar de falhas, rejeitar temporariamente novas chamadas sem acessar o serviço; em seguida, permitir um conjunto restrito de chamadas para avaliar sua recuperação.\n\nOs mecanismos associados a I, II e III são, respectivamente,",
+    "alternativas": {
+      "A": "retry, timeout e circuit breaker.",
+      "B": "timeout, retry e circuit breaker.",
+      "C": "timeout, circuit breaker e retry.",
+      "D": "circuit breaker, retry e timeout.",
+      "E": "retry, circuit breaker e timeout."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0004",
+    "numero": 29,
+    "materia": "Arquitetura de sistemas",
+    "topico": "DDD: delimitação de contexto",
+    "enunciado": "Em uma instituição, a equipe de Relacionamento modela Cliente como uma pessoa que pode receber ofertas, inclusive antes da contratação. A equipe de Cobrança modela Cliente como o responsável por obrigações vencidas e utiliza regras próprias para negociação. As equipes precisam preservar esses significados e suas regras, mas devem trocar informações sobre a mesma pessoa por um contrato de integração. Considerando DDD, o desenho adequado a esse cenário consiste em",
+    "alternativas": {
+      "A": "delimitar contextos para os dois modelos, manter uma linguagem coerente em cada contexto e explicitar no mapa de contextos os pontos de contato e as traduções necessárias.",
+      "B": "unificar os dois modelos em uma classe Cliente compartilhada, atribuir um único significado aos seus estados e resolver as diferenças por condicionais nos serviços das equipes.",
+      "C": "tomar as camadas de apresentação, domínio e persistência como os três contextos delimitados, usando o mesmo modelo Cliente em cada camada de ambas as equipes.",
+      "D": "definir um contexto delimitado para cada instância de Cliente e utilizar a identidade da pessoa como fronteira de validade das regras das duas equipes.",
+      "E": "separar os bancos de dados das equipes e manter um dicionário Cliente único, considerando que a separação física dispensa explicitar as diferenças de significado na integração."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0001",
+    "numero": 30,
+    "materia": "DevOps e DevSecOps",
+    "topico": "Integração contínua e entrega contínua",
+    "enunciado": "Uma equipe incorpora pequenas alterações ao repositório compartilhado várias vezes ao dia. Cada incorporação aciona automaticamente a construção da aplicação e a execução de testes. As versões que passam pelas verificações são implantadas automaticamente em homologação e ficam prontas para produção. A implantação em produção usa o mesmo processo automatizado, mas só é iniciada após aprovação expressa de um responsável pelo negócio.\n\nNa distinção entre integração contínua, entrega contínua e implantação contínua, esse fluxo caracteriza",
+    "alternativas": {
+      "A": "integração contínua e implantação contínua, porque uma aprovação de negócio pode compor a promoção automática de cada versão para produção.",
+      "B": "apenas integração contínua, porque a entrega contínua exige publicar automaticamente em produção toda alteração aprovada nos testes.",
+      "C": "integração contínua e entrega contínua, porque uma versão pode permanecer pronta para produção até a autorização de sua implantação.",
+      "D": "apenas entrega contínua, porque a integração contínua exige executar os testes antes da incorporação do código ao repositório compartilhado.",
+      "E": "apenas implantação contínua, porque a publicação automática em homologação é suficiente para caracterizar a implantação contínua de uma aplicação."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0002",
+    "numero": 31,
+    "materia": "DevOps e DevSecOps",
+    "topico": "Docker: imagens e containers",
+    "enunciado": "Uma imagem Docker contém o arquivo /app/config.txt com o conteúdo original. Dois containers, denominados alfa e beta, são criados a partir dessa mesma imagem. Um analista altera com sucesso, somente em alfa, o conteúdo desse arquivo para ajustado. Depois, remove alfa e cria o container gama a partir da mesma imagem, sem executar build ou commit.\n\nNão existem montagens em /app, armazenamento compartilhado ou rotinas de inicialização que alterem o arquivo, e nenhuma outra escrita é realizada. Nessas condições, ao ler /app/config.txt em beta e gama, o resultado e sua explicação são:",
+    "alternativas": {
+      "A": "beta e gama apresentam original, porque a escrita ficou na camada gravável de alfa e não alterou a imagem usada pelos demais.",
+      "B": "beta apresenta original e gama apresenta ajustado, porque remover alfa incorpora suas alterações aos próximos containers criados a partir da imagem.",
+      "C": "beta apresenta ajustado e gama apresenta original, porque containers simultâneos compartilham a camada gravável enquanto permanecem em execução.",
+      "D": "beta e gama apresentam ajustado, porque modificar um arquivo preexistente atualiza a camada da imagem compartilhada por todos os containers.",
+      "E": "beta e gama deixam de encontrar o arquivo, porque remover alfa elimina o arquivo modificado também das camadas da imagem de origem."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0003",
+    "numero": 32,
+    "materia": "DevOps e DevSecOps",
+    "topico": "Kubernetes: prontidão e vivacidade",
+    "enunciado": "Em um cluster Kubernetes, um Service encaminha requisições a três Pods e está configurado com publishNotReadyAddresses: false. Cada Pod contém um único container, com política efetiva de reinício Always. Todos já concluíram a inicialização e estão prontos para atendimento.\n\nNo Pod identificado como p1, ocorrem, nesta ordem:\n\nI. As falhas consecutivas da readiness probe atingem o limiar configurado, enquanto a liveness probe continua tendo sucesso.\nII. Posteriormente, as falhas consecutivas da liveness probe também atingem o limiar configurado.\n\nConsiderando apenas os efeitos dessas probes e novas requisições encaminhadas pelo Service, as consequências de I e II são, respectivamente:",
+    "alternativas": {
+      "A": "o container de p1 é reiniciado; p1 é apenas retirado do atendimento pelo Service, sem reinício por falha de vivacidade.",
+      "B": "p1 continua elegível para novas requisições pelo Service; o kubelet encerra e reinicia o container de p1.",
+      "C": "p1 deixa de atender novas requisições pelo Service; o reinício do container depende de a readiness probe voltar a ter sucesso.",
+      "D": "p1 é excluído do cluster e substituído por outro Pod; apenas a condição de prontidão é alterada, sem reinício do container.",
+      "E": "p1 deixa de atender novas requisições pelo Service, sem reinício por essa falha; o kubelet encerra e reinicia o container de p1."
+    }
+  },
+  {
+    "id": "BAN-DS-08-0001",
+    "numero": 33,
+    "materia": "Sistemas Operacionais",
+    "topico": "Memória virtual e falta de página: substituição LRU",
+    "enunciado": "Um processo dispõe de três quadros de memória física, inicialmente vazios, para suas páginas. Adota-se paginação por demanda: cada referência a uma página ausente provoca uma falta, cujo tratamento carrega somente a página solicitada. Quando os três quadros estão ocupados, substitui-se a página cujo último acesso ocorreu há mais tempo, conforme a política LRU.\n\nTodas as referências são leituras válidas; não há antecipação de carregamento nem remoções por outras causas. Considere, na ordem indicada, a sequência de números de páginas:\n\n2, 3, 2, 1, 4, 2, 3, 4, 1, 2, 5, 2.\n\nIncluindo as faltas que utilizam os quadros inicialmente vazios, o número total de faltas de página é",
+    "alternativas": {
+      "A": "4.",
+      "B": "5.",
+      "C": "7.",
+      "D": "8.",
+      "E": "9."
+    }
+  },
+  {
+    "id": "BAN-DS-08-0002",
+    "numero": 34,
+    "materia": "Sistemas Operacionais",
+    "topico": "Sincronização, deadlock e starvation",
+    "enunciado": "Em uma aplicação, duas threads executam repetidamente operações que exigem os mutexes R e S, cada um com um único detentor. Em uma execução, T1 mantém R e está bloqueada à espera de S, enquanto T2 mantém S e está bloqueada à espera de R. Cada thread só libera seus mutexes depois de obter ambos e concluir a operação. Não há timeouts, cancelamentos nem liberação forçada de mutexes.\n\nPara futuras execuções, iniciadas com os mutexes livres, propõe-se que ambas adquiram sempre R antes de S, sem alterar a política de escolha entre threads que disputam um mutex.\n\nConsidere as afirmações:\n\nI. O estado observado caracteriza deadlock entre T1 e T2.\nII. A ordem de aquisição proposta impede a espera circular envolvendo R e S.\nIII. A ordem de aquisição proposta, por si só, garante ausência de starvation na disputa pelos mutexes.\n\nEstá correto o que se afirma em",
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "I e II, apenas.",
+      "C": "I e III, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0001",
+    "numero": 35,
+    "materia": "Redes de computadores",
+    "topico": "VLAN e IEEE 802.1Q",
+    "enunciado": "Dois switches de camada 2, S1 e S2, estão interligados por um único enlace trunk IEEE 802.1Q. As VLANs 10, 20 e 99 estão criadas, ativas e permitidas no trunk. A VLAN nativa é a 99 nas duas extremidades e seus quadros são transmitidos sem tag. A estação H1 está ligada a uma porta de acesso da VLAN 10 em S1; em S2, H2 está em uma porta de acesso da VLAN 10 e H3, em uma porta de acesso da VLAN 20. Todas as portas estão encaminhando tráfego, sem filtros ou mecanismos de supressão, e não há roteamento entre VLANs.\n\nH1 envia um quadro Ethernet de dados com endereço de destino broadcast. Considerando a passagem desse quadro pelo trunk e sua entrega às estações de S2, ocorre transmissão",
+    "alternativas": {
+      "A": "com tag de VID 99 no trunk e entrega apenas a H2.",
+      "B": "com tag de VID 10 no trunk e entrega a H2 e H3.",
+      "C": "com tag de VID 20 no trunk e entrega apenas a H3.",
+      "D": "com tag de VID 10 no trunk e entrega apenas a H2.",
+      "E": "sem tag no trunk e entrega apenas a H2."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0002",
+    "numero": 36,
+    "materia": "Redes de computadores",
+    "topico": "IPv4 e endereçamento de rede",
+    "enunciado": "Um Analista deve dividir o bloco IPv4 10.48.12.0/24 em sub-redes de mesmo tamanho. Cada sub-rede deve oferecer, no mínimo, 25 endereços atribuíveis a interfaces, reservando um endereço para identificar a rede e outro para broadcast. Para reduzir o desperdício, será adotado o prefixo mais longo que atenda a essa quantidade.\n\nUma estação receberá o endereço 10.48.12.77. A máscara, o endereço de rede e o endereço de broadcast da sub-rede dessa estação são, correta e respectivamente,",
+    "alternativas": {
+      "A": "255.255.255.224 — 10.48.12.64 — 10.48.12.95.",
+      "B": "255.255.255.240 — 10.48.12.64 — 10.48.12.79.",
+      "C": "255.255.255.192 — 10.48.12.64 — 10.48.12.127.",
+      "D": "255.255.255.224 — 10.48.12.64 — 10.48.12.94.",
+      "E": "255.255.255.224 — 10.48.12.32 — 10.48.12.63."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0003",
+    "numero": 37,
+    "materia": "Redes de computadores",
+    "topico": "Roteamento OSPF e BGP",
+    "enunciado": "Em um sistema autônomo, o roteador R1 executa OSPFv2 e BGP-4. Para um prefixo interno P, há somente dois caminhos OSPF, ambos intra-área: por R2, com custo 10 de R1 a R2 e custo 20 de R2 até P; por R3, com custo 5 de R1 a R3 e custo 40 de R3 até P. Os custos informados são os da direção de R1 para P.\n\nPara outro prefixo, externo, Q, R1 dispõe somente das rotas BGP X e Y, ambas elegíveis e com NEXT_HOP alcançável. A política local já definiu seus graus de preferência, representados por LOCAL_PREF: X tem valor 200 e AS_PATH com três sistemas autônomos; Y tem valor 100 e AS_PATH com um sistema autônomo. Considere o processo de decisão da RFC 4271, sem critérios adicionais de fabricante.\n\nO próximo salto selecionado pelo OSPF para P e a rota selecionada pelo BGP para Q são, respectivamente,",
+    "alternativas": {
+      "A": "R3 e Y.",
+      "B": "R2 e Y.",
+      "C": "R2 e X.",
+      "D": "R3 e X.",
+      "E": "R2 e R3, em caminhos de igual custo, e X."
+    }
+  },
+  {
+    "id": "BAN-DS-10-0001",
+    "numero": 38,
+    "materia": "Serviços e gerenciamento de redes",
+    "topico": "SNMP: agentes, gerentes e MIBs",
+    "enunciado": "Uma central de monitoramento consulta um roteador por SNMPv2c, utilizando OIDs numéricos em mensagens GetRequest. O roteador devolve os valores solicitados, mas a central ainda não dispõe do módulo MIB do fabricante. Um analista importa para a central esse módulo, compatível com os objetos implementados no roteador. Sobre os papéis dos componentes e o efeito dessa importação, é correto afirmar:",
+    "alternativas": {
+      "A": "A central atua como gerente, e a importação do módulo passa a habilitar os objetos correspondentes no agente do roteador.",
+      "B": "A central atua como agente, e o roteador assume o papel de gerente ao devolver os valores pedidos nas consultas.",
+      "C": "A central atua como gerente, e o módulo fornece definições para interpretar os objetos cujos valores são obtidos do agente.",
+      "D": "A central atua como gerente, e o módulo passa a fornecer os valores atuais dos objetos sem novas consultas ao roteador.",
+      "E": "O roteador atua como agente, e a importação faz suas respostas enviarem nomes simbólicos dos objetos em lugar dos OIDs."
+    }
+  },
+  {
+    "id": "BAN-DS-10-0002",
+    "numero": 39,
+    "materia": "Serviços e gerenciamento de redes",
+    "topico": "Administração e configuração de servidor Apache HTTP",
+    "enunciado": "Um servidor Apache HTTP Server 2.4, em Linux, utiliza os trechos abaixo, nesta ordem, e não possui outros hosts virtuais:\n\nListen 80\nDocumentRoot \"/srv/www/base\"\n\n<VirtualHost *:80>\n    ServerName portal.intra.example\n    ServerAlias *.intra.example\n    DocumentRoot \"/srv/www/site-a\"\n</VirtualHost>\n\n<VirtualHost *:80>\n    ServerName relatorios.intra.example\n    DocumentRoot \"/srv/www/site-b\"\n</VirtualHost>\n\nOs três diretórios contêm um arquivo status.txt legível e autorizado para acesso HTTP. O servidor atende diretamente esses arquivos estáticos, sem regras adicionais de mapeamento ou redirecionamento.\n\nDuas requisições HTTP/1.1 independentes são recebidas no endereço 192.0.2.10, porta 80:\n\nI. GET /status.txt, com Host: relatorios.intra.example\nII. GET /status.txt, com Host: externo.example\n\nOs arquivos servidos em I e II são, respectivamente,",
+    "alternativas": {
+      "A": "/srv/www/site-b/status.txt e /srv/www/site-a/status.txt.",
+      "B": "/srv/www/site-b/status.txt e /srv/www/base/status.txt.",
+      "C": "/srv/www/site-a/status.txt e /srv/www/base/status.txt.",
+      "D": "/srv/www/site-a/status.txt e /srv/www/site-a/status.txt.",
+      "E": "/srv/www/site-b/status.txt e /srv/www/site-b/status.txt."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0001",
+    "numero": 40,
+    "materia": "Segurança da Informação",
+    "topico": "OAuth 2.0 e OpenID Connect",
+    "enunciado": "Uma aplicação web integra um provedor compatível com OAuth 2.0 e OpenID Connect 1.0. Ela precisa reconhecer o usuário autenticado pelo provedor e consultar uma API de saldos conforme as permissões concedidas. No fluxo adotado, a aplicação recebe um ID Token e um Access Token, este destinado à API. Para atender às duas finalidades, a equipe deve",
+    "alternativas": {
+      "A": "validar o Access Token como comprovante padronizado do login do usuário e apresentar o ID Token à API para autorizar a consulta.",
+      "B": "verificar apenas a assinatura do ID Token, dispensando as verificações de emissor, audiência e expiração, e apresentar o Access Token à API.",
+      "C": "validar o ID Token para reconhecer a autenticação do usuário e apresentar o Access Token à API, que deve validar o acesso e as permissões aplicáveis.",
+      "D": "tratar o ID Token e o Access Token como intercambiáveis, pois a emissão para o mesmo usuário faz com que ambos expressem as mesmas permissões.",
+      "E": "exigir que o Access Token seja um JWT e o ID Token seja opaco, pois esses formatos são obrigatoriamente definidos pelo OAuth 2.0."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0002",
+    "numero": 41,
+    "materia": "Segurança da Informação",
+    "topico": "Hashes, confidencialidade e assinaturas",
+    "enunciado": "Uma equipe avalia mecanismos para proteger documentos eletrônicos. Considere implementações criptográficas adequadas, a preservação do segredo das chaves privadas e secretas e a obtenção autenticada da chave pública do signatário. Foram apresentadas as seguintes afirmações:\n\nI. Enviar o documento e seu hash SHA-256 pelo mesmo canal, no qual um atacante pode substituir ambos, basta para autenticar a origem do documento.\nII. Uma assinatura digital gerada com a chave privada do signatário e verificada com a chave pública correspondente permite verificar a origem e a integridade do documento.\nIII. Acrescentar uma assinatura digital a um documento enviado em texto claro basta para impedir que terceiros leiam seu conteúdo.\nIV. A cifragem simétrica adequada, com chave secreta disponível somente às partes autorizadas, é um mecanismo aplicável à confidencialidade do documento.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "I e IV.",
+      "D": "II, III e IV.",
+      "E": "II e IV."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0003",
+    "numero": 42,
+    "materia": "Segurança da Informação",
+    "topico": "LGPD: anonimização e pseudonimização",
+    "enunciado": "Um órgão de pesquisa realiza um estudo em saúde pública. Na base de trabalho, nomes e CPFs foram substituídos por códigos aleatórios. A associação dos registros aos respectivos titulares somente é possível pelo uso de uma tabela adicional, mantida separadamente pelo controlador em ambiente controlado e seguro. A tabela permite ao controlador restabelecer essa associação com seus próprios meios. Considerando a Lei nº 13.709/2018, a conclusão correta é:",
+    "alternativas": {
+      "A": "Os dados foram anonimizados, pois a ausência de nome e CPF basta para afastar a possibilidade de identificar os titulares.",
+      "B": "Os dados foram pseudonimizados e continuam pessoais, pois o controlador pode associá-los aos titulares com a tabela separada.",
+      "C": "Os dados foram pseudonimizados e deixam de ser pessoais enquanto a tabela de correspondência não for utilizada.",
+      "D": "Os dados foram anonimizados e deixam de ser pessoais, pois a reversão por meios próprios do controlador não é considerada pela LGPD.",
+      "E": "Os dados não podem ser pseudonimizados nesse estudo, pois a LGPD exige anonimização integral em qualquer pesquisa em saúde pública."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0004",
+    "numero": 43,
+    "materia": "Segurança da Informação",
+    "topico": "OWASP Top 10:2021: prevenção de injeção",
+    "enunciado": "Uma API de relatórios constrói uma consulta SQL concatenando duas entradas recebidas do cliente: um texto livre para filtrar o nome de um cliente e a escolha da coluna de ordenação. A funcionalidade admite ordenar somente pelas colunas nome ou saldo. Para corrigir essa construção conforme a prevenção de injeção da categoria A03 do OWASP Top 10:2021, a equipe deve",
+    "alternativas": {
+      "A": "usar parâmetros vinculados tanto para o texto de busca quanto para o nome da coluna de ordenação, preservando a escolha livre de identificadores pelo cliente.",
+      "B": "validar o formulário no navegador para rejeitar aspas nas duas entradas e manter a concatenação dessas entradas na consulta executada pelo servidor.",
+      "C": "transferir a concatenação das duas entradas para uma procedure no banco e considerar a chamada dessa procedure suficiente para impedir a injeção.",
+      "D": "vincular o texto de busca como valor de parâmetro e mapear a escolha de ordenação, no servidor, para os identificadores fixos nome ou saldo.",
+      "E": "migrar a consulta para a linguagem de um ORM, concatenando as duas entradas recebidas e confiando no framework para separar automaticamente dados e comandos."
+    }
+  },
+  {
+    "id": "BAN-DS-12-0001",
+    "numero": 44,
+    "materia": "Computação em nuvem",
+    "topico": "Modelos de serviço IaaS, PaaS e SaaS",
+    "enunciado": "Uma instituição avalia três contratações de serviços em nuvem, com as seguintes características.\n\nI. A equipe provisiona máquinas virtuais e fica responsável pela instalação e atualização do sistema operacional convidado e pela implantação de suas aplicações; o provedor opera a infraestrutura física.\n\nII. A equipe implanta aplicação própria em ambiente de execução mantido pelo provedor, utilizando linguagens e bibliotecas por ele suportadas; controla a aplicação, mas não administra o sistema operacional subjacente.\n\nIII. As equipes usuárias acessam uma aplicação de gestão documental oferecida e mantida pelo provedor, limitando-se às configurações permitidas de uso, sem implantar código próprio.\n\nConsiderando os modelos de serviço definidos no NIST SP 800-145, as contratações I, II e III correspondem, correta e respectivamente, a:",
+    "alternativas": {
+      "A": "PaaS, IaaS e SaaS.",
+      "B": "SaaS, PaaS e IaaS.",
+      "C": "IaaS, SaaS e PaaS.",
+      "D": "IaaS, PaaS e SaaS.",
+      "E": "PaaS, SaaS e IaaS."
+    }
+  },
+  {
+    "id": "BAN-DS-12-0002",
+    "numero": 45,
+    "materia": "Computação em nuvem",
+    "topico": "Elasticidade, capacidade e disponibilidade em nuvem",
+    "enunciado": "Uma aplicação sem estado é executada em duas zonas de disponibilidade com falhas independentes. Cada instância suporta até 200 requisições por segundo, mantendo o tempo de resposta exigido, e a carga de pico é de 900 requisições por segundo. O balanceador redireciona o tráfego às instâncias disponíveis. Para o dimensionamento, considere que o balanceador, a rede e o banco de dados continuam operacionais e não limitam a vazão, e desconsidere o tempo de redirecionamento.\n\nA aplicação deve sustentar integralmente o pico após a perda de qualquer uma das zonas, usando instâncias já ativas. Há um mecanismo automático que adiciona ou remove instâncias conforme a demanda; a ativação de novas instâncias leva dois minutos.\n\nDurante o pico, a quantidade mínima de instâncias que deve estar previamente ativa em cada zona e o mecanismo de ajuste de recursos descrito correspondem, respectivamente, a:",
+    "alternativas": {
+      "A": "3 instâncias e elasticidade horizontal.",
+      "B": "5 instâncias e elasticidade horizontal.",
+      "C": "5 instâncias e escalabilidade vertical.",
+      "D": "3 instâncias e escalabilidade vertical.",
+      "E": "6 instâncias e elasticidade horizontal."
+    }
+  },
+  {
+    "id": "BAN-DS-13-0001",
+    "numero": 46,
+    "materia": "Git, Kubernetes, Rancher, deploy e CI/CD",
+    "topico": "Git: integração de alterações e conflitos",
+    "enunciado": "Em um repositório com Git 2.43.0, a branch atual é main. Os commits de ponta M, de main, e F, de feature, têm ancestral comum, mas nenhum é ancestral do outro. Com o índice e a árvore de trabalho sem alterações locais, um Analista executa git merge feature. A operação é interrompida por conflito apenas em config.yml. O Analista edita e salva esse arquivo com a resolução desejada e remove os marcadores de conflito, sem executar outros comandos. Considere o comportamento padrão dos comandos, sem aliases ou hooks.\n\nPara concluir essa integração preservando os commits existentes e criando um commit de merge com pais M e F, o Analista deve executar, na sequência indicada,",
+    "alternativas": {
+      "A": "git commit -m \"Integra feature\", pois a edição e o salvamento do arquivo já registram a resolução no índice.",
+      "B": "git add config.yml e git commit --amend --no-edit, pois a resolução deve substituir o conteúdo do commit M.",
+      "C": "git add config.yml e git merge --abort, pois o encerramento com --abort grava a resolução em um novo commit.",
+      "D": "git add config.yml e git commit -m \"Integra feature\", pois a resolução deve ser registrada no índice antes do commit.",
+      "E": "git add config.yml e git merge --quit, pois --quit preserva os arquivos e cria o commit de integração."
+    }
+  },
+  {
+    "id": "BAN-DS-14-0001",
+    "numero": 47,
+    "materia": "Levantamento de requisitos, testes, integração e documentação técnica",
+    "topico": "Rastreabilidade entre requisitos, testes e documentação",
+    "enunciado": "Após aprovar uma alteração no requisito R02 de um sistema bancário, uma equipe consulta os seguintes vínculos mantidos em seu repositório:\n\nRequisito | Casos de teste | Seções da documentação técnica\nR01       | CT01, CT03     | D01\nR02       | CT02, CT03     | D01, D02\nR03       | CT04           | D03\n\nO caso CT03 verifica uma interação entre funcionalidades atendidas por R01 e R02. Sobre o uso desses vínculos, considere:\n\nI. A associação de CT03 com R01 e R02 compromete a rastreabilidade, pois cada caso de teste deve verificar um único requisito.\nII. A análise de impacto da alteração em R02 deve considerar CT02, CT03 e as seções D01 e D02 como candidatos à revisão.\nIII. A existência dos vínculos de R02 com CT02 e CT03 é suficiente para comprovar que a implementação atende ao requisito alterado.\nIV. Uma consulta iniciada em CT03 permite identificar R01 e R02 e, por meio deles, localizar as seções de documentação D01 e D02.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "II e IV.",
+      "D": "I e IV.",
+      "E": "III e IV."
+    }
+  },
+  {
+    "id": "BAN-DS-15-0001",
+    "numero": 48,
+    "materia": "Governança de dados, autenticação e controle de acesso",
+    "topico": "Governança e controle de acesso baseado em papéis",
+    "enunciado": "Na revisão da governança de um cadastro corporativo, um Analista deve configurar o controle de acesso baseado em papéis (RBAC). Há dois papéis independentes: Cadastrador, com permissão para registrar dados, e Homologador, com permissão para homologá-los. A política admite que um mesmo usuário seja autorizado para os dois papéis, mas proíbe que as duas funções estejam ativas simultaneamente em uma mesma sessão. As permissões devem continuar sendo obtidas por meio dos papéis.\n\nA configuração que atende a essa política é",
+    "alternativas": {
+      "A": "estabelecer separação estática de funções entre os dois papéis, rejeitando a atribuição de Homologador a qualquer usuário que já possua o papel Cadastrador.",
+      "B": "ativar todos os papéis atribuídos ao usuário no início da sessão, mantendo registros separados para as operações de cadastro e de homologação.",
+      "C": "definir Homologador como papel superior que herda as permissões de Cadastrador, atribuindo somente Homologador aos usuários habilitados para executar as duas funções.",
+      "D": "estabelecer separação dinâmica de funções entre os dois papéis, impedindo que uma sessão do usuário contenha ambos os papéis ativos ao mesmo tempo.",
+      "E": "exigir autenticação multifator ao ativar cada papel, permitindo que os dois permaneçam ativos quando ambas as verificações tiverem sido concluídas com sucesso."
+    }
+  },
+  {
+    "id": "BAN-DS-16-0001",
+    "numero": 49,
+    "materia": "Inglês técnico",
+    "topico": "Compreensão de texto técnico autoral em inglês",
+    "enunciado": "Considere o texto abaixo.\n\nThe service desk replaced a lengthy installation guide with a checklist. During the first week, new employees completed the routine steps more quickly, yet the number of requests for help remained unchanged. Most requests concerned messages that the checklist did not explain. Rather than bring back the full guide, the team kept the checklist and added a separate section on those messages. It will review next month's support requests to find out whether the addition makes employees less dependent on assistance.\n\n(Texto autoral.)\n\nSegundo o texto, a equipe decidiu acrescentar uma seção à lista de verificação porque",
+    "alternativas": {
+      "A": "a redução dos pedidos de auxílio precisava ser documentada antes de a lista ser mantida.",
+      "B": "a maior rapidez nas etapas usuais não havia eliminado as dúvidas que motivavam pedidos de auxílio.",
+      "C": "a lista havia aumentado o tempo das etapas usuais, apesar de ter diminuído os pedidos de auxílio.",
+      "D": "os funcionários solicitavam ajuda para preencher os relatórios previstos para o mês seguinte.",
+      "E": "as mensagens apresentadas durante a instalação determinavam a retomada obrigatória do guia extenso."
+    }
+  },
+  {
+    "id": "BAN-DS-16-0002",
+    "numero": 50,
+    "materia": "Inglês técnico",
+    "topico": "Coesão e significado em texto técnico autoral em inglês",
+    "enunciado": "Considere o texto abaixo.\n\nA status page shows the latest information about a service interruption. Readers who want automatic updates should subscribe to email notifications. Otherwise, they will need to revisit the page to check for changes. The emails repeat the information on the page; they do not provide an earlier estimate of when the service will return. Readers can cancel the subscription at any time.\n\n(Texto autoral.)\n\nNo contexto, “Otherwise” introduz a ideia de que os leitores precisarão acessar a página novamente",
+    "alternativas": {
+      "A": "mesmo que se inscrevam para receber as notificações por email.",
+      "B": "porque já se inscreveram para receber as notificações por email.",
+      "C": "assim que se inscreverem para receber as notificações por email.",
+      "D": "caso não se inscrevam para receber as notificações por email.",
+      "E": "para que se inscrevam para receber as notificações por email."
+    }
+  }
+]

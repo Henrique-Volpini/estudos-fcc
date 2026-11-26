@@ -1,0 +1,13 @@
+ID: BAN-DS-06-0006
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: SOA: contratos e desacoplamento de serviços
+
+ENUNCIADO
+Em uma arquitetura orientada a serviços, sistemas independentes consomem um serviço de consulta cadastral. O contrato descreve o campo situacao como a indicação de existência de restrição cadastral. A equipe provedora pretende substituir a linguagem e o banco de dados da implementação sem exigir alterações dos consumidores. Também propõe que situacao passe a indicar aptidão para contratar um produto, mantendo o nome e o tipo do campo e o endereço do serviço. Na avaliação dessas mudanças, a equipe deve
+
+A) preservar a interação contratada na substituição interna e avaliar a mudança de significado de situacao como alteração contratual, verificando seu impacto sobre os consumidores.
+B) preservar o nome e o tipo de situacao na substituição interna e considerar seu novo significado compatível, pois a estrutura das mensagens continuará sendo a mesma.
+C) publicar as tabelas do novo banco como parte da interação contratada e orientar os consumidores a consultá-las, transferindo a interpretação de situacao para cada sistema consumidor.
+D) exigir que os consumidores adotem a linguagem da nova implementação e manter a descrição das mensagens, obtendo assim independência em relação à implementação interna do serviço.
+E) manter o endereço do serviço e atualizar a implementação e o significado de situacao, considerando o contrato preservado enquanto os consumidores conseguirem estabelecer conexão com esse endereço.

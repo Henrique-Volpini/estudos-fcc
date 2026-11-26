@@ -1,0 +1,28 @@
+ID: BAN-DS-15-0002
+Matéria: 15 - Governança de dados, autenticação e controle de acesso
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/15-governanca-de-dados-autenticacao-e-acesso.txt
+Tópico do conteúdo: GOVERNANÇA DE DADOS, AUTENTICAÇÃO E CONTROLE DE ACESSO.
+Objetivo da questão: Selecionar o registro de linhagem que permita reconstituir as origens e as transformações de um relatório publicado antes de uma alteração de regra.
+Tarefa de origem: SIM-002, plano.json, elaborador 15, questão global 48; recorte atribuído: Governanca de dados: linhagem da origem e das transformacoes.
+Responsável pela elaboração: /root/s2_elab_15
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, questão autoral elaborada por /root/s2_elab_15, com fontes primárias navegadas, referência editorial FCC lida e rodízio em relação ao RBAC de BAN-DS-15-0001.
+- 2026-11-26, v01, entrega completa e conferida por /root/s2_elab_15; registrada em PENDENTE_AUDITORIA, sem emissão de pareceres ou aprovação pelo elaborador.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002 -> Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002
+ESTILO_FCC: Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0002/v01/parecer-redacao-e-conformidade.txt

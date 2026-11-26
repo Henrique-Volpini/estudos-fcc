@@ -1,0 +1,37 @@
+ID: BAN-DS-05-0008
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar as notas de Ana e Bia após a inversão com a chave atual e selecionar a chave adequada desde a montagem inicial para futuras reordenações.
+
+RESOLUÇÃO
+As chaves atuais continuam sendo 0 e 1. A instância de Linha com chave 0 preserva X, mas passa a receber Bia; a instância com chave 1 preserva Y e passa a receber Ana. Na ordem pedida, Ana exibe Y e Bia exibe X. Se o id for usado desde a montagem inicial, a identidade de cada Linha acompanha o cliente ao mudar de posição. A mudança posterior da estratégia de chave não recupera automaticamente notas já associadas às instâncias anteriores.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: a chave proposta é adequada, mas com a chave atual a nota X permanece na primeira posição, agora ocupada por Bia.
+B) Não atende: o resultado previsto é o da chave atual, mas manter o índice continua vinculando o estado à posição.
+C) Não atende: o resultado inicial está previsto corretamente, mas acrescentar o índice faz a chave mudar quando o cliente troca de posição.
+D) Não atende: o resultado inicial está previsto corretamente, mas uma chave aleatória muda entre renderizações e pode recriar os componentes, perdendo o estado.
+E) Atende: com índices, Ana passa à posição com Y e Bia à posição com X; o id estável permite identificar cada cliente ao reordenar.
+
+FONTES TÉCNICAS CONSULTADAS
+- React — Rendering Lists — documentação oficial
+  URL: https://react.dev/learn/rendering-lists
+  Localizador e fundamentação: Seções Where to get your key, Rules of keys, Why does React need keys? e Pitfall: identificadores estáveis, índice e chaves geradas durante a renderização. Consultada em 26/11/2026; comportamento aplicado a React 19.
+- React — Preserving and Resetting State — documentação oficial
+  URL: https://react.dev/learn/preserving-and-resetting-state
+  Localizador e fundamentação: Seções State is tied to a position in the render tree, Same component at the same position preserves state e Resetting state at the same position: vínculo entre identidade e estado. Consultada em 26/11/2026.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 33; página 8.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada: Cenário profissional que apresenta uma configuração e pede identificação técnica em uma ordem explícita.
+  Aplicação nesta questão autoral: Cenário de manutenção de interface com um trecho de código e alternativas que combinam resultado e configuração.
+  Limites da referência: A cópia não foi obtida da FCC nem do órgão. O registro de hash local não constitui assinatura oficial. O caderno consultado não oferece exemplo de React nesta referência; a correspondência é editorial, não de tecnologia. O exemplo sustenta apenas as características descritas, sem demonstrar frequência na banca.
+
+VERIFICAÇÕES REALIZADAS
+Análise documental da identidade por key e da preservação do estado; simulação manual das associações chave–cliente–nota antes e depois da inversão. Não foi montada nem executada aplicação React.
+Comparação de independência temática com BAN-DS-05-0001 a BAN-DS-05-0005 em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/questoes-anteriores.json: os novos objetivos são diferentes de idempotência, ordem assíncrona, foco acessível, parâmetros OpenAPI e validade XSD cobrados anteriormente.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Questão aguardando auditoria independente; não há parecer ou aprovação emitido pelo elaborador.

@@ -1,0 +1,21 @@
+ID: BAN-DS-12-0004
+Versão: v01
+Matéria: Computação em nuvem
+Tópico: Governanca e controle de custos em nuvem: atribuicao e acompanhamento
+
+ENUNCIADO
+Em um cenário fictício de governança de custos em nuvem, uma instituição identificou os custos diretos mensais por meio de metadados válidos de equipe. Os valores apurados e os orçamentos mensais são:
+
+Equipe   | Custos diretos | Orçamento
+Cartões  | R$ 18.000,00   | R$ 21.000,00
+Crédito  | R$ 12.000,00   | R$ 15.000,00
+
+Há também um custo compartilhado de R$ 6.000,00, ainda não incluído nos custos diretos. A política interna aprovada determina que ele seja integralmente rateado entre as duas equipes na proporção dos respectivos custos diretos. O acompanhamento deve somar a parcela rateada ao custo direto de cada equipe e sinalizar quando esse total ultrapassar seu orçamento. Os orçamentos já contemplam custos compartilhados. Todos os valores são finais para o mês, sem outros custos ou ajustes.
+
+Aplicando essa política, os custos totais atribuídos a Cartões e a Crédito e o resultado do acompanhamento são, respectivamente,
+
+A) R$ 21.000,00 e R$ 15.000,00; nenhum desvio por equipe deve ser sinalizado.
+B) R$ 21.600,00 e R$ 14.400,00; nenhum desvio por equipe deve ser sinalizado.
+C) R$ 18.000,00 e R$ 12.000,00; nenhum desvio por equipe deve ser sinalizado.
+D) R$ 24.000,00 e R$ 12.000,00; deve ser sinalizado excesso de R$ 3.000,00 em Cartões.
+E) R$ 21.600,00 e R$ 14.400,00; deve ser sinalizado excesso de R$ 600,00 em Cartões.

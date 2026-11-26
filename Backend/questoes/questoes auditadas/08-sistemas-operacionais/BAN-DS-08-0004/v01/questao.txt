@@ -1,0 +1,24 @@
+ID: BAN-DS-08-0004
+Versão: v01
+Matéria: Sistemas Operacionais
+Tópico: PowerShell: pipeline de objetos e filtragem de serviços
+
+ENUNCIADO
+Em uma sessão do Windows PowerShell 5.1, no Windows Server 2022, a variável $servicos contém os objetos retornados por Get-Service para cinco serviços. As propriedades relevantes, capturadas no mesmo instante, são:
+
+Name  DisplayName    Status
+AppZ  Coletor Z      Running
+AppB  App Backup     Stopped
+AppA  App Agente     Running
+Sync  App Sincronia  Running
+Base  Servico Base   Running
+
+Um Analista precisa produzir objetos com as propriedades Name e Status, referentes somente aos serviços em execução cujo Name começa por App, ordenados de forma crescente por Name. Esses objetos serão utilizados em processamento posterior, que acessará as duas propriedades. Considere os cmdlets e operadores padrão, sem redefinições.
+
+O pipeline que atende a esses requisitos é
+
+A) $servicos | Where-Object { ($_.Status -eq 'Running') -or ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status
+B) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Format-Table Name, Status
+C) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.DisplayName -like 'App*') } | Sort-Object Name | Select-Object Name, Status
+D) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -like 'App*') } | Sort-Object Name | Select-Object Name, Status
+E) $servicos | Where-Object { ($_.Status -eq 'Running') -and ($_.Name -eq 'App*') } | Sort-Object Name | Select-Object Name, Status

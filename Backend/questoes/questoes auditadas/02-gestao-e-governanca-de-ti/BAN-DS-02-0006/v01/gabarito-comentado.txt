@@ -1,0 +1,61 @@
+ID: BAN-DS-02-0006
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar a conduta do fiscal diante de ocorrência que demanda providência além de sua competência.
+
+RESOLUÇÃO
+O fiscal deve manter o registro das ocorrências da execução e, diante de providência que supere sua competência, comunicar a situação aos superiores a tempo da adoção das medidas convenientes. O relatório da empresa é subsídio técnico: não transfere atribuições exclusivas de fiscalização, não amplia a competência do servidor e não o exonera da responsabilidade prevista no § 4º, II. O cenário usa uma autarquia e declara o regime da Lei nº 14.133/2021, sem presumir sua aplicação ao Banestes. O corte de 11/11/2026 segue a publicação do edital de abertura; o art. 117 consultado possui a mesma redação nos textos original e atualizado da Câmara, corroborada por Planalto e Senado. Não foi utilizada alteração superveniente.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O apoio técnico contratado fornece subsídios ao fiscal; não autoriza a empresa a exercer atribuição própria e exclusiva da fiscalização. A situação além da competência do fiscal deve ser comunicada aos superiores, conforme art. 117, § 2º, em conjunto com o § 4º, I.
+B) Não atende. O art. 117, § 1º, exige registro próprio de todas as ocorrências relacionadas à execução, não apenas das que o fiscal consiga corrigir diretamente. Comunicar uma situação aos superiores não afasta o dever de registrá-la.
+C) Não atende. Um relatório técnico não amplia a competência do fiscal. O art. 117, § 2º, determina a comunicação aos superiores da situação que demande decisão ou providência além de sua competência.
+D) Não atende. O encaminhamento aos superiores é cabível, mas não produz a exoneração proposta. Pelo art. 117, § 4º, II, contratar apoio técnico não exime o fiscal de responsabilidade nos limites das informações recebidas do terceiro contratado.
+E) Atende. O registro próprio decorre do art. 117, § 1º. A informação aos superiores em tempo hábil, para que adotem as medidas convenientes, decorre do § 2º. As duas providências se complementam no cenário.
+
+FONTES TÉCNICAS CONSULTADAS
+- Lei nº 14.133, de 1º de abril de 2021 – Presidência da República/Planalto. Art. 117, caput, §§ 1º e 2º e § 4º, I e II; art. 1º, caput e § 1º. Consulta: 2026-11-26.
+  URL: https://planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm
+  Fundamentação: Deveres do fiscal, limite do apoio de terceiros e delimitação da entidade do cenário.
+- Lei nº 14.133/2021 – publicação original – Câmara dos Deputados. Art. 117, caput e §§ 1º–4º. Consulta: 2026-11-26.
+  URL: https://www2.camara.leg.br/legin/fed/lei/2021/lei-14133-1-abril-2021-791222-publicacaooriginal-162591-pl.html
+  Fundamentação: Conferência da redação original dos dispositivos cobrados, anterior ao corte do edital.
+- Lei nº 14.133/2021 – texto atualizado – Câmara dos Deputados. Art. 117, caput e §§ 1º–4º, sem indicação de redação substitutiva no trecho. Consulta: 2026-11-26.
+  URL: https://www2.camara.leg.br/legin/fed/lei/2021/lei-14133-1-abril-2021-791222-normaatualizada-pl.html
+  Fundamentação: Confronto com a publicação original: a redação pertinente permanece coincidente, sem transportar novidades posteriores ao corte.
+- Lei nº 14.133/2021 – Legislação Federal – Senado Federal. Art. 117, §§ 1º e 2º e § 4º, I e II. Consulta: 2026-11-26.
+  URL: https://legis.senado.gov.br/norma/33382036/publicacao/33383820
+  Fundamentação: Corroboração em fonte legislativa oficial com caracteres legíveis, diante dos problemas de codificação do HTML de Planalto.
+- Edital Banestes nº 01/2027 de Abertura de Inscrições – arquivo local. Página 27: data de 11 de novembro de 2026; página 35: observação sobre legislação vigente até a publicação; bloco Gestão e Governança de TIC no Anexo IV. Consulta: 2026-11-26.
+  Arquivo: Backend/Agents/conteudo/edital/banestes-01-2027.pdf
+  Fundamentação: Delimitação do programa e do corte legal, corroborado pelo aviso oficial de publicação.
+- DIO-ES – aviso do Edital de Abertura do Concurso Público Banestes 01/2027. Edição de 11/11/2026, página 35, protocolo 1902136. Texto do aviso recuperado no índice da busca web; a abertura direta retornou HTTP 403. Consulta: 2026-11-26.
+  URL: https://ioes.dio.es.gov.br/portal/edicoes/download/11623/35
+  Fundamentação: O aviso informa que o edital de abertura será publicado nessa data nos sites do Banestes e da FCC. Consulta limitada ao texto indexado, sem afirmar download ou inspeção visual do DIO.
+- Governo do Espírito Santo – Banestes e Banescor lançam novos editais de concurso público com 645 vagas para cadastro de reserva. Publicada em 12/11/2026; parágrafos sobre aviso no Diário Oficial em 11/11/2026 e disponibilização dos editais. Consulta: 2026-11-26.
+  URL: https://www.es.gov.br/banestes-e-banescor-lancam-novos-editais-de-concurso-publico-com-645-vagas-para-cadastro-de-reserva
+  Fundamentação: Corroboração oficial da data de divulgação; usada com a data do próprio edital e o aviso indexado.
+- Conteúdo programático local – Desenvolvimento de Sistemas. Gestão de contratos e fornecedores de TIC com foco na Lei nº 14.133/2021; observação final de legislação. Consulta: 2026-11-26.
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+- FCC – TRT4/2022 – Analista Judiciário – Tecnologia da Informação. Caderno A14, Tipo 001, questão 30, página 7. Consulta: 2026-11-26.
+  URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf
+  Fundamentação: Referência editorial de comando sobre recorte específico da Lei nº 14.133/2021.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário – Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 30; página 7.
+- Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Comando afirmativo delimitado a um instituto da Lei nº 14.133/2021 e cinco afirmações comparáveis, cada uma sobre uma conduta jurídica.
+- Aplicação nesta questão autoral: Comando afirmativo sobre recorte do art. 117 aplicado a cenário de manutenção de sistemas; cinco condutas comparáveis. O instituto, o cenário, os dados e as alternativas são novos.
+- Limites da referência: Referência de formato de uma questão específica; a cópia foi hospedada pelo Qconcursos, não obtida diretamente da FCC. Não foi verificada assinatura digital nem autenticidade oficial do arquivo. O conteúdo antigo não foi usado como fonte de correção técnica atual nem como evidência de frequência da banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: art. 117 confrontado em Planalto, Câmara (publicação original e texto atualizado) e Senado. Os deveres e limites cobrados coincidem nas fontes; o texto original e a ausência de alteração no trecho atualizado sustentam o uso no corte de 11/11/2026.
+- Temporal: conferidas páginas 27 e 35 do edital local, aviso primário DIO-ES de 11/11/2026, página 35, protocolo 1902136, recuperado em texto indexado, e notícia oficial GovernoES de 12/11/2026. A abertura direta do DIO retornou 403; não se declarou download do Diário.
+- Analítica: confrontadas as cinco condutas com §§ 1º, 2º e 4º do art. 117; separadas comunicação, registro e permanência da responsabilidade nos limites legais.
+- Editorial: questão 30, página 7, TRT4/2022, lida na extração e inspecionada em imagem recortada renderizada em memória do PDF local; referência secundária Qconcursos declarada.
+- Escopo: a entidade do cenário é uma autarquia sob a Lei nº 14.133/2021; não se atribuiu esse regime automaticamente ao Banestes. Não houve execução, parecer ou aprovação de auditoria.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria independente.

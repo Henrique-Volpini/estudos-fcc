@@ -1,0 +1,37 @@
+ID: BAN-DS-09-0004
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar o endereço que representa todos os nós do enlace e a conclusão correta sobre encaminhar um destino link-local para outro enlace.
+
+RESOLUÇÃO
+ff02::1 representa todos os nós IPv6 do enlace, por multicast; IPv6 não define broadcast. fe80::20 é um endereço unicast link-local. L1 e L2 constituem zonas de enlace distintas, e roteadores não podem encaminhar entre enlaces pacotes com origem ou destino link-local. Uma rota estática ou um Hop Limit maior não altera essa restrição.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: IPv6 não possui endereços de broadcast. ff02::1 identifica um grupo multicast, embora a conclusão sobre o encaminhamento esteja correta.
+B) Não atende: ff02::2 identifica todos os roteadores do enlace, não todos os nós. A proibição de encaminhar o destino link-local para L2 está correta.
+C) Não atende: uma rota estática não amplia o escopo de fe80::20. Esse endereço identifica uma interface apenas no enlace correspondente, e R não pode encaminhar o pacote entre L1 e L2.
+D) Atende: ff02::1 é o grupo multicast de todos os nós com escopo de enlace. fe80::20 é link-local e não pode ser encaminhado de L1 para outro enlace.
+E) Não atende: Hop Limit maior que 1 não elimina os limites de escopo. Mesmo nessa condição, o destino link-local impede o encaminhamento de L1 para L2.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conteúdo programático — Redes de computadores. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução.
+- RFC 4291 — IP Version 6 Addressing Architecture, IETF/RFC Editor, fevereiro de 2006. https://www.rfc-editor.org/rfc/rfc4291.html. Localizador e uso: Seção 2: inexistência de broadcast; seção 2.5.6: link-local e proibição de encaminhamento entre enlaces; seção 2.7.1: All Nodes e All Routers. Navegada em 26/11/2026.
+- RFC 4007 — IPv6 Scoped Address Architecture, IETF/RFC Editor, março de 2005. https://www.rfc-editor.org/rfc/rfc4007.html. Localizador e uso: Seções 4 e 5: escopo link-local e uma zona de enlace por link; seção 9: limites de zona no encaminhamento. Navegada em 26/11/2026.
+- FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Questão 56, página impressa e página da extração 13. Referência editorial; cópia secundária Qconcursos.
+- Metadados de origem do acervo FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador e uso: Registro trt4-2022-ti-a14-001: origem copia_secundaria, URL e arquivo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 56; página 13.
+- Origem verificável: Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente no mesmo diretório. Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A referência combina, em cada opção, atributos de um elemento de protocolo. Aplicou-se a avaliação conjunta do endereço/grupo e da consequência para o encaminhamento, mantendo as opções na mesma ordem de informações e com um único comando.
+- Limites da referência: Cópia hospedada no Qconcursos; não se afirma download da FCC nem assinatura de integridade oficial. Exemplo pontual de construção editorial, sem inferência de frequência e sem usar o gabarito antigo como prova técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: RFC 4291 e RFC 4007 navegadas para conferir os tipos de endereço, os grupos ff02::1 e ff02::2 e os limites entre enlaces.
+- Analítica: comparação individual das cinco opções; as permissões sugeridas por rota estática e Hop Limit não ultrapassam o escopo link-local.
+- Editorial: leitura efetiva da extração FCC TRT4/2022, questão 56, página 13; enunciado, topologia e opções são autorais.
+- Não houve execução de tráfego nem simulação de rede; a conclusão é documental e analítica.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

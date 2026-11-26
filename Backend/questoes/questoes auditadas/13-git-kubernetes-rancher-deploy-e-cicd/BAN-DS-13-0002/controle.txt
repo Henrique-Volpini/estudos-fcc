@@ -1,0 +1,27 @@
+ID: BAN-DS-13-0002
+Matéria: 13 - Git, Kubernetes, Rancher, deploy e CI/CD
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/13-git-kubernetes-rancher-deploy-e-cicd.txt
+Tópico do conteúdo: orquestração de containers com Rancher gerenciamento de clusters Kubernetes com Rancher;
+Objetivo da questão: distinguir a gestão centralizada pelo Rancher das funções nativas de um cluster Kubernetes registrado, avaliando continuidade e acesso direto durante uma indisponibilidade isolada do servidor de gerenciamento.
+Tarefa de origem: SIM-002, questão global 46; tópico atribuído: Rancher: gerenciamento de clusters Kubernetes e responsabilidades.
+Responsável pela elaboração: /root/s2_elab_13
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26 — v01 — elaboração autoral concluída e arquivos conferidos por /root/s2_elab_13; fontes primárias e referências editoriais FCC consultadas; entrega no estado PENDENTE_AUDITORIA para avaliação independente.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002 -> Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002
+ESTILO_FCC: Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0002/v01/parecer-redacao-e-conformidade.txt

@@ -1,0 +1,13 @@
+ID: BAN-DS-06-0008
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: Integração legada: migração incremental pelo padrão Strangler Fig
+
+ENUNCIADO
+Uma instituição vai modernizar um sistema legado que atende consultas, alterações cadastrais e liquidações. A nova implementação das consultas já está pronta e deve entrar em uso na primeira etapa; as outras funcionalidades continuarão no legado. As integrações e os dados necessários à coexistência foram preparados, e é possível interceptar as requisições. A instituição quer preservar o endereço de acesso dos clientes durante as etapas e retirar o legado ao final. Para aplicar o padrão Strangler Fig nessas condições, a equipe deve
+
+A) publicar endereços distintos para o legado e para cada nova funcionalidade, transferindo aos clientes a escolha do destino e a atualização desse endereço a cada etapa da modernização.
+B) introduzir uma fachada que encaminhe consultas à nova implementação e demais operações ao legado, ampliando a substituição por etapas e retirando o legado quando não restarem funcionalidades ou dependências dele.
+C) manter todas as requisições no legado até concluir as novas versões de consultas, alterações cadastrais e liquidações, realizando então a transferência conjunta das funcionalidades e a retirada da implementação anterior.
+D) introduzir uma fachada que preserve o endereço dos clientes e encaminhe todas as operações ao legado, considerando concluída a substituição das consultas quando a nova fachada estiver disponível para acesso.
+E) encaminhar uma porcentagem crescente de todas as requisições à nova implementação, independentemente da funcionalidade solicitada, e retirar o legado quando o sistema moderno receber a maioria do tráfego.

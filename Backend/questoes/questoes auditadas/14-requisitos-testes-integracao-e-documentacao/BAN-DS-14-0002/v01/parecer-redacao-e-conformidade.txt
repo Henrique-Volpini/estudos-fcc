@@ -1,0 +1,52 @@
+Simulado: SIM-002
+Questão: BAN-DS-14-0002
+Versão examinada: v01
+Responsável: /root/s2_auditor_redacao
+Perfil: REDACAO_E_CONFORMIDADE
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras compartilhadas vigentes na avaliação.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo de parecer.
+- Backend/Agents/codex/agents/auditores/03-redacao-e-conformidade.txt — perfil atribuído.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/manifesto.json — SIM-002/v01, identificação e hash do pacote.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/publico-41-50.json — primeira leitura pública de BAN-DS-14-0002, v01.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-002/auditoria/v01/primeiras-observacoes-redacao.json — observação individual registrada antes dos gabaritos.
+- Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002/controle.txt — controle, versão atual completa v01.
+- Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002/v01/questao.txt — v01, texto completo e cabeçalho conferidos.
+- Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0002/v01/gabarito-comentado.txt — v01, identificação, resolução, comentários, fontes/localizadores e pendências conferidos.
+
+PRIMEIRA LEITURA SEM GABARITO
+Regras de confirmação/recusa, atualização e exibição são separadas; casos independentes têm tabela com unidades e cabeçalhos. Comando define o par e a ordem I–III. Cinco ternas distintas e paralelas; negação integra condição objetiva, sem inversão de comando.
+Esta observação foi registrada no arquivo de primeiras observações após a leitura dos cinco lotes públicos e antes de consultar qualquer resposta ou comentário. Matéria ampla, número, enunciado e alternativas compõem a leitura do estudante; os campos de tópico e demais metadados acima de ENUNCIADO são internos.
+
+CRITÉRIOS EXAMINADOS
+- Ortografia, pontuação, concordância, construção das frases, consistência dos termos e pronomes: Atendido no texto público: examinadas ortografia, pontuação, concordância, construção e referências pronominais. Evidência individual na primeira leitura acima.
+- Comando inequívoco: atendido; o objeto da seleção é identificável e cada alternativa se vincula ao mesmo pedido, conforme observação individual.
+- Negações e exceções: Atendido: o comando é afirmativo; as negações e restrições presentes são premissas ou conteúdo das opções. Não se pede alternativa INCORRETA nem EXCEÇÃO, de modo que esse destaque não se aplica.
+- Identificação do cenário e dos elementos fornecidos: Atendido: tabela ou metadados com cabeçalhos/ordem e unidades/identificadores suficientes à leitura do comando. A suficiência conceitual técnica não foi certificada.
+- Paralelismo e completude das alternativas: atendido; cinco opções relacionadas ao comando, sem duplicação ou sobreposição TEXTUAL demonstrável que impeça a seleção. Não foi determinada a verdade técnica das opções.
+- Integridade do texto público: atendido; não há frase truncada, resto de template, instrução interna exposta, caractere corrompido ou trecho desconexo observado. O trecho público coincide com o lote lido inicialmente.
+- Grafia/formatação de código, consultas, termos e inglês: Atendido: siglas, identificadores e termos técnicos permanecem consistentes no texto. Critério específico de preservação de código não se aplica, por não haver código executável.
+- Identificação e versão: atendido; BAN-DS-14-0002/v01 consistem no controle, nos cabeçalhos de questão/gabarito e na pasta. Controle aponta os dois arquivos exatos desta versão; elaborador /root/s2_elab_14 é distinto deste auditor.
+- Cinco alternativas A–E: atendido; os rótulos aparecem uma vez cada no texto público, sem repetição ou ausência.
+- Gabarito separado: atendido; há uma única letra proposta no campo próprio de gabarito-comentado.txt, separada de questao.txt.
+- Resolução e comentários individuais: atendido; resolução legível e cinco análises identificadas de A a E, cada uma relacionada ao texto da respectiva opção.
+- Coerência textual entre campo proposto, resolução e comentário favorável; fontes, localizadores, campos e pendências: atendidos. Conferência individual: A resolução percorre os três casos e seus pares de saída; o comentário favorável corresponde à letra proposta e os quatro demais comentários explicitam as diferenças. ISTQB tem versão/seções/páginas e Cucumber tópicos nomeados; pendências preenchidas.
+- Revisão e preservação de versão anterior: não aplicável; esta é a primeira versão v01 do ID no pacote, sem resposta a parecer anterior exigível.
+- Vinculação ao pacote: atendida; o SHA256 dos textos com normalização LF e separador NUL coincide com o manifesto: 30e751568dc639e65c0b7f8da7225ed12d56ad7fcee66cbf00962342cd45d711.
+
+ACHADOS
+Nenhum achado impeditivo no escopo de REDACAO_E_CONFORMIDADE.
+
+REFERÊNCIAS DE ESTILO
+Não aplicável a este perfil. Foi conferida a presença e a identificação das fontes registradas pelo elaborador; não houve comparação editorial independente com provas nem validação técnica de fontes.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma pendência impeditiva neste perfil. A indicação de auditorias ainda pendentes no material do elaborador foi reconhecida como o estado da entrega anterior a estes pareceres; esta decisão não fala pelos demais perfis.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA após leitura individual integral do texto público e conferência dos componentes exigidos nos arquivos exatos desta versão. O comando e as alternativas têm redação utilizável, a identificação documental é consistente e resolução/comentários/fontes/localizadores/pendências estão presentes e legíveis, sem divergência textual com o campo de resposta. Esta aprovação limita-se à redação e à conformidade formal; não certifica o conteúdo, não refaz cálculos nem executa código.

@@ -1,0 +1,11 @@
+{
+  "simulado":"SIM-002",
+  "responsavel":"/root/s2_auditor_estilo",
+  "perfil":"ESTILO_FCC",
+  "data":"2026-11-26",
+  "ordem":"Questão 48 lida isoladamente em publico-41-50.json atualizado, antes de acessar suas referências em estilo-41-50.json atualizado. O manifesto anterior havia sido consultado após as primeiras observações das outras 49; nenhuma chave ou comentário da questão 48 foi aberto.",
+  "id":"BAN-DS-15-0002",
+  "numero":48,
+  "versao":"v01",
+  "observacao":"Cenário de relatório mensal apresenta fonte, exclusão, conversão, agregação e mudança posterior de regras. Comando pede o registro de linhagem para reconstituir publicação passada, com cinco continuações sintáticas paralelas. As alternativas se referem ao mesmo relatório e variam as relações documentadas. Vocabulário de execução e temporalidade é necessário ao objetivo, sem favorecimento tipográfico observado. Comparar com questão real de cenário técnico e identificação de elementos de rastreio; não certificar conteúdo de linhagem."
+}

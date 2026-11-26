@@ -1,0 +1,38 @@
+ID: BAN-DS-09-0005
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar endereço, TTL restante e bit AA da resposta nas condições explícitas de cache.
+
+RESOLUÇÃO
+O registro armazenado em t = 0 s vence em t = 300 s. Em t = 120 s, ele permanece válido e seu TTL restante é 180 segundos. A alteração em S não foi obtida por R, que reutiliza 192.0.2.40 conforme a configuração declarada. Recursão e autoridade são funções distintas: a resposta de cache de R tem AA = 0, pois R não é autoritativo para o nome consultado.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: obter 192.0.2.80 exigiria conhecer a alteração em S. Nas condições dadas, R reutiliza o registro ainda válido em cache; o pedido de recursão não obriga nova consulta ao autoritativo.
+B) Atende: R mantém 192.0.2.40 em cache; restam 300 − 120 = 180 segundos. Como R não é autoritativo para esse nome, a resposta tem AA igual a 0.
+C) Não atende: endereço e TTL estão corretos, mas AA não é herdado da origem do registro. AA igual a 1 indicaria autoridade do próprio servidor respondente, condição que R não possui.
+D) Não atende: responder com o cache não reinicia o prazo do registro. Dos 300 segundos recebidos, 120 já transcorreram; o TTL restante é 180 segundos.
+E) Não atende: a mudança em S não atualiza automaticamente o registro armazenado em R. Além de devolver o endereço novo indevidamente, a opção marca R como autoritativo por meio de AA igual a 1.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conteúdo programático — Redes de computadores. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e uso: Bloco REDES DE COMPUTADORES, linhas 133–147; observação final, linhas 213–217. Delimitação de escopo, sem uso de regra jurídica na solução.
+- RFC 1034 — Domain Names: Concepts and Facilities, IETF/RFC Editor, novembro de 1987. https://www.rfc-editor.org/rfc/rfc1034.html. Localizador e uso: Seção 4.3.1: recursão solicitada e disponível; seções 5.3.2 e 5.3.3: validade do cache e consulta inicial às informações locais. Navegada em 26/11/2026.
+- RFC 1035 — Domain Names: Implementation and Specification, IETF/RFC Editor, novembro de 1987. https://www.rfc-editor.org/rfc/rfc1035.html. Localizador e uso: Seção 3.2.1: intervalo de cache do RR; seção 4.1.1: AA indica autoridade do servidor respondente; seção 4.1.3: TTL em segundos. Navegada em 26/11/2026.
+- RFC 9499 — DNS Terminology, BCP 219, IETF/RFC Editor, março de 2024. https://www.rfc-editor.org/rfc/rfc9499.html. Localizador e uso: Seção 5: TTL máximo e possibilidade de redução/limpeza antecipada; seção 6: recursive resolver, recursive query e authoritative server. As condições do cenário afastam políticas diferentes de cache. Navegada em 26/11/2026.
+- FCC — TRT4, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e uso: Questão 55, página impressa e página da extração 13. Referência de cenário operacional e combinação ordenada de resultados; cópia secundária Qconcursos.
+- Metadados de origem do acervo FCC. Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador e uso: Registro trt4-2022-ti-a14-001: origem copia_secundaria, URL e arquivo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 55; página 13.
+- Origem verificável: Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente no mesmo diretório. Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Origem registrada em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada e aplicação nesta questão autoral: A referência delimita uma situação operacional e exige a escolha de três informações na ordem do comando. Aplicou-se esse encadeamento a endereço, TTL e AA, com todas as alternativas contendo os mesmos três campos. Não se reproduziram o código, as lacunas ou os dados do exemplo.
+- Limites da referência: Cópia hospedada no Qconcursos; não se afirma download da FCC nem assinatura de integridade oficial. Exemplo pontual de construção editorial, sem inferência de frequência e sem usar o gabarito antigo como prova técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: RFCs 1034, 1035 e 9499 efetivamente navegadas para recursão, cache, TTL e AA; o cenário explicita políticas que poderiam mudar o resultado.
+- Analítica: expiração em t = 300 s e TTL restante de 180 s em t = 120 s; confronto separado de endereço, TTL e autoridade nas cinco alternativas.
+- Editorial: leitura efetiva da extração FCC TRT4/2022, questão 55, página 13; aproveitou-se apenas a estrutura de cenário e combinação ordenada de informações.
+- Não houve consulta a um serviço DNS real nem execução de resolvedor; os valores são dados autorais de laboratório e a verificação é documental e analítica.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguarda auditoria independente.

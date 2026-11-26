@@ -1,0 +1,286 @@
+{
+  "elaborador": "01",
+  "responsavel": "/root/s2_elab_01",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0005",
+      "numero": 1,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "Kanban: limite de trabalho em progresso (WIP) e fluxo",
+      "versao": "v01",
+      "enunciado": "Uma equipe utiliza Kanban com o fluxo A fazer → Implementação → Validação → Concluído. O trabalho é considerado iniciado ao entrar em Implementação e finalizado ao entrar em Concluído. Há um único limite de WIP: no máximo seis itens iniciados e ainda não finalizados, sem exceções para itens bloqueados. Não há limites adicionais por etapa.\n\nEm determinado momento, há dez itens em A fazer, três em Implementação e dois em Validação, sendo um destes bloqueado. Em seguida, o item não bloqueado de Validação é concluído e dois itens passam de Implementação para Validação. Não ocorrem outras conclusões, cancelamentos ou entradas no fluxo.\n\nSem novas conclusões ou cancelamentos, a quantidade máxima de itens de A fazer que pode ser iniciada, respeitando o limite estabelecido, é",
+      "alternativas": {
+        "A": "1 item.",
+        "B": "2 itens.",
+        "C": "3 itens.",
+        "D": "4 itens.",
+        "E": "5 itens."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende ao comando: um item poderia ser iniciado, mas não é o máximo. Esse valor mantém o WIP inicial de cinco e deixa de descontar a conclusão ocorrida em Validação.",
+        "B": "Atende ao comando: o WIP passa de cinco para quatro após a única conclusão. As duas mudanças de etapa preservam esse total; o limite de seis permite iniciar mais dois itens.",
+        "C": "Não atende ao comando: iniciar três elevaria o WIP de quatro para sete. O item bloqueado continua iniciado e não finalizado, logo não pode ser excluído da contagem.",
+        "D": "Não atende ao comando: iniciar quatro elevaria o WIP para oito. A passagem dos dois itens de Implementação para Validação não representa duas conclusões do fluxo.",
+        "E": "Não atende ao comando: iniciar cinco elevaria o WIP para nove. Esse valor resultaria de descontar indevidamente tanto o item bloqueado quanto as duas movimentações internas."
+      },
+      "resolucao": "O WIP inicial é 3 + 2 = 5, incluindo o item bloqueado. A conclusão de um item reduz o total para 4. A transferência dos dois itens entre etapas internas não cruza o ponto de finalização e, portanto, mantém o WIP em 4. Ao final, há um item em Implementação e três em Validação. A capacidade disponível pelo limite é 6 − 4 = 2 itens. Iniciar um também respeitaria o limite, mas o comando solicita a quantidade máxima.",
+      "fontes": [
+        {
+          "titulo": "The Kanban Guide — edição de maio de 2025, John Coleman e Daniel Vacanti",
+          "url": "https://kanbanguides.org/the-kanban-guide/2025.5/",
+          "localizador": "Defining and Visualizing the Workflow, elementos 2–5; Actively Managing Items in a Workflow; Flow Metrics, definição de WIP. Consulta em 26/11/2026. Sustenta contagem de itens iniciados e não finalizados, controle de WIP e capacidade para puxar novos itens."
+        },
+        {
+          "titulo": "FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 57, página 13, seção === PAGINA 13 === da extração local. Exemplo lido de cenário técnico delimitado com pedido de valor e cinco alternativas numéricas; somente formato."
+        },
+        {
+          "titulo": "Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item métodos ágeis (Scrum, Kanban, XP e similares). Delimitação do escopo."
+        }
+      ],
+      "autor": "/root/s2_elab_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: leitura via web do Kanban Guide, edição maio/2025, nas seções indicadas; conferidas as regras que sustentam a resposta e os quatro distratores.",
+        "Analítica: recontagem do WIP por estado e por eventos, obtendo quatro itens iniciados e não finalizados e duas vagas; conferidas individualmente as cinco quantidades propostas.",
+        "Editorial: leitura da questão 57, página 13, da extração local TRT4/2022; comparação com BAN-DS-01-0001 a BAN-DS-01-0004 do histórico SIM-001, sem repetição do objetivo. Não houve execução de software ou simulação de fluxo."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 57,
+          "pagina": 13,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+          "caracteristicaAplicada": "Cenário técnico com condições delimitadas, comando para determinar um valor e cinco alternativas numéricas curtas. A questão autoral aplica esse formato à contagem de WIP após três tipos de ocorrência.",
+          "limites": "A referência trata de ICMP e orienta apenas a construção editorial. A cópia não é apresentada como download da FCC nem como certificação de integridade oficial; não sustenta a correção técnica de Kanban."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-01-0006",
+      "numero": 2,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "BPMN: gateway exclusivo e gateway paralelo em fluxo delimitado",
+      "versao": "v01",
+      "enunciado": "Em um processo BPMN 2.0.2, um gateway exclusivo divergente recebe um único token e possui duas saídas: uma leva à tarefa Conferir cadastro e a outra, à tarefa Solicitar documento. As saídas dessas tarefas chegam a entradas distintas de um gateway paralelo convergente, que possui uma única saída para a tarefa Registrar resultado.\n\nEm uma execução, o gateway exclusivo seleciona apenas Conferir cadastro, e essa tarefa termina normalmente. Não existem outros fluxos, eventos ou mecanismos capazes de produzir tokens nesse trecho, nem laços de repetição.\n\nNessas condições,",
+      "alternativas": {
+        "A": "Solicitar documento é iniciada após Conferir cadastro, pois a convergência paralela determina a execução sequencial dos dois ramos.",
+        "B": "Registrar resultado é iniciada uma vez, pois a escolha exclusiva dispensa o gateway paralelo de aguardar o ramo não selecionado.",
+        "C": "Registrar resultado é iniciada duas vezes, pois o gateway paralelo duplica o token recebido da tarefa Conferir cadastro.",
+        "D": "a instância é encerrada ao terminar Conferir cadastro, pois o gateway paralelo descarta tokens recebidos sem par na outra entrada.",
+        "E": "Registrar resultado não é iniciada, pois o gateway paralelo aguarda um token na entrada proveniente de Solicitar documento."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende ao comando: o gateway exclusivo envia o token somente a Conferir cadastro. Um gateway paralelo convergente não inicia retroativamente a tarefa do outro ramo nem transforma os ramos em sequência.",
+        "B": "Não atende ao comando: a sincronização do gateway paralelo exige token em cada entrada, mesmo que o gateway anterior tenha escolhido apenas um ramo. A escolha exclusiva não altera a semântica da convergência paralela.",
+        "C": "Não atende ao comando: a convergência não está habilitada com apenas uma entrada marcada. Além disso, o gateway descrito tem uma única saída; ele não produz dois tokens nessa saída por receber um token em uma entrada.",
+        "D": "Não atende ao comando: o token permanece aguardando a sincronização, sem ser descartado por falta de outro token. Não há no trecho descrito um evento de término que encerre a instância nessa situação.",
+        "E": "Atende ao comando: somente o ramo Conferir cadastro recebe um token. O gateway paralelo requer pelo menos um token em cada entrada, e a entrada de Solicitar documento permanecerá sem token."
+      },
+      "resolucao": "A divergência exclusiva ativa apenas Conferir cadastro. Ao concluir essa tarefa, um token chega a uma das duas entradas do gateway paralelo. Conforme a semântica do gateway paralelo convergente, sua execução exige ao menos um token em cada fluxo de sequência de entrada. Como Solicitar documento não foi iniciada e não há outra origem de tokens, a segunda entrada não recebe token. A sincronização não ocorre e nenhum token segue para Registrar resultado. A conclusão é obtida pelas regras de execução dos gateways, sem pressupor correção automática do modelo por uma ferramenta.",
+      "fontes": [
+        {
+          "titulo": "OMG — Business Process Model and Notation (BPMN), Version 2.0.2, formal/2013-12-09",
+          "url": "https://www.omg.org/spec/BPMN/2.0.2/PDF",
+          "localizador": "Seção 10.6.2, páginas impressas 289–290 (páginas 319–320 do PDF), divergência exclusiva; seções 13.4.1–13.4.2 e tabelas 13.1–13.2, páginas impressas 434–435 (páginas 464–465 do PDF), semântica de tokens. Consulta via web em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 32, página 8, seção === PAGINA 8 === da extração local. Introdução de contexto de TI seguida de cinco afirmações comparáveis sobre o comportamento de um mecanismo; somente formato."
+        },
+        {
+          "titulo": "Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item BPMN. Delimitação do escopo."
+        }
+      ],
+      "autor": "/root/s2_elab_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consulta via web à especificação primária OMG BPMN 2.0.2, às definições de gateway exclusivo e às tabelas 13.1–13.2 de semântica de execução.",
+        "Analítica: rastreamento manual de um token em cada etapa; a marcação final é uma entrada do gateway paralelo com um token e outra sem token; nenhuma ativação da tarefa seguinte. Conferidas separadamente as cinco afirmações.",
+        "Editorial: leitura da questão 32, página 8, da extração local TRT4/2022; comparação com as quatro questões anteriores do perfil, sem reciclagem do objetivo. Não houve execução em motor BPMN."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+          "caracteristicaAplicada": "Contexto de um mecanismo de TI seguido de cinco afirmações sobre seu comportamento. Na questão autoral, o contexto delimita a circulação de um token e as alternativas descrevem efeitos concorrentes do mesmo modelo.",
+          "limites": "O exemplo versa sobre Spring Cloud Config e não comprova semântica de BPMN. A origem é uma cópia secundária, sem alegação de download oficial da FCC ou certificação oficial de integridade."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-01-0007",
+      "numero": 3,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "Tipos de testes: distinguir unidade, integração e sistema em cenário",
+      "versao": "v01",
+      "enunciado": "Uma equipe de qualidade organiza três atividades para um sistema de transferências entre contas da própria instituição:\n\nI. Verificar a classe CalculadoraTarifa isoladamente, fornecendo entradas e comparando os valores retornados; suas dependências são substituídas por objetos simulados.\nII. Verificar as interfaces e as trocas de dados entre os componentes reais ServicoTransferencia e RepositorioContas, executados em conjunto; os demais componentes da aplicação ficam fora do objeto desse teste.\nIII. Verificar o comportamento da aplicação completa, da interface de usuário à persistência, em ambiente representativo, confrontando o fluxo de transferência com a especificação do sistema. O objetivo não é avaliar interfaces com sistemas externos.\n\nConsiderando o objeto e o objetivo de cada atividade, os níveis de teste em I, II e III são, respectivamente,",
+      "alternativas": {
+        "A": "unidade; integração de componentes; sistema.",
+        "B": "unidade; sistema; integração de componentes.",
+        "C": "integração de componentes; unidade; sistema.",
+        "D": "sistema; integração de componentes; unidade.",
+        "E": "integração de componentes; sistema; unidade."
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Atende ao comando: I exercita uma classe isolada, II exercita a colaboração entre dois componentes reais e III avalia o comportamento da aplicação completa em relação à especificação do sistema.",
+        "B": "Não atende ao comando: I está classificada adequadamente, mas II não tem o sistema completo como objeto e III não se limita às interfaces entre componentes; esses dois níveis foram invertidos.",
+        "C": "Não atende ao comando: III está classificada adequadamente, mas I isola a classe por simulação das dependências e II usa componentes reais em colaboração; os dois primeiros níveis foram invertidos.",
+        "D": "Não atende ao comando: II corresponde à integração de componentes, mas uma classe isolada não é o sistema completo e o fluxo completo da aplicação não é uma unidade isolada.",
+        "E": "Não atende ao comando: I não exercita a integração entre componentes reais, II não avalia a aplicação completa e III ultrapassa o escopo de uma unidade isolada; nenhuma das três posições corresponde ao cenário."
+      },
+      "resolucao": "I tem como objeto uma classe isolada, com dependências simuladas: teste de componente, também denominado teste de unidade. II tem como foco as interfaces e as interações entre dois componentes reais: integração de componentes. III toma como objeto a aplicação completa e verifica seu comportamento em relação à especificação: teste de sistema. O fato de o terceiro fluxo alcançar várias partes da aplicação não o torna apenas um teste das interfaces entre dois componentes. O comando classifica níveis pelo objeto e pelo objetivo; a execução manual ou automatizada não mudaria essa classificação.",
+      "fontes": [
+        {
+          "titulo": "ISTQB — Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024",
+          "url": "https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf",
+          "localizador": "Seções 2.2 e 2.2.1, páginas 28–29, especialmente os três primeiros níveis e os atributos usados para distingui-los. Download acessado a partir da página oficial CTFL em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 33, página 8, cenário de documentação de API e correspondência ordenada nas alternativas; questão 52, página 12, combinação ordenada de três termos para preencher as lacunas I, II e III. Leitura das extrações locais; somente formato."
+        },
+        {
+          "titulo": "Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item tipos de testes de software, recorte unitários, de integração e de sistema. Delimitação do escopo."
+        }
+      ],
+      "autor": "/root/s2_elab_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: leitura via web do syllabus ISTQB v4.0.1, seções 2.2–2.2.1; conferidos os conceitos de unidade, integração de componentes, sistema e a distinção em relação à integração com sistemas externos.",
+        "Analítica: cada atividade foi classificada antes de conferir as combinações, usando isolamento, interfaces reais e abrangência do objeto como critérios. As alternativas apresentam combinações distintas e apenas uma preserva as três classificações.",
+        "Editorial: leitura das questões 33 (página 8) e 52 (página 12) da extração local TRT4/2022; comparação com as questões anteriores do perfil, sem reciclagem do objetivo. Os testes do cenário são autorais e não foram implementados ou executados."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+          "caracteristicaAplicada": "Cenário profissional de TI e comando de correspondência ordenada, com alternativas construídas na mesma ordem dos elementos apresentados. A proposta aplica a correspondência a três objetos de teste autorais.",
+          "limites": "O conteúdo da referência é documentação Swagger; não fundamenta os conceitos de teste. Trata-se de cópia secundária sem certificação de integridade oficial."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 52,
+          "pagina": 12,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+          "caracteristicaAplicada": "Três elementos identificados por I, II e III e cinco combinações de termos que devem ser lidas em ordem. A proposta conserva a leitura ordenada, apresentando três atividades em vez de lacunas em saída de comando.",
+          "limites": "A questão real trata de metadados inode. O uso do formato não implica identidade temática nem comprova frequência do formato na FCC; a cópia é secundária."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-01-0008",
+      "numero": 4,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "Gestão de configuração: baseline e controle de mudanças",
+      "versao": "v01",
+      "enunciado": "Uma equipe aprovou formalmente a baseline H1 de um sistema para homologação. Ela identifica as versões do código-fonte, dos requisitos, dos scripts de construção e dos casos de teste utilizados. Durante a homologação, foi solicitada uma alteração de uma regra de cálculo, com impacto nesses itens. A alteração ainda não foi autorizada.\n\nPara tratar a solicitação por meio da gestão da configuração, a equipe deve",
+      "alternativas": {
+        "A": "atualizar os arquivos de H1 a cada commit de desenvolvimento, pois a baseline corresponde às versões mais recentes existentes no repositório.",
+        "B": "rejeitar a solicitação até o término da homologação, pois a aprovação de uma baseline impede a criação de uma nova configuração durante essa etapa.",
+        "C": "implementar a alteração e atualizar H1 antes da autorização, pois o registro do commit substitui a aprovação exigida pelo controle de mudanças.",
+        "D": "submeter a solicitação à análise e à autorização previstas, registrar as novas versões e estabelecer a baseline atualizada de modo controlado, preservando H1.",
+        "E": "controlar a alteração apenas no código-fonte, pois requisitos, scripts de construção e casos de teste não integram itens sujeitos ao controle de configuração."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende ao comando: baseline identifica uma configuração aprovada de versões específicas; não acompanha automaticamente cada commit nem se confunde com o estado mais recente de desenvolvimento.",
+        "B": "Não atende ao comando: a aprovação cria uma referência sob controle de mudanças, sem proibir a evolução do sistema. Uma nova configuração pode ser estabelecida durante a homologação mediante os procedimentos pertinentes.",
+        "C": "Não atende ao comando: um commit registra uma versão ou alteração, mas não substitui a análise e a autorização pela autoridade competente. O cenário informa que a mudança ainda não foi autorizada.",
+        "D": "Atende ao comando: a alteração deve passar pelo controle previsto, com análise de impacto e autorização, novas versões identificadas e atualização controlada da referência; preservar H1 permite recuperar a configuração anteriormente submetida aos testes.",
+        "E": "Não atende ao comando: o controle pode abranger requisitos, scripts de construção, testes e documentação, além do código. Esses itens integram expressamente a baseline e são afetados pela mudança descrita."
+      },
+      "resolucao": "H1 é uma referência aprovada que relaciona itens e versões; sua identidade permite reproduzir a configuração usada na homologação. Uma solicitação posterior não deve sobrescrevê-la automaticamente. É necessário analisar o impacto e obter a autorização prevista no processo, controlar as versões dos itens alterados e estabelecer a nova referência preservando a recuperação de H1. A baseline pode evoluir por mudanças controladas; seu estabelecimento não congela para sempre o desenvolvimento nem restringe o controle apenas ao código-fonte.",
+      "fontes": [
+        {
+          "titulo": "ISTQB — Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024",
+          "url": "https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf",
+          "localizador": "Seção 5.4, Configuration Management, página 56: identificação de itens e versões, baseline aprovada, processo formal de controle de mudanças e recuperação de baseline anterior para reproduzir resultados. Consulta via web em 26/11/2026."
+        },
+        {
+          "titulo": "NASA Software Engineering Handbook — SWE-081, Identify Software CM Items",
+          "url": "https://swehb.nasa.gov/spaces/7150/pages/16450453/SWE-081%2B-%2BIdentify%2BSoftware%2BCM%2BItems",
+          "localizador": "Seção 3, Guidance: lista de itens sob controle, identificadores de versões e características de baselines. Inclui requisitos, scripts de construção e casos de teste. Página do Handbook no espaço 7150, consultada via web em 26/11/2026; não apresentada como edição atual de NPR."
+        },
+        {
+          "titulo": "NASA Software Engineering Handbook — SWE-082, Authorizing Changes, página atualizada em 10/10/2017",
+          "url": "https://swehb.nasa.gov/spaces/7150/pages/16450445/SWE-082%2B-%2BAuthorizing%2BChanges",
+          "localizador": "Seções 1–3, especialmente Rationale, Change authority e Version maintenance: análise de impacto e autorização antes da implementação, registro de mudanças e preservação de versões. Consulta via web em 26/11/2026. Usada como orientação primária de engenharia, sem impor processos específicos da NASA à instituição do cenário."
+        },
+        {
+          "titulo": "FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questões 32 e 33, página 8, seção === PAGINA 8 === da extração local: contextualização profissional em TI e cinco alternativas comparáveis para completar o comando; somente formato."
+        },
+        {
+          "titulo": "Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item gestão da configuração de software. Delimitação do escopo."
+        }
+      ],
+      "autor": "/root/s2_elab_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: leitura via web do syllabus ISTQB v4.0.1, seção 5.4, e das páginas primárias NASA SWE-081 e SWE-082; conferidas as regras de identificação, composição de baseline, autorização e preservação de versões. As páginas NASA consultadas são referências de engenharia, sem alegação de vigência de uma versão não verificada de NPR.",
+        "Analítica: conferidos os cinco cursos de ação em relação à baseline aprovada e à solicitação ainda não autorizada. A solução conserva a referência anterior e admite evolução controlada dos quatro tipos de itens impactados.",
+        "Editorial: leitura das questões 32 e 33, página 8, da extração local TRT4/2022 e comparação com o histórico do perfil. Não houve alteração de repositório de exemplo nem execução de procedimento de configuração."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+          "caracteristicaAplicada": "Delimitação de um problema de configuração em TI e cinco alternativas sobre o mesmo mecanismo. A proposta muda integralmente o objeto para controle de baseline e apresenta cursos de ação comparáveis.",
+          "limites": "A questão real cobra Spring Cloud Config, e o exemplo não sustenta a solução técnica de gestão da configuração. A cópia é secundária, sem alegação de download oficial da FCC ou certificação oficial de integridade."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 33,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.",
+          "caracteristicaAplicada": "Apresentação de tarefa concreta de um profissional de TI, com informações necessárias antes do comando. A proposta usa uma situação autoral de homologação e solicita o tratamento adequado da mudança.",
+          "limites": "A referência é de documentação de API e foi usada para a contextualização; a solução depende das fontes primárias de configuração. Não se generaliza uma regra editorial a partir do exemplo."
+        }
+      ]
+    }
+  ]
+}

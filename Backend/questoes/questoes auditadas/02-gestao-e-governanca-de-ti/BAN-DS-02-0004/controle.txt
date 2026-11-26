@@ -1,0 +1,27 @@
+ID: BAN-DS-02-0004
+Matéria: 02 - Gestão e Governança de Tecnologia da Informação
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/02-gestao-e-governanca-de-ti.txt
+Tópico do conteúdo: planejamento estratégico de TIC (PETIC, PDTIC);
+Objetivo da questão: Aplicar o desdobramento tático do PETIC em necessidades, metas e ações de um PDTIC alinhado.
+Tarefa de origem: SIM-002; elaborador 02; número global 5; recorte atribuído no plano.
+Responsável pela elaboração: /root/s2_elab_02
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, elaboração autoral concluída por /root/s2_elab_02 para SIM-002, após consulta documental, resolução das cinco alternativas, conferência do rodízio e leitura de referência FCC; PENDENTE_AUDITORIA.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-002
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0004 -> Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004
+ESTILO_FCC: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0004/v01/parecer-redacao-e-conformidade.txt

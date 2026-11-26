@@ -1,0 +1,17 @@
+ID: BAN-DS-04-0007
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Modelagem entidade-relacionamento: associação muitos-para-muitos
+
+ENUNCIADO
+Em um modelo de contas, um cliente pode ser titular de várias contas, e uma conta pode ter vários titulares. Para cada par cliente-conta registra-se uma única data de início da titularidade, sem manter histórico de novos vínculos do mesmo par. Clientes distintos podem iniciar titularidades na mesma data, inclusive na mesma conta.
+
+No mapeamento para o modelo relacional, foram definidas CLIENTE(id_cliente), CONTA(id_conta) e TITULARIDADE(id_cliente, id_conta, data_inicio). Os identificadores são as chaves primárias das duas primeiras tabelas. Em TITULARIDADE, id_cliente e id_conta são chaves estrangeiras para as respectivas tabelas.
+
+Para impedir a repetição de um par cliente-conta e permitir todas as titularidades admitidas, a chave primária de TITULARIDADE deve ser composta por
+
+A) id_cliente.
+B) id_conta.
+C) id_cliente e id_conta.
+D) data_inicio.
+E) id_cliente, id_conta e data_inicio.

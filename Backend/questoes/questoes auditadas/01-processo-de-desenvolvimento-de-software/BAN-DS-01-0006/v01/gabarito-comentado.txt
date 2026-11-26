@@ -1,0 +1,34 @@
+ID: BAN-DS-01-0006
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar o comportamento do fluxo após a execução do ramo escolhido pelo gateway exclusivo.
+
+RESOLUÇÃO
+A divergência exclusiva ativa apenas Conferir cadastro. Ao concluir essa tarefa, um token chega a uma das duas entradas do gateway paralelo. Conforme a semântica do gateway paralelo convergente, sua execução exige ao menos um token em cada fluxo de sequência de entrada. Como Solicitar documento não foi iniciada e não há outra origem de tokens, a segunda entrada não recebe token. A sincronização não ocorre e nenhum token segue para Registrar resultado. A conclusão é obtida pelas regras de execução dos gateways, sem pressupor correção automática do modelo por uma ferramenta.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando: o gateway exclusivo envia o token somente a Conferir cadastro. Um gateway paralelo convergente não inicia retroativamente a tarefa do outro ramo nem transforma os ramos em sequência.
+B) Não atende ao comando: a sincronização do gateway paralelo exige token em cada entrada, mesmo que o gateway anterior tenha escolhido apenas um ramo. A escolha exclusiva não altera a semântica da convergência paralela.
+C) Não atende ao comando: a convergência não está habilitada com apenas uma entrada marcada. Além disso, o gateway descrito tem uma única saída; ele não produz dois tokens nessa saída por receber um token em uma entrada.
+D) Não atende ao comando: o token permanece aguardando a sincronização, sem ser descartado por falta de outro token. Não há no trecho descrito um evento de término que encerre a instância nessa situação.
+E) Atende ao comando: somente o ramo Conferir cadastro recebe um token. O gateway paralelo requer pelo menos um token em cada entrada, e a entrada de Solicitar documento permanecerá sem token.
+
+FONTES TÉCNICAS CONSULTADAS E DELIMITAÇÃO DE ESCOPO
+- OMG — Business Process Model and Notation (BPMN), Version 2.0.2, formal/2013-12-09. https://www.omg.org/spec/BPMN/2.0.2/PDF. Localizador: Seção 10.6.2, páginas impressas 289–290 (páginas 319–320 do PDF), divergência exclusiva; seções 13.4.1–13.4.2 e tabelas 13.1–13.2, páginas impressas 434–435 (páginas 464–465 do PDF), semântica de tokens. Consulta via web em 26/11/2026.
+- FCC — TRT da 4ª Região, Analista Judiciário, Tecnologia da Informação, 2022, A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 32, página 8, seção === PAGINA 8 === da extração local. Introdução de contexto de TI seguida de cinco afirmações comparáveis sobre o comportamento de um mecanismo; somente formato.
+- Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: PROCESSO DE DESENVOLVIMENTO DE SOFTWARE, item BPMN. Delimitação do escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt do PDF homônimo; cópia secundária hospedada no Qconcursos, URL registrada nas fontes e em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Contexto de um mecanismo de TI seguido de cinco afirmações sobre seu comportamento. Na questão autoral, o contexto delimita a circulação de um token e as alternativas descrevem efeitos concorrentes do mesmo modelo.
+- Limites da referência: O exemplo versa sobre Spring Cloud Config e não comprova semântica de BPMN. A origem é uma cópia secundária, sem alegação de download oficial da FCC ou certificação oficial de integridade.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consulta via web à especificação primária OMG BPMN 2.0.2, às definições de gateway exclusivo e às tabelas 13.1–13.2 de semântica de execução.
+- Analítica: rastreamento manual de um token em cada etapa; a marcação final é uma entrada do gateway paralelo com um token e outra sem token; nenhuma ativação da tarefa seguinte. Conferidas separadamente as cinco afirmações.
+- Editorial: leitura da questão 32, página 8, da extração local TRT4/2022; comparação com as quatro questões anteriores do perfil, sem reciclagem do objetivo. Não houve execução em motor BPMN.
+
+PENDÊNCIAS
+Nenhuma de elaboração; versão sujeita à auditoria independente.

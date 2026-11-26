@@ -1,0 +1,265 @@
+{
+  "elaborador": "02",
+  "responsavel": "/root/s2_elab_02",
+  "questoes": [
+    {
+      "id": "BAN-DS-02-0004",
+      "numero": 5,
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "topico": "Alinhamento entre PETIC e PDTIC",
+      "versao": "v01",
+      "enunciado": "Uma entidade utiliza o Plano Estratégico de Tecnologia da Informação e Comunicação (PETIC) e o Plano Diretor de Tecnologia da Informação e Comunicação (PDTIC) como documentos distintos. O PETIC, alinhado ao planejamento institucional, estabelece o objetivo de reduzir o tempo de atendimento e a diretriz de interoperabilidade dos serviços digitais.\n\nAo elaborar o PDTIC para desdobrar essa orientação, a equipe deve, de acordo com os conceitos do Guia de PDTIC do SISP, versão 2.1,",
+      "alternativas": {
+        "A": "reproduzir as diretrizes do PETIC no PDTIC e deixar a definição de metas e ações para planos operacionais sem vínculo com esse documento.",
+        "B": "consolidar as demandas no PDTIC por ordem de recebimento e considerar essa sequência como critério suficiente de alinhamento ao PETIC.",
+        "C": "selecionar no PDTIC as soluções de infraestrutura e reformular os objetivos do PETIC para acomodar as aquisições previamente escolhidas.",
+        "D": "relacionar necessidades aos objetivos do PETIC e desdobrá-las em metas e ações no PDTIC, com recursos, prazos e indicadores para acompanhamento.",
+        "E": "conferir ao PDTIC a mesma vigência do PETIC e usar essa coincidência temporal como evidência suficiente de alinhamento entre os planos."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. O PDTIC contém desdobramentos táticos em metas e ações; os planos operacionais devem estar alinhados a ele. Apenas repetir diretrizes e desvincular a execução deixa sem tratamento a passagem da orientação estratégica para sua realização.",
+        "B": "Não atende. A ordem de recebimento informa quando a demanda chegou, mas não demonstra sua contribuição para o objetivo de atendimento ou a diretriz de interoperabilidade. O alinhamento exige relacionar as necessidades às estratégias e usar critérios de priorização pertinentes.",
+        "C": "Não atende. A alternativa inverte o direcionamento apresentado: as escolhas de TIC devem apoiar a estratégia institucional e a de TIC. Adequar os objetivos a aquisições previamente escolhidas não demonstra que essas aquisições atendam às necessidades estratégicas.",
+        "D": "Atende. A relação entre necessidades, objetivos, metas e ações permite desdobrar no nível tático a orientação do PETIC. Recursos e prazos permitem planejar a execução; indicadores permitem acompanhar a contribuição para os resultados pretendidos.",
+        "E": "Não atende. A vigência pode ser compatibilizada, mas coincidência de datas não demonstra contribuição das iniciativas aos objetivos estratégicos. O vínculo de conteúdo entre os planos continua necessário."
+      },
+      "resolucao": "O PETIC orienta estrategicamente a TIC a partir do planejamento institucional. Na situação apresentada, o PDTIC deve traduzir essa direção em necessidades, metas e ações executáveis e acompanháveis. A escolha coerente vincula os desdobramentos ao objetivo de atendimento e à diretriz de interoperabilidade, prevendo recursos, prazos e indicadores. O Guia SISP admite que o PDTIC incorpore elementos estratégicos; portanto, a distinção usada aqui não estabelece uma proibição geral de conteúdo estratégico no PDTIC. O enunciado delimita a entidade que mantém os dois documentos.",
+      "fontes": [
+        {
+          "titulo": "Guia de PDTIC do SISP, versão 2.1, Secretaria de Governo Digital, dezembro de 2021",
+          "localizador": "Seções 3.7.5 e 3.7.6, páginas impressas 24–26; processo 1.6, páginas 44–45; processo 3.3, páginas 82–84; seção 8, página 136, Modelo de Plano de Metas e Ações.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/sisp/guia-do-gestor/documentos/guia-de-pdtic-do-sisp-2-1/@@download/file/Guia%20de%20PDTIC%20do%20SISP%20v2.1.pdf",
+          "fundamento": "Distinção e integração PETIC/PDTIC, metas e ações, critérios de priorização e acompanhamento."
+        },
+        {
+          "titulo": "Plano Diretor de TIC – Governo Digital",
+          "localizador": "Trecho \"O que o PDTIC deve ter?\" e FAQ sobre instrumento de alinhamento.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/sisp/guia-do-gestor/pdtic",
+          "fundamento": "Inventário priorizado, metas e ações, planejamento de recursos e processo formal de acompanhamento; usado como apoio conceitual, sem transpor obrigação do SISP à entidade do cenário."
+        },
+        {
+          "titulo": "Conteúdo programático local – Desenvolvimento de Sistemas",
+          "localizador": "Bloco Gestão e Governança de Tecnologia da Informação: planejamento estratégico de TIC (PETIC, PDTIC).",
+          "consultadoEm": "2026-11-26",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt"
+        },
+        {
+          "titulo": "FCC – TRT4/2022 – Analista Judiciário – Tecnologia da Informação",
+          "localizador": "Caderno A14, Tipo 001, questão 59, página 14.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf",
+          "fundamento": "Referência editorial; limites e aplicação registrados em referenciasEstilo."
+        }
+      ],
+      "autor": "/root/s2_elab_02",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: Guia SISP 2.1 consultado via navegação web, especialmente distinção e alinhamento dos instrumentos. Não se atribuiu ao guia força de lei nem se estendeu a regulamentação federal do SISP a qualquer entidade.",
+        "Analítica: cada alternativa foi confrontada com o cenário; o vínculo entre estratégia e execução diferencia a resposta de cópia textual, ordem de chegada, aquisições predeterminadas e mera coincidência de vigência.",
+        "Editorial: questão real FCC consultada por extração e imagem recortada do PDF local, renderizada em memória; questão 59, página 14.",
+        "Rodízio: comparadas BAN-DS-02-0001 a 0003 em questoes-anteriores.json; a nova questão não repete classificação COBIT, comparação TCO ou compromissos OLA.",
+        "Não houve execução de sistema, teste de software ou simulação institucional; a verificação foi documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário – Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 59,
+          "pagina": 14,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Uma Analista aplica conceitos de governança em um contexto breve; o comando é completado por cinco alternativas comparáveis.",
+          "caracteristicaAplicada": "Contexto breve de planejamento de TIC, comando afirmativo e cinco procedimentos comparáveis. Não foram reutilizados princípios COBIT ou alternativas da referência.",
+          "limites": "Referência de formato de uma questão específica; a cópia foi hospedada pelo Qconcursos, não obtida diretamente da FCC. Não foi verificada assinatura digital nem autenticidade oficial do arquivo. O conteúdo antigo não foi usado como fonte de correção técnica atual nem como evidência de frequência da banca."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-02-0005",
+      "numero": 6,
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "topico": "ROI de iniciativa de TI com custos e benefícios declarados",
+      "versao": "v01",
+      "enunciado": "Uma entidade avalia uma iniciativa de automação durante três anos completos. Todos os valores a seguir são fictícios, monetários e incrementais em relação à manutenção da situação atual.\n\nA implantação custa R$ 240.000,00, uma única vez, no início do período. A operação e a manutenção custam R$ 40.000,00 em cada um dos três anos. A automação evita despesas de R$ 180.000,00 em cada um desses anos; esse benefício é informado antes da dedução dos custos da iniciativa.\n\nNão há outros custos ou benefícios, tributos adicionais, valor residual, inflação ou desconto financeiro a considerar. Adote o ROI simples acumulado do período, sem anualização, calculado por:\n\nROI = [(benefícios totais − custos totais) / custos totais] × 100\n\nO ROI da iniciativa nesses três anos é de",
+      "alternativas": {
+        "A": "33,33%.",
+        "B": "50%.",
+        "C": "75%.",
+        "D": "125%.",
+        "E": "150%."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. 33,33% resulta, aproximadamente, de 180.000 / 540.000 × 100, usando os benefícios totais como denominador. A fórmula fixada exige dividir o benefício líquido pelos custos totais de R$ 360.000,00.",
+        "B": "Atende. Os benefícios somam R$ 540.000,00 e os custos somam R$ 360.000,00. O benefício líquido é R$ 180.000,00, e 180.000 / 360.000 × 100 = 50%.",
+        "C": "Não atende. 75% resulta de 180.000 / 240.000 × 100, dividindo o benefício líquido apenas pelo custo inicial. O denominador deve incluir também os R$ 120.000,00 de operação e manutenção do período.",
+        "D": "Não atende. 125% resulta de (540.000 − 240.000) / 240.000 × 100, omitindo operação e manutenção tanto na apuração do benefício líquido quanto no denominador. Esses custos foram expressamente incluídos na avaliação.",
+        "E": "Não atende. 150% resulta de 540.000 / 360.000 × 100, comparando o benefício bruto ao custo total. O ROI adotado usa o benefício líquido, isto é, o benefício total após subtrair o custo total."
+      },
+      "resolucao": "No mesmo horizonte de três anos, os benefícios monetários são 3 × R$ 180.000,00 = R$ 540.000,00. Os custos são R$ 240.000,00 + 3 × R$ 40.000,00 = R$ 360.000,00. O benefício líquido é R$ 540.000,00 − R$ 360.000,00 = R$ 180.000,00. Pela convenção explicitamente adotada no enunciado, ROI = (R$ 180.000,00 / R$ 360.000,00) × 100 = 50%. Não se aplica desconto nem se divide o percentual por três, pois o comando pede o retorno simples acumulado, sem anualização. Os valores são dados fictícios do problema e não provêm do estudo usado para conferir a fórmula.",
+      "fontes": [
+        {
+          "titulo": "Forrester Consulting – The Total Economic Impact of Microsoft Unified, março de 2025",
+          "localizador": "Glossary → Financial Terminology → RETURN ON INVESTMENT (ROI); e Total Economic Impact Approach → Costs.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://tei.forrester.com/go/microsoft/unified/?lang=en-us",
+          "fundamento": "Fonte primária da metodologia publicada pelo próprio autor do estudo: retorno percentual como benefícios líquidos divididos pelos custos; custos abrangem implantação e continuidade. Estudo encomendado pela Microsoft; não foram usados seus resultados comerciais ou taxas de desconto."
+        },
+        {
+          "titulo": "Conteúdo programático local – Desenvolvimento de Sistemas",
+          "localizador": "Bloco Gestão e Governança de Tecnologia da Informação: gestão financeira de TI (TCO, ROI, CAPEX, OPEX e FinOps).",
+          "consultadoEm": "2026-11-26",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt"
+        },
+        {
+          "titulo": "FCC – TRF4/2007 – Analista Judiciário – Informática",
+          "localizador": "MODELO – Caderno de Prova, Cargo I, Tipo 001, questão 20, página 5.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf",
+          "fundamento": "Referência histórica de problema financeiro com base de cálculo explícita e alternativas percentuais."
+        }
+      ],
+      "autor": "/root/s2_elab_02",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultada a definição de ROI na metodologia original de Forrester. O enunciado explicita a convenção de cálculo e exclui desconto e anualização, pois essas escolhas podem variar entre análises financeiras.",
+        "Analítica: somados todos os custos e benefícios no mesmo horizonte; cada percentual distrator foi reconstruído a partir de uma confusão de base de cálculo ou omissão de custo.",
+        "Aritmética executada em memória com Python 3.14: implantação=240000; custoAnual=40000; beneficioAnual=180000; anos=3; custos=360000; beneficios=540000; liquido=180000; ROI=50.0. Trata-se de conferência aritmética, sem criar arquivo de teste.",
+        "Editorial: lida e inspecionada em imagem recortada renderizada em memória a questão 20, página 5, do PDF TRF4/2007 local.",
+        "Rodízio: a questão anterior BAN-DS-02-0002 pedia comparação de TCO entre duas soluções; esta exige retorno líquido relativo de uma única iniciativa e delimita a convenção de ROI."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário – Informática",
+          "ano": 2007,
+          "caderno": "MODELO – Cargo I, Tipo 001",
+          "questao": 20,
+          "pagina": 5,
+          "origem": "Fonte primária do órgão TRF4: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Problema numérico autoral da FCC com cenário de aquisição, base de custo explicitada e cinco respostas percentuais curtas.",
+          "caracteristicaAplicada": "Cenário financeiro com valores completos e comando de resultado percentual; dados, horizonte, fórmula, objetivo e distratores foram criados para ROI de TI.",
+          "limites": "Referência histórica de 2007, obtida no próprio TRF4. Sustenta apenas o formato de problema numérico e alternativas percentuais; não demonstra incidência atual de ROI, não fornece os valores fictícios desta questão e não substitui a fonte de gestão financeira."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-02-0006",
+      "numero": 7,
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "topico": "Lei 14.133/2021: acompanhamento e fiscalização contratual (art. 117)",
+      "versao": "v01",
+      "enunciado": "Uma autarquia celebrou contrato de manutenção de sistemas regido pela Lei nº 14.133/2021 e designou um servidor como fiscal. Contratou também uma empresa especializada para assisti-lo com informações técnicas. Ao receber um relatório que aponta defeitos na execução, o fiscal identificou a necessidade de providência que ultrapassa sua competência.\n\nÀ luz do art. 117 dessa Lei, na redação vigente em 11/11/2026, o fiscal deve",
+      "alternativas": {
+        "A": "atribuir à empresa de apoio a decisão sobre providências que superem sua competência, mantendo com o fiscal apenas o recebimento dos relatórios.",
+        "B": "registrar apenas as ocorrências que consiga corrigir diretamente, comunicando aos superiores os demais defeitos para que eles mantenham o respectivo registro.",
+        "C": "decidir sobre a providência necessária, mesmo fora de sua competência, utilizando o relatório da empresa como autorização para ampliar suas atribuições.",
+        "D": "encaminhar o relatório aos superiores e considerar-se eximido da responsabilidade de fiscalização sobre as informações recebidas da empresa de apoio.",
+        "E": "anotar as ocorrências em registro próprio e informar, em tempo hábil, aos superiores a situação que ultrapassa sua competência."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende. O apoio técnico contratado fornece subsídios ao fiscal; não autoriza a empresa a exercer atribuição própria e exclusiva da fiscalização. A situação além da competência do fiscal deve ser comunicada aos superiores, conforme art. 117, § 2º, em conjunto com o § 4º, I.",
+        "B": "Não atende. O art. 117, § 1º, exige registro próprio de todas as ocorrências relacionadas à execução, não apenas das que o fiscal consiga corrigir diretamente. Comunicar uma situação aos superiores não afasta o dever de registrá-la.",
+        "C": "Não atende. Um relatório técnico não amplia a competência do fiscal. O art. 117, § 2º, determina a comunicação aos superiores da situação que demande decisão ou providência além de sua competência.",
+        "D": "Não atende. O encaminhamento aos superiores é cabível, mas não produz a exoneração proposta. Pelo art. 117, § 4º, II, contratar apoio técnico não exime o fiscal de responsabilidade nos limites das informações recebidas do terceiro contratado.",
+        "E": "Atende. O registro próprio decorre do art. 117, § 1º. A informação aos superiores em tempo hábil, para que adotem as medidas convenientes, decorre do § 2º. As duas providências se complementam no cenário."
+      },
+      "resolucao": "O fiscal deve manter o registro das ocorrências da execução e, diante de providência que supere sua competência, comunicar a situação aos superiores a tempo da adoção das medidas convenientes. O relatório da empresa é subsídio técnico: não transfere atribuições exclusivas de fiscalização, não amplia a competência do servidor e não o exonera da responsabilidade prevista no § 4º, II. O cenário usa uma autarquia e declara o regime da Lei nº 14.133/2021, sem presumir sua aplicação ao Banestes. O corte de 11/11/2026 segue a publicação do edital de abertura; o art. 117 consultado possui a mesma redação nos textos original e atualizado da Câmara, corroborada por Planalto e Senado. Não foi utilizada alteração superveniente.",
+      "fontes": [
+        {
+          "titulo": "Lei nº 14.133, de 1º de abril de 2021 – Presidência da República/Planalto",
+          "localizador": "Art. 117, caput, §§ 1º e 2º e § 4º, I e II; art. 1º, caput e § 1º.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+          "fundamento": "Deveres do fiscal, limite do apoio de terceiros e delimitação da entidade do cenário."
+        },
+        {
+          "titulo": "Lei nº 14.133/2021 – publicação original – Câmara dos Deputados",
+          "localizador": "Art. 117, caput e §§ 1º–4º.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14133-1-abril-2021-791222-publicacaooriginal-162591-pl.html",
+          "fundamento": "Conferência da redação original dos dispositivos cobrados, anterior ao corte do edital."
+        },
+        {
+          "titulo": "Lei nº 14.133/2021 – texto atualizado – Câmara dos Deputados",
+          "localizador": "Art. 117, caput e §§ 1º–4º, sem indicação de redação substitutiva no trecho.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2021/lei-14133-1-abril-2021-791222-normaatualizada-pl.html",
+          "fundamento": "Confronto com a publicação original: a redação pertinente permanece coincidente, sem transportar novidades posteriores ao corte."
+        },
+        {
+          "titulo": "Lei nº 14.133/2021 – Legislação Federal – Senado Federal",
+          "localizador": "Art. 117, §§ 1º e 2º e § 4º, I e II.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://legis.senado.gov.br/norma/33382036/publicacao/33383820",
+          "fundamento": "Corroboração em fonte legislativa oficial com caracteres legíveis, diante dos problemas de codificação do HTML de Planalto."
+        },
+        {
+          "titulo": "Edital Banestes nº 01/2027 de Abertura de Inscrições – arquivo local",
+          "localizador": "Página 27: data de 11 de novembro de 2026; página 35: observação sobre legislação vigente até a publicação; bloco Gestão e Governança de TIC no Anexo IV.",
+          "consultadoEm": "2026-11-26",
+          "arquivo": "Backend/Agents/conteudo/edital/banestes-01-2027.pdf",
+          "fundamento": "Delimitação do programa e do corte legal, corroborado pelo aviso oficial de publicação."
+        },
+        {
+          "titulo": "DIO-ES – aviso do Edital de Abertura do Concurso Público Banestes 01/2027",
+          "localizador": "Edição de 11/11/2026, página 35, protocolo 1902136. Texto do aviso recuperado no índice da busca web; a abertura direta retornou HTTP 403.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://ioes.dio.es.gov.br/portal/edicoes/download/11623/35",
+          "fundamento": "O aviso informa que o edital de abertura será publicado nessa data nos sites do Banestes e da FCC. Consulta limitada ao texto indexado, sem afirmar download ou inspeção visual do DIO."
+        },
+        {
+          "titulo": "Governo do Espírito Santo – Banestes e Banescor lançam novos editais de concurso público com 645 vagas para cadastro de reserva",
+          "localizador": "Publicada em 12/11/2026; parágrafos sobre aviso no Diário Oficial em 11/11/2026 e disponibilização dos editais.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://www.es.gov.br/banestes-e-banescor-lancam-novos-editais-de-concurso-publico-com-645-vagas-para-cadastro-de-reserva",
+          "fundamento": "Corroboração oficial da data de divulgação; usada com a data do próprio edital e o aviso indexado."
+        },
+        {
+          "titulo": "Conteúdo programático local – Desenvolvimento de Sistemas",
+          "localizador": "Gestão de contratos e fornecedores de TIC com foco na Lei nº 14.133/2021; observação final de legislação.",
+          "consultadoEm": "2026-11-26",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt"
+        },
+        {
+          "titulo": "FCC – TRT4/2022 – Analista Judiciário – Tecnologia da Informação",
+          "localizador": "Caderno A14, Tipo 001, questão 30, página 7.",
+          "consultadoEm": "2026-11-26",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf",
+          "fundamento": "Referência editorial de comando sobre recorte específico da Lei nº 14.133/2021."
+        }
+      ],
+      "autor": "/root/s2_elab_02",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: art. 117 confrontado em Planalto, Câmara (publicação original e texto atualizado) e Senado. Os deveres e limites cobrados coincidem nas fontes; o texto original e a ausência de alteração no trecho atualizado sustentam o uso no corte de 11/11/2026.",
+        "Temporal: conferidas páginas 27 e 35 do edital local, aviso primário DIO-ES de 11/11/2026, página 35, protocolo 1902136, recuperado em texto indexado, e notícia oficial GovernoES de 12/11/2026. A abertura direta do DIO retornou 403; não se declarou download do Diário.",
+        "Analítica: confrontadas as cinco condutas com §§ 1º, 2º e 4º do art. 117; separadas comunicação, registro e permanência da responsabilidade nos limites legais.",
+        "Editorial: questão 30, página 7, TRT4/2022, lida na extração e inspecionada em imagem recortada renderizada em memória do PDF local; referência secundária Qconcursos declarada.",
+        "Escopo: a entidade do cenário é uma autarquia sob a Lei nº 14.133/2021; não se atribuiu esse regime automaticamente ao Banestes. Não houve execução, parecer ou aprovação de auditoria."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário – Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 30,
+          "pagina": 7,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; arquivo local consultado: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. Metadados lidos em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Comando afirmativo delimitado a um instituto da Lei nº 14.133/2021 e cinco afirmações comparáveis, cada uma sobre uma conduta jurídica.",
+          "caracteristicaAplicada": "Comando afirmativo sobre recorte do art. 117 aplicado a cenário de manutenção de sistemas; cinco condutas comparáveis. O instituto, o cenário, os dados e as alternativas são novos.",
+          "limites": "Referência de formato de uma questão específica; a cópia foi hospedada pelo Qconcursos, não obtida diretamente da FCC. Não foi verificada assinatura digital nem autenticidade oficial do arquivo. O conteúdo antigo não foi usado como fonte de correção técnica atual nem como evidência de frequência da banca."
+        }
+      ]
+    }
+  ]
+}

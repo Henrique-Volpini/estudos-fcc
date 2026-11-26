@@ -1,0 +1,52 @@
+ID: BAN-DS-04-0009
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Determinar quem mantém o privilégio SELECT após revogação da opção de concessão em cadeia delimitada.
+
+RESOLUÇÃO
+A primeira concessão dá a ana tanto SELECT quanto a opção de repassá-lo. A segunda cria para bruno uma concessão dependente dessa opção. No comando final, GRANT OPTION FOR delimita a retirada à opção de concessão de ana: seu SELECT permanece. CASCADE remove o privilégio dependente de bruno. Como não existem outras concessões, privilégios de PUBLIC ou associações a roles, bruno deixa de ter SELECT.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende. GRANT OPTION FOR retira de ana somente a faculdade de conceder SELECT, preservando sua leitura. CASCADE remove a concessão dependente feita a bruno, que não tem outra fonte para o privilégio.
+B) Não atende. A leitura de ana permanece, mas a de bruno depende da opção de concessão retirada; CASCADE alcança essa dependência.
+C) Não atende. A revogação especifica GRANT OPTION FOR, portanto não retira a leitura de ana. O privilégio de bruno, ao contrário, é dependente da concessão de ana e é removido.
+D) Não atende. Seria possível remover também a leitura de ana revogando o próprio SELECT. O comando apresentado revoga apenas sua opção de concessão.
+E) Não atende. A existência de privilégio dependente impediria a revogação com RESTRICT, mas CASCADE autoriza a remoção das concessões dependentes. A cadeia foi explicitamente delimitada no enunciado.
+
+FONTES TÉCNICAS CONSULTADAS
+- PostgreSQL 15 Documentation - GRANT
+  URL ou arquivo: https://www.postgresql.org/docs/15/sql-grant.html
+  Localizador e suporte: GRANT on Database Objects: WITH GRANT OPTION permite repassar privilégios; descrição das fontes cumulativas de acesso.
+- PostgreSQL 15 Documentation - REVOKE
+  URL ou arquivo: https://www.postgresql.org/docs/15/sql-revoke.html
+  Localizador e suporte: Description, parágrafos sobre GRANT OPTION FOR, dependent privileges e CASCADE; Notes, exemplo de concessão A → B → C.
+- PostgreSQL 14 Documentation - GRANT
+  URL ou arquivo: https://www.postgresql.org/docs/14/sql-grant.html
+  Localizador e suporte: GRANT on Database Objects: conferência de WITH GRANT OPTION na versão 14.
+- PostgreSQL 14 Documentation - REVOKE
+  URL ou arquivo: https://www.postgresql.org/docs/14/sql-revoke.html
+  Localizador e suporte: Description: distinção entre privilégio e opção de concessão; revogação de dependências com CASCADE.
+- Programa de conhecimentos específicos - Banco de Dados
+  URL ou arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: comandos SQL: DML, DDL e DCL; PostgreSQL versões 14 e 15;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 41; página 10.
+  Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: O exemplo delimita PostgreSQL, uma tarefa administrativa e comandos de privilégios em cinco opções. Aplicação: Mantida a precisão de objeto, ator e comando, com um cenário autoral de dependência de concessões em vez da identificação sintática de REVOKE ALL.
+  Limites da referência: Referência editorial de uma questão específica; não comprova frequência de formato, não fundamenta a técnica atual e não é apresentada como download da FCC ou como integridade oficialmente certificada.
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 49; página 8.
+  Origem verificável: Arquivo do próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; extração local consultada: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF correspondente: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Característica observada e aplicação nesta questão autoral: As opções são comparáveis e o comando associa efeitos administrativos a declarações SQL. Aplicação: As opções comparam efeitos da mesma sequência sobre duas roles identificadas, sem repetir os pares de palavras da prova histórica.
+  Limites da referência: Referência histórica de formato; não estabelece frequência editorial nem valida o conteúdo técnico atual. A questão autoral apresenta objetivo, cenário e alternativas próprios.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: GRANT e REVOKE das versões PostgreSQL 14 e 15 consultados por navegação em 26/11/2026, incluindo os parágrafos de dependência e opção de concessão.
+- Analítica: construída a cadeia dono → ana → bruno e conferidos separadamente privilégio, opção de concessão e dependência. As cinco opções foram confrontadas com o comando efetivo. Não houve execução SQL.
+- Editorial: lidas Q41/p10 de TRT4/2022 e Q49/p8 de TRF4/2007; origem secundária e histórica registradas.
+- Independência: nenhuma questão de privilégios GRANT/REVOKE foi usada no SIM-001.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguardando auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

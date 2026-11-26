@@ -1,0 +1,15 @@
+ID: BAN-DS-11-0005
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: TLS: validação de certificado e identidade do servidor
+
+ENUNCIADO
+Um cliente HTTPS automatizado acessa https://api.banco.example e verifica a identidade do servidor conforme a RFC 9525, sem exceções configuradas para divergências de identidade. O certificado apresentado possui somente portal.banco.example como dNSName na extensão subjectAltName e contém api.banco.example no campo Common Name (CN). A cadeia até uma âncora de confiança, o período de validade e as demais verificações do certificado foram aprovados. Os dois nomes DNS resolvem para o mesmo endereço IP.
+
+Nessas condições, o cliente deve
+
+A) prosseguir com a conexão, pois a cadeia confiável e o período de validade aprovado bastam para autenticar o nome do serviço solicitado.
+B) interromper a tentativa, pois o identificador apresentado na extensão subjectAltName não corresponde ao nome de referência do serviço solicitado.
+C) prosseguir com a conexão, pois a correspondência do Common Name permite substituir o nome divergente apresentado na extensão subjectAltName.
+D) interromper a tentativa, pois o certificado precisa conter o endereço IP em subjectAltName mesmo quando a URL identifica o servidor por nome DNS.
+E) prosseguir com a conexão, pois nomes DNS que resolvem para o mesmo endereço IP são equivalentes para a verificação da identidade do serviço.

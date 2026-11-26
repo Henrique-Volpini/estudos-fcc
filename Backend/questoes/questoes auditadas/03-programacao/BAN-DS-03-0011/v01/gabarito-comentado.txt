@@ -1,0 +1,33 @@
+ID: BAN-DS-03-0011
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar o resultado exibido pelo código nas condições declaradas.
+
+RESOLUÇÃO
+A expressão agrupa-se como (a && ++b) || ((b > 1) && ++c). Como a é zero, ++b não é avaliado e o primeiro grupo resulta em zero. O || precisa avaliar o segundo grupo. b > 1 é verdadeiro; então ++c eleva c de 4 a 5, valor não zero, e esse && resulta em 1. O || produz int 1. Não há leitura e modificação não sequenciadas de uma mesma variável nessa avaliação. São exibidos 2 5 1.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Como a vale zero, o primeiro && não avalia ++b; b permanece 2.
+B) Não atende. O primeiro && produz zero e o || avalia sua expressão à direita. Como b > 1 é verdadeiro, ++c é executado.
+C) Não atende. c passa a 5, mas o resultado de && e || é int 0 ou 1; r não recebe o valor 5 do operando.
+D) Não atende. ++b é omitido pelo primeiro curto-circuito. Como a expressão à esquerda de || é falsa, sua expressão à direita é avaliada e incrementa c.
+E) Atende. b fica 2; a avaliação de b > 1 && ++c incrementa c para 5 e produz 1; o resultado final de || também é 1.
+
+FONTES TÉCNICAS CONSULTADAS
+- ISO/IEC JTC1/SC22/WG14 — N1570, Committee Draft, 12 April 2011. https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf. Localizador: §6.5.3.1 (incremento prefixado), §6.5.8 (relacionais), §6.5.13 e §6.5.14 (gramática, resultado lógico, ordem e curto-circuito), página impressa 99/PDF 117. Rascunho público de C11, identificado como tal.
+- Programa-base — Programação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 39–58; recorte: operadores e precedência;
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2015.
+- Caderno, questão e página: Não obtido; Q566693 (identificador do acervo; número original não obtido); Não obtida; página HTML e imagem do programa.
+- Origem verificável: https://www.qconcursos.com/questoes-de-concursos/questoes/08594fc1-76; arquivo efetivamente consultado: Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-java-trt4-2015.jpg.
+- Característica observada e aplicação autoral: Programa em bloco, comando de determinação da saída e cinco sequências concorrentes. Aplicado a código e dados autorais.
+- Limites da referência: Acervo secundário Qconcursos. Página HTML e imagem local efetivamente consultadas. Caderno, número original e página original não obtidos. Sustenta formato, sem certificar semântica atual ou frequência da FCC.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultado o rascunho primário N1570 do WG14, especialmente §6.5.13–14.
+- Analítica: aplicada a gramática dos operadores e seguido cada ponto de curto-circuito; conferidas a ausência de efeitos não sequenciados e as cinco saídas.
+- Não executada: não foi usado compilador C; resultado obtido por análise documental e manual.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguarda auditoria independente.

@@ -1,0 +1,26 @@
+ID: BAN-DS-04-0008
+Versão: v01
+Matéria: Banco de Dados
+Tópico: PostgreSQL 14/15: SAVEPOINT e ROLLBACK TO SAVEPOINT
+
+ENUNCIADO
+Em um banco PostgreSQL 15, a tabela limite possui id integer como chave primária e valor integer. Ela contém somente a linha (1, 100). Sem operações concorrentes, gatilhos ou erros, uma sessão executa:
+
+BEGIN;
+UPDATE limite SET valor = valor + 20 WHERE id = 1;
+SAVEPOINT ajuste;
+UPDATE limite SET valor = valor * 2 WHERE id = 1;
+ROLLBACK TO SAVEPOINT ajuste;
+UPDATE limite SET valor = valor + 5 WHERE id = 1;
+ROLLBACK TO SAVEPOINT ajuste;
+UPDATE limite SET valor = valor + 7 WHERE id = 1;
+COMMIT;
+SELECT valor FROM limite WHERE id = 1;
+
+O valor retornado pelo SELECT é
+
+A) 100.
+B) 120.
+C) 132.
+D) 252.
+E) 127.
