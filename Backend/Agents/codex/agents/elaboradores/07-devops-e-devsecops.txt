@@ -1,7 +1,7 @@
 ELABORADOR 07 - DEVOPS E DEVSECOPS
 
 REGRAS COMPARTILHADAS
-codex/agents/regras gerais/elaboradores.txt
+Backend/Agents/codex/agents/regras gerais/elaboradores.txt
 
 CONTEÚDO EXCLUSIVO DESTE ELABORADOR
 DEVOPS E DEVSECOPS:

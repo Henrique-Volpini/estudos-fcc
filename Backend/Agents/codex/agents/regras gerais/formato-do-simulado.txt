@@ -1,0 +1,49 @@
+FORMATO DO SIMULADO PARA A APLICAÇÃO
+
+FINALIDADE
+O coordenador entrega cada simulado completo em Backend/simulados/simulados pendentes/<ID-DO-SIMULADO>/. O arquivo simulado.json é obrigatório: a aplicação lê esse arquivo, ordena as questões pelo campo numero e apresenta uma questão por vez.
+Os arquivos TXT podem acompanhar a entrega para leitura humana, mas não substituem o JSON. O coordenador consolida os dados das versões aprovadas sem alterar os textos, a ordem das alternativas ou o gabarito.
+
+ESTRUTURA DE simulado.json
+Objeto JSON UTF-8 válido, sem comentários ou trechos de Markdown envolvendo o arquivo:
+- schemaVersao: número inteiro 1.
+- id: identificação única do simulado, igual ao nome da pasta. Usar letras sem acento, números, hífen ou sublinhado; sem espaços, barras ou caminhos.
+- titulo: nome legível e não vazio do simulado.
+- descricao: texto opcional de apresentação.
+- criadoEm: data e hora de criação, opcionais, em formato ISO 8601.
+- questoes: lista das questões na ordem escolhida para o caderno. O simulado padrão tem 50 questões; treinos menores somente quando solicitados.
+
+CADA OBJETO EM questoes CONTÉM
+- id: ID estável e único da questão, como BAN-DS-04-0001.
+- numero: inteiro de 1 ao total de questões. A sequência deve estar completa e não pode conter números repetidos.
+- materia: nome da matéria, não vazio.
+- topico: recorte do conteúdo cobrado, não vazio.
+- versao: versão aprovada da questão, como v01.
+- enunciado: texto completo e não vazio que o estudante verá, incluindo o comando. Preserve quebras de linha em código, consultas e tabelas textuais usando os escapes JSON adequados.
+- alternativas: objeto com exatamente as chaves A, B, C, D e E. Cada valor é o texto não vazio da alternativa, sem necessidade de repetir a letra no texto.
+- gabarito: uma letra entre A e E.
+- justificativas: objeto com exatamente as chaves A, B, C, D e E, com a explicação não vazia de cada alternativa.
+- resolucao: explicação completa e não vazia de por que a resposta atende ao comando, incluindo os passos relevantes.
+- fontes: lista opcional de objetos com titulo não vazio e, quando disponíveis, url e localizador. Use as fontes realmente consultadas na elaboração e na avaliação de estilo.
+
+SEPARAÇÃO DE RESPONSABILIDADES
+- Os elaboradores continuam entregando questao.txt e gabarito-comentado.txt no formato já definido. Não precisam inventar outra estrutura de pastas nem publicar o simulado.
+- O coordenador extrai desses arquivos os dados da versão aprovada e produz o simulado.json. A aprovação dos auditores precisa corresponder às versões selecionadas.
+- O servidor lê o gabarito e as justificativas, mas só os devolve à página depois que o estudante registra sua alternativa naquela questão.
+- A primeira resposta registrada fica preservada depois de mostrar a correção. Voltar à questão permite rever os comentários, sem substituir a tentativa original.
+- O estudante pode marcar sabia, chutei ou deduzi após responder. Essa classificação é opcional e pode ser ajustada antes de finalizar o simulado.
+
+VALIDAÇÃO OBRIGATÓRIA ANTES DA ENTREGA
+Na raiz do repositório, execute:
+node Backend/Code/validar-simulado.mjs "Backend/simulados/simulados pendentes/<ID-DO-SIMULADO>/simulado.json"
+
+Prepare e valide o arquivo na pasta de acompanhamento antes de publicar o simulado pronto em simulados pendentes. O comando também aceita o caminho desse arquivo em preparação.
+Uma validação estrutural bem-sucedida não substitui os pareceres de estilo, pistas e redação. Não preencha referências, respostas ou aprovações fictícias para satisfazer o formato.
+
+ARQUIVOS GERADOS PELA APLICAÇÃO
+- progresso.json: salva automaticamente respostas, classificações e posição de leitura, permitindo continuar depois de fechar a página.
+- resultado.json: registra a conclusão, as respostas e o desempenho calculado pela aplicação.
+- Ao finalizar todas as respostas, a aplicação move a pasta completa de Backend/simulados/simulados pendentes/ para Backend/simulados/simulados resolvidos/, preservando os arquivos do simulado.
+- Os arquivos TXT originais são preservados como registros de produção. Para conhecer a situação da resolução na aplicação, consulte a localização da pasta, progresso.json e resultado.json; não trate um estado antigo no controle.txt como substituto desses registros.
+- Não crie progresso.json ou resultado.json antecipadamente como se o estudante já tivesse respondido. Após a resolução, não altere o conteúdo do simulado para mudar o resultado.
+- O percentual de acertos mostrado pela aplicação é uma medida de treino, sem cálculo automático da nota ponderada de uma prova completa com conhecimentos gerais.

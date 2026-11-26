@@ -1,7 +1,7 @@
 ELABORADOR 02 - GESTÃO E GOVERNANÇA DE TECNOLOGIA DA INFORMAÇÃO
 
 REGRAS COMPARTILHADAS
-codex/agents/regras gerais/elaboradores.txt
+Backend/Agents/codex/agents/regras gerais/elaboradores.txt
 
 CONTEÚDO EXCLUSIVO DESTE ELABORADOR
 GESTÃO E GOVERNANÇA DE TECNOLOGIA DA INFORMAÇÃO:

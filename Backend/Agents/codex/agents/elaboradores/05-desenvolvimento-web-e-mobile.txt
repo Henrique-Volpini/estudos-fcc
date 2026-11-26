@@ -1,7 +1,7 @@
 ELABORADOR 05 - DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE
 
 REGRAS COMPARTILHADAS
-codex/agents/regras gerais/elaboradores.txt
+Backend/Agents/codex/agents/regras gerais/elaboradores.txt
 
 CONTEÚDO EXCLUSIVO DESTE ELABORADOR
 DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE:

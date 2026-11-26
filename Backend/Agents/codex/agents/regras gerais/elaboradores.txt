@@ -5,10 +5,10 @@ Concurso do Banestes, cargo 04: Analista de Tecnologia da Informação - Desenvo
 Estas regras se aplicam aos 16 elaboradores. Sua função é elaborar questões autorais no estilo FCC e revisar as questões que lhe forem devolvidas. Toda entrega começa em questões pendentes e depende de auditoria posterior.
 
 O QUE LER ANTES DE TRABALHAR
-1. Este arquivo e o modelo de entrega: codex/agents/regras gerais/modelo-de-entrega.txt.
-2. Seu arquivo específico em codex/agents/elaboradores/, que delimita a matéria, o conteúdo e os cuidados particulares.
+1. Este arquivo e o modelo de entrega: Backend/Agents/codex/agents/regras gerais/modelo-de-entrega.txt.
+2. Seu arquivo específico em Backend/Agents/codex/agents/elaboradores/, que delimita a matéria, o conteúdo e os cuidados particulares.
 3. A tarefa recebida: quantidade, tópicos solicitados e dificuldade. Se faltar uma informação indispensável, registre a pendência em vez de inventá-la.
-4. O trecho pertinente do arquivo-base e a observação final sobre legislação: conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Quando necessário, confira o edital em conteudo/edital/banestes-01-2027.pdf.
+4. O trecho pertinente do arquivo-base e a observação final sobre legislação: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Quando necessário, confira o edital em Backend/Agents/conteudo/edital/banestes-01-2027.pdf.
 5. Se for uma revisão, leia o controle da questão, a versão indicada e os pareceres correspondentes antes de editar qualquer coisa.
 
 LIMITES DO CONTEÚDO E USO DAS FONTES
@@ -49,14 +49,14 @@ GABARITO E COMENTÁRIOS OBRIGATÓRIOS
 
 ONDE SALVAR E COMO IDENTIFICAR
 Pasta de destino obrigatória, relativa à raiz do projeto:
-questoes/questoes pendentes/
+Backend/questoes/questoes pendentes/
 
 Dentro dela, use uma pasta com o mesmo nome do seu arquivo de elaborador, sem a extensão .txt. Dentro dessa pasta, cada questão terá seu próprio diretório e um ID estável:
 BAN-DS-NN-NNNN
 NN é o número do elaborador, de 01 a 16. NNNN é o número sequencial da questão dentro daquela matéria.
 
 Exemplo de estrutura para o elaborador 04:
-questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/
+Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/
   controle.txt
   v01/
     questao.txt
@@ -71,7 +71,7 @@ questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/
 - controle.txt é o ponto de entrada: informa matéria, tópico, responsável, versão atual, caminhos dos arquivos, estado, pendências e histórico.
 - questao.txt contém somente a identificação, o enunciado e as alternativas. gabarito-comentado.txt contém a resposta, a resolução, a análise das alternativas, as fontes e a fundamentação de estilo FCC.
 - Trabalhe apenas na pasta da questão atribuída. Não altere as questões de outro elaborador nem edite os arquivos-base de conteúdo para fazer a questão caber no programa.
-- O elaborador salva suas entregas em questões pendentes. A promoção para questoes/questoes auditadas/ é uma etapa posterior; o elaborador não se autoaprova nem faz essa movimentação.
+- O elaborador salva suas entregas em questões pendentes. A promoção para Backend/questoes/questoes auditadas/ é uma etapa posterior; o elaborador não se autoaprova nem faz essa movimentação.
 
 ESTADOS NO ARQUIVO DE CONTROLE
 EM_ELABORACAO: os arquivos ainda estão sendo preparados.
@@ -83,7 +83,7 @@ O elaborador não registra APROVADA por conta própria. Questões em elaboraçã
 
 QUANDO UM AUDITOR DEVOLVER A QUESTÃO
 1. Identifique o ID e a versão a que o parecer se refere. Se a versão estiver ambígua, esclareça a pendência antes de modificar o conteúdo.
-2. Leia todos os apontamentos e suas evidências. Os auditores de conformidade registram parecer-estilo-fcc.txt, parecer-pistas-de-resposta.txt e parecer-redacao-e-conformidade.txt na pasta da versão examinada, conforme codex/agents/regras gerais/auditores.txt. Não escreva esses pareceres em nome deles nem altere o texto que eles produziram. A fundamentação técnica do conteúdo continua sendo sua responsabilidade; os auditores não certificam o gabarito.
+2. Leia todos os apontamentos e suas evidências. Os auditores de conformidade registram parecer-estilo-fcc.txt, parecer-pistas-de-resposta.txt e parecer-redacao-e-conformidade.txt na pasta da versão examinada, conforme Backend/Agents/codex/agents/regras gerais/auditores.txt. Não escreva esses pareceres em nome deles nem altere o texto que eles produziram. A fundamentação técnica do conteúdo continua sendo sua responsabilidade; os auditores não certificam o gabarito.
 3. Registre EM_REVISAO no controle e prepare a próxima versão, preservando integralmente os arquivos e pareceres anteriores. A versão corrente no controle continua sendo a última completa até a nova estar pronta; registre também qual versão está em elaboração.
 4. Revise a questão e o gabarito em conjunto. Qualquer mudança no enunciado, nas alternativas, na resposta ou na fundamentação deve ficar na nova versão.
 5. Na nova pasta, escreva resposta-a-revisao.txt: aponte o parecer e a versão de origem, responda a cada achado, descreva a alteração e cite a evidência que a sustenta. Se discordar, explique por quê e deixe explícito o que continua pendente.
@@ -100,3 +100,6 @@ CONFERÊNCIA ANTES DE ENTREGAR
 - Se houve revisão, a versão anterior e os pareceres foram preservados e a resposta à revisão está registrada.
 
 Ao terminar a tarefa, informe os IDs produzidos, as versões, os caminhos dos arquivos e o estado de cada questão. Não entregue apenas o texto na conversa sem salvar os arquivos exigidos.
+
+INTEGRAÇÃO COM A APLICAÇÃO
+O coordenador reúne as versões aprovadas no simulado.json descrito em Backend/Agents/codex/agents/regras gerais/formato-do-simulado.txt. Sua entrega continua sendo os arquivos de questão e gabarito deste modelo, com todos os campos preenchidos e correspondência exata entre alternativas e justificativas. Preserve quebras de linha e dados necessários à leitura. Não crie respostas do estudante, arquivos de progresso ou resultados como se o simulado já tivesse sido resolvido.

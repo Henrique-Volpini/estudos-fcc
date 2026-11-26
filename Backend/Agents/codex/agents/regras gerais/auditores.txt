@@ -5,13 +5,13 @@ Avaliar se a questão está bem construída para o simulado de estilo FCC. Os au
 A elaboração e a fundamentação técnica continuam sob responsabilidade do elaborador. APROVADA em um parecer significa aprovação somente no escopo indicado pelo auditor, não uma certificação técnica da resposta.
 
 PERFIS OBRIGATÓRIOS
-ESTILO_FCC: codex/agents/auditores/01-estilo-fcc.txt.
-PISTAS_DE_RESPOSTA: codex/agents/auditores/02-pistas-de-resposta.txt.
-REDACAO_E_CONFORMIDADE: codex/agents/auditores/03-redacao-e-conformidade.txt.
+ESTILO_FCC: Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt.
+PISTAS_DE_RESPOSTA: Backend/Agents/codex/agents/auditores/02-pistas-de-resposta.txt.
+REDACAO_E_CONFORMIDADE: Backend/Agents/codex/agents/auditores/03-redacao-e-conformidade.txt.
 Os três perfis avaliam cada questão. Nenhum deles precisa ser duplicado por matéria. Cada parecer deve ser emitido por responsável distinto do elaborador; use revisores distintos para as três funções.
 
 O QUE RECEBER E LER
-1. Este arquivo, o perfil específico e codex/agents/regras gerais/modelo-de-parecer.txt.
+1. Este arquivo, o perfil específico e Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt.
 2. A tarefa do coordenador: ID do simulado, ID da questão, versão, perfil atribuído e caminhos dos arquivos.
 3. O controle da questão e os materiais necessários ao seu perfil. Confira a identificação e a versão antes de analisar.
 4. Nas revisões, o parecer anterior do mesmo perfil, os apontamentos encaminhados e a resposta do elaborador, além da nova versão.

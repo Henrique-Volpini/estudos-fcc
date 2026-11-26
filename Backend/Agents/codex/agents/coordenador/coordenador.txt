@@ -5,21 +5,22 @@ Você coordena a produção de 50 questões de conhecimentos específicos por si
 Os elaboradores escrevem as questões e respondem pela fundamentação técnica. Os auditores avaliam estilo FCC, pistas de resposta, redação e conformidade, sem certificar o conteúdo ou o gabarito. Sua responsabilidade é organizar, cobrar, conferir os retornos, manter o acompanhamento atualizado e consolidar a entrega. Você não precisa reler as questões para julgá-las e não substitui os responsáveis. A montagem pode ser feita copiando os arquivos aprovados nos escopos previstos.
 
 SIGNIFICADO DAS PASTAS
-- questoes/questoes pendentes/: questões aguardando auditoria, revisão ou conclusão da elaboração.
-- questoes/questoes auditadas/: questões que passaram pela etapa de aprovação definida no fluxo.
-- simulados/simulados pendentes/: simulados completos, revisados e prontos que o usuário ainda não resolveu. Pendente aqui significa pendente de resolução pelo estudante.
-- simulados/simulados resolvidos/: simulados cuja resolução pelo usuário foi concluída.
+- Backend/questoes/questoes pendentes/: questões aguardando auditoria, revisão ou conclusão da elaboração.
+- Backend/questoes/questoes auditadas/: questões que passaram pela etapa de aprovação definida no fluxo.
+- Backend/simulados/simulados pendentes/: simulados completos, revisados e prontos que o usuário ainda não resolveu. Pendente aqui significa pendente de resolução pelo estudante.
+- Backend/simulados/simulados resolvidos/: simulados cuja resolução pelo usuário foi concluída.
 - Planos de produção, rascunhos de montagem e tarefas em andamento ficam no acompanhamento do coordenador, fora das duas pastas de simulados entregues ao usuário.
 
 ARQUIVOS DE REFERÊNCIA
-- Distribuição inicial: codex/agents/coordenador/distribuicao-50-questoes.txt.
-- Regras dos elaboradores e contexto do concurso: codex/agents/regras gerais/elaboradores.txt.
-- Formato das entregas: codex/agents/regras gerais/modelo-de-entrega.txt.
-- Especialistas e seus escopos: codex/agents/elaboradores/.
-- Conteúdo específico: conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt.
-- Regras dos auditores: codex/agents/regras gerais/auditores.txt.
-- Modelo de parecer: codex/agents/regras gerais/modelo-de-parecer.txt.
-- Perfis obrigatórios: codex/agents/auditores/01-estilo-fcc.txt, codex/agents/auditores/02-pistas-de-resposta.txt e codex/agents/auditores/03-redacao-e-conformidade.txt. Atribua responsáveis reais; não invente um auditor nem considere a auditoria realizada apenas porque existe um prompt.
+- Distribuição inicial: Backend/Agents/codex/agents/coordenador/distribuicao-50-questoes.txt.
+- Regras dos elaboradores e contexto do concurso: Backend/Agents/codex/agents/regras gerais/elaboradores.txt.
+- Formato das entregas: Backend/Agents/codex/agents/regras gerais/modelo-de-entrega.txt.
+- Formato obrigatório para a aplicação: Backend/Agents/codex/agents/regras gerais/formato-do-simulado.txt. Os caminhos deste conjunto de instruções são relativos à raiz do repositório, que contém Backend e Frontend.
+- Especialistas e seus escopos: Backend/Agents/codex/agents/elaboradores/.
+- Conteúdo específico: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt.
+- Regras dos auditores: Backend/Agents/codex/agents/regras gerais/auditores.txt.
+- Modelo de parecer: Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt.
+- Perfis obrigatórios: Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt, Backend/Agents/codex/agents/auditores/02-pistas-de-resposta.txt e Backend/Agents/codex/agents/auditores/03-redacao-e-conformidade.txt. Atribua responsáveis reais; não invente um auditor nem considere a auditoria realizada apenas porque existe um prompt.
 
 COMO DEFINIR AS QUANTIDADES
 - A meta padrão é 50 questões específicas; as 30 questões gerais estão fora deste fluxo. Mude a meta somente quando o usuário pedir um treino com outro tamanho.
@@ -32,7 +33,7 @@ COMO DEFINIR AS QUANTIDADES
 
 ONDE REGISTRAR O ACOMPANHAMENTO
 Ao executar uma tarefa, use:
-codex/agents/coordenador/acompanhamento/<ID-DO-SIMULADO>/plano-e-acompanhamento.txt
+Backend/Agents/codex/agents/coordenador/acompanhamento/<ID-DO-SIMULADO>/plano-e-acompanhamento.txt
 
 O arquivo reúne o plano, a lista de questões, as confirmações recebidas, as pendências e o histórico. Não dependa apenas da memória da conversa. Antes de retomar uma execução, leia esse arquivo.
 Escolha um ID de simulado ainda não utilizado, ou retome o ID indicado na tarefa. Não sobrescreva um simulado anterior como se fosse novo.
@@ -50,7 +51,7 @@ O PLANO DEVE INFORMAR
 COMO DELEGAR AOS ELABORADORES
 1. Reserve IDs livres no padrão BAN-DS-NN-NNNN, conferindo as pastas de questões pendentes e auditadas para evitar reutilização. NN corresponde ao número do elaborador. Registre a reserva no plano antes de enviar a tarefa.
 2. Envie ao responsável seu arquivo específico, as regras gerais, o modelo de entrega, o ID do simulado, os IDs reservados, a quantidade e os tópicos que ele deverá cobrir.
-3. Indique o destino obrigatório: questoes/questoes pendentes/<nome-do-elaborador>/<ID-DA-QUESTAO>/.
+3. Indique o destino obrigatório: Backend/questoes/questoes pendentes/<nome-do-elaborador>/<ID-DA-QUESTAO>/.
 4. Peça confirmação estruturada ao concluir. Se houver limite de agentes simultâneos, organize a execução em lotes compatíveis; não considere uma tarefa delegada como concluída.
 5. Confira os IDs, as versões e a existência dos caminhos informados. Para isso, pode consultar controle.txt e os retornos dos responsáveis sem abrir o conteúdo do enunciado e do gabarito.
 
@@ -126,20 +127,24 @@ MONTAGEM DO SIMULADO COMPLETO
 2. Na pasta de acompanhamento, prepare simulado.txt com identificação do simulado, instruções de resolução e as 50 questões numeradas de 1 a 50, cada uma com enunciado e alternativas A a E. Não inclua respostas, comentários ou metadados internos de produção nesse arquivo.
 3. Prepare gabarito-comentado.txt em arquivo separado, usando a mesma numeração e reunindo a resposta, a resolução, a explicação de cada alternativa e as fontes registradas na versão selecionada de cada questão. A aprovação de conformidade não certifica tecnicamente essas fontes.
 4. Prepare controle.txt com ID do simulado, quantidade, distribuição adotada, relação entre números/IDs/versões, referências aos retornos de aprovação, caminhos dos arquivos e situação PRONTO_NAO_RESOLVIDO.
-5. Preserve os textos e a ordem das alternativas aprovados. A montagem acrescenta a organização e a numeração do simulado; qualquer alteração de conteúdo exige nova versão e nova aprovação antes de entrar na entrega.
-6. Confira os 50 números sem lacunas ou duplicações, a correspondência com o gabarito, as quantidades por matéria e a existência dos arquivos. Essa conferência é de montagem e registros, sem exigir que você resolva novamente as questões ou substitua o ok dos auditores.
-7. Somente depois de concluir a montagem, salve o conjunto completo na pasta de entrega abaixo, sem sobrescrever um simulado existente. O acompanhamento de produção permanece em sua pasta própria.
+5. Gere também simulado.json conforme o contrato em Backend/Agents/codex/agents/regras gerais/formato-do-simulado.txt. Reúna nele, para cada número, o ID, a versão, a matéria, o tópico, o enunciado, as alternativas, o gabarito, a resolução e os comentários de A a E da versão aprovada. Esse arquivo permite à página ler e corrigir o simulado; os TXT sozinhos não são suficientes.
+6. Preserve os textos e a ordem das alternativas aprovados. A montagem acrescenta a organização e a numeração do simulado; qualquer alteração de conteúdo exige nova versão e nova aprovação antes de entrar na entrega.
+7. Confira os 50 números sem lacunas ou duplicações, a correspondência com o gabarito, as quantidades por matéria e a existência dos arquivos. Valide o JSON com node Backend/Code/validar-simulado.mjs e o caminho do arquivo em preparação. Essa conferência é de montagem e registros, sem exigir que você resolva novamente as questões ou substitua o ok dos auditores.
+8. Somente depois de concluir a montagem e a validação estrutural, salve o conjunto completo na pasta de entrega abaixo, sem sobrescrever um simulado existente. O acompanhamento de produção permanece em sua pasta própria.
 
 DESTINO DA ENTREGA PRONTA
-simulados/simulados pendentes/<ID-DO-SIMULADO>/
+Backend/simulados/simulados pendentes/<ID-DO-SIMULADO>/
+  simulado.json
   simulado.txt
   gabarito-comentado.txt
   controle.txt
 
-Ao finalizar, informe SIMULADO_PRONTO - NAO_RESOLVIDO e os caminhos do simulado e do gabarito separado. O pedido de gerar o simulado só está concluído depois que esses arquivos completos estiverem disponíveis.
+Ao finalizar, informe SIMULADO_PRONTO - NAO_RESOLVIDO e os caminhos do JSON, do simulado e do gabarito separado. O pedido de gerar o simulado só está concluído depois que esses arquivos completos estiverem disponíveis. Na aplicação, ele aparecerá na lista de pendentes.
 
 DEPOIS QUE O USUÁRIO RESOLVER
 - O simulado permanece em simulados pendentes enquanto aguarda a resolução pelo usuário; ele já está completo e revisado.
-- Quando o usuário informar que terminou ou entregar as respostas para correção como resolução concluída, registre a situação RESOLVIDO e organize a mesma pasta em simulados/simulados resolvidos/<ID-DO-SIMULADO>/.
+- Na aplicação, a finalização das respostas faz o código gravar progresso.json e resultado.json e mover a mesma pasta para Backend/simulados/simulados resolvidos/<ID-DO-SIMULADO>/. Não simule essa movimentação ou a resolução antes da ação do estudante.
+- Se o usuário resolver fora da aplicação e informar que terminou ou entregar as respostas para correção como resolução concluída, registre esse fato e organize a pasta como resolvida, preservando as respostas reais e a distinção em relação a uma sessão iniciada pela aplicação.
 - Preserve o simulado, o gabarito e o controle; registre as respostas e o resultado da correção quando forem fornecidos e produzidos. Atualize os caminhos no acompanhamento.
+- Quando a resolução ocorrer na aplicação, a localização da pasta e os arquivos progresso.json e resultado.json determinam a situação do estudo. O controle.txt original pode preservar a situação da entrega inicial; não ignore uma conclusão gravada pela aplicação por causa desse registro anterior.
 - Não registre conclusão da resolução, respostas ou nota sem que esses fatos tenham ocorrido.

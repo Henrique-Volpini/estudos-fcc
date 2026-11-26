@@ -1,7 +1,7 @@
 ELABORADOR 01 - PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 
 REGRAS COMPARTILHADAS
-codex/agents/regras gerais/elaboradores.txt
+Backend/Agents/codex/agents/regras gerais/elaboradores.txt
 
 CONTEÚDO EXCLUSIVO DESTE ELABORADOR
 PROCESSO DE DESENVOLVIMENTO DE SOFTWARE:

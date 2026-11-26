@@ -1,0 +1,8 @@
+{
+  "name": "estudos-fcc",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node Backend/Code/server.mjs"
+  }
+}

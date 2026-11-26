@@ -1,7 +1,7 @@
 AUDITOR 03 - REDAÇÃO E CONFORMIDADE
 
 REGRAS COMPARTILHADAS
-codex/agents/regras gerais/auditores.txt
+Backend/Agents/codex/agents/regras gerais/auditores.txt
 
 FUNÇÃO ESPECÍFICA
 Avaliar clareza, qualidade da escrita, precisão do comando e conformidade dos arquivos com o formato exigido. A correção do conteúdo permanece com o elaborador.
