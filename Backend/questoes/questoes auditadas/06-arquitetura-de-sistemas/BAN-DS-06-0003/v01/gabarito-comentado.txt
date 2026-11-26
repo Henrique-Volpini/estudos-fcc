@@ -1,0 +1,34 @@
+ID: BAN-DS-06-0003
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Associar, na ordem I, II e III, cada necessidade ao mecanismo de resiliência correspondente.
+
+RESOLUÇÃO
+I corresponde ao timeout de chamada. II descreve retry limitado para falhas transitórias. III descreve circuit breaker: aberto, rejeita chamadas; semiaberto, admite sondagens limitadas; recuperado, volta a encaminhá-las. O tempo de permanência aberto não substitui o timeout de cada chamada.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: troca I e II; retry repete chamadas, enquanto timeout limita a espera, sem definir novas tentativas.
+B) Atende: associa o limite de espera ao timeout, a repetição controlada ao retry e a suspensão com sondagem ao circuit breaker.
+C) Não atende: troca II e III; circuit breaker não é a política de novas tentativas, e retry não define estados aberto e semiaberto.
+D) Não atende: troca I e III; circuit breaker controla a admissão de chamadas e timeout, isoladamente, não mantém suspensão por histórico de falhas.
+E) Não atende: nenhuma posição corresponde à necessidade descrita: timeout cabe em I, retry em II e circuit breaker em III.
+
+FONTES TÉCNICAS E DOCUMENTAIS CONSULTADAS
+- Microsoft Azure Architecture Center — Circuit Breaker pattern | https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker | Seções Context and problem e Solution; diferença em relação ao Retry e estados Closed, Open e Half-Open. Sustenta III e os erros de associação das alternativas.
+- Microsoft Azure Architecture Center — Retry pattern | https://learn.microsoft.com/en-us/azure/architecture/patterns/retry | Seções Solution, Retry strategies e Issues and considerations: número máximo, espera, falhas transitórias e idempotência. Sustenta II.
+- AWS Builders' Library — Timeouts, retries, and backoff with jitter | https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter | Publicado em 05/12/2019; seções Introduction, Timeouts e Retries and backoff: limite de espera e necessidade de limitar tentativas. Consultado pelo endereço original https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/, que redirecionou para o Builder Center. Sustenta I e a composição controlada com II.
+- Programa de conhecimentos específicos — Arquitetura de Sistemas | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | Bloco ARQUITETURA DE SISTEMAS, linhas 92–99; observação final sobre legislação, linhas 213–217. Nenhuma norma jurídica é cobrada nesta questão.
+- FCC — TRT4/2022 — Tecnologia da Informação — A14, tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt | Página 8, questão 33; origem secundária conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json. Referência de formato.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 33; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 8 ===; PDF local homônimo; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação nesta questão autoral: Comando de associação em ordem explícita, com alternativas de composição paralela. O exemplo FCC usa duas anotações em ordem; aqui há três necessidades de resiliência inteiramente autorais, descritas antes da escolha dos mecanismos.
+- Limites da referência: Exemplo editorial de uma prova de 2022. A cópia foi obtida no Qconcursos, conforme fontes.json; não se afirma download da FCC ou integridade oficial certificada. O exemplo não demonstra frequência de cobrança nem valida os conceitos técnicos atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: páginas primárias Microsoft e AWS consultadas por navegação em 26/11/2026. Analítica: associação I–III e conferência das cinco permutações; distinguido timeout da chamada do intervalo de abertura do circuit breaker. Não houve simulação de falhas ou execução de cliente remoto.
+
+PENDÊNCIAS
+Nenhuma.

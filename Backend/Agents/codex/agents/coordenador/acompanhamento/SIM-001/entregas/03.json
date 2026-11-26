@@ -1,0 +1,350 @@
+{
+  "elaborador": "03",
+  "responsavel": "/root/elaborador_03",
+  "questoes": [
+    {
+      "id": "BAN-DS-03-0001",
+      "numero": 8,
+      "materia": "Programação",
+      "topico": "Python: compartilhamento e mutação de listas",
+      "versao": "v01",
+      "enunciado": "Em Python 3.12, um desenvolvedor executou o código abaixo para preparar uma lista de trabalho:\n\norigem = [[1], [2]]\ncopia = origem[:]\ncopia[0].append(3)\ncopia.append([4])\nprint(origem)\n\nA saída produzida por esse código é",
+      "alternativas": {
+        "A": "[[1], [2], [4]]",
+        "B": "[[1, 3], [2], [4]]",
+        "C": "[[1, 3], [2]]",
+        "D": "[[1], [2]]",
+        "E": "[[1, 3], [2, 4]]"
+      },
+      "gabarito": "C",
+      "resolucao": "A fatia cria outra lista externa, mas mantém referências às listas internas. Portanto, append(3) modifica a primeira lista interna, compartilhada. Já append([4]) acrescenta um elemento apenas à lista externa copia. origem conserva dois elementos e sua primeira lista passa a conter 1 e 3.",
+      "justificativas": {
+        "A": "Não atende: a inclusão de [4] ocorreu somente em copia; além disso, a alteração da lista interna compartilhada não poderia ser ignorada.",
+        "B": "Não atende: representa o conteúdo de copia, não o da lista origem solicitada pelo print.",
+        "C": "Atende: origem mantém duas listas internas e a primeira, compartilhada com copia, passa a conter 1 e 3.",
+        "D": "Não atende: pressupõe uma cópia profunda. A fatia duplica a lista externa, sem duplicar recursivamente as listas internas.",
+        "E": "Não atende: append([4]) cria um terceiro elemento em copia; não acrescenta 4 à segunda lista interna."
+      },
+      "fontes": [
+        {
+          "titulo": "Python 3.12 — copy: Shallow and deep copy operations",
+          "url": "https://docs.python.org/3.12/library/copy.html",
+          "localizador": "Definição de cópia rasa e exemplo original_list[:] como cópia rasa de lista."
+        },
+        {
+          "titulo": "Python 3.12 Tutorial — Lists",
+          "url": "https://docs.python.org/3.12/tutorial/introduction.html#lists",
+          "localizador": "Seção 3.1.3: listas, fatiamento, mutabilidade e append."
+        }
+      ],
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Consulta documental às páginas oficiais de Python 3.12. Execução do trecho em memória no Python 3.14 instalado: saída [[1, 3], [2]], coerente com a semântica documentada para 3.12. Nenhum arquivo de teste criado.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "43",
+          "pagina": 10,
+          "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.",
+          "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    },
+    {
+      "id": "BAN-DS-03-0002",
+      "numero": 9,
+      "materia": "Programação",
+      "topico": "Java: sobrescrita e despacho de métodos",
+      "versao": "v01",
+      "enunciado": "Considere o programa Java 21 abaixo:\n\npublic class Exemplo {\n    static class Base {\n        String nome() { return \"base\"; }\n    }\n    static class Derivada extends Base {\n        @Override String nome() { return \"derivada\"; }\n    }\n    static String identificar(Base item) { return \"base\"; }\n    static String identificar(Derivada item) { return \"derivada\"; }\n    public static void main(String[] args) {\n        Base item = new Derivada();\n        System.out.print(item.nome() + \"/\" + identificar(item));\n    }\n}\n\nO texto exibido ao executar o método main é",
+      "alternativas": {
+        "A": "base/base",
+        "B": "derivada/derivada",
+        "C": "base/derivada",
+        "D": "Não há saída, pois a chamada identificar(item) é ambígua.",
+        "E": "derivada/base"
+      },
+      "gabarito": "E",
+      "resolucao": "A chamada do método de instância nome usa o objeto criado, da classe Derivada, e executa a sobrescrita. A escolha entre as sobrecargas de identificar ocorre em compilação: a expressão item tem tipo declarado Base, selecionando identificar(Base). As duas partes exibidas são, respectivamente, derivada e base.",
+      "justificativas": {
+        "A": "Não atende: a primeira parte ignora o despacho do método de instância sobrescrito e usa indevidamente a implementação de Base.",
+        "B": "Não atende: o tipo do objeto não faz o compilador selecionar identificar(Derivada) para um argumento cuja expressão tem tipo Base.",
+        "C": "Não atende: inverte os efeitos das duas regras: nome considera a sobrescrita em execução; a sobrecarga é escolhida pelo tipo da expressão em compilação.",
+        "D": "Não atende: identificar(Base) é aplicável ao argumento de tipo Base; não é necessário converter esse argumento implicitamente para Derivada.",
+        "E": "Atende: nome retorna derivada pela sobrescrita, enquanto identificar(Base) retorna base."
+      },
+      "fontes": [
+        {
+          "titulo": "Java Language Specification — Java SE 21, capítulo 15",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html",
+          "localizador": "§15.12.2: seleção da assinatura em compilação; §15.12.4.4: localização do método de instância em execução."
+        }
+      ],
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Análise documental da JLS21, distinguindo sobrecarga em compilação e sobrescrita em execução. Código e acessibilidade das classes aninhadas analisados; não foi declarada execução de compilador.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "42",
+          "pagina": 10,
+          "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Código de linguagem explicitamente identificada e alternativas técnicas mutuamente exclusivas. O exemplo FCC examina formas de declaração; o código e o resultado de despacho aqui são autorais.",
+          "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    },
+    {
+      "id": "BAN-DS-03-0003",
+      "numero": 10,
+      "materia": "Programação",
+      "topico": "C#: recursos de linguagem e execução de coleções",
+      "versao": "v01",
+      "enunciado": "Em uma aplicação C# 12 com .NET 8, considere o programa:\n\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\nclass Exemplo {\n    static void Main() {\n        var valores = new List<int> { 2, 4, 6 };\n        var consulta = valores.Where(n => n > 3);\n        valores.Add(8);\n        Console.Write(consulta.Count());\n    }\n}\n\nO valor exibido é",
+      "alternativas": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4"
+      },
+      "gabarito": "D",
+      "resolucao": "Where define uma sequência com execução adiada sobre a lista. O elemento 8 é incluído antes de Count enumerar essa sequência. Nesse momento, 4, 6 e 8 satisfazem n > 3; a contagem, portanto, é 3.",
+      "justificativas": {
+        "A": "Não atende: Count efetivamente avalia a sequência; execução adiada não significa que o resultado permanecerá vazio.",
+        "B": "Não atende: 8 não é o único valor que satisfaz o predicado; 4 e 6 já estavam na lista.",
+        "C": "Não atende: considera apenas os valores existentes ao declarar consulta. Where não materializa uma cópia dos resultados nesse ponto.",
+        "D": "Atende: os três valores 4, 6 e 8 atendem ao predicado quando a sequência é enumerada.",
+        "E": "Não atende: conta todos os elementos da lista e desconsidera que o valor 2 é excluído por Where."
+      },
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Introduction to LINQ Queries in C#",
+          "url": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/introduction-to-linq-queries",
+          "localizador": "Query execution: Deferred Execution; o resultado depende do conteúdo da fonte quando a sequência é enumerada."
+        },
+        {
+          "titulo": "Microsoft Learn — Enumerable.Count, .NET 8",
+          "url": "https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.count?view=net-8.0",
+          "localizador": "Count<TSource>(IEnumerable<TSource>): quantidade de elementos da sequência."
+        }
+      ],
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Verificação documental da execução adiada de Where e do contrato de Count; rastreamento analítico dos elementos da lista. Não houve execução de compilador C#.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "43",
+          "pagina": 10,
+          "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.",
+          "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    },
+    {
+      "id": "BAN-DS-03-0004",
+      "numero": 11,
+      "materia": "Programação",
+      "topico": "C: ponteiros e vetores com comportamento definido",
+      "versao": "v01",
+      "enunciado": "Considere o programa em C11:\n\n#include <stdio.h>\n\nint main(void) {\n    int v[] = {3, 5, 7, 9};\n    int *p = v + 1;\n    *(p + 1) = *p + v[0];\n    printf(\"%d %d\", v[2], *(p - 1));\n    return 0;\n}\n\nA sequência exibida por printf é",
+      "alternativas": {
+        "A": "7 3",
+        "B": "8 3",
+        "C": "8 5",
+        "D": "10 3",
+        "E": "8 7"
+      },
+      "gabarito": "B",
+      "resolucao": "p aponta para v[1], de valor 5. Assim, p + 1 aponta para v[2], que recebe 5 + 3 = 8. A expressão p - 1 aponta para v[0], de valor 3. Todos esses endereços pertencem ao vetor; não há acesso fora de seus limites.",
+      "justificativas": {
+        "A": "Não atende: mantém o valor original de v[2], ignorando a atribuição feita por meio de *(p + 1).",
+        "B": "Atende: v[2] passa a valer 8 e *(p - 1) acessa v[0], que permanece igual a 3.",
+        "C": "Não atende: 5 é *p, correspondente a v[1]; o segundo argumento de printf é *(p - 1).",
+        "D": "Não atende: usa 7 como valor de *p, confundindo v[1] com v[2]. O ponteiro p não é incrementado pela expressão p + 1.",
+        "E": "Não atende: 7 era o valor inicial de v[2], não o valor do elemento anterior ao apontado por p."
+      },
+      "fontes": [
+        {
+          "titulo": "WG14 — N1570, rascunho de comitê do C11",
+          "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+          "localizador": "§6.3.2.1, parágrafo 3: conversão de vetor para ponteiro; §6.5.6, parágrafo 8: aritmética de ponteiros no mesmo vetor; páginas PDF 72 e 111."
+        }
+      ],
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Rastreamento analítico dos índices e da atribuição, confrontado com N1570. Todos os acessos ficam entre v[0] e v[2]; não há dependência do tamanho de int, da representação de ponteiros ou de ordem de avaliação com efeitos conflitantes. Não houve compilação C.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "43",
+          "pagina": 10,
+          "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.",
+          "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    },
+    {
+      "id": "BAN-DS-03-0005",
+      "numero": 12,
+      "materia": "Programação",
+      "topico": "PHP: comportamento básico de linguagem conforme versão declarada",
+      "versao": "v01",
+      "enunciado": "Um desenvolvedor executou o código abaixo em PHP 8.2:\n\n<?php\n$codigo = \"42\";\n$numero = 42;\necho ($codigo == $numero ? \"S\" : \"N\");\necho ($codigo === $numero ? \"S\" : \"N\");\n\nQual é o resultado da execução?",
+      "alternativas": {
+        "A": "É exibido SN.",
+        "B": "É exibido SS.",
+        "C": "É exibido NS.",
+        "D": "É exibido NN.",
+        "E": "É lançado TypeError ao comparar a string com o inteiro."
+      },
+      "gabarito": "A",
+      "resolucao": "Na comparação ==, a string numérica e o inteiro são comparados numericamente, resultando em verdadeiro e exibindo S. A comparação === exige igualdade de valor e de tipo; os tipos string e int diferem, resultando em falso e exibindo N. Os dois echo produzem SN, sem separador.",
+      "justificativas": {
+        "A": "Atende: == resulta em verdadeiro para os valores fornecidos e === resulta em falso por causa dos tipos diferentes.",
+        "B": "Não atende: a segunda comparação é estrita e não converte a string em inteiro para torná-los idênticos.",
+        "C": "Não atende: inverte os resultados; a comparação com coerção é verdadeira e a comparação estrita é falsa.",
+        "D": "Não atende: a primeira comparação aceita a igualdade numérica entre a string numérica e o inteiro.",
+        "E": "Não atende: esses operandos são comparáveis pelos operadores apresentados, que retornam booleanos; essa comparação não lança TypeError."
+      },
+      "fontes": [
+        {
+          "titulo": "PHP Manual — Comparison Operators",
+          "url": "https://www.php.net/manual/en/language.operators.comparison.php",
+          "localizador": "Tabela de == e === e regra de comparação numérica entre número e string numérica; aplicável ao PHP 8.2."
+        }
+      ],
+      "dificuldadeEstimada": "fácil",
+      "verificacoes": "Análise das duas expressões conforme o manual oficial: comparação numérica com == e identidade de valor/tipo com ===. Não houve execução de interpretador PHP.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "42",
+          "pagina": 10,
+          "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Linguagem explicitamente identificada, fragmento curto e cinco alternativas de resultado técnico. Os valores, a linguagem e a lógica da questão são autorais.",
+          "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    },
+    {
+      "id": "BAN-DS-03-0006",
+      "numero": 13,
+      "materia": "Programação",
+      "topico": "Orientação a objetos e responsabilidade de classes",
+      "versao": "v01",
+      "enunciado": "Em um sistema bancário, a classe CalculadoraTarifa calcula tarifas, gera relatórios em PDF e grava resultados no banco. As regras de cálculo, o leiaute dos relatórios e a forma de armazenamento são alterados por demandas independentes. Para aplicar o princípio da responsabilidade única, a organização mais adequada é",
+      "alternativas": {
+        "A": "mover os três métodos para uma classe utilitária estática, mantendo nela cálculo, geração de PDF e gravação.",
+        "B": "criar uma subclasse para cada formato de relatório, mantendo em cada subclasse o cálculo e o acesso ao banco.",
+        "C": "definir uma interface com os três métodos e exigir que toda implementação realize cálculo, PDF e armazenamento.",
+        "D": "extrair cálculo, geração do PDF e persistência para componentes distintos, que colaborem por interfaces.",
+        "E": "tornar privados os métodos de PDF e gravação, mantendo as três tarefas na classe de cálculo."
+      },
+      "gabarito": "D",
+      "resolucao": "O princípio da responsabilidade única relaciona a responsabilidade de um componente às suas razões de mudança. Neste caso, regras de tarifa, apresentação do relatório e persistência evoluem por demandas independentes. Separar esses comportamentos permite modificar um deles sem concentrar as três responsabilidades na classe de cálculo.",
+      "justificativas": {
+        "A": "Não atende: transformar os métodos em estáticos e mudar o nome da classe não separa as três razões independentes de alteração.",
+        "B": "Não atende: cada subclasse continua acumulando cálculo, apresentação e persistência, além de poder repetir essas responsabilidades.",
+        "C": "Não atende: a interface única conserva a obrigação de reunir os três comportamentos em cada implementação; a separação pretendida não ocorre.",
+        "D": "Atende: distribui comportamentos com razões distintas de mudança entre componentes que podem colaborar sem concentrá-los na calculadora.",
+        "E": "Não atende: a mudança de visibilidade controla acesso aos métodos, mas mantém na mesma classe as três responsabilidades."
+      },
+      "fontes": [
+        {
+          "titulo": "Microsoft Learn — Architectural principles",
+          "url": "https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles",
+          "localizador": "Seção Single responsibility: uma responsabilidade/razão de mudança; separação entre apresentação, acesso a dados e lógica de negócio."
+        }
+      ],
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Análise documental do princípio da responsabilidade única e confronto das cinco propostas com as três demandas de alteração explicitadas no cenário. Não se trata de verificação por execução.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRF da 4ª Região",
+          "cargo": "Analista Judiciário — Informática",
+          "ano": 2007,
+          "caderno": "I, tipo 001",
+          "questao": "62",
+          "pagina": 10,
+          "origem": "Arquivo primário do órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "caracteristicaAplicada": "Comando técnico objetivo e alternativas da mesma categoria para distinguir conceitos de projeto orientado a objetos. O caso e as propostas de refatoração são autorais.",
+          "limite": "Referência formal histórica; não fundamenta correção técnica atual nem frequência de assuntos."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    },
+    {
+      "id": "BAN-DS-03-0007",
+      "numero": 14,
+      "materia": "Programação",
+      "topico": "Tratamento de exceções em cenário com condições explícitas",
+      "versao": "v01",
+      "enunciado": "Considere o programa Java 21 abaixo:\n\npublic class Exemplo {\n    public static void main(String[] args) {\n        int divisor = 0;\n        try {\n            int valor = 12 / divisor;\n            System.out.print(\"T\");\n        } catch (ArithmeticException ex) {\n            System.out.print(\"C\");\n        } finally {\n            System.out.print(\"F\");\n        }\n        System.out.print(\"S\");\n    }\n}\n\nExecutando main, a sequência de caracteres exibida é",
+      "alternativas": {
+        "A": "TFS",
+        "B": "CFS",
+        "C": "CF",
+        "D": "FS",
+        "E": "CS"
+      },
+      "gabarito": "B",
+      "resolucao": "A divisão inteira por zero lança ArithmeticException antes do print de T. O catch correspondente imprime C e termina normalmente. Em seguida, finally imprime F. Como a exceção foi tratada e o finally não interrompe o fluxo, a instrução posterior imprime S.",
+      "justificativas": {
+        "A": "Não atende: o print de T está depois da operação que lança a exceção e não é alcançado.",
+        "B": "Atende: o catch imprime C, o finally imprime F e a execução segue para o print de S.",
+        "C": "Não atende: a exceção foi tratada; não há return, novo throw ou outra interrupção que impeça o print posterior de S.",
+        "D": "Não atende: existe um catch compatível com ArithmeticException, que é executado e imprime C antes de finally.",
+        "E": "Não atende: o bloco finally é executado após o catch no fluxo apresentado, acrescentando F entre C e S."
+      },
+      "fontes": [
+        {
+          "titulo": "Java SE 21 API — ArithmeticException",
+          "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ArithmeticException.html",
+          "localizador": "Descrição da classe: divisão inteira por zero como condição que lança ArithmeticException."
+        },
+        {
+          "titulo": "Java Language Specification — Java SE 21, capítulo 14",
+          "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.20.2",
+          "localizador": "§14.20.2: catch compatível, execução de finally e conclusão normal do try-catch-finally."
+        }
+      ],
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Análise documental da exceção por divisão inteira por zero e rastreamento do fluxo catch/finally conforme JLS21. Não houve execução de compilador Java.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "43",
+          "pagina": 10,
+          "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.",
+          "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+        }
+      ],
+      "autor": "/root/elaborador_03"
+    }
+  ]
+}

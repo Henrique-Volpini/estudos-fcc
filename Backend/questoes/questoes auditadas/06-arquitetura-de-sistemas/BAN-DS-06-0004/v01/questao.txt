@@ -1,0 +1,13 @@
+ID: BAN-DS-06-0004
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: DDD: delimitação de contexto
+
+ENUNCIADO
+Em uma instituição, a equipe de Relacionamento modela Cliente como uma pessoa que pode receber ofertas, inclusive antes da contratação. A equipe de Cobrança modela Cliente como o responsável por obrigações vencidas e utiliza regras próprias para negociação. As equipes precisam preservar esses significados e suas regras, mas devem trocar informações sobre a mesma pessoa por um contrato de integração. Considerando DDD, o desenho adequado a esse cenário consiste em
+
+A) delimitar contextos para os dois modelos, manter uma linguagem coerente em cada contexto e explicitar no mapa de contextos os pontos de contato e as traduções necessárias.
+B) unificar os dois modelos em uma classe Cliente compartilhada, atribuir um único significado aos seus estados e resolver as diferenças por condicionais nos serviços das equipes.
+C) tomar as camadas de apresentação, domínio e persistência como os três contextos delimitados, usando o mesmo modelo Cliente em cada camada de ambas as equipes.
+D) definir um contexto delimitado para cada instância de Cliente e utilizar a identidade da pessoa como fronteira de validade das regras das duas equipes.
+E) separar os bancos de dados das equipes e manter um dicionário Cliente único, considerando que a separação física dispensa explicitar as diferenças de significado na integração.

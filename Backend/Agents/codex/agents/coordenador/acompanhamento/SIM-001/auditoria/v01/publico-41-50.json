@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-11-0002",
+    "numero": 41,
+    "versao": "v01",
+    "enunciado": "Uma equipe avalia mecanismos para proteger documentos eletrônicos. Considere implementações criptográficas adequadas, a preservação do segredo das chaves privadas e secretas e a obtenção autenticada da chave pública do signatário. Foram apresentadas as seguintes afirmações:\n\nI. Enviar o documento e seu hash SHA-256 pelo mesmo canal, no qual um atacante pode substituir ambos, basta para autenticar a origem do documento.\nII. Uma assinatura digital gerada com a chave privada do signatário e verificada com a chave pública correspondente permite verificar a origem e a integridade do documento.\nIII. Acrescentar uma assinatura digital a um documento enviado em texto claro basta para impedir que terceiros leiam seu conteúdo.\nIV. A cifragem simétrica adequada, com chave secreta disponível somente às partes autorizadas, é um mecanismo aplicável à confidencialidade do documento.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "I e IV.",
+      "D": "II, III e IV.",
+      "E": "II e IV."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0003",
+    "numero": 42,
+    "versao": "v01",
+    "enunciado": "Um órgão de pesquisa realiza um estudo em saúde pública. Na base de trabalho, nomes e CPFs foram substituídos por códigos aleatórios. A associação dos registros aos respectivos titulares somente é possível pelo uso de uma tabela adicional, mantida separadamente pelo controlador em ambiente controlado e seguro. A tabela permite ao controlador restabelecer essa associação com seus próprios meios. Considerando a Lei nº 13.709/2018, a conclusão correta é:",
+    "alternativas": {
+      "A": "Os dados foram anonimizados, pois a ausência de nome e CPF basta para afastar a possibilidade de identificar os titulares.",
+      "B": "Os dados foram pseudonimizados e continuam pessoais, pois o controlador pode associá-los aos titulares com a tabela separada.",
+      "C": "Os dados foram pseudonimizados e deixam de ser pessoais enquanto a tabela de correspondência não for utilizada.",
+      "D": "Os dados foram anonimizados e deixam de ser pessoais, pois a reversão por meios próprios do controlador não é considerada pela LGPD.",
+      "E": "Os dados não podem ser pseudonimizados nesse estudo, pois a LGPD exige anonimização integral em qualquer pesquisa em saúde pública."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0004",
+    "numero": 43,
+    "versao": "v01",
+    "enunciado": "Uma API de relatórios constrói uma consulta SQL concatenando duas entradas recebidas do cliente: um texto livre para filtrar o nome de um cliente e a escolha da coluna de ordenação. A funcionalidade admite ordenar somente pelas colunas nome ou saldo. Para corrigir essa construção conforme a prevenção de injeção da categoria A03 do OWASP Top 10:2021, a equipe deve",
+    "alternativas": {
+      "A": "usar parâmetros vinculados tanto para o texto de busca quanto para o nome da coluna de ordenação, preservando a escolha livre de identificadores pelo cliente.",
+      "B": "validar o formulário no navegador para rejeitar aspas nas duas entradas e manter a concatenação dessas entradas na consulta executada pelo servidor.",
+      "C": "transferir a concatenação das duas entradas para uma procedure no banco e considerar a chamada dessa procedure suficiente para impedir a injeção.",
+      "D": "vincular o texto de busca como valor de parâmetro e mapear a escolha de ordenação, no servidor, para os identificadores fixos nome ou saldo.",
+      "E": "migrar a consulta para a linguagem de um ORM, concatenando as duas entradas recebidas e confiando no framework para separar automaticamente dados e comandos."
+    }
+  },
+  {
+    "id": "BAN-DS-12-0001",
+    "numero": 44,
+    "versao": "v01",
+    "enunciado": "Uma instituição avalia três contratações de serviços em nuvem, com as seguintes características.\n\nI. A equipe provisiona máquinas virtuais e fica responsável pela instalação e atualização do sistema operacional convidado e pela implantação de suas aplicações; o provedor opera a infraestrutura física.\n\nII. A equipe implanta aplicação própria em ambiente de execução mantido pelo provedor, utilizando linguagens e bibliotecas por ele suportadas; controla a aplicação, mas não administra o sistema operacional subjacente.\n\nIII. As equipes usuárias acessam uma aplicação de gestão documental oferecida e mantida pelo provedor, limitando-se às configurações permitidas de uso, sem implantar código próprio.\n\nConsiderando os modelos de serviço definidos no NIST SP 800-145, as contratações I, II e III correspondem, correta e respectivamente, a:",
+    "alternativas": {
+      "A": "PaaS, IaaS e SaaS.",
+      "B": "SaaS, PaaS e IaaS.",
+      "C": "IaaS, SaaS e PaaS.",
+      "D": "IaaS, PaaS e SaaS.",
+      "E": "PaaS, SaaS e IaaS."
+    }
+  },
+  {
+    "id": "BAN-DS-12-0002",
+    "numero": 45,
+    "versao": "v01",
+    "enunciado": "Uma aplicação sem estado é executada em duas zonas de disponibilidade com falhas independentes. Cada instância suporta até 200 requisições por segundo, mantendo o tempo de resposta exigido, e a carga de pico é de 900 requisições por segundo. O balanceador redireciona o tráfego às instâncias disponíveis. Para o dimensionamento, considere que o balanceador, a rede e o banco de dados continuam operacionais e não limitam a vazão, e desconsidere o tempo de redirecionamento.\n\nA aplicação deve sustentar integralmente o pico após a perda de qualquer uma das zonas, usando instâncias já ativas. Há um mecanismo automático que adiciona ou remove instâncias conforme a demanda; a ativação de novas instâncias leva dois minutos.\n\nDurante o pico, a quantidade mínima de instâncias que deve estar previamente ativa em cada zona e o mecanismo de ajuste de recursos descrito correspondem, respectivamente, a:",
+    "alternativas": {
+      "A": "3 instâncias e elasticidade horizontal.",
+      "B": "5 instâncias e elasticidade horizontal.",
+      "C": "5 instâncias e escalabilidade vertical.",
+      "D": "3 instâncias e escalabilidade vertical.",
+      "E": "6 instâncias e elasticidade horizontal."
+    }
+  },
+  {
+    "id": "BAN-DS-13-0001",
+    "numero": 46,
+    "versao": "v01",
+    "enunciado": "Em um repositório com Git 2.43.0, a branch atual é main. Os commits de ponta M, de main, e F, de feature, têm ancestral comum, mas nenhum é ancestral do outro. Com o índice e a árvore de trabalho sem alterações locais, um Analista executa git merge feature. A operação é interrompida por conflito apenas em config.yml. O Analista edita e salva esse arquivo com a resolução desejada e remove os marcadores de conflito, sem executar outros comandos. Considere o comportamento padrão dos comandos, sem aliases ou hooks.\n\nPara concluir essa integração preservando os commits existentes e criando um commit de merge com pais M e F, o Analista deve executar, na sequência indicada,",
+    "alternativas": {
+      "A": "git commit -m \"Integra feature\", pois a edição e o salvamento do arquivo já registram a resolução no índice.",
+      "B": "git add config.yml e git commit --amend --no-edit, pois a resolução deve substituir o conteúdo do commit M.",
+      "C": "git add config.yml e git merge --abort, pois o encerramento com --abort grava a resolução em um novo commit.",
+      "D": "git add config.yml e git commit -m \"Integra feature\", pois a resolução deve ser registrada no índice antes do commit.",
+      "E": "git add config.yml e git merge --quit, pois --quit preserva os arquivos e cria o commit de integração."
+    }
+  },
+  {
+    "id": "BAN-DS-14-0001",
+    "numero": 47,
+    "versao": "v01",
+    "enunciado": "Após aprovar uma alteração no requisito R02 de um sistema bancário, uma equipe consulta os seguintes vínculos mantidos em seu repositório:\n\nRequisito | Casos de teste | Seções da documentação técnica\nR01       | CT01, CT03     | D01\nR02       | CT02, CT03     | D01, D02\nR03       | CT04           | D03\n\nO caso CT03 verifica uma interação entre funcionalidades atendidas por R01 e R02. Sobre o uso desses vínculos, considere:\n\nI. A associação de CT03 com R01 e R02 compromete a rastreabilidade, pois cada caso de teste deve verificar um único requisito.\nII. A análise de impacto da alteração em R02 deve considerar CT02, CT03 e as seções D01 e D02 como candidatos à revisão.\nIII. A existência dos vínculos de R02 com CT02 e CT03 é suficiente para comprovar que a implementação atende ao requisito alterado.\nIV. Uma consulta iniciada em CT03 permite identificar R01 e R02 e, por meio deles, localizar as seções de documentação D01 e D02.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I e II.",
+      "B": "I e III.",
+      "C": "II e IV.",
+      "D": "I e IV.",
+      "E": "III e IV."
+    }
+  },
+  {
+    "id": "BAN-DS-15-0001",
+    "numero": 48,
+    "versao": "v01",
+    "enunciado": "Na revisão da governança de um cadastro corporativo, um Analista deve configurar o controle de acesso baseado em papéis (RBAC). Há dois papéis independentes: Cadastrador, com permissão para registrar dados, e Homologador, com permissão para homologá-los. A política admite que um mesmo usuário seja autorizado para os dois papéis, mas proíbe que as duas funções estejam ativas simultaneamente em uma mesma sessão. As permissões devem continuar sendo obtidas por meio dos papéis.\n\nA configuração que atende a essa política é",
+    "alternativas": {
+      "A": "estabelecer separação estática de funções entre os dois papéis, rejeitando a atribuição de Homologador a qualquer usuário que já possua o papel Cadastrador.",
+      "B": "ativar todos os papéis atribuídos ao usuário no início da sessão, mantendo registros separados para as operações de cadastro e de homologação.",
+      "C": "definir Homologador como papel superior que herda as permissões de Cadastrador, atribuindo somente Homologador aos usuários habilitados para executar as duas funções.",
+      "D": "estabelecer separação dinâmica de funções entre os dois papéis, impedindo que uma sessão do usuário contenha ambos os papéis ativos ao mesmo tempo.",
+      "E": "exigir autenticação multifator ao ativar cada papel, permitindo que os dois permaneçam ativos quando ambas as verificações tiverem sido concluídas com sucesso."
+    }
+  },
+  {
+    "id": "BAN-DS-16-0001",
+    "numero": 49,
+    "versao": "v01",
+    "enunciado": "Considere o texto abaixo.\n\nThe service desk replaced a lengthy installation guide with a checklist. During the first week, new employees completed the routine steps more quickly, yet the number of requests for help remained unchanged. Most requests concerned messages that the checklist did not explain. Rather than bring back the full guide, the team kept the checklist and added a separate section on those messages. It will review next month's support requests to find out whether the addition makes employees less dependent on assistance.\n\n(Texto autoral.)\n\nSegundo o texto, a equipe decidiu acrescentar uma seção à lista de verificação porque",
+    "alternativas": {
+      "A": "a redução dos pedidos de auxílio precisava ser documentada antes de a lista ser mantida.",
+      "B": "a maior rapidez nas etapas usuais não havia eliminado as dúvidas que motivavam pedidos de auxílio.",
+      "C": "a lista havia aumentado o tempo das etapas usuais, apesar de ter diminuído os pedidos de auxílio.",
+      "D": "os funcionários solicitavam ajuda para preencher os relatórios previstos para o mês seguinte.",
+      "E": "as mensagens apresentadas durante a instalação determinavam a retomada obrigatória do guia extenso."
+    }
+  },
+  {
+    "id": "BAN-DS-16-0002",
+    "numero": 50,
+    "versao": "v01",
+    "enunciado": "Considere o texto abaixo.\n\nA status page shows the latest information about a service interruption. Readers who want automatic updates should subscribe to email notifications. Otherwise, they will need to revisit the page to check for changes. The emails repeat the information on the page; they do not provide an earlier estimate of when the service will return. Readers can cancel the subscription at any time.\n\n(Texto autoral.)\n\nNo contexto, “Otherwise” introduz a ideia de que os leitores precisarão acessar a página novamente",
+    "alternativas": {
+      "A": "mesmo que se inscrevam para receber as notificações por email.",
+      "B": "porque já se inscreveram para receber as notificações por email.",
+      "C": "assim que se inscreverem para receber as notificações por email.",
+      "D": "caso não se inscrevam para receber as notificações por email.",
+      "E": "para que se inscrevam para receber as notificações por email."
+    }
+  }
+]

@@ -1,0 +1,157 @@
+{
+  "elaborador": "16",
+  "responsavel": "/root/elaborador_16",
+  "questoes": [
+    {
+      "id": "BAN-DS-16-0001",
+      "numero": 49,
+      "materia": "Inglês técnico",
+      "topico": "Compreensão de texto técnico autoral em inglês",
+      "versao": "v01",
+      "enunciado": "Considere o texto abaixo.\n\nThe service desk replaced a lengthy installation guide with a checklist. During the first week, new employees completed the routine steps more quickly, yet the number of requests for help remained unchanged. Most requests concerned messages that the checklist did not explain. Rather than bring back the full guide, the team kept the checklist and added a separate section on those messages. It will review next month's support requests to find out whether the addition makes employees less dependent on assistance.\n\n(Texto autoral.)\n\nSegundo o texto, a equipe decidiu acrescentar uma seção à lista de verificação porque",
+      "alternativas": {
+        "A": "a redução dos pedidos de auxílio precisava ser documentada antes de a lista ser mantida.",
+        "B": "a maior rapidez nas etapas usuais não havia eliminado as dúvidas que motivavam pedidos de auxílio.",
+        "C": "a lista havia aumentado o tempo das etapas usuais, apesar de ter diminuído os pedidos de auxílio.",
+        "D": "os funcionários solicitavam ajuda para preencher os relatórios previstos para o mês seguinte.",
+        "E": "as mensagens apresentadas durante a instalação determinavam a retomada obrigatória do guia extenso."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. O número de pedidos de ajuda permaneceu inalterado na primeira semana; não houve uma redução a documentar como condição para manter a lista. A lista foi mantida, e a avaliação do acréscimo será feita no mês seguinte.",
+        "B": "Atende. O texto contrapõe etapas usuais concluídas mais rapidamente a pedidos de ajuda em quantidade inalterada. Como a maioria dos pedidos envolvia mensagens que a lista não explicava, a seção foi acrescentada para tratar dessas dúvidas persistentes.",
+        "C": "Não atende. Inverte os dois resultados relatados: as etapas usuais ficaram mais rápidas, enquanto a quantidade de pedidos de ajuda permaneceu inalterada. Não se afirma aumento de tempo nem diminuição dos pedidos.",
+        "D": "Não atende. Os pedidos tratavam de mensagens não explicadas pela lista. A referência ao mês seguinte diz respeito à análise futura dos pedidos de suporte pela equipe, sem mencionar relatórios a serem preenchidos pelos funcionários.",
+        "E": "Não atende. O trecho iniciado por “Rather than bring back the full guide” apresenta a retomada do guia como alternativa preterida. A equipe conservou a lista e acrescentou uma seção, sem tornar obrigatório o retorno ao guia extenso."
+      },
+      "resolucao": "O texto distingue dois resultados da troca do guia pela lista: os funcionários concluíram as etapas usuais mais rapidamente, mas a quantidade de pedidos de ajuda não mudou. A frase seguinte explica que a maioria dos pedidos dizia respeito a mensagens sem explicação na lista. A equipe preservou a lista e acrescentou uma seção sobre essas mensagens para enfrentar as dúvidas que ainda geravam dependência de assistência. “Yet” articula o contraste, e “rather than” apresenta a retomada do guia como a alternativa que não foi escolhida. A análise dos pedidos do mês seguinte é um plano de avaliação da seção, não um resultado já medido. A resposta decorre exclusivamente dessas informações; não exige conhecer procedimentos reais de instalação.",
+      "fontes": [
+        {
+          "titulo": "Texto técnico autoral — revisão de guia de instalação",
+          "localizador": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0001/v01/questao.txt; texto integral, especialmente as frases 2 a 5. Autoria: /root/elaborador_16, 26/11/2026. Cenário criado para avaliar leitura; não relata uma medição ou um produto real."
+        },
+        {
+          "titulo": "Yet — English Grammar Today, Cambridge University Press & Assessment",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/yet",
+          "localizador": "Seção Yet as a conjunction: uso de yet para marcar contraste. Conteúdo da fonte primária consultado pelo resultado indexado do domínio oficial em 26/11/2026; sustenta a leitura da segunda frase."
+        },
+        {
+          "titulo": "Rather — English Grammar Today, Cambridge University Press & Assessment",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/rather%2C",
+          "localizador": "Seção Rather than: alternatives and preferences; apresentação de alternativas e uso com verbo na forma básica. Conteúdo da fonte primária consultado pelo resultado indexado do domínio oficial em 26/11/2026; sustenta a leitura da quarta frase e a análise do distrator E."
+        },
+        {
+          "titulo": "If or whether? — English Grammar Today, Cambridge University Press & Assessment",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/if-or-whether",
+          "localizador": "Seção If and whether: indirect questions. Conteúdo oficial consultado no resultado indexado de pesquisa em 26/11/2026; tentativa de abertura direta retornou bloqueio HTTP 403. Sustenta a leitura de find out whether como averiguação, sem afirmar antecipadamente um resultado."
+        },
+        {
+          "titulo": "Arquivo-base do conteúdo programático do projeto",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; linha 211, bloco INGLÊS TÉCNICO.; delimita a competência de leitura em contexto técnico. Consultado em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT da 7ª Região, Analista Judiciário — Tecnologia da Informação, 2009, acervo Qconcursos",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16",
+          "localizador": "Itens do acervo Q128173, Q128174 e Q128175; comandos e cinco alternativas lidos na página, respectivamente linhas 495–525, 544–575 e 594–623 da extração da navegação. Numeração original do caderno e paginação não obtidas. Consulta em 26/11/2026."
+        },
+        {
+          "titulo": "Nota local de referência FCC — Inglês em TI",
+          "localizador": "Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt; metadados da prova TRT7/2009 e limites de identificação dos itens Q128171–Q128175. Consultada em 26/11/2026."
+        }
+      ],
+      "autor": "/root/elaborador_16",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental linguística: conferidos os sentidos de yet e rather than e o uso de whether em fonte primária Cambridge, por conteúdo indexado do próprio domínio. A abertura direta da página If or whether? foi bloqueada, mas o trecho oficial indexado estava disponível.",
+        "Analítica: relacionadas as cinco frases do texto; distinguidos ganho de rapidez, manutenção da quantidade de pedidos, motivo da seção adicional e avaliação futura. As cinco alternativas foram examinadas individualmente, com uma única leitura compatível.",
+        "Editorial: abertos e lidos os comandos e as alternativas dos itens Q128171–Q128175 no Qconcursos. As referências de compreensão selecionadas são Q128173–Q128175. Não houve reprodução do texto ou das alternativas da prova.",
+        "Autoria e suficiência: texto e alternativas inteiramente autorais; todos os fatos necessários estão no próprio texto. Não houve execução de procedimento de TI nem medição empírica; os resultados mencionados pertencem ao cenário de leitura."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 7ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2009,
+          "caderno": "Não obtido no acervo consultado",
+          "questao": "Q128173, Q128174 e Q128175 — identificadores do acervo; números originais não obtidos",
+          "pagina": "Não obtida; consulta em página HTML, sem paginação do caderno",
+          "origem": "Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16",
+          "caracteristicaObservada": "Comandos de compreensão ou inferência em português remetem ao texto em inglês; as cinco opções formulam leituras concorrentes sobre as informações do trecho.",
+          "caracteristicaAplicada": "Texto curto autoral em inglês seguido de comando em português sobre a razão de uma decisão; cinco alternativas confrontam relações de causa, resultados e sequência temporal.",
+          "limites": "Origem secundária Qconcursos, sem certificação de integridade oficial. Caderno, numeração original e página não foram obtidos. Foram lidos os comandos e as alternativas dos cinco itens; a imagem com o texto associado não foi recuperada pela ferramenta de navegação. A referência sustenta esses traços editoriais, sem demonstrar frequência atual ou equivalência ao Banestes."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-16-0002",
+      "numero": 50,
+      "materia": "Inglês técnico",
+      "topico": "Coesão e significado em texto técnico autoral em inglês",
+      "versao": "v01",
+      "enunciado": "Considere o texto abaixo.\n\nA status page shows the latest information about a service interruption. Readers who want automatic updates should subscribe to email notifications. Otherwise, they will need to revisit the page to check for changes. The emails repeat the information on the page; they do not provide an earlier estimate of when the service will return. Readers can cancel the subscription at any time.\n\n(Texto autoral.)\n\nNo contexto, “Otherwise” introduz a ideia de que os leitores precisarão acessar a página novamente",
+      "alternativas": {
+        "A": "mesmo que se inscrevam para receber as notificações por email.",
+        "B": "porque já se inscreveram para receber as notificações por email.",
+        "C": "assim que se inscreverem para receber as notificações por email.",
+        "D": "caso não se inscrevam para receber as notificações por email.",
+        "E": "para que se inscrevam para receber as notificações por email."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. “Mesmo que” produziria uma concessão: a visita continuaria necessária apesar da inscrição. No texto, “Otherwise” apresenta a situação alternativa à inscrição recomendada, não uma necessidade que persiste apesar dela.",
+        "B": "Não atende. “Porque já” tornaria a inscrição realizada a causa da necessidade de voltar à página. O texto vincula essa necessidade à hipótese de não realizar a inscrição, além de não afirmar que todos os leitores já se inscreveram.",
+        "C": "Não atende. “Assim que” estabeleceria uma sequência temporal em que a inscrição desencadearia o retorno à página. O vínculo expresso por “Otherwise” é condicional e retoma a possibilidade de não seguir a recomendação.",
+        "D": "Atende. A recomendação anterior é inscrever-se para receber atualizações automáticas. “Otherwise” introduz a consequência de não fazer isso: será necessário revisitar a página para procurar mudanças. A paráfrase condicional negativa preserva a relação entre as frases.",
+        "E": "Não atende. “Para que” apresentaria a inscrição como finalidade da visita à página. A terceira frase informa que a visita serve para verificar mudanças quando não há inscrição para as notificações, sem atribuir a ela a finalidade de realizar a inscrição."
+      },
+      "resolucao": "A segunda frase recomenda a inscrição para receber notificações automáticas por email. A terceira retoma essa ação com “Otherwise” e informa o que será necessário se a recomendação não for seguida: voltar à página para verificar mudanças. Portanto, a relação equivale a “se os leitores não se inscreverem”. As demais formulações mudam o vínculo para concessão, causa, tempo ou finalidade. Não é preciso saber como um serviço de notificações funciona: a recomendação e sua alternativa estão expressas no texto.",
+      "fontes": [
+        {
+          "titulo": "Texto técnico autoral — aviso sobre atualizações de serviço",
+          "localizador": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/questao.txt; texto integral, especialmente a relação entre a segunda e a terceira frases. Autoria: /root/elaborador_16, 26/11/2026. Nota criada para avaliar leitura; não documenta o funcionamento de um serviço real."
+        },
+        {
+          "titulo": "Otherwise — Cambridge Dictionary, Cambridge University Press & Assessment",
+          "url": "https://dictionary.cambridge.org/dictionary/english/otherwise",
+          "localizador": "Verbete otherwise, acepção de ligação condicional após recomendação; seção American Dictionary, acepção if not; or else. Conteúdo da fonte primária consultado pelo resultado indexado do domínio oficial em 26/11/2026; abertura direta retornou HTTP 403. Sustenta o sentido condicional negativo no contexto e a distinção das demais relações propostas."
+        },
+        {
+          "titulo": "Arquivo-base do conteúdo programático do projeto",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; linha 211, bloco INGLÊS TÉCNICO.; delimita a competência de leitura em contexto técnico. Consultado em 26/11/2026."
+        },
+        {
+          "titulo": "FCC — TRT da 7ª Região, Analista Judiciário — Tecnologia da Informação, 2009, acervo Qconcursos",
+          "url": "https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16",
+          "localizador": "Itens do acervo Q128171 e Q128172; comandos e cinco alternativas lidos na página, respectivamente linhas 395–426 e 445–476 da extração da navegação. Numeração original do caderno e paginação não obtidas. Consulta em 26/11/2026."
+        },
+        {
+          "titulo": "Nota local de referência FCC — Inglês em TI",
+          "localizador": "Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt; metadados da prova TRT7/2009 e limites de identificação dos itens Q128171–Q128175. Consultada em 26/11/2026."
+        }
+      ],
+      "autor": "/root/elaborador_16",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental linguística: conferida em fonte primária Cambridge a acepção condicional de otherwise após recomendação. A consulta utilizou o conteúdo indexado do domínio oficial; a tentativa de abertura direta retornou HTTP 403.",
+        "Analítica: identificado o antecedente subscribe to email notifications e explicitada sua negação como condição da terceira frase. Concessão, causa, sequência temporal e finalidade foram confrontadas com o texto nas alternativas individuais.",
+        "Editorial: abertos e lidos os comandos e as alternativas dos itens Q128171–Q128175 no Qconcursos. Os exemplos selecionados de significado contextual são Q128171 e Q128172; não se reproduziram seus textos ou alternativas.",
+        "Autoria e suficiência: texto e alternativas inteiramente autorais; a questão avalia a articulação entre frases e não depende de conhecimento de infraestrutura ou de funcionamento real de notificações. Não houve execução técnica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 7ª Região",
+          "cargo": "Analista Judiciário — Tecnologia da Informação",
+          "ano": 2009,
+          "caderno": "Não obtido no acervo consultado",
+          "questao": "Q128171 e Q128172 — identificadores do acervo; números originais não obtidos",
+          "pagina": "Não obtida; consulta em página HTML, sem paginação do caderno",
+          "origem": "Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16",
+          "caracteristicaObservada": "Comandos em português pedem o significado contextual de uma palavra ou expressão do texto inglês, com cinco formulações de sentido concorrentes.",
+          "caracteristicaAplicada": "Um conectivo do texto autoral é interpretado com referência à recomendação anterior; as cinco opções em português preservam o mesmo conteúdo lexical e alteram a relação entre as frases.",
+          "limites": "Origem secundária Qconcursos, sem certificação de integridade oficial. Caderno, numeração original e página não foram obtidos. Foram lidos os comandos e as alternativas dos cinco itens; a imagem com o texto associado não foi recuperada pela ferramenta de navegação. A referência sustenta esses traços editoriais, sem demonstrar frequência atual ou equivalência ao Banestes."
+        }
+      ]
+    }
+  ]
+}
+

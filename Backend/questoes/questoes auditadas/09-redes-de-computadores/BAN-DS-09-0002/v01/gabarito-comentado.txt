@@ -1,0 +1,54 @@
+ID: BAN-DS-09-0002
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Determinar, na ordem pedida, máscara, endereço de rede e endereço de broadcast.
+
+RESOLUÇÃO
+Com h bits de host, a condição é 2^h − 2 ≥ 25. Quatro bits oferecem 14 endereços atribuíveis; cinco oferecem 30. O prefixo escolhido é /27, de máscara 255.255.255.224. Seus blocos avançam de 32 em 32 no último octeto. O valor 77 pertence ao intervalo 64–95, de modo que a rede é 10.48.12.64 e o broadcast é 10.48.12.95. As interfaces usam 10.48.12.65 a 10.48.12.94.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende ao comando. A máscara /27 oferece 30 endereços atribuíveis e coloca 10.48.12.77 na rede 10.48.12.64, cujo broadcast é 10.48.12.95.
+B) Não atende ao comando. Os limites apresentados são coerentes com /28 e contêm a estação, mas essa máscara oferece apenas 14 endereços atribuíveis, abaixo dos 25 exigidos.
+C) Não atende ao comando. O /26 contém a estação e oferece 62 endereços atribuíveis, mas não é o prefixo mais longo que atende à demanda: /27 já oferece 30.
+D) Não atende ao comando. A rede e a máscara estão adequadas, mas 10.48.12.94 é o último endereço atribuível. O broadcast ocorre quando os cinco bits de host são 1, resultando em 10.48.12.95.
+E) Não atende ao comando. A combinação descreve outra sub-rede /27, com intervalo de 10.48.12.32 a 10.48.12.63, que não contém o endereço 10.48.12.77.
+
+FONTES TÉCNICAS CONSULTADAS
+- Programa-base — conhecimentos específicos de Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: REDES DE COMPUTADORES — item 'IPv4 e IPv6'.
+  Fundamentação: Delimitação do conteúdo atribuído ao elaborador 09.
+  Consulta: 2026-11-26.
+- RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan
+  URL: https://www.rfc-editor.org/rfc/rfc4632.html
+  Localizador: Seção 3.1, 'Basic Concept and Prefix Notation', páginas 5–6.
+  Fundamentação: Significado do comprimento do prefixo e separação entre bits de rede e de host.
+  Consulta: 2026-11-26.
+- RFC 1878 — Variable Length Subnet Table For IPv4
+  URL: https://www.rfc-editor.org/rfc/rfc1878.html
+  Localizador: Tabela de máscaras, página 2, linhas /26, /27 e /28; tabela 1-2, página 5, blocos N.N.N.64 com máscaras 255.255.255.192, 255.255.255.224 e 255.255.255.240.
+  Fundamentação: Equivalência entre máscaras e prefixos, capacidade dos blocos e limites de rede, interfaces e broadcast. RFC de categoria Informational, usado como tabela de conferência.
+  Consulta: 2026-11-26.
+- RFC 1122 — Requirements for Internet Hosts — Communication Layers
+  URL: https://www.rfc-editor.org/rfc/rfc1122.html
+  Localizador: Seção 3.2.1.3, 'Addressing', páginas 29–31, em especial item (e), subnet-directed broadcast e restrições dos campos de host.
+  Fundamentação: Interpretação do endereço com todos os bits de host em 1 como broadcast da sub-rede e distinção dos endereços de interfaces no cenário.
+  Consulta: 2026-11-26.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 52; página 12.
+  Origem verificável: Cópia secundária hospedada no Qconcursos; extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica observada: Dados técnicos explícitos seguidos de comando que exige uma sequência ordenada de três resultados.
+  Aplicação nesta questão autoral: O plano de endereçamento é apresentado integralmente e cada opção contém máscara, endereço de rede e broadcast nessa mesma ordem.
+  Limites da referência: Referência editorial consultada na extração local de uma cópia secundária do Qconcursos. Não foi obtida no domínio da FCC e o hash registrado não constitui assinatura ou certificação oficial. O exemplo isolado não demonstra frequência de formatos nem valida a correção técnica desta questão.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: navegação efetiva nas RFCs 4632, 1878 e 1122 em 26/11/2026; conferência dos localizadores citados, inclusive capacidade de /26, /27 e /28.
+- Analítica: resolução da desigualdade 2^h − 2 ≥ 25, escolha do /27 e determinação do intervalo 64–95; exame individual dos cinco conjuntos de dados.
+- Executada em memória: Python 3.14.10, biblioteca padrão ipaddress, entrada ip_interface('10.48.12.77/27').network; resultado observado 10.48.12.64/27, máscara 255.255.255.224, broadcast 10.48.12.95 e 30 endereços em hosts(). Nenhum arquivo de teste foi criado.
+- Editorial: leitura da questão 52, página 12, do caderno FCC TRT4/2022, na extração local; os dados e o problema de endereçamento são autorais.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguarda auditoria independente.

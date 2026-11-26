@@ -1,0 +1,31 @@
+ID: BAN-DS-03-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+A fatia cria outra lista externa, mas mantém referências às listas internas. Portanto, append(3) modifica a primeira lista interna, compartilhada. Já append([4]) acrescenta um elemento apenas à lista externa copia. origem conserva dois elementos e sua primeira lista passa a conter 1 e 3.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: a inclusão de [4] ocorreu somente em copia; além disso, a alteração da lista interna compartilhada não poderia ser ignorada.
+B) Não atende: representa o conteúdo de copia, não o da lista origem solicitada pelo print.
+C) Atende: origem mantém duas listas internas e a primeira, compartilhada com copia, passa a conter 1 e 3.
+D) Não atende: pressupõe uma cópia profunda. A fatia duplica a lista externa, sem duplicar recursivamente as listas internas.
+E) Não atende: append([4]) cria um terceiro elemento em copia; não acrescenta 4 à segunda lista interna.
+
+FONTES TÉCNICAS CONSULTADAS
+- Python 3.12 — copy: Shallow and deep copy operations | https://docs.python.org/3.12/library/copy.html | Definição de cópia rasa e exemplo original_list[:] como cópia rasa de lista.
+- Python 3.12 Tutorial — Lists | https://docs.python.org/3.12/tutorial/introduction.html#lists | Seção 3.1.3: listas, fatiamento, mutabilidade e append.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 43; página PDF 10.
+- Origem verificável: Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação: Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.
+- Limites: Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes.
+
+VERIFICAÇÕES REALIZADAS
+Consulta documental às páginas oficiais de Python 3.12. Execução do trecho em memória no Python 3.14 instalado: saída [[1, 3], [2]], coerente com a semântica documentada para 3.12. Nenhum arquivo de teste criado.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

@@ -1,0 +1,22 @@
+{
+  "fontes": [
+    {
+      "id": "trf4-2007-informatica-i001",
+      "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+      "origem": "primaria_orgao",
+      "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf",
+      "paginas": 10,
+      "sha256": "ebadc46eee37ce1042f5bd2757e2086fca0304a7e7b5afe0f1b51681e7c497cc",
+      "consultado_em": "2026-11-26"
+    },
+    {
+      "id": "trt4-2022-ti-a14-001",
+      "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+      "origem": "copia_secundaria",
+      "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf",
+      "paginas": 16,
+      "sha256": "1974702329e353e785bb139383712f3a19051a709869019072e4cccd64f730d8",
+      "consultado_em": "2026-11-26"
+    }
+  ]
+}

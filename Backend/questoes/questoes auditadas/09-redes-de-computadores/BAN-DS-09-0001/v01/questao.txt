@@ -1,0 +1,15 @@
+ID: BAN-DS-09-0001
+Versão: v01
+Matéria: Redes de computadores
+Tópico: VLAN e IEEE 802.1Q
+
+ENUNCIADO
+Dois switches de camada 2, S1 e S2, estão interligados por um único enlace trunk IEEE 802.1Q. As VLANs 10, 20 e 99 estão criadas, ativas e permitidas no trunk. A VLAN nativa é a 99 nas duas extremidades e seus quadros são transmitidos sem tag. A estação H1 está ligada a uma porta de acesso da VLAN 10 em S1; em S2, H2 está em uma porta de acesso da VLAN 10 e H3, em uma porta de acesso da VLAN 20. Todas as portas estão encaminhando tráfego, sem filtros ou mecanismos de supressão, e não há roteamento entre VLANs.
+
+H1 envia um quadro Ethernet de dados com endereço de destino broadcast. Considerando a passagem desse quadro pelo trunk e sua entrega às estações de S2, ocorre transmissão
+
+A) com tag de VID 99 no trunk e entrega apenas a H2.
+B) com tag de VID 10 no trunk e entrega a H2 e H3.
+C) com tag de VID 20 no trunk e entrega apenas a H3.
+D) com tag de VID 10 no trunk e entrega apenas a H2.
+E) sem tag no trunk e entrega apenas a H2.

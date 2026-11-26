@@ -1,0 +1,180 @@
+{
+  "elaborador": "08",
+  "responsavel": "/root/elaborador_08",
+  "questoes": [
+    {
+      "id": "BAN-DS-08-0001",
+      "numero": 33,
+      "materia": "Sistemas Operacionais",
+      "topico": "Memória virtual e falta de página: substituição LRU",
+      "versao": "v01",
+      "enunciado": "Um processo dispõe de três quadros de memória física, inicialmente vazios, para suas páginas. Adota-se paginação por demanda: cada referência a uma página ausente provoca uma falta, cujo tratamento carrega somente a página solicitada. Quando os três quadros estão ocupados, substitui-se a página cujo último acesso ocorreu há mais tempo, conforme a política LRU.\n\nTodas as referências são leituras válidas; não há antecipação de carregamento nem remoções por outras causas. Considere, na ordem indicada, a sequência de números de páginas:\n\n2, 3, 2, 1, 4, 2, 3, 4, 1, 2, 5, 2.\n\nIncluindo as faltas que utilizam os quadros inicialmente vazios, o número total de faltas de página é",
+      "alternativas": {
+        "A": "4.",
+        "B": "5.",
+        "C": "7.",
+        "D": "8.",
+        "E": "9."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende: quatro é o número de referências atendidas por páginas já residentes, nos acessos 3, 6, 8 e 12. O comando pede faltas, não acertos.",
+        "B": "Não atende: há cinco páginas distintas, mas uma página pode provocar nova falta após ser removida. Além dos cinco primeiros carregamentos de páginas distintas, ocorrem três recarregamentos, totalizando oito faltas. Cinco também é o número de substituições, que não inclui as três faltas iniciais.",
+        "C": "Não atende: sete subconta as faltas. Em particular, o acesso 10 à página 2 também provoca falta, porque o acesso 9 à página 1 havia removido a página 2, então a menos recente.",
+        "D": "Atende: provocam falta os acessos 1, 2, 4, 5, 7, 9, 10 e 11. São três carregamentos em quadros vazios e cinco substituições, totalizando oito.",
+        "E": "Não atende: nove é o total obtido ao usar FIFO nesta sequência, sem atualizar a ordem nos acertos. Pela regra LRU, o acesso 3 renova a página 2 e o acesso 5 remove a página 3; o acesso 6 à página 2, portanto, é um acerto. A política declarada produz oito faltas."
+      },
+      "resolucao": "A presença em memória é verificada em cada referência, e a ordem de recência é atualizada também nos acertos. Abaixo, os residentes são apresentados do menos recentemente usado para o mais recentemente usado; essa ordem não indica a posição física dos quadros.\n\nAcesso | Página | Resultado | Página removida | Residentes após o acesso\n1      | 2      | falta     | nenhuma         | 2\n2      | 3      | falta     | nenhuma         | 2, 3\n3      | 2      | acerto    | nenhuma         | 3, 2\n4      | 1      | falta     | nenhuma         | 3, 2, 1\n5      | 4      | falta     | 3               | 2, 1, 4\n6      | 2      | acerto    | nenhuma         | 1, 4, 2\n7      | 3      | falta     | 1               | 4, 2, 3\n8      | 4      | acerto    | nenhuma         | 2, 3, 4\n9      | 1      | falta     | 2               | 3, 4, 1\n10     | 2      | falta     | 3               | 4, 1, 2\n11     | 5      | falta     | 4               | 1, 2, 5\n12     | 2      | acerto    | nenhuma         | 1, 5, 2\n\nAs faltas estão nos acessos 1, 2, 4, 5, 7, 9, 10 e 11: oito ao todo. A condição inicial vazia exige contar também os três primeiros preenchimentos. A conclusão é uma aplicação analítica da política às premissas do enunciado, confirmada por execução de um cálculo somente em memória.",
+      "fontes": [
+        {
+          "titulo": "Operating Systems: Three Easy Pieces — Beyond Physical Memory: Policies",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf",
+          "localizador": "Capítulo 22, versão 1.10: abertura e seção 22.1, pp. 1–2; seção 22.5 e Figura 22.5, pp. 7–8 do PDF.",
+          "sustenta": "Material autoral dos professores Arpaci-Dusseau hospedado pela Universidade de Wisconsin–Madison: faltas com memória inicialmente vazia e regra LRU baseada na referência mais recente. A sequência da questão é autoral e foi calculada separadamente."
+        },
+        {
+          "titulo": "The Linux Kernel documentation — Page Tables",
+          "url": "https://docs.kernel.org/mm/page_tables.html",
+          "localizador": "Seção Page Faults, parágrafos sobre ausência em memória física, tratamento da falta e atualização do mapeamento.",
+          "sustenta": "Falta de página por ausência da página em memória física. Utilizada no nível conceitual; o enunciado define seu próprio modelo e não atribui LRU exato a uma versão do Linux."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 52, p. 12; metadados de origem secundária em fontes.json.",
+          "sustenta": "Referência de formato: dados operacionais explícitos, comando objetivo e cinco opções compactas."
+        },
+        {
+          "titulo": "Conteúdo programático local — Sistemas Operacionais",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 116–121: sincronização; deadlocks e starvation; gerenciamento de memória: segmentação, memória virtual e paginação.",
+          "sustenta": "Delimitação dos tópicos no programa; a observação final sobre legislação foi lida, sem incidência normativa na solução destes modelos conceituais."
+        }
+      ],
+      "autor": "/root/elaborador_08",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação aberta no capítulo 22 de OSTEP e na documentação Page Tables do Linux Kernel; confronto da definição de LRU e da falta por ausência física com as premissas.",
+        "Analítica: rastreamento das doze referências, atualização da recência a cada acerto, conferência das cinco alternativas e unicidade da resposta.",
+        "Executada: cálculo JavaScript em memória no ambiente V8 de functions.exec, sem criação de programa ou teste no projeto. Entrada: três quadros vazios e sequência 2,3,2,1,4,2,3,4,1,2,5,2. Resultado observado: oito faltas; residentes finais em ordem LRU→MRU: 1,5,2.",
+        "Editorial: leitura da questão 52, p. 12, do TRT4/2022 na extração local e dos metadados em fontes.json; registro expresso da origem secundária e dos limites."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 52,
+          "pagina": 12,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 12; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "O exemplo fornece dados operacionais concretos e pede uma conclusão técnica objetiva, com cinco respostas compactas. A questão autoral aplica esse encadeamento a um estado inicial de memória e a uma sequência de referências; não reproduz a saída de comando nem as lacunas do exemplo.",
+          "limites": "A referência sustenta a organização de cenário técnico e opções compactas, não comprova frequência de questões numéricas de LRU na FCC. Trata-se de cópia secundária, sem atestado de integridade oficial da FCC; não fundamenta a correção técnica da questão autoral."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-08-0002",
+      "numero": 34,
+      "materia": "Sistemas Operacionais",
+      "topico": "Sincronização, deadlock e starvation",
+      "versao": "v01",
+      "enunciado": "Em uma aplicação, duas threads executam repetidamente operações que exigem os mutexes R e S, cada um com um único detentor. Em uma execução, T1 mantém R e está bloqueada à espera de S, enquanto T2 mantém S e está bloqueada à espera de R. Cada thread só libera seus mutexes depois de obter ambos e concluir a operação. Não há timeouts, cancelamentos nem liberação forçada de mutexes.\n\nPara futuras execuções, iniciadas com os mutexes livres, propõe-se que ambas adquiram sempre R antes de S, sem alterar a política de escolha entre threads que disputam um mutex.\n\nConsidere as afirmações:\n\nI. O estado observado caracteriza deadlock entre T1 e T2.\nII. A ordem de aquisição proposta impede a espera circular envolvendo R e S.\nIII. A ordem de aquisição proposta, por si só, garante ausência de starvation na disputa pelos mutexes.\n\nEstá correto o que se afirma em",
+      "alternativas": {
+        "A": "I, apenas.",
+        "B": "I e II, apenas.",
+        "C": "I e III, apenas.",
+        "D": "II e III, apenas.",
+        "E": "I, II e III."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende: I é verdadeira, mas II também é. Adquirir R antes de S em ambas as threads impede que uma detenha S e aguarde R enquanto a outra detenha R e aguarde S.",
+        "B": "Atende: I identifica a espera recíproca permanente do estado observado, e II descreve a eliminação dessa espera circular pela ordem comum de aquisição. III é falsa, porque a ordem entre recursos não assegura atendimento justo entre as threads.",
+        "C": "Não atende: I é verdadeira, mas III é falsa. Uma thread pode continuar sendo ultrapassada na disputa por R, mesmo que todas respeitem a ordem R antes de S. Além disso, a combinação omite II, que é verdadeira.",
+        "D": "Não atende: II é verdadeira, mas III é falsa. A prevenção de espera circular não estabelece limite para o tempo de espera de cada thread. A alternativa ainda omite I, que é verdadeira no estado explicitamente descrito.",
+        "E": "Não atende: inclui III, que é falsa. A ordem global de aquisição permite afastar o deadlock por inversão de R e S, mas, sozinha, não garante ausência de starvation."
+      },
+      "resolucao": "I é verdadeira. T1 só prossegue após obter S, mantido por T2; T2 só prossegue após obter R, mantido por T1. Como nenhuma libera o mutex antes de obter ambos e não há mecanismo externo de rompimento, as duas permanecem bloqueadas.\n\nII é verdadeira. Se todas adquirem R antes de S, uma thread que ainda espera por R não pode manter S por essa operação. Desfaz-se, portanto, a possibilidade da dependência circular R→S→R. Isso não elimina a exclusão mútua nem toda espera por mutex; elimina a inversão de ordem que originou o ciclo.\n\nIII é falsa. A ordem entre recursos não define qual thread recebe um mutex disputado. Como o atendimento não ganhou garantia de justiça, é possível que T1 libere e readquira R repetidamente antes de T2, que continua esperando. Há progresso de T1 e privação de T2: starvation pode persistir sem espera circular. Esse contraexemplo analítico basta para afastar a garantia absoluta da afirmação.\n\nSomente I e II são verdadeiras. O diagnóstico refere-se ao estado inicial observado; a prevenção por ordenação refere-se às futuras execuções iniciadas com os mutexes livres.",
+      "fontes": [
+        {
+          "titulo": "Oracle — Multithreaded Programming Guide — Chapter 9: Programming Guidelines",
+          "url": "https://docs.oracle.com/cd/E19253-01/816-5137/6mba5vqln/index.html",
+          "localizador": "Seções Avoiding Deadlock, Deadlocks Related to Scheduling e Locking Guidelines; parágrafos sobre espera recíproca por A e B e hierarquia de locks.",
+          "sustenta": "Espera recíproca permanente e prevenção por uma ordem comum de aquisição. Guia de Solaris/POSIX usado apenas para os conceitos; a questão especifica um modelo abstrato de mutexes."
+        },
+        {
+          "titulo": "The Linux Kernel documentation — Runtime locking correctness validator",
+          "url": "https://docs.kernel.org/locking/lockdep-design.html",
+          "localizador": "Seção Multi-lock dependency rules: ordens L1 → L2 e L2 → L1 e formação de dependência circular.",
+          "sustenta": "A relação entre aquisição em ordem inversa, espera circular e deadlock, coerente com as afirmações I e II e com a análise das alternativas."
+        },
+        {
+          "titulo": "Oracle — The Java Tutorials — Starvation and Livelock",
+          "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/starvelive.html",
+          "localizador": "Seções Starvation e Livelock; tutorial identificado como escrito para JDK 8.",
+          "sustenta": "Starvation como privação de acesso e de progresso de uma thread. A definição conceitual sustenta a análise de III; não se cobra uma API ou comportamento específico de Java."
+        },
+        {
+          "titulo": "Oracle — Java Platform SE 8 — ReentrantLock",
+          "url": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html",
+          "localizador": "Descrição da classe, parágrafos sobre o parâmetro fairness e sobre a distinção entre justiça do lock e do escalonamento.",
+          "sustenta": "Distinção documental entre política de atendimento de threads e simples exclusão mútua; a referência ilustra por que uma ordem entre recursos não constitui, sozinha, garantia contra starvation."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 38, p. 9; metadados de origem secundária em fontes.json.",
+          "sustenta": "Referência editorial por proposições e seleção da combinação correta."
+        },
+        {
+          "titulo": "FCC — TRF4/2007 — Analista Judiciário — Informática — Cargo I, Tipo 001",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+          "localizador": "Questão 38, p. 7; metadados de origem primária do órgão em fontes.json.",
+          "sustenta": "Referência histórica de TI com três proposições I–III e cinco combinações de resposta."
+        },
+        {
+          "titulo": "Conteúdo programático local — Sistemas Operacionais",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Linhas 116–121: sincronização; deadlocks e starvation; gerenciamento de memória: segmentação, memória virtual e paginação.",
+          "sustenta": "Delimitação dos tópicos no programa; a observação final sobre legislação foi lida, sem incidência normativa na solução destes modelos conceituais."
+        }
+      ],
+      "autor": "/root/elaborador_08",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação aberta na documentação primária Oracle e Linux sobre espera recíproca, hierarquia de locks e políticas de atendimento; conceitos de starvation e fairness conferidos nas referências Oracle listadas.",
+        "Analítica: análise separada de I, II e III; construção de contraexemplo de ultrapassagem repetida na disputa por R; conferência das cinco combinações e da unicidade da resposta.",
+        "Sem execução: o resultado depende das condições explícitas do modelo abstrato, não de reproduzir um escalonamento particular em um sistema operacional.",
+        "Editorial: leitura da questão 38, p. 9, do TRT4/2022 e da questão 38, p. 7, do TRF4/2007 nas extrações locais, com conferência das origens em fontes.json."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 38,
+          "pagina": 9,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 9; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "O exemplo apresenta itens numerados e exige selecionar a combinação que atende ao comando. A questão autoral utiliza três afirmações sobre consequências de um cenário, com alternativas formadas por combinações desses itens.",
+          "limites": "O exemplo trata de segurança de transações, e sua utilização limita-se à construção editorial por proposições. A cópia do Qconcursos não é declarada download da FCC nem prova de integridade oficial; nenhuma regra normativa do exemplo foi transferida para a questão autoral."
+        },
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 38,
+          "pagina": 7,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, marcador PAGINA 7; PDF local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; arquivo obtido no próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaAplicada": "O exemplo de TI usa três proposições I–III e cinco combinações com o qualificador apenas. A questão autoral aplica a mesma forma de comando a um raciocínio próprio sobre mutexes e progresso das threads.",
+          "limites": "Referência histórica de 2007, utilizada somente para confirmar a construção editorial por três proposições; não representa a prática atual inteira da banca e não é fonte técnica de sincronização."
+        }
+      ]
+    }
+  ]
+}

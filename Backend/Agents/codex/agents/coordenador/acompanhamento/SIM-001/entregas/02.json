@@ -1,0 +1,202 @@
+{
+  "elaborador": "02",
+  "responsavel": "/root/elaborador_02",
+  "questoes": [
+    {
+      "id": "BAN-DS-02-0001",
+      "numero": 5,
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "topico": "COBIT 2019",
+      "versao": "v01",
+      "enunciado": "Em uma organização que adota o COBIT 2019, foram descritas as seguintes atividades:\n\nI. O colegiado responsável examina necessidades das partes interessadas, fixa prioridades para investimentos de informação e tecnologia e acompanha os resultados em relação à direção estabelecida.\nII. A unidade de TI organiza recursos e planos para executar a direção recebida.\nIII. Uma equipe verifica o desempenho de informação e tecnologia em relação a metas internas e sua conformidade com requisitos externos.\n\nA classificação das atividades I, II e III nos domínios do COBIT 2019 é, correta e respectivamente,",
+      "alternativas": {
+        "A": "governança (EDM); gestão (BAI); gestão (MEA).",
+        "B": "gestão (APO); gestão (APO); governança (EDM).",
+        "C": "governança (EDM); gestão (APO); gestão (DSS).",
+        "D": "governança (EDM); gestão (APO); gestão (MEA).",
+        "E": "gestão (MEA); gestão (BAI); governança (EDM)."
+      },
+      "gabarito": "D",
+      "resolucao": "I reúne avaliação de necessidades, definição de prioridades e acompanhamento da direção estabelecida: governança, no domínio EDM. II trata de organização e planejamento de informação e tecnologia: gestão, no domínio APO. III corresponde ao acompanhamento de desempenho e conformidade: gestão, no domínio MEA. O monitoramento também integra a gestão; sua presença não torna automaticamente uma atividade de governança.",
+      "justificativas": {
+        "A": "Não atende: II corresponde a APO. BAI concentra definição, aquisição e implementação de soluções e sua integração aos processos de negócio.",
+        "B": "Não atende: I estabelece e acompanha a direção, em EDM; III verifica desempenho e conformidade, em MEA. Apenas II foi classificada adequadamente.",
+        "C": "Não atende: III corresponde a MEA. DSS trata da entrega operacional e do suporte a serviços, inclusive segurança.",
+        "D": "Atende: I é governança em EDM; II é gestão em APO; III é gestão em MEA.",
+        "E": "Não atende: I está em EDM, II em APO e III em MEA. A alternativa confunde a direção estratégica com o monitoramento de gestão e desloca o planejamento para BAI."
+      },
+      "fontes": [
+        {
+          "titulo": "Effective Capability and Maturity Assessment Using COBIT 2019 — ISACA, Emeka Elue, 27/07/2020",
+          "url": "https://www.isaca.org/resources/news-and-trends/industry-news/2020/effective-capability-and-maturity-assessment-using-cobit-2019",
+          "localizador": "Introdução, parágrafos e lista entre «COBIT 2019 provides guidance...» e «Management plans, builds, runs and monitors...»; leitura integral desse trecho em 26/11/2026.",
+          "sustenta": "Distinção entre avaliação, direção e monitoramento de governança e planejamento, construção, execução e monitoramento de gestão."
+        },
+        {
+          "titulo": "Employing COBIT 2019 for Enterprise Governance Strategy — ISACA, 2019",
+          "url": "https://www.isaca.org/resources/news-and-trends/industry-news/2019/employing-cobit-2019-for-enterprise-governance-strategy",
+          "localizador": "Seção «Governance and Management Objectives in COBIT 2019», lista dos cinco domínios e descrições de EDM, APO, BAI, DSS e MEA; leitura em 26/11/2026.",
+          "sustenta": "EDM como domínio de governança e os quatro domínios de gestão; organização e planejamento em APO, implementação em BAI, entrega e suporte em DSS e monitoramento e conformidade em MEA."
+        },
+        {
+          "titulo": "Referência de estilo FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 59, página 14. Cópia secundária hospedada no Qconcursos, identificada como prova FCC; não se afirma download direto da FCC nem integridade oficial. A referência comprova um exemplo de construção editorial, não uma frequência da banca ou a correção técnica atual; conteúdo e alternativas autorais."
+        }
+      ],
+      "autor": "/root/elaborador_02",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: páginas técnicas oficiais da ISACA abertas por navegação e trechos de definições e dos cinco domínios efetivamente lidos em 26/11/2026; não se atribui leitura integral do manual comercial.",
+        "Analítica: associação de cada atividade ao seu propósito e conferência das cinco combinações; exatamente uma preserva as três classificações.",
+        "Editorial: leitura das questões 59, página 14, e da identificação do caderno TRT4/2022 na extração local; uso apenas da questão 59 como referência de construção deste item.",
+        "Não houve execução de código ou simulação de processo; a conferência foi documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 59,
+          "pagina": 14,
+          "origem": "Extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 14, questão 59. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "O exemplo apresenta contexto de uma analista estudando COBIT 2019 e pede uma associação «correta e respectivamente» em cinco alternativas paralelas. A questão autoral usa três atividades organizacionais e associações de domínios na mesma ordem, cobrando outro recorte: governança e gestão.",
+          "limites": "Cópia secundária hospedada no Qconcursos, identificada como prova FCC; não se afirma download direto da FCC nem integridade oficial. A referência comprova um exemplo de construção editorial, não uma frequência da banca ou a correção técnica atual; conteúdo e alternativas autorais."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-02-0002",
+      "numero": 6,
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "topico": "Gestão financeira de TI",
+      "versao": "v01",
+      "enunciado": "Uma organização compara duas soluções de infraestrutura, X e Y, com capacidade e níveis de serviço equivalentes, para uso durante três anos. Foram estimados os seguintes custos, em reais:\n\nItem                                      X             Y\nAquisição e instalação, uma única vez     140.000       200.000\nOperação, por ano                         30.000        16.000\nManutenção e suporte, por ano             20.000         8.000\n\nOs custos anuais incidem em cada um dos três anos. Não há outros custos, valor residual, inflação ou desconto financeiro a considerar. Com base no custo total de propriedade (TCO), a solução de menor custo no período e a diferença entre os TCOs são, respectivamente,",
+      "alternativas": {
+        "A": "X e R$ 60.000,00.",
+        "B": "Y e R$ 26.000,00.",
+        "C": "X e R$ 18.000,00.",
+        "D": "Y e R$ 78.000,00.",
+        "E": "Y e R$ 18.000,00."
+      },
+      "gabarito": "E",
+      "resolucao": "No horizonte declarado, somam-se o desembolso inicial e os três anos de custos recorrentes. X: 140.000 + 3 × (30.000 + 20.000) = R$ 290.000,00. Y: 200.000 + 3 × (16.000 + 8.000) = R$ 272.000,00. A diferença é 290.000 − 272.000 = R$ 18.000,00, favorável a Y. O maior custo inicial de Y é compensado pela redução acumulada de operação, manutenção e suporte.",
+      "justificativas": {
+        "A": "Não atende: R$ 60.000,00 é a vantagem inicial de X, obtida por 200.000 − 140.000; exclui os custos dos três anos.",
+        "B": "Não atende: Y tem o menor TCO, mas R$ 26.000,00 é apenas a diferença anual recorrente, 50.000 − 24.000.",
+        "C": "Não atende: a diferença total é R$ 18.000,00, porém X custa R$ 290.000,00 e Y custa R$ 272.000,00; a vantagem pertence a Y.",
+        "D": "Não atende: R$ 78.000,00 é a economia recorrente de Y nos três anos, 3 × 26.000, antes de compensar os R$ 60.000,00 adicionais de aquisição e instalação.",
+        "E": "Atende: Y totaliza R$ 272.000,00, contra R$ 290.000,00 de X, economizando R$ 18.000,00 no período."
+      },
+      "fontes": [
+        {
+          "titulo": "AWS security service evaluation — AWS Prescriptive Guidance",
+          "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-evaluating-security-service/service-evaluation.html",
+          "localizador": "Seção 2.4, «Is the TCO lower than the current control or solution?», primeiro parágrafo; seção 2.5, «Trade-off decision». Trechos efetivamente abertos e lidos em 26/11/2026.",
+          "sustenta": "Comparação de TCO considera aquisição e implementação, operação, manutenção e suporte, entre outras categorias pertinentes ao caso. A restrição a soluções equivalentes e a custos explicitamente dados permite isolar a comparação de custos deste enunciado."
+        },
+        {
+          "titulo": "Referência de estilo FCC — Tribunal Regional Federal da 4ª Região, 2007, Cargo I, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Questão 20, página 5. Referência histórica de prova obtida no próprio órgão; a questão de referência é de raciocínio matemático e não fundamenta o conceito de TCO. Não se infere frequência editorial atual. Cenário, valores, cálculo e alternativas desta questão são autorais."
+        }
+      ],
+      "autor": "/root/elaborador_02",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: leitura por navegação da documentação primária AWS, seção 2.4, para conferir a inclusão de aquisição, operação, manutenção e suporte na comparação de TCO.",
+        "Analítica: separação entre desembolso único e três incidências anuais; conferência das contas 290.000, 272.000 e diferença de 18.000; mapeamento de cada distrator a um erro identificável.",
+        "Cálculo executado em memória JavaScript: 140000 + 3*(30000+20000) = 290000; 200000 + 3*(16000+8000) = 272000; diferença = 18000. Não se executou ferramenta financeira externa.",
+        "Editorial: leitura da questão 20, página 5, do TRF4/2007, e identificação de cargo e data na página 1 da extração local. O exemplo serve à forma de apresentar dados e alternativas numéricas."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 20,
+          "pagina": 5,
+          "origem": "Extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, marcador PAGINA 5, questão 20; identificação do cargo e data na página 1. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf. URL de origem: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "caracteristicaAplicada": "O exemplo usa uma situação financeira envolvendo microcomputadores, dados suficientes no enunciado, cálculo sobre custos e cinco resultados numéricos. A questão autoral apresenta alternativas de infraestrutura e exige totalizar custos em um horizonte declarado, com respostas numéricas paralelas.",
+          "limites": "Referência histórica de prova obtida no próprio órgão; a questão de referência é de raciocínio matemático e não fundamenta o conceito de TCO. Não se infere frequência editorial atual. Cenário, valores, cálculo e alternativas desta questão são autorais."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-02-0003",
+      "numero": 7,
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "topico": "Gestão de níveis de serviço",
+      "versao": "v01",
+      "enunciado": "Uma prestadora de serviços de TI acordou com um cliente externo o prazo máximo de quatro horas para tratar um incidente, contado da abertura à conclusão da validação do restabelecimento. Para apoiar esse atendimento, pactuou com suas equipes internas os limites de 40 minutos para triagem, 150 minutos para restabelecimento e 70 minutos para validação.\n\nAs etapas ocorrem sucessivamente, sem sobreposição, intervalos ou pausas. Cada limite interno é contado do início da respectiva etapa, e todos os prazos usam minutos corridos. Na gestão de níveis de serviço, esses compromissos internos são",
+      "alternativas": {
+        "A": "OLAs compatíveis com o prazo global, pois o limite de cada etapa, considerado isoladamente, é inferior às quatro horas acordadas com o cliente.",
+        "B": "SLAs compatíveis com o prazo global, pois a passagem entre equipes reinicia a contagem das quatro horas acordadas com o cliente.",
+        "C": "OLAs incompatíveis com o prazo global, pois todas as metas internas podem ser cumpridas e o atendimento, ainda assim, alcançar 260 minutos.",
+        "D": "contratos de apoio compatíveis com o prazo global, pois estabelecem metas de fornecedores externos para executar as etapas do atendimento.",
+        "E": "OLAs compatíveis com o prazo global, pois a soma dos limites internos amplia automaticamente o prazo acordado com o cliente para 260 minutos."
+      },
+      "gabarito": "C",
+      "resolucao": "Os compromissos entre a prestadora e suas equipes internas são OLAs. O prazo acordado com o cliente é um SLA e equivale a 4 × 60 = 240 minutos. Como as etapas são sequenciais, o uso integral dos limites internos resulta em 40 + 150 + 70 = 260 minutos. Assim, todos os limites internos podem ser respeitados e o SLA ser excedido em 20 minutos. É necessário ajustar o arranjo para que o cumprimento das metas internas assegure o prazo global; a alteração interna não modifica por si o acordo com o cliente.",
+      "justificativas": {
+        "A": "Não atende: são OLAs, mas a comparação isolada ignora a sucessão das etapas. Seus limites somam 260 minutos, acima dos 240 do SLA.",
+        "B": "Não atende: os compromissos descritos são internos, e o prazo do cliente começa na abertura. A transferência entre equipes não reinicia esse prazo nas condições do enunciado.",
+        "C": "Atende: os OLAs permitem consumir 260 minutos, embora o cliente tenha direito ao prazo máximo de 240 minutos. Cumprir cada limite interno não assegura o SLA.",
+        "D": "Não atende: não há fornecedores externos nos compromissos internos. Um contrato de apoio envolve terceiro que fornece bens ou serviços de suporte; além disso, a soma dos limites continua superior ao prazo global.",
+        "E": "Não atende: o acordo com as equipes internas não amplia automaticamente o prazo pactuado com o cliente. Nas condições dadas, o SLA continua limitado a 240 minutos."
+      },
+      "fontes": [
+        {
+          "titulo": "Service Level Agreement API — ServiceNow Fluent, documentação oficial, release Zurich, atualização de 12/03/2026",
+          "url": "https://www.servicenow.com/docs/r/zurich/application-development/servicenow-sdk/fluent-sla-api.html?contentId=vianmU5_VCuMN6HVNQVKqQ",
+          "localizador": "Introdução e seção «Sla object», tabela de propriedades, linha «type»: SLA, OLA e Underpinning contract; também linha «scheduleSource» sobre contagem contínua. Trechos efetivamente abertos e lidos em 26/11/2026.",
+          "sustenta": "Distinção entre acordo com cliente, acordo entre equipes internas e contrato com fornecedor externo. A contagem de tempo do cenário é explicitamente fixada no próprio enunciado, sem depender de configuração dessa ferramenta."
+        },
+        {
+          "titulo": "FTOC Service Level Management Process — United Nations, FTOC DFS Services, documento PRO-OPR-013, dezembro de 2014",
+          "url": "https://ft.dfs.un.org/sites/default/files/ungsc_-_ftoc_service_level_management_process_-_2014_12.pdf",
+          "localizador": "Página 4 de 8, seção 8, «Terms and definitions»: Service Level Agreement, Operational Level Agreement e Underpinning contract; página 5 de 8, seção 9, item de consistência dos níveis estabelecidos em OLAs e UCs com os SLAs que apoiam. PDF aberto e trechos efetivamente lidos em 26/11/2026.",
+          "sustenta": "Definições dos três tipos de acordo e aplicação organizacional do alinhamento entre compromissos internos e SLA. Fonte histórica de um processo institucional; não é usada para atribuir processos, fases ou requisitos a ITIL (Version 5)."
+        },
+        {
+          "titulo": "Configuring service targets — BMC Helix Business Workflows 26.1, documentação oficial, atualização de 21/04/2026",
+          "url": "https://docs.helixops.ai/bin/Service-Management/Enterprise-Service-Management/BMC-Helix-Business-Workflows/bwf261/Configuring-a-line-of-business/Configuring-service-targets-for-tracking-case-progress/Configuring-service-targets/",
+          "localizador": "Seção «To define or modify service targets», tabela «Description of basic fields for the service target», campo «Agreement Type»; campos de medição «Start When», «Stop When» e «Pause When». Trechos efetivamente abertos e lidos em 26/11/2026.",
+          "sustenta": "Conferência adicional da distinção entre acordos externos e internos e de que os critérios de início, término e pausa precisam estar definidos para a medição."
+        },
+        {
+          "titulo": "Referência de estilo FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 32, página 8. Cópia secundária hospedada no Qconcursos, sem afirmação de download direto da FCC ou integridade oficial. O exemplo versa sobre Spring Cloud Config e serve somente à construção editorial; não é fonte sobre SLA/OLA. Não se generaliza esse formato para toda a banca."
+        }
+      ],
+      "autor": "/root/elaborador_02",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação e leitura de documentação oficial ServiceNow e BMC Helix sobre tipos de acordos; leitura das definições e do alinhamento dos compromissos no processo institucional da ONU.",
+        "Delimitação: a questão cobra gestão de níveis de serviço (SLAs e OLAs), tópico autônomo do programa. Não exige nem afirma terminologia, fases ou processos específicos de qualquer versão do ITIL; o documento histórico da ONU é usado apenas nos trechos de acordos e consistência.",
+        "Analítica: prazo do cliente contado desde a abertura; três etapas sem sobreposição, intervalos ou pausas. A soma dos limites produz um caso possível que viola o SLA com todos os OLAs cumpridos; não se afirma que todo atendimento necessariamente excederá quatro horas.",
+        "Cálculo executado em memória JavaScript: 4*60 = 240; 40+150+70 = 260; excesso = 20 minutos.",
+        "Editorial: leitura da questão 32, página 8, do TRT4/2022; cenário próprio, comando declarativo e cinco avaliações comparáveis do mesmo arranjo."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 8, questão 32. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "O exemplo inicia com uma necessidade de gerenciamento em TI e completa uma declaração por uma entre cinco afirmações sobre o mesmo objeto. A questão autoral parte de um atendimento de serviço e oferece cinco avaliações comparáveis sobre os compromissos internos e o prazo global.",
+          "limites": "Cópia secundária hospedada no Qconcursos, sem afirmação de download direto da FCC ou integridade oficial. O exemplo versa sobre Spring Cloud Config e serve somente à construção editorial; não é fonte sobre SLA/OLA. Não se generaliza esse formato para toda a banca."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+Simulado: SIM-001
+Questão: BAN-DS-01-0004
+Versão examinada: v01
+Responsável: /root/auditor_estilo
+Perfil: ESTILO_FCC
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt; regras lidas para esta auditoria.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt; modelo lido para esta auditoria.
+- Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt; perfil lido para esta auditoria.
+- Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/controle.txt; identificação e versão atual confrontadas com o manifesto.
+- Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/questao.txt; v01, trecho público confrontado com o pacote sem resposta.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json; v01, enunciado e alternativas lidos integralmente antes das referências individuais.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/estilo-01-10.json; v01, referências indicadas pelo elaborador lidas depois do registro inicial.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/manifesto.json; v01, hash SHA-256 4a19ac7020c29e75d4bca3462e9a0bf14215516ccfab2435d2f7c929f8d45921.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/primeiras-observacoes-estilo.json; registro individual anterior às referências.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/analises-estilo.json; notas individuais desta auditoria.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencias-estilo-verificadas.json; identificação e limites das referências efetivamente consultadas.
+- Backend/Agents/conteudo/referencias-fcc/fontes.json; origem e hashes dos PDFs locais confrontados.
+- Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; material de referência lido, identificado abaixo.
+Não foram consultados o gabarito ou o comentário autoral desta questão. O hash de textos abaixo é o identificador fornecido pelo manifesto; não significa certificação de seu conteúdo.
+SHA-256 dos textos no manifesto: df59c3fb19ff0c04bb96f298d5779fd62b5031a7fe6a6c327a4928cfa63e980c
+
+PRIMEIRA LEITURA SEM GABARITO
+Quatro requisitos numerados e classificação em dois grupos solicitada respectivamente. Alternativas mantêm o mesmo formato de pares de números romanos; métricas estão legíveis.
+
+CRITÉRIOS EXAMINADOS
+- Leitura independente: atendido. Enunciado e cinco alternativas foram examinados antes das referências da questão, com primeira impressão salva em primeiras-observacoes-estilo.json; os recebimentos posteriores 47 e 48 tiveram registro próprio antes de suas referências.
+- Consulta real e identidade das referências: atendido. Foram lidos os exemplos identificados abaixo, sem tomar a descrição do elaborador como substituto da leitura. As capas das extrações locais, a origem de fontes.json e os metadados do acervo HTML foram confrontados conforme a fonte utilizada.
+- Comando, cenário, estrutura, vocabulário e organização das opções: atendido. T59 pede associação de conceitos em ordem; T38 mostra itens numerados e combinações nas alternativas. O item autoral articula esses traços ao distribuir quatro requisitos em dois grupos. O comando informa quais categorias correspondem à primeira e à segunda parte da opção, e as métricas dos itens permanecem dentro das afirmações a julgar.
+- Formato particular e sua apresentação: atendido. Itens I–IV e opções em dois pares separados por ponto e vírgula. Organização compatível com classificação de proposições, sem necessidade de impor exatamente o mesmo número de itens do exemplo.
+- Traços concretos e aplicação coerente: atendido. As relações de comparação acima dizem respeito à tarefa efetivamente apresentada. Cenário, dados e opções autorais não reproduzem simplesmente o enunciado dos exemplos lidos; não se usou o exemplo FCC para certificar a resposta.
+- Limites da amostra e formatos ausentes: atendido. As diferenças do item em relação aos exemplos foram consideradas como adaptações editoriais. Não se inferiu proibição universal de formato a partir de ausência em um exemplo; as ampliações pertinentes constam abaixo.
+- Exigência de tamanho, dificuldade ou molde: atendido. A decisão se apoia em clareza e coerência observáveis, sem impor longuismo, enunciado negativo, contextualização adicional ou proposições por preferência.
+- Competência correspondente e suficiência: atendido. As referências permitem comparar os traços editoriais concretos descritos, inclusive o formato técnico quando aplicável. Não se exige identidade de assunto entre exemplos de formato; as diferenças e ampliações foram explicitadas, sem usar uma referência de TI como prova de competência linguística.
+
+ACHADOS
+Nenhum achado impeditivo no escopo ESTILO_FCC após o exame individual dos critérios acima.
+
+REFERÊNCIAS DE ESTILO
+Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno: A14, Tipo 001; questão: 59; página: 14.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado pelo auditor: Estudo de COBIT por uma Analista, dois elementos solicitados respectivamente e cinco pares de conceitos.
+Limites: Cópia secundária do Qconcursos. Identificação conferida na capa da extração e metadados confrontados com fontes.json. Hash do PDF local coincide com o registro de fontes.json; isso não certifica integridade oficial. A comparação foi feita na extração TXT das páginas indicadas. Amostra localizada de 2022, sem inferência de frequência, calibragem de dificuldade ou conteúdo técnico atual.
+
+Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022; caderno: A14, Tipo 001; questão: 38; página: 9.
+Origem verificável: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+Material efetivamente lido: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+Traço observado pelo auditor: Quatro itens em números romanos submetidos a comando normativo; alternativas por combinações com apenas.
+Limites: Cópia secundária do Qconcursos. Identificação conferida na capa da extração e metadados confrontados com fontes.json. Hash do PDF local coincide com o registro de fontes.json; isso não certifica integridade oficial. A comparação foi feita na extração TXT das páginas indicadas. Amostra localizada de 2022, sem inferência de frequência, calibragem de dificuldade ou conteúdo técnico atual.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil ESTILO_FCC. Não foi efetuada auditoria de conteúdo, conferência de gabarito, cálculo, execução de código ou certificação normativa. As limitações de origem, identificação e alcance da amostra estão registradas nas referências e não foram convertidas em afirmações de padrão universal.
+
+JUSTIFICATIVA DA DECISÃO
+A combinação de proposições e classificação respectiva está clara e não reproduz a matéria das referências. APROVADA exclusivamente no perfil ESTILO_FCC, para esta versão e estes textos. A decisão não substitui os demais perfis nem representa certificação técnica, incidência de assunto ou dificuldade estatisticamente calibrada.

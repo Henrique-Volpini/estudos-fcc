@@ -1,0 +1,34 @@
+ID: BAN-DS-01-0004
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Classificar os quatro requisitos em funcionais e de qualidade, na ordem solicitada.
+
+RESOLUÇÃO
+I exige um resultado produzido por uma função: emitir o comprovante com dados definidos. II exige o comportamento de cancelar e confirmar um agendamento. Ambos são funcionais. III estabelece desempenho temporal sob carga, e IV estabelece disponibilidade do serviço. Esses dois qualificam a prestação da funcionalidade e são requisitos de qualidade. A combinação correspondente é D.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. I e IV estão nos grupos adequados, mas III é qualidade de desempenho e II descreve comportamento funcional de cancelamento e confirmação.
+B) Não atende. II e III estão nos grupos adequados, mas IV exige disponibilidade, uma qualidade; I exige a produção do comprovante, um resultado funcional.
+C) Não atende. Inverte os dois grupos: desempenho e disponibilidade são qualidades; emissão de comprovante e cancelamento são comportamentos ou resultados funcionais.
+D) Atende. Reúne I e II, que especificam funções observáveis, e III e IV, que fixam qualidades mensuráveis dos serviços, na ordem solicitada.
+E) Não atende. I e III estão nos grupos adequados, mas IV é uma exigência de qualidade e II é funcional. A existência de confirmação não muda a natureza funcional de II.
+
+FONTES TÉCNICAS CONSULTADAS
+- IREB CPRE Online Glossary. https://cpre.ireb.org/en/downloads-and-resources/glossary. Verbetes Functional requirement, Quality requirement, Non-functional requirement, Performance requirement e Reliability. Sustenta a distinção entre comportamento/resultado funcional e preocupação de qualidade, incluindo desempenho. Conteúdo consultado por navegação e resultado indexado do próprio domínio em 26/11/2026.
+- Arquivo-base do programa: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item engenharia de requisitos; Delimita o escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 59; página 14.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Solicita classificação de dois elementos na sequência indicada por correta e respectivamente; os distratores permutam os conceitos.
+- Aplicação nesta questão autoral: Os quatro requisitos autorais são distribuídos em dois grupos; todas as alternativas têm a mesma estrutura e permutam as classificações funcional e de qualidade.
+- Limites da referência: Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultados no glossário oficial IREB os conceitos de requisito funcional, de qualidade e de desempenho; a classificação é de engenharia de requisitos e não depende de substituir a edição ISO/IEC 25010:2024 indicada em outro item do programa.
+- Analítica: classificadas individualmente as quatro proposições antes das combinações; I e II funcionais, III e IV de qualidade; somente D reproduz ambos os grupos.
+- Editorial: lida TRT4/2022, questão 59, página 14, na extração local e conferidos os metadados de origem. Não houve medição do sistema nem simulação da carga: os valores integram exclusivamente o cenário autoral.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Entrega completa em PENDENTE_AUDITORIA; as auditorias do SIM-001 ainda serão realizadas.

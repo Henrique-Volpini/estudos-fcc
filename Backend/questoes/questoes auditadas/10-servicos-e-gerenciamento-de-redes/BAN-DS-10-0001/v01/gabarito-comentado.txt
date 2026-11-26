@@ -1,0 +1,72 @@
+ID: BAN-DS-10-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a afirmação correta sobre os papéis dos componentes e o efeito da importação de um módulo MIB.
+
+RESOLUÇÃO
+A central exerce o papel tradicional de gerente ao iniciar consultas, e o roteador exerce o de agente ao respondê-las. As mensagens transportam identificadores de instâncias e valores. O módulo MIB define objetos e sua semântica; sua importação permite à central interpretar esses objetos, sem criar instrumentação remota nem transformar o arquivo em dados de monitoramento. Como os valores já eram recebidos por OID, a comunicação de consulta não dependia de nomes simbólicos carregados na central.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. A central é gerente, mas importar definições localmente não implementa nem habilita objetos no agente remoto. A resposta anterior à importação já demonstra que os objetos consultados estavam disponíveis. A distinção entre definição e implementação decorre da RFC 2578, seções 3 e 7.
+
+B) Não atende. Gerar GetRequest para consultar dados caracteriza o papel de gerente; atender a essa solicitação caracteriza o papel de agente. O retorno de uma resposta não inverte esses papéis (RFC 3411, seções 3.1.3.1 e 3.1.3.2).
+
+C) Atende. A central gera as consultas e o agente do roteador fornece os valores. O módulo MIB contém definições dos objetos, permitindo interpretar sua identificação e semântica; importá-lo não substitui a coleta (RFC 3411, seções 3.1.3.1 e 3.1.3.2; RFC 2578, seções 1, 3 e 7).
+
+D) Não atende. O arquivo de definições não é uma fonte de medições atuais do roteador. Uma nova leitura obtém o valor da instância por operação do protocolo, como GetRequest/Response, e não pela releitura do módulo importado (RFC 3416, seção 4.2.1).
+
+E) Não atende. O roteador é agente, porém a importação na central não modifica os identificadores transmitidos. Os nomes das variáveis nos vínculos nome/valor continuam sendo OIDs; os nomes simbólicos são interpretados localmente com as definições (RFC 3416, seção 2.1; RFC 2578, seção 3.1).
+
+FONTES TÉCNICAS CONSULTADAS
+- RFC 3411 — An Architecture for Describing SNMP Management Frameworks
+  URL: https://www.rfc-editor.org/rfc/rfc3411.html
+  Localizador e suporte: IETF, dezembro/2002, seções 1.2, 3.1.3.1 e 3.1.3.2: papéis tradicionais de gerente e agente.
+
+- RFC 3416 — Version 2 of the Protocol Operations for SNMP
+  URL: https://www.rfc-editor.org/rfc/rfc3416.html
+  Localizador e suporte: IETF, dezembro/2002, seções 2, 2.1 e 4.2.1: vínculos de OID e valor, GetRequest e Response.
+
+- RFC 2578 — Structure of Management Information Version 2 (SMIv2)
+  URL: https://www.rfc-editor.org/rfc/rfc2578.html
+  Localizador e suporte: IETF, abril/1999, seções 1, 3, 3.1, 7, 7.1 e 7.5: módulos, descritores, definição e semântica dos objetos.
+
+- Conteúdo programático — conhecimentos específicos de Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: Bloco SERVIÇOS E GERENCIAMENTO DE REDES, linhas 149–163; observação final, linhas 213–217.
+
+- Metadados das referências FCC consultadas
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador e suporte: Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; origem e arquivos locais.
+
+- FCC — TRF4/2007 — Analista Judiciário, Informática — Cargo I, Tipo 001
+  URL: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt
+  Localizador e suporte: Questão 46, página 8; extração local consultada, PDF de origem primária no órgão. Formato e terminologia.
+
+- FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001
+  URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador e suporte: Questão 32, página 8; extração local consultada, cópia secundária no Qconcursos. Cinco afirmações sobre ferramenta.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+1. Órgão, cargo e ano: TRF da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+   Caderno, questão e página: Cargo I, Tipo 001; questão 46; página 8.
+   Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, marcador PAGINA 8; PDF Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; origem primária no órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+   Característica observada e aplicação autoral: Comando afirmativo e objetivo sobre componentes de gerenciamento, com cinco alternativas comparáveis. A questão autoral aplica os papéis a uma consulta e à importação de definições, em vez de reproduzir a enumeração da prova.
+   Limites da referência: Referência histórica de 2007, utilizada para formato e terminologia; a correção técnica foi conferida nas RFCs, e não inferida do gabarito antigo.
+
+2. Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+   Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+   Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 8; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+   Característica observada e aplicação autoral: Contextualização de uma ferramenta seguida de cinco afirmações técnicas sobre seu funcionamento. Aplicação em alternativas de extensão próxima que confrontam definições, instrumentação e comunicação SNMP.
+   Limites da referência: A origem é uma cópia no Qconcursos, não um download da FCC nem uma certificação oficial de integridade. O exemplo de Spring Cloud orienta apenas a construção editorial.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: RFCs 3411, 3416 e 2578 abertas por navegação em 2026-11-26; confrontados papéis, conteúdo dos módulos e representação das variáveis no protocolo.
+- Analítica: verificadas individualmente as cinco alternativas; somente uma preserva simultaneamente os papéis, a diferença entre definição e valor e o uso de OIDs nas mensagens.
+- Editorial: lidas as extrações reais da FCC, com conferência dos marcadores de página e dos metadados de origem em fontes.json.
+- Não houve execução de agente, gerente ou tráfego SNMP; a conferência técnica foi documental e analítica.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguardam-se as auditorias previstas.
+

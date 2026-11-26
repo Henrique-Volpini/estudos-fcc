@@ -1,0 +1,43 @@
+ID: BAN-DS-05-0002
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Selecionar a alternativa que atende ao comando
+
+RESOLUÇÃO
+O script registra inicio e fim. A reação da promessa é processada como microtarefa e registra promessa. A chamada queueMicrotask acrescenta micro à fila, que continua sendo esvaziada. Somente depois a tarefa do temporizador registra temporizador.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Incorreta: o tratador de then não interrompe o script para executar antes do registro síncrono de fim.
+
+B) Correta: os registros síncronos vêm primeiro; depois executam a reação da promessa e a microtarefa que ela enfileira; o temporizador fica para outra tarefa.
+
+C) Incorreta: o temporizador não passa à frente das microtarefas processadas ao término da tarefa do script.
+
+D) Incorreta: a microtarefa adicionada pela reação da promessa ainda é processada no mesmo esvaziamento da fila, antes da tarefa do temporizador.
+
+E) Incorreta: coloca a reação antes de fim e ainda posterga sua microtarefa para depois do temporizador.
+
+FONTES TÉCNICAS CONSULTADAS
+- WHATWG — HTML Standard: Web application APIs
+  URL: https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint
+  Localizador: HostEnqueuePromiseJob, processamento do event loop e algoritmo perform a microtask checkpoint; consulta em 26/11/2026.
+- WHATWG — HTML Standard: Timers and microtask queuing
+  URL: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
+  Localizador: Seções Timers e Microtask queuing: setTimeout e queueMicrotask.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+Órgão: TRT da 4ª Região
+Cargo: Analista Judiciário — Tecnologia da Informação
+Ano: 2022
+Caderno: A14, Tipo 001
+Questão: 43
+Página PDF: 10
+Origem: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia secundária do Qconcursos, com banca/cargo/caderno identificados no documento.
+Característica aplicada: Apresentação de fragmento técnico autocontido seguido de cinco representações candidatas, aqui adaptada para sequências de mensagens. A referência não é de event loop e não fundamenta a solução técnica; sustenta apenas a organização editorial.
+Limites: comparação editorial pontual; a cópia de 2022 não foi obtida diretamente na FCC. A referência não certifica conteúdo técnico nem calibração estatística.
+
+VERIFICAÇÕES REALIZADAS
+Análise documental do modelo de navegador WHATWG. Como conferência suplementar, o mesmo trecho foi executado em memória no Node.js 26.12.1 e produziu inicio, fim, promessa, micro, temporizador. Não se declarou execução em navegador nem se criaram arquivos de teste.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando as três avaliações de conformidade; sem autoaprovação.

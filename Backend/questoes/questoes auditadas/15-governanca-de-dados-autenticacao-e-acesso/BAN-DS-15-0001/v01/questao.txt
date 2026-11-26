@@ -1,0 +1,16 @@
+ID: BAN-DS-15-0001
+Versão: v01
+Matéria: Governança de dados, autenticação e controle de acesso
+Tópico: Governança e controle de acesso baseado em papéis
+
+ENUNCIADO
+Na revisão da governança de um cadastro corporativo, um Analista deve configurar o controle de acesso baseado em papéis (RBAC). Há dois papéis independentes: Cadastrador, com permissão para registrar dados, e Homologador, com permissão para homologá-los. A política admite que um mesmo usuário seja autorizado para os dois papéis, mas proíbe que as duas funções estejam ativas simultaneamente em uma mesma sessão. As permissões devem continuar sendo obtidas por meio dos papéis.
+
+A configuração que atende a essa política é
+
+A) estabelecer separação estática de funções entre os dois papéis, rejeitando a atribuição de Homologador a qualquer usuário que já possua o papel Cadastrador.
+B) ativar todos os papéis atribuídos ao usuário no início da sessão, mantendo registros separados para as operações de cadastro e de homologação.
+C) definir Homologador como papel superior que herda as permissões de Cadastrador, atribuindo somente Homologador aos usuários habilitados para executar as duas funções.
+D) estabelecer separação dinâmica de funções entre os dois papéis, impedindo que uma sessão do usuário contenha ambos os papéis ativos ao mesmo tempo.
+E) exigir autenticação multifator ao ativar cada papel, permitindo que os dois permaneçam ativos quando ambas as verificações tiverem sido concluídas com sucesso.
+

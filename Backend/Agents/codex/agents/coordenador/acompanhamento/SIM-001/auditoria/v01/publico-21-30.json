@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-05-0001",
+    "numero": 21,
+    "versao": "v01",
+    "enunciado": "Um aplicativo envia uma requisição PUT para atualizar o endereço de correspondência de um cliente em um recurso identificado por uma URI. A conexão é interrompida antes da leitura da resposta. O cliente considera reenviar a mesma requisição, com o mesmo conteúdo. Supondo uma implementação conforme a semântica HTTP definida na RFC 9110, é correto afirmar que",
+    "alternativas": {
+      "A": "a idempotência exige que a repetição produza o mesmo código de status e o mesmo corpo de resposta.",
+      "B": "a repetição deve criar outro recurso, pois cada requisição PUT representa uma nova operação de inclusão.",
+      "C": "a idempotência depende de desabilitar o armazenamento da resposta em cache antes do reenvio.",
+      "D": "a repetição tem o mesmo efeito pretendido sobre o recurso, embora a resposta recebida possa ser diferente.",
+      "E": "o método é seguro e idempotente, pois a atualização solicitada não pode modificar o estado do servidor."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0002",
+    "numero": 22,
+    "versao": "v01",
+    "enunciado": "Um desenvolvedor executa integralmente o trecho abaixo como um único script clássico em uma página ativa, em navegador compatível com o HTML Standard. Não há outros registros no console, exceções ou interrupções durante a execução.\n\nconsole.log('inicio');\nPromise.resolve().then(() => {\n  console.log('promessa');\n  queueMicrotask(() => console.log('micro'));\n});\nsetTimeout(() => console.log('temporizador'), 0);\nconsole.log('fim');\n\nA sequência de mensagens produzida por esse trecho é",
+    "alternativas": {
+      "A": "inicio, promessa, micro, fim, temporizador.",
+      "B": "inicio, fim, promessa, micro, temporizador.",
+      "C": "inicio, fim, temporizador, promessa, micro.",
+      "D": "inicio, fim, promessa, temporizador, micro.",
+      "E": "inicio, promessa, fim, temporizador, micro."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0003",
+    "numero": 23,
+    "versao": "v01",
+    "enunciado": "Na avaliação de acessibilidade de um portal, uma analista examina o efeito de faixas fixas da interface sobre componentes que recebem foco pelo teclado. Considerando os critérios 2.4.11 e 2.4.12 das WCAG 2.2, avalie as afirmações.\n\nI. O critério 2.4.11, de nível AA, exige que o componente com foco não fique totalmente oculto por conteúdo criado pelo autor.\nII. O critério 2.4.11 é atendido se apenas o indicador de foco permanecer visível, mesmo que o próprio componente esteja inteiramente oculto.\nIII. A exigência de que nenhuma parte do componente com foco seja ocultada por conteúdo criado pelo autor corresponde ao critério 2.4.12, de nível AAA.\n\nEstá correto o que se afirma APENAS em",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "I e II.",
+      "D": "II e III.",
+      "E": "I e III."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0004",
+    "numero": 24,
+    "versao": "v01",
+    "enunciado": "Uma equipe documenta uma operação GET em OpenAPI 3.0.3 para consultar o cliente identificado no caminho /clientes/{clienteId}. A operação também aceita, opcionalmente, detalhes=true na consulta da URL para ampliar os dados retornados. Foram declarados os seguintes parâmetros:\n\nparameters:\n  - name: clienteId\n    in: path\n    required: false\n    schema:\n      type: integer\n  - name: detalhes\n    in: query\n    required: false\n    schema:\n      type: boolean\n\nPara que essas declarações atendam à especificação e preservem a intenção descrita, as configurações de localização e obrigatoriedade deverão ser",
+    "alternativas": {
+      "A": "clienteId em query, required: false; detalhes em query, required: false.",
+      "B": "clienteId em path, required: false; detalhes em query, required: true.",
+      "C": "clienteId em path, required: true; detalhes em query, required: false.",
+      "D": "clienteId em path, required: true; detalhes em path, required: true.",
+      "E": "clienteId em header, required: true; detalhes em query, required: false."
+    }
+  },
+  {
+    "id": "BAN-DS-05-0005",
+    "numero": 25,
+    "versao": "v01",
+    "enunciado": "Uma aplicação valida documentos XML de acordo com o esquema XSD 1.0 completo abaixo, sem namespace de destino:\n\n<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"lote\">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name=\"item\" type=\"xs:string\"\n                    minOccurs=\"0\" maxOccurs=\"3\"/>\n      </xs:sequence>\n      <xs:attribute name=\"codigo\" type=\"xs:integer\" use=\"required\"/>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>\n\nConsiderando apenas a validade em relação a esse esquema, o documento aceito é",
+    "alternativas": {
+      "A": "<lote codigo=\"7\"/>",
+      "B": "<lote><item>A</item></lote>",
+      "C": "<lote codigo=\"7\"><item>A</item><item>B</item><item>C</item><item>D</item></lote>",
+      "D": "<lote codigo=\"sete\"><item>A</item></lote>",
+      "E": "<lote codigo=\"7\"><item>A</item><extra>B</extra></lote>"
+    }
+  },
+  {
+    "id": "BAN-DS-06-0001",
+    "numero": 26,
+    "versao": "v01",
+    "enunciado": "Uma instituição utiliza o mesmo caso de uso de concessão de limite por uma API HTTP e por processamento em lote. As regras de concessão devem permanecer no núcleo da aplicação, sem duplicação, e o caso de uso deve ignorar detalhes de HTTP e SQL. Também é necessário substituir a persistência SQL por uma implementação em memória durante a verificação dessas regras, sem alterar o caso de uso. Na arquitetura hexagonal, uma organização compatível com esses requisitos consiste em",
+    "alternativas": {
+      "A": "definir a interface do caso de uso no adaptador HTTP e fazer o núcleo depender desse adaptador, permitindo que o processamento em lote reutilize a interface.",
+      "B": "manter a coordenação do caso de uso no núcleo e distribuir as regras de concessão entre os adaptadores HTTP e de lote, compartilhando a persistência SQL.",
+      "C": "expor o caso de uso por uma porta de entrada e expressar a persistência por uma porta de saída do núcleo, conectando implementações externas por adaptadores.",
+      "D": "definir uma porta de persistência no núcleo e manter no caso de uso a montagem de instruções SQL, implementando essa porta também para o armazenamento em memória.",
+      "E": "utilizar a implementação em memória como porta de entrada e delegar ao adaptador HTTP a execução das regras e o acionamento da persistência do caso de uso."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0002",
+    "numero": 27,
+    "versao": "v01",
+    "enunciado": "Um serviço de relatórios recebe eventos de contratos celebrados e incrementa um acumulado em seu banco de dados local. O intermediário de mensagens oferece entrega pelo menos uma vez, com confirmação manual; uma reentrega conserva o identificador do evento. O processo consumidor pode falhar e reiniciar entre quaisquer duas etapas. O banco local oferece transações e restrições de unicidade, mas não há transação distribuída com o intermediário. Para que cada evento produza seu efeito no acumulado uma única vez, mesmo após reinícios, o consumidor deve",
+    "alternativas": {
+      "A": "confirmar a entrega ao intermediário antes de incrementar o acumulado e registrar o identificador, contando com a reentrega para recuperar falhas no banco.",
+      "B": "incrementar o acumulado em uma transação e registrar o identificador em outra, confirmando a entrega ao intermediário somente após concluir as duas transações.",
+      "C": "registrar o identificador em uma transação e incrementar o acumulado em outra, descartando as entregas cujos identificadores já estejam registrados no banco.",
+      "D": "registrar o identificador com unicidade e incrementar o acumulado na mesma transação local; confirmar após o commit e, nas reentregas, suprimir o efeito já registrado.",
+      "E": "conservar os identificadores processados em um cache em memória, incrementar o acumulado no banco e confirmar a entrega ao intermediário após concluir a atualização."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0003",
+    "numero": 28,
+    "versao": "v01",
+    "enunciado": "Uma aplicação realiza consultas idempotentes a um serviço remoto. O projeto de resiliência deve atender às seguintes necessidades:\n\nI. Limitar o tempo durante o qual o cliente aguarda a conclusão de cada chamada remota.\nII. Fazer novas tentativas diante de falhas transitórias, com espera entre elas e número máximo de repetições, respeitando o prazo total da operação.\nIII. Após atingir um limiar de falhas, rejeitar temporariamente novas chamadas sem acessar o serviço; em seguida, permitir um conjunto restrito de chamadas para avaliar sua recuperação.\n\nOs mecanismos associados a I, II e III são, respectivamente,",
+    "alternativas": {
+      "A": "retry, timeout e circuit breaker.",
+      "B": "timeout, retry e circuit breaker.",
+      "C": "timeout, circuit breaker e retry.",
+      "D": "circuit breaker, retry e timeout.",
+      "E": "retry, circuit breaker e timeout."
+    }
+  },
+  {
+    "id": "BAN-DS-06-0004",
+    "numero": 29,
+    "versao": "v01",
+    "enunciado": "Em uma instituição, a equipe de Relacionamento modela Cliente como uma pessoa que pode receber ofertas, inclusive antes da contratação. A equipe de Cobrança modela Cliente como o responsável por obrigações vencidas e utiliza regras próprias para negociação. As equipes precisam preservar esses significados e suas regras, mas devem trocar informações sobre a mesma pessoa por um contrato de integração. Considerando DDD, o desenho adequado a esse cenário consiste em",
+    "alternativas": {
+      "A": "delimitar contextos para os dois modelos, manter uma linguagem coerente em cada contexto e explicitar no mapa de contextos os pontos de contato e as traduções necessárias.",
+      "B": "unificar os dois modelos em uma classe Cliente compartilhada, atribuir um único significado aos seus estados e resolver as diferenças por condicionais nos serviços das equipes.",
+      "C": "tomar as camadas de apresentação, domínio e persistência como os três contextos delimitados, usando o mesmo modelo Cliente em cada camada de ambas as equipes.",
+      "D": "definir um contexto delimitado para cada instância de Cliente e utilizar a identidade da pessoa como fronteira de validade das regras das duas equipes.",
+      "E": "separar os bancos de dados das equipes e manter um dicionário Cliente único, considerando que a separação física dispensa explicitar as diferenças de significado na integração."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0001",
+    "numero": 30,
+    "versao": "v01",
+    "enunciado": "Uma equipe incorpora pequenas alterações ao repositório compartilhado várias vezes ao dia. Cada incorporação aciona automaticamente a construção da aplicação e a execução de testes. As versões que passam pelas verificações são implantadas automaticamente em homologação e ficam prontas para produção. A implantação em produção usa o mesmo processo automatizado, mas só é iniciada após aprovação expressa de um responsável pelo negócio.\n\nNa distinção entre integração contínua, entrega contínua e implantação contínua, esse fluxo caracteriza",
+    "alternativas": {
+      "A": "integração contínua e implantação contínua, porque uma aprovação de negócio pode compor a promoção automática de cada versão para produção.",
+      "B": "apenas integração contínua, porque a entrega contínua exige publicar automaticamente em produção toda alteração aprovada nos testes.",
+      "C": "integração contínua e entrega contínua, porque uma versão pode permanecer pronta para produção até a autorização de sua implantação.",
+      "D": "apenas entrega contínua, porque a integração contínua exige executar os testes antes da incorporação do código ao repositório compartilhado.",
+      "E": "apenas implantação contínua, porque a publicação automática em homologação é suficiente para caracterizar a implantação contínua de uma aplicação."
+    }
+  }
+]

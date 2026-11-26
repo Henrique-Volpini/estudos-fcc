@@ -1,0 +1,45 @@
+ID: BAN-DS-13-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a sequência que conclui o merge em andamento com a resolução desejada e um novo commit com pais M e F, preservando os commits existentes.
+
+RESOLUÇÃO
+A divergência entre M e F impede uma integração por simples fast-forward. Durante o conflito, HEAD permanece em M e MERGE_HEAD identifica F; o índice conserva entradas não resolvidas de config.yml. A edição manual resolve o conteúdo na árvore de trabalho, mas ainda é preciso registrar esse resultado no índice. git add config.yml faz esse registro. Com o único conflito resolvido no índice e o merge ainda em andamento, git commit -m "Integra feature" cria um novo commit de merge, cujo primeiro pai é M e cujo segundo pai é F. main passa a apontar para o novo commit, sem substituir os commits anteriores. A documentação também admite git merge --continue após o registro da resolução; nenhuma outra alternativa apresenta essa sequência válida.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Salvar config.yml modifica a árvore de trabalho, mas não substitui as entradas não resolvidas do índice. Sem adicionar a resolução, git commit -m não conclui o merge. Esse comando também não recebeu -a nem outra opção que registre o conteúdo do arquivo.
+
+B) Não atende. --amend é uma operação de substituição da ponta da branch, e o Git 2.43.0 recusa essa opção enquanto há um merge em andamento. O requisito é criar um novo commit com pais M e F, preservando os anteriores; não amendar M. --no-edit controla apenas o reaproveitamento da mensagem.
+
+C) Não atende. --abort abandona a resolução e tenta reconstruir o estado anterior ao merge. Não cria um commit com a resolução. Adicionar config.yml antes desse comando não transforma o abandono em conclusão da integração.
+
+D) Atende. git add config.yml registra no índice o conteúdo resolvido e marca o caminho como resolvido. Como esse era o único conflito, git commit -m conclui o merge em andamento com o conteúdo preparado e um novo commit com pais M e F.
+
+E) Não atende. --quit remove o estado administrativo do merge em andamento, mantendo o índice e a árvore de trabalho como estão. Essa preservação dos arquivos não cria um commit e, portanto, não produz o commit de integração solicitado.
+
+FONTES TÉCNICAS CONSULTADAS
+- Git — git-merge, manual da versão 2.43.0. URL: https://git-scm.com/docs/git-merge/2.43.0. Localizador: Seções TRUE MERGE, HOW TO RESOLVE CONFLICTS e OPTIONS: --abort, --quit e --continue. Consulta por navegação em 26/11/2026. Sustenta: Estado durante conflito, pais do commit de merge, registro da resolução e distinção entre concluir, abandonar e esquecer o merge.
+- Git — git-add, manual 2.40.0 aplicável a 2.43.0. URL: https://git-scm.com/docs/git-add/2.40.0. Localizador: DESCRIPTION; histórico indica ausência de mudanças de 2.40.1 a 2.43.0. A URL solicitada /docs/git-add/2.43.0 redirecionou para essa edição. Consulta por navegação em 26/11/2026. Sustenta: git add atualiza o índice com o conteúdo encontrado na árvore de trabalho; salvar o arquivo não equivale a adicioná-lo.
+- Git — git-commit, manual da versão 2.43.0. URL: https://git-scm.com/docs/git-commit/2.43.0. Localizador: DESCRIPTION e OPTIONS: -a, -m, --no-edit e --amend. Consulta por navegação em 26/11/2026. Sustenta: Commit utiliza o conteúdo preparado no índice; finalidade de --amend e de --no-edit.
+- Git — código-fonte oficial, tag v2.43.0, builtin/commit.c. URL: https://raw.githubusercontent.com/git/git/v2.43.0/builtin/commit.c. Localizador: Função parse_and_validate_options: condição amend && whence != FROM_COMMIT, ramo FROM_MERGE; função refresh_cache_or_die: falha por entradas não mescladas. Consulta por navegação em 26/11/2026. Sustenta: Recusa de --amend durante merge em andamento e recusa de commit com conflito ainda registrado no índice.
+- Git — páginas correntes dos manuais consultadas inicialmente. URL: https://git-scm.com/docs/git-merge. Localizador: Também consultadas https://git-scm.com/docs/git-add e https://git-scm.com/docs/git-commit, em 26/11/2026. Fundamentação final fixada nas edições da versão declarada; recursos posteriores não são exigidos. Sustenta: Navegação inicial para localizar os manuais e suas edições; não altera a versão 2.43.0 do cenário.
+- Conteúdo programático local — Conhecimentos específicos, Desenvolvimento de Sistemas. Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linha 201: VERSIONAMENTO DE CÓDIGO COM GIT; e observação final, linhas 213–217. Sustenta: Delimitação do tópico no bloco exclusivo do elaborador 13. A questão não depende de legislação.
+- FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 41, página impressa 10, seção iniciada por === PAGINA 10 === na extração TXT. Metadados consultados em Backend/Agents/conteudo/referencias-fcc/fontes.json. Sustenta: Referência editorial de cenário técnico objetivo e cinco alternativas de comandos. Trata-se de cópia secundária do Qconcursos, sem certificação oficial de integridade.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 41; página impressa 10.
+- Origem verificável: Cópia secundária hospedada no Qconcursos. Consulta pela extração Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL do PDF: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.
+- Característica observada: Necessidade técnica de um Analista, operação delimitada e cinco alternativas de comandos.
+- Aplicação nesta questão autoral: A questão 41 apresenta a necessidade técnica de um Analista, delimita a operação pretendida e oferece cinco comandos para escolha. Aplicou-se o comando objetivo a um cenário autoral de Git, com sequências de comandos e justificativas breves paralelas nas alternativas.
+- Limites da referência: O exemplo de PostgreSQL orienta a forma editorial e não comprova a correção técnica do conteúdo de Git. É uma referência específica, sem inferência de frequência ou de regra universal da banca. A cópia é secundária.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: consultados por navegação os manuais primários de Git e a tag oficial v2.43.0 para conferir os cinco procedimentos, inclusive a recusa de --amend durante merge.
+- Analítica: conferidos o estado de HEAD, MERGE_HEAD, índice e árvore de trabalho; apenas uma sequência mantém o merge em andamento e registra a resolução antes de criar o commit com dois pais.
+- Editorial: lida a questão 41, p. 10, do TRT4/2022 A14/001 na extração TXT local, com origem secundária confirmada em fontes.json.
+- Não houve execução de comandos Git nem criação de repositório de ensaio; a verificação técnica foi documental e analítica.
+- Conferência estrutural e de correspondência: TXT e JSON renderizados do mesmo objeto de dados, com ID, versão, número, cinco alternativas e cinco justificativas.
+
+PENDÊNCIAS
+Nenhuma de elaboração. A proposta permanece PENDENTE_AUDITORIA; não foram produzidos pareceres nem aprovações pelo elaborador.

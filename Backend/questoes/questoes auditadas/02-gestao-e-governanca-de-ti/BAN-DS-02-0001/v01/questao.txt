@@ -1,0 +1,19 @@
+ID: BAN-DS-02-0001
+Versão: v01
+Matéria: Gestão e Governança de Tecnologia da Informação
+Tópico: COBIT 2019
+
+ENUNCIADO
+Em uma organização que adota o COBIT 2019, foram descritas as seguintes atividades:
+
+I. O colegiado responsável examina necessidades das partes interessadas, fixa prioridades para investimentos de informação e tecnologia e acompanha os resultados em relação à direção estabelecida.
+II. A unidade de TI organiza recursos e planos para executar a direção recebida.
+III. Uma equipe verifica o desempenho de informação e tecnologia em relação a metas internas e sua conformidade com requisitos externos.
+
+A classificação das atividades I, II e III nos domínios do COBIT 2019 é, correta e respectivamente,
+
+A) governança (EDM); gestão (BAI); gestão (MEA).
+B) gestão (APO); gestão (APO); governança (EDM).
+C) governança (EDM); gestão (APO); gestão (DSS).
+D) governança (EDM); gestão (APO); gestão (MEA).
+E) gestão (MEA); gestão (BAI); governança (EDM).

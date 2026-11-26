@@ -1,0 +1,40 @@
+ID: BAN-DS-05-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Selecionar a alternativa que atende ao comando
+
+RESOLUÇÃO
+A análise considera o efeito solicitado sobre o recurso. Reenviar o mesmo PUT não deve acrescentar outro efeito pretendido além daquele de uma aplicação. A RFC permite que as respostas difiram e que existam registros operacionais por requisição. Idempotência não significa somente leitura.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Incorreta: a propriedade se refere ao efeito pretendido no servidor, não à igualdade do status ou do corpo das respostas.
+
+B) Incorreta: repetir um PUT idêntico não exige criar outro recurso; PUT atua sobre o recurso identificado pela URI de destino.
+
+C) Incorreta: armazenamento em cache e idempotência são propriedades distintas; desabilitar cache não é condição para tornar PUT idempotente.
+
+D) Correta: PUT é idempotente; repetições idênticas preservam o efeito pretendido de uma única solicitação, mesmo com respostas diferentes.
+
+E) Incorreta: PUT é idempotente, mas não é um método seguro na classificação HTTP, pois solicita mudança de estado.
+
+FONTES TÉCNICAS CONSULTADAS
+- IETF — RFC 9110: HTTP Semantics
+  URL: https://www.rfc-editor.org/rfc/rfc9110.html#name-idempotent-methods
+  Localizador: Seções 9.2.1, 9.2.2, 9.2.3 e 9.3.4: segurança, idempotência, cache e PUT.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+Órgão: TRT da 4ª Região
+Cargo: Analista Judiciário — Tecnologia da Informação
+Ano: 2022
+Caderno: A14, Tipo 001
+Questão: 34
+Página PDF: 8
+Origem: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia hospedada no Qconcursos, identificada na capa; não é download direto da FCC.
+Característica aplicada: Julgamento de uma afirmação correta sobre protocolo, com cinco proposições alternativas da mesma área. O cenário e a semântica examinada são autorais; a comparação é editorial e restrita ao exemplo.
+Limites: comparação editorial pontual; a cópia de 2022 não foi obtida diretamente na FCC. A referência não certifica conteúdo técnico nem calibração estatística.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental na RFC 9110 e análise das cinco afirmações; nenhuma requisição de atualização foi executada.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando as três avaliações de conformidade; sem autoaprovação.

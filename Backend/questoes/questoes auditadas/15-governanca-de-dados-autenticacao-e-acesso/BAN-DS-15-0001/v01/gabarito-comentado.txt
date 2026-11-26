@@ -1,0 +1,58 @@
+ID: BAN-DS-15-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a configuração que atende integralmente à política RBAC apresentada.
+
+RESOLUÇÃO
+É preciso distinguir atribuição de papéis e ativação na sessão. A política permite atribuir Cadastrador e Homologador ao mesmo usuário, portanto a restrição não deve excluir essa atribuição. Ela deve incidir sobre os papéis ativos: uma sessão pode ativar Cadastrador ou Homologador, mas não ambos conjuntamente. Isso corresponde à separação dinâmica de funções (DSD). Como cada permissão permanece associada ao seu papel independente, bloquear a ativação conjunta impede a reunião das duas funções na sessão. A exigência trata da sessão; não foi formulada como proibição de o mesmo usuário atuar nos dois papéis em ocasiões distintas.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. A separação estática atua na atribuição de usuários aos papéis e impediria a dupla habilitação que a política expressamente admite. Seria adequada se a organização proibisse o mesmo usuário de receber os dois papéis.
+B) Não atende. Para um usuário autorizado para ambos, a ativação de todos os papéis reuniria cadastro e homologação na sessão. Registrar separadamente as operações fornece rastreabilidade, mas não impede a combinação vedada.
+C) Não atende. A herança proposta faria o papel Homologador reunir as duas permissões. Sua ativação permitiria as duas funções na mesma sessão, contrariando a política. Reduzir o número de papéis atribuídos não separa as permissões herdadas.
+D) Atende. A separação dinâmica restringe os papéis ativados na sessão. O usuário pode receber os dois papéis, mas a sessão não pode mantê-los ativos conjuntamente, preservando a habilitação dupla sem a combinação proibida.
+E) Não atende. A proposta permite expressamente a ativação conjunta após as verificações. Autenticação bem-sucedida não afasta a restrição de autorização: é necessário impedir a combinação dos papéis na sessão.
+
+FONTES TÉCNICAS CONSULTADAS
+- Arquivo-base do conteúdo de conhecimentos específicos — Desenvolvimento de Sistemas.
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: Bloco GOVERNANÇA DE DADOS, AUTENTICAÇÃO E CONTROLE DE ACESSO.; observação final sobre legislação. Delimita o escopo conceitual, sem ferramenta específica.
+- Role Based Access Control — FAQs, NIST/CSRC.
+  URL: https://csrc.nist.gov/projects/role-based-access-control/faqs
+  Localizador: What Is Role Based Access Control?, regras 1–3; How Are Roles Different From Groups?; What Is The RBAC Standard?, Component summary. Sustenta acesso por papéis, distinção entre autenticação e autorização, ativação de subconjuntos e componentes SSD/DSD. Consulta em 26/11/2026.
+- The NIST Model for Role-Based Access Control: Towards a Unified Standard — Sandhu, Ferraiolo e Kuhn, 2000.
+  URL: https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=916402
+  Localizador: Seção 2.2, página 3 do PDF; seção 5.1, página 8 do PDF; seção 5.2, página 9 do PDF. Sustenta herança de permissões e diferenças entre restrições estáticas e dinâmicas. Preprint histórico, usado para conceitos, sem exigir sua taxonomia completa. Consulta em 26/11/2026.
+- Role Based Access Control for the World Wide Web — Barkley e colaboradores, NIST, 1997.
+  URL: https://csrc.nist.gov/files/pubs/conference/1997/10/10/role-based-access-control-for-the-world-wide-web/final/docs/barkley-et-al-97.pdf
+  Localizador: Seção Separation of Duty, página 11: exclusão na autorização dos papéis versus exclusão na seleção de papéis para a sessão. Trecho consultado na extração indexada da busca; fonte histórica complementar. Consulta em 26/11/2026.
+- RBAC Library — NIST/CSRC.
+  URL: https://csrc.nist.gov/projects/role-based-access-control/rbac-library
+  Localizador: Early Papers e RBAC Design & Implementation: índice usado para localizar os trabalhos primários. Página assinalada como projeto arquivado; não usada para alegar atualização normativa.
+- TRT da 4ª Região — Analista Judiciário, Área Apoio Especializado, Tecnologia da Informação — FCC, julho de 2022.
+  URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador: Caderno A14, Tipo 001, questão 33, página 8, e questão 34, página 8. Extração local consultada para cenário técnico curto, comando objetivo e cinco alternativas. Cópia secundária hospedada no Qconcursos.
+- Metadados das referências FCC disponíveis.
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador: Entrada trt4-2022-ti-a14-001: origem copia_secundaria, arquivo, URL, quantidade de páginas e hash registrado. Metadados consultados para declarar a proveniência, sem atribuir autenticidade oficial ao hash.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região, Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação, 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 33, página 8; questão 34, página 8, como exemplo complementar de alternativas técnicas.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; URL do PDF secundário e metadados em FONTES TÉCNICAS CONSULTADAS.
+- Característica observada: cenário técnico curto envolvendo um Analista, comando objetivo e cinco alternativas que completam a tarefa; afirmações técnicas comparáveis no exemplo complementar.
+- Aplicação nesta questão autoral: cenário de configuração de acesso com política explícita, comando positivo e cinco configurações alternativas. Conteúdo, regras e opções foram criados para esta questão.
+- Limites da referência: cópia secundária hospedada no Qconcursos, conforme fontes.json; não se afirma download direto da FCC nem integridade certificada oficialmente. Os exemplos sustentam a proposta editorial, não estabelecem frequência geral da banca nem substituem a documentação técnica. A auditoria de estilo permanece pendente.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura do perfil 15, das regras e do modelo de entrega, das orientações do SIM-001, do plano e do formato do simulado; confirmação do ID reservado, do número global 48 e do escopo no arquivo-base.
+- Documental: navegação nas fontes NIST e leitura das seções indicadas; conferência da questão 33 e da questão 34 na página 8 da extração local da prova FCC/TRT4/2022 e da origem registrada em fontes.json.
+- Analítica: avaliação das cinco configurações propostas quanto às duas exigências simultâneas da política: admitir dupla atribuição e impedir ativação conjunta. Somente uma satisfaz ambas.
+- Analítica: exame da herança de permissões e da distinção entre autenticação e autorização; leitura editorial para comparar alternativas e evitar título que antecipe o mecanismo exigido.
+- Estrutural: arquivos gerados a partir do mesmo objeto de dados e conferidos após gravação quanto a ID, versão, textos, cinco alternativas, cinco justificativas e correspondência do JSON com os TXT. Não houve execução de sistema RBAC nem criação de arquivos de testes.
+- O link de preprint da página bibliográfica NIST/2000 retornou indisponibilidade na primeira tentativa; o mesmo trabalho foi localizado e consultado no repositório tsapps.nist.gov, no endereço registrado. A indisponibilidade inicial não deixou lacuna essencial.
+
+PENDÊNCIAS
+Nenhuma de elaboração. Aguarda auditoria.
+

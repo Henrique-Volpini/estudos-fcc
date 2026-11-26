@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-07-0002",
+    "numero": 31,
+    "versao": "v01",
+    "enunciado": "Uma imagem Docker contém o arquivo /app/config.txt com o conteúdo original. Dois containers, denominados alfa e beta, são criados a partir dessa mesma imagem. Um analista altera com sucesso, somente em alfa, o conteúdo desse arquivo para ajustado. Depois, remove alfa e cria o container gama a partir da mesma imagem, sem executar build ou commit.\n\nNão existem montagens em /app, armazenamento compartilhado ou rotinas de inicialização que alterem o arquivo, e nenhuma outra escrita é realizada. Nessas condições, ao ler /app/config.txt em beta e gama, o resultado e sua explicação são:",
+    "alternativas": {
+      "A": "beta e gama apresentam original, porque a escrita ficou na camada gravável de alfa e não alterou a imagem usada pelos demais.",
+      "B": "beta apresenta original e gama apresenta ajustado, porque remover alfa incorpora suas alterações aos próximos containers criados a partir da imagem.",
+      "C": "beta apresenta ajustado e gama apresenta original, porque containers simultâneos compartilham a camada gravável enquanto permanecem em execução.",
+      "D": "beta e gama apresentam ajustado, porque modificar um arquivo preexistente atualiza a camada da imagem compartilhada por todos os containers.",
+      "E": "beta e gama deixam de encontrar o arquivo, porque remover alfa elimina o arquivo modificado também das camadas da imagem de origem."
+    }
+  },
+  {
+    "id": "BAN-DS-07-0003",
+    "numero": 32,
+    "versao": "v01",
+    "enunciado": "Em um cluster Kubernetes, um Service encaminha requisições a três Pods e está configurado com publishNotReadyAddresses: false. Cada Pod contém um único container, com política efetiva de reinício Always. Todos já concluíram a inicialização e estão prontos para atendimento.\n\nNo Pod identificado como p1, ocorrem, nesta ordem:\n\nI. As falhas consecutivas da readiness probe atingem o limiar configurado, enquanto a liveness probe continua tendo sucesso.\nII. Posteriormente, as falhas consecutivas da liveness probe também atingem o limiar configurado.\n\nConsiderando apenas os efeitos dessas probes e novas requisições encaminhadas pelo Service, as consequências de I e II são, respectivamente:",
+    "alternativas": {
+      "A": "o container de p1 é reiniciado; p1 é apenas retirado do atendimento pelo Service, sem reinício por falha de vivacidade.",
+      "B": "p1 continua elegível para novas requisições pelo Service; o kubelet encerra e reinicia o container de p1.",
+      "C": "p1 deixa de atender novas requisições pelo Service; o reinício do container depende de a readiness probe voltar a ter sucesso.",
+      "D": "p1 é excluído do cluster e substituído por outro Pod; apenas a condição de prontidão é alterada, sem reinício do container.",
+      "E": "p1 deixa de atender novas requisições pelo Service, sem reinício por essa falha; o kubelet encerra e reinicia o container de p1."
+    }
+  },
+  {
+    "id": "BAN-DS-08-0001",
+    "numero": 33,
+    "versao": "v01",
+    "enunciado": "Um processo dispõe de três quadros de memória física, inicialmente vazios, para suas páginas. Adota-se paginação por demanda: cada referência a uma página ausente provoca uma falta, cujo tratamento carrega somente a página solicitada. Quando os três quadros estão ocupados, substitui-se a página cujo último acesso ocorreu há mais tempo, conforme a política LRU.\n\nTodas as referências são leituras válidas; não há antecipação de carregamento nem remoções por outras causas. Considere, na ordem indicada, a sequência de números de páginas:\n\n2, 3, 2, 1, 4, 2, 3, 4, 1, 2, 5, 2.\n\nIncluindo as faltas que utilizam os quadros inicialmente vazios, o número total de faltas de página é",
+    "alternativas": {
+      "A": "4.",
+      "B": "5.",
+      "C": "7.",
+      "D": "8.",
+      "E": "9."
+    }
+  },
+  {
+    "id": "BAN-DS-08-0002",
+    "numero": 34,
+    "versao": "v01",
+    "enunciado": "Em uma aplicação, duas threads executam repetidamente operações que exigem os mutexes R e S, cada um com um único detentor. Em uma execução, T1 mantém R e está bloqueada à espera de S, enquanto T2 mantém S e está bloqueada à espera de R. Cada thread só libera seus mutexes depois de obter ambos e concluir a operação. Não há timeouts, cancelamentos nem liberação forçada de mutexes.\n\nPara futuras execuções, iniciadas com os mutexes livres, propõe-se que ambas adquiram sempre R antes de S, sem alterar a política de escolha entre threads que disputam um mutex.\n\nConsidere as afirmações:\n\nI. O estado observado caracteriza deadlock entre T1 e T2.\nII. A ordem de aquisição proposta impede a espera circular envolvendo R e S.\nIII. A ordem de aquisição proposta, por si só, garante ausência de starvation na disputa pelos mutexes.\n\nEstá correto o que se afirma em",
+    "alternativas": {
+      "A": "I, apenas.",
+      "B": "I e II, apenas.",
+      "C": "I e III, apenas.",
+      "D": "II e III, apenas.",
+      "E": "I, II e III."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0001",
+    "numero": 35,
+    "versao": "v01",
+    "enunciado": "Dois switches de camada 2, S1 e S2, estão interligados por um único enlace trunk IEEE 802.1Q. As VLANs 10, 20 e 99 estão criadas, ativas e permitidas no trunk. A VLAN nativa é a 99 nas duas extremidades e seus quadros são transmitidos sem tag. A estação H1 está ligada a uma porta de acesso da VLAN 10 em S1; em S2, H2 está em uma porta de acesso da VLAN 10 e H3, em uma porta de acesso da VLAN 20. Todas as portas estão encaminhando tráfego, sem filtros ou mecanismos de supressão, e não há roteamento entre VLANs.\n\nH1 envia um quadro Ethernet de dados com endereço de destino broadcast. Considerando a passagem desse quadro pelo trunk e sua entrega às estações de S2, ocorre transmissão",
+    "alternativas": {
+      "A": "com tag de VID 99 no trunk e entrega apenas a H2.",
+      "B": "com tag de VID 10 no trunk e entrega a H2 e H3.",
+      "C": "com tag de VID 20 no trunk e entrega apenas a H3.",
+      "D": "com tag de VID 10 no trunk e entrega apenas a H2.",
+      "E": "sem tag no trunk e entrega apenas a H2."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0002",
+    "numero": 36,
+    "versao": "v01",
+    "enunciado": "Um Analista deve dividir o bloco IPv4 10.48.12.0/24 em sub-redes de mesmo tamanho. Cada sub-rede deve oferecer, no mínimo, 25 endereços atribuíveis a interfaces, reservando um endereço para identificar a rede e outro para broadcast. Para reduzir o desperdício, será adotado o prefixo mais longo que atenda a essa quantidade.\n\nUma estação receberá o endereço 10.48.12.77. A máscara, o endereço de rede e o endereço de broadcast da sub-rede dessa estação são, correta e respectivamente,",
+    "alternativas": {
+      "A": "255.255.255.224 — 10.48.12.64 — 10.48.12.95.",
+      "B": "255.255.255.240 — 10.48.12.64 — 10.48.12.79.",
+      "C": "255.255.255.192 — 10.48.12.64 — 10.48.12.127.",
+      "D": "255.255.255.224 — 10.48.12.64 — 10.48.12.94.",
+      "E": "255.255.255.224 — 10.48.12.32 — 10.48.12.63."
+    }
+  },
+  {
+    "id": "BAN-DS-09-0003",
+    "numero": 37,
+    "versao": "v01",
+    "enunciado": "Em um sistema autônomo, o roteador R1 executa OSPFv2 e BGP-4. Para um prefixo interno P, há somente dois caminhos OSPF, ambos intra-área: por R2, com custo 10 de R1 a R2 e custo 20 de R2 até P; por R3, com custo 5 de R1 a R3 e custo 40 de R3 até P. Os custos informados são os da direção de R1 para P.\n\nPara outro prefixo, externo, Q, R1 dispõe somente das rotas BGP X e Y, ambas elegíveis e com NEXT_HOP alcançável. A política local já definiu seus graus de preferência, representados por LOCAL_PREF: X tem valor 200 e AS_PATH com três sistemas autônomos; Y tem valor 100 e AS_PATH com um sistema autônomo. Considere o processo de decisão da RFC 4271, sem critérios adicionais de fabricante.\n\nO próximo salto selecionado pelo OSPF para P e a rota selecionada pelo BGP para Q são, respectivamente,",
+    "alternativas": {
+      "A": "R3 e Y.",
+      "B": "R2 e Y.",
+      "C": "R2 e X.",
+      "D": "R3 e X.",
+      "E": "R2 e R3, em caminhos de igual custo, e X."
+    }
+  },
+  {
+    "id": "BAN-DS-10-0001",
+    "numero": 38,
+    "versao": "v01",
+    "enunciado": "Uma central de monitoramento consulta um roteador por SNMPv2c, utilizando OIDs numéricos em mensagens GetRequest. O roteador devolve os valores solicitados, mas a central ainda não dispõe do módulo MIB do fabricante. Um analista importa para a central esse módulo, compatível com os objetos implementados no roteador. Sobre os papéis dos componentes e o efeito dessa importação, é correto afirmar:",
+    "alternativas": {
+      "A": "A central atua como gerente, e a importação do módulo passa a habilitar os objetos correspondentes no agente do roteador.",
+      "B": "A central atua como agente, e o roteador assume o papel de gerente ao devolver os valores pedidos nas consultas.",
+      "C": "A central atua como gerente, e o módulo fornece definições para interpretar os objetos cujos valores são obtidos do agente.",
+      "D": "A central atua como gerente, e o módulo passa a fornecer os valores atuais dos objetos sem novas consultas ao roteador.",
+      "E": "O roteador atua como agente, e a importação faz suas respostas enviarem nomes simbólicos dos objetos em lugar dos OIDs."
+    }
+  },
+  {
+    "id": "BAN-DS-10-0002",
+    "numero": 39,
+    "versao": "v01",
+    "enunciado": "Um servidor Apache HTTP Server 2.4, em Linux, utiliza os trechos abaixo, nesta ordem, e não possui outros hosts virtuais:\n\nListen 80\nDocumentRoot \"/srv/www/base\"\n\n<VirtualHost *:80>\n    ServerName portal.intra.example\n    ServerAlias *.intra.example\n    DocumentRoot \"/srv/www/site-a\"\n</VirtualHost>\n\n<VirtualHost *:80>\n    ServerName relatorios.intra.example\n    DocumentRoot \"/srv/www/site-b\"\n</VirtualHost>\n\nOs três diretórios contêm um arquivo status.txt legível e autorizado para acesso HTTP. O servidor atende diretamente esses arquivos estáticos, sem regras adicionais de mapeamento ou redirecionamento.\n\nDuas requisições HTTP/1.1 independentes são recebidas no endereço 192.0.2.10, porta 80:\n\nI. GET /status.txt, com Host: relatorios.intra.example\nII. GET /status.txt, com Host: externo.example\n\nOs arquivos servidos em I e II são, respectivamente,",
+    "alternativas": {
+      "A": "/srv/www/site-b/status.txt e /srv/www/site-a/status.txt.",
+      "B": "/srv/www/site-b/status.txt e /srv/www/base/status.txt.",
+      "C": "/srv/www/site-a/status.txt e /srv/www/base/status.txt.",
+      "D": "/srv/www/site-a/status.txt e /srv/www/site-a/status.txt.",
+      "E": "/srv/www/site-b/status.txt e /srv/www/site-b/status.txt."
+    }
+  },
+  {
+    "id": "BAN-DS-11-0001",
+    "numero": 40,
+    "versao": "v01",
+    "enunciado": "Uma aplicação web integra um provedor compatível com OAuth 2.0 e OpenID Connect 1.0. Ela precisa reconhecer o usuário autenticado pelo provedor e consultar uma API de saldos conforme as permissões concedidas. No fluxo adotado, a aplicação recebe um ID Token e um Access Token, este destinado à API. Para atender às duas finalidades, a equipe deve",
+    "alternativas": {
+      "A": "validar o Access Token como comprovante padronizado do login do usuário e apresentar o ID Token à API para autorizar a consulta.",
+      "B": "verificar apenas a assinatura do ID Token, dispensando as verificações de emissor, audiência e expiração, e apresentar o Access Token à API.",
+      "C": "validar o ID Token para reconhecer a autenticação do usuário e apresentar o Access Token à API, que deve validar o acesso e as permissões aplicáveis.",
+      "D": "tratar o ID Token e o Access Token como intercambiáveis, pois a emissão para o mesmo usuário faz com que ambos expressem as mesmas permissões.",
+      "E": "exigir que o Access Token seja um JWT e o ID Token seja opaco, pois esses formatos são obrigatoriamente definidos pelo OAuth 2.0."
+    }
+  }
+]

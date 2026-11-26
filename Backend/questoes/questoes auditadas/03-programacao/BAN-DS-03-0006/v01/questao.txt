@@ -1,0 +1,13 @@
+ID: BAN-DS-03-0006
+Versão: v01
+Matéria: Programação
+Tópico: Orientação a objetos e responsabilidade de classes
+
+ENUNCIADO
+Em um sistema bancário, a classe CalculadoraTarifa calcula tarifas, gera relatórios em PDF e grava resultados no banco. As regras de cálculo, o leiaute dos relatórios e a forma de armazenamento são alterados por demandas independentes. Para aplicar o princípio da responsabilidade única, a organização mais adequada é
+
+A) mover os três métodos para uma classe utilitária estática, mantendo nela cálculo, geração de PDF e gravação.
+B) criar uma subclasse para cada formato de relatório, mantendo em cada subclasse o cálculo e o acesso ao banco.
+C) definir uma interface com os três métodos e exigir que toda implementação realize cálculo, PDF e armazenamento.
+D) extrair cálculo, geração do PDF e persistência para componentes distintos, que colaborem por interfaces.
+E) tornar privados os métodos de PDF e gravação, mantendo as três tarefas na classe de cálculo.

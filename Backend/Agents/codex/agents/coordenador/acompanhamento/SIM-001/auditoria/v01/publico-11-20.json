@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-03-0004",
+    "numero": 11,
+    "versao": "v01",
+    "enunciado": "Considere o programa em C11:\n\n#include <stdio.h>\n\nint main(void) {\n    int v[] = {3, 5, 7, 9};\n    int *p = v + 1;\n    *(p + 1) = *p + v[0];\n    printf(\"%d %d\", v[2], *(p - 1));\n    return 0;\n}\n\nA sequência exibida por printf é",
+    "alternativas": {
+      "A": "7 3",
+      "B": "8 3",
+      "C": "8 5",
+      "D": "10 3",
+      "E": "8 7"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0005",
+    "numero": 12,
+    "versao": "v01",
+    "enunciado": "Um desenvolvedor executou o código abaixo em PHP 8.2:\n\n<?php\n$codigo = \"42\";\n$numero = 42;\necho ($codigo == $numero ? \"S\" : \"N\");\necho ($codigo === $numero ? \"S\" : \"N\");\n\nQual é o resultado da execução?",
+    "alternativas": {
+      "A": "É exibido SN.",
+      "B": "É exibido SS.",
+      "C": "É exibido NS.",
+      "D": "É exibido NN.",
+      "E": "É lançado TypeError ao comparar a string com o inteiro."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0006",
+    "numero": 13,
+    "versao": "v01",
+    "enunciado": "Em um sistema bancário, a classe CalculadoraTarifa calcula tarifas, gera relatórios em PDF e grava resultados no banco. As regras de cálculo, o leiaute dos relatórios e a forma de armazenamento são alterados por demandas independentes. Para aplicar o princípio da responsabilidade única, a organização mais adequada é",
+    "alternativas": {
+      "A": "mover os três métodos para uma classe utilitária estática, mantendo nela cálculo, geração de PDF e gravação.",
+      "B": "criar uma subclasse para cada formato de relatório, mantendo em cada subclasse o cálculo e o acesso ao banco.",
+      "C": "definir uma interface com os três métodos e exigir que toda implementação realize cálculo, PDF e armazenamento.",
+      "D": "extrair cálculo, geração do PDF e persistência para componentes distintos, que colaborem por interfaces.",
+      "E": "tornar privados os métodos de PDF e gravação, mantendo as três tarefas na classe de cálculo."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0007",
+    "numero": 14,
+    "versao": "v01",
+    "enunciado": "Considere o programa Java 21 abaixo:\n\npublic class Exemplo {\n    public static void main(String[] args) {\n        int divisor = 0;\n        try {\n            int valor = 12 / divisor;\n            System.out.print(\"T\");\n        } catch (ArithmeticException ex) {\n            System.out.print(\"C\");\n        } finally {\n            System.out.print(\"F\");\n        }\n        System.out.print(\"S\");\n    }\n}\n\nExecutando main, a sequência de caracteres exibida é",
+    "alternativas": {
+      "A": "TFS",
+      "B": "CFS",
+      "C": "CF",
+      "D": "FS",
+      "E": "CS"
+    }
+  },
+  {
+    "id": "BAN-DS-04-0001",
+    "numero": 15,
+    "versao": "v01",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela agencia possui a coluna id como chave primária, e a tabela conta possui as colunas id, chave primária, e agencia_id. Considere somente os seguintes registros:\n\nagencia\nid\n10\n20\n30\n\nconta\nid | agencia_id\n1  | 10\n2  | 10\n3  | 20\n\nUm analista executou:\n\nSELECT a.id, COUNT(*) AS linhas, COUNT(c.id) AS contas\nFROM agencia AS a\nLEFT JOIN conta AS c ON c.agencia_id = a.id\nGROUP BY a.id\nORDER BY a.id;\n\nNa linha em que a.id é igual a 30, os valores das colunas linhas e contas são, respectivamente,",
+    "alternativas": {
+      "A": "0 e 0.",
+      "B": "0 e 1.",
+      "C": "1 e 0.",
+      "D": "1 e 1.",
+      "E": "3 e 0."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0002",
+    "numero": 16,
+    "versao": "v01",
+    "enunciado": "No PostgreSQL 15, uma tabela classificacao possui as colunas id, chave primária, setor e pontos, todas não nulas. Seus registros são:\n\nid | setor | pontos\n1  | N     | 90\n2  | N     | 90\n3  | N     | 70\n4  | S     | 80\n5  | S     | 60\n\nConsidere a consulta:\n\nSELECT id,\n       RANK() OVER (PARTITION BY setor ORDER BY pontos DESC) AS posicao\nFROM classificacao\nORDER BY id;\n\nOs valores de posicao retornados para os ids de 1 a 5, nessa ordem, são",
+    "alternativas": {
+      "A": "1, 2, 3, 1 e 2.",
+      "B": "1, 1, 2, 1 e 2.",
+      "C": "1, 1, 4, 3 e 5.",
+      "D": "1, 1, 3, 1 e 2.",
+      "E": "2, 2, 1, 2 e 1."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0003",
+    "numero": 17,
+    "versao": "v01",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela conta contém inicialmente a linha (id = 7, saldo = 1000). Duas sessões executam a seguinte sequência, sem outras operações concorrentes:\n\n1. A inicia uma transação com isolamento READ COMMITTED e consulta o saldo da conta 7, obtendo 1000.\n2. B inicia outra transação e atualiza esse saldo para 1300, mas ainda não executa COMMIT.\n3. A executa um segundo SELECT saldo FROM conta WHERE id = 7.\n4. B executa COMMIT.\n5. A executa um terceiro SELECT saldo FROM conta WHERE id = 7, ainda na transação iniciada no passo 1.\n\nA não faz alterações nos dados, e seus SELECTs não contêm FOR UPDATE nem FOR SHARE. Nesse cenário, o comportamento esperado é:",
+    "alternativas": {
+      "A": "O segundo e o terceiro SELECTs de A retornam 1300.",
+      "B": "O segundo SELECT de A retorna 1000, e o terceiro retorna 1300.",
+      "C": "O segundo e o terceiro SELECTs de A retornam 1000.",
+      "D": "O segundo SELECT de A aguarda o COMMIT de B; depois, ambos retornam 1300.",
+      "E": "O segundo SELECT de A retorna 1000, e o terceiro é abortado por detectar uma leitura não repetível."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0004",
+    "numero": 18,
+    "versao": "v01",
+    "enunciado": "Uma relação em primeira forma normal é representada por:\n\nALOCACAO(cod_empregado, cod_projeto, nome_empregado, horas)\n\nSua única chave candidata é (cod_empregado, cod_projeto). Considere as dependências funcionais:\n\ncod_empregado -> nome_empregado\n(cod_empregado, cod_projeto) -> horas\n\nNão há outras dependências funcionais além das decorrentes dessas e da chave. Para eliminar a dependência parcial indicada e preservar a associação de cada empregado com seus projetos e respectivas horas, a decomposição adequada é:",
+    "alternativas": {
+      "A": "EMPREGADO(cod_empregado, nome_empregado) e ALOCACAO(cod_empregado, cod_projeto, horas).",
+      "B": "EMPREGADO(cod_empregado, horas) e PROJETO(cod_projeto, nome_empregado).",
+      "C": "EMPREGADO(cod_empregado, cod_projeto, nome_empregado) e HORAS(cod_empregado, cod_projeto, horas).",
+      "D": "PROJETO(cod_projeto, horas) e EMPREGADO(cod_empregado, nome_empregado).",
+      "E": "ALOCACAO(cod_empregado, cod_projeto) e CADASTRO(cod_empregado, nome_empregado, horas)."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0005",
+    "numero": 19,
+    "versao": "v01",
+    "enunciado": "Em um banco PostgreSQL 15, a tabela movimento possui as colunas agencia e valor, ambas não nulas, e contém somente os registros:\n\nagencia | valor\nA       | 40\nA       | 70\nB       | 50\nC       | 30\nC       | 60\n\nConsidere:\n\nWITH totais AS (\n    SELECT agencia, SUM(valor) AS total\n    FROM movimento\n    GROUP BY agencia\n)\nSELECT COUNT(*) AS quantidade, SUM(total) AS soma\nFROM totais\nWHERE total >= 90;\n\nOs valores retornados nas colunas quantidade e soma são, respectivamente,",
+    "alternativas": {
+      "A": "5 e 250.",
+      "B": "3 e 250.",
+      "C": "2 e 110.",
+      "D": "1 e 110.",
+      "E": "2 e 200."
+    }
+  },
+  {
+    "id": "BAN-DS-04-0006",
+    "numero": 20,
+    "versao": "v01",
+    "enunciado": "Uma equipe precisa investigar conexões entre clientes, contas e dispositivos. A consulta predominante parte de um dispositivo e percorre sucessivamente suas ligações para localizar clientes conectados por caminhos com quantidade variável de etapas. Considerando os modelos de dados em nível conceitual, aquele mais diretamente orientado à representação desses vínculos e à realização dessas travessias é o modelo",
+    "alternativas": {
+      "A": "orientado a documentos.",
+      "B": "chave-valor.",
+      "C": "de colunas largas.",
+      "D": "de grafos.",
+      "E": "dimensional em estrela."
+    }
+  }
+]

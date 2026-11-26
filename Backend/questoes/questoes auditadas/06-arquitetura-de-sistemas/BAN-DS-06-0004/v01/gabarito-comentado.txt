@@ -1,0 +1,34 @@
+ID: BAN-DS-06-0004
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Identificar o desenho que preserva os modelos e explicita a integração entre eles segundo DDD.
+
+RESOLUÇÃO
+O contexto delimita onde um modelo e seus termos são aplicáveis. Os significados e as regras apresentados justificam modelos próprios para Relacionamento e Cobrança. A troca de informações exige explicitar seus pontos de contato e as correspondências entre conceitos. A mesma pessoa pode ser representada nos dois modelos sem impor significado único ao termo Cliente.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende: preserva a coerência de cada modelo e explicita a integração entre os contextos, inclusive as traduções necessárias.
+B) Não atende: impõe um significado único aos estados de Cliente, contrariando os significados distintos que o cenário exige preservar.
+C) Não atende: camadas técnicas organizam responsabilidades, mas essa divisão não delimita os dois modelos de negócio descritos.
+D) Não atende: a fronteira de aplicabilidade de um modelo não corresponde à identidade de uma de suas instâncias.
+E) Não atende: a separação física dos bancos não resolve a diferença semântica; as correspondências na integração ainda precisam ser definidas.
+
+FONTES TÉCNICAS E DOCUMENTAIS CONSULTADAS
+- Microsoft Azure Architecture Center — Use domain analysis to model microservices | https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis | Atualização de 25/02/2026; seções Introduction e Define bounded contexts: linguagem por contexto, representações distintas da mesma entidade, limites de aplicação do modelo e mapa com relacionamentos e pontos de integração. Página aberta e lida por navegação em 26/11/2026; principal documentação técnica integralmente legível usada na conferência de A–E.
+- Eric Evans — Domain-Driven Design Reference: Definitions and Pattern Summaries | https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf | Edição de março de 2015; seções Bounded Context, página impressa 2, e Context Map, página impressa 29. Trechos primários consultados na extração indexada do próprio endereço pela busca web; a abertura direta do PDF retornou HTTP 403. Sustenta a delimitação da validade do modelo e as traduções explícitas entre modelos.
+- Martin Fowler — Bounded Context | https://martinfowler.com/bliki/BoundedContext.html | 15/01/2014; parágrafos sobre modelos distintos e conceitos compartilhados. Leitura complementar consultada; a conferência técnica apoia-se na documentação Microsoft integralmente legível e nos trechos primários indexados de Eric Evans indicados acima.
+- Programa de conhecimentos específicos — Arquitetura de Sistemas | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | Bloco ARQUITETURA DE SISTEMAS, linhas 92–99; observação final sobre legislação, linhas 213–217. Nenhuma norma jurídica é cobrada nesta questão.
+- FCC — TRT4/2022 — Tecnologia da Informação — A14, tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt | Página 8, questão 32; origem secundária conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json. Referência de formato.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 32; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 8 ===; PDF local homônimo; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação nesta questão autoral: Contextualização técnica seguida de cinco afirmações que concorrem como solução. O exemplo FCC fornece contexto de gerenciamento de configuração; esta questão substitui integralmente o conteúdo por cenário autoral de duas equipes e seus modelos, com requisitos explícitos.
+- Limites da referência: Exemplo editorial de uma prova de 2022. A cópia foi obtida no Qconcursos, conforme fontes.json; não se afirma download da FCC ou integridade oficial certificada. O exemplo não demonstra frequência de cobrança nem valida os conceitos técnicos atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: página Microsoft Use domain analysis to model microservices aberta e lida por navegação em 26/11/2026, sobretudo Introduction e Define bounded contexts. Consulta complementar aos trechos indexados de Evans, às explicações de Fowler e à referência FCC local. O PDF de Evans não foi lido integralmente: a abertura direta retornou HTTP 403; as páginas 2 e 29 foram identificadas somente na extração indexada das seções indicadas. A solução não depende exclusivamente dessa extração. Analítica: conferidas as diferenças entre fronteira de modelo, camada técnica, instância e banco físico. Nenhuma aplicação ou serviço foi executado.
+
+PENDÊNCIAS
+Nenhuma.

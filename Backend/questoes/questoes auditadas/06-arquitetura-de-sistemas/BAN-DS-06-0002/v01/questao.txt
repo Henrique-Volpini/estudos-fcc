@@ -1,0 +1,13 @@
+ID: BAN-DS-06-0002
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: Integração orientada a eventos
+
+ENUNCIADO
+Um serviço de relatórios recebe eventos de contratos celebrados e incrementa um acumulado em seu banco de dados local. O intermediário de mensagens oferece entrega pelo menos uma vez, com confirmação manual; uma reentrega conserva o identificador do evento. O processo consumidor pode falhar e reiniciar entre quaisquer duas etapas. O banco local oferece transações e restrições de unicidade, mas não há transação distribuída com o intermediário. Para que cada evento produza seu efeito no acumulado uma única vez, mesmo após reinícios, o consumidor deve
+
+A) confirmar a entrega ao intermediário antes de incrementar o acumulado e registrar o identificador, contando com a reentrega para recuperar falhas no banco.
+B) incrementar o acumulado em uma transação e registrar o identificador em outra, confirmando a entrega ao intermediário somente após concluir as duas transações.
+C) registrar o identificador em uma transação e incrementar o acumulado em outra, descartando as entregas cujos identificadores já estejam registrados no banco.
+D) registrar o identificador com unicidade e incrementar o acumulado na mesma transação local; confirmar após o commit e, nas reentregas, suprimir o efeito já registrado.
+E) conservar os identificadores processados em um cache em memória, incrementar o acumulado no banco e confirmar a entrega ao intermediário após concluir a atualização.

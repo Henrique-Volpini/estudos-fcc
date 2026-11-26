@@ -1,0 +1,1521 @@
+=== PAGINA 1 ===
+I N S T R U Ç Õ E S
+A
+C
+D E
+-
+Verifiquese estecaderno:
+- correspondeasua opçãodecargo.
+- contém70 questões, numeradasde1a70.
+Caso contrário,reclameaofiscaldasalaumoutro caderno.
+Não serãoaceitasreclamaçõesposteriores.
+-
+ParacadaquestãoobjetivaexisteapenasUMAresposta certa.
+-
+Vocêdevelercuidadosamentecadaumadas questões eescolheraresposta certa.
+-
+Essa respostadevesermarcadanaFOLHADE RESPOSTAS quevocêrecebeu.
+VOCÊ DEVE:
+-
+procurar, naFOLHADERESPOSTAS, onúmerodaquestãoquevocêestárespondendo.
+-
+verificarno cadernodeprovaqualaletra(A,B,C,D,E) daresposta quevocêescolheu.
+-
+marcaressa letranaFOLHADERESPOSTAS, conformeo exemplo:
+-
+Marqueas respostas das questões objetivas primeiro alápis edepois cubracomcanetaesferográficadetintapreta.
+-
+Marque apenasumaletraparacadaquestão,maisdeumaletraassinaladaimplicaráanulaçãodessa questão.
+-
+Responda atodasasquestões.
+-
+Não serápermitidaqualquerespéciedeconsulta, nemo uso demáquinacalculadora.
+-
+Vocêteráo totalde4horas e30minutospararesponder atodas as questões epreencheraFolha deRespostas.
+-
+Ao términodaprovadevolvaestecadernodeprova aoaplicador, juntamentecomsua Folha deRespostas.
+-
+Proibidaadivulgaçãoouimpressãoparcialou totaldapresenteprova. DireitosReservados.
+ATENÇÃO
+Conhecimentos Gerais
+Conhecimentos Específicos
+P
+R
+O
+V
+A
+TRIBUNAL REGIONAL FEDERAL DA 4 REGIÃO
+a
+Concurso Público para provimento de cargos de
+Analista Judiciário - Área Apoio Especializado
+Especialidade Informática
+FUNDAÇÃO CARLOS CHAGAS
+Março/2007
+____________________________________________________
+ Caderno de Prova, Cargo I, Tipo 001
+ 0000000000000000
+ 00001−001−001
+Nº de Inscrição
+        MODELO
+  
+
+
+=== PAGINA 2 ===
+2
+TRF4R-Conhecimentos-Gerais2
+CONHECIMENTOS GERAIS
+Atenção:
+As questões de números 1 a 15 referem-se ao texto
+que segue.
+Verdades e máscaras
+Alguém já disse que, sem o auxílio de algum tipo de
+“máscara” em nosso comportamento, não sobreviveríamos
+como sociedade. A verdade clara e radical de cada um, se
+exibida e praticada sem qualquer mediação, seria  insuportável.
+As chamadas “regras de convívio” supõem, sempre, algum
+“mascaramento”. Todos os nossos atos devem passar pelo filtro
+da conveniência, pelos padrões da “educação”, sob pena de
+serem tachados de insanos e violentamente repudiados.
+Num poema famoso, Manuel Bandeira confessou estar
+seduzido pelo lirismo libertário que reconhece nos bêbados e
+nos loucos. O poeta sabe que, nessas personagens, o impulso
+de liberdade já fugiu ao controle da razão, e se proclama sem
+qualquer senso de responsabilidade. São, por isso, inspirações
+para uma arte libertária, ou mesmo libertina: o poema está,
+aliás, num livro chamado Libertinagem. De fato, nada mais
+temível, quando se está lúcido, que a presença de um louco ou
+de um bêbado: sabe-se que deles se pode esperar tudo, que
+estão imunes a qualquer necessidade de  mascaramento.
+Podem vir deles as verdades que ninguém costuma dizer. Algo
+semelhante, aliás, ocorre com a língua espontânea, sem freios,
+das crianças pequenas.
+Isso esclarece um pouco a razão das tensões que
+costumam nos tomar em nosso cotidiano. Vivemos buscando a
+verdade e a sinceridade absolutas, detestamos a hipocrisia e a
+falsidade; no entanto, ao mesmo tempo, temos que admitir e
+reprovar, em nós mesmos, a fraqueza de cada máscara que
+nos seja conveniente. Vivemos, assim, sobre esse fio de
+navalha entre a verdade e o disfarce. Queremos a qualquer
+custo um amigo verdadeiro, “que nos olhe nos olhos”; no
+entanto, sabemos o quanto é difícil aceitar sem mágoa a
+eventual reprimenda que, com toda justiça, o amigo venha a
+nos lançar ao rosto.
+Queremos ser, ao mesmo tempo, polidos e solidamente
+honestos. Mas a polidez acaba sendo, muitas vezes, um verniz
+artificial, que envergonha a nossa sede de honestidade.
+Acredita-se que tais contradições tenham nascido com as
+primeiras instituições humanas. Regidos pela necessidade de
+viver 
+socialmente, 
+estabelecemos 
+normas 
+de 
+conduta,
+demarcamos fronteiras para as iniciativas pessoais. Sem isso,
+talvez não sobrevivêssemos como espécie, e certamente não
+sofreríamos o peso da nossa própria humanidade.
+(Calógeras do Nascimento)
+1.
+As específicas tensões e contradições humanas que
+constituem o tema desse  texto devem-se ao fato de que
+(A)
+os homens não conseguem dissimular publicamente
+seus sentimentos pessoais mais verdadeiros.
+(B)
+as mais legítimas paixões humanas são experi-
+mentadas tão-somente quando as revestimos de
+máscaras.
+(C)
+o hábito do mascaramento faz-nos esquecer o
+desejo de sermos inteiramente verdadeiros.
+(D)
+o desejo pela verdade absoluta e a necessidade de
+mascaramento ocorrem simultaneamente.
+(E)
+as instituições sociais impedem que cada indivíduo
+exercite livremente sua inclinação para a hipocrisia.
+2.
+A origem do “mascaramento” está apontada na seguinte
+passagem do texto:
+(A)
+(...) confessou estar seduzido pelo lirismo libertário
+que reconhece nos bêbados e nos loucos.
+(B)
+Vivemos buscando a verdade e a sinceridade
+absolutas, detestamos a hipocrisia e a falsidade (...)
+(C)
+Mas a polidez acaba sendo, muitas vezes, um verniz
+artificial, que envergonha a nossa sede de hones-
+tidade.
+(D)
+São, por isso, inspirações para uma arte libertária,
+ou mesmo libertina (...)
+(E)
+A verdade clara e radical de cada um, se exibida e
+praticada sem qualquer mediação, seria insu-
+portável.
+_________________________________________________________
+3.
+Considere as seguintes afirmações:
+I.
+No primeiro parágrafo as expressões “regras de
+convívio” e padrões da “educação” aludem a formas
+de mascaramento.
+II.
+No segundo parágrafo, a referência a Manuel
+Bandeira lembra que, em sua poesia, a aspiração à
+liberdade tende ao absoluto.
+III.
+No terceiro parágrafo, a expressão “que nos olhe
+nos olhos” tem sentido análogo ao da expressão a
+fraqueza de cada máscara.
+Em relação ao texto, está correto o que se afirma em
+(A)
+I e II, somente.
+(B)
+I e III, somente.
+(C)
+II e III, somente.
+(D)
+II, somente.
+(E)
+I, II e III.
+_________________________________________________________
+4.
+Considerando-se o contexto, traduz-se corretamente o
+sentido de uma expressão do texto em:
+(A)
+sem qualquer mediação (1o parágrafo) = sem
+possibilidade de veiculação.
+(B)
+imunes a qualquer necessidade (2o parágrafo) =
+alheios aos próprios desejos.
+(C)
+regidos pela necessidade (4o parágrafo) = subor-
+dinados ao imperativo.
+(D)
+um verniz artificial (4o parágrafo) = a verdade ex-
+posta.
+(E)
+demarcamos fronteiras para as iniciativas pessoais
+(4o parágrafo) = asseguramo-nos da liberdade de
+nossos empreendimentos.
+_________________________________________________________
+5.
+A verdade clara e radical de cada um, se exibida e
+praticada sem qualquer mediação, seria insuportável.
+No contexto da frase acima, a partícula sublinhada tem
+sentido equivalente ao de
+(A)
+muito embora.
+(B)
+uma vez.
+(C)
+ainda quando seja.
+(D)
+à medida que.
+(E)
+à proporção que seja.
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 3 ===
+TRF4R-Conhecimentos-Gerais2
+3
+6.
+Há plena observância das normas de concordância verbal
+na frase:
+(A)
+Reconhece-se nos loucos e nos bêbados aqueles
+impulsos que fogem a qualquer tipo de masca-
+ramento.
+(B)
+Vivemos assaltados por tensões, e não são sem
+razão que elas se associam às máscaras de que nos
+valemos.
+(C)
+Acabaram encontrando repercussões nos versos de
+Manuel Bandeira o desassombro libertário dos
+loucos e dos bêbados.
+(D)
+Na linguagem das crianças encontra-se, como na
+dos loucos e na dos bêbados, índices de uma
+irresponsabilidade que faz inveja aos adultos.
+(E)
+Entre os profissionais de quem mais se exige
+sistemático uso de máscaras está o responsável
+pelo atendimento do público.
+_________________________________________________________
+7.
+A seguinte construção NÃO admite transposição para a
+voz passiva:
+(A)
+Isso esclarece um pouco a razão das tensões (...)
+(B)
+(...)  detestamos a hipocrisia e a falsidade (...)
+(C)
+Vivemos, assim, sobre esse fio de navalha entre a
+verdade e o disfarce.
+(D)
+As chamadas “regras de convívio” supõem, sempre,
+algum “mascaramento”.
+(E)
+(...) que nos olhe nos olhos (...)
+_________________________________________________________
+8.
+Está correto o emprego do elemento sublinhado na frase:
+(A)
+Manuel Bandeira mostrou-se sensível pela desabu-
+sada liberdade dos loucos e dos bêbados.
+(B)
+Deve-se admitir de que a ausência de qualquer
+máscara é insuportável na vida social.
+(C)
+As tensões em que o nosso cotidiano é assaltado
+talvez fossem ainda maiores sem a providência das
+máscaras.
+(D)
+Não se sabe o que seria de nós se liberássemos os
+impulsos a que não costumamos dar vazão.
+(E)
+O fio da navalha, a cujo poder de corte ninguém
+duvida, figura o risco e a estreiteza do espaço em
+que é tão penoso se equilibrar.
+_________________________________________________________
+9.
+Estão adequadamente articulados os tempos e os modos
+verbais na frase:
+(A)
+Caso viéssemos a desfrutar da mesma liberdade a
+que se entregam as crianças, seríamos consi-
+derados irresponsáveis e pueris.
+(B)
+No caso de virmos a desfrutar da mesma liberdade a
+que se entreguem as crianças, teríamos sido
+considerados irresponsáveis e pueris.
+(C)
+Se desfrutássemos da mesma liberdade que se
+tolera nas crianças, não terá faltado quem nos venha
+a acusar de irresponsáveis e pueris.
+(D)
+Jamais desfrutaremos da liberdade de compor-
+tamento das crianças, pois sabíamos que não faltará
+quem nos acusasse de irresponsáveis e pueris.
+(E)
+Não desfrutaríamos da liberdade das crianças
+porque tememos, de fato, que fôramos considerados
+irresponsáveis e pueris.
+10.
+É preciso corrigir, em sua estrutura, a redação da
+seguinte frase:
+(A)
+A liberdade que se considera admissível no compor-
+tamento de uma criança pequena provoca constran-
+gimento e irritação, quando exercida por um adulto.
+(B)
+Quando se busca a verdade e a sinceridade abso-
+lutas, ocorre que a necessidade da máscara des-
+mente este nosso anseio, sendo que por isso
+surgem as tensões.
+(C)
+A necessidade de ser polido e o desejo de ser
+inteiramente franco são concomitantes, provocando
+contradições íntimas em quase todos os indivíduos.
+(D)
+No âmbito da poesia e da arte em geral, a liberdade
+de criação parece não ter limites, mas a linguagem
+estética também se submete a critérios e con-
+venções.
+(E)
+É verdade que o critério da conveniência é um
+parâmetro necessário em nossa vida social, mas
+algumas normas de etiqueta são ridiculamente
+artificiais.
+_________________________________________________________
+11.
+O verbo indicado entre parênteses deverá flexionar-se
+numa forma do singular para preencher corretamente a
+lacuna da frase:
+(A)
+Será preciso ler Libertinagem para que se  ......
+(reconhecer), na poesia de Bandeira, suas formas
+“libertinas”.
+(B)
+A literatura muito freqüentemente explora esse tipo
+de conflito que  ......  (costumar) interiorizar as
+pessoas de todas as épocas.
+(C)
+A razão de muitas tensões que nos assaltam  ......
+(estar) nas oscilações provocadas pelos sucessivos
+mascaramentos.
+(D)
+Se cada norma de conduta a que nos  ......
+(submeter) fosse avaliada como inteiramente justa,
+seríamos menos tensos.
+(E)
+......  (acabar) por equilibrar-se num fio de navalha os
+que oscilam entre as verdades e as máscaras.
+_________________________________________________________
+12.
+A ocorrência do sinal de crase justifica-se apenas na
+frase:
+(A)
+Há máscaras que envergamos com relativa natura-
+lidade e àquelas de que nos socorremos com grande
+constrangimento.
+(B)
+As máscaras à que recorrem os atores lembram as
+que também nós envergamos em nosso dia-a-dia.
+(C)
+Quando assistimos à uma peça teatral, intensi-
+ficamos nossa percepção das verdades simuladas.
+(D)
+As mentiras por vezes não se distinguem das
+verdades, sobretudo quando se passa a considerar
+àquelas como absolutamente necessárias.
+(E)
+O autor não se refere a um amigo qualquer, mas
+àquele a quem pedimos que nos olhe nos olhos.
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 4 ===
+4
+TRF4R-Conhecimentos-Gerais2
+13.
+Indica-se corretamente, entre parênteses, o sentido da
+palavra ou expressão sublinhada na frase:
+(A)
+Queremos ser, ao mesmo tempo, polidos e
+solidamente honestos. (esporadicamente)
+(B)
+(...) sob pena de serem tachados de insanos e
+violentamente repudiados. (qualificados)
+(C)
+(...) estão imunes a qualquer necessidade de
+mascaramento. (afeitos)
+(D)
+Isso esclarece um pouco a razão das tensões que
+costumam 
+nos 
+tomar 
+em 
+nosso 
+cotidiano.
+(sobremaneira)
+(E)
+Acredita-se que tais contradições tenham nascido
+com as primeiras instituições humanas. (cujas)
+_________________________________________________________
+14.
+Atente para as seguintes frases:
+I.
+O poeta Manuel Bandeira referido no texto é um
+artista que preza a liberdade absoluta.
+II.
+Tanto os loucos como os bêbados são apontados
+como exemplos de uma irracionalidade que dispen-
+sa o artifício das máscaras.
+III.
+Não fossem as máscaras quem sabe quantos
+inimigos não faríamos a cada dia?
+Há exigência do emprego de vírgula(s) em
+(A)
+I, II e III.
+(B)
+I e II, somente.
+(C)
+II e III, somente.
+(D)
+I e III, somente.
+(E)
+III, somente.
+_________________________________________________________
+15.
+Está correta a grafia de todas as palavras em:
+(A)
+Não é possível dissuadir alguém do uso da máscara,
+pois tal iniciativa só poderia advir de quem pudesse
+dispensar toda e qualquer dissimulação.
+(B)
+Se sobrevem alguma frustação no uso de máscaras,
+maior ela será para quem se abstenha de as utilizar.
+(C)
+A cortezia nem sempre é fraldulenta; felizmente, há
+muitas pessoas que prezam a delicadeza como um
+valor autêntico e inestimável.
+(D)
+A verdade não tem um valor venal, que se apresse
+em moeda conhecida; não consta no herário público,
+nem é passível de transmissão hereditária.
+(E)
+Quem menospresa as máscaras alheias está, na
+verdade, censurando a incompetência de quem as
+manuzeia junto ao rosto.
+16.
+A tabela abaixo permite exprimir os valores de certas
+grandezas em relação a um valor determinado da mesma
+grandeza tomado como referência. Os múltiplos e
+submúltiplos decimais das unidades derivadas das
+unidades do Sistema Internacional de Unidades (SI)
+podem ser obtidos direta ou indiretamente dos valores
+apresentados e têm seus nomes formados pelo emprego
+dos prefixos indicados.
+(Fonte: Quadro Geral de Unidades de Medida, 2a ed. INMETRO.
+Brasília, 2000)
+NOME
+SÍMBOLO
+FATOR PELO QUAL A
+UNIDADE É MULTIPLICADA
+tera
+T
+1012 = 1 000 000 000 000
+giga
+G
+109 = 1 000 000 000
+mega
+M
+106 = 1 000 000
+quilo
+k
+103 = 1 000
+hecto
+h
+102 = 100
+deca
+da
+10 = 10
+deci
+d
+10−1 = 0,1
+centi
+c
+10−2 = 0,01
+mili
+m
+10−3 = 0,001
+micro
+µ
+10−6 = 0,000 001
+nano
+n
+10−9 = 0,000 000 001
+pico
+p
+10−12 = 0,000 000 000 001
+Assim, por exemplo, se a unidade de referência fosse o
+grama 
+(g), 
+teríamos 
+35 mg = 35.10−3 g = 0,035 g.
+Considerando o byte (b) como unidade de referência, a
+expressão 
+Mb
+ 
+25
+,0
+)
+b
+ 
+(0,12
+Gb)
+ 
+005
+,0
+(
+µ
+×
+ é equivalente a
+(A)
+2,4 µb
+(B)
+2,4 cb
+(C)
+0,24 mb
+(D)
+0,24 nb
+(E)
+0,024 dab
+_________________________________________________________
+17.
+Considerando que, para todo número inteiro n, as
+potências da unidade imaginária i podem ser calculadas
+através das expressões  i4n = 1; i4n+1 = i; i4n+2 = −1 e
+i4n+3 = −i, é correto afirmar que o valor da soma
+i−3 + i11 + i207 + i418 é
+(A)
+   0
+(B)
+   i
+(C)
+− i
+(D)
+− 1 − i
+(E)
+− 1 + i
+_________________________________________________________
+18.
+Sabe-se que 10 máquinas, todas com a mesma
+capacidade operacional, são capazes de montar 100
+aparelhos em 10 dias, se funcionarem ininterruptamente
+10 horas por dia. Nessas condições, o número de
+aparelhos que poderiam ser montados por 20 daquelas
+máquinas, em 20 dias de trabalho e 20 horas por dia  de
+funcionamento ininterrupto, é
+(A)
+100
+(B)
+200
+(C)
+400
+(D)
+600
+(E)
+800
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 5 ===
+TRF4R-Conhecimentos-Gerais2
+5
+19.
+Três analistas judiciários − Aurélio, Benício e Custódio −
+foram incumbidos de implantar um sistema informatizado
+de processamento de informações. Sabe-se que, indivi-
+dualmente, Aurélio levaria 3 horas para cumprir tal tarefa,
+enquanto que, sozinho, Benício levaria 6 horas. Então,
+considerando que, juntos, os três gastaram 1 hora e
+30 minutos para implantar o sistema, quantas horas
+Custódio, sozinho, levaria para implantá-lo?
+(A)
+  2
+(B)
+  4
+(C)
+  6
+(D)
+  8
+(E)
+10
+_________________________________________________________
+20.
+Um comerciante comprou 94 microcomputadores de um
+mesmo tipo e, ao longo de um mês, vendeu todos eles.
+Pela venda de 80 desses micros ele recebeu o que havia
+pago pelos 94 que havia comprado e cada um dos
+14 micros restantes foi vendido pelo mesmo preço de
+venda de cada um dos outros 80. Relativamente ao custo
+dos 94 micros, a porcentagem de lucro do comerciante
+nessa transação foi de
+(A)
+17,5%
+(B)
+18,25%
+(C)
+20%
+(D)
+21,5%
+(E)
+22%
+_________________________________________________________
+21.
+Observe que, na sucessão de figuras abaixo, os números
+que foram colocados nos dois primeiros triângulos
+obedecem a um mesmo critério.
+21
+40
+13
+5
+23
+42
+17
+7
+19
+?
+7
+3
+Para que o mesmo critério seja mantido no triângulo da
+direita, o número que deverá substituir o ponto de
+interrogação é
+(A)
+32
+(B)
+36
+(C)
+38
+(D)
+42
+(E)
+46
+_________________________________________________________
+22.
+Três pessoas − Amália, Beatriz e Cássia − aguardam
+atendimento em uma fila, em posições sucessivas.
+Indagadas sobre seus nomes, a que ocupa a primeira
+posição entre as três diz: “Amália está atrás de mim”; a
+que está na posição intermediária diz: “ Eu sou a Beatriz”;
+a que ocupa a terceira posição diz: “Cássia é aquela que
+ocupa a posição intermediária”. Considerando que Amália
+só fala a verdade, Beatriz mente algumas vezes e Cássia
+só fala mentiras, então a primeira, a segunda e a terceira
+posições são ocupadas respectivamente por
+(A)
+Cássia, Amália e Beatriz.
+(B)
+Cássia, Beatriz e Amália.
+(C)
+Amália, Beatriz e Cássia.
+(D)
+Beatriz, Amália e Cássia.
+(E)
+Beatriz, Cássia e Amália.
+23.
+Em cada linha do quadro abaixo as três figuras foram
+desenhadas de acordo com determinado padrão.
+?
+Segundo esse mesmo padrão, a figura que deve substituir
+o ponto de interrogação é
+(A)
+(B)
+(C)
+(D)
+(E)
+_________________________________________________________
+24.
+Considere que a seqüência seguinte é formada pela
+sucessão natural dos números inteiros e positivos, sem
+que os algarismos sejam separados.
+       1 2 3 4 5 6 7 8 9 1 0 1 1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 2 0 ...
+O algarismo que deve aparecer na 276a posição dessa
+seqüência é
+(A)
+9
+(B)
+8
+(C)
+6
+(D)
+3
+(E)
+1
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 6 ===
+6
+TRF4R-Conhecimentos-Gerais2
+25.
+Cinco amigos − Américo, Basílio, Carlito, Dante e Eliseu −
+se cotizaram para comprar um presente de casamento,
+contribuindo 
+com 
+R$ 50,00, 
+R$ 60,00, 
+R$ 80,00,
+R$ 100,00 e R$ 150,00, não necessariamente na ordem
+dada de seus nomes. Sabe-se que:
+− suas profissões são analista judiciário, professor,
+advogado, dentista e médico; suas idades são 25, 28,
+30, 32 e 33 anos, não respectivamente;
+− o analista judiciário, que não é Basílio, tem 30 anos e
+contribuiu com R$ 50,00;
+−
+o advogado contribuiu com menos de R$ 150,00;
+−
+Dante, que não tem 30 anos, contribuiu com R$ 60,00;
+− aquele que tem 32 anos não é advogado e nem
+dentista;
+− Eliseu tem 33 anos, é médico e contribuiu com mais de
+R$ 60,00;
+− Américo é dentista e contribuiu com R$ 80,00;
+− aquele que tem 25 anos não é professor e nem
+advogado;
+− Nem Basílio e nem Carlito têm 32 anos.
+Com base nessas informações, é correto afirmar que
+(A)
+Américo tem 28 anos.
+(B)
+Basílio contribuiu com R$ 150,00.
+(C)
+Carlito é analista judiciário.
+(D)
+Dante tem 25 anos.
+(E)
+Eliseu contribuiu com R$ 100,00.
+_________________________________________________________
+26.
+Ficou demonstrado que "X", servidor público federal, em
+razão do exercício irregular de suas atribuições, causou
+danos a "Y", proprietário de um estabelecimento
+comercial, que sofreu prejuízos patrimoniais e morais.
+Nesse caso, é certo que "X"
+(A)
+não deve responder perante a Fazenda Pública, em
+ação regressiva ou direta.
+(B)
+responderá, também, perante a Fazenda Pública,
+em ação regressiva.
+(C)
+estará sujeito à responsabilidade administrativa,
+excluída a civil, porque absorvida pela primeira.
+(D)
+não responderá por qualquer falta, ou ação regres-
+siva, visto que a responsabilidade é sempre do
+Estado.
+(E)
+está sujeito à responsabilidade civil, mas as sanções
+não poderão cumular-se com as administrativas ou
+penais.
+27.
+No que diz respeito ao provimento de cargos públicos, é
+certo que
+(A)
+a nacionalidade brasileira e a quitação com as
+obrigações militares não são consideradas requisitos
+básicos para a investidura em cargo público.
+(B)
+a investidura em cargo ou função pública, com ven-
+cimento pago pelos cofres públicos ocorre com o
+exercício, que deverá ser comunicado à autoridade
+no prazo de cinco dias.
+(C)
+as instituições de pesquisas científica e tecnológica
+federais poderão prover seus cargos com técnicos e
+cientistas estrangeiros, de acordo com as normas e
+procedimentos da Lei no 8.112/90.
+(D)
+para as pessoas portadoras de deficiência serão
+reservadas até dez por cento das vagas oferecidas
+no concurso público para provimento dos respecti-
+vos cargos.
+(E)
+a posse em outro cargo inacumulável está prevista,
+também, como uma das formas de provimento de
+cargos ou de funções públicas.
+_________________________________________________________
+28.
+Considere as situações dos servidores públicos abaixo:
+I.
+“T”, servidora pública federal, afastou-se da sede
+em caráter transitório para outro ponto do território
+nacional. Portanto, deverá receber, além das
+passagens, a indenização para despesas extraor-
+dinárias, a exemplo da locomoção urbana.
+II.
+“F”, servidora federal, utiliza meio próprio de loco-
+moção para a execução de serviços externos, por
+força das atribuições próprias do cargo. Assim, de-
+verá receber indenização para despesas dessa
+natureza.
+Nesses casos, à “T” e à “F” serão concedidas, respecti-
+vamente,
+(A)
+diárias e indenização de transporte.
+(B)
+adicional por serviço extraordinário e ajuda de custo.
+(C)
+indenização de transporte e adicional de atividade
+penosa.
+(D)
+adicional por serviço extraordinário e diárias.
+(E)
+ajuda de custo e adicional de atividade penosa.
+_________________________________________________________
+29.
+São requisitos específicos dos atos administrativos:
+(A)
+objeto; formalidade; argumentação; parte capaz e
+natureza jurídica.
+(B)
+conteúdo; 
+licitude; 
+fundamentação; 
+forma 
+e
+finalidade.
+(C)
+fundamentação; 
+natureza 
+jurídica; 
+formalidade;
+competência e objetividade.
+(D)
+competência; objeto; forma; finalidade e motivo.
+(E)
+agente capaz; argumentação; forma, finalidade e
+licitude.
+_________________________________________________________
+30.
+É da essência do ato administrativo típico, conforme dou-
+trina dominante, a
+(A)
+universalidade.
+(B)
+bilateralidade.
+(C)
+multilateralidade.
+(D)
+complexidade.
+(E)
+unilateralidade.
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 7 ===
+TRF4R-Anal.Jud-Informatica-I
+7
+CONHECIMENTOS ESPECÍFICOS
+31.
+Um microcomputador, quando é ligado, tem a contagem
+de memória realizada por um conjunto de instruções
+(A)
+por meio de jumpers da placa-mãe.
+(B)
+localizadas na memória RAM.
+(C)
+localizadas no processador.
+(D)
+do sistema operacional.
+(E)
+localizadas na memória ROM.
+_________________________________________________________
+32.
+Os registros de diferentes relações, quando armazenados
+no mesmo arquivo e no mesmo bloco, de forma que uma
+operação de entrada/saída busque os registros de todas
+as relações, caracteriza a organização de arquivos
+(A)
+Hashing.
+(B)
+Clustering.
+(C)
+Heap.
+(D)
+Distribuída.
+(E)
+Seqüencial.
+_________________________________________________________
+33.
+No Windows Explorer, para mover um arquivo de um
+disquete para um HD, ou vice-versa, pode-se arrastar o
+arquivo pressionando simultaneamente a tecla
+(A)
+Alt.
+(B)
+Tab.
+(C)
+Shift.
+(D)
+Crtl.
+(E)
+F1.
+_________________________________________________________
+34.
+NÃO é um estilo da proteção de tela “Objetos voadores
+3D” no Windows XP:
+(A)
+Esguicho.
+(B)
+Logotipo do Windows.
+(C)
+Bandeira com textura.
+(D)
+Encanamento 3D.
+(E)
+Explosão.
+_________________________________________________________
+35.
+As funções parecidas com os atalhos do Windows são
+realizadas no sistema Linux por meio de
+(A)
+links simbólicos.
+(B)
+quick launcher.
+(C)
+hard links.
+(D)
+taskbar.
+(E)
+prompt.
+_________________________________________________________
+36.
+Dentre os comandos básicos do sistema Linux, os
+executáveis dos comandos su, tar, e cat são armazenados
+normalmente no diretório
+(A)
+/lib.
+(B)
+/etc.
+(C)
+/bin.
+(D)
+/boot.
+(E)
+/home.
+37.
+A autenticação e a especificação do protocolo LDAP são
+realizadas por uma operação básica denominada
+(A)
+search.
+(B)
+bind.
+(C)
+start.
+(D)
+add.
+(E)
+extended.
+_________________________________________________________
+38.
+LDAP é um protocolo leve para acessar serviços de
+diretório que roda
+I.
+sobre o protocolo TCP/IP;
+II.
+sobre conexões de transferência de serviços;
+III.
+como uma interface para o X.500.
+Está correto o que consta em
+(A)
+I, apenas.
+(B)
+I e II, apenas.
+(C)
+I e III, apenas.
+(D)
+I, II e III.
+(E)
+II e III, apenas.
+_________________________________________________________
+39.
+Na arquitetura do servidor Tomcat, o container Web é
+denominado
+(A)
+Catalina.
+(B)
+Coyote.
+(C)
+Jasper.
+(D)
+WAR.
+(E)
+JK.
+_________________________________________________________
+40.
+O ciclo de vida dos demais componentes ou serviços do
+servidor Jboss é comandado pelo
+(A)
+Kernel Jboss.
+(B)
+Container EJB.
+(C)
+Service JMS.
+(D)
+Service JTA.
+(E)
+Microkernel JMX.
+_________________________________________________________
+41.
+Um arranjo de disco com distribuição paralela baseada em
+blocos, sem qualquer redundância, refere-se ao RAID de
+nível
+(A)
+0.
+(B)
+1.
+(C)
+2.
+(D)
+3.
+(E)
+4.
+_________________________________________________________
+42.
+No processo de análise de riscos, determinar a proba-
+bilidade de um risco acontecer e as conseqüências dos
+problemas causados por ele são resultados da fase de
+(A)
+Identificação dos Riscos.
+(B)
+Avaliação dos Riscos.
+(C)
+Projeção dos Riscos.
+(D)
+Monitoração dos Riscos.
+(E)
+Gerenciamento dos Riscos.
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 8 ===
+8
+TRF4R-Anal.Jud-Informatica-I
+43.
+Um link a um servidor de FTP chamado server.com, com o
+usuário FULANO e a senha FLN001, que mostre o texto
+LINK, pode ser criado com a tag:
+(A)
+<A FTP=”server.com@FULANO:FLN001”>LINK</A FTP>
+(B)
+<LINK TO “ftp://server.com:FULANO@FLN001”>LINK</>
+(C)
+<FTP LINK=”ftp://server.com”  USER=”FULANO”
+PWD=”FLN001”>LINK</FTP>
+(D)
+<A HREF=”ftp://FULANO@FLN001:server.com/”>LINK</A>
+(E)
+<A LINK=”ftp://server.com”  USER=”FULANO”
+PWD=”FLN001”>LINK</A>
+_________________________________________________________
+44.
+A alocação dinâmica de endereços aos clientes de uma
+rede pode ser realizada por um servidor do tipo
+(A)
+SMTP.
+(B)
+DHCP.
+(C)
+WINS.
+(D)
+POP3.
+(E)
+DNS.
+_________________________________________________________
+45.
+Em comunicação de dados, o RS-232 é um padrão que
+define
+(A)
+a velocidade da placa de rede.
+(B)
+a quantidade de periféricos sem fio que podem
+operar em uma mesma banda.
+(C)
+a direção do fluxo de informação no servidor de
+rede.
+(D)
+quais códigos são utilizados para formar cada
+caractere.
+(E)
+as funções dos sinais e as conexões físicas usadas
+pela interface serial.
+_________________________________________________________
+46.
+O protocolo SNMP é composto por
+(A)
+console de gerenciamento das estações de rede.
+(B)
+protocolos Ethernet, TCP/IP e UDP.
+(C)
+gerenciadores de placa de rede, modem e links.
+(D)
+console e agentes de gerenciamento e a MIB.
+(E)
+gerenciadores de hubs, roteadores e switches.
+_________________________________________________________
+47.
+Em um banco de dados relacional, o conjunto de infor-
+mações contidas em determinado momento é denominado
+(A)
+esquema.
+(B)
+entidade.
+(C)
+instância.
+(D)
+relacionamento.
+(E)
+modelo de dados.
+48.
+Um atributo que representa uma abstração de outros
+atributos é do tipo
+(A)
+multivalorado.
+(B)
+composto.
+(C)
+agregado.
+(D)
+coeso.
+(E)
+acoplado.
+_________________________________________________________
+49.
+As declarações SQL que permitem aos administradores
+do sistemas conceder aos usuários privilégios e auto-
+rizações para acessar as tabelas, bem como retirar os
+privilégios e autorizações concedidos, são, respectiva-
+mente,
+(A)
+CREATE e DELETE.
+(B)
+GIVING e DELETE.
+(C)
+GRANT e REVOKE.
+(D)
+GRANT e CLUSTER.
+(E)
+GIVING e REVOKE.
+_________________________________________________________
+50.
+Considere as funções SQL:
+I.
+AVG.
+II.
+MAX.
+III.
+COUNT.
+São conhecidas como funções agregadas, que produzem
+um único valor a partir de uma coluna inteira de dados, as
+que constam em
+(A)
+III, apenas.
+(B)
+I e II, apenas.
+(C)
+I e III, apenas.
+(D)
+II e III, apenas.
+(E)
+I, II e III.
+_________________________________________________________
+51.
+Um modo de extrair conhecimento, a partir de um banco
+de 
+dados, 
+procurando 
+correlações 
+nos 
+dados 
+e
+apresentando hipótese promissora ao usuário, para
+análise e consideração, é conhecido por
+(A)
+data mining.
+(B)
+associação reflexiva.
+(C)
+data warehouse.
+(D)
+agregação.
+(E)
+decomposição sem perdas.
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 9 ===
+TRF4R-Anal.Jud-Informatica-I
+9
+52.
+Um critério fundamental em um data warehouse é que
+(A)
+as definições de dados não sejam amplas.
+(B)
+ele seja concentrado no processamento de dados
+centralizado.
+(C)
+os dados existam em um único nível de granu-
+laridade.
+(D)
+os dados sejam considerados não voláteis e sejam
+carregados em massa.
+(E)
+não sejam permitidas análises hipotéticas.
+_________________________________________________________
+53.
+O plano genérico que pode ser empregado para nortear
+qualquer projeto de implantação de sistemas é
+(A)
+uma metodologia de desenvolvimento de sistemas.
+(B)
+uma modelagem conceitual de dados.
+(C)
+um CMP − método de caminho crítico.
+(D)
+um DFD − diagrama de fluxo de dados.
+(E)
+um gráfico de Gantt.
+_________________________________________________________
+54.
+Para um gerenciamento de projeto de informática bem
+sucedido,  a ordem de execução das atividades deve ser
+(A)
+planejamento, integração, organização, medição e
+revisão.
+(B)
+planejamento, organização, integração, medição e
+revisão.
+(C)
+organização, planejamento, integração, medição e
+revisão.
+(D)
+organização, planejamento, medição, integração e
+revisão.
+(E)
+planejamento, organização, medição, revisão e
+integração.
+_________________________________________________________
+55.
+Na UML, tem relação direta com o conceito de herança o
+relacionamento de
+(A)
+dependência.
+(B)
+agregação.
+(C)
+generalização.
+(D)
+composição.
+(E)
+associação binária.
+_________________________________________________________
+56.
+Na UML, a quantidade de objetos que podem ser
+conectados pela instância de uma associação é definida
+como
+(A)
+herança múltipla.
+(B)
+estereótipo.
+(C)
+polimorfismo.
+(D)
+especialização.
+(E)
+multiplicidade.
+57.
+Na fase Construção, prevista no Processo Unificado de
+desenvolvimento de software, deverá ser produzido o
+artefato
+(A)
+modelo de casos de uso.
+(B)
+protótipo arquitetural executável.
+(C)
+material de treinamento e documentação.
+(D)
+manuais de usuário completos.
+(E)
+descrição da arquitetura de software.
+_________________________________________________________
+58.
+NÃO é uma atividade da fase Concepção, prevista no
+Processo Unificado de desenvolvimento de software:
+(A)
+selecionar os componentes de software.
+(B)
+elaborar o escopo do projeto.
+(C)
+preparar o Plano de Negócios.
+(D)
+avaliar as arquiteturas candidatas.
+(E)
+preparar o ambiente do projeto.
+_________________________________________________________
+59.
+O elemento raiz que define o documento XML como uma
+mensagem SOAP é o
+(A)
+cabeçalho SOAP.
+(B)
+envelope SOAP.
+(C)
+body SOAP.
+(D)
+root SOAP.
+(E)
+documento SOAP.
+_________________________________________________________
+60.
+O nome da mensagem e os detalhes de protocolos para
+cada porta são definidos, na estrutura WSDL, pelo
+elemento:
+(A)
+<portType>
+(B)
+<message>
+(C)
+<definitions>
+(D)
+<types>
+(E)
+<binding>
+_________________________________________________________
+61.
+As situações em que se encontram os objetos num sis-
+tema e suas transições no ciclo de vida são representadas
+em um Diagrama de
+(A)
+Objeto-Relacionamento.
+(B)
+Máquina de Estados.
+(C)
+Hierarquia de Objetos.
+(D)
+Tipos de Objeto.
+(E)
+Eventos.
+MODELO − Caderno de Prova, Cargo I, Tipo 001
+
+
+=== PAGINA 10 ===
+10
+TRF4R-Anal.Jud-Informatica-I
+62.
+Em um projeto orientado a objeto, o método que ajuda a
+refinar grandes problemas em problemas menores, mais
+fáceis de serem resolvidos, aplica uma técnica de
+(A)
+modularização.
+(B)
+acoplamento.
+(C)
+decomposição.
+(D)
+continuidade.
+(E)
+projeção.
+_________________________________________________________
+63.
+Uma ferramenta usada especificamente para gerar
+páginas dinâmicas de HTML, baseada em programação
+Java, é
+(A)
+o WSDL.
+(B)
+o DTD.
+(C)
+a JCP.
+(D)
+a XSL.
+(E)
+o JSP.
+_________________________________________________________
+64.
+O compilador Java gera o byte-code, que se trata de um
+código
+(A)
+fonte de um programa Java.
+(B)
+de alto nível, para ser interpretado por uma máquina
+real.
+(C)
+tipo assembler, para ser interpretado por uma
+máquina virtual.
+(D)
+de máquina dependente de plataforma, para ser
+interpretado por uma estação SUN.
+(E)
+auxiliar para compilação dos servlets.
+_________________________________________________________
+65.
+Dois aperfeiçoamentos desenvolvidos pelo W3C, a fim de
+permitir que as páginas Web em HTML sejam melhor
+estruturadas: um que descreve o conteúdo Web de forma
+estruturada; e o outro que descreve a formatação de modo
+independente do conteúdo. Trata-se, respectivamente,
+das definições das linguagens
+(A)
+XML e XSL.
+(B)
+CSS e XML.
+(C)
+XSL e DOM.
+(D)
+XML e DTD.
+(E)
+DTD e CSS.
+_________________________________________________________
+66.
+Dados de fontes diversas podem ser integrados e con-
+vertidos para XML, o que se trata de uma característica
+possibilitada por meio de
+(A)
+editors (editores).
+(B)
+middle-tiers (servidores).
+(C)
+parsers (analisadores).
+(D)
+interfaces (API).
+(E)
+browsers (navegadores).
+67.
+Os requisitos específicos dos usuários, que sugerem os
+casos de testes que os colocarão à prova, são isolados
+por Ferramentas CASE de testes para
+(A)
+gerenciamento de testes.
+(B)
+aquisição de dados.
+(C)
+análise estática.
+(D)
+análise dinâmica.
+(E)
+avaliações transfuncionais.
+_________________________________________________________
+68.
+A estrutura do CMMI apresenta algumas diferenças em
+relação ao CMM:
+I.
+quanto aos níveis de maturidade, o foco do nível 2
+de maturidade dos dois modelos se concentram
+nas práticas relacionadas com a gerência de pro-
+jetos;
+II.
+na representação por estágios, a única diferença é
+a inclusão, no CMMI, da Área de Processo
+Measurement and Analysis, que no SW-CMM era
+uma característica comum;
+III.
+já para os demais níveis de maturidade, de modo
+resumido, as seguintes modificações foram intro-
+duzidas: no nível 3, duas novas PAs foram criadas
+− Risk Management e Decision Analysis and
+Resolution.
+Está correto o que consta em
+(A)
+II, apenas.
+(B)
+I e II, apenas.
+(C)
+I, apenas.
+(D)
+II e III, apenas.
+(E)
+I, II e III.
+_________________________________________________________
+69.
+Uma das técnicas utilizadas no PMBOK para Plane-
+jamento da Qualidade do Projeto é
+(A)
+Árvore de Decisão.
+(B)
+Análise de Tendência.
+(C)
+Diagramação de Pareto.
+(D)
+Benchmarking.
+(E)
+Inspeção.
+_________________________________________________________
+70.
+No 
+PMBOK, 
+os 
+Sistemas 
+de 
+Reconhecimento 
+e
+Recompensa são ferramentas integrantes da Gerência
+(A)
+dos Recursos Humanos do Projeto.
+(B)
+dos Riscos do Projeto.
+(C)
+das Comunicações do Projeto.
+(D)
+de Contratações do Projeto.
+(E)
+do Custo do Projeto.
+MODELO − Caderno de Prova, Cargo I, Tipo 001

@@ -1,0 +1,310 @@
+{
+  "simulado": "SIM-001",
+  "responsavel": "/root/auditor_pistas",
+  "perfil": "PISTAS_DE_RESPOSTA",
+  "data": "2026-11-26",
+  "fase": "Primeira leitura pública concluída e registrada antes de qualquer abertura de letra ou comentário de gabarito.",
+  "total": 50,
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0001",
+      "versao": "v01",
+      "observacao": "As cinco opções são continuações gramaticais regulares do comando em duas ações. A repetição de segmentos entre A, B, C e D compõe combinações de eventos; não há expressão que marque uma delas como resposta sem distinguir os eventos. E mantém a forma de duas ações. Nenhuma pista formal identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-01-0002",
+      "versao": "v01",
+      "observacao": "Todas as opções descrevem conjuntos de agências, carteiras e ligações, com construção paralela. Não há encaixe gramatical exclusivo nem rótulo de validade; o contraste entre configurações depende de interpretar multiplicidades. Nenhuma alternativa favorecida editorialmente.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-01-0003",
+      "versao": "v01",
+      "observacao": "As cinco opções têm o mesmo padrão de versão numérica. A informação sobre compatibilidade está no caso a interpretar e não apresenta número final ou exemplo resolvido. Nenhuma pista de forma identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-01-0004",
+      "versao": "v01",
+      "observacao": "Todas as alternativas são pares de conjuntos de itens, com a mesma pontuação e extensão semelhante. A descrição dos requisitos contém o material a classificar; não repete rótulo exclusivo de uma opção. Nenhuma vantagem formal identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-02-0001",
+      "versao": "v01",
+      "observacao": "As opções usam uniformemente três classificações com siglas entre parênteses. As atividades não trazem as siglas das respostas. Repetições de categorias entre opções são combinações do conteúdo cobrado e não marcas de correção.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-02-0002",
+      "versao": "v01",
+      "observacao": "A tabela fornece dados para cálculo, e todas as opções apresentam solução e diferença monetária no mesmo formato. Não há valor final calculado nem indicação editorial de menor custo. Nenhuma pista formal identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-02-0003",
+      "versao": "v01",
+      "observacao": "As cinco opções formulam classificação e justificativa em uma frase. Os contrastes entre prazos, etapas e tipos de compromisso fazem parte da análise solicitada. Menções a reinício, fornecedores externos e ampliação do prazo são alegações a julgar, sem defeito sintático que isole uma resposta; não se identificou marca de solução.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0001",
+      "versao": "v01",
+      "observacao": "Código e cinco listas de saída têm apresentação uniforme. Os nomes origem e copia descrevem os objetos do problema, sem variável que nomeie a resposta correta ou comentário com o resultado. Nenhuma alternativa favorecida por linguagem.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0002",
+      "versao": "v01",
+      "observacao": "Quatro alternativas são saídas e uma admite erro por ambiguidade; essa diferença corresponde a hipótese de comportamento da linguagem, sem redação que revele se ocorre. As cadeias base/derivada estão no código e nas combinações de saída por necessidade do problema.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0003",
+      "versao": "v01",
+      "observacao": "As alternativas são apenas valores inteiros, sem diferenças de redação, concordância ou detalhamento. Código sem comentário de saída ou marca de correção. Nenhuma pista formal identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0004",
+      "versao": "v01",
+      "observacao": "As opções são pares numéricos com padrão idêntico; o código não informa a saída em comentário ou identificador. Distinguir os pares exige acompanhar o programa, fora do escopo desta auditoria.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0005",
+      "versao": "v01",
+      "observacao": "Quatro opções de exibição e uma hipótese de exceção são apresentadas em frases completas. A hipótese de TypeError tem diferença de extensão justificada pelo tipo de resultado, sem marca editorial de correção. Nenhuma pista formal observada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0006",
+      "versao": "v01",
+      "observacao": "Todas as alternativas são propostas de organização com verbos no infinitivo. A opção que separa componentes contrasta com manutenção de tarefas nas outras, mas essa distinção constitui o princípio expressamente cobrado, e não um encaixe gramatical ou comentário acidental.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-03-0007",
+      "versao": "v01",
+      "observacao": "As cinco alternativas são sequências curtas de caracteres presentes nos comandos de impressão. Nenhuma sequência recebe comentário ou formatação singular; a distinção depende do fluxo do programa.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-04-0001",
+      "versao": "v01",
+      "observacao": "Cinco pares numéricos seguem a mesma estrutura. Nomes de colunas linhas/contas identificam agregações do código e não apresentam o resultado; nenhuma pista gramatical ou editorial identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-04-0002",
+      "versao": "v01",
+      "observacao": "As alternativas são sequências de cinco números, todas no mesmo formato. Dados de entrada e consulta não contêm comentário resolvido ou rótulo de saída correta. Não há pista formal.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-04-0003",
+      "versao": "v01",
+      "observacao": "As opções descrevem resultados e possíveis comportamentos de concorrência em períodos regulares. A alternativa com aborto é mais longa por descrever evento distinto, sem tratamento editorial privilegiado. O comando não exclui uma resposta apenas por concordância.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-04-0004",
+      "versao": "v01",
+      "observacao": "As cinco opções apresentam duas relações e seus atributos em notação uniforme. Repetições de nomes dos atributos são necessárias à decomposição a avaliar; nenhum nome ou comentário marca a configuração correta.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-04-0005",
+      "versao": "v01",
+      "observacao": "Todas as alternativas são pares de números no mesmo padrão. A consulta e os dados não incluem total final resolvido; não há alternativa singular por precisão, linguagem ou formatação.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-04-0006",
+      "versao": "v01",
+      "observacao": "Todas as opções são nomes de modelos que completam gramaticalmente o comando. A descrição de vínculos e travessias é a caracterização conceitual cobrada; não contém o nome de uma alternativa nem marca externa de resposta.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-05-0001",
+      "versao": "v01",
+      "observacao": "As cinco opções usam afirmações completas sobre repetição e semântica HTTP. A expressão mesmo conteúdo descreve o cenário; não apresenta um resultado resolvido. As diferenças entre efeito, resposta, cache e segurança são o objeto conceitual do item, sem pista de concordância.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-05-0002",
+      "versao": "v01",
+      "observacao": "As cinco opções apresentam permutações das mesmas mensagens. Os nomes inicio e fim aparecem no código como saídas e não como rótulos de alternativa; identificar a ordem depende de distinguir as formas de execução. Nenhuma marca ou explicação de resultado.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-05-0003",
+      "versao": "v01",
+      "observacao": "As opções combinam números romanos no mesmo padrão. As afirmações distinguem visibilidade do componente e do indicador, que constitui o conteúdo cobrado, sem denominação que indique uma combinação. O APENAS do comando aplica-se igualmente às opções.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-05-0004",
+      "versao": "v01",
+      "observacao": "Todas as opções usam dois parâmetros e configurações no mesmo formato. A intenção de consulta opcional legitimamente limita as soluções, mas ainda exige avaliar localização e obrigatoriedade de parâmetros; não há erro gramatical que isole uma alternativa.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-05-0005",
+      "versao": "v01",
+      "observacao": "Cinco documentos XML são exibidos sem comentário de validação ou marca editorial. Há diferenças de tamanho decorrentes de atributos e elementos a validar, não explicação singular. O menor documento não é favorecido por comprimento isolado.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-06-0001",
+      "versao": "v01",
+      "observacao": "As opções são organizações arquiteturais descritas com extensão e precisão próximas. A compatibilidade com núcleo, persistência substituível e adaptadores é o próprio juízo solicitado; correspondências com os requisitos não foram tratadas como vazamento. Nenhuma marca formal de resposta.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-06-0002",
+      "versao": "v01",
+      "observacao": "As cinco alternativas descrevem sequências de processamento, transações e confirmação. A opção que reúne operações em uma transação tem detalhes necessários ao comportamento proposto, sem comentário adicional de correção. Nenhum encaixe gramatical ou linguagem sem relação com o problema.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-06-0003",
+      "versao": "v01",
+      "observacao": "As alternativas são permutações dos mesmos três nomes técnicos. As descrições em português fornecem as necessidades a classificar, sem apresentar a sequência dos nomes; não há variação editorial favorecendo uma opção.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-06-0004",
+      "versao": "v01",
+      "observacao": "Todas as alternativas começam com propostas no infinitivo e detalham desenhos de modelos/contextos. Preservar significados é condição substantiva do problema; não há uma opção marcada por concordância, sigla exclusiva repetida ou anotação de solução.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-07-0001",
+      "versao": "v01",
+      "observacao": "As alternativas apresentam classificação e justificativa no mesmo formato. A expressão pronta para produção reaparece em uma justificativa, mas é central à distinção expressamente cobrada e não demonstra, sozinha, pista acidental. Não há marca de resposta.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-07-0002",
+      "versao": "v01",
+      "observacao": "As cinco alternativas combinam resultado de leitura com uma explicação causal. original e ajustado aparecem como conteúdos do arquivo e são distribuídos nas opções; não funcionam como nomes reveladores. A diferença da hipótese de desaparecimento é semanticamente pertinente ao cenário.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-07-0003",
+      "versao": "v01",
+      "observacao": "Todas as opções são pares de consequências das probes. Uma delas explicita ausência de reinício na primeira etapa e tem extensão maior, mas isso é precisão sobre as duas consequências, sem justificativa editorial extra ou construção exclusiva que denuncie a resposta.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-08-0001",
+      "versao": "v01",
+      "observacao": "As cinco opções são números de faltas, com formatação idêntica. A definição de política e as condições de carregamento compõem dados necessários à simulação, sem total calculado ou rótulo de alternativa.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-08-0002",
+      "versao": "v01",
+      "observacao": "As alternativas apresentam combinações de afirmações numeradas. A qualificação por si só na afirmação III faz parte da proposição a avaliar, não basta para identificá-la como falsa apenas pela linguagem. Nenhuma pista formal isolando combinação.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-09-0001",
+      "versao": "v01",
+      "observacao": "As opções são continuações uniformes com tag/sem tag e destinatários. Os identificadores de VLAN e de estações estão distribuídos como dados do cenário; não há repetição exclusiva, concordância ou marca que dispense o entendimento do encaminhamento.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-09-0002",
+      "versao": "v01",
+      "observacao": "Todas as opções apresentam máscara, rede e broadcast, com separadores e precisão numérica equivalentes. Diferenças em limites e tamanhos são o conteúdo do cálculo, sem resultado antecipado no enunciado ou marca de correção.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-09-0003",
+      "versao": "v01",
+      "observacao": "As opções são pares de próximo salto e rota. A alternativa com caminhos de igual custo é mais longa por apresentar hipótese de múltiplos caminhos, sem destaque que indique aceitação ou descarte. Os números de custos e preferências são dados a interpretar.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-10-0001",
+      "versao": "v01",
+      "observacao": "Todas as opções descrevem papéis e consequências da importação da MIB em frases completas. A definição de gerente/agente não é dada no comando; não há opção singular por concordância ou comentário de solução.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-10-0002",
+      "versao": "v01",
+      "observacao": "As cinco alternativas são pares de caminhos completos com estrutura e extensão similares. Nomes site-a/site-b/base são identificadores neutros da configuração e não rótulos de correção. Nenhuma pista formal.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-11-0001",
+      "versao": "v01",
+      "observacao": "As opções descrevem operações com os mesmos tokens em linguagem regular. O destino do Access Token é dado legítimo do cenário e ajuda a delimitar o uso solicitado; as distinções sobre validação e formatos são conceituais. Não há comentário público de resposta.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-11-0002",
+      "versao": "v01",
+      "observacao": "As alternativas combinam quatro afirmações no mesmo formato. Duas proposições usam basta e outras qualificam os mecanismos; essa diferença não prova pista acidental sem julgar propriedades criptográficas. Nenhuma alternativa marcada por gramática ou metadado.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-11-0003",
+      "versao": "v01",
+      "observacao": "Todas as opções formulam classificação e justificativa. A associação recuperável pela tabela é o dado definidor a interpretar; a repetição desse fato em uma justificativa não constitui vazamento por si. Não há tratamento editorial exclusivo.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-11-0004",
+      "versao": "v01",
+      "observacao": "As alternativas são medidas de correção descritas no infinitivo. Repetições de concatenação em propostas e a distinção entre parâmetros e identificadores correspondem ao problema de prevenção avaliado. Não há comentário, concordância ou rótulo que assinale uma opção.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-12-0001",
+      "versao": "v01",
+      "observacao": "As cinco opções são permutações dos três acrônimos, com formatação idêntica. As descrições de responsabilidades são os casos a classificar; nenhuma sigla exclusiva é antecipada no texto público.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-12-0002",
+      "versao": "v01",
+      "observacao": "As opções apresentam quantidade e mecanismo no mesmo formato. Adicionar/remover instâncias caracteriza o cenário e é parte do conceito cobrado; a diferença numérica exige dimensionamento. Nenhuma pista editorial ou resultado calculado.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-13-0001",
+      "versao": "v01",
+      "observacao": "As cinco alternativas apresentam sequência de comandos e justificativa. Nomes de comandos como abort e quit são parte da interface técnica a conhecer; sua semântica não foi tomada isoladamente como defeito de linguagem. Não há comentário no enunciado que dê a sequência final.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-14-0001",
+      "versao": "v01",
+      "observacao": "As cinco opções são pares de afirmações numeradas. A tabela e a descrição de CT03 são dados necessários para avaliar rastreabilidade e impacto; a presença de ligações não é anotação de correção de uma combinação. Nenhum realce ou encaixe gramatical exclusivo.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-15-0001",
+      "versao": "v01",
+      "observacao": "Todas as opções são propostas de configuração no infinitivo. Uma proposta reproduz a restrição de ativação de papéis, mas relacioná-la ao tipo de separação é a classificação conceitual solicitada, não uma indicação de resposta por metadado ou concordância.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-16-0001",
+      "versao": "v01",
+      "observacao": "As opções em português são justificativas que completam regularmente o comando. O texto inglês não contém tradução isolada correspondente a rótulo editorial; as diferenças exigem compreensão da passagem. Nenhuma pista formal identificada.",
+      "alternativaFavorecida": null
+    },
+    {
+      "id": "BAN-DS-16-0002",
+      "versao": "v01",
+      "observacao": "As cinco opções completam gramaticalmente o mesmo comando e repetem a expressão notificações por email. As conjunções distintas são o alvo de compreensão de Otherwise; nenhuma concordância ou repetição exclusiva seleciona uma delas.",
+      "alternativaFavorecida": null
+    }
+  ]
+}

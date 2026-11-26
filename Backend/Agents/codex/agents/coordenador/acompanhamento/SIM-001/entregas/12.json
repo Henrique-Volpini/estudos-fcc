@@ -1,0 +1,161 @@
+{
+  "elaborador": "12",
+  "responsavel": "/root/elaborador_12",
+  "questoes": [
+    {
+      "id": "BAN-DS-12-0001",
+      "numero": 44,
+      "materia": "Computação em nuvem",
+      "topico": "Modelos de serviço IaaS, PaaS e SaaS",
+      "versao": "v01",
+      "enunciado": "Uma instituição avalia três contratações de serviços em nuvem, com as seguintes características.\n\nI. A equipe provisiona máquinas virtuais e fica responsável pela instalação e atualização do sistema operacional convidado e pela implantação de suas aplicações; o provedor opera a infraestrutura física.\n\nII. A equipe implanta aplicação própria em ambiente de execução mantido pelo provedor, utilizando linguagens e bibliotecas por ele suportadas; controla a aplicação, mas não administra o sistema operacional subjacente.\n\nIII. As equipes usuárias acessam uma aplicação de gestão documental oferecida e mantida pelo provedor, limitando-se às configurações permitidas de uso, sem implantar código próprio.\n\nConsiderando os modelos de serviço definidos no NIST SP 800-145, as contratações I, II e III correspondem, correta e respectivamente, a:",
+      "alternativas": {
+        "A": "PaaS, IaaS e SaaS.",
+        "B": "SaaS, PaaS e IaaS.",
+        "C": "IaaS, SaaS e PaaS.",
+        "D": "IaaS, PaaS e SaaS.",
+        "E": "PaaS, SaaS e IaaS."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. I exige controle do sistema operacional convidado, próprio de IaaS; em II, a equipe recebe uma plataforma de execução, própria de PaaS. A classificação de III como SaaS está adequada.",
+        "B": "Não atende. I permite instalar o sistema operacional e aplicações, em vez de apenas usar uma aplicação pronta. III oferece uso de uma aplicação do provedor, sem provisionamento dos recursos fundamentais característico de IaaS. II foi classificada adequadamente.",
+        "C": "Não atende. II envolve implantação de aplicação própria em uma plataforma, e não uso da aplicação pronta do provedor. III corresponde a SaaS; configurações de uso permitidas não o transformam em PaaS. I foi classificada adequadamente.",
+        "D": "Atende. I mantém o sistema operacional convidado sob controle da instituição: IaaS. II fornece ambiente para implantar aplicação própria sem administrar esse sistema: PaaS. III fornece uma aplicação pronta do provedor: SaaS.",
+        "E": "Não atende. I corresponde a IaaS pelo controle do sistema operacional; II, a PaaS pela implantação de aplicação própria; III, a SaaS pelo uso de aplicação do provedor. As três posições foram trocadas."
+      },
+      "resolucao": "Em I, a instituição administra o sistema operacional convidado, o que caracteriza IaaS. Em II, administra sua aplicação implantada, enquanto o provedor administra o ambiente subjacente: PaaS. Em III, utiliza a aplicação do provedor com configurações de uso limitadas: SaaS. A sequência é IaaS, PaaS e SaaS. A operação da infraestrutura física pelo provedor, comum aos três arranjos, não distingue os modelos.",
+      "fontes": [
+        {
+          "titulo": "NIST SP 800-145 — The NIST Definition of Cloud Computing (setembro de 2011)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+          "localizador": "Seção 2, Essential Characteristics: Rapid elasticity (p. impressa 2; PDF p. 6) e Service Models: SaaS, PaaS e IaaS (pp. impressas 2–3; PDF pp. 6–7). Consulta por navegação em 26/11/2026.",
+          "sustenta": "Fronteiras de controle dos três modelos de serviço e ajuste de recursos à demanda como característica de elasticidade."
+        },
+        {
+          "titulo": "Microsoft Learn — Shared responsibility in the cloud",
+          "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+          "localizador": "In this article: IaaS, PaaS e SaaS; Division of responsibility, Responsibility matrix, linha Operating system. Atualização indicada: 24/08/2026; consulta por navegação em 26/11/2026.",
+          "sustenta": "Contraste entre administrar máquinas virtuais e sistemas operacionais, implantar aplicações em plataforma gerenciada e usar aplicações prontas. Os exemplos comerciais da fonte não são exigidos na questão."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 21, p. 6, e questão 53, p. 12; páginas marcadas na extração TXT. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "sustenta": "Organização editorial em correspondências ordenadas e alternativas paralelas; fonte secundária, sem certificação oficial de integridade."
+        }
+      ],
+      "autor": "/root/elaborador_12",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: NIST SP 800-145 e documentação oficial Microsoft acessados por navegação em 26/11/2026 para conferir as fronteiras de controle dos três modelos.",
+        "Analítica: classificadas separadamente as situações I, II e III e confrontadas as cinco sequências; apenas uma conserva as três correspondências.",
+        "Editorial: lidas as questões FCC 21 (p. 6) e 53 (p. 12) na extração local do caderno TRT4/2022 A14/001, com identificação da origem secundária em fontes.json.",
+        "Não houve execução de serviço em nuvem; a verificação técnica foi documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 21,
+          "pagina": 6,
+          "origem": "Cópia secundária hospedada no Qconcursos, consultada pela extração TXT local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.",
+          "caracteristicaAplicada": "O exemplo apresenta três descrições numeradas e pede a correspondência correta e respectiva a conceitos. Aplicou-se essa organização às três fronteiras de responsabilidade em serviços de nuvem, com redação e cenários autorais.",
+          "limites": "Referência editorial de uma prova específica; não demonstra frequência de formatos e não fundamenta a correção técnica atual. Cópia secundária do Qconcursos, sem afirmação de autenticação oficial de integridade."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 53,
+          "pagina": 12,
+          "origem": "Cópia secundária hospedada no Qconcursos, consultada pela extração TXT local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.",
+          "caracteristicaAplicada": "O exemplo de TI reúne conceitos técnicos e alternativas paralelas em sequência ordenada. Aplicou-se o paralelismo das cinco sequências, sem importar seu conteúdo de redes ou suas lacunas.",
+          "limites": "Referência editorial de uma prova específica; não demonstra frequência de formatos e não fundamenta a correção técnica atual. Cópia secundária do Qconcursos, sem afirmação de autenticação oficial de integridade."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-12-0002",
+      "numero": 45,
+      "materia": "Computação em nuvem",
+      "topico": "Elasticidade, capacidade e disponibilidade em nuvem",
+      "versao": "v01",
+      "enunciado": "Uma aplicação sem estado é executada em duas zonas de disponibilidade com falhas independentes. Cada instância suporta até 200 requisições por segundo, mantendo o tempo de resposta exigido, e a carga de pico é de 900 requisições por segundo. O balanceador redireciona o tráfego às instâncias disponíveis. Para o dimensionamento, considere que o balanceador, a rede e o banco de dados continuam operacionais e não limitam a vazão, e desconsidere o tempo de redirecionamento.\n\nA aplicação deve sustentar integralmente o pico após a perda de qualquer uma das zonas, usando instâncias já ativas. Há um mecanismo automático que adiciona ou remove instâncias conforme a demanda; a ativação de novas instâncias leva dois minutos.\n\nDurante o pico, a quantidade mínima de instâncias que deve estar previamente ativa em cada zona e o mecanismo de ajuste de recursos descrito correspondem, respectivamente, a:",
+      "alternativas": {
+        "A": "3 instâncias e elasticidade horizontal.",
+        "B": "5 instâncias e elasticidade horizontal.",
+        "C": "5 instâncias e escalabilidade vertical.",
+        "D": "3 instâncias e escalabilidade vertical.",
+        "E": "6 instâncias e elasticidade horizontal."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. A identificação do mecanismo está adequada, mas três instâncias na zona sobrevivente oferecem apenas 600 requisições por segundo. As seis instâncias somadas antes da falha não asseguram a capacidade necessária depois dela.",
+        "B": "Atende. Cinco instâncias na zona sobrevivente oferecem 1.000 requisições por segundo, cobrindo o pico de 900; quatro ofereceriam apenas 800. Adicionar e remover instâncias automaticamente conforme a carga caracteriza elasticidade horizontal.",
+        "C": "Não atende. Cinco instâncias por zona atendem ao requisito de capacidade, mas escalabilidade vertical altera o porte de uma instância, como CPU ou memória. O mecanismo descrito altera a quantidade de instâncias.",
+        "D": "Não atende. Além de três instâncias deixarem somente 600 requisições por segundo após a perda da outra zona, alterar a quantidade de instâncias é ajuste horizontal; o ajuste vertical modifica a capacidade de uma instância.",
+        "E": "Não atende ao mínimo solicitado. Seis instâncias por zona suportariam o cenário, mas cinco já cobrem 900 requisições por segundo mesmo com a perda da outra zona. A identificação do mecanismo como elasticidade horizontal está adequada."
+      },
+      "resolucao": "Após a perda de uma zona, apenas a outra permanece atendendo. Ela precisa ter n instâncias já ativas, com 200n >= 900. Como n é inteiro, n >= teto(900/200) = 5. A falha pode afetar qualquer zona; portanto, são necessárias pelo menos cinco em cada uma, totalizando dez durante o pico. Não se pode contar com a ativação posterior, que leva dois minutos. Adicionar e remover instâncias conforme a carga constitui elasticidade horizontal; mudar o porte de uma instância seria ajuste vertical. A elasticidade não elimina a reserva de capacidade exigida pela disponibilidade neste cenário.",
+      "fontes": [
+        {
+          "titulo": "NIST SP 800-145 — The NIST Definition of Cloud Computing (setembro de 2011)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+          "localizador": "Seção 2, Essential Characteristics: Rapid elasticity (p. impressa 2; PDF p. 6) e Service Models: SaaS, PaaS e IaaS (pp. impressas 2–3; PDF pp. 6–7). Consulta por navegação em 26/11/2026.",
+          "sustenta": "Fronteiras de controle dos três modelos de serviço e ajuste de recursos à demanda como característica de elasticidade."
+        },
+        {
+          "titulo": "Microsoft Azure Architecture Center — Autoscaling guidance",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/auto-scaling",
+          "localizador": "Introdução: Vertical scaling e Horizontal scaling; Application design considerations, capacidade mínima, tempo de inicialização e capacidade de dependências. Atualização indicada: 11/10/2026; consulta por navegação em 26/11/2026.",
+          "sustenta": "Distinção entre alterar o porte de uma instância e adicionar/remover instâncias; necessidade de capacidade prévia durante o tempo de ativação."
+        },
+        {
+          "titulo": "AWS Well-Architected Framework, Reliability Pillar — Use fault isolation to protect your workload",
+          "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/use-fault-isolation-to-protect-your-workload.html",
+          "localizador": "Parágrafo inicial sobre limites de isolamento de falhas; consulta por navegação em 26/11/2026.",
+          "sustenta": "Separação de componentes em limites de falha para restringir o impacto de uma falha."
+        },
+        {
+          "titulo": "AWS Well-Architected Framework, Reliability Pillar — REL10-BP01 Deploy the workload to multiple locations",
+          "url": "https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_fault_isolation_multiaz_region_system.html",
+          "localizador": "Implementation guidance, Using multiple Availability Zones, e Implementation steps, itens 3 e 4; consulta por navegação em 26/11/2026.",
+          "sustenta": "Distribuição entre zonas, roteamento às instâncias disponíveis e consideração de dados e dependências na disponibilidade. O cálculo numérico é próprio do cenário, sem premissa de produto AWS."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 59, p. 14; páginas marcadas na extração TXT. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "sustenta": "Organização editorial em correspondências ordenadas e alternativas paralelas; fonte secundária, sem certificação oficial de integridade."
+        }
+      ],
+      "autor": "/root/elaborador_12",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: NIST SP 800-145, Autoscaling guidance da Microsoft e duas páginas do AWS Reliability Pillar acessados por navegação em 26/11/2026. Os princípios gerais foram aplicados sem exigir produto de fornecedor.",
+        "Analítica: dimensionamento inteiro de capacidade na zona sobrevivente: teto(900/200) = 5. Foram confrontadas a perda de qualquer zona, a espera de dois minutos e as cinco alternativas.",
+        "Editorial: lida a questão FCC 59 (p. 14) na extração local do caderno TRT4/2022 A14/001 e conferida sua origem secundária em fontes.json.",
+        "Não houve implantação, teste de carga nem medição de nuvem. Os números são premissas autorais do cenário; o cálculo foi analítico."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 59,
+          "pagina": 14,
+          "origem": "Cópia secundária hospedada no Qconcursos, consultada pela extração TXT local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.",
+          "caracteristicaAplicada": "O exemplo de TI exige identificar dois elementos em ordem e apresenta cinco pares com estrutura comparável. Aplicou-se o comando de correspondência respectiva a capacidade mínima por zona e mecanismo de ajuste, em cenário numérico autoral.",
+          "limites": "Referência editorial de uma prova específica; não demonstra frequência de formatos e não fundamenta a correção técnica atual. Cópia secundária do Qconcursos, sem afirmação de autenticação oficial de integridade."
+        }
+      ]
+    }
+  ]
+}

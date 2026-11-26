@@ -1,0 +1,2340 @@
+{
+  "simulado": "SIM-001",
+  "titulo": "Banestes - Desenvolvimento de Sistemas - Simulado 01",
+  "meta": 50,
+  "tipo": "conhecimentos_especificos",
+  "distribuicao": "proposta de treino; nao representa incidencia oficial",
+  "estado": "SIMULADO_PRONTO_NAO_RESOLVIDO",
+  "elaboradores": [
+    {
+      "codigo": "01",
+      "materia": "Processo de desenvolvimento de software",
+      "quantidade": 4,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/01-processo-de-desenvolvimento-de-software.txt",
+      "responsavel": "/root/elaborador_01",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-01-0001",
+        "BAN-DS-01-0002",
+        "BAN-DS-01-0003",
+        "BAN-DS-01-0004"
+      ]
+    },
+    {
+      "codigo": "02",
+      "materia": "Gestão e Governança de Tecnologia da Informação",
+      "quantidade": 3,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/02-gestao-e-governanca-de-ti.txt",
+      "responsavel": "/root/elaborador_02",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-02-0001",
+        "BAN-DS-02-0002",
+        "BAN-DS-02-0003"
+      ]
+    },
+    {
+      "codigo": "03",
+      "materia": "Programação",
+      "quantidade": 7,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/03-programacao.txt",
+      "responsavel": "/root/elaborador_03",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-03-0001",
+        "BAN-DS-03-0002",
+        "BAN-DS-03-0003",
+        "BAN-DS-03-0004",
+        "BAN-DS-03-0005",
+        "BAN-DS-03-0006",
+        "BAN-DS-03-0007"
+      ]
+    },
+    {
+      "codigo": "04",
+      "materia": "Banco de Dados",
+      "quantidade": 6,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/04-banco-de-dados.txt",
+      "responsavel": "/root/elaborador_04",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-04-0001",
+        "BAN-DS-04-0002",
+        "BAN-DS-04-0003",
+        "BAN-DS-04-0004",
+        "BAN-DS-04-0005",
+        "BAN-DS-04-0006"
+      ]
+    },
+    {
+      "codigo": "05",
+      "materia": "Desenvolvimento de aplicações web e mobile",
+      "quantidade": 5,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/05-desenvolvimento-web-e-mobile.txt",
+      "responsavel": "/root/elaborador_05",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-05-0001",
+        "BAN-DS-05-0002",
+        "BAN-DS-05-0003",
+        "BAN-DS-05-0004",
+        "BAN-DS-05-0005"
+      ]
+    },
+    {
+      "codigo": "06",
+      "materia": "Arquitetura de sistemas",
+      "quantidade": 4,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/06-arquitetura-de-sistemas.txt",
+      "responsavel": "/root/elaborador_06",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-06-0001",
+        "BAN-DS-06-0002",
+        "BAN-DS-06-0003",
+        "BAN-DS-06-0004"
+      ]
+    },
+    {
+      "codigo": "07",
+      "materia": "DevOps e DevSecOps",
+      "quantidade": 3,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/07-devops-e-devsecops.txt",
+      "responsavel": "/root/elaborador_07",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-07-0001",
+        "BAN-DS-07-0002",
+        "BAN-DS-07-0003"
+      ]
+    },
+    {
+      "codigo": "08",
+      "materia": "Sistemas Operacionais",
+      "quantidade": 2,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/08-sistemas-operacionais.txt",
+      "responsavel": "/root/elaborador_08",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-08-0001",
+        "BAN-DS-08-0002"
+      ]
+    },
+    {
+      "codigo": "09",
+      "materia": "Redes de computadores",
+      "quantidade": 3,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/09-redes-de-computadores.txt",
+      "responsavel": "/root/elaborador_09",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-09-0001",
+        "BAN-DS-09-0002",
+        "BAN-DS-09-0003"
+      ]
+    },
+    {
+      "codigo": "10",
+      "materia": "Serviços e gerenciamento de redes",
+      "quantidade": 2,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/10-servicos-e-gerenciamento-de-redes.txt",
+      "responsavel": "/root/elaborador_10",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-10-0001",
+        "BAN-DS-10-0002"
+      ]
+    },
+    {
+      "codigo": "11",
+      "materia": "Segurança da Informação",
+      "quantidade": 4,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/11-seguranca-da-informacao.txt",
+      "responsavel": "/root/elaborador_11",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-11-0001",
+        "BAN-DS-11-0002",
+        "BAN-DS-11-0003",
+        "BAN-DS-11-0004"
+      ]
+    },
+    {
+      "codigo": "12",
+      "materia": "Computação em nuvem",
+      "quantidade": 2,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/12-computacao-em-nuvem.txt",
+      "responsavel": "/root/elaborador_12",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-12-0001",
+        "BAN-DS-12-0002"
+      ]
+    },
+    {
+      "codigo": "13",
+      "materia": "Git, Kubernetes, Rancher, deploy e CI/CD",
+      "quantidade": 1,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/13-git-kubernetes-rancher-deploy-e-cicd.txt",
+      "responsavel": "/root/elaborador_13",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-13-0001"
+      ]
+    },
+    {
+      "codigo": "14",
+      "materia": "Levantamento de requisitos, testes, integração e documentação técnica",
+      "quantidade": 1,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/14-requisitos-testes-integracao-e-documentacao.txt",
+      "responsavel": "/root/elaborador_14",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-14-0001"
+      ]
+    },
+    {
+      "codigo": "15",
+      "materia": "Governança de dados, autenticação e controle de acesso",
+      "quantidade": 1,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/15-governanca-de-dados-autenticacao-e-acesso.txt",
+      "responsavel": "/root/elaborador_15",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-15-0001"
+      ]
+    },
+    {
+      "codigo": "16",
+      "materia": "Inglês técnico",
+      "quantidade": 2,
+      "perfil": "Backend/Agents/codex/agents/elaboradores/16-ingles-tecnico.txt",
+      "responsavel": "/root/elaborador_16",
+      "estado": "ELABORACAO_CONCLUIDA",
+      "ids": [
+        "BAN-DS-16-0001",
+        "BAN-DS-16-0002"
+      ]
+    }
+  ],
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0001",
+      "numero": 1,
+      "elaborador": "01",
+      "topico_atribuido": "Scrum: finalidade da Sprint Review e da Sprint Retrospective",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d1161719b9a26ff3d5f5b4bf37aaffa3b6ec82e628455a8b201726594d67af26",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d1161719b9a26ff3d5f5b4bf37aaffa3b6ec82e628455a8b201726594d67af26",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d1161719b9a26ff3d5f5b4bf37aaffa3b6ec82e628455a8b201726594d67af26",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-01-0002",
+      "numero": 2,
+      "elaborador": "01",
+      "topico_atribuido": "UML 2.5: multiplicidades de associação",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "dd2c582ffb49c93decf938ab6cec0ced08ee2820e34393eeabbc10a43d4b8b0f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "dd2c582ffb49c93decf938ab6cec0ced08ee2820e34393eeabbc10a43d4b8b0f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "dd2c582ffb49c93decf938ab6cec0ced08ee2820e34393eeabbc10a43d4b8b0f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-01-0003",
+      "numero": 3,
+      "elaborador": "01",
+      "topico_atribuido": "Versionamento semântico e mudança incompatível da API pública",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "7ee451e363931694e192f1c8cac9ee50823203592ac9cad17096f656e268ff21",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "7ee451e363931694e192f1c8cac9ee50823203592ac9cad17096f656e268ff21",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "7ee451e363931694e192f1c8cac9ee50823203592ac9cad17096f656e268ff21",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-01-0004",
+      "numero": 4,
+      "elaborador": "01",
+      "topico_atribuido": "Requisitos funcionais e requisitos de qualidade em um cenário",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "df59c3fb19ff0c04bb96f298d5779fd62b5031a7fe6a6c327a4928cfa63e980c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "df59c3fb19ff0c04bb96f298d5779fd62b5031a7fe6a6c327a4928cfa63e980c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "df59c3fb19ff0c04bb96f298d5779fd62b5031a7fe6a6c327a4928cfa63e980c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/controle.txt"
+    },
+    {
+      "id": "BAN-DS-02-0001",
+      "numero": 5,
+      "elaborador": "02",
+      "topico_atribuido": "COBIT 2019: governança e gestão",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "995859b33307b0bab32845a1947f8474d76c53177fbc798547d1e0dbf08149f2",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "995859b33307b0bab32845a1947f8474d76c53177fbc798547d1e0dbf08149f2",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "995859b33307b0bab32845a1947f8474d76c53177fbc798547d1e0dbf08149f2",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-02-0002",
+      "numero": 6,
+      "elaborador": "02",
+      "topico_atribuido": "TCO e custos de aquisição e operação",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "84a96a060588fe1a37f0e6c61c0ba8aa1ab9e73df898f433a1432eff3cde6ece",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "84a96a060588fe1a37f0e6c61c0ba8aa1ab9e73df898f433a1432eff3cde6ece",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "84a96a060588fe1a37f0e6c61c0ba8aa1ab9e73df898f433a1432eff3cde6ece",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-02-0003",
+      "numero": 7,
+      "elaborador": "02",
+      "topico_atribuido": "SLAs e OLAs na gestão de serviços",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "855dcda8a371597f989f235f8284194f689a5373e797ae900d111e25baeecece",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "855dcda8a371597f989f235f8284194f689a5373e797ae900d111e25baeecece",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "855dcda8a371597f989f235f8284194f689a5373e797ae900d111e25baeecece",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0001",
+      "numero": 8,
+      "elaborador": "03",
+      "topico_atribuido": "Python: compartilhamento e mutação de listas",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "1e869456c7893d9f231dba97ce89dd5e1b3bd87fdcbe5a226a8ccc6cd46f925c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "1e869456c7893d9f231dba97ce89dd5e1b3bd87fdcbe5a226a8ccc6cd46f925c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "1e869456c7893d9f231dba97ce89dd5e1b3bd87fdcbe5a226a8ccc6cd46f925c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0002",
+      "numero": 9,
+      "elaborador": "03",
+      "topico_atribuido": "Java: sobrescrita e despacho de métodos",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "65e1631c3f700e962eee77bcbc3a964f4aecf1362e50695dfca573792b14d3ed",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "65e1631c3f700e962eee77bcbc3a964f4aecf1362e50695dfca573792b14d3ed",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "65e1631c3f700e962eee77bcbc3a964f4aecf1362e50695dfca573792b14d3ed",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0003",
+      "numero": 10,
+      "elaborador": "03",
+      "topico_atribuido": "C#: recursos de linguagem e execução de coleções",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "70b0d6b7fdaae0301ef13a51330512d71fe6adacd90377468a5b297cc93d3d13",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "70b0d6b7fdaae0301ef13a51330512d71fe6adacd90377468a5b297cc93d3d13",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "70b0d6b7fdaae0301ef13a51330512d71fe6adacd90377468a5b297cc93d3d13",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0004",
+      "numero": 11,
+      "elaborador": "03",
+      "topico_atribuido": "C: ponteiros e vetores com comportamento definido",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0004/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "5fba5bc54fb02abe490b4bd319b50791919fc516cc771b751c939ff0cc3efc2d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0004/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0004/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "5fba5bc54fb02abe490b4bd319b50791919fc516cc771b751c939ff0cc3efc2d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0004/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0004/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "5fba5bc54fb02abe490b4bd319b50791919fc516cc771b751c939ff0cc3efc2d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0004/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0004/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0005",
+      "numero": 12,
+      "elaborador": "03",
+      "topico_atribuido": "PHP: comportamento básico de linguagem conforme versão declarada",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0005/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "cfb8f6328c2a2c0b6fad0dbfaf378a73bb3bb451dfcab3647f1466008faf7fb8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0005/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0005/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "cfb8f6328c2a2c0b6fad0dbfaf378a73bb3bb451dfcab3647f1466008faf7fb8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0005/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0005/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "cfb8f6328c2a2c0b6fad0dbfaf378a73bb3bb451dfcab3647f1466008faf7fb8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0005/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0005/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0006",
+      "numero": 13,
+      "elaborador": "03",
+      "topico_atribuido": "Orientação a objetos e responsabilidade de classes",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0006/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "13d91feb5129494f89f07a106e5faf26cea66ca6f76f7d52054f392d8432df54",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0006/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0006/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "13d91feb5129494f89f07a106e5faf26cea66ca6f76f7d52054f392d8432df54",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0006/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0006/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "13d91feb5129494f89f07a106e5faf26cea66ca6f76f7d52054f392d8432df54",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0006/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0006/controle.txt"
+    },
+    {
+      "id": "BAN-DS-03-0007",
+      "numero": 14,
+      "elaborador": "03",
+      "topico_atribuido": "Tratamento de exceções em cenário com condições explícitas",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0007/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "f11f783792e07430b9bbaf341fdcb566753d4f6c0ac9a11bc7aca0db79eddff8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0007/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0007/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "f11f783792e07430b9bbaf341fdcb566753d4f6c0ac9a11bc7aca0db79eddff8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0007/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0007/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "f11f783792e07430b9bbaf341fdcb566753d4f6c0ac9a11bc7aca0db79eddff8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0007/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0007/controle.txt"
+    },
+    {
+      "id": "BAN-DS-04-0001",
+      "numero": 15,
+      "elaborador": "04",
+      "topico_atribuido": "SQL: LEFT JOIN e contagem",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "92a7fb671dc52416c50463c61628eed77013a6a4eb0c47bc16ffb005dccd3a14",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "92a7fb671dc52416c50463c61628eed77013a6a4eb0c47bc16ffb005dccd3a14",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "92a7fb671dc52416c50463c61628eed77013a6a4eb0c47bc16ffb005dccd3a14",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-04-0002",
+      "numero": 16,
+      "elaborador": "04",
+      "topico_atribuido": "Funções analíticas e particionamento",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ffd9f5f023f40f8ac8bcf21e84add2937d060b4dd925576200b2aff4a93e55a6",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ffd9f5f023f40f8ac8bcf21e84add2937d060b4dd925576200b2aff4a93e55a6",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ffd9f5f023f40f8ac8bcf21e84add2937d060b4dd925576200b2aff4a93e55a6",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-04-0003",
+      "numero": 17,
+      "elaborador": "04",
+      "topico_atribuido": "PostgreSQL 14/15: isolamento Read Committed",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3cb1dc3b32455d506eb67e075b17082fc5febec9e133d5b56900f55d05b0ab32",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3cb1dc3b32455d506eb67e075b17082fc5febec9e133d5b56900f55d05b0ab32",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3cb1dc3b32455d506eb67e075b17082fc5febec9e133d5b56900f55d05b0ab32",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-04-0004",
+      "numero": 18,
+      "elaborador": "04",
+      "topico_atribuido": "Normalização e dependências funcionais",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b931af23684ae40d7ffd21cc6525f40f49d9257c80605b02c113da7e4ec6c57a",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b931af23684ae40d7ffd21cc6525f40f49d9257c80605b02c113da7e4ec6c57a",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b931af23684ae40d7ffd21cc6525f40f49d9257c80605b02c113da7e4ec6c57a",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0004/controle.txt"
+    },
+    {
+      "id": "BAN-DS-04-0005",
+      "numero": 19,
+      "elaborador": "04",
+      "topico_atribuido": "CTE e agregação em SQL",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "fff5e8b7fc9a39393920eef488e8b35e727ab9b712a8e26d16d382527dea648c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "fff5e8b7fc9a39393920eef488e8b35e727ab9b712a8e26d16d382527dea648c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "fff5e8b7fc9a39393920eef488e8b35e727ab9b712a8e26d16d382527dea648c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0005/controle.txt"
+    },
+    {
+      "id": "BAN-DS-04-0006",
+      "numero": 20,
+      "elaborador": "04",
+      "topico_atribuido": "Bancos NoSQL e escolha de modelo em cenário",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d27a7846b43a359bd57a105bd544b5ea2048f124bc130da544c33e903242e2df",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d27a7846b43a359bd57a105bd544b5ea2048f124bc130da544c33e903242e2df",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d27a7846b43a359bd57a105bd544b5ea2048f124bc130da544c33e903242e2df",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/04-banco-de-dados/BAN-DS-04-0006/controle.txt"
+    },
+    {
+      "id": "BAN-DS-05-0001",
+      "numero": 21,
+      "elaborador": "05",
+      "topico_atribuido": "HTTP e idempotência de APIs REST",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "314f9d86a3019cd06f0a47a07bf9853a38016c31114358815abeea605e2a8d20",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "314f9d86a3019cd06f0a47a07bf9853a38016c31114358815abeea605e2a8d20",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "314f9d86a3019cd06f0a47a07bf9853a38016c31114358815abeea605e2a8d20",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-05-0002",
+      "numero": 22,
+      "elaborador": "05",
+      "topico_atribuido": "JavaScript: ordem de execução assíncrona",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "1d70ff86570c29963da230d5594203170efd10b1778da03dc9a45987199a2a30",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "1d70ff86570c29963da230d5594203170efd10b1778da03dc9a45987199a2a30",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "1d70ff86570c29963da230d5594203170efd10b1778da03dc9a45987199a2a30",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-05-0003",
+      "numero": 23,
+      "elaborador": "05",
+      "topico_atribuido": "Acessibilidade web conforme WCAG 2.2",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "8702188d3b5f650f20a88096013a71cdc970469ccc313221d247ed72faa6a29e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "8702188d3b5f650f20a88096013a71cdc970469ccc313221d247ed72faa6a29e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "8702188d3b5f650f20a88096013a71cdc970469ccc313221d247ed72faa6a29e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-05-0004",
+      "numero": 24,
+      "elaborador": "05",
+      "topico_atribuido": "Contratos OpenAPI: parâmetros",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b37c4d07960f941c66da75a4b46a58d539fda09229f0b6a77444c254c0abc78d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b37c4d07960f941c66da75a4b46a58d539fda09229f0b6a77444c254c0abc78d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b37c4d07960f941c66da75a4b46a58d539fda09229f0b6a77444c254c0abc78d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/controle.txt"
+    },
+    {
+      "id": "BAN-DS-05-0005",
+      "numero": 25,
+      "elaborador": "05",
+      "topico_atribuido": "XML Schema: ocorrências e atributos",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "605c3b886c835ecda765d14fc02324d44d036db5ac6123ba2a70490f766a3022",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "605c3b886c835ecda765d14fc02324d44d036db5ac6123ba2a70490f766a3022",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "605c3b886c835ecda765d14fc02324d44d036db5ac6123ba2a70490f766a3022",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/controle.txt"
+    },
+    {
+      "id": "BAN-DS-06-0001",
+      "numero": 26,
+      "elaborador": "06",
+      "topico_atribuido": "Arquitetura hexagonal: portas e adaptadores",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "25c641c675aed6ed54cf039c12c173d057bd4255c77577cfeacb3889f0c49ada",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "25c641c675aed6ed54cf039c12c173d057bd4255c77577cfeacb3889f0c49ada",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "25c641c675aed6ed54cf039c12c173d057bd4255c77577cfeacb3889f0c49ada",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-06-0002",
+      "numero": 27,
+      "elaborador": "06",
+      "topico_atribuido": "Integração orientada a eventos",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3049dff3238e51f4f8eb2c212a1d5066747c004e6874b3091074be2459ab1252",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3049dff3238e51f4f8eb2c212a1d5066747c004e6874b3091074be2459ab1252",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3049dff3238e51f4f8eb2c212a1d5066747c004e6874b3091074be2459ab1252",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-06-0003",
+      "numero": 28,
+      "elaborador": "06",
+      "topico_atribuido": "Circuit breaker, tentativas e timeouts",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "c6d9e1eb87d834e8d9852c370c221863f23de96c17292100dd0bd876a1410a1d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "c6d9e1eb87d834e8d9852c370c221863f23de96c17292100dd0bd876a1410a1d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "c6d9e1eb87d834e8d9852c370c221863f23de96c17292100dd0bd876a1410a1d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-06-0004",
+      "numero": 29,
+      "elaborador": "06",
+      "topico_atribuido": "DDD: delimitação de contexto",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "c6911db07a24a3b78667b3c733473c23fcb1b953edc70fc664ff258b6aae1399",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "c6911db07a24a3b78667b3c733473c23fcb1b953edc70fc664ff258b6aae1399",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "c6911db07a24a3b78667b3c733473c23fcb1b953edc70fc664ff258b6aae1399",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0004/controle.txt"
+    },
+    {
+      "id": "BAN-DS-07-0001",
+      "numero": 30,
+      "elaborador": "07",
+      "topico_atribuido": "Integração contínua e entrega contínua",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d3138d352fa8c5fadb2694fb80b438d6c8dba560238e2dabc4c95eddfd0c75ab",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d3138d352fa8c5fadb2694fb80b438d6c8dba560238e2dabc4c95eddfd0c75ab",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "d3138d352fa8c5fadb2694fb80b438d6c8dba560238e2dabc4c95eddfd0c75ab",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-07-0002",
+      "numero": 31,
+      "elaborador": "07",
+      "topico_atribuido": "Docker: imagens e containers",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ba5297b7654b6476cb9a4e45f7005b8aae420925056ce28599521d951b205e7e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ba5297b7654b6476cb9a4e45f7005b8aae420925056ce28599521d951b205e7e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ba5297b7654b6476cb9a4e45f7005b8aae420925056ce28599521d951b205e7e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-07-0003",
+      "numero": 32,
+      "elaborador": "07",
+      "topico_atribuido": "Kubernetes: prontidão e vivacidade",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "dda15cd97f9d7dcb6be1c3a9a1f6873a310075c911c2ac47cde5b7ee056060b9",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "dda15cd97f9d7dcb6be1c3a9a1f6873a310075c911c2ac47cde5b7ee056060b9",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "dda15cd97f9d7dcb6be1c3a9a1f6873a310075c911c2ac47cde5b7ee056060b9",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-08-0001",
+      "numero": 33,
+      "elaborador": "08",
+      "topico_atribuido": "Memória virtual e falta de página",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "67a586c9ede23c4f65293a10d79e56d694f6b37f7c6d593d7fafb1cfd88d0ce1",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "67a586c9ede23c4f65293a10d79e56d694f6b37f7c6d593d7fafb1cfd88d0ce1",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "67a586c9ede23c4f65293a10d79e56d694f6b37f7c6d593d7fafb1cfd88d0ce1",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-08-0002",
+      "numero": 34,
+      "elaborador": "08",
+      "topico_atribuido": "Sincronização, deadlock e starvation",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3af90d937ebee8fde23648828359cbd052b4cc3dd00bf78b8188abcff2c13ad4",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3af90d937ebee8fde23648828359cbd052b4cc3dd00bf78b8188abcff2c13ad4",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "3af90d937ebee8fde23648828359cbd052b4cc3dd00bf78b8188abcff2c13ad4",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/08-sistemas-operacionais/BAN-DS-08-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-09-0001",
+      "numero": 35,
+      "elaborador": "09",
+      "topico_atribuido": "VLAN e IEEE 802.1Q",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "00f748aff6bbaed0e5c1c6ab86fe1c1c44bccc03833f055be3da14363facb802",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "00f748aff6bbaed0e5c1c6ab86fe1c1c44bccc03833f055be3da14363facb802",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "00f748aff6bbaed0e5c1c6ab86fe1c1c44bccc03833f055be3da14363facb802",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-09-0002",
+      "numero": 36,
+      "elaborador": "09",
+      "topico_atribuido": "IPv4 e endereçamento de rede",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "a5a7f650707fa04b01cdbd49ac29c276c9599b7f832903efae8ce5a4a4fcf80e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "a5a7f650707fa04b01cdbd49ac29c276c9599b7f832903efae8ce5a4a4fcf80e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "a5a7f650707fa04b01cdbd49ac29c276c9599b7f832903efae8ce5a4a4fcf80e",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-09-0003",
+      "numero": 37,
+      "elaborador": "09",
+      "topico_atribuido": "Roteamento OSPF e BGP",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "7c32407fda9d6af9549f34f8ad03d8011a3623dd00a45c16c1afb77ccfdfd88c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "7c32407fda9d6af9549f34f8ad03d8011a3623dd00a45c16c1afb77ccfdfd88c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "7c32407fda9d6af9549f34f8ad03d8011a3623dd00a45c16c1afb77ccfdfd88c",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-10-0001",
+      "numero": 38,
+      "elaborador": "10",
+      "topico_atribuido": "SNMP: agentes, gerentes e MIBs",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "a2c3eaef2999b451c036b8752d7244a2459738b5abbe2f28cbf50cc087fa5346",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "a2c3eaef2999b451c036b8752d7244a2459738b5abbe2f28cbf50cc087fa5346",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "a2c3eaef2999b451c036b8752d7244a2459738b5abbe2f28cbf50cc087fa5346",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-10-0002",
+      "numero": 39,
+      "elaborador": "10",
+      "topico_atribuido": "Administração e configuração de servidor Apache HTTP",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "94b63cef014a6c9a8671341808749a9181146181df9d176b950115c68f8023bd",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "94b63cef014a6c9a8671341808749a9181146181df9d176b950115c68f8023bd",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "94b63cef014a6c9a8671341808749a9181146181df9d176b950115c68f8023bd",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-11-0001",
+      "numero": 40,
+      "elaborador": "11",
+      "topico_atribuido": "OAuth 2.0 e OpenID Connect",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "67bb0a5f8a0fa9321792a42946ef2561ff6632190a30fd21a0e8c155be06c57f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "67bb0a5f8a0fa9321792a42946ef2561ff6632190a30fd21a0e8c155be06c57f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "67bb0a5f8a0fa9321792a42946ef2561ff6632190a30fd21a0e8c155be06c57f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-11-0002",
+      "numero": 41,
+      "elaborador": "11",
+      "topico_atribuido": "Hashes, confidencialidade e assinaturas",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "96196ecf69a971e24f4fd2dc4ae4de58649569d844cdbddb5377d5acf06b7636",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "96196ecf69a971e24f4fd2dc4ae4de58649569d844cdbddb5377d5acf06b7636",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "96196ecf69a971e24f4fd2dc4ae4de58649569d844cdbddb5377d5acf06b7636",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-11-0003",
+      "numero": 42,
+      "elaborador": "11",
+      "topico_atribuido": "LGPD: anonimização e pseudonimização",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "874cb22831a0ce27138cd0a70273a49f8439219be2f288d32d8ed4832f73794f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "874cb22831a0ce27138cd0a70273a49f8439219be2f288d32d8ed4832f73794f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "874cb22831a0ce27138cd0a70273a49f8439219be2f288d32d8ed4832f73794f",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0003/controle.txt"
+    },
+    {
+      "id": "BAN-DS-11-0004",
+      "numero": 43,
+      "elaborador": "11",
+      "topico_atribuido": "OWASP Top 10:2021: prevenção de injeção",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "f94e88a83f0ea48d9459282687e7399459f039fd953d94c2b195205a75f524da",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "f94e88a83f0ea48d9459282687e7399459f039fd953d94c2b195205a75f524da",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "f94e88a83f0ea48d9459282687e7399459f039fd953d94c2b195205a75f524da",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/11-seguranca-da-informacao/BAN-DS-11-0004/controle.txt"
+    },
+    {
+      "id": "BAN-DS-12-0001",
+      "numero": 44,
+      "elaborador": "12",
+      "topico_atribuido": "Modelos de serviço IaaS, PaaS e SaaS",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b12930e8b0be96efa23d87bde0337cfb546e06c141555ef8910b82851ca96610",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b12930e8b0be96efa23d87bde0337cfb546e06c141555ef8910b82851ca96610",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "b12930e8b0be96efa23d87bde0337cfb546e06c141555ef8910b82851ca96610",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-12-0002",
+      "numero": 45,
+      "elaborador": "12",
+      "topico_atribuido": "Elasticidade, capacidade e disponibilidade em nuvem",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "2776c1358487434678049dd9add6032547d298132c077e2ab77be577508134d1",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "2776c1358487434678049dd9add6032547d298132c077e2ab77be577508134d1",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "2776c1358487434678049dd9add6032547d298132c077e2ab77be577508134d1",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/12-computacao-em-nuvem/BAN-DS-12-0002/controle.txt"
+    },
+    {
+      "id": "BAN-DS-13-0001",
+      "numero": 46,
+      "elaborador": "13",
+      "topico_atribuido": "Git: integração de alterações e conflitos",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "2dbdaba06f8180c395a13d34c1403b4abf77efa9ca087effbc80d831f11c92d3",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "2dbdaba06f8180c395a13d34c1403b4abf77efa9ca087effbc80d831f11c92d3",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "2dbdaba06f8180c395a13d34c1403b4abf77efa9ca087effbc80d831f11c92d3",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-14-0001",
+      "numero": 47,
+      "elaborador": "14",
+      "topico_atribuido": "Rastreabilidade entre requisitos, testes e documentação",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "e834128391e37e3db1bc0c10ce20d6060c5951f1ab781b7e3583d44770f2afdf",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "e834128391e37e3db1bc0c10ce20d6060c5951f1ab781b7e3583d44770f2afdf",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "e834128391e37e3db1bc0c10ce20d6060c5951f1ab781b7e3583d44770f2afdf",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-15-0001",
+      "numero": 48,
+      "elaborador": "15",
+      "topico_atribuido": "Governança e controle de acesso baseado em papéis",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "0ac55db38b20fbb33a4e794a8eb44e2ce965351893ee7f2119de99657678c7e8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "0ac55db38b20fbb33a4e794a8eb44e2ce965351893ee7f2119de99657678c7e8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "0ac55db38b20fbb33a4e794a8eb44e2ce965351893ee7f2119de99657678c7e8",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-16-0001",
+      "numero": 49,
+      "elaborador": "16",
+      "topico_atribuido": "Compreensão de texto técnico autoral em inglês",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ad8f12bf07f367b411b4aa15cd8c30d5e3868a8b2cd171963e712140972059d9",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ad8f12bf07f367b411b4aa15cd8c30d5e3868a8b2cd171963e712140972059d9",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "ad8f12bf07f367b411b4aa15cd8c30d5e3868a8b2cd171963e712140972059d9",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0001/controle.txt"
+    },
+    {
+      "id": "BAN-DS-16-0002",
+      "numero": 50,
+      "elaborador": "16",
+      "topico_atribuido": "Coesão e significado em texto técnico autoral em inglês",
+      "versao": "v01",
+      "estado": "APROVADA",
+      "auditorias": {
+        "ESTILO_FCC": {
+          "responsavel": "/root/auditor_estilo",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-estilo-fcc.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "63468778e9307f7351be29e8c0747cec3511d3d52a85c511f9b7c5a7a7c8731d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-estilo.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-estilo-fcc.txt"
+        },
+        "PISTAS_DE_RESPOSTA": {
+          "responsavel": "/root/auditor_pistas",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-pistas-de-resposta.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "63468778e9307f7351be29e8c0747cec3511d3d52a85c511f9b7c5a7a7c8731d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-pistas.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-pistas-de-resposta.txt"
+        },
+        "REDACAO_E_CONFORMIDADE": {
+          "responsavel": "/root/auditor_redacao",
+          "resultado": "APROVADA",
+          "versao": "v01",
+          "parecer": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-redacao-e-conformidade.txt",
+          "pendencias": "nenhuma",
+          "sha256Textos": "63468778e9307f7351be29e8c0747cec3511d3d52a85c511f9b7c5a7a7c8731d",
+          "retornoConfirmado": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/retornos-redacao.json",
+          "parecerNaAvaliacao": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-redacao-e-conformidade.txt"
+        }
+      },
+      "controle": "Backend/questoes/questoes auditadas/16-ingles-tecnico/BAN-DS-16-0002/controle.txt"
+    }
+  ],
+  "auditores": {
+    "ESTILO_FCC": {
+      "responsavel": "/root/auditor_estilo",
+      "estado": "CONCLUIDA",
+      "lote": "v01",
+      "quantidade_encaminhada": 50,
+      "totais": {
+        "APROVADA": 50
+      }
+    },
+    "PISTAS_DE_RESPOSTA": {
+      "responsavel": "/root/auditor_pistas",
+      "estado": "CONCLUIDA",
+      "lote": "v01",
+      "quantidade_encaminhada": 50,
+      "totais": {
+        "APROVADA": 50
+      }
+    },
+    "REDACAO_E_CONFORMIDADE": {
+      "responsavel": "/root/auditor_redacao",
+      "estado": "CONCLUIDA",
+      "lote": "v01",
+      "quantidade_encaminhada": 50,
+      "totais": {
+        "APROVADA": 50
+      }
+    }
+  },
+  "historico": [
+    {
+      "data": "2026-11-26",
+      "evento": "48 entregas reais confirmadas. Auditor de estilo acionado; demais dois perfis serao acionados apos conclusao dos elaboradores 14/15."
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "50 entregas reais confirmadas. Tres perfis independentes acionados sobre v01; somente textos publicos na primeira leitura."
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "Retornos reais conferidos: PISTAS_DE_RESPOSTA. Estados atuais: {'AGUARDANDO_AUDITORIA': 50}"
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "Retornos reais conferidos: PISTAS_DE_RESPOSTA, ESTILO_FCC. Estados atuais: {'AGUARDANDO_AUDITORIA': 50}"
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "Retornos reais conferidos: PISTAS_DE_RESPOSTA, ESTILO_FCC, REDACAO_E_CONFORMIDADE. Estados atuais: {'APROVADA': 50}"
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "50 versoes atuais com tres aprovacoes identificadas; questoes promovidas para auditadas. JSON validado e simulado completo publicado para resolucao pelo estudante."
+    }
+  ],
+  "entrega": {
+    "pasta": "Backend/simulados/simulados pendentes/SIM-001",
+    "json": "Backend/simulados/simulados pendentes/SIM-001/simulado.json",
+    "questoes": 50,
+    "aprovacoesAtuais": 150,
+    "situacaoResolucao": "NAO_RESOLVIDO",
+    "validacaoEstrutural": "APROVADA",
+    "verificacaoAplicacao": {
+      "listagem": "GET /api/simulados: SIM-001 pendente,50 questoes,0 respostas",
+      "detalhe": "GET /api/simulados/SIM-001:50 questoes em ordem; correcoes ausentes antes da resposta",
+      "arquivosDoEstudante": "progresso.json e resultado.json ainda nao criados"
+    }
+  }
+}

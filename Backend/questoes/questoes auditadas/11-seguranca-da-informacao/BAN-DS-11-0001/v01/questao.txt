@@ -1,0 +1,13 @@
+ID: BAN-DS-11-0001
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: OAuth 2.0 e OpenID Connect
+
+ENUNCIADO
+Uma aplicação web integra um provedor compatível com OAuth 2.0 e OpenID Connect 1.0. Ela precisa reconhecer o usuário autenticado pelo provedor e consultar uma API de saldos conforme as permissões concedidas. No fluxo adotado, a aplicação recebe um ID Token e um Access Token, este destinado à API. Para atender às duas finalidades, a equipe deve
+
+A) validar o Access Token como comprovante padronizado do login do usuário e apresentar o ID Token à API para autorizar a consulta.
+B) verificar apenas a assinatura do ID Token, dispensando as verificações de emissor, audiência e expiração, e apresentar o Access Token à API.
+C) validar o ID Token para reconhecer a autenticação do usuário e apresentar o Access Token à API, que deve validar o acesso e as permissões aplicáveis.
+D) tratar o ID Token e o Access Token como intercambiáveis, pois a emissão para o mesmo usuário faz com que ambos expressem as mesmas permissões.
+E) exigir que o Access Token seja um JWT e o ID Token seja opaco, pois esses formatos são obrigatoriamente definidos pelo OAuth 2.0.

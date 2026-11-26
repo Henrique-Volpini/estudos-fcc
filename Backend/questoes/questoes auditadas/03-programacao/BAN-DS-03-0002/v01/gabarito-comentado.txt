@@ -1,0 +1,30 @@
+ID: BAN-DS-03-0002
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+A chamada do método de instância nome usa o objeto criado, da classe Derivada, e executa a sobrescrita. A escolha entre as sobrecargas de identificar ocorre em compilação: a expressão item tem tipo declarado Base, selecionando identificar(Base). As duas partes exibidas são, respectivamente, derivada e base.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: a primeira parte ignora o despacho do método de instância sobrescrito e usa indevidamente a implementação de Base.
+B) Não atende: o tipo do objeto não faz o compilador selecionar identificar(Derivada) para um argumento cuja expressão tem tipo Base.
+C) Não atende: inverte os efeitos das duas regras: nome considera a sobrescrita em execução; a sobrecarga é escolhida pelo tipo da expressão em compilação.
+D) Não atende: identificar(Base) é aplicável ao argumento de tipo Base; não é necessário converter esse argumento implicitamente para Derivada.
+E) Atende: nome retorna derivada pela sobrescrita, enquanto identificar(Base) retorna base.
+
+FONTES TÉCNICAS CONSULTADAS
+- Java Language Specification — Java SE 21, capítulo 15 | https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html | §15.12.2: seleção da assinatura em compilação; §15.12.4.4: localização do método de instância em execução.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 42; página PDF 10.
+- Origem verificável: Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação: Código de linguagem explicitamente identificada e alternativas técnicas mutuamente exclusivas. O exemplo FCC examina formas de declaração; o código e o resultado de despacho aqui são autorais.
+- Limites: Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes.
+
+VERIFICAÇÕES REALIZADAS
+Análise documental da JLS21, distinguindo sobrecarga em compilação e sobrescrita em execução. Código e acessibilidade das classes aninhadas analisados; não foi declarada execução de compilador.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

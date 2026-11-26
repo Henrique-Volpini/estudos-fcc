@@ -1,0 +1,23 @@
+ID: BAN-DS-05-0003
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: Acessibilidade digital conforme WCAG 2.2: foco não encoberto
+
+ENUNCIADO
+Na avaliação de acessibilidade de um portal, uma analista examina o efeito de faixas fixas da interface sobre componentes que recebem foco pelo teclado. Considerando os critérios 2.4.11 e 2.4.12 das WCAG 2.2, avalie as afirmações.
+
+I. O critério 2.4.11, de nível AA, exige que o componente com foco não fique totalmente oculto por conteúdo criado pelo autor.
+II. O critério 2.4.11 é atendido se apenas o indicador de foco permanecer visível, mesmo que o próprio componente esteja inteiramente oculto.
+III. A exigência de que nenhuma parte do componente com foco seja ocultada por conteúdo criado pelo autor corresponde ao critério 2.4.12, de nível AAA.
+
+Está correto o que se afirma APENAS em
+
+A) I.
+
+B) II.
+
+C) I e II.
+
+D) II e III.
+
+E) I e III.

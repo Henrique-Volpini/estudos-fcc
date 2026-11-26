@@ -1,0 +1,15 @@
+ID: BAN-DS-02-0003
+Versão: v01
+Matéria: Gestão e Governança de Tecnologia da Informação
+Tópico: Gestão de níveis de serviço
+
+ENUNCIADO
+Uma prestadora de serviços de TI acordou com um cliente externo o prazo máximo de quatro horas para tratar um incidente, contado da abertura à conclusão da validação do restabelecimento. Para apoiar esse atendimento, pactuou com suas equipes internas os limites de 40 minutos para triagem, 150 minutos para restabelecimento e 70 minutos para validação.
+
+As etapas ocorrem sucessivamente, sem sobreposição, intervalos ou pausas. Cada limite interno é contado do início da respectiva etapa, e todos os prazos usam minutos corridos. Na gestão de níveis de serviço, esses compromissos internos são
+
+A) OLAs compatíveis com o prazo global, pois o limite de cada etapa, considerado isoladamente, é inferior às quatro horas acordadas com o cliente.
+B) SLAs compatíveis com o prazo global, pois a passagem entre equipes reinicia a contagem das quatro horas acordadas com o cliente.
+C) OLAs incompatíveis com o prazo global, pois todas as metas internas podem ser cumpridas e o atendimento, ainda assim, alcançar 260 minutos.
+D) contratos de apoio compatíveis com o prazo global, pois estabelecem metas de fornecedores externos para executar as etapas do atendimento.
+E) OLAs compatíveis com o prazo global, pois a soma dos limites internos amplia automaticamente o prazo acordado com o cliente para 260 minutos.

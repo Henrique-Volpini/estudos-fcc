@@ -1,0 +1,20 @@
+ID: BAN-DS-16-0002
+Versão: v01
+Matéria: Inglês técnico
+Tópico: Coesão e significado em texto técnico autoral em inglês
+
+ENUNCIADO
+Considere o texto abaixo.
+
+A status page shows the latest information about a service interruption. Readers who want automatic updates should subscribe to email notifications. Otherwise, they will need to revisit the page to check for changes. The emails repeat the information on the page; they do not provide an earlier estimate of when the service will return. Readers can cancel the subscription at any time.
+
+(Texto autoral.)
+
+No contexto, “Otherwise” introduz a ideia de que os leitores precisarão acessar a página novamente
+
+A) mesmo que se inscrevam para receber as notificações por email.
+B) porque já se inscreveram para receber as notificações por email.
+C) assim que se inscreverem para receber as notificações por email.
+D) caso não se inscrevam para receber as notificações por email.
+E) para que se inscrevam para receber as notificações por email.
+

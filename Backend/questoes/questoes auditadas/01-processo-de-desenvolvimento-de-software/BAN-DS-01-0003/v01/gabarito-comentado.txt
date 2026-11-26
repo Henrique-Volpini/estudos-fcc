@@ -1,0 +1,34 @@
+ID: BAN-DS-01-0003
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar o menor número de versão normal que atende às regras do SemVer para a publicação descrita.
+
+RESOLUÇÃO
+A remoção rompe a compatibilidade da API pública e exige incremento da versão maior. Esse incremento zera as versões menor e de correção. As demais mudanças podem integrar a mesma publicação. Partindo de 3.7.4, o menor número normal resultante é 4.0.0.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. Incrementar apenas a versão menor comportaria a nova operação compatível e a correção, mas não a remoção incompatível da API pública.
+B) Atende. Incrementa a versão maior de 3 para 4 e zera os outros dois componentes, conforme a mudança incompatível, incluindo na mesma publicação as mudanças menores.
+C) Não atende. Incrementar somente a versão de correção se aplica a correções compatíveis; não expressa a nova funcionalidade nem, sobretudo, a ruptura da API.
+D) Não atende. Embora incremente a versão maior, mantém os componentes menor e de correção anteriores. O SemVer exige zerá-los ao incrementar a versão maior.
+E) Não atende. A correção não exige um incremento separado dentro da publicação maior. O primeiro número mínimo resultante é 4.0.0; 4.0.1 não é esse mínimo.
+
+FONTES TÉCNICAS CONSULTADAS
+- Semantic Versioning 2.0.0, especificação oficial. https://semver.org/spec/v2.0.0.html. Itens 1–2, API pública e versão normal; itens 6–8, correções compatíveis, adições compatíveis, mudanças incompatíveis, inclusão de alterações menores e reinicialização de componentes. Sustenta A–E. Consulta por navegação em 26/11/2026.
+- Arquivo-base do programa: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item versionamento semântico; Delimita o escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 57; página 13.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Enunciado técnico contextualizado seguido de comando que exige selecionar um valor entre cinco alternativas numéricas curtas.
+- Aplicação nesta questão autoral: O cenário fornece a versão inicial e todas as mudanças; as cinco alternativas são números de versão comparáveis, sem explicações que revelem o gabarito.
+- Limites da referência: Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: conferidos por navegação os itens 1, 2, 6, 7 e 8 da especificação oficial SemVer 2.0.0.
+- Analítica: classificada cada mudança e aplicado o incremento maior com reinicialização dos componentes; B é o menor número admissível entre as alternativas e expressa a publicação completa.
+- Editorial: lida TRT4/2022, questão 57, página 13, na extração local e conferida sua origem secundária em fontes.json. Não houve execução de código nem consulta a uma API real; a biblioteca do cenário é autoral.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Entrega completa em PENDENTE_AUDITORIA; as auditorias do SIM-001 ainda serão realizadas.

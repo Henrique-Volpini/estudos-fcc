@@ -1,0 +1,50 @@
+ID: BAN-DS-08-0002
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar a combinação das afirmações verdadeiras sob as condições declaradas.
+
+RESOLUÇÃO
+I é verdadeira. T1 só prossegue após obter S, mantido por T2; T2 só prossegue após obter R, mantido por T1. Como nenhuma libera o mutex antes de obter ambos e não há mecanismo externo de rompimento, as duas permanecem bloqueadas.
+
+II é verdadeira. Se todas adquirem R antes de S, uma thread que ainda espera por R não pode manter S por essa operação. Desfaz-se, portanto, a possibilidade da dependência circular R→S→R. Isso não elimina a exclusão mútua nem toda espera por mutex; elimina a inversão de ordem que originou o ciclo.
+
+III é falsa. A ordem entre recursos não define qual thread recebe um mutex disputado. Como o atendimento não ganhou garantia de justiça, é possível que T1 libere e readquira R repetidamente antes de T2, que continua esperando. Há progresso de T1 e privação de T2: starvation pode persistir sem espera circular. Esse contraexemplo analítico basta para afastar a garantia absoluta da afirmação.
+
+Somente I e II são verdadeiras. O diagnóstico refere-se ao estado inicial observado; a prevenção por ordenação refere-se às futuras execuções iniciadas com os mutexes livres.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: I é verdadeira, mas II também é. Adquirir R antes de S em ambas as threads impede que uma detenha S e aguarde R enquanto a outra detenha R e aguarde S.
+B) Atende: I identifica a espera recíproca permanente do estado observado, e II descreve a eliminação dessa espera circular pela ordem comum de aquisição. III é falsa, porque a ordem entre recursos não assegura atendimento justo entre as threads.
+C) Não atende: I é verdadeira, mas III é falsa. Uma thread pode continuar sendo ultrapassada na disputa por R, mesmo que todas respeitem a ordem R antes de S. Além disso, a combinação omite II, que é verdadeira.
+D) Não atende: II é verdadeira, mas III é falsa. A prevenção de espera circular não estabelece limite para o tempo de espera de cada thread. A alternativa ainda omite I, que é verdadeira no estado explicitamente descrito.
+E) Não atende: inclui III, que é falsa. A ordem global de aquisição permite afastar o deadlock por inversão de R e S, mas, sozinha, não garante ausência de starvation.
+
+FONTES TÉCNICAS E EDITORIAIS CONSULTADAS
+- Oracle — Multithreaded Programming Guide — Chapter 9: Programming Guidelines. https://docs.oracle.com/cd/E19253-01/816-5137/6mba5vqln/index.html. Localizador: Seções Avoiding Deadlock, Deadlocks Related to Scheduling e Locking Guidelines; parágrafos sobre espera recíproca por A e B e hierarquia de locks. Sustenta: Espera recíproca permanente e prevenção por uma ordem comum de aquisição. Guia de Solaris/POSIX usado apenas para os conceitos; a questão especifica um modelo abstrato de mutexes.
+- The Linux Kernel documentation — Runtime locking correctness validator. https://docs.kernel.org/locking/lockdep-design.html. Localizador: Seção Multi-lock dependency rules: ordens L1 → L2 e L2 → L1 e formação de dependência circular. Sustenta: A relação entre aquisição em ordem inversa, espera circular e deadlock, coerente com as afirmações I e II e com a análise das alternativas.
+- Oracle — The Java Tutorials — Starvation and Livelock. https://docs.oracle.com/javase/tutorial/essential/concurrency/starvelive.html. Localizador: Seções Starvation e Livelock; tutorial identificado como escrito para JDK 8. Sustenta: Starvation como privação de acesso e de progresso de uma thread. A definição conceitual sustenta a análise de III; não se cobra uma API ou comportamento específico de Java.
+- Oracle — Java Platform SE 8 — ReentrantLock. https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html. Localizador: Descrição da classe, parágrafos sobre o parâmetro fairness e sobre a distinção entre justiça do lock e do escalonamento. Sustenta: Distinção documental entre política de atendimento de threads e simples exclusão mútua; a referência ilustra por que uma ordem entre recursos não constitui, sozinha, garantia contra starvation.
+- FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 38, p. 9; metadados de origem secundária em fontes.json. Sustenta: Referência editorial por proposições e seleção da combinação correta.
+- FCC — TRF4/2007 — Analista Judiciário — Informática — Cargo I, Tipo 001. https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Localizador: Questão 38, p. 7; metadados de origem primária do órgão em fontes.json. Sustenta: Referência histórica de TI com três proposições I–III e cinco combinações de resposta.
+- Conteúdo programático local — Sistemas Operacionais. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 116–121: sincronização; deadlocks e starvation; gerenciamento de memória: segmentação, memória virtual e paginação. Sustenta: Delimitação dos tópicos no programa; a observação final sobre legislação foi lida, sem incidência normativa na solução destes modelos conceituais.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 38; página 9.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 9; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada e aplicação nesta questão autoral: O exemplo apresenta itens numerados e exige selecionar a combinação que atende ao comando. A questão autoral utiliza três afirmações sobre consequências de um cenário, com alternativas formadas por combinações desses itens.
+  Limites da referência: O exemplo trata de segurança de transações, e sua utilização limita-se à construção editorial por proposições. A cópia do Qconcursos não é declarada download da FCC nem prova de integridade oficial; nenhuma regra normativa do exemplo foi transferida para a questão autoral.
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 38; página 7.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, marcador PAGINA 7; PDF local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; arquivo obtido no próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada e aplicação nesta questão autoral: O exemplo de TI usa três proposições I–III e cinco combinações com o qualificador apenas. A questão autoral aplica a mesma forma de comando a um raciocínio próprio sobre mutexes e progresso das threads.
+  Limites da referência: Referência histórica de 2007, utilizada somente para confirmar a construção editorial por três proposições; não representa a prática atual inteira da banca e não é fonte técnica de sincronização.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: navegação aberta na documentação primária Oracle e Linux sobre espera recíproca, hierarquia de locks e políticas de atendimento; conceitos de starvation e fairness conferidos nas referências Oracle listadas.
+- Analítica: análise separada de I, II e III; construção de contraexemplo de ultrapassagem repetida na disputa por R; conferência das cinco combinações e da unicidade da resposta.
+- Sem execução: o resultado depende das condições explícitas do modelo abstrato, não de reproduzir um escalonamento particular em um sistema operacional.
+- Editorial: leitura da questão 38, p. 9, do TRT4/2022 e da questão 38, p. 7, do TRF4/2007 nas extrações locais, com conferência das origens em fontes.json.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardam-se as auditorias independentes de estilo, pistas e redação/conformidade; o gabarito proposto permanece sob responsabilidade técnica do elaborador.

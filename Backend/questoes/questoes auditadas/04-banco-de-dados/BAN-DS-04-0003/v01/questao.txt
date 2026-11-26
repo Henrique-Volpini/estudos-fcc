@@ -1,0 +1,21 @@
+ID: BAN-DS-04-0003
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Controle de transações: Read Committed no PostgreSQL 15
+
+ENUNCIADO
+Em um banco PostgreSQL 15, a tabela conta contém inicialmente a linha (id = 7, saldo = 1000). Duas sessões executam a seguinte sequência, sem outras operações concorrentes:
+
+1. A inicia uma transação com isolamento READ COMMITTED e consulta o saldo da conta 7, obtendo 1000.
+2. B inicia outra transação e atualiza esse saldo para 1300, mas ainda não executa COMMIT.
+3. A executa um segundo SELECT saldo FROM conta WHERE id = 7.
+4. B executa COMMIT.
+5. A executa um terceiro SELECT saldo FROM conta WHERE id = 7, ainda na transação iniciada no passo 1.
+
+A não faz alterações nos dados, e seus SELECTs não contêm FOR UPDATE nem FOR SHARE. Nesse cenário, o comportamento esperado é:
+
+A) O segundo e o terceiro SELECTs de A retornam 1300.
+B) O segundo SELECT de A retorna 1000, e o terceiro retorna 1300.
+C) O segundo e o terceiro SELECTs de A retornam 1000.
+D) O segundo SELECT de A aguarda o COMMIT de B; depois, ambos retornam 1300.
+E) O segundo SELECT de A retorna 1000, e o terceiro é abortado por detectar uma leitura não repetível.

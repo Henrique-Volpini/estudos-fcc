@@ -1,0 +1,30 @@
+ID: BAN-DS-03-0004
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+p aponta para v[1], de valor 5. Assim, p + 1 aponta para v[2], que recebe 5 + 3 = 8. A expressão p - 1 aponta para v[0], de valor 3. Todos esses endereços pertencem ao vetor; não há acesso fora de seus limites.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: mantém o valor original de v[2], ignorando a atribuição feita por meio de *(p + 1).
+B) Atende: v[2] passa a valer 8 e *(p - 1) acessa v[0], que permanece igual a 3.
+C) Não atende: 5 é *p, correspondente a v[1]; o segundo argumento de printf é *(p - 1).
+D) Não atende: usa 7 como valor de *p, confundindo v[1] com v[2]. O ponteiro p não é incrementado pela expressão p + 1.
+E) Não atende: 7 era o valor inicial de v[2], não o valor do elemento anterior ao apontado por p.
+
+FONTES TÉCNICAS CONSULTADAS
+- WG14 — N1570, rascunho de comitê do C11 | https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf | §6.3.2.1, parágrafo 3: conversão de vetor para ponteiro; §6.5.6, parágrafo 8: aritmética de ponteiros no mesmo vetor; páginas PDF 72 e 111.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 43; página PDF 10.
+- Origem verificável: Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação: Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.
+- Limites: Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes.
+
+VERIFICAÇÕES REALIZADAS
+Rastreamento analítico dos índices e da atribuição, confrontado com N1570. Todos os acessos ficam entre v[0] e v[2]; não há dependência do tamanho de int, da representação de ponteiros ou de ordem de avaliação com efeitos conflitantes. Não houve compilação C.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

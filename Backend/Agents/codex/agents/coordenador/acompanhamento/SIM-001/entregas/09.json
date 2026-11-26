@@ -1,0 +1,294 @@
+{
+  "elaborador": "09",
+  "responsavel": "/root/elaborador_09",
+  "questoes": [
+    {
+      "id": "BAN-DS-09-0001",
+      "numero": 35,
+      "materia": "Redes de computadores",
+      "topico": "VLAN e IEEE 802.1Q",
+      "versao": "v01",
+      "topicoConteudo": "padrões IEEE 802.1D, 802.1Q/p, 802.1D-2004, 802.1Q-2005, 802.1X, 802.3, 802.3u, 802.3z, 802.3ae e 802.3af; conceitos de SDN, NFV, VLAN, VXLAN e redes modernas de data center.",
+      "objetivo": "Determinar a identificação VLAN no trunk e o alcance de um broadcast de dados em uma topologia com duas VLANs.",
+      "comando": "Identificar a combinação correta de marcação no trunk e entrega às estações do segundo switch.",
+      "enunciado": "Dois switches de camada 2, S1 e S2, estão interligados por um único enlace trunk IEEE 802.1Q. As VLANs 10, 20 e 99 estão criadas, ativas e permitidas no trunk. A VLAN nativa é a 99 nas duas extremidades e seus quadros são transmitidos sem tag. A estação H1 está ligada a uma porta de acesso da VLAN 10 em S1; em S2, H2 está em uma porta de acesso da VLAN 10 e H3, em uma porta de acesso da VLAN 20. Todas as portas estão encaminhando tráfego, sem filtros ou mecanismos de supressão, e não há roteamento entre VLANs.\n\nH1 envia um quadro Ethernet de dados com endereço de destino broadcast. Considerando a passagem desse quadro pelo trunk e sua entrega às estações de S2, ocorre transmissão",
+      "alternativas": {
+        "A": "com tag de VID 99 no trunk e entrega apenas a H2.",
+        "B": "com tag de VID 10 no trunk e entrega a H2 e H3.",
+        "C": "com tag de VID 20 no trunk e entrega apenas a H3.",
+        "D": "com tag de VID 10 no trunk e entrega apenas a H2.",
+        "E": "sem tag no trunk e entrega apenas a H2."
+      },
+      "gabarito": "D",
+      "resolucao": "H1 ingressa em S1 por uma porta de acesso da VLAN 10. Como essa VLAN difere da nativa 99, o quadro segue no trunk com identificação VID 10. Em S2, o broadcast permanece na VLAN 10: alcança H2, enquanto H3 pertence à VLAN 20. O trunk transporta as VLANs permitidas sem reunir seus domínios de broadcast.",
+      "justificativas": {
+        "A": "Não atende ao comando. A VLAN nativa 99 não substitui a VLAN de origem: o quadro pertence à VLAN 10 e deve atravessar o trunk com VID 10.",
+        "B": "Não atende ao comando. O VID 10 está adequado, mas o broadcast não é entregue à porta de H3, que pertence à VLAN 20.",
+        "C": "Não atende ao comando. O quadro ingressa na VLAN 10 e não sofre conversão para a VLAN 20. H3 não integra o domínio de broadcast de H1.",
+        "D": "Atende ao comando. O quadro da VLAN 10 atravessa o trunk com VID 10 e, entre as estações de S2, é entregue somente a H2, membro dessa VLAN.",
+        "E": "Não atende ao comando. A ausência de tag foi prevista para a VLAN nativa 99. A VLAN 10 deve permanecer identificada no trunk; a entrega em porta de acesso não determina a marcação no enlace entre switches."
+      },
+      "fontes": [
+        {
+          "titulo": "Programa-base — conhecimentos específicos de Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "REDES DE COMPUTADORES — itens de padrões IEEE e de VLAN.",
+          "apoio": "Delimitação do conteúdo atribuído ao elaborador 09.",
+          "tipo": "programa",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Cisco — Software Configuration Guide, IOS Release 15.2(2)E — Configuring VLAN Trunks",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release/15-2_2_e/configuration/guide/b_1522e_2960_2960c_2960s_2960sf_2960p_cg/m_1522e_vlan_trunk_2960s_cg.html",
+          "localizador": "Seção 'Configuring the Native VLAN for Untagged Traffic', parágrafos sobre quadros tagged/untagged e comparação do VLAN ID com a VLAN nativa; 'Defining the Allowed VLANs on a Trunk'.",
+          "apoio": "Identificação dos quadros de VLAN não nativa e distinção entre VLAN nativa e lista de VLANs permitidas.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "Cisco — Software Configuration Guide, IOS Release 15.2(2)E — Configuring VLANs",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release/15-2_2_e/configuration/guide/b_1522e_2960_2960c_2960s_2960sf_2960p_cg/m_1522e_vlan_vlan_2960s_cg.html",
+          "localizador": "Trecho 'Information About VLANs', seção 'Logical Networks', parágrafo inicial sobre encaminhamento de unicast, broadcast e multicast apenas para estações da VLAN.",
+          "apoio": "Restrição do broadcast aos membros da VLAN de origem.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 36, página 9; metadados e origem em fontes.json.",
+          "apoio": "O cenário de dois switches fornece as condições e solicita a conclusão sobre a transmissão e a entrega do mesmo quadro; as cinco opções descrevem essas duas propriedades.",
+          "tipo": "estilo",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — Tribunal Regional Federal da 4ª Região, 2007, Cargo I, Tipo 001",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+          "localizador": "Questão 45, página 8; metadados e origem em fontes.json.",
+          "apoio": "As alternativas repetem a estrutura 'tag no trunk; estações que recebem', para comparar os mesmos aspectos sem copiar o conteúdo do item histórico.",
+          "tipo": "estilo",
+          "consultadoEm": "2026-11-26"
+        }
+      ],
+      "autor": "/root/elaborador_09",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação efetiva nas duas páginas oficiais da Cisco em 26/11/2026, nos localizadores indicados. O comportamento de VLAN nativa está declarado no enunciado; não se cobra recurso de edição posterior do IEEE 802.1Q.",
+        "Analítica: acompanhamento do mesmo quadro de H1 à porta de entrada em S1, ao trunk e às portas de H2/H3; confronto individual das cinco combinações. Uma única combinação satisfaz marcação e alcance.",
+        "Editorial: leitura das questões reais identificadas nas extrações locais e dos metadados de origem em fontes.json; redação, estações e topologia autorais.",
+        "Não houve execução de simulador, equipamento ou captura de tráfego."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "origem": "Cópia secundária hospedada no Qconcursos; extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "limites": "Referência editorial consultada na extração local de uma cópia secundária do Qconcursos. Não foi obtida no domínio da FCC e o hash registrado não constitui assinatura ou certificação oficial. O exemplo isolado não demonstra frequência de formatos nem valida a correção técnica desta questão.",
+          "questao": 36,
+          "pagina": 9,
+          "caracteristicaObservada": "Contextualização da atividade de um Analista, seguida de escolha de uma conclusão técnica entre cinco afirmações.",
+          "caracteristicaAplicada": "O cenário de dois switches fornece as condições e solicita a conclusão sobre a transmissão e a entrega do mesmo quadro; as cinco opções descrevem essas duas propriedades."
+        },
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "origem": "PDF obtido no próprio TRF4; extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "limites": "Referência histórica de 2007, obtida no órgão. Empregada somente para observar a forma de redigir o comando e as alternativas; não fundamenta a atualidade técnica nem permite generalizações sobre toda a banca.",
+          "questao": 45,
+          "pagina": 8,
+          "caracteristicaObservada": "Comando direto sobre comunicação de dados, com cinco alternativas sintaticamente paralelas.",
+          "caracteristicaAplicada": "As alternativas repetem a estrutura 'tag no trunk; estações que recebem', para comparar os mesmos aspectos sem copiar o conteúdo do item histórico."
+        }
+      ],
+      "pendencias": "Nenhuma na elaboração; aguarda auditoria independente."
+    },
+    {
+      "id": "BAN-DS-09-0002",
+      "numero": 36,
+      "materia": "Redes de computadores",
+      "topico": "IPv4 e endereçamento de rede",
+      "versao": "v01",
+      "topicoConteudo": "IPv4 e IPv6;",
+      "objetivo": "Escolher o prefixo mais longo que suporte a quantidade de interfaces e calcular rede e broadcast da sub-rede que contém um endereço dado.",
+      "comando": "Determinar, na ordem pedida, máscara, endereço de rede e endereço de broadcast.",
+      "enunciado": "Um Analista deve dividir o bloco IPv4 10.48.12.0/24 em sub-redes de mesmo tamanho. Cada sub-rede deve oferecer, no mínimo, 25 endereços atribuíveis a interfaces, reservando um endereço para identificar a rede e outro para broadcast. Para reduzir o desperdício, será adotado o prefixo mais longo que atenda a essa quantidade.\n\nUma estação receberá o endereço 10.48.12.77. A máscara, o endereço de rede e o endereço de broadcast da sub-rede dessa estação são, correta e respectivamente,",
+      "alternativas": {
+        "A": "255.255.255.224 — 10.48.12.64 — 10.48.12.95.",
+        "B": "255.255.255.240 — 10.48.12.64 — 10.48.12.79.",
+        "C": "255.255.255.192 — 10.48.12.64 — 10.48.12.127.",
+        "D": "255.255.255.224 — 10.48.12.64 — 10.48.12.94.",
+        "E": "255.255.255.224 — 10.48.12.32 — 10.48.12.63."
+      },
+      "gabarito": "A",
+      "resolucao": "Com h bits de host, a condição é 2^h − 2 ≥ 25. Quatro bits oferecem 14 endereços atribuíveis; cinco oferecem 30. O prefixo escolhido é /27, de máscara 255.255.255.224. Seus blocos avançam de 32 em 32 no último octeto. O valor 77 pertence ao intervalo 64–95, de modo que a rede é 10.48.12.64 e o broadcast é 10.48.12.95. As interfaces usam 10.48.12.65 a 10.48.12.94.",
+      "justificativas": {
+        "A": "Atende ao comando. A máscara /27 oferece 30 endereços atribuíveis e coloca 10.48.12.77 na rede 10.48.12.64, cujo broadcast é 10.48.12.95.",
+        "B": "Não atende ao comando. Os limites apresentados são coerentes com /28 e contêm a estação, mas essa máscara oferece apenas 14 endereços atribuíveis, abaixo dos 25 exigidos.",
+        "C": "Não atende ao comando. O /26 contém a estação e oferece 62 endereços atribuíveis, mas não é o prefixo mais longo que atende à demanda: /27 já oferece 30.",
+        "D": "Não atende ao comando. A rede e a máscara estão adequadas, mas 10.48.12.94 é o último endereço atribuível. O broadcast ocorre quando os cinco bits de host são 1, resultando em 10.48.12.95.",
+        "E": "Não atende ao comando. A combinação descreve outra sub-rede /27, com intervalo de 10.48.12.32 a 10.48.12.63, que não contém o endereço 10.48.12.77."
+      },
+      "fontes": [
+        {
+          "titulo": "Programa-base — conhecimentos específicos de Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "REDES DE COMPUTADORES — item 'IPv4 e IPv6'.",
+          "apoio": "Delimitação do conteúdo atribuído ao elaborador 09.",
+          "tipo": "programa",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+          "url": "https://www.rfc-editor.org/rfc/rfc4632.html",
+          "localizador": "Seção 3.1, 'Basic Concept and Prefix Notation', páginas 5–6.",
+          "apoio": "Significado do comprimento do prefixo e separação entre bits de rede e de host.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "RFC 1878 — Variable Length Subnet Table For IPv4",
+          "url": "https://www.rfc-editor.org/rfc/rfc1878.html",
+          "localizador": "Tabela de máscaras, página 2, linhas /26, /27 e /28; tabela 1-2, página 5, blocos N.N.N.64 com máscaras 255.255.255.192, 255.255.255.224 e 255.255.255.240.",
+          "apoio": "Equivalência entre máscaras e prefixos, capacidade dos blocos e limites de rede, interfaces e broadcast. RFC de categoria Informational, usado como tabela de conferência.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "RFC 1122 — Requirements for Internet Hosts — Communication Layers",
+          "url": "https://www.rfc-editor.org/rfc/rfc1122.html",
+          "localizador": "Seção 3.2.1.3, 'Addressing', páginas 29–31, em especial item (e), subnet-directed broadcast e restrições dos campos de host.",
+          "apoio": "Interpretação do endereço com todos os bits de host em 1 como broadcast da sub-rede e distinção dos endereços de interfaces no cenário.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 52, página 12; metadados e origem em fontes.json.",
+          "apoio": "O plano de endereçamento é apresentado integralmente e cada opção contém máscara, endereço de rede e broadcast nessa mesma ordem.",
+          "tipo": "estilo",
+          "consultadoEm": "2026-11-26"
+        }
+      ],
+      "autor": "/root/elaborador_09",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação efetiva nas RFCs 4632, 1878 e 1122 em 26/11/2026; conferência dos localizadores citados, inclusive capacidade de /26, /27 e /28.",
+        "Analítica: resolução da desigualdade 2^h − 2 ≥ 25, escolha do /27 e determinação do intervalo 64–95; exame individual dos cinco conjuntos de dados.",
+        "Executada em memória: Python 3.14.10, biblioteca padrão ipaddress, entrada ip_interface('10.48.12.77/27').network; resultado observado 10.48.12.64/27, máscara 255.255.255.224, broadcast 10.48.12.95 e 30 endereços em hosts(). Nenhum arquivo de teste foi criado.",
+        "Editorial: leitura da questão 52, página 12, do caderno FCC TRT4/2022, na extração local; os dados e o problema de endereçamento são autorais."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "origem": "Cópia secundária hospedada no Qconcursos; extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "limites": "Referência editorial consultada na extração local de uma cópia secundária do Qconcursos. Não foi obtida no domínio da FCC e o hash registrado não constitui assinatura ou certificação oficial. O exemplo isolado não demonstra frequência de formatos nem valida a correção técnica desta questão.",
+          "questao": 52,
+          "pagina": 12,
+          "caracteristicaObservada": "Dados técnicos explícitos seguidos de comando que exige uma sequência ordenada de três resultados.",
+          "caracteristicaAplicada": "O plano de endereçamento é apresentado integralmente e cada opção contém máscara, endereço de rede e broadcast nessa mesma ordem."
+        }
+      ],
+      "pendencias": "Nenhuma na elaboração; aguarda auditoria independente."
+    },
+    {
+      "id": "BAN-DS-09-0003",
+      "numero": 37,
+      "materia": "Redes de computadores",
+      "topico": "Roteamento OSPF e BGP",
+      "versao": "v01",
+      "topicoConteudo": "protocolos de roteamento OSPF e BGP;",
+      "objetivo": "Distinguir a seleção de caminho pelo custo acumulado do OSPF da preferência de política local no BGP.",
+      "comando": "Identificar o próximo salto OSPF para P e a rota BGP para Q, nessa ordem.",
+      "enunciado": "Em um sistema autônomo, o roteador R1 executa OSPFv2 e BGP-4. Para um prefixo interno P, há somente dois caminhos OSPF, ambos intra-área: por R2, com custo 10 de R1 a R2 e custo 20 de R2 até P; por R3, com custo 5 de R1 a R3 e custo 40 de R3 até P. Os custos informados são os da direção de R1 para P.\n\nPara outro prefixo, externo, Q, R1 dispõe somente das rotas BGP X e Y, ambas elegíveis e com NEXT_HOP alcançável. A política local já definiu seus graus de preferência, representados por LOCAL_PREF: X tem valor 200 e AS_PATH com três sistemas autônomos; Y tem valor 100 e AS_PATH com um sistema autônomo. Considere o processo de decisão da RFC 4271, sem critérios adicionais de fabricante.\n\nO próximo salto selecionado pelo OSPF para P e a rota selecionada pelo BGP para Q são, respectivamente,",
+      "alternativas": {
+        "A": "R3 e Y.",
+        "B": "R2 e Y.",
+        "C": "R2 e X.",
+        "D": "R3 e X.",
+        "E": "R2 e R3, em caminhos de igual custo, e X."
+      },
+      "gabarito": "C",
+      "resolucao": "No OSPF, os custos dos caminhos são 10 + 20 = 30 por R2 e 5 + 40 = 45 por R3. Como ambos são intra-área, R2 oferece o menor custo acumulado. No BGP, os graus de preferência já definidos são 200 para X e 100 para Y. Seleciona-se X; o AS_PATH menor de Y não supera essa preferência. Assim, as duas decisões solicitadas são R2 e X.",
+      "justificativas": {
+        "A": "Não atende ao comando. R3 tem o enlace inicial de menor custo, mas seu caminho completo custa 45, contra 30 por R2. Y tem AS_PATH menor, porém grau de preferência inferior ao de X.",
+        "B": "Não atende ao comando. R2 é o próximo salto OSPF de menor custo acumulado. A seleção de Y, contudo, desconsidera que o grau de preferência de X é 200 e o de Y é 100.",
+        "C": "Atende ao comando. R2 oferece o caminho OSPF de custo 30; X possui o maior grau de preferência BGP já estabelecido pela política local.",
+        "D": "Não atende ao comando. X é selecionada no BGP, mas o custo OSPF inclui todo o percurso: o custo inicial 5 de R3 resulta em total 45, superior ao total 30 por R2.",
+        "E": "Não atende ao comando. X é a rota BGP selecionada, mas os caminhos OSPF têm custos 30 e 45. O mesmo número de saltos não os torna caminhos de igual custo."
+      },
+      "fontes": [
+        {
+          "titulo": "Programa-base — conhecimentos específicos de Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "REDES DE COMPUTADORES — item 'protocolos de roteamento OSPF e BGP'.",
+          "apoio": "Delimitação do conteúdo atribuído ao elaborador 09.",
+          "tipo": "programa",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "RFC 2328 — OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "localizador": "Resumo, página 1; seção 16.1, 'Calculating the shortest-path tree for an area', páginas 161–162, definições 'List of next hops' e 'Distance from root'.",
+          "apoio": "Cálculo do custo pela soma dos enlaces e comparação de caminhos intra-área; múltiplos caminhos dependem de igualdade de custo.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "RFC 4271 — A Border Gateway Protocol 4 (BGP-4)",
+          "url": "https://www.rfc-editor.org/rfc/rfc4271.html",
+          "localizador": "Seção 5.1.5, 'LOCAL_PREF', página 29; seções 9.1, 'Decision Process', e 9.1.2, 'Phase 2: Route Selection', páginas 76–79.",
+          "apoio": "Preferência pelo maior grau de preferência; elegibilidade e NEXT_HOP; seleção antes de desempates por outros atributos.",
+          "tipo": "tecnica",
+          "consultadoEm": "2026-11-26"
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, 2022, A14, Tipo 001",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão 53, página 12; metadados e origem em fontes.json.",
+          "apoio": "As condições de OSPF e BGP são explicitadas separadamente, e as opções combinam os dois resultados na ordem solicitada.",
+          "tipo": "estilo",
+          "consultadoEm": "2026-11-26"
+        }
+      ],
+      "autor": "/root/elaborador_09",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: navegação efetiva nas RFCs 2328 e 4271 em 26/11/2026; leitura das regras de soma de custos, caminhos de igual custo e preferência BGP nos localizadores indicados.",
+        "Analítica: comparação entre caminhos intra-área de mesmo tipo; separação das decisões para os prefixos P e Q; conferência dos cinco pares de resultados e das hipóteses de elegibilidade.",
+        "Executada em memória: Python 3.14.10 confirmou as somas 10 + 20 = 30 e 5 + 40 = 45 e a comparação numérica entre os pares ('X', 200) e ('Y', 100), cujo maior valor é o de X. Isso é apenas conferência aritmética, sem execução de implementação OSPF/BGP ou emulador de roteadores.",
+        "Editorial: leitura da questão 53, página 12, do caderno FCC TRT4/2022, na extração local; os protocolos cobrados, o cenário, os valores e as alternativas desta questão são autorais."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "origem": "Cópia secundária hospedada no Qconcursos; extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "limites": "Referência editorial consultada na extração local de uma cópia secundária do Qconcursos. Não foi obtida no domínio da FCC e o hash registrado não constitui assinatura ou certificação oficial. O exemplo isolado não demonstra frequência de formatos nem valida a correção técnica desta questão.",
+          "questao": 53,
+          "pagina": 12,
+          "caracteristicaObservada": "Comparação de conceitos de protocolos de rede, com seleção de uma combinação de respostas na ordem indicada.",
+          "caracteristicaAplicada": "As condições de OSPF e BGP são explicitadas separadamente, e as opções combinam os dois resultados na ordem solicitada."
+        }
+      ],
+      "pendencias": "Nenhuma na elaboração; aguarda auditoria independente."
+    }
+  ]
+}

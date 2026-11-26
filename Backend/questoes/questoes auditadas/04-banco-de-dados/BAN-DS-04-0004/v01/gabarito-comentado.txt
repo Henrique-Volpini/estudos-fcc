@@ -1,0 +1,28 @@
+ID: BAN-DS-04-0004
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Escolher a decomposição que elimina a dependência parcial e preserva a alocação.
+
+RESOLUÇÃO
+nome_empregado depende somente de cod_empregado, que é parte própria da única chave candidata composta. Separe EMPREGADO(cod_empregado, nome_empregado) e mantenha ALOCACAO(cod_empregado, cod_projeto, horas). Essa decomposição remove a dependência parcial e preserva os fatos de alocação. Não se supõe que horas dependa apenas do empregado ou apenas do projeto.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende: o nome fica na relação determinada por cod_empregado, e horas permanece associada à chave completa empregado-projeto. A ligação por cod_empregado permite recompor os dados.
+B) Não atende: horas depende do par empregado-projeto, e nome_empregado não é determinado por cod_projeto nas dependências fornecidas.
+C) Não atende: a primeira relação ainda repete nome_empregado para os projetos e mantém a dependência de apenas parte de sua chave composta.
+D) Não atende: colocar horas apenas com cod_projeto perde sua associação com cada empregado, necessária pelo esquema e pela dependência dada.
+E) Não atende: CADASTRO retira cod_projeto do registro das horas; assim, não preserva qual quantidade de horas pertence a cada projeto do empregado.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Support - Database design basics | https://support.microsoft.com/en-us/access/database-design-basics?ad=us&rs=en-us&ui=en-us | Applying the normalization rules, Second normal form: dependência de toda a chave composta e separação de atributos
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- TRT da 4ª Região | Analista Judiciário - Tecnologia da Informação | 2022 | Caderno A14, tipo 001 | Questão 43 | Página PDF 10
+  Origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica aplicada e limites: Apresentação de uma estrutura de dados e seleção de sua representação adequada, em cinco alternativas paralelas. Esquema e problema autorais. Cópia secundária identificada; a referência não fundamenta o conteúdo de normalização.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental do critério de segunda forma normal e análise das dependências explicitamente declaradas. A hipótese de única chave candidata evita depender de uma escolha arbitrária de chave primária.
+
+PENDÊNCIAS
+Nenhum impedimento técnico identificado na elaboração. Aguardando as três auditorias de conformidade.

@@ -1,0 +1,49 @@
+ID: BAN-DS-09-0003
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar o próximo salto OSPF para P e a rota BGP para Q, nessa ordem.
+
+RESOLUÇÃO
+No OSPF, os custos dos caminhos são 10 + 20 = 30 por R2 e 5 + 40 = 45 por R3. Como ambos são intra-área, R2 oferece o menor custo acumulado. No BGP, os graus de preferência já definidos são 200 para X e 100 para Y. Seleciona-se X; o AS_PATH menor de Y não supera essa preferência. Assim, as duas decisões solicitadas são R2 e X.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando. R3 tem o enlace inicial de menor custo, mas seu caminho completo custa 45, contra 30 por R2. Y tem AS_PATH menor, porém grau de preferência inferior ao de X.
+B) Não atende ao comando. R2 é o próximo salto OSPF de menor custo acumulado. A seleção de Y, contudo, desconsidera que o grau de preferência de X é 200 e o de Y é 100.
+C) Atende ao comando. R2 oferece o caminho OSPF de custo 30; X possui o maior grau de preferência BGP já estabelecido pela política local.
+D) Não atende ao comando. X é selecionada no BGP, mas o custo OSPF inclui todo o percurso: o custo inicial 5 de R3 resulta em total 45, superior ao total 30 por R2.
+E) Não atende ao comando. X é a rota BGP selecionada, mas os caminhos OSPF têm custos 30 e 45. O mesmo número de saltos não os torna caminhos de igual custo.
+
+FONTES TÉCNICAS CONSULTADAS
+- Programa-base — conhecimentos específicos de Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: REDES DE COMPUTADORES — item 'protocolos de roteamento OSPF e BGP'.
+  Fundamentação: Delimitação do conteúdo atribuído ao elaborador 09.
+  Consulta: 2026-11-26.
+- RFC 2328 — OSPF Version 2
+  URL: https://www.rfc-editor.org/rfc/rfc2328.html
+  Localizador: Resumo, página 1; seção 16.1, 'Calculating the shortest-path tree for an area', páginas 161–162, definições 'List of next hops' e 'Distance from root'.
+  Fundamentação: Cálculo do custo pela soma dos enlaces e comparação de caminhos intra-área; múltiplos caminhos dependem de igualdade de custo.
+  Consulta: 2026-11-26.
+- RFC 4271 — A Border Gateway Protocol 4 (BGP-4)
+  URL: https://www.rfc-editor.org/rfc/rfc4271.html
+  Localizador: Seção 5.1.5, 'LOCAL_PREF', página 29; seções 9.1, 'Decision Process', e 9.1.2, 'Phase 2: Route Selection', páginas 76–79.
+  Fundamentação: Preferência pelo maior grau de preferência; elegibilidade e NEXT_HOP; seleção antes de desempates por outros atributos.
+  Consulta: 2026-11-26.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 53; página 12.
+  Origem verificável: Cópia secundária hospedada no Qconcursos; extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica observada: Comparação de conceitos de protocolos de rede, com seleção de uma combinação de respostas na ordem indicada.
+  Aplicação nesta questão autoral: As condições de OSPF e BGP são explicitadas separadamente, e as opções combinam os dois resultados na ordem solicitada.
+  Limites da referência: Referência editorial consultada na extração local de uma cópia secundária do Qconcursos. Não foi obtida no domínio da FCC e o hash registrado não constitui assinatura ou certificação oficial. O exemplo isolado não demonstra frequência de formatos nem valida a correção técnica desta questão.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: navegação efetiva nas RFCs 2328 e 4271 em 26/11/2026; leitura das regras de soma de custos, caminhos de igual custo e preferência BGP nos localizadores indicados.
+- Analítica: comparação entre caminhos intra-área de mesmo tipo; separação das decisões para os prefixos P e Q; conferência dos cinco pares de resultados e das hipóteses de elegibilidade.
+- Executada em memória: Python 3.14.10 confirmou as somas 10 + 20 = 30 e 5 + 40 = 45 e a comparação numérica entre os pares ('X', 200) e ('Y', 100), cujo maior valor é o de X. Isso é apenas conferência aritmética, sem execução de implementação OSPF/BGP ou emulador de roteadores.
+- Editorial: leitura da questão 53, página 12, do caderno FCC TRT4/2022, na extração local; os protocolos cobrados, o cenário, os valores e as alternativas desta questão são autorais.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguarda auditoria independente.

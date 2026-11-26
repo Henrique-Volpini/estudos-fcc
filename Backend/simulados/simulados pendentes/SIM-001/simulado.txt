@@ -1,0 +1,735 @@
+Banestes - Desenvolvimento de Sistemas - Simulado 01
+50 questões de conhecimentos específicos.
+Selecione uma alternativa por questão. Na aplicação, a correção aparece após a resposta; depois você pode marcar sabia, chutei ou deduzi.
+
+QUESTÃO 1
+Uma equipe desenvolve um aplicativo bancário segundo o Scrum Guide 2020. Ao final de uma Sprint, precisa discutir uma mudança nas necessidades dos clientes e os resultados obtidos no produto. Também identificou falhas recorrentes de comunicação e integração durante o trabalho. A utilização dos eventos Sprint Review e Sprint Retrospective está adequada ao Guia quando a equipe, respectivamente,
+A) define a meta da próxima Sprint com os stakeholders e planeja melhorias em suas interações e processos.
+B) inspeciona os resultados com os stakeholders para adaptar o produto e define a meta da próxima Sprint.
+C) inspeciona os resultados com os stakeholders para adaptar o produto e planeja melhorias em suas interações e processos.
+D) planeja melhorias em suas interações e processos e inspeciona os resultados com os stakeholders para adaptar o produto.
+E) inspeciona o progresso diário em direção à meta da Sprint e ajusta o plano de trabalho do próximo dia.
+
+QUESTÃO 2
+Em um diagrama de classes UML 2.5, existe uma associação binária simples entre Agencia e Carteira. A multiplicidade escrita junto à extremidade Agencia é 0..1; junto à extremidade Carteira, é 1..*. Considere exclusivamente essas restrições de multiplicidade. Cada alternativa descreve todos os objetos existentes e todas as ligações entre eles. A configuração compatível com o modelo é:
+A) Uma agência sem carteiras e duas carteiras sem ligação com agência.
+B) Duas agências ligadas à mesma carteira, sem outras carteiras ou ligações.
+C) Duas agências, cada uma ligada a uma carteira distinta, e uma terceira agência sem carteiras.
+D) Uma agência ligada a duas carteiras, sendo uma delas também ligada a uma segunda agência.
+E) Uma agência ligada a duas carteiras e uma terceira carteira sem ligação com agência.
+
+QUESTÃO 3
+Uma biblioteca segue a especificação Semantic Versioning 2.0.0 e está publicada na versão normal 3.7.4. Sua próxima publicação reunirá uma correção de defeito compatível com versões anteriores, uma nova operação compatível na API pública e a remoção de outra operação dessa API, ainda utilizada pelos clientes. Essa remoção exige alteração nos programas clientes para que continuem funcionando. O menor número de versão normal que expressa corretamente esse conjunto de mudanças é
+A) 3.8.0.
+B) 4.0.0.
+C) 3.7.5.
+D) 4.7.4.
+E) 4.0.1.
+
+QUESTÃO 4
+Durante a especificação de um sistema bancário, uma analista registrou os seguintes requisitos:
+
+I. O sistema deve emitir um comprovante de transferência contendo o identificador da operação, a data e o valor transferido.
+II. O sistema deve permitir ao cliente cancelar um agendamento ainda não executado e apresentar a confirmação do cancelamento.
+III. Sob o perfil de carga homologado de 1.000 usuários simultâneos, pelo menos 95% das consultas de saldo devem apresentar resposta em até 2 segundos.
+IV. O serviço de consulta de saldo deve apresentar disponibilidade mensal de, no mínimo, 99,9%, considerando todas as interrupções no mês.
+
+Quanto à natureza do que é exigido, são requisitos funcionais e requisitos de qualidade, respectivamente,
+A) I e III; II e IV.
+B) II e IV; I e III.
+C) III e IV; I e II.
+D) I e II; III e IV.
+E) I e IV; II e III.
+
+QUESTÃO 5
+Em uma organização que adota o COBIT 2019, foram descritas as seguintes atividades:
+
+I. O colegiado responsável examina necessidades das partes interessadas, fixa prioridades para investimentos de informação e tecnologia e acompanha os resultados em relação à direção estabelecida.
+II. A unidade de TI organiza recursos e planos para executar a direção recebida.
+III. Uma equipe verifica o desempenho de informação e tecnologia em relação a metas internas e sua conformidade com requisitos externos.
+
+A classificação das atividades I, II e III nos domínios do COBIT 2019 é, correta e respectivamente,
+A) governança (EDM); gestão (BAI); gestão (MEA).
+B) gestão (APO); gestão (APO); governança (EDM).
+C) governança (EDM); gestão (APO); gestão (DSS).
+D) governança (EDM); gestão (APO); gestão (MEA).
+E) gestão (MEA); gestão (BAI); governança (EDM).
+
+QUESTÃO 6
+Uma organização compara duas soluções de infraestrutura, X e Y, com capacidade e níveis de serviço equivalentes, para uso durante três anos. Foram estimados os seguintes custos, em reais:
+
+Item                                      X             Y
+Aquisição e instalação, uma única vez     140.000       200.000
+Operação, por ano                         30.000        16.000
+Manutenção e suporte, por ano             20.000         8.000
+
+Os custos anuais incidem em cada um dos três anos. Não há outros custos, valor residual, inflação ou desconto financeiro a considerar. Com base no custo total de propriedade (TCO), a solução de menor custo no período e a diferença entre os TCOs são, respectivamente,
+A) X e R$ 60.000,00.
+B) Y e R$ 26.000,00.
+C) X e R$ 18.000,00.
+D) Y e R$ 78.000,00.
+E) Y e R$ 18.000,00.
+
+QUESTÃO 7
+Uma prestadora de serviços de TI acordou com um cliente externo o prazo máximo de quatro horas para tratar um incidente, contado da abertura à conclusão da validação do restabelecimento. Para apoiar esse atendimento, pactuou com suas equipes internas os limites de 40 minutos para triagem, 150 minutos para restabelecimento e 70 minutos para validação.
+
+As etapas ocorrem sucessivamente, sem sobreposição, intervalos ou pausas. Cada limite interno é contado do início da respectiva etapa, e todos os prazos usam minutos corridos. Na gestão de níveis de serviço, esses compromissos internos são
+A) OLAs compatíveis com o prazo global, pois o limite de cada etapa, considerado isoladamente, é inferior às quatro horas acordadas com o cliente.
+B) SLAs compatíveis com o prazo global, pois a passagem entre equipes reinicia a contagem das quatro horas acordadas com o cliente.
+C) OLAs incompatíveis com o prazo global, pois todas as metas internas podem ser cumpridas e o atendimento, ainda assim, alcançar 260 minutos.
+D) contratos de apoio compatíveis com o prazo global, pois estabelecem metas de fornecedores externos para executar as etapas do atendimento.
+E) OLAs compatíveis com o prazo global, pois a soma dos limites internos amplia automaticamente o prazo acordado com o cliente para 260 minutos.
+
+QUESTÃO 8
+Em Python 3.12, um desenvolvedor executou o código abaixo para preparar uma lista de trabalho:
+
+origem = [[1], [2]]
+copia = origem[:]
+copia[0].append(3)
+copia.append([4])
+print(origem)
+
+A saída produzida por esse código é
+A) [[1], [2], [4]]
+B) [[1, 3], [2], [4]]
+C) [[1, 3], [2]]
+D) [[1], [2]]
+E) [[1, 3], [2, 4]]
+
+QUESTÃO 9
+Considere o programa Java 21 abaixo:
+
+public class Exemplo {
+    static class Base {
+        String nome() { return "base"; }
+    }
+    static class Derivada extends Base {
+        @Override String nome() { return "derivada"; }
+    }
+    static String identificar(Base item) { return "base"; }
+    static String identificar(Derivada item) { return "derivada"; }
+    public static void main(String[] args) {
+        Base item = new Derivada();
+        System.out.print(item.nome() + "/" + identificar(item));
+    }
+}
+
+O texto exibido ao executar o método main é
+A) base/base
+B) derivada/derivada
+C) base/derivada
+D) Não há saída, pois a chamada identificar(item) é ambígua.
+E) derivada/base
+
+QUESTÃO 10
+Em uma aplicação C# 12 com .NET 8, considere o programa:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Exemplo {
+    static void Main() {
+        var valores = new List<int> { 2, 4, 6 };
+        var consulta = valores.Where(n => n > 3);
+        valores.Add(8);
+        Console.Write(consulta.Count());
+    }
+}
+
+O valor exibido é
+A) 0
+B) 1
+C) 2
+D) 3
+E) 4
+
+QUESTÃO 11
+Considere o programa em C11:
+
+#include <stdio.h>
+
+int main(void) {
+    int v[] = {3, 5, 7, 9};
+    int *p = v + 1;
+    *(p + 1) = *p + v[0];
+    printf("%d %d", v[2], *(p - 1));
+    return 0;
+}
+
+A sequência exibida por printf é
+A) 7 3
+B) 8 3
+C) 8 5
+D) 10 3
+E) 8 7
+
+QUESTÃO 12
+Um desenvolvedor executou o código abaixo em PHP 8.2:
+
+<?php
+$codigo = "42";
+$numero = 42;
+echo ($codigo == $numero ? "S" : "N");
+echo ($codigo === $numero ? "S" : "N");
+
+Qual é o resultado da execução?
+A) É exibido SN.
+B) É exibido SS.
+C) É exibido NS.
+D) É exibido NN.
+E) É lançado TypeError ao comparar a string com o inteiro.
+
+QUESTÃO 13
+Em um sistema bancário, a classe CalculadoraTarifa calcula tarifas, gera relatórios em PDF e grava resultados no banco. As regras de cálculo, o leiaute dos relatórios e a forma de armazenamento são alterados por demandas independentes. Para aplicar o princípio da responsabilidade única, a organização mais adequada é
+A) mover os três métodos para uma classe utilitária estática, mantendo nela cálculo, geração de PDF e gravação.
+B) criar uma subclasse para cada formato de relatório, mantendo em cada subclasse o cálculo e o acesso ao banco.
+C) definir uma interface com os três métodos e exigir que toda implementação realize cálculo, PDF e armazenamento.
+D) extrair cálculo, geração do PDF e persistência para componentes distintos, que colaborem por interfaces.
+E) tornar privados os métodos de PDF e gravação, mantendo as três tarefas na classe de cálculo.
+
+QUESTÃO 14
+Considere o programa Java 21 abaixo:
+
+public class Exemplo {
+    public static void main(String[] args) {
+        int divisor = 0;
+        try {
+            int valor = 12 / divisor;
+            System.out.print("T");
+        } catch (ArithmeticException ex) {
+            System.out.print("C");
+        } finally {
+            System.out.print("F");
+        }
+        System.out.print("S");
+    }
+}
+
+Executando main, a sequência de caracteres exibida é
+A) TFS
+B) CFS
+C) CF
+D) FS
+E) CS
+
+QUESTÃO 15
+Em um banco PostgreSQL 15, a tabela agencia possui a coluna id como chave primária, e a tabela conta possui as colunas id, chave primária, e agencia_id. Considere somente os seguintes registros:
+
+agencia
+id
+10
+20
+30
+
+conta
+id | agencia_id
+1  | 10
+2  | 10
+3  | 20
+
+Um analista executou:
+
+SELECT a.id, COUNT(*) AS linhas, COUNT(c.id) AS contas
+FROM agencia AS a
+LEFT JOIN conta AS c ON c.agencia_id = a.id
+GROUP BY a.id
+ORDER BY a.id;
+
+Na linha em que a.id é igual a 30, os valores das colunas linhas e contas são, respectivamente,
+A) 0 e 0.
+B) 0 e 1.
+C) 1 e 0.
+D) 1 e 1.
+E) 3 e 0.
+
+QUESTÃO 16
+No PostgreSQL 15, uma tabela classificacao possui as colunas id, chave primária, setor e pontos, todas não nulas. Seus registros são:
+
+id | setor | pontos
+1  | N     | 90
+2  | N     | 90
+3  | N     | 70
+4  | S     | 80
+5  | S     | 60
+
+Considere a consulta:
+
+SELECT id,
+       RANK() OVER (PARTITION BY setor ORDER BY pontos DESC) AS posicao
+FROM classificacao
+ORDER BY id;
+
+Os valores de posicao retornados para os ids de 1 a 5, nessa ordem, são
+A) 1, 2, 3, 1 e 2.
+B) 1, 1, 2, 1 e 2.
+C) 1, 1, 4, 3 e 5.
+D) 1, 1, 3, 1 e 2.
+E) 2, 2, 1, 2 e 1.
+
+QUESTÃO 17
+Em um banco PostgreSQL 15, a tabela conta contém inicialmente a linha (id = 7, saldo = 1000). Duas sessões executam a seguinte sequência, sem outras operações concorrentes:
+
+1. A inicia uma transação com isolamento READ COMMITTED e consulta o saldo da conta 7, obtendo 1000.
+2. B inicia outra transação e atualiza esse saldo para 1300, mas ainda não executa COMMIT.
+3. A executa um segundo SELECT saldo FROM conta WHERE id = 7.
+4. B executa COMMIT.
+5. A executa um terceiro SELECT saldo FROM conta WHERE id = 7, ainda na transação iniciada no passo 1.
+
+A não faz alterações nos dados, e seus SELECTs não contêm FOR UPDATE nem FOR SHARE. Nesse cenário, o comportamento esperado é:
+A) O segundo e o terceiro SELECTs de A retornam 1300.
+B) O segundo SELECT de A retorna 1000, e o terceiro retorna 1300.
+C) O segundo e o terceiro SELECTs de A retornam 1000.
+D) O segundo SELECT de A aguarda o COMMIT de B; depois, ambos retornam 1300.
+E) O segundo SELECT de A retorna 1000, e o terceiro é abortado por detectar uma leitura não repetível.
+
+QUESTÃO 18
+Uma relação em primeira forma normal é representada por:
+
+ALOCACAO(cod_empregado, cod_projeto, nome_empregado, horas)
+
+Sua única chave candidata é (cod_empregado, cod_projeto). Considere as dependências funcionais:
+
+cod_empregado -> nome_empregado
+(cod_empregado, cod_projeto) -> horas
+
+Não há outras dependências funcionais além das decorrentes dessas e da chave. Para eliminar a dependência parcial indicada e preservar a associação de cada empregado com seus projetos e respectivas horas, a decomposição adequada é:
+A) EMPREGADO(cod_empregado, nome_empregado) e ALOCACAO(cod_empregado, cod_projeto, horas).
+B) EMPREGADO(cod_empregado, horas) e PROJETO(cod_projeto, nome_empregado).
+C) EMPREGADO(cod_empregado, cod_projeto, nome_empregado) e HORAS(cod_empregado, cod_projeto, horas).
+D) PROJETO(cod_projeto, horas) e EMPREGADO(cod_empregado, nome_empregado).
+E) ALOCACAO(cod_empregado, cod_projeto) e CADASTRO(cod_empregado, nome_empregado, horas).
+
+QUESTÃO 19
+Em um banco PostgreSQL 15, a tabela movimento possui as colunas agencia e valor, ambas não nulas, e contém somente os registros:
+
+agencia | valor
+A       | 40
+A       | 70
+B       | 50
+C       | 30
+C       | 60
+
+Considere:
+
+WITH totais AS (
+    SELECT agencia, SUM(valor) AS total
+    FROM movimento
+    GROUP BY agencia
+)
+SELECT COUNT(*) AS quantidade, SUM(total) AS soma
+FROM totais
+WHERE total >= 90;
+
+Os valores retornados nas colunas quantidade e soma são, respectivamente,
+A) 5 e 250.
+B) 3 e 250.
+C) 2 e 110.
+D) 1 e 110.
+E) 2 e 200.
+
+QUESTÃO 20
+Uma equipe precisa investigar conexões entre clientes, contas e dispositivos. A consulta predominante parte de um dispositivo e percorre sucessivamente suas ligações para localizar clientes conectados por caminhos com quantidade variável de etapas. Considerando os modelos de dados em nível conceitual, aquele mais diretamente orientado à representação desses vínculos e à realização dessas travessias é o modelo
+A) orientado a documentos.
+B) chave-valor.
+C) de colunas largas.
+D) de grafos.
+E) dimensional em estrela.
+
+QUESTÃO 21
+Um aplicativo envia uma requisição PUT para atualizar o endereço de correspondência de um cliente em um recurso identificado por uma URI. A conexão é interrompida antes da leitura da resposta. O cliente considera reenviar a mesma requisição, com o mesmo conteúdo. Supondo uma implementação conforme a semântica HTTP definida na RFC 9110, é correto afirmar que
+A) a idempotência exige que a repetição produza o mesmo código de status e o mesmo corpo de resposta.
+B) a repetição deve criar outro recurso, pois cada requisição PUT representa uma nova operação de inclusão.
+C) a idempotência depende de desabilitar o armazenamento da resposta em cache antes do reenvio.
+D) a repetição tem o mesmo efeito pretendido sobre o recurso, embora a resposta recebida possa ser diferente.
+E) o método é seguro e idempotente, pois a atualização solicitada não pode modificar o estado do servidor.
+
+QUESTÃO 22
+Um desenvolvedor executa integralmente o trecho abaixo como um único script clássico em uma página ativa, em navegador compatível com o HTML Standard. Não há outros registros no console, exceções ou interrupções durante a execução.
+
+console.log('inicio');
+Promise.resolve().then(() => {
+  console.log('promessa');
+  queueMicrotask(() => console.log('micro'));
+});
+setTimeout(() => console.log('temporizador'), 0);
+console.log('fim');
+
+A sequência de mensagens produzida por esse trecho é
+A) inicio, promessa, micro, fim, temporizador.
+B) inicio, fim, promessa, micro, temporizador.
+C) inicio, fim, temporizador, promessa, micro.
+D) inicio, fim, promessa, temporizador, micro.
+E) inicio, promessa, fim, temporizador, micro.
+
+QUESTÃO 23
+Na avaliação de acessibilidade de um portal, uma analista examina o efeito de faixas fixas da interface sobre componentes que recebem foco pelo teclado. Considerando os critérios 2.4.11 e 2.4.12 das WCAG 2.2, avalie as afirmações.
+
+I. O critério 2.4.11, de nível AA, exige que o componente com foco não fique totalmente oculto por conteúdo criado pelo autor.
+II. O critério 2.4.11 é atendido se apenas o indicador de foco permanecer visível, mesmo que o próprio componente esteja inteiramente oculto.
+III. A exigência de que nenhuma parte do componente com foco seja ocultada por conteúdo criado pelo autor corresponde ao critério 2.4.12, de nível AAA.
+
+Está correto o que se afirma APENAS em
+A) I.
+B) II.
+C) I e II.
+D) II e III.
+E) I e III.
+
+QUESTÃO 24
+Uma equipe documenta uma operação GET em OpenAPI 3.0.3 para consultar o cliente identificado no caminho /clientes/{clienteId}. A operação também aceita, opcionalmente, detalhes=true na consulta da URL para ampliar os dados retornados. Foram declarados os seguintes parâmetros:
+
+parameters:
+  - name: clienteId
+    in: path
+    required: false
+    schema:
+      type: integer
+  - name: detalhes
+    in: query
+    required: false
+    schema:
+      type: boolean
+
+Para que essas declarações atendam à especificação e preservem a intenção descrita, as configurações de localização e obrigatoriedade deverão ser
+A) clienteId em query, required: false; detalhes em query, required: false.
+B) clienteId em path, required: false; detalhes em query, required: true.
+C) clienteId em path, required: true; detalhes em query, required: false.
+D) clienteId em path, required: true; detalhes em path, required: true.
+E) clienteId em header, required: true; detalhes em query, required: false.
+
+QUESTÃO 25
+Uma aplicação valida documentos XML de acordo com o esquema XSD 1.0 completo abaixo, sem namespace de destino:
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="item" type="xs:string"
+                    minOccurs="0" maxOccurs="3"/>
+      </xs:sequence>
+      <xs:attribute name="codigo" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+Considerando apenas a validade em relação a esse esquema, o documento aceito é
+A) <lote codigo="7"/>
+B) <lote><item>A</item></lote>
+C) <lote codigo="7"><item>A</item><item>B</item><item>C</item><item>D</item></lote>
+D) <lote codigo="sete"><item>A</item></lote>
+E) <lote codigo="7"><item>A</item><extra>B</extra></lote>
+
+QUESTÃO 26
+Uma instituição utiliza o mesmo caso de uso de concessão de limite por uma API HTTP e por processamento em lote. As regras de concessão devem permanecer no núcleo da aplicação, sem duplicação, e o caso de uso deve ignorar detalhes de HTTP e SQL. Também é necessário substituir a persistência SQL por uma implementação em memória durante a verificação dessas regras, sem alterar o caso de uso. Na arquitetura hexagonal, uma organização compatível com esses requisitos consiste em
+A) definir a interface do caso de uso no adaptador HTTP e fazer o núcleo depender desse adaptador, permitindo que o processamento em lote reutilize a interface.
+B) manter a coordenação do caso de uso no núcleo e distribuir as regras de concessão entre os adaptadores HTTP e de lote, compartilhando a persistência SQL.
+C) expor o caso de uso por uma porta de entrada e expressar a persistência por uma porta de saída do núcleo, conectando implementações externas por adaptadores.
+D) definir uma porta de persistência no núcleo e manter no caso de uso a montagem de instruções SQL, implementando essa porta também para o armazenamento em memória.
+E) utilizar a implementação em memória como porta de entrada e delegar ao adaptador HTTP a execução das regras e o acionamento da persistência do caso de uso.
+
+QUESTÃO 27
+Um serviço de relatórios recebe eventos de contratos celebrados e incrementa um acumulado em seu banco de dados local. O intermediário de mensagens oferece entrega pelo menos uma vez, com confirmação manual; uma reentrega conserva o identificador do evento. O processo consumidor pode falhar e reiniciar entre quaisquer duas etapas. O banco local oferece transações e restrições de unicidade, mas não há transação distribuída com o intermediário. Para que cada evento produza seu efeito no acumulado uma única vez, mesmo após reinícios, o consumidor deve
+A) confirmar a entrega ao intermediário antes de incrementar o acumulado e registrar o identificador, contando com a reentrega para recuperar falhas no banco.
+B) incrementar o acumulado em uma transação e registrar o identificador em outra, confirmando a entrega ao intermediário somente após concluir as duas transações.
+C) registrar o identificador em uma transação e incrementar o acumulado em outra, descartando as entregas cujos identificadores já estejam registrados no banco.
+D) registrar o identificador com unicidade e incrementar o acumulado na mesma transação local; confirmar após o commit e, nas reentregas, suprimir o efeito já registrado.
+E) conservar os identificadores processados em um cache em memória, incrementar o acumulado no banco e confirmar a entrega ao intermediário após concluir a atualização.
+
+QUESTÃO 28
+Uma aplicação realiza consultas idempotentes a um serviço remoto. O projeto de resiliência deve atender às seguintes necessidades:
+
+I. Limitar o tempo durante o qual o cliente aguarda a conclusão de cada chamada remota.
+II. Fazer novas tentativas diante de falhas transitórias, com espera entre elas e número máximo de repetições, respeitando o prazo total da operação.
+III. Após atingir um limiar de falhas, rejeitar temporariamente novas chamadas sem acessar o serviço; em seguida, permitir um conjunto restrito de chamadas para avaliar sua recuperação.
+
+Os mecanismos associados a I, II e III são, respectivamente,
+A) retry, timeout e circuit breaker.
+B) timeout, retry e circuit breaker.
+C) timeout, circuit breaker e retry.
+D) circuit breaker, retry e timeout.
+E) retry, circuit breaker e timeout.
+
+QUESTÃO 29
+Em uma instituição, a equipe de Relacionamento modela Cliente como uma pessoa que pode receber ofertas, inclusive antes da contratação. A equipe de Cobrança modela Cliente como o responsável por obrigações vencidas e utiliza regras próprias para negociação. As equipes precisam preservar esses significados e suas regras, mas devem trocar informações sobre a mesma pessoa por um contrato de integração. Considerando DDD, o desenho adequado a esse cenário consiste em
+A) delimitar contextos para os dois modelos, manter uma linguagem coerente em cada contexto e explicitar no mapa de contextos os pontos de contato e as traduções necessárias.
+B) unificar os dois modelos em uma classe Cliente compartilhada, atribuir um único significado aos seus estados e resolver as diferenças por condicionais nos serviços das equipes.
+C) tomar as camadas de apresentação, domínio e persistência como os três contextos delimitados, usando o mesmo modelo Cliente em cada camada de ambas as equipes.
+D) definir um contexto delimitado para cada instância de Cliente e utilizar a identidade da pessoa como fronteira de validade das regras das duas equipes.
+E) separar os bancos de dados das equipes e manter um dicionário Cliente único, considerando que a separação física dispensa explicitar as diferenças de significado na integração.
+
+QUESTÃO 30
+Uma equipe incorpora pequenas alterações ao repositório compartilhado várias vezes ao dia. Cada incorporação aciona automaticamente a construção da aplicação e a execução de testes. As versões que passam pelas verificações são implantadas automaticamente em homologação e ficam prontas para produção. A implantação em produção usa o mesmo processo automatizado, mas só é iniciada após aprovação expressa de um responsável pelo negócio.
+
+Na distinção entre integração contínua, entrega contínua e implantação contínua, esse fluxo caracteriza
+A) integração contínua e implantação contínua, porque uma aprovação de negócio pode compor a promoção automática de cada versão para produção.
+B) apenas integração contínua, porque a entrega contínua exige publicar automaticamente em produção toda alteração aprovada nos testes.
+C) integração contínua e entrega contínua, porque uma versão pode permanecer pronta para produção até a autorização de sua implantação.
+D) apenas entrega contínua, porque a integração contínua exige executar os testes antes da incorporação do código ao repositório compartilhado.
+E) apenas implantação contínua, porque a publicação automática em homologação é suficiente para caracterizar a implantação contínua de uma aplicação.
+
+QUESTÃO 31
+Uma imagem Docker contém o arquivo /app/config.txt com o conteúdo original. Dois containers, denominados alfa e beta, são criados a partir dessa mesma imagem. Um analista altera com sucesso, somente em alfa, o conteúdo desse arquivo para ajustado. Depois, remove alfa e cria o container gama a partir da mesma imagem, sem executar build ou commit.
+
+Não existem montagens em /app, armazenamento compartilhado ou rotinas de inicialização que alterem o arquivo, e nenhuma outra escrita é realizada. Nessas condições, ao ler /app/config.txt em beta e gama, o resultado e sua explicação são:
+A) beta e gama apresentam original, porque a escrita ficou na camada gravável de alfa e não alterou a imagem usada pelos demais.
+B) beta apresenta original e gama apresenta ajustado, porque remover alfa incorpora suas alterações aos próximos containers criados a partir da imagem.
+C) beta apresenta ajustado e gama apresenta original, porque containers simultâneos compartilham a camada gravável enquanto permanecem em execução.
+D) beta e gama apresentam ajustado, porque modificar um arquivo preexistente atualiza a camada da imagem compartilhada por todos os containers.
+E) beta e gama deixam de encontrar o arquivo, porque remover alfa elimina o arquivo modificado também das camadas da imagem de origem.
+
+QUESTÃO 32
+Em um cluster Kubernetes, um Service encaminha requisições a três Pods e está configurado com publishNotReadyAddresses: false. Cada Pod contém um único container, com política efetiva de reinício Always. Todos já concluíram a inicialização e estão prontos para atendimento.
+
+No Pod identificado como p1, ocorrem, nesta ordem:
+
+I. As falhas consecutivas da readiness probe atingem o limiar configurado, enquanto a liveness probe continua tendo sucesso.
+II. Posteriormente, as falhas consecutivas da liveness probe também atingem o limiar configurado.
+
+Considerando apenas os efeitos dessas probes e novas requisições encaminhadas pelo Service, as consequências de I e II são, respectivamente:
+A) o container de p1 é reiniciado; p1 é apenas retirado do atendimento pelo Service, sem reinício por falha de vivacidade.
+B) p1 continua elegível para novas requisições pelo Service; o kubelet encerra e reinicia o container de p1.
+C) p1 deixa de atender novas requisições pelo Service; o reinício do container depende de a readiness probe voltar a ter sucesso.
+D) p1 é excluído do cluster e substituído por outro Pod; apenas a condição de prontidão é alterada, sem reinício do container.
+E) p1 deixa de atender novas requisições pelo Service, sem reinício por essa falha; o kubelet encerra e reinicia o container de p1.
+
+QUESTÃO 33
+Um processo dispõe de três quadros de memória física, inicialmente vazios, para suas páginas. Adota-se paginação por demanda: cada referência a uma página ausente provoca uma falta, cujo tratamento carrega somente a página solicitada. Quando os três quadros estão ocupados, substitui-se a página cujo último acesso ocorreu há mais tempo, conforme a política LRU.
+
+Todas as referências são leituras válidas; não há antecipação de carregamento nem remoções por outras causas. Considere, na ordem indicada, a sequência de números de páginas:
+
+2, 3, 2, 1, 4, 2, 3, 4, 1, 2, 5, 2.
+
+Incluindo as faltas que utilizam os quadros inicialmente vazios, o número total de faltas de página é
+A) 4.
+B) 5.
+C) 7.
+D) 8.
+E) 9.
+
+QUESTÃO 34
+Em uma aplicação, duas threads executam repetidamente operações que exigem os mutexes R e S, cada um com um único detentor. Em uma execução, T1 mantém R e está bloqueada à espera de S, enquanto T2 mantém S e está bloqueada à espera de R. Cada thread só libera seus mutexes depois de obter ambos e concluir a operação. Não há timeouts, cancelamentos nem liberação forçada de mutexes.
+
+Para futuras execuções, iniciadas com os mutexes livres, propõe-se que ambas adquiram sempre R antes de S, sem alterar a política de escolha entre threads que disputam um mutex.
+
+Considere as afirmações:
+
+I. O estado observado caracteriza deadlock entre T1 e T2.
+II. A ordem de aquisição proposta impede a espera circular envolvendo R e S.
+III. A ordem de aquisição proposta, por si só, garante ausência de starvation na disputa pelos mutexes.
+
+Está correto o que se afirma em
+A) I, apenas.
+B) I e II, apenas.
+C) I e III, apenas.
+D) II e III, apenas.
+E) I, II e III.
+
+QUESTÃO 35
+Dois switches de camada 2, S1 e S2, estão interligados por um único enlace trunk IEEE 802.1Q. As VLANs 10, 20 e 99 estão criadas, ativas e permitidas no trunk. A VLAN nativa é a 99 nas duas extremidades e seus quadros são transmitidos sem tag. A estação H1 está ligada a uma porta de acesso da VLAN 10 em S1; em S2, H2 está em uma porta de acesso da VLAN 10 e H3, em uma porta de acesso da VLAN 20. Todas as portas estão encaminhando tráfego, sem filtros ou mecanismos de supressão, e não há roteamento entre VLANs.
+
+H1 envia um quadro Ethernet de dados com endereço de destino broadcast. Considerando a passagem desse quadro pelo trunk e sua entrega às estações de S2, ocorre transmissão
+A) com tag de VID 99 no trunk e entrega apenas a H2.
+B) com tag de VID 10 no trunk e entrega a H2 e H3.
+C) com tag de VID 20 no trunk e entrega apenas a H3.
+D) com tag de VID 10 no trunk e entrega apenas a H2.
+E) sem tag no trunk e entrega apenas a H2.
+
+QUESTÃO 36
+Um Analista deve dividir o bloco IPv4 10.48.12.0/24 em sub-redes de mesmo tamanho. Cada sub-rede deve oferecer, no mínimo, 25 endereços atribuíveis a interfaces, reservando um endereço para identificar a rede e outro para broadcast. Para reduzir o desperdício, será adotado o prefixo mais longo que atenda a essa quantidade.
+
+Uma estação receberá o endereço 10.48.12.77. A máscara, o endereço de rede e o endereço de broadcast da sub-rede dessa estação são, correta e respectivamente,
+A) 255.255.255.224 — 10.48.12.64 — 10.48.12.95.
+B) 255.255.255.240 — 10.48.12.64 — 10.48.12.79.
+C) 255.255.255.192 — 10.48.12.64 — 10.48.12.127.
+D) 255.255.255.224 — 10.48.12.64 — 10.48.12.94.
+E) 255.255.255.224 — 10.48.12.32 — 10.48.12.63.
+
+QUESTÃO 37
+Em um sistema autônomo, o roteador R1 executa OSPFv2 e BGP-4. Para um prefixo interno P, há somente dois caminhos OSPF, ambos intra-área: por R2, com custo 10 de R1 a R2 e custo 20 de R2 até P; por R3, com custo 5 de R1 a R3 e custo 40 de R3 até P. Os custos informados são os da direção de R1 para P.
+
+Para outro prefixo, externo, Q, R1 dispõe somente das rotas BGP X e Y, ambas elegíveis e com NEXT_HOP alcançável. A política local já definiu seus graus de preferência, representados por LOCAL_PREF: X tem valor 200 e AS_PATH com três sistemas autônomos; Y tem valor 100 e AS_PATH com um sistema autônomo. Considere o processo de decisão da RFC 4271, sem critérios adicionais de fabricante.
+
+O próximo salto selecionado pelo OSPF para P e a rota selecionada pelo BGP para Q são, respectivamente,
+A) R3 e Y.
+B) R2 e Y.
+C) R2 e X.
+D) R3 e X.
+E) R2 e R3, em caminhos de igual custo, e X.
+
+QUESTÃO 38
+Uma central de monitoramento consulta um roteador por SNMPv2c, utilizando OIDs numéricos em mensagens GetRequest. O roteador devolve os valores solicitados, mas a central ainda não dispõe do módulo MIB do fabricante. Um analista importa para a central esse módulo, compatível com os objetos implementados no roteador. Sobre os papéis dos componentes e o efeito dessa importação, é correto afirmar:
+A) A central atua como gerente, e a importação do módulo passa a habilitar os objetos correspondentes no agente do roteador.
+B) A central atua como agente, e o roteador assume o papel de gerente ao devolver os valores pedidos nas consultas.
+C) A central atua como gerente, e o módulo fornece definições para interpretar os objetos cujos valores são obtidos do agente.
+D) A central atua como gerente, e o módulo passa a fornecer os valores atuais dos objetos sem novas consultas ao roteador.
+E) O roteador atua como agente, e a importação faz suas respostas enviarem nomes simbólicos dos objetos em lugar dos OIDs.
+
+QUESTÃO 39
+Um servidor Apache HTTP Server 2.4, em Linux, utiliza os trechos abaixo, nesta ordem, e não possui outros hosts virtuais:
+
+Listen 80
+DocumentRoot "/srv/www/base"
+
+<VirtualHost *:80>
+    ServerName portal.intra.example
+    ServerAlias *.intra.example
+    DocumentRoot "/srv/www/site-a"
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName relatorios.intra.example
+    DocumentRoot "/srv/www/site-b"
+</VirtualHost>
+
+Os três diretórios contêm um arquivo status.txt legível e autorizado para acesso HTTP. O servidor atende diretamente esses arquivos estáticos, sem regras adicionais de mapeamento ou redirecionamento.
+
+Duas requisições HTTP/1.1 independentes são recebidas no endereço 192.0.2.10, porta 80:
+
+I. GET /status.txt, com Host: relatorios.intra.example
+II. GET /status.txt, com Host: externo.example
+
+Os arquivos servidos em I e II são, respectivamente,
+A) /srv/www/site-b/status.txt e /srv/www/site-a/status.txt.
+B) /srv/www/site-b/status.txt e /srv/www/base/status.txt.
+C) /srv/www/site-a/status.txt e /srv/www/base/status.txt.
+D) /srv/www/site-a/status.txt e /srv/www/site-a/status.txt.
+E) /srv/www/site-b/status.txt e /srv/www/site-b/status.txt.
+
+QUESTÃO 40
+Uma aplicação web integra um provedor compatível com OAuth 2.0 e OpenID Connect 1.0. Ela precisa reconhecer o usuário autenticado pelo provedor e consultar uma API de saldos conforme as permissões concedidas. No fluxo adotado, a aplicação recebe um ID Token e um Access Token, este destinado à API. Para atender às duas finalidades, a equipe deve
+A) validar o Access Token como comprovante padronizado do login do usuário e apresentar o ID Token à API para autorizar a consulta.
+B) verificar apenas a assinatura do ID Token, dispensando as verificações de emissor, audiência e expiração, e apresentar o Access Token à API.
+C) validar o ID Token para reconhecer a autenticação do usuário e apresentar o Access Token à API, que deve validar o acesso e as permissões aplicáveis.
+D) tratar o ID Token e o Access Token como intercambiáveis, pois a emissão para o mesmo usuário faz com que ambos expressem as mesmas permissões.
+E) exigir que o Access Token seja um JWT e o ID Token seja opaco, pois esses formatos são obrigatoriamente definidos pelo OAuth 2.0.
+
+QUESTÃO 41
+Uma equipe avalia mecanismos para proteger documentos eletrônicos. Considere implementações criptográficas adequadas, a preservação do segredo das chaves privadas e secretas e a obtenção autenticada da chave pública do signatário. Foram apresentadas as seguintes afirmações:
+
+I. Enviar o documento e seu hash SHA-256 pelo mesmo canal, no qual um atacante pode substituir ambos, basta para autenticar a origem do documento.
+II. Uma assinatura digital gerada com a chave privada do signatário e verificada com a chave pública correspondente permite verificar a origem e a integridade do documento.
+III. Acrescentar uma assinatura digital a um documento enviado em texto claro basta para impedir que terceiros leiam seu conteúdo.
+IV. A cifragem simétrica adequada, com chave secreta disponível somente às partes autorizadas, é um mecanismo aplicável à confidencialidade do documento.
+
+Está correto o que se afirma APENAS em
+A) I e II.
+B) I e III.
+C) I e IV.
+D) II, III e IV.
+E) II e IV.
+
+QUESTÃO 42
+Um órgão de pesquisa realiza um estudo em saúde pública. Na base de trabalho, nomes e CPFs foram substituídos por códigos aleatórios. A associação dos registros aos respectivos titulares somente é possível pelo uso de uma tabela adicional, mantida separadamente pelo controlador em ambiente controlado e seguro. A tabela permite ao controlador restabelecer essa associação com seus próprios meios. Considerando a Lei nº 13.709/2018, a conclusão correta é:
+A) Os dados foram anonimizados, pois a ausência de nome e CPF basta para afastar a possibilidade de identificar os titulares.
+B) Os dados foram pseudonimizados e continuam pessoais, pois o controlador pode associá-los aos titulares com a tabela separada.
+C) Os dados foram pseudonimizados e deixam de ser pessoais enquanto a tabela de correspondência não for utilizada.
+D) Os dados foram anonimizados e deixam de ser pessoais, pois a reversão por meios próprios do controlador não é considerada pela LGPD.
+E) Os dados não podem ser pseudonimizados nesse estudo, pois a LGPD exige anonimização integral em qualquer pesquisa em saúde pública.
+
+QUESTÃO 43
+Uma API de relatórios constrói uma consulta SQL concatenando duas entradas recebidas do cliente: um texto livre para filtrar o nome de um cliente e a escolha da coluna de ordenação. A funcionalidade admite ordenar somente pelas colunas nome ou saldo. Para corrigir essa construção conforme a prevenção de injeção da categoria A03 do OWASP Top 10:2021, a equipe deve
+A) usar parâmetros vinculados tanto para o texto de busca quanto para o nome da coluna de ordenação, preservando a escolha livre de identificadores pelo cliente.
+B) validar o formulário no navegador para rejeitar aspas nas duas entradas e manter a concatenação dessas entradas na consulta executada pelo servidor.
+C) transferir a concatenação das duas entradas para uma procedure no banco e considerar a chamada dessa procedure suficiente para impedir a injeção.
+D) vincular o texto de busca como valor de parâmetro e mapear a escolha de ordenação, no servidor, para os identificadores fixos nome ou saldo.
+E) migrar a consulta para a linguagem de um ORM, concatenando as duas entradas recebidas e confiando no framework para separar automaticamente dados e comandos.
+
+QUESTÃO 44
+Uma instituição avalia três contratações de serviços em nuvem, com as seguintes características.
+
+I. A equipe provisiona máquinas virtuais e fica responsável pela instalação e atualização do sistema operacional convidado e pela implantação de suas aplicações; o provedor opera a infraestrutura física.
+
+II. A equipe implanta aplicação própria em ambiente de execução mantido pelo provedor, utilizando linguagens e bibliotecas por ele suportadas; controla a aplicação, mas não administra o sistema operacional subjacente.
+
+III. As equipes usuárias acessam uma aplicação de gestão documental oferecida e mantida pelo provedor, limitando-se às configurações permitidas de uso, sem implantar código próprio.
+
+Considerando os modelos de serviço definidos no NIST SP 800-145, as contratações I, II e III correspondem, correta e respectivamente, a:
+A) PaaS, IaaS e SaaS.
+B) SaaS, PaaS e IaaS.
+C) IaaS, SaaS e PaaS.
+D) IaaS, PaaS e SaaS.
+E) PaaS, SaaS e IaaS.
+
+QUESTÃO 45
+Uma aplicação sem estado é executada em duas zonas de disponibilidade com falhas independentes. Cada instância suporta até 200 requisições por segundo, mantendo o tempo de resposta exigido, e a carga de pico é de 900 requisições por segundo. O balanceador redireciona o tráfego às instâncias disponíveis. Para o dimensionamento, considere que o balanceador, a rede e o banco de dados continuam operacionais e não limitam a vazão, e desconsidere o tempo de redirecionamento.
+
+A aplicação deve sustentar integralmente o pico após a perda de qualquer uma das zonas, usando instâncias já ativas. Há um mecanismo automático que adiciona ou remove instâncias conforme a demanda; a ativação de novas instâncias leva dois minutos.
+
+Durante o pico, a quantidade mínima de instâncias que deve estar previamente ativa em cada zona e o mecanismo de ajuste de recursos descrito correspondem, respectivamente, a:
+A) 3 instâncias e elasticidade horizontal.
+B) 5 instâncias e elasticidade horizontal.
+C) 5 instâncias e escalabilidade vertical.
+D) 3 instâncias e escalabilidade vertical.
+E) 6 instâncias e elasticidade horizontal.
+
+QUESTÃO 46
+Em um repositório com Git 2.43.0, a branch atual é main. Os commits de ponta M, de main, e F, de feature, têm ancestral comum, mas nenhum é ancestral do outro. Com o índice e a árvore de trabalho sem alterações locais, um Analista executa git merge feature. A operação é interrompida por conflito apenas em config.yml. O Analista edita e salva esse arquivo com a resolução desejada e remove os marcadores de conflito, sem executar outros comandos. Considere o comportamento padrão dos comandos, sem aliases ou hooks.
+
+Para concluir essa integração preservando os commits existentes e criando um commit de merge com pais M e F, o Analista deve executar, na sequência indicada,
+A) git commit -m "Integra feature", pois a edição e o salvamento do arquivo já registram a resolução no índice.
+B) git add config.yml e git commit --amend --no-edit, pois a resolução deve substituir o conteúdo do commit M.
+C) git add config.yml e git merge --abort, pois o encerramento com --abort grava a resolução em um novo commit.
+D) git add config.yml e git commit -m "Integra feature", pois a resolução deve ser registrada no índice antes do commit.
+E) git add config.yml e git merge --quit, pois --quit preserva os arquivos e cria o commit de integração.
+
+QUESTÃO 47
+Após aprovar uma alteração no requisito R02 de um sistema bancário, uma equipe consulta os seguintes vínculos mantidos em seu repositório:
+
+Requisito | Casos de teste | Seções da documentação técnica
+R01       | CT01, CT03     | D01
+R02       | CT02, CT03     | D01, D02
+R03       | CT04           | D03
+
+O caso CT03 verifica uma interação entre funcionalidades atendidas por R01 e R02. Sobre o uso desses vínculos, considere:
+
+I. A associação de CT03 com R01 e R02 compromete a rastreabilidade, pois cada caso de teste deve verificar um único requisito.
+II. A análise de impacto da alteração em R02 deve considerar CT02, CT03 e as seções D01 e D02 como candidatos à revisão.
+III. A existência dos vínculos de R02 com CT02 e CT03 é suficiente para comprovar que a implementação atende ao requisito alterado.
+IV. Uma consulta iniciada em CT03 permite identificar R01 e R02 e, por meio deles, localizar as seções de documentação D01 e D02.
+
+Está correto o que se afirma APENAS em
+A) I e II.
+B) I e III.
+C) II e IV.
+D) I e IV.
+E) III e IV.
+
+QUESTÃO 48
+Na revisão da governança de um cadastro corporativo, um Analista deve configurar o controle de acesso baseado em papéis (RBAC). Há dois papéis independentes: Cadastrador, com permissão para registrar dados, e Homologador, com permissão para homologá-los. A política admite que um mesmo usuário seja autorizado para os dois papéis, mas proíbe que as duas funções estejam ativas simultaneamente em uma mesma sessão. As permissões devem continuar sendo obtidas por meio dos papéis.
+
+A configuração que atende a essa política é
+A) estabelecer separação estática de funções entre os dois papéis, rejeitando a atribuição de Homologador a qualquer usuário que já possua o papel Cadastrador.
+B) ativar todos os papéis atribuídos ao usuário no início da sessão, mantendo registros separados para as operações de cadastro e de homologação.
+C) definir Homologador como papel superior que herda as permissões de Cadastrador, atribuindo somente Homologador aos usuários habilitados para executar as duas funções.
+D) estabelecer separação dinâmica de funções entre os dois papéis, impedindo que uma sessão do usuário contenha ambos os papéis ativos ao mesmo tempo.
+E) exigir autenticação multifator ao ativar cada papel, permitindo que os dois permaneçam ativos quando ambas as verificações tiverem sido concluídas com sucesso.
+
+QUESTÃO 49
+Considere o texto abaixo.
+
+The service desk replaced a lengthy installation guide with a checklist. During the first week, new employees completed the routine steps more quickly, yet the number of requests for help remained unchanged. Most requests concerned messages that the checklist did not explain. Rather than bring back the full guide, the team kept the checklist and added a separate section on those messages. It will review next month's support requests to find out whether the addition makes employees less dependent on assistance.
+
+(Texto autoral.)
+
+Segundo o texto, a equipe decidiu acrescentar uma seção à lista de verificação porque
+A) a redução dos pedidos de auxílio precisava ser documentada antes de a lista ser mantida.
+B) a maior rapidez nas etapas usuais não havia eliminado as dúvidas que motivavam pedidos de auxílio.
+C) a lista havia aumentado o tempo das etapas usuais, apesar de ter diminuído os pedidos de auxílio.
+D) os funcionários solicitavam ajuda para preencher os relatórios previstos para o mês seguinte.
+E) as mensagens apresentadas durante a instalação determinavam a retomada obrigatória do guia extenso.
+
+QUESTÃO 50
+Considere o texto abaixo.
+
+A status page shows the latest information about a service interruption. Readers who want automatic updates should subscribe to email notifications. Otherwise, they will need to revisit the page to check for changes. The emails repeat the information on the page; they do not provide an earlier estimate of when the service will return. Readers can cancel the subscription at any time.
+
+(Texto autoral.)
+
+No contexto, “Otherwise” introduz a ideia de que os leitores precisarão acessar a página novamente
+A) mesmo que se inscrevam para receber as notificações por email.
+B) porque já se inscreveram para receber as notificações por email.
+C) assim que se inscreverem para receber as notificações por email.
+D) caso não se inscrevam para receber as notificações por email.
+E) para que se inscrevam para receber as notificações por email.
+

@@ -1,0 +1,27 @@
+ID: BAN-DS-03-0001
+Matéria: 03 - Programação
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/03-programacao.txt
+Tópico do conteúdo: conhecimento das linguagens PHP, Python, C, Java e C#; variáveis, literais e strings;
+Objetivo da questão: Python: compartilhamento e mutação de listas
+Tarefa de origem: SIM-001; número global 8
+Responsável pela elaboração: /root/elaborador_03
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26 | v01 | elaboração concluída por /root/elaborador_03; fontes consultadas e justificativas registradas; pendente de auditoria.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0001 -> Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001
+ESTILO_FCC: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/03-programacao/BAN-DS-03-0001/v01/parecer-redacao-e-conformidade.txt

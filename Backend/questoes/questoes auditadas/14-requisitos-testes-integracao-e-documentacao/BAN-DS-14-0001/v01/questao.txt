@@ -1,0 +1,27 @@
+ID: BAN-DS-14-0001
+Versão: v01
+Matéria: Levantamento de requisitos, testes, integração e documentação técnica
+Tópico: Rastreabilidade entre requisitos, testes e documentação
+
+ENUNCIADO
+Após aprovar uma alteração no requisito R02 de um sistema bancário, uma equipe consulta os seguintes vínculos mantidos em seu repositório:
+
+Requisito | Casos de teste | Seções da documentação técnica
+R01       | CT01, CT03     | D01
+R02       | CT02, CT03     | D01, D02
+R03       | CT04           | D03
+
+O caso CT03 verifica uma interação entre funcionalidades atendidas por R01 e R02. Sobre o uso desses vínculos, considere:
+
+I. A associação de CT03 com R01 e R02 compromete a rastreabilidade, pois cada caso de teste deve verificar um único requisito.
+II. A análise de impacto da alteração em R02 deve considerar CT02, CT03 e as seções D01 e D02 como candidatos à revisão.
+III. A existência dos vínculos de R02 com CT02 e CT03 é suficiente para comprovar que a implementação atende ao requisito alterado.
+IV. Uma consulta iniciada em CT03 permite identificar R01 e R02 e, por meio deles, localizar as seções de documentação D01 e D02.
+
+Está correto o que se afirma APENAS em
+
+A) I e II.
+B) I e III.
+C) II e IV.
+D) I e IV.
+E) III e IV.

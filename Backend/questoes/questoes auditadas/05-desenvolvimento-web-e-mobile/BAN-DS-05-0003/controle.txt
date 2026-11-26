@@ -1,0 +1,27 @@
+ID: BAN-DS-05-0003
+Matéria: 05 - Desenvolvimento de aplicações web e mobile
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/05-desenvolvimento-web-e-mobile.txt
+Tópico do conteúdo: usabilidade, experiência do usuário (UX) e acessibilidade digital conforme WCAG versões 2.1/2.2 e ABNT NBR 17225:2025
+Objetivo da questão: Julgar proposições sobre componentes com foco e distinguir os critérios WCAG 2.2 de níveis AA e AAA.
+Tarefa de origem: SIM-001; questão global 23; plano.json do coordenador
+Responsável pela elaboração: /root/elaborador_05
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26 | v01 | /root/elaborador_05 | Elaboração autoral concluída, com conferência das fontes e análise de A a E; encaminhada à auditoria, sem aprovação presumida.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003 -> Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003
+ESTILO_FCC: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-redacao-e-conformidade.txt

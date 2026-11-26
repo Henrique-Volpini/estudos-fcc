@@ -1,0 +1,73 @@
+ID: BAN-DS-10-0002
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Determinar os arquivos servidos nas duas requisições, na ordem apresentada.
+
+RESOLUÇÃO
+Ambos os blocos pertencem ao conjunto correspondente a *:80. A seleção por nome segue a ordem da configuração, sem preferência de ServerName sobre ServerAlias ou de nome exato sobre curinga. Em I, o alias do primeiro bloco já corresponde ao Host, selecionando site-a. Em II, não há correspondência nominal, e o primeiro bloco é usado como padrão. Aplicando o DocumentRoot escolhido a /status.txt, as duas requisições mapeiam para /srv/www/site-a/status.txt.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. II está correta, mas I é atendida pelo primeiro bloco: o nome corresponde ao ServerAlias *.intra.example. O ServerName exato do segundo bloco não prevalece sobre uma correspondência anterior de ServerAlias.
+
+B) Não atende. Em I, a correspondência anterior do ServerAlias seleciona site-a. Em II, a ausência de correspondência nominal leva ao primeiro host virtual de *:80, também site-a; não ao DocumentRoot global.
+
+C) Não atende. I seleciona site-a, mas II também utiliza site-a como host virtual padrão de *:80. O diretório base seria relevante para o servidor principal; neste endereço e porta há hosts virtuais correspondentes.
+
+D) Atende. Em I, *.intra.example corresponde ao Host e seleciona o primeiro bloco. Em II, nenhum nome corresponde e esse mesmo bloco é o padrão de *:80. Em ambos, /status.txt é anexado ao DocumentRoot /srv/www/site-a.
+
+E) Não atende. O segundo bloco não recebe prioridade por ter o nome exato nem por aparecer por último. I corresponde primeiro ao alias de site-a, e II recai no primeiro bloco como padrão; site-b não atende nenhuma das duas.
+
+FONTES TÉCNICAS CONSULTADAS
+- Apache HTTP Server 2.4 — Name-based Virtual Host Support — fonte oficial XML
+  URL: https://raw.githubusercontent.com/apache/httpd/2.4.x/docs/manual/vhosts/name-based.xml
+  Localizador e suporte: Apache Software Foundation, ramo oficial 2.4.x, seções alg/defaultvhost (linhas 55–79) e using (linhas 168–173): ordem de seleção e host padrão. Navegação em 2026-11-26.
+
+- Apache HTTP Server 2.4 — core — fonte oficial XML
+  URL: https://raw.githubusercontent.com/apache/httpd/2.4.x/docs/manual/mod/core.xml
+  Localizador e suporte: Apache Software Foundation, ramo oficial 2.4.x, diretivas DocumentRoot (linhas 973–997) e ServerAlias (linhas 4139–4163): mapeamento do caminho e ausência de precedência especial para nomes exatos. Navegação em 2026-11-26.
+
+- Apache HTTP Server 2.4 — Name-based Virtual Host Support — manual HTML
+  URL: https://httpd.apache.org/docs/current/vhosts/name-based.html
+  Localizador e suporte: Conteúdo oficial retornado pela busca web, seções How the server selects the proper name-based virtual host e Using Name-based Virtual Hosts. A abertura direta retornou HTTP 404; a fundamentação foi confirmada no XML oficial acima.
+
+- Apache HTTP Server 2.4 — core — manual HTML
+  URL: https://httpd.apache.org/docs/2.4/mod/core.html
+  Localizador e suporte: Conteúdo oficial retornado pela busca web, diretivas DocumentRoot e ServerAlias. A abertura direta retornou HTTP 404; os trechos foram confirmados no XML oficial acima.
+
+- Apache HTTP Server 2.4 — An In-Depth Discussion of Virtual Host Matching
+  URL: https://httpd.apache.org/docs/2.4/vhosts/details.html
+  Localizador e suporte: Conteúdo primário retornado pela busca web em 2026-11-26, seções Phase 1 e Phase 2: seleção por endereço/porta e por nome. Abertura direta retornou HTTP 404; regras confirmadas no XML oficial.
+
+- Apache HTTP Server 2.4 — VirtualHost Examples
+  URL: https://httpd.apache.org/docs/2.4/vhosts/examples.html
+  Localizador e suporte: Conteúdo primário retornado pela busca web em 2026-11-26, exemplo de dois blocos <VirtualHost *:80>: primeiro bloco como padrão. Abertura direta retornou HTTP 404; regra confirmada no XML oficial.
+
+- Conteúdo programático — conhecimentos específicos de Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e suporte: Bloco SERVIÇOS E GERENCIAMENTO DE REDES, linhas 149–163; observação final, linhas 213–217.
+
+- Metadados das referências FCC consultadas
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador e suporte: Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; origem e arquivos locais.
+
+- FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001
+  URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador e suporte: Questão 43, página 10; extração local consultada, cópia secundária hospedada no Qconcursos. Fragmento técnico e alternativas de estrutura paralela.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+1. Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+   Caderno, questão e página: A14, Tipo 001; questão 43; página 10.
+   Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 10; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+   Característica observada e aplicação autoral: Apresentação de um fragmento técnico completo e pedido de sua consequência, com alternativas de mesma estrutura. A questão autoral apresenta configuração e requisições próprias e pede pares de caminhos de arquivos.
+   Limites da referência: Exemplo sobre XML/JSON, usado para formato, não para validar Apache. Cópia secundária no Qconcursos; não se afirma download da FCC nem integridade oficial.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: a documentação oficial Apache 2.4 foi consultada por busca web e, após falhas HTTP 404 na abertura dos manuais HTML, pelo XML oficial do repositório apache/httpd, ramo 2.4.x, em 2026-11-26.
+- Analítica: rastreadas as etapas endereço/porta, ordem de ServerName/ServerAlias, host padrão e concatenação com DocumentRoot; conferidos os cinco pares de caminhos.
+- Editorial: lida a questão 43 da extração TRT4/2022, página 10; origem secundária conferida em fontes.json e explicitada.
+- Não houve inicialização nem execução de Apache. O comportamento foi verificado por documentação e análise da configuração fornecida.
+
+PENDÊNCIAS
+Nenhuma de elaboração; aguardam-se as auditorias previstas.
+

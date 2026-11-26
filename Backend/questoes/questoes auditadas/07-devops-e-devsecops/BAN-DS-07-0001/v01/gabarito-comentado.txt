@@ -1,0 +1,51 @@
+ID: BAN-DS-07-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar as práticas caracterizadas pelo fluxo apresentado.
+
+RESOLUÇÃO
+Há dois aspectos complementares. O ciclo de incorporação frequente, construção e testes fornece feedback sobre a integração das alterações. Em seguida, a passagem automatizada por homologação deixa a versão apta a ser implantada pelo processo descrito. O responsável pelo negócio decide a promoção a produção. Assim, o fluxo reúne integração contínua e entrega contínua. A existência de scripts de implantação não transforma, por si, esse fluxo em implantação contínua: a aprovação explícita ainda interrompe a promoção automática por versão.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. O cenário mantém uma decisão humana obrigatória antes da promoção a produção. Na distinção conceitual examinada, implantação contínua estende a automação até essa promoção, sem aprovação explícita por versão; por isso, classificar o fluxo também como implantação contínua ignora a condição informada.
+
+B) Não atende. A integração contínua está presente, mas a conclusão exclui indevidamente a entrega contínua. Esta mantém versões verificadas prontas para implantação e comporta uma aprovação para produção. Exigir a publicação automática de toda versão confunde entrega contínua com implantação contínua.
+
+C) Atende. As incorporações frequentes acompanhadas de build e testes automatizados caracterizam integração contínua. A sequência automatizada de validação e homologação mantém versões prontas para produção, caracterizando entrega contínua. A aprovação obrigatória preserva a escolha de quando implantar a versão.
+
+D) Não atende. A integração contínua não exige que todos os testes ocorram exclusivamente antes da incorporação. O build e os testes disparados pela alteração do repositório compartilhado são mecanismos de CI. O distrator aplica uma restrição temporal inexistente e elimina uma prática descrita no cenário.
+
+E) Não atende. Automatizar homologação não equivale a promover automaticamente as alterações a produção, que é o passo distintivo da implantação contínua nesta classificação. Além disso, a alternativa descarta a integração frequente com build e testes e a preparação automatizada de versões entregáveis.
+
+FONTES TÉCNICAS CONSULTADAS
+- GitHub Docs — Continuous integration
+  URL: https://docs.github.com/en/actions/get-started/continuous-integration
+  Localizador e alcance: About continuous integration; About continuous integration using GitHub Actions, especialmente build e testes disparados por alterações no repositório. Consulta por navegação em 26/11/2026. Sustenta CI e a análise da alternativa D.
+- AWS Prescriptive Guidance — Understanding CI/CD
+  URL: https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-cicd-litmus/understanding-cicd.html
+  Localizador e alcance: Abertura de Understanding CI/CD, parágrafos sobre aprovação manual em continuous delivery e ausência de aprovação explícita em continuous deployment. Consulta por navegação em 26/11/2026. Sustenta a distinção entre entrega e implantação em A, B, C e E.
+- Microsoft Learn — What is continuous delivery?
+  URL: https://learn.microsoft.com/en-us/devops/deliver/what-is-continuous-delivery
+  Localizador e alcance: Definição inicial e Progressive exposure techniques: fluxo automatizado entre ambientes e possibilidade de aprovação manual. Conteúdo textual recuperado na navegação apesar do aviso de autorização da interface. Consulta em 26/11/2026. Corrobora que entrega contínua admite aprovação.
+- FCC — TRT4/2022, Tecnologia da Informação, A14 Tipo 001 — referência editorial
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador e alcance: Questão 48, página 11 da extração e do caderno: descrição de um processo por características e comando de classificação. PDF local homônimo; origem secundária declarada em referenciasEstilo.
+- Programa de conhecimentos específicos — Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e alcance: Bloco DEVOPS E DEVSECOPS, linhas 101–114; observação final lida. Delimita o conteúdo, sem impor versão de Docker ou Kubernetes para estes recortes.
+- Metadados das referências FCC locais
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador e alcance: Registro trt4-2022-ti-a14-001: URL, origem copia_secundaria, arquivo PDF e data de consulta. O SHA-256 identifica a cópia local; não é autenticação oficial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 48; página 11.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, extração local do PDF homônimo; cópia secundária hospedada no Qconcursos, conforme fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não é download direto da FCC e o hash local não representa assinatura de integridade oficial.
+- Característica observada e aplicação nesta questão autoral: O exemplo descreve características operacionais e pede a classificação do processo. Aplicou-se esse encadeamento ao fluxo de integração e liberação, com cinco classificações acompanhadas de justificativas concisas. Cenário, dados e alternativas são autorais.
+- Limites da referência: O exemplo foi usado somente como referência editorial localizada; não certifica correção técnica atual, frequência do formato ou aprovação da questão autoral.
+
+VERIFICAÇÕES REALIZADAS
+Verificação documental das definições em GitHub Docs, AWS Prescriptive Guidance e Microsoft Learn; resolução analítica do fluxo e comparação individual de A–E. Consulta do exemplo FCC Q48, p.11, e dos metadados de origem. Não houve execução de pipeline ou implantação. O texto de questão e o JSON foram gerados dos mesmos dados e conferidos por leitura e comparação estrutural.
+
+PENDÊNCIAS
+Nenhuma de elaboração. As auditorias de estilo FCC, pistas de resposta e redação/conformidade ainda serão realizadas pelos respectivos responsáveis. Esta entrega não contém aprovação.

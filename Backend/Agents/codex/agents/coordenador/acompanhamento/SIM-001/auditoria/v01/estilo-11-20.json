@@ -1,0 +1,186 @@
+[
+  {
+    "id": "BAN-DS-03-0004",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": "43",
+        "pagina": 10,
+        "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.",
+        "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-03-0005",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": "42",
+        "pagina": 10,
+        "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Linguagem explicitamente identificada, fragmento curto e cinco alternativas de resultado técnico. Os valores, a linguagem e a lógica da questão são autorais.",
+        "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-03-0006",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRF da 4ª Região",
+        "cargo": "Analista Judiciário — Informática",
+        "ano": 2007,
+        "caderno": "I, tipo 001",
+        "questao": "62",
+        "pagina": 10,
+        "origem": "Arquivo primário do órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+        "caracteristicaAplicada": "Comando técnico objetivo e alternativas da mesma categoria para distinguir conceitos de projeto orientado a objetos. O caso e as propostas de refatoração são autorais.",
+        "limite": "Referência formal histórica; não fundamenta correção técnica atual nem frequência de assuntos."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-03-0007",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário — Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": "43",
+        "pagina": 10,
+        "origem": "Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.",
+        "limite": "Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-04-0001",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRF da 4ª Região",
+        "cargo": "Analista Judiciário - Informática",
+        "ano": 2007,
+        "caderno": "I, tipo 001",
+        "questao": 50,
+        "pagina": 8,
+        "origem": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+        "caracteristicaAplicada": "Apresentação de expressões SQL e seleção de uma conclusão entre cinco alternativas. Referência histórica de construção; o cenário, os dados e o cálculo desta questão são autorais."
+      },
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário - Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": 43,
+        "pagina": 10,
+        "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Uso de fragmento técnico seguido de alternativas de representação ou resultado. A cópia consultada é secundária, hospedada no Qconcursos; não se afirma obtenção direta da FCC."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-04-0002",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário - Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": 43,
+        "pagina": 10,
+        "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Fragmento técnico autocontido seguido de escolha do resultado correto entre cinco opções. Dados e consulta autorais. Referência obtida em cópia secundária, sem alegação de validação universal da FCC."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-04-0003",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário - Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": 32,
+        "pagina": 8,
+        "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Contextualização técnica e seleção de uma afirmação correta sobre o comportamento do mecanismo. O cenário concorrente é novo; a referência editorial é uma cópia secundária, não uma comprovação de incidência."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-04-0004",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário - Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": 43,
+        "pagina": 10,
+        "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Apresentação de uma estrutura de dados e seleção de sua representação adequada, em cinco alternativas paralelas. Esquema e problema autorais. Cópia secundária identificada; a referência não fundamenta o conteúdo de normalização."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-04-0005",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRF da 4ª Região",
+        "cargo": "Analista Judiciário - Informática",
+        "ano": 2007,
+        "caderno": "I, tipo 001",
+        "questao": 50,
+        "pagina": 8,
+        "origem": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+        "caracteristicaAplicada": "Uso de expressões SQL e cinco opções para selecionar uma conclusão técnica. A aplicação ao resultado de uma CTE usa dados autorais; trata-se de referência histórica de formato."
+      },
+      {
+        "orgao": "TRT da 4ª Região",
+        "cargo": "Analista Judiciário - Tecnologia da Informação",
+        "ano": 2022,
+        "caderno": "A14, tipo 001",
+        "questao": 43,
+        "pagina": 10,
+        "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+        "caracteristicaAplicada": "Fragmento técnico fornecido integralmente e alternativas de representação ou resultado. Cópia secundária; sem generalização de frequência do formato."
+      }
+    ]
+  },
+  {
+    "id": "BAN-DS-04-0006",
+    "versao": "v01",
+    "referenciasEstilo": [
+      {
+        "orgao": "TRF da 4ª Região",
+        "cargo": "Analista Judiciário - Informática",
+        "ano": 2007,
+        "caderno": "I, tipo 001",
+        "questao": 47,
+        "pagina": 8,
+        "origem": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+        "caracteristicaAplicada": "Comando conceitual que pede identificar um elemento da área de dados entre cinco termos comparáveis. O caso de investigação e o conceito cobrado são autorais; referência histórica, sem alegação de dificuldade calibrada."
+      }
+    ]
+  }
+]

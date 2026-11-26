@@ -1,0 +1,33 @@
+ID: BAN-DS-06-0002
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar o procedimento de consumo que evita perda e repetição do efeito local nas condições descritas.
+
+RESOLUÇÃO
+O registro durável do identificador e o incremento precisam ter o mesmo destino transacional. Antes do commit, uma falha permite reprocessar o evento sem efeito confirmado; depois dele, a identificação persistida impede novo incremento, mesmo que a confirmação da entrega tenha sido perdida. A unicidade protege também contra inserções concorrentes do mesmo identificador.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: a confirmação antecipada pode impedir reentrega se o consumidor falhar antes de persistir o incremento, perdendo seu efeito.
+B) Não atende: uma falha após o incremento e antes do registro deixa a reentrega livre para incrementar novamente.
+C) Não atende: uma falha entre as transações deixa o identificador registrado sem o incremento; a reentrega será descartada sem produzir o efeito.
+D) Atende: a atomicidade local vincula identificador e efeito; a confirmação posterior e a deduplicação durável permitem recuperar falhas e suprimir repetições.
+E) Não atende: o reinício perde o cache. Uma entrega novamente recebida poderá repetir um incremento que já foi confirmado no banco.
+
+FONTES TÉCNICAS E DOCUMENTAIS CONSULTADAS
+- Chris Richardson — Pattern: Idempotent Consumer | https://microservices.io/patterns/communication-style/idempotent-consumer.html | Seções Context e Solution; tabela PROCESSED_MESSAGES, chave primária por assinante/identificador e inserção dentro da transação. Sustenta deduplicação durável e tratamento de mensagens repetidas.
+- AWS Prescriptive Guidance — Transactional outbox pattern | https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html | Seção Issues and considerations, item Duplicate messages: consumidores idempotentes devem rastrear mensagens processadas; não se cobra implementação de outbox nesta questão.
+- Programa de conhecimentos específicos — Arquitetura de Sistemas | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | Bloco ARQUITETURA DE SISTEMAS, linhas 92–99; observação final sobre legislação, linhas 213–217. Nenhuma norma jurídica é cobrada nesta questão.
+- FCC — TRT4/2022 — Tecnologia da Informação — A14, tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt | Página 8, questão 33; origem secundária conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json. Referência de formato.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 33; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 8 ===; PDF local homônimo; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação nesta questão autoral: Cenário de integração apresentado como atividade de um profissional, seguido de comando objetivo para escolher a solução. O par técnico do exemplo FCC orientou a precisão das alternativas; o problema de reentrega, as condições de falha e os procedimentos são autorais.
+- Limites da referência: Exemplo editorial de uma prova de 2022. A cópia foi obtida no Qconcursos, conforme fontes.json; não se afirma download da FCC ou integridade oficial certificada. O exemplo não demonstra frequência de cobrança nem valida os conceitos técnicos atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: navegação em 26/11/2026 no padrão original de Chris Richardson e na documentação AWS sobre mensagens duplicadas. Analítica: examinadas falhas antes/depois de cada commit e da confirmação, inclusive perda do cache em reinício; nenhuma execução de intermediário ou banco foi realizada.
+
+PENDÊNCIAS
+Nenhuma.

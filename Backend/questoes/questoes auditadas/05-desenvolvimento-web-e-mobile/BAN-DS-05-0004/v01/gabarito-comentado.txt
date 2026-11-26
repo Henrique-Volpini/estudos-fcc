@@ -1,0 +1,40 @@
+ID: BAN-DS-05-0004
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Selecionar a alternativa que atende ao comando
+
+RESOLUÇÃO
+Na OpenAPI 3.0.3, o nome do parâmetro path deve corresponder à expressão do caminho, e required é obrigatório com valor true. Para o parâmetro query detalhes, a opção false é permitida e preserva seu caráter opcional. Portanto, apenas C atende simultaneamente às duas declarações.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Incorreta: clienteId aparece na expressão do caminho e precisa ser declarado como parâmetro path, com required igual a true.
+
+B) Incorreta: um parâmetro path não pode ter required igual a false; além disso, detalhes deixaria de ser opcional.
+
+C) Correta: clienteId permanece vinculado ao caminho e obrigatório; detalhes permanece na consulta da URL e opcional.
+
+D) Incorreta: não existe expressão detalhes no caminho apresentado, e a configuração tornaria obrigatório o parâmetro definido como opcional.
+
+E) Incorreta: um parâmetro de cabeçalho não descreve a expressão clienteId existente no caminho da operação.
+
+FONTES TÉCNICAS CONSULTADAS
+- OpenAPI Initiative — OpenAPI Specification 3.0.3
+  URL: https://spec.openapis.org/oas/v3.0.3.html#parameter-object
+  Localizador: Seção 4.7.12 Parameter Object, Parameter Locations e campos name, in e required.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+Órgão: TRT da 4ª Região
+Cargo: Analista Judiciário — Tecnologia da Informação
+Ano: 2022
+Caderno: A14, Tipo 001
+Questão: 33
+Página PDF: 8
+Origem: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia do Qconcursos identificada na capa como FCC.
+Característica aplicada: Cenário de documentação de API seguido de cinco pares de configurações técnicas. O novo item trabalha Parameter Object e não reproduz o problema de anotações Java da referência.
+Limites: comparação editorial pontual; a cópia de 2022 não foi obtida diretamente na FCC. A referência não certifica conteúdo técnico nem calibração estatística.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental das regras de name, in e required na OpenAPI 3.0.3; análise de cada par de configurações. Não se declarou uso de validador de contratos.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando as três avaliações de conformidade; sem autoaprovação.

@@ -1,0 +1,57 @@
+Simulado: SIM-001
+Questão: BAN-DS-12-0001
+Versão examinada: v01
+Responsável: /root/auditor_redacao
+Papel: AUDITOR
+Perfil: REDACAO_E_CONFORMIDADE
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras vigentes lidas.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo vigente lido.
+- Backend/Agents/codex/agents/auditores/03-redacao-e-conformidade.txt — perfil vigente lido.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/manifesto.json — SIM-001, v01, entrada BAN-DS-12-0001.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json — v01, entrada BAN-DS-12-0001, primeira leitura sem resposta.
+- Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/controle.txt — controle atual completo v01.
+- Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/v01/questao.txt — v01.
+- Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/v01/gabarito-comentado.txt — v01; lido depois do registro das primeiras observações.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/primeiras-observacoes-redacao.json — registro inicial deste auditor, entrada BAN-DS-12-0001.
+
+PRIMEIRA LEITURA SEM GABARITO
+Três contratações numeradas, responsabilidades do cliente/provedor e tipos de operação legíveis. Comando fixa I/II/III e cinco trincas de siglas distintas, sem negação seletiva.
+Essa observação foi registrada após ler o conjunto público de 50 questões, antes de abrir controles e comentários. Os campos internos acima de ENUNCIADO não foram tratados como informação visível ao estudante.
+
+CRITÉRIOS EXAMINADOS
+- Ortografia, pontuação, concordância, pronomes, frases e consistência de termos: atendido. Leitura individual do enunciado e de A–E, com as particularidades registradas acima; não observei falha de escrita que prejudique a compreensão. Termos e identificadores técnicos foram preservados.
+- Comando claro: atendido. Trecho final do comando: “Considerando os modelos de serviço definidos no NIST SP 800-145, as contratações I, II e III correspondem, correta e respectivamente, a:”. É possível identificar a natureza e a ordem do que deve ser selecionado sem instrução contraditória.
+- Negações e exceções: atendido. O comando não pede alternativa INCORRETA nem EXCEÇÃO; as negações locais não tornam ambígua a seleção.
+- Identificação de cenário, tabelas, código, consultas e trechos: atendido quando presente; não aplicável a elementos que a questão não usa. A apresentação dos trechos, nomes e cabeçalhos foi examinada na primeira leitura acima; não há elemento visual indispensável ausente. O juízo de suficiência é linguístico, sem validação técnica das premissas.
+- Alternativas paralelas, completas e relacionadas ao mesmo comando: atendido. As cinco respostas foram comparadas entre si na leitura pública; as permutações, valores, afirmações ou propostas têm diferenças textuais reconhecíveis. Não observei duplicação integral nem sobreposição textual que torne dois rótulos indistinguíveis.
+- Frases truncadas, restos de template, instruções internas públicas, trechos desconexos e caracteres corrompidos: atendido. Não foram encontrados no texto a partir de ENUNCIADO; os componentes internos consultados têm campos preenchidos, sem marcador de preenchimento pendente. O texto foi lido em UTF-8, sem confundir falha de exibição do terminal com corrupção do arquivo.
+- Grafia e formatação significativa de código, consultas e inglês técnico: atendido onde presente; nos demais casos, não aplicável. Mantidos literais, operadores, siglas, nomes e quebras de linha da versão lida. Não foi executado código ou comando da questão.
+- ID e versão no controle, enunciado, gabarito e pasta: atendido. Os três arquivos identificam BAN-DS-12-0001 e v01; os caminhos atuais do controle apontam para esta pasta. Conferência de integridade textual com o manifesto concluída.
+- Exatamente cinco alternativas A, B, C, D e E: atendido. Um rótulo de cada letra, sem ausência ou repetição; texto público coincide com os componentes correspondentes de questao.txt.
+- Letra de gabarito proposta única A–E em arquivo separado: atendido. Presente somente em gabarito-comentado.txt, no campo Gabarito proposto; não exposta em questao.txt.
+- Resolução e comentários individuais A–E legíveis e vinculados: atendido. A resolução segue I–III e os cinco comentários se vinculam às trincas de siglas e às responsabilidades descritas, sem conflito textual de identificação.
+- Coerência textual entre letra declarada e opção tratada como resposta: atendido. A única opção qualificada positivamente nos comentários coincide com o campo proposto e com a conclusão textual da resolução. Esta conferência não determina a verdade técnica de nenhuma opção.
+- Fontes, localizadores, campos e pendências: atendido quanto à presença e identificação. NIST SP 800-145, §2, Service Models, pp. 2–3; Microsoft Shared responsibility, linha Operating system da matriz. Os demais campos da entrega e a seção PENDÊNCIAS estão preenchidos; a conferência de validade técnica ou de acesso atual às fontes não integra este parecer.
+- Resposta a apontamentos e preservação de versão anterior: não aplicável. Trata-se da primeira versão v01 apresentada a este perfil, sem parecer anterior substituído.
+
+ACHADOS
+Nenhum achado impeditivo no escopo avaliado. Não foram identificados defeitos formais que exijam ajuste nesta versão.
+
+REFERÊNCIAS DE ESTILO
+Não aplicável a este perfil. As referências editoriais registradas pelo elaborador foram consideradas apenas como componentes preenchidos da entrega; não emiti comparação ou aprovação de ESTILO_FCC.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil REDACAO_E_CONFORMIDADE. Eventuais avaliações dos demais perfis continuam sob responsabilidade de seus respectivos auditores. Não há dúvida técnica indispensável à conclusão formal deste parecer.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA no perfil REDACAO_E_CONFORMIDADE após a leitura individual do enunciado e de A–E e a conferência dos componentes da versão v01. A resolução segue I–III e os cinco comentários se vinculam às trincas de siglas e às responsabilidades descritas, sem conflito textual de identificação. A redação permite compreender a tarefa e os arquivos contêm os componentes obrigatórios com identificação consistente. A aprovação é restrita a este perfil e não certifica conteúdo, cálculos, execução de programas, interpretação normativa ou correção técnica do gabarito.
+
+IDENTIFICAÇÃO DO PACOTE EXAMINADO
+sha256Textos: b12930e8b0be96efa23d87bde0337cfb546e06c141555ef8910b82851ca96610
+Composição conferida: SHA-256 de (questao.read_text(utf-8-sig) + caractere NUL + gabarito.read_text(utf-8-sig)).encode(utf-8), com CRLF normalizado para LF pela leitura textual Python.

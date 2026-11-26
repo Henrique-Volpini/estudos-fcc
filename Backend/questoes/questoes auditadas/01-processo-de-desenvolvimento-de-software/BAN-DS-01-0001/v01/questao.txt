@@ -1,0 +1,13 @@
+ID: BAN-DS-01-0001
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: Métodos ágeis (Scrum)
+
+ENUNCIADO
+Uma equipe desenvolve um aplicativo bancário segundo o Scrum Guide 2020. Ao final de uma Sprint, precisa discutir uma mudança nas necessidades dos clientes e os resultados obtidos no produto. Também identificou falhas recorrentes de comunicação e integração durante o trabalho. A utilização dos eventos Sprint Review e Sprint Retrospective está adequada ao Guia quando a equipe, respectivamente,
+
+A) define a meta da próxima Sprint com os stakeholders e planeja melhorias em suas interações e processos.
+B) inspeciona os resultados com os stakeholders para adaptar o produto e define a meta da próxima Sprint.
+C) inspeciona os resultados com os stakeholders para adaptar o produto e planeja melhorias em suas interações e processos.
+D) planeja melhorias em suas interações e processos e inspeciona os resultados com os stakeholders para adaptar o produto.
+E) inspeciona o progresso diário em direção à meta da Sprint e ajusta o plano de trabalho do próximo dia.

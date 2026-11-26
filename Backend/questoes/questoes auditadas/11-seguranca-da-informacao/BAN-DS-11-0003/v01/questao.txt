@@ -1,0 +1,13 @@
+ID: BAN-DS-11-0003
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: LGPD: anonimização e pseudonimização
+
+ENUNCIADO
+Um órgão de pesquisa realiza um estudo em saúde pública. Na base de trabalho, nomes e CPFs foram substituídos por códigos aleatórios. A associação dos registros aos respectivos titulares somente é possível pelo uso de uma tabela adicional, mantida separadamente pelo controlador em ambiente controlado e seguro. A tabela permite ao controlador restabelecer essa associação com seus próprios meios. Considerando a Lei nº 13.709/2018, a conclusão correta é:
+
+A) Os dados foram anonimizados, pois a ausência de nome e CPF basta para afastar a possibilidade de identificar os titulares.
+B) Os dados foram pseudonimizados e continuam pessoais, pois o controlador pode associá-los aos titulares com a tabela separada.
+C) Os dados foram pseudonimizados e deixam de ser pessoais enquanto a tabela de correspondência não for utilizada.
+D) Os dados foram anonimizados e deixam de ser pessoais, pois a reversão por meios próprios do controlador não é considerada pela LGPD.
+E) Os dados não podem ser pseudonimizados nesse estudo, pois a LGPD exige anonimização integral em qualquer pesquisa em saúde pública.

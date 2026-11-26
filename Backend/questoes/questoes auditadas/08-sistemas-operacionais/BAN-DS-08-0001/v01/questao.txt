@@ -1,0 +1,19 @@
+ID: BAN-DS-08-0001
+Versão: v01
+Matéria: Sistemas Operacionais
+Tópico: Memória virtual e falta de página: substituição LRU
+
+ENUNCIADO
+Um processo dispõe de três quadros de memória física, inicialmente vazios, para suas páginas. Adota-se paginação por demanda: cada referência a uma página ausente provoca uma falta, cujo tratamento carrega somente a página solicitada. Quando os três quadros estão ocupados, substitui-se a página cujo último acesso ocorreu há mais tempo, conforme a política LRU.
+
+Todas as referências são leituras válidas; não há antecipação de carregamento nem remoções por outras causas. Considere, na ordem indicada, a sequência de números de páginas:
+
+2, 3, 2, 1, 4, 2, 3, 4, 1, 2, 5, 2.
+
+Incluindo as faltas que utilizam os quadros inicialmente vazios, o número total de faltas de página é
+
+A) 4.
+B) 5.
+C) 7.
+D) 8.
+E) 9.

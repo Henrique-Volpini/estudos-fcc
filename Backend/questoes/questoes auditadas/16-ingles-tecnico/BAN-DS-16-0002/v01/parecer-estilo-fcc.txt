@@ -1,0 +1,62 @@
+Simulado: SIM-001
+Questão: BAN-DS-16-0002
+Versão examinada: v01
+Responsável: /root/auditor_estilo
+Perfil: ESTILO_FCC
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/regras gerais/auditores.txt; regras lidas para esta auditoria.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt; modelo lido para esta auditoria.
+- Backend/Agents/codex/agents/auditores/01-estilo-fcc.txt; perfil lido para esta auditoria.
+- Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/controle.txt; identificação e versão atual confrontadas com o manifesto.
+- Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/questao.txt; v01, trecho público confrontado com o pacote sem resposta.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json; v01, enunciado e alternativas lidos integralmente antes das referências individuais.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/estilo-41-50.json; v01, referências indicadas pelo elaborador lidas depois do registro inicial.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/manifesto.json; v01, hash SHA-256 4a19ac7020c29e75d4bca3462e9a0bf14215516ccfab2435d2f7c929f8d45921.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/primeiras-observacoes-estilo.json; registro individual anterior às referências.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/analises-estilo.json; notas individuais desta auditoria.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencias-estilo-verificadas.json; identificação e limites das referências efetivamente consultadas.
+- Backend/Agents/conteudo/referencias-fcc/fontes.json; origem e hashes dos PDFs locais confrontados.
+- Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt; material de referência lido, identificado abaixo.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg; material de referência lido, identificado abaixo.
+Não foram consultados o gabarito ou o comentário autoral desta questão. O hash de textos abaixo é o identificador fornecido pelo manifesto; não significa certificação de seu conteúdo.
+SHA-256 dos textos no manifesto: 63468778e9307f7351be29e8c0747cec3511d3d52a85c511f9b7c5a7a7c8731d
+
+PRIMEIRA LEITURA SEM GABARITO
+Texto autoral de comunicação de serviço, com otherwise citado e pedido de relação contextual em português. Alternativas completam a frase com relações lógicas concorrentes; precisa comparação com questão FCC de inglês sobre conectivo.
+
+CRITÉRIOS EXAMINADOS
+- Leitura independente: atendido. Enunciado e cinco alternativas foram examinados antes das referências da questão, com primeira impressão salva em primeiras-observacoes-estilo.json; os recebimentos posteriores 47 e 48 tiveram registro próprio antes de suas referências.
+- Consulta real e identidade das referências: atendido. Foram lidos os exemplos identificados abaixo, sem tomar a descrição do elaborador como substituto da leitura. As capas das extrações locais, a origem de fontes.json e os metadados do acervo HTML foram confrontados conforme a fonte utilizada.
+- Comando, cenário, estrutura, vocabulário e organização das opções: atendido. I171/I172 solicitam sentido contextual de palavra ou expressão do texto inglês, com opções em português; o artigo associado foi efetivamente recuperado e lido. No item autoral, otherwise remete à recomendação anterior, e as opções mantêm a inscrição em notificações como base lexical enquanto variam a relação entre as frases. É adaptação da competência contextual, sem copiar texto ou vocabulário dos exemplos.
+- Formato particular e sua apresentação: atendido. Conectivo citado no comando e cinco continuações em português. A amostra usa vocabulário/expressão, não esse conectivo; ela sustenta interpretação contextual, sem exigir identidade da unidade linguística.
+- Traços concretos e aplicação coerente: atendido. As relações de comparação acima dizem respeito à tarefa efetivamente apresentada. Cenário, dados e opções autorais não reproduzem simplesmente o enunciado dos exemplos lidos; não se usou o exemplo FCC para certificar a resposta.
+- Limites da amostra e formatos ausentes: atendido. As diferenças do item em relação aos exemplos foram consideradas como adaptações editoriais. Não se inferiu proibição universal de formato a partir de ausência em um exemplo; as ampliações pertinentes constam abaixo.
+- Exigência de tamanho, dificuldade ou molde: atendido. A decisão se apoia em clareza e coerência observáveis, sem impor longuismo, enunciado negativo, contextualização adicional ou proposições por preferência.
+- Competência correspondente e suficiência: atendido. Foram usados exemplos de compreensão contextual em inglês, com leitura do texto associado, dos comandos e das cinco alternativas. A amostra particular é suficiente para comparar a construção proposta, preservados os limites de identificação original do acervo secundário.
+
+ACHADOS
+Nenhum achado impeditivo no escopo ESTILO_FCC após o exame individual dos critérios acima.
+
+REFERÊNCIAS DE ESTILO
+Tribunal Regional do Trabalho da 7ª Região; Analista Judiciário — Tecnologia da Informação; 2009; caderno: Não obtido; questão: Q128171 — identificador do acervo; página: Não obtida; página HTML.
+Origem verificável: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; imagem associada: https://s3.amazonaws.com/qcon-assets-production/images/provas/1238/Imagem%20003.jpg
+Material efetivamente lido: Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt; Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg
+Traço observado pelo auditor: Sentido contextual de palavra do texto inglês, comando e cinco sentidos candidatos em português.
+Limites: Acervo secundário Qconcursos. A página HTML identifica banca, órgão, cargo e ano. Foram lidos os comandos e alternativas dos cinco itens; a imagem do texto associado foi baixada e visualizada integralmente, superando a limitação da nota inicial do elaborador. Trata-se de artigo adaptado em inglês sobre Intellipedia. Identificadores Q são do acervo; número original, tipo de caderno e página original não obtidos. Sem autenticação oficial ou inferência de frequência atual.
+
+Tribunal Regional do Trabalho da 7ª Região; Analista Judiciário — Tecnologia da Informação; 2009; caderno: Não obtido; questão: Q128172 — identificador do acervo; página: Não obtida; página HTML.
+Origem verificável: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16 ; imagem associada: https://s3.amazonaws.com/qcon-assets-production/images/provas/1238/Imagem%20003.jpg
+Material efetivamente lido: Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt; Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/referencia-ingles-trt7-2009.jpg
+Traço observado pelo auditor: Interpretação contextual de expressão inglesa com cinco formulações em português.
+Limites: Acervo secundário Qconcursos. A página HTML identifica banca, órgão, cargo e ano. Foram lidos os comandos e alternativas dos cinco itens; a imagem do texto associado foi baixada e visualizada integralmente, superando a limitação da nota inicial do elaborador. Trata-se de artigo adaptado em inglês sobre Intellipedia. Identificadores Q são do acervo; número original, tipo de caderno e página original não obtidos. Sem autenticação oficial ou inferência de frequência atual.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma no perfil ESTILO_FCC. Não foi efetuada auditoria de conteúdo, conferência de gabarito, cálculo, execução de código ou certificação normativa. As limitações de origem, identificação e alcance da amostra estão registradas nas referências e não foram convertidas em afirmações de padrão universal.
+
+JUSTIFICATIVA DA DECISÃO
+A construção é coerente com a competência de interpretação contextual em inglês e não apresenta incompatibilidade editorial observada. APROVADA exclusivamente no perfil ESTILO_FCC, para esta versão e estes textos. A decisão não substitui os demais perfis nem representa certificação técnica, incidência de assunto ou dificuldade estatisticamente calibrada.

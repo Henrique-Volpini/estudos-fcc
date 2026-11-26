@@ -1,0 +1,22 @@
+ID: BAN-DS-04-0004
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Normalização: dependência parcial e segunda forma normal
+
+ENUNCIADO
+Uma relação em primeira forma normal é representada por:
+
+ALOCACAO(cod_empregado, cod_projeto, nome_empregado, horas)
+
+Sua única chave candidata é (cod_empregado, cod_projeto). Considere as dependências funcionais:
+
+cod_empregado -> nome_empregado
+(cod_empregado, cod_projeto) -> horas
+
+Não há outras dependências funcionais além das decorrentes dessas e da chave. Para eliminar a dependência parcial indicada e preservar a associação de cada empregado com seus projetos e respectivas horas, a decomposição adequada é:
+
+A) EMPREGADO(cod_empregado, nome_empregado) e ALOCACAO(cod_empregado, cod_projeto, horas).
+B) EMPREGADO(cod_empregado, horas) e PROJETO(cod_projeto, nome_empregado).
+C) EMPREGADO(cod_empregado, cod_projeto, nome_empregado) e HORAS(cod_empregado, cod_projeto, horas).
+D) PROJETO(cod_projeto, horas) e EMPREGADO(cod_empregado, nome_empregado).
+E) ALOCACAO(cod_empregado, cod_projeto) e CADASTRO(cod_empregado, nome_empregado, horas).

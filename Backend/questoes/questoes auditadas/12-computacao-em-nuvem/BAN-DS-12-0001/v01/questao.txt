@@ -1,0 +1,21 @@
+ID: BAN-DS-12-0001
+Versão: v01
+Matéria: Computação em nuvem
+Tópico: Modelos de serviço IaaS, PaaS e SaaS
+
+ENUNCIADO
+Uma instituição avalia três contratações de serviços em nuvem, com as seguintes características.
+
+I. A equipe provisiona máquinas virtuais e fica responsável pela instalação e atualização do sistema operacional convidado e pela implantação de suas aplicações; o provedor opera a infraestrutura física.
+
+II. A equipe implanta aplicação própria em ambiente de execução mantido pelo provedor, utilizando linguagens e bibliotecas por ele suportadas; controla a aplicação, mas não administra o sistema operacional subjacente.
+
+III. As equipes usuárias acessam uma aplicação de gestão documental oferecida e mantida pelo provedor, limitando-se às configurações permitidas de uso, sem implantar código próprio.
+
+Considerando os modelos de serviço definidos no NIST SP 800-145, as contratações I, II e III correspondem, correta e respectivamente, a:
+
+A) PaaS, IaaS e SaaS.
+B) SaaS, PaaS e IaaS.
+C) IaaS, SaaS e PaaS.
+D) IaaS, PaaS e SaaS.
+E) PaaS, SaaS e IaaS.

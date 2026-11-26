@@ -1,0 +1,12 @@
+COMO RODAR O SITE
+
+Abra o PowerShell e copie e cole estas duas linhas:
+
+Set-Location -LiteralPath 'C:\Users\O foda\OneDrive\Questões Banca FCC'
+node .\Backend\Code\server.mjs
+
+Depois, abra no navegador:
+http://127.0.0.1:3210
+
+Mantenha o terminal aberto enquanto usar o site.
+Para parar o site, pressione Ctrl+C no terminal.

@@ -1,0 +1,13 @@
+ID: BAN-DS-04-0006
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Bancos NoSQL em nível conceitual: escolha de modelo
+
+ENUNCIADO
+Uma equipe precisa investigar conexões entre clientes, contas e dispositivos. A consulta predominante parte de um dispositivo e percorre sucessivamente suas ligações para localizar clientes conectados por caminhos com quantidade variável de etapas. Considerando os modelos de dados em nível conceitual, aquele mais diretamente orientado à representação desses vínculos e à realização dessas travessias é o modelo
+
+A) orientado a documentos.
+B) chave-valor.
+C) de colunas largas.
+D) de grafos.
+E) dimensional em estrela.

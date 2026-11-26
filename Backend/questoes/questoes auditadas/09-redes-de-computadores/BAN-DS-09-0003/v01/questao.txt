@@ -1,0 +1,17 @@
+ID: BAN-DS-09-0003
+Versão: v01
+Matéria: Redes de computadores
+Tópico: Roteamento OSPF e BGP
+
+ENUNCIADO
+Em um sistema autônomo, o roteador R1 executa OSPFv2 e BGP-4. Para um prefixo interno P, há somente dois caminhos OSPF, ambos intra-área: por R2, com custo 10 de R1 a R2 e custo 20 de R2 até P; por R3, com custo 5 de R1 a R3 e custo 40 de R3 até P. Os custos informados são os da direção de R1 para P.
+
+Para outro prefixo, externo, Q, R1 dispõe somente das rotas BGP X e Y, ambas elegíveis e com NEXT_HOP alcançável. A política local já definiu seus graus de preferência, representados por LOCAL_PREF: X tem valor 200 e AS_PATH com três sistemas autônomos; Y tem valor 100 e AS_PATH com um sistema autônomo. Considere o processo de decisão da RFC 4271, sem critérios adicionais de fabricante.
+
+O próximo salto selecionado pelo OSPF para P e a rota selecionada pelo BGP para Q são, respectivamente,
+
+A) R3 e Y.
+B) R2 e Y.
+C) R2 e X.
+D) R3 e X.
+E) R2 e R3, em caminhos de igual custo, e X.

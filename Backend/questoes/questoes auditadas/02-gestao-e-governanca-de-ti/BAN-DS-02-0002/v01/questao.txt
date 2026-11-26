@@ -1,0 +1,20 @@
+ID: BAN-DS-02-0002
+Versão: v01
+Matéria: Gestão e Governança de Tecnologia da Informação
+Tópico: Gestão financeira de TI
+
+ENUNCIADO
+Uma organização compara duas soluções de infraestrutura, X e Y, com capacidade e níveis de serviço equivalentes, para uso durante três anos. Foram estimados os seguintes custos, em reais:
+
+Item                                      X             Y
+Aquisição e instalação, uma única vez     140.000       200.000
+Operação, por ano                         30.000        16.000
+Manutenção e suporte, por ano             20.000         8.000
+
+Os custos anuais incidem em cada um dos três anos. Não há outros custos, valor residual, inflação ou desconto financeiro a considerar. Com base no custo total de propriedade (TCO), a solução de menor custo no período e a diferença entre os TCOs são, respectivamente,
+
+A) X e R$ 60.000,00.
+B) Y e R$ 26.000,00.
+C) X e R$ 18.000,00.
+D) Y e R$ 78.000,00.
+E) Y e R$ 18.000,00.

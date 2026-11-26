@@ -1,0 +1,31 @@
+ID: BAN-DS-03-0007
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+A divisão inteira por zero lança ArithmeticException antes do print de T. O catch correspondente imprime C e termina normalmente. Em seguida, finally imprime F. Como a exceção foi tratada e o finally não interrompe o fluxo, a instrução posterior imprime S.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: o print de T está depois da operação que lança a exceção e não é alcançado.
+B) Atende: o catch imprime C, o finally imprime F e a execução segue para o print de S.
+C) Não atende: a exceção foi tratada; não há return, novo throw ou outra interrupção que impeça o print posterior de S.
+D) Não atende: existe um catch compatível com ArithmeticException, que é executado e imprime C antes de finally.
+E) Não atende: o bloco finally é executado após o catch no fluxo apresentado, acrescentando F entre C e S.
+
+FONTES TÉCNICAS CONSULTADAS
+- Java SE 21 API — ArithmeticException | https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ArithmeticException.html | Descrição da classe: divisão inteira por zero como condição que lança ArithmeticException.
+- Java Language Specification — Java SE 21, capítulo 14 | https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.20.2 | §14.20.2: catch compatível, execução de finally e conclusão normal do try-catch-finally.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 43; página PDF 10.
+- Origem verificável: Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação: Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.
+- Limites: Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes.
+
+VERIFICAÇÕES REALIZADAS
+Análise documental da exceção por divisão inteira por zero e rastreamento do fluxo catch/finally conforme JLS21. Não houve execução de compilador Java.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

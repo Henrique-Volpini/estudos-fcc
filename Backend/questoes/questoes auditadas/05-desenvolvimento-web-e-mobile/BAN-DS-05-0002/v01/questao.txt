@@ -1,0 +1,27 @@
+ID: BAN-DS-05-0002
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: JavaScript e desenvolvimento web: ordem de execução assíncrona
+
+ENUNCIADO
+Um desenvolvedor executa integralmente o trecho abaixo como um único script clássico em uma página ativa, em navegador compatível com o HTML Standard. Não há outros registros no console, exceções ou interrupções durante a execução.
+
+console.log('inicio');
+Promise.resolve().then(() => {
+  console.log('promessa');
+  queueMicrotask(() => console.log('micro'));
+});
+setTimeout(() => console.log('temporizador'), 0);
+console.log('fim');
+
+A sequência de mensagens produzida por esse trecho é
+
+A) inicio, promessa, micro, fim, temporizador.
+
+B) inicio, fim, promessa, micro, temporizador.
+
+C) inicio, fim, temporizador, promessa, micro.
+
+D) inicio, fim, promessa, temporizador, micro.
+
+E) inicio, promessa, fim, temporizador, micro.

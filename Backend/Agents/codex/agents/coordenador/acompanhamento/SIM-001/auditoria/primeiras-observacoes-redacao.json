@@ -1,0 +1,309 @@
+{
+  "simulado": "SIM-001",
+  "responsavel": "/root/auditor_redacao",
+  "perfil": "REDACAO_E_CONFORMIDADE",
+  "data": "2026-11-26",
+  "ordem": "Leitura das 50 questões públicas concluída e observações registradas antes de abrir controles, enunciados completos e gabaritos comentados.",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Comando pede dois eventos em ordem expressa por respectivamente; as opções completam a frase com ações. Repetem blocos intencionalmente para permutar eventos, sem duplicação integral. Não há negação seletiva nem frase truncada."
+    },
+    {
+      "id": "BAN-DS-01-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Os extremos Agencia/Carteira e as duas multiplicidades são identificados. A frase que declara todos os objetos e ligações delimita a leitura; cada opção descreve uma configuração completa e distinta. Os nomes sem acento são identificadores do modelo."
+    },
+    {
+      "id": "BAN-DS-01-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Versão de partida e três mudanças são expostas em sequência; o comando pede um número normal mínimo. As cinco opções numéricas mantêm formato uniforme e são distintas."
+    },
+    {
+      "id": "BAN-DS-01-0004",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "As quatro exigências estão numeradas e o comando fixa a ordem funcional/qualidade. As alternativas usam o mesmo separador para dois grupos. A negação em ainda não executado integra o requisito e não inverte a seleção."
+    },
+    {
+      "id": "BAN-DS-02-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Atividades I a III distinguíveis pelo sujeito e pela ação; comando solicita classificação ordenada nos domínios. Cinco trincas com rótulos e siglas em forma paralela; não observei ambiguidade linguística."
+    },
+    {
+      "id": "BAN-DS-02-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Tabela tem cabeçalho de solução e discrimina incidência única/anual; horizonte e exclusões são explícitos. Comando pede solução e diferença; cinco pares distintos. Alinhamento deve preservar colunas na apresentação."
+    },
+    {
+      "id": "BAN-DS-02-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Prazos global e internos têm marcos de contagem e sucessão definidos. Opções trazem classificação e justificativa, todas relacionadas à compatibilidade solicitada; números e unidades legíveis."
+    },
+    {
+      "id": "BAN-DS-03-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Python e versão identificados; código tem quebras de linha e objeto de saída explícito. Cinco listas são exibidas com colchetes preservados e sem duplicação textual. Não executei o trecho."
+    },
+    {
+      "id": "BAN-DS-03-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "Java 21 e método main identificados; código indentado e literal de saída preservado. Quatro alternativas de texto e uma de impedimento de execução respondem ao resultado solicitado. Não executei o programa."
+    },
+    {
+      "id": "BAN-DS-03-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-01-10.json",
+      "observacao": "C# 12/.NET 8 e imports fornecidos; código com bloco e indentação legíveis. O comando delimita valor exibido e as cinco respostas são valores únicos. Não executei o programa."
+    },
+    {
+      "id": "BAN-DS-03-0004",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "C11, função e printf identificados; ponteiros e operadores mantidos em texto. Cinco pares numéricos distintos respondem à sequência pedida. Não executei o programa."
+    },
+    {
+      "id": "BAN-DS-03-0005",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "PHP 8.2 e duas expressões de comparação identificados. Pergunta direta sobre execução; quatro sequências e uma exceção são linguisticamente completas. Não executei o código."
+    },
+    {
+      "id": "BAN-DS-03-0006",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Cenário informa três tarefas e motivos independentes de mudança. Comando solicita organização para princípio nomeado; opções em infinitivo, relacionadas às mesmas tarefas e textualmente distintas."
+    },
+    {
+      "id": "BAN-DS-03-0007",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Java 21 e main identificados; blocos try/catch/finally e prints legíveis. Comando pede sequência de caracteres e todas as opções seguem esse formato. Não executei o código."
+    },
+    {
+      "id": "BAN-DS-04-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Tabelas agencia/conta identificadas por nome e cabeçalhos, consulta delimitada e colunas do resultado nomeadas. O comando restringe a linha e a ordem dos dois valores; cinco pares textualmente distintos."
+    },
+    {
+      "id": "BAN-DS-04-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Tabela com cabeçalhos id/setor/pontos e consulta PostgreSQL identificadas. Comando fixa ids de 1 a 5 e ordem de leitura. Alternativas apresentam cinco valores em estrutura paralela."
+    },
+    {
+      "id": "BAN-DS-04-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Sequência de sessões numerada e isolamentos/ausência de locks explicitados. Segundo/terceiro SELECTs são referidos sem troca de sujeito. Opções completas e distintas; negações descrevem condições do cenário."
+    },
+    {
+      "id": "BAN-DS-04-0004",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Relação, chave e dependências aparecem em linhas separadas. Comando explicita o que deve ser preservado; opções consistem em dois esquemas de relação cada, com identificadores conservados."
+    },
+    {
+      "id": "BAN-DS-04-0005",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Tabela movimento tem cabeçalhos e registros delimitados, seguida da consulta. As colunas quantidade/soma e sua ordem são nomeadas no comando. Cinco pares de valores distintos; não executei a consulta."
+    },
+    {
+      "id": "BAN-DS-04-0006",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-11-20.json",
+      "observacao": "Consulta predominante e travessias descritas em linguagem direta. Comando termina em modelo, completado por cinco rótulos gramaticalmente compatíveis e distintos; sem negações ou restos de template."
+    },
+    {
+      "id": "BAN-DS-05-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Método, recurso, repetição e referência HTTP identificados. Comando afirmativo e opções completas discutem efeito/semântica da repetição, sem repetição integral. URI e RFC são grafados de modo consistente."
+    },
+    {
+      "id": "BAN-DS-05-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Contexto de script clássico em navegador e exclusões de interferência são explícitos; código mantém indentação e literais. Cinco sequências com as mesmas mensagens em ordens distintas. Não executei o trecho."
+    },
+    {
+      "id": "BAN-DS-05-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Critérios e níveis WCAG numerados nas afirmações. APENAS destaca a restrição de seleção; alternativas usam combinações dos mesmos numerais. A expressão indicador de foco é distinguível de componente no texto."
+    },
+    {
+      "id": "BAN-DS-05-0004",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Operação, caminho e parâmetro opcional declarados antes do YAML. Indentação e nomes preservados; comando pede localização/obrigatoriedade dos dois parâmetros. Cinco pares de configurações em forma paralela."
+    },
+    {
+      "id": "BAN-DS-05-0005",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "XSD completo anunciado, namespace de destino explicitado e XML mantido com aspas e tags. Comando limita a seleção à validade nesse esquema. Cinco documentos distintos; a renderização deverá preservar as tags literalmente."
+    },
+    {
+      "id": "BAN-DS-06-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Caso de uso, dois meios de entrada e substituição de persistência expostos sem pronome ambíguo. Comando solicita organização; cinco opções em infinitivo com elementos do mesmo cenário, sem duplicação."
+    },
+    {
+      "id": "BAN-DS-06-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Cenário discrimina intermediário/banco/consumidor e reinícios; comando pede conduta para efeito único. Alternativas mantêm verbos de ação e ordem das etapas reconhecível. Não observei omissão linguística impeditiva."
+    },
+    {
+      "id": "BAN-DS-06-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Três necessidades numeradas e comando de associação ordenada. Cinco permutações dos mesmos termos técnicos, completas e distintas. Nenhuma inversão negativa do pedido."
+    },
+    {
+      "id": "BAN-DS-06-0004",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Os dois significados de Cliente são atribuídos às equipes respectivas e o contrato de integração tem finalidade definida. Opções em infinitivo discutem fronteira/modelos; termos internos não aparecem como metadados."
+    },
+    {
+      "id": "BAN-DS-07-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-21-30.json",
+      "observacao": "Fluxo descreve incorporação, verificações, homologação e aprovação de produção em ordem clara. Opções completam caracteriza com classificação e justificativa; sem comando negativo nem alternativa duplicada."
+    },
+    {
+      "id": "BAN-DS-07-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Nomes alfa/beta/gama, conteúdo original/ajustado e condições de criação/remoção explicitados. Comando pede resultado e explicação de beta/gama. Opções mantêm essa ordem e apresentam frases completas."
+    },
+    {
+      "id": "BAN-DS-07-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Service/Pods, configuração e limiares de probes identificados; eventos I/II ordenados. Comando pede consequências respectivas, e alternativas trazem dois segmentos separados por ponto e vírgula. Negações locais claras."
+    },
+    {
+      "id": "BAN-DS-08-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Número de quadros, estado inicial, política e sequência delimitados. Comando explicita inclusão das faltas iniciais; cinco totais numéricos distintos. Não simulei a sequência nem efetuei cálculo de resposta."
+    },
+    {
+      "id": "BAN-DS-08-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Estado atual e proposta para futuras execuções são separados por parágrafos. Afirmações I/II/III mantêm referência à proposta e ao observado. Apenas em cada opção torna clara a seleção das combinações."
+    },
+    {
+      "id": "BAN-DS-09-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Topologia descrita por switches, VLANs e estações nomeadas, com limitações explícitas. Comando pede tag/entrega, e cinco alternativas mantêm os dois componentes. Termos trunk/tag são consistentes."
+    },
+    {
+      "id": "BAN-DS-09-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Bloco, mínimo de endereços e reservas identificados; comando pede três dados em ordem expressa. Opções usam separador uniforme e endereços completos. Analista com maiúscula é uso editorial sem prejuízo de compreensão."
+    },
+    {
+      "id": "BAN-DS-09-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Prefixos P/Q e processos OSPF/BGP descritos em parágrafos separados; custos/direção e atributos têm referentes claros. Comando pede dois resultados ordenados; opção E explicita par de saltos sem truncamento."
+    },
+    {
+      "id": "BAN-DS-10-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Cenário distingue consulta, resposta e importação do módulo MIB. Comando pede papéis/efeito; alternativas são frases completas e discutem esses componentes. Não há sobreposição textual integral."
+    },
+    {
+      "id": "BAN-DS-10-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Versão/ambiente Apache e ordem dos blocos são fornecidos; caminhos, nomes e requisições I/II legíveis. Comando fixa arquivos e ordem. As cinco opções são pares distintos de caminhos completos."
+    },
+    {
+      "id": "BAN-DS-11-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json",
+      "observacao": "Duas finalidades e destino do Access Token explicitados. Comando solicita conduta e cinco opções em infinitivo, com tokens nomeados consistentemente. Negação de opção B é local e não inverte o comando."
+    },
+    {
+      "id": "BAN-DS-11-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Premissas criptográficas antecedem quatro afirmações; origem, integridade, leitura e confidencialidade diferenciadas no texto. APENAS destaca a restrição e opções usam numerais definidos, sem duplicação."
+    },
+    {
+      "id": "BAN-DS-11-0003",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Cenário identifica substituição de dados, tabela separada e capacidade de reversão pelo controlador. Pedido de conclusão é claro; cinco afirmações completas sobre a condição dos dados, sem instrução interna."
+    },
+    {
+      "id": "BAN-DS-11-0004",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Texto identifica as duas entradas SQL e as colunas admitidas. Comando pede correção da construção, com cinco condutas em infinitivo. O repetido nome cliente não torna ambíguos os papéis de usuário/recurso no cenário."
+    },
+    {
+      "id": "BAN-DS-12-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Três contratações numeradas, responsabilidades do cliente/provedor e tipos de operação legíveis. Comando fixa I/II/III e cinco trincas de siglas distintas, sem negação seletiva."
+    },
+    {
+      "id": "BAN-DS-12-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Capacidade, pico, falhas de zona e período de ativação estão identificados. Comando pede quantidade por zona e mecanismo, não total agregado. Cinco pares mantêm padrão; não efetuei dimensionamento."
+    },
+    {
+      "id": "BAN-DS-13-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Git/versão, branches, commits M/F, estado do índice e arquivo em conflito identificados. Comando pede sequência preservando histórico; opções combinam comandos literais e justificativas completas. Não executei comandos."
+    },
+    {
+      "id": "BAN-DS-14-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Tabela tem cabeçalhos para requisito, testes e documentação; CT03 é contextualizado antes das afirmações. APENAS destaca restrição; os vínculos referidos têm nomes consistentes e cinco combinações distintas."
+    },
+    {
+      "id": "BAN-DS-15-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Dois papéis e regra de ativação na sessão são expostos de forma direta, separando atribuição de ativação. Comando pede configuração e opções em infinitivo, sem duplicação literal ou comando contraditório."
+    },
+    {
+      "id": "BAN-DS-16-0001",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Texto inglês autoral legível, com sujeitos e marcadores temporais claros. Pergunta em português pede motivo da seção adicional e as cinco opções completam porque; não há dependência de referência externa para leitura."
+    },
+    {
+      "id": "BAN-DS-16-0002",
+      "versao": "v01",
+      "origem": "Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-41-50.json",
+      "observacao": "Texto inglês autoral e palavra Otherwise identificados com precisão. Comando em português pede relação contextual; alternativas completam a oração com conectores distintos e redação paralela. Email integra termos das opções e não requer tradução."
+    }
+  ]
+}

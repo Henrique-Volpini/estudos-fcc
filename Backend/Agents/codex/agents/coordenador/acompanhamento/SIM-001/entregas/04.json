@@ -1,0 +1,210 @@
+{
+  "elaborador": "04",
+  "responsavel": "/root/elaborador_04",
+  "questoes": [
+    {
+      "id": "BAN-DS-04-0001",
+      "numero": 15,
+      "materia": "Banco de Dados",
+      "topico": "Comandos SQL: LEFT JOIN e funções de contagem",
+      "versao": "v01",
+      "autor": "/root/elaborador_04",
+      "dificuldadeEstimada": "média",
+      "enunciado": "Em um banco PostgreSQL 15, a tabela agencia possui a coluna id como chave primária, e a tabela conta possui as colunas id, chave primária, e agencia_id. Considere somente os seguintes registros:\n\nagencia\nid\n10\n20\n30\n\nconta\nid | agencia_id\n1  | 10\n2  | 10\n3  | 20\n\nUm analista executou:\n\nSELECT a.id, COUNT(*) AS linhas, COUNT(c.id) AS contas\nFROM agencia AS a\nLEFT JOIN conta AS c ON c.agencia_id = a.id\nGROUP BY a.id\nORDER BY a.id;\n\nNa linha em que a.id é igual a 30, os valores das colunas linhas e contas são, respectivamente,",
+      "alternativas": {
+        "A": "0 e 0.",
+        "B": "0 e 1.",
+        "C": "1 e 0.",
+        "D": "1 e 1.",
+        "E": "3 e 0."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende: o LEFT JOIN mantém uma linha para a agência 30, mesmo sem conta correspondente. Por isso, COUNT(*) não resulta em zero nesse grupo.",
+        "B": "Não atende: inverte os efeitos das contagens. Há uma linha no grupo, mas o campo c.id dessa linha é nulo e não é contado por COUNT(c.id).",
+        "C": "Atende: a linha preservada pelo LEFT JOIN é contada por COUNT(*), enquanto COUNT(c.id) desconsidera seu valor nulo, produzindo 1 e 0.",
+        "D": "Não atende: COUNT(c.id) não conta a linha com c.id nulo. A ausência de conta não cria um identificador de conta não nulo.",
+        "E": "Não atende: GROUP BY a.id separa as agências. O grupo da agência 30 não contém as três linhas da tabela agencia."
+      },
+      "resolucao": "A agência 30 não encontra uma conta na condição de junção. O LEFT JOIN preserva essa agência e preenche as colunas da conta com NULL. Seu grupo contém uma linha: COUNT(*) resulta em 1. Como c.id é NULL nessa linha, COUNT(c.id) resulta em 0. Portanto, a alternativa C atende ao comando.",
+      "fontes": [
+        {"titulo": "PostgreSQL 15 - Table Expressions", "url": "https://www.postgresql.org/docs/15/queries-table-expressions.html", "localizador": "7.2.1.1, Joined Tables, LEFT OUTER JOIN: preservação da linha esquerda sem correspondência"},
+        {"titulo": "PostgreSQL 15 - Aggregate Functions", "url": "https://www.postgresql.org/docs/15/functions-aggregate.html", "localizador": "9.21, tabela 9.58: count(*) e count(any)"}
+      ],
+      "verificacoes": "Conferência documental nas seções indicadas e análise manual da junção e do grupo da agência 30. Não foi declarada execução no PostgreSQL.",
+      "referenciasEstilo": [
+        {"orgao": "TRF da 4ª Região", "cargo": "Analista Judiciário - Informática", "ano": 2007, "caderno": "I, tipo 001", "questao": 50, "pagina": 8, "origem": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf", "caracteristicaAplicada": "Apresentação de expressões SQL e seleção de uma conclusão entre cinco alternativas. Referência histórica de construção; o cenário, os dados e o cálculo desta questão são autorais."},
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário - Tecnologia da Informação", "ano": 2022, "caderno": "A14, tipo 001", "questao": 43, "pagina": 10, "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf", "caracteristicaAplicada": "Uso de fragmento técnico seguido de alternativas de representação ou resultado. A cópia consultada é secundária, hospedada no Qconcursos; não se afirma obtenção direta da FCC."}
+      ]
+    },
+    {
+      "id": "BAN-DS-04-0002",
+      "numero": 16,
+      "materia": "Banco de Dados",
+      "topico": "Funções analíticas: RANK e PARTITION BY",
+      "versao": "v01",
+      "autor": "/root/elaborador_04",
+      "dificuldadeEstimada": "média",
+      "enunciado": "No PostgreSQL 15, uma tabela classificacao possui as colunas id, chave primária, setor e pontos, todas não nulas. Seus registros são:\n\nid | setor | pontos\n1  | N     | 90\n2  | N     | 90\n3  | N     | 70\n4  | S     | 80\n5  | S     | 60\n\nConsidere a consulta:\n\nSELECT id,\n       RANK() OVER (PARTITION BY setor ORDER BY pontos DESC) AS posicao\nFROM classificacao\nORDER BY id;\n\nOs valores de posicao retornados para os ids de 1 a 5, nessa ordem, são",
+      "alternativas": {
+        "A": "1, 2, 3, 1 e 2.",
+        "B": "1, 1, 2, 1 e 2.",
+        "C": "1, 1, 4, 3 e 5.",
+        "D": "1, 1, 3, 1 e 2.",
+        "E": "2, 2, 1, 2 e 1."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende: atribui posições diferentes aos dois registros de 90 pontos do setor N, como ocorreria em uma numeração de linhas com desempate, e não com RANK nessa ordenação.",
+        "B": "Não atende: após o empate no primeiro lugar, RANK deixa uma lacuna. A sequência sem lacuna corresponde ao comportamento de DENSE_RANK.",
+        "C": "Não atende: corresponde ao ranqueamento global pelos pontos, sem separar os setores. A consulta contém PARTITION BY setor.",
+        "D": "Atende: no setor N, o empate ocupa a primeira posição e a linha seguinte recebe 3; no setor S, as duas linhas recebem 1 e 2. A ordenação final por id produz a sequência indicada.",
+        "E": "Não atende: essa sequência é compatível com ranqueamento crescente dos pontos em cada setor. O ORDER BY da janela usa DESC."
+      },
+      "resolucao": "PARTITION BY setor cria uma classificação independente por setor. Dentro de N, os dois valores 90 são pares na ordenação e recebem posição 1; o valor 70 recebe posição 3. Em S, 80 e 60 recebem 1 e 2. ORDER BY id na consulta externa fixa a ordem de apresentação solicitada, sem alterar o cálculo da janela.",
+      "fontes": [
+        {"titulo": "PostgreSQL 15 - Window Functions", "url": "https://www.postgresql.org/docs/15/functions-window.html", "localizador": "9.22, tabela 9.63: rank, dense_rank e row_number"},
+        {"titulo": "PostgreSQL 15 - Tutorial: Window Functions", "url": "https://www.postgresql.org/docs/15/tutorial-window.html", "localizador": "3.5: separação por PARTITION BY e ordenação da janela"}
+      ],
+      "verificacoes": "Conferência documental e cálculo manual dos dois grupos. Os empates de RANK recebem o mesmo valor, portanto a ausência de desempate entre os ids 1 e 2 não torna o resultado indeterminado. Sem execução declarada no PostgreSQL.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário - Tecnologia da Informação", "ano": 2022, "caderno": "A14, tipo 001", "questao": 43, "pagina": 10, "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf", "caracteristicaAplicada": "Fragmento técnico autocontido seguido de escolha do resultado correto entre cinco opções. Dados e consulta autorais. Referência obtida em cópia secundária, sem alegação de validação universal da FCC."}
+      ]
+    },
+    {
+      "id": "BAN-DS-04-0003",
+      "numero": 17,
+      "materia": "Banco de Dados",
+      "topico": "Controle de transações: Read Committed no PostgreSQL 15",
+      "versao": "v01",
+      "autor": "/root/elaborador_04",
+      "dificuldadeEstimada": "média",
+      "enunciado": "Em um banco PostgreSQL 15, a tabela conta contém inicialmente a linha (id = 7, saldo = 1000). Duas sessões executam a seguinte sequência, sem outras operações concorrentes:\n\n1. A inicia uma transação com isolamento READ COMMITTED e consulta o saldo da conta 7, obtendo 1000.\n2. B inicia outra transação e atualiza esse saldo para 1300, mas ainda não executa COMMIT.\n3. A executa um segundo SELECT saldo FROM conta WHERE id = 7.\n4. B executa COMMIT.\n5. A executa um terceiro SELECT saldo FROM conta WHERE id = 7, ainda na transação iniciada no passo 1.\n\nA não faz alterações nos dados, e seus SELECTs não contêm FOR UPDATE nem FOR SHARE. Nesse cenário, o comportamento esperado é:",
+      "alternativas": {
+        "A": "O segundo e o terceiro SELECTs de A retornam 1300.",
+        "B": "O segundo SELECT de A retorna 1000, e o terceiro retorna 1300.",
+        "C": "O segundo e o terceiro SELECTs de A retornam 1000.",
+        "D": "O segundo SELECT de A aguarda o COMMIT de B; depois, ambos retornam 1300.",
+        "E": "O segundo SELECT de A retorna 1000, e o terceiro é abortado por detectar uma leitura não repetível."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende: no segundo SELECT, a alteração de B ainda não foi confirmada e não fica visível para A nesse isolamento.",
+        "B": "Atende: o segundo comando vê o valor confirmado anterior; após o COMMIT de B, o terceiro comando obtém uma nova visão e vê 1300.",
+        "C": "Não atende: READ COMMITTED não conserva para todos os comandos a visão do primeiro SELECT da transação.",
+        "D": "Não atende: o SELECT comum descrito lê a versão visível dos dados; ele não aguarda a confirmação dessa atualização como se tivesse pedido o bloqueio da linha.",
+        "E": "Não atende: leituras não repetíveis são possíveis nesse isolamento e não causam, apenas por ocorrerem, esse aborto do terceiro SELECT."
+      },
+      "resolucao": "Em READ COMMITTED, cada SELECT comum vê dados confirmados antes de seu próprio início. O comando do passo 3 ainda vê saldo 1000; o comando do passo 5, iniciado depois da confirmação de B, vê saldo 1300. A mudança entre consultas da mesma transação é permitida nesse isolamento.",
+      "fontes": [
+        {"titulo": "PostgreSQL 15 - Transaction Isolation", "url": "https://www.postgresql.org/docs/15/transaction-iso.html", "localizador": "13.2.1, Read Committed Isolation Level; tabela 13.1 e comportamento de SELECT sem FOR UPDATE/SHARE"}
+      ],
+      "verificacoes": "Conferência documental da sequência temporal, das hipóteses de visibilidade e da ausência de bloqueio explícito. Não houve simulação declarada de sessões PostgreSQL.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário - Tecnologia da Informação", "ano": 2022, "caderno": "A14, tipo 001", "questao": 32, "pagina": 8, "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf", "caracteristicaAplicada": "Contextualização técnica e seleção de uma afirmação correta sobre o comportamento do mecanismo. O cenário concorrente é novo; a referência editorial é uma cópia secundária, não uma comprovação de incidência."}
+      ]
+    },
+    {
+      "id": "BAN-DS-04-0004",
+      "numero": 18,
+      "materia": "Banco de Dados",
+      "topico": "Normalização: dependência parcial e segunda forma normal",
+      "versao": "v01",
+      "autor": "/root/elaborador_04",
+      "dificuldadeEstimada": "média",
+      "enunciado": "Uma relação em primeira forma normal é representada por:\n\nALOCACAO(cod_empregado, cod_projeto, nome_empregado, horas)\n\nSua única chave candidata é (cod_empregado, cod_projeto). Considere as dependências funcionais:\n\ncod_empregado -> nome_empregado\n(cod_empregado, cod_projeto) -> horas\n\nNão há outras dependências funcionais além das decorrentes dessas e da chave. Para eliminar a dependência parcial indicada e preservar a associação de cada empregado com seus projetos e respectivas horas, a decomposição adequada é:",
+      "alternativas": {
+        "A": "EMPREGADO(cod_empregado, nome_empregado) e ALOCACAO(cod_empregado, cod_projeto, horas).",
+        "B": "EMPREGADO(cod_empregado, horas) e PROJETO(cod_projeto, nome_empregado).",
+        "C": "EMPREGADO(cod_empregado, cod_projeto, nome_empregado) e HORAS(cod_empregado, cod_projeto, horas).",
+        "D": "PROJETO(cod_projeto, horas) e EMPREGADO(cod_empregado, nome_empregado).",
+        "E": "ALOCACAO(cod_empregado, cod_projeto) e CADASTRO(cod_empregado, nome_empregado, horas)."
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Atende: o nome fica na relação determinada por cod_empregado, e horas permanece associada à chave completa empregado-projeto. A ligação por cod_empregado permite recompor os dados.",
+        "B": "Não atende: horas depende do par empregado-projeto, e nome_empregado não é determinado por cod_projeto nas dependências fornecidas.",
+        "C": "Não atende: a primeira relação ainda repete nome_empregado para os projetos e mantém a dependência de apenas parte de sua chave composta.",
+        "D": "Não atende: colocar horas apenas com cod_projeto perde sua associação com cada empregado, necessária pelo esquema e pela dependência dada.",
+        "E": "Não atende: CADASTRO retira cod_projeto do registro das horas; assim, não preserva qual quantidade de horas pertence a cada projeto do empregado."
+      },
+      "resolucao": "nome_empregado depende somente de cod_empregado, que é parte própria da única chave candidata composta. Separe EMPREGADO(cod_empregado, nome_empregado) e mantenha ALOCACAO(cod_empregado, cod_projeto, horas). Essa decomposição remove a dependência parcial e preserva os fatos de alocação. Não se supõe que horas dependa apenas do empregado ou apenas do projeto.",
+      "fontes": [
+        {"titulo": "Microsoft Support - Database design basics", "url": "https://support.microsoft.com/en-us/access/database-design-basics?ad=us&rs=en-us&ui=en-us", "localizador": "Applying the normalization rules, Second normal form: dependência de toda a chave composta e separação de atributos"}
+      ],
+      "verificacoes": "Conferência documental do critério de segunda forma normal e análise das dependências explicitamente declaradas. A hipótese de única chave candidata evita depender de uma escolha arbitrária de chave primária.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário - Tecnologia da Informação", "ano": 2022, "caderno": "A14, tipo 001", "questao": 43, "pagina": 10, "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf", "caracteristicaAplicada": "Apresentação de uma estrutura de dados e seleção de sua representação adequada, em cinco alternativas paralelas. Esquema e problema autorais. Cópia secundária identificada; a referência não fundamenta o conteúdo de normalização."}
+      ]
+    },
+    {
+      "id": "BAN-DS-04-0005",
+      "numero": 19,
+      "materia": "Banco de Dados",
+      "topico": "Common Table Expressions e agregação em SQL",
+      "versao": "v01",
+      "autor": "/root/elaborador_04",
+      "dificuldadeEstimada": "média",
+      "enunciado": "Em um banco PostgreSQL 15, a tabela movimento possui as colunas agencia e valor, ambas não nulas, e contém somente os registros:\n\nagencia | valor\nA       | 40\nA       | 70\nB       | 50\nC       | 30\nC       | 60\n\nConsidere:\n\nWITH totais AS (\n    SELECT agencia, SUM(valor) AS total\n    FROM movimento\n    GROUP BY agencia\n)\nSELECT COUNT(*) AS quantidade, SUM(total) AS soma\nFROM totais\nWHERE total >= 90;\n\nOs valores retornados nas colunas quantidade e soma são, respectivamente,",
+      "alternativas": {
+        "A": "5 e 250.",
+        "B": "3 e 250.",
+        "C": "2 e 110.",
+        "D": "1 e 110.",
+        "E": "2 e 200."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende: conta as cinco linhas de movimento e soma todos os seus valores, sem considerar o agrupamento da CTE nem o filtro externo.",
+        "B": "Não atende: usa as três linhas de totais sem aplicar total >= 90; a agência B, com total 50, deve ser excluída.",
+        "C": "Não atende: a contagem de duas linhas está correta, mas 110 é apenas o total de A, e não a soma dos totais selecionados.",
+        "D": "Não atende: considera apenas A. O operador >= também inclui C, cujo total é exatamente 90.",
+        "E": "Atende: a CTE produz A = 110, B = 50 e C = 90. O filtro mantém A e C, resultando em duas linhas e soma 200."
+      },
+      "resolucao": "Primeiro, o GROUP BY produz um total por agência: 110, 50 e 90. A consulta principal lê essas três linhas da CTE e conserva as duas cujo total é pelo menos 90. Sobre elas, COUNT(*) resulta em 2 e SUM(total) em 110 + 90 = 200.",
+      "fontes": [
+        {"titulo": "PostgreSQL 15 - WITH Queries (Common Table Expressions)", "url": "https://www.postgresql.org/docs/15/queries-with.html", "localizador": "7.8.1, SELECT in WITH: consulta auxiliar usada pela consulta principal"},
+        {"titulo": "PostgreSQL 15 - Tutorial: Aggregate Functions", "url": "https://www.postgresql.org/docs/15/tutorial-agg.html", "localizador": "2.7: agregação com GROUP BY e uso de count e sum sobre linhas selecionadas"}
+      ],
+      "verificacoes": "Conferência documental da CTE e da agregação, com cálculo manual dos três grupos e do resultado final. Nenhuma execução PostgreSQL foi presumida.",
+      "referenciasEstilo": [
+        {"orgao": "TRF da 4ª Região", "cargo": "Analista Judiciário - Informática", "ano": 2007, "caderno": "I, tipo 001", "questao": 50, "pagina": 8, "origem": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf", "caracteristicaAplicada": "Uso de expressões SQL e cinco opções para selecionar uma conclusão técnica. A aplicação ao resultado de uma CTE usa dados autorais; trata-se de referência histórica de formato."},
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário - Tecnologia da Informação", "ano": 2022, "caderno": "A14, tipo 001", "questao": 43, "pagina": 10, "origem": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf", "caracteristicaAplicada": "Fragmento técnico fornecido integralmente e alternativas de representação ou resultado. Cópia secundária; sem generalização de frequência do formato."}
+      ]
+    },
+    {
+      "id": "BAN-DS-04-0006",
+      "numero": 20,
+      "materia": "Banco de Dados",
+      "topico": "Bancos NoSQL em nível conceitual: escolha de modelo",
+      "versao": "v01",
+      "autor": "/root/elaborador_04",
+      "dificuldadeEstimada": "fácil",
+      "enunciado": "Uma equipe precisa investigar conexões entre clientes, contas e dispositivos. A consulta predominante parte de um dispositivo e percorre sucessivamente suas ligações para localizar clientes conectados por caminhos com quantidade variável de etapas. Considerando os modelos de dados em nível conceitual, aquele mais diretamente orientado à representação desses vínculos e à realização dessas travessias é o modelo",
+      "alternativas": {
+        "A": "orientado a documentos.",
+        "B": "chave-valor.",
+        "C": "de colunas largas.",
+        "D": "de grafos.",
+        "E": "dimensional em estrela."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende ao critério principal: documentos organizam agregados de dados, mas não são a escolha diretamente centrada em travessias de relacionamentos entre entidades.",
+        "B": "Não atende: o acesso característico chave-valor recupera um valor por sua chave; não oferece, como modelo central, a representação e a travessia dos vínculos descritos.",
+        "C": "Não atende: colunas largas organizam dados por chaves e famílias de colunas, sem fazer das ligações entre entidades o elemento central da consulta.",
+        "D": "Atende: grafos representam entidades e relacionamentos e são adequados a consultas que percorrem conexões por diferentes quantidades de etapas.",
+        "E": "Não atende: o esquema estrela organiza fatos e dimensões para análise dimensional, em vez de priorizar travessias de uma rede de relacionamentos."
+      },
+      "resolucao": "O requisito dominante é percorrer conexões entre entidades por caminhos de profundidade variável. O modelo de grafos trata os relacionamentos como parte central da representação e da consulta. A escolha é conceitual: não afirma que outros modelos sejam incapazes de implementar alguma consulta equivalente, nem garante superioridade de qualquer produto em todo cenário.",
+      "fontes": [
+        {"titulo": "Microsoft Learn - Understand data models", "url": "https://learn.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/understand-data-store-models", "localizador": "Graph data stores; Document, Key/value e Column-family data stores; classificação dos modelos de dados"},
+        {"titulo": "Microsoft Learn - Understand star schema and the importance for Power BI", "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema", "localizador": "Star schema overview: fatos e dimensões na modelagem dimensional; fundamentação do distrator E, sem exigir Power BI"}
+      ],
+      "verificacoes": "Conferência documental dos modelos e análise conceitual do padrão predominante de acesso. Não se exige produto específico, teste de desempenho ou conhecimento de sintaxe de consulta de grafos.",
+      "referenciasEstilo": [
+        {"orgao": "TRF da 4ª Região", "cargo": "Analista Judiciário - Informática", "ano": 2007, "caderno": "I, tipo 001", "questao": 47, "pagina": 8, "origem": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf", "caracteristicaAplicada": "Comando conceitual que pede identificar um elemento da área de dados entre cinco termos comparáveis. O caso de investigação e o conceito cobrado são autorais; referência histórica, sem alegação de dificuldade calibrada."}
+      ]
+    }
+  ]
+}

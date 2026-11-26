@@ -1,0 +1,20 @@
+ID: BAN-DS-07-0003
+Versão: v01
+Matéria: DevOps e DevSecOps
+Tópico: Kubernetes: prontidão e vivacidade
+
+ENUNCIADO
+Em um cluster Kubernetes, um Service encaminha requisições a três Pods e está configurado com publishNotReadyAddresses: false. Cada Pod contém um único container, com política efetiva de reinício Always. Todos já concluíram a inicialização e estão prontos para atendimento.
+
+No Pod identificado como p1, ocorrem, nesta ordem:
+
+I. As falhas consecutivas da readiness probe atingem o limiar configurado, enquanto a liveness probe continua tendo sucesso.
+II. Posteriormente, as falhas consecutivas da liveness probe também atingem o limiar configurado.
+
+Considerando apenas os efeitos dessas probes e novas requisições encaminhadas pelo Service, as consequências de I e II são, respectivamente:
+
+A) o container de p1 é reiniciado; p1 é apenas retirado do atendimento pelo Service, sem reinício por falha de vivacidade.
+B) p1 continua elegível para novas requisições pelo Service; o kubelet encerra e reinicia o container de p1.
+C) p1 deixa de atender novas requisições pelo Service; o reinício do container depende de a readiness probe voltar a ter sucesso.
+D) p1 é excluído do cluster e substituído por outro Pod; apenas a condição de prontidão é alterada, sem reinício do container.
+E) p1 deixa de atender novas requisições pelo Service, sem reinício por essa falha; o kubelet encerra e reinicia o container de p1.

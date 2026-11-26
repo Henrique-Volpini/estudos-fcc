@@ -1,0 +1,39 @@
+ID: BAN-DS-16-0002
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Reconstruir a condição implícita retomada por otherwise e distinguir seu sentido contextual de relações concessiva, causal, temporal e final.
+
+RESOLUÇÃO
+A segunda frase recomenda a inscrição para receber notificações automáticas por email. A terceira retoma essa ação com “Otherwise” e informa o que será necessário se a recomendação não for seguida: voltar à página para verificar mudanças. Portanto, a relação equivale a “se os leitores não se inscreverem”. As demais formulações mudam o vínculo para concessão, causa, tempo ou finalidade. Não é preciso saber como um serviço de notificações funciona: a recomendação e sua alternativa estão expressas no texto.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. “Mesmo que” produziria uma concessão: a visita continuaria necessária apesar da inscrição. No texto, “Otherwise” apresenta a situação alternativa à inscrição recomendada, não uma necessidade que persiste apesar dela.
+B) Não atende. “Porque já” tornaria a inscrição realizada a causa da necessidade de voltar à página. O texto vincula essa necessidade à hipótese de não realizar a inscrição, além de não afirmar que todos os leitores já se inscreveram.
+C) Não atende. “Assim que” estabeleceria uma sequência temporal em que a inscrição desencadearia o retorno à página. O vínculo expresso por “Otherwise” é condicional e retoma a possibilidade de não seguir a recomendação.
+D) Atende. A recomendação anterior é inscrever-se para receber atualizações automáticas. “Otherwise” introduz a consequência de não fazer isso: será necessário revisitar a página para procurar mudanças. A paráfrase condicional negativa preserva a relação entre as frases.
+E) Não atende. “Para que” apresentaria a inscrição como finalidade da visita à página. A terceira frase informa que a visita serve para verificar mudanças quando não há inscrição para as notificações, sem atribuir a ela a finalidade de realizar a inscrição.
+
+FONTES TÉCNICAS CONSULTADAS
+- Texto técnico autoral — aviso sobre atualizações de serviço. Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/questao.txt; texto integral, especialmente a relação entre a segunda e a terceira frases. Autoria: /root/elaborador_16, 26/11/2026. Nota criada para avaliar leitura; não documenta o funcionamento de um serviço real.
+- Otherwise — Cambridge Dictionary, Cambridge University Press & Assessment. https://dictionary.cambridge.org/dictionary/english/otherwise. Verbete otherwise, acepção de ligação condicional após recomendação; seção American Dictionary, acepção if not; or else. Conteúdo da fonte primária consultado pelo resultado indexado do domínio oficial em 26/11/2026; abertura direta retornou HTTP 403. Sustenta o sentido condicional negativo no contexto e a distinção das demais relações propostas.
+- Arquivo-base do conteúdo programático do projeto. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; linha 211, bloco INGLÊS TÉCNICO.; delimita a competência de leitura em contexto técnico. Consultado em 26/11/2026.
+- FCC — TRT da 7ª Região, Analista Judiciário — Tecnologia da Informação, 2009, acervo Qconcursos. https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16. Itens do acervo Q128171 e Q128172; comandos e cinco alternativas lidos na página, respectivamente linhas 395–426 e 445–476 da extração da navegação. Numeração original do caderno e paginação não obtidas. Consulta em 26/11/2026.
+- Nota local de referência FCC — Inglês em TI. Backend/Agents/conteudo/referencias-fcc/ingles-trt7-2009-referencia.txt; metadados da prova TRT7/2009 e limites de identificação dos itens Q128171–Q128175. Consultada em 26/11/2026.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 7ª Região; Analista Judiciário — Tecnologia da Informação; 2009.
+- Caderno, questão e página: Não obtido no acervo consultado; Q128171 e Q128172 — identificadores do acervo; números originais não obtidos; Não obtida; consulta em página HTML, sem paginação do caderno.
+- Origem verificável: Acervo secundário Qconcursos: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16
+- Característica observada: Comandos em português pedem o significado contextual de uma palavra ou expressão do texto inglês, com cinco formulações de sentido concorrentes.
+- Aplicação nesta questão autoral: Um conectivo do texto autoral é interpretado com referência à recomendação anterior; as cinco opções em português preservam o mesmo conteúdo lexical e alteram a relação entre as frases.
+- Limites da referência: Origem secundária Qconcursos, sem certificação de integridade oficial. Caderno, numeração original e página não foram obtidos. Foram lidos os comandos e as alternativas dos cinco itens; a imagem com o texto associado não foi recuperada pela ferramenta de navegação. A referência sustenta esses traços editoriais, sem demonstrar frequência atual ou equivalência ao Banestes.
+
+VERIFICAÇÕES REALIZADAS
+- Documental linguística: conferida em fonte primária Cambridge a acepção condicional de otherwise após recomendação. A consulta utilizou o conteúdo indexado do domínio oficial; a tentativa de abertura direta retornou HTTP 403.
+- Analítica: identificado o antecedente subscribe to email notifications e explicitada sua negação como condição da terceira frase. Concessão, causa, sequência temporal e finalidade foram confrontadas com o texto nas alternativas individuais.
+- Editorial: abertos e lidos os comandos e as alternativas dos itens Q128171–Q128175 no Qconcursos. Os exemplos selecionados de significado contextual são Q128171 e Q128172; não se reproduziram seus textos ou alternativas.
+- Autoria e suficiência: texto e alternativas inteiramente autorais; a questão avalia a articulação entre frases e não depende de conhecimento de infraestrutura ou de funcionamento real de notificações. Não houve execução técnica.
+
+PENDÊNCIAS
+Auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade. Nenhuma pendência de elaboração. A ausência de numeração original e paginação da referência histórica está declarada e não foi preenchida por suposição.
+

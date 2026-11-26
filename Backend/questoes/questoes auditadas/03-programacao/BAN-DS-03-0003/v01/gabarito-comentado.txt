@@ -1,0 +1,31 @@
+ID: BAN-DS-03-0003
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+Where define uma sequência com execução adiada sobre a lista. O elemento 8 é incluído antes de Count enumerar essa sequência. Nesse momento, 4, 6 e 8 satisfazem n > 3; a contagem, portanto, é 3.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: Count efetivamente avalia a sequência; execução adiada não significa que o resultado permanecerá vazio.
+B) Não atende: 8 não é o único valor que satisfaz o predicado; 4 e 6 já estavam na lista.
+C) Não atende: considera apenas os valores existentes ao declarar consulta. Where não materializa uma cópia dos resultados nesse ponto.
+D) Atende: os três valores 4, 6 e 8 atendem ao predicado quando a sequência é enumerada.
+E) Não atende: conta todos os elementos da lista e desconsidera que o valor 2 é excluído por Where.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — Introduction to LINQ Queries in C# | https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/introduction-to-linq-queries | Query execution: Deferred Execution; o resultado depende do conteúdo da fonte quando a sequência é enumerada.
+- Microsoft Learn — Enumerable.Count, .NET 8 | https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.count?view=net-8.0 | Count<TSource>(IEnumerable<TSource>): quantidade de elementos da sequência.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 43; página PDF 10.
+- Origem verificável: Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação: Fragmento técnico completo seguido de comando objetivo e cinco alternativas comparáveis. O exemplo consultado confronta representações de dados; esta questão usa cenário e código autorais para avaliar outro conceito.
+- Limites: Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes.
+
+VERIFICAÇÕES REALIZADAS
+Verificação documental da execução adiada de Where e do contrato de Count; rastreamento analítico dos elementos da lista. Não houve execução de compilador C#.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

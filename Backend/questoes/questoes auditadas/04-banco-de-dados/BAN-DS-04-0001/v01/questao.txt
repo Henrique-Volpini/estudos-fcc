@@ -1,0 +1,35 @@
+ID: BAN-DS-04-0001
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Comandos SQL: LEFT JOIN e funções de contagem
+
+ENUNCIADO
+Em um banco PostgreSQL 15, a tabela agencia possui a coluna id como chave primária, e a tabela conta possui as colunas id, chave primária, e agencia_id. Considere somente os seguintes registros:
+
+agencia
+id
+10
+20
+30
+
+conta
+id | agencia_id
+1  | 10
+2  | 10
+3  | 20
+
+Um analista executou:
+
+SELECT a.id, COUNT(*) AS linhas, COUNT(c.id) AS contas
+FROM agencia AS a
+LEFT JOIN conta AS c ON c.agencia_id = a.id
+GROUP BY a.id
+ORDER BY a.id;
+
+Na linha em que a.id é igual a 30, os valores das colunas linhas e contas são, respectivamente,
+
+A) 0 e 0.
+B) 0 e 1.
+C) 1 e 0.
+D) 1 e 1.
+E) 3 e 0.

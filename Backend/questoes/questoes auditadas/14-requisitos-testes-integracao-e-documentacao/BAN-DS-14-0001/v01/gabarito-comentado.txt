@@ -1,0 +1,61 @@
+ID: BAN-DS-14-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a combinação que contém apenas as proposições corretas sobre os vínculos apresentados.
+
+RESOLUÇÃO
+I é falsa: rastreabilidade admite que um caso de teste se relacione com vários requisitos, como no teste de interação CT03.
+
+II é verdadeira: os vínculos diretos de R02 apontam CT02, CT03, D01 e D02 para a análise de impacto. Ser candidato à revisão não significa que o conteúdo de cada artefato deva necessariamente mudar.
+
+III é falsa: relacionar casos de teste a um requisito permite avaliar sua cobertura pelos casos cadastrados; não comprova que a implementação o atende. É preciso examinar evidências de verificação pertinentes à alteração.
+
+IV é verdadeira: o percurso CT03 → R01/R02 identifica os requisitos; a partir deles, alcançam-se D01 e D02. Esse uso das relações nos dois sentidos permite navegar entre testes, requisitos e documentação.
+
+Portanto, apenas II e IV atendem ao comando.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando. II identifica corretamente os artefatos candidatos à revisão, mas I impõe uma relação de um para um que a rastreabilidade não exige. CT03 pode verificar a interação entre funcionalidades de R01 e R02.
+B) Não atende ao comando. I proíbe indevidamente que um teste se relacione com mais de um requisito. III confunde a existência de vínculos com evidência de atendimento: o cadastro das relações não comprova o comportamento da implementação.
+C) Atende ao comando. II usa os vínculos de R02 para selecionar CT02, CT03, D01 e D02 para análise de impacto. IV percorre as relações no sentido inverso, de CT03 aos requisitos, e depois alcança a documentação associada. I e III são falsas.
+D) Não atende ao comando. IV descreve corretamente o percurso de CT03 aos requisitos e à documentação, mas I invalida indevidamente o teste compartilhado. Relações entre requisitos e testes podem ser de muitos para muitos.
+E) Não atende ao comando. IV identifica corretamente os requisitos e as seções alcançáveis a partir de CT03. III, porém, atribui aos vínculos uma comprovação de atendimento que eles, isoladamente, não fornecem.
+
+FONTES TÉCNICAS CONSULTADAS
+- Conhecimentos específicos – Desenvolvimento de Sistemas, arquivo-base do edital. Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Bloco LEVANTAMENTO DE REQUISITOS, TESTES, INTEGRAÇÃO E DOCUMENTAÇÃO TÉCNICA; observação final sobre legislação. Sustenta: Delimitação do programa. O cenário não impõe norma, método ou versão não especificados nesse bloco.
+- NASA Software Engineering Handbook Ver B – SWE-072: Bidirectional Traceability Between Software Test Procedures and Software Requirements. URL: https://swehb.nasa.gov/spaces/SWEHBVB/pages/32604549/SWE-072%2B-%2BBidirectional%2BTraceability%2BBetween%2BSoftware%2BTest%2BProcedures%2Band%2BSoftware%2BRequirements. Localizador: Seção 3, Guidance: definição de rastreabilidade bidirecional; impacto em documentação e testes; parágrafo sobre relações não necessariamente de um para um. Página atualizada em 09/08/2021, consultada em 26/11/2026. Sustenta: Proposições I, II e IV; vínculos muitos para muitos e navegação entre artefatos. Referência conceitual, sem exigir a adoção das regras da NASA pelo sistema do cenário.
+- NASA Software Engineering Handbook Ver B – SWE-071: Update Test Plans and Procedures. URL: https://swehb.nasa.gov/spaces/SWEHBVB/pages/32604547/SWE-071%2B-%2BUpdate%2BTest%2BPlans%2Band%2BProcedures. Localizador: Seção 3, Guidance: relação entre mudanças de requisitos, atualização da documentação de testes e matriz de rastreabilidade. Página atualizada em 09/08/2021, consultada em 26/11/2026. Sustenta: Proposição II: uso dos vínculos para identificar documentação de testes potencialmente afetada por uma alteração.
+- ISTQB Certified Tester Foundation Level Syllabus v4.0.1, 15/09/2024. URL: https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf. Localizador: Seção 1.4.4, pp. 20–21 (rastreabilidade, cobertura e análise de impacto); seção 1.3, p. 17 (limites da comprovação de correção por testes); seção 5.4, p. 56 (identificação, versões e relações dos artefatos). Consultado em 26/11/2026. Sustenta: Distinção entre cobertura por vínculos e evidência de atendimento; rastreabilidade mantida ao longo do processo. A edição é fonte de consulta, não exigência acrescentada ao edital.
+- FCC – TRT da 4ª Região – Analista Judiciário, Área Apoio Especializado, Especialidade Tecnologia da Informação – Julho/2022. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Caderno A14, Tipo 001, questão 38, p. 9; questão 48, p. 11. Capa, p. 1. Sustenta: Referência de formato: itens numerados com alternativas por combinação e situação profissional de testes. Extração local de cópia secundária hospedada pelo Qconcursos, conforme fontes.json.
+- FCC – TRF da 4ª Região – Analista Judiciário, Área Apoio Especializado, Especialidade Informática – Março/2007. URL: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf. Arquivo: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt. Localizador: Cargo I, Tipo 001, questões 67 e 68, p. 10; capa, p. 1. Sustenta: Referência histórica de formato: relação entre requisitos e testes na questão 67 e avaliação de proposições por combinações na questão 68. Documento obtido no portal do órgão, conforme fontes.json.
+- Metadados das referências FCC consultadas. Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json. Localizador: Registros trt4-2022-ti-a14-001 e trf4-2007-informatica-i001, consultados em 26/11/2026. Sustenta: Identificação da origem e dos limites dos dois cadernos usados como referência editorial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário – Área Apoio Especializado – Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 38; página 9.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt de cópia secundária hospedada no Qconcursos; URL e origem registradas em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Quatro itens em algarismos romanos e alternativas compostas de combinações. Aplicado à avaliação das quatro afirmações sobre o mesmo conjunto de vínculos, preservando conteúdo autoral.
+- Limites da referência: Referência editorial, sem reaproveitamento da matéria normativa da questão original. A cópia não é apresentada como download da FCC nem como portadora de assinatura de integridade oficial.
+
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário – Área Apoio Especializado – Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 48; página 11.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt de cópia secundária hospedada no Qconcursos; URL e origem registradas em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Situação de uma profissional de TI seguida de características técnicas e comando objetivo. Aplicado a um cenário de equipe analisando alteração de requisito e caso de teste de interação.
+- Limites da referência: O exemplo não sustenta afirmação sobre frequência de formatos na FCC nem fornece a solução técnica da questão autoral. Origem secundária declarada.
+
+- Órgão, cargo e ano: TRF da 4ª Região; Analista Judiciário – Área Apoio Especializado – Especialidade Informática; 2007.
+- Caderno, questão e página: Cargo I, Tipo 001; questão 68; página 10.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt de PDF obtido no portal oficial do TRF4; URL registrada em fontes.json.
+- Característica observada e aplicação nesta questão autoral: Proposições numeradas submetidas a julgamento e escolha da combinação correta. Aplicado ao comando de seleção exclusiva das afirmações válidas.
+- Limites da referência: Referência histórica de construção editorial. A solução não usa o conteúdo técnico antigo sobre CMM/CMMI. A questão 67 da mesma página também foi lida como exemplo de enunciado ligando requisitos e testes, sem copiar sua redação.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: lidos perfil 14, regras gerais dos elaboradores, modelo de entrega, formato do simulado, orientações do SIM-001, plano.json e trecho pertinente do arquivo-base.
+- Documental: consultadas via navegação as fontes primárias NASA SWE-071/SWE-072 e ISTQB CTFL v4.0.1 nos localizadores registrados; nenhuma norma adicional foi apresentada como obrigação do edital.
+- Documental de estilo: lidas as questões FCC TRT4/2022 38 e 48 e TRF4/2007 67 e 68 nas extrações locais, com páginas e origens conferidas em fontes.json.
+- Analítica: percorridas as relações R02 → CT02/CT03/D01/D02 e CT03 → R01/R02 → D01/D02; avaliadas as quatro proposições e as cinco combinações, com uma única combinação defensável.
+- Estrutural: conferidos identificação, número global 47, versão v01, cinco alternativas e cinco justificativas, além da correspondência literal entre a entrega JSON e os TXT.
+- Não houve execução de software sob teste: a questão é conceitual e a solução foi conferida por documentação e análise.
+
+PENDÊNCIAS
+Nenhuma de elaboração. A questão aguarda auditoria independente; este registro não constitui parecer ou aprovação.

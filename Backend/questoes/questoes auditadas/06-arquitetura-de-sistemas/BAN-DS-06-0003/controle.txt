@@ -1,0 +1,27 @@
+ID: BAN-DS-06-0003
+Matéria: 06 - Arquitetura de sistemas
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/06-arquitetura-de-sistemas.txt
+Tópico do conteúdo: padrões de resiliência: API Gateway, Service Discovery, circuit breaker, retries e timeouts;
+Objetivo da questão: Distinguir o limite de espera, a repetição controlada de falhas transitórias e a interrupção temporária de chamadas a uma dependência com falhas persistentes.
+Tarefa de origem: SIM-001, questão 28 do plano, elaboração autoral do recorte atribuído.
+Responsável pela elaboração: /root/elaborador_06
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, primeira versão completa por /root/elaborador_06; fontes técnicas e referências FCC consultadas; encaminhada como PENDENTE_AUDITORIA, sem aprovação de auditor.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0003 -> Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003
+ESTILO_FCC: Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-redacao-e-conformidade.txt

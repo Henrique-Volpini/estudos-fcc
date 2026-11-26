@@ -1,0 +1,42 @@
+ID: BAN-DS-02-0002
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar a solução de menor TCO nos três anos e a diferença absoluta entre os custos totais.
+Responsável pela elaboração: /root/elaborador_02
+Dificuldade estimada: média
+
+RESOLUÇÃO
+No horizonte declarado, somam-se o desembolso inicial e os três anos de custos recorrentes. X: 140.000 + 3 × (30.000 + 20.000) = R$ 290.000,00. Y: 200.000 + 3 × (16.000 + 8.000) = R$ 272.000,00. A diferença é 290.000 − 272.000 = R$ 18.000,00, favorável a Y. O maior custo inicial de Y é compensado pela redução acumulada de operação, manutenção e suporte.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: R$ 60.000,00 é a vantagem inicial de X, obtida por 200.000 − 140.000; exclui os custos dos três anos.
+
+B) Não atende: Y tem o menor TCO, mas R$ 26.000,00 é apenas a diferença anual recorrente, 50.000 − 24.000.
+
+C) Não atende: a diferença total é R$ 18.000,00, porém X custa R$ 290.000,00 e Y custa R$ 272.000,00; a vantagem pertence a Y.
+
+D) Não atende: R$ 78.000,00 é a economia recorrente de Y nos três anos, 3 × 26.000, antes de compensar os R$ 60.000,00 adicionais de aquisição e instalação.
+
+E) Atende: Y totaliza R$ 272.000,00, contra R$ 290.000,00 de X, economizando R$ 18.000,00 no período.
+
+FONTES TÉCNICAS CONSULTADAS
+- AWS security service evaluation — AWS Prescriptive Guidance
+  URL: https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-evaluating-security-service/service-evaluation.html
+  Localizador: Seção 2.4, «Is the TCO lower than the current control or solution?», primeiro parágrafo; seção 2.5, «Trade-off decision». Trechos efetivamente abertos e lidos em 26/11/2026.
+  Fundamentação: Comparação de TCO considera aquisição e implementação, operação, manutenção e suporte, entre outras categorias pertinentes ao caso. A restrição a soluções equivalentes e a custos explicitamente dados permite isolar a comparação de custos deste enunciado.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+- Caderno, questão e página: Cargo I, Tipo 001; questão 20; página 5.
+- Origem verificável: Extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, marcador PAGINA 5, questão 20; identificação do cargo e data na página 1. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf. URL de origem: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+- Característica observada e aplicação autoral: O exemplo usa uma situação financeira envolvendo microcomputadores, dados suficientes no enunciado, cálculo sobre custos e cinco resultados numéricos. A questão autoral apresenta alternativas de infraestrutura e exige totalizar custos em um horizonte declarado, com respostas numéricas paralelas.
+- Limites da referência: Referência histórica de prova obtida no próprio órgão; a questão de referência é de raciocínio matemático e não fundamenta o conceito de TCO. Não se infere frequência editorial atual. Cenário, valores, cálculo e alternativas desta questão são autorais.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: leitura por navegação da documentação primária AWS, seção 2.4, para conferir a inclusão de aquisição, operação, manutenção e suporte na comparação de TCO.
+- Analítica: separação entre desembolso único e três incidências anuais; conferência das contas 290.000, 272.000 e diferença de 18.000; mapeamento de cada distrator a um erro identificável.
+- Cálculo executado em memória JavaScript: 140000 + 3*(30000+20000) = 290000; 200000 + 3*(16000+8000) = 272000; diferença = 18000. Não se executou ferramenta financeira externa.
+- Editorial: leitura da questão 20, página 5, do TRF4/2007, e identificação de cargo e data na página 1 da extração local. O exemplo serve à forma de apresentar dados e alternativas numéricas.
+
+PENDÊNCIAS
+Auditorias de estilo FCC, pistas de resposta e redação/conformidade ainda não realizadas. Nenhuma pendência de elaboração identificada; a conclusão do elaborador não equivale a aprovação.

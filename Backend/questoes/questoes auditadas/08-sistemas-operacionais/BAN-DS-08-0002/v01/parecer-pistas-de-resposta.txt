@@ -1,0 +1,51 @@
+Simulado: SIM-001
+Questão: BAN-DS-08-0002
+Versão examinada: v01
+Responsável: /root/auditor_pistas
+Perfil: PISTAS_DE_RESPOSTA
+Data: 2026-11-26
+Resultado: APROVADA
+Parecer anterior substituído: nenhum
+Escopo: avaliação de conformidade no perfil indicado; sem certificação técnica do gabarito.
+
+ARQUIVOS CONSULTADOS
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/publico-31-40.json — texto público v01, registro BAN-DS-08-0002.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/manifesto.json — identificação, versão e hash dos textos examinados.
+- Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/auditoria/v01/primeiras-observacoes-pistas.json — observação individual registrada antes da consulta aos gabaritos.
+- Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0002/controle.txt — identificação da questão.
+- Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0002/v01/gabarito-comentado.txt — cabeçalho de identificação e letra proposta, consultados após a primeira leitura registrada.
+- Backend/Agents/codex/agents/regras gerais/auditores.txt — regras de auditoria.
+- Backend/Agents/codex/agents/regras gerais/modelo-de-parecer.txt — modelo de parecer.
+- Backend/Agents/codex/agents/auditores/02-pistas-de-resposta.txt — critérios do perfil.
+
+PRIMEIRA LEITURA SEM GABARITO
+As alternativas apresentam combinações de afirmações numeradas. A qualificação por si só na afirmação III faz parte da proposição a avaliar, não basta para identificá-la como falsa apenas pela linguagem. Nenhuma pista formal isolando combinação.
+Alternativa favorecida pela forma: nenhuma identificada.
+
+CRITÉRIOS EXAMINADOS
+- Explicação, comentário, exemplo resolvido ou expressão reveladora no texto público: atendido. Enunciado e alternativas foram examinados; não contêm solução antecipada ou comentário de correção. Dados, definições e condições necessários ao problema foram distinguidos de explicação involuntária.
+- Correspondência exclusiva de palavras, siglas ou construções: atendido. A relação entre vocabulário do caso e das opções foi examinada na observação individual acima; não se identificou correspondência acidental que apontasse uma opção sem o juízo pedido.
+- Concordância gramatical ou diferença de forma reveladora: atendido. As cinco opções são combinações de itens numerados e têm encaixe uniforme no comando; nenhuma recebe vantagem por concordância.
+- Tratamento editorial singular, precisão ou detalhamento revelador: atendido. Foram comparadas as alternativas A a E; diferenças de extensão ou conteúdo foram consideradas em sua função no item, sem vantagem concreta de identificação pela apresentação.
+- Distratores descartáveis apenas por defeito de linguagem, falta de relação com o comando ou dependência reveladora de outra alternativa: atendido. A a E apresentam candidatas relacionadas ao objeto do comando. Não foram identificadas opções a eliminar por frase malformada, referência circular ou alternativa que anuncie a correção de outra. A validade técnica das propostas não foi certificada.
+- Marcas de correção, rótulos, comentários, formatação, nomes de variáveis ou metadados reveladores: atendido. Nenhum desses sinais foi encontrado no enunciado e nas opções. Identificadores e campos do manifesto foram utilizados apenas para rastrear a versão, sem tratá-los como conteúdo da interface.
+- Comando negativo com destaque, concordância ou composição reveladora: não aplicável. O comando solicita a resposta ou combinação correta; não há pedido de exceção/incorreção. Eventuais expressões negativas nas premissas ou assertivas não são comandos negativos.
+
+CONFRONTO COM O GABARITO PROPOSTO
+A letra proposta foi lida somente após o registro da observação cega desta questão. A comparação com as cinco opções não associou a resposta proposta a vantagem textual previamente identificada. Não houve resolução do item nem certificação técnica da resposta.
+
+ACHADOS
+Nenhum achado impeditivo no escopo avaliado.
+
+REFERÊNCIAS DE ESTILO
+Não aplicável ao perfil PISTAS_DE_RESPOSTA; não foi realizada comparação editorial com prova FCC.
+
+PENDÊNCIAS E ESCLARECIMENTOS
+Nenhuma.
+
+JUSTIFICATIVA DA DECISÃO
+APROVADA exclusivamente no perfil PISTAS_DE_RESPOSTA: os sete critérios foram examinados sobre o texto público v01, com observação individual anterior à consulta da letra e comparação posterior concluída. A leitura não identificou mecanismo textual involuntário que favoreça uma opção. A decisão não aprova os demais perfis nem atesta a correção técnica do gabarito.
+
+IDENTIFICAÇÃO DOS TEXTOS
+SHA256 informado no manifesto: 3af90d937ebee8fde23648828359cbd052b4cc3dd00bf78b8188abcff2c13ad4
+

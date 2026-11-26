@@ -1,0 +1,15 @@
+ID: BAN-DS-13-0001
+Versão: v01
+Matéria: Git, Kubernetes, Rancher, deploy e CI/CD
+Tópico: Git: integração de alterações e conflitos
+
+ENUNCIADO
+Em um repositório com Git 2.43.0, a branch atual é main. Os commits de ponta M, de main, e F, de feature, têm ancestral comum, mas nenhum é ancestral do outro. Com o índice e a árvore de trabalho sem alterações locais, um Analista executa git merge feature. A operação é interrompida por conflito apenas em config.yml. O Analista edita e salva esse arquivo com a resolução desejada e remove os marcadores de conflito, sem executar outros comandos. Considere o comportamento padrão dos comandos, sem aliases ou hooks.
+
+Para concluir essa integração preservando os commits existentes e criando um commit de merge com pais M e F, o Analista deve executar, na sequência indicada,
+
+A) git commit -m "Integra feature", pois a edição e o salvamento do arquivo já registram a resolução no índice.
+B) git add config.yml e git commit --amend --no-edit, pois a resolução deve substituir o conteúdo do commit M.
+C) git add config.yml e git merge --abort, pois o encerramento com --abort grava a resolução em um novo commit.
+D) git add config.yml e git commit -m "Integra feature", pois a resolução deve ser registrada no índice antes do commit.
+E) git add config.yml e git merge --quit, pois --quit preserva os arquivos e cria o commit de integração.

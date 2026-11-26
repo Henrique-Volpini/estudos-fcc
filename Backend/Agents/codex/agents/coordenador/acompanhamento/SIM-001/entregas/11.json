@@ -1,0 +1,279 @@
+{
+  "elaborador": "11",
+  "responsavel": "/root/elaborador_11",
+  "questoes": [
+    {
+      "id": "BAN-DS-11-0001",
+      "numero": 40,
+      "materia": "Segurança da Informação",
+      "topico": "OAuth 2.0 e OpenID Connect",
+      "versao": "v01",
+      "enunciado": "Uma aplicação web integra um provedor compatível com OAuth 2.0 e OpenID Connect 1.0. Ela precisa reconhecer o usuário autenticado pelo provedor e consultar uma API de saldos conforme as permissões concedidas. No fluxo adotado, a aplicação recebe um ID Token e um Access Token, este destinado à API. Para atender às duas finalidades, a equipe deve",
+      "alternativas": {
+        "A": "validar o Access Token como comprovante padronizado do login do usuário e apresentar o ID Token à API para autorizar a consulta.",
+        "B": "verificar apenas a assinatura do ID Token, dispensando as verificações de emissor, audiência e expiração, e apresentar o Access Token à API.",
+        "C": "validar o ID Token para reconhecer a autenticação do usuário e apresentar o Access Token à API, que deve validar o acesso e as permissões aplicáveis.",
+        "D": "tratar o ID Token e o Access Token como intercambiáveis, pois a emissão para o mesmo usuário faz com que ambos expressem as mesmas permissões.",
+        "E": "exigir que o Access Token seja um JWT e o ID Token seja opaco, pois esses formatos são obrigatoriamente definidos pelo OAuth 2.0."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende: inverte as funções. O ID Token informa a autenticação ao cliente; o Access Token é a credencial para os recursos protegidos.",
+        "B": "Não atende: assinatura válida não substitui as verificações de emissor, audiência e expiração exigidas pelo OIDC Core, seção 3.1.3.7.",
+        "C": "Atende: associa o ID Token à autenticação e o Access Token ao acesso autorizado à API, preservando as validações de cada contexto.",
+        "D": "Não atende: tokens emitidos para o mesmo usuário podem ter destinatários e finalidades diferentes; a coincidência do usuário não iguala suas permissões.",
+        "E": "Não atende: o ID Token é representado como JWT pelo OIDC. A RFC 6749 admite formatos diversos de Access Token, sem impor JWT."
+      },
+      "resolucao": "OIDC acrescenta informações padronizadas sobre autenticação por meio do ID Token. O cliente deve validá-lo, incluindo emissor, audiência e expiração, conforme o fluxo. O Access Token representa autorização para acessar recursos protegidos e deve ser apresentado à API, que verifica o acesso permitido. As duas finalidades não tornam os tokens intercambiáveis.",
+      "fontes": [
+        {
+          "titulo": "IETF — RFC 6749: The OAuth 2.0 Authorization Framework, outubro de 2012",
+          "url": "https://www.rfc-editor.org/rfc/rfc6749",
+          "localizador": "Seções 1, 1.4 e 7: autorização, formatos de Access Token e uso no servidor de recursos. A página registra atualizações posteriores; não se cobra fluxo desaconselhado."
+        },
+        {
+          "titulo": "OpenID Foundation — OpenID Connect Core 1.0 incorporating errata set 2, 15/12/2023",
+          "url": "https://openid.net/specs/openid-connect-core-1_0.html",
+          "localizador": "Seções 1, 1.3 e 2: identidade e ID Token em JWT; seção 3.1.3.7, itens 2, 3 e 9: emissor, audiência e expiração."
+        },
+        {
+          "titulo": "Programa-base do projeto — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "- IAM, SSO, OAuth 2.0 e OpenID Connect (OIDC)."
+        },
+        {
+          "titulo": "FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão(ões) 37, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo."
+        }
+      ],
+      "autor": "/root/elaborador_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: navegação nas páginas oficiais RFC Editor e OpenID Foundation em 26/11/2026. Analítica: separação entre autenticação e autorização e confronto das cinco alternativas. Não houve execução de protocolo ou de software de autenticação.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "37",
+          "pagina": 9,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Situação de implantação apresentada por um profissional de TI, seguida de comando objetivo e cinco alternativas técnicas.",
+          "caracteristicaAplicada": "Cenário autoral de integração de aplicação, seguido de uma decisão técnica entre cinco condutas comparáveis; o objeto cobrado é a finalidade dos tokens, sem reproduzir o enunciado antigo.",
+          "limites": "Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-11-0002",
+      "numero": 41,
+      "materia": "Segurança da Informação",
+      "topico": "Hashes, confidencialidade e assinaturas",
+      "versao": "v01",
+      "enunciado": "Uma equipe avalia mecanismos para proteger documentos eletrônicos. Considere implementações criptográficas adequadas, a preservação do segredo das chaves privadas e secretas e a obtenção autenticada da chave pública do signatário. Foram apresentadas as seguintes afirmações:\n\nI. Enviar o documento e seu hash SHA-256 pelo mesmo canal, no qual um atacante pode substituir ambos, basta para autenticar a origem do documento.\nII. Uma assinatura digital gerada com a chave privada do signatário e verificada com a chave pública correspondente permite verificar a origem e a integridade do documento.\nIII. Acrescentar uma assinatura digital a um documento enviado em texto claro basta para impedir que terceiros leiam seu conteúdo.\nIV. A cifragem simétrica adequada, com chave secreta disponível somente às partes autorizadas, é um mecanismo aplicável à confidencialidade do documento.\n\nEstá correto o que se afirma APENAS em",
+      "alternativas": {
+        "A": "I e II.",
+        "B": "I e III.",
+        "C": "I e IV.",
+        "D": "II, III e IV.",
+        "E": "II e IV."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende: inclui I, que atribui autenticidade de origem a um hash que também pode ser substituído, e omite IV, que descreve a finalidade de confidencialidade da cifragem.",
+        "B": "Não atende: I não autentica a origem nas condições descritas; III confunde a assinatura com a ocultação do conteúdo. II e IV são as afirmações corretas.",
+        "C": "Não atende: IV é verdadeira, mas I é falsa. O hash recalculável pelo atacante não substitui a assinatura digital descrita em II.",
+        "D": "Não atende: II e IV são verdadeiras, mas III é falsa. Acrescentar uma assinatura não retira a legibilidade do documento enviado em texto claro.",
+        "E": "Atende: reúne II e IV, correspondentes à verificação de origem e integridade pela assinatura e à confidencialidade por cifragem; exclui I e III."
+      },
+      "resolucao": "I é falsa: o atacante pode trocar o documento e recalcular seu hash, sem comprovar a origem. II é verdadeira: a assinatura vincula a verificação ao par de chaves do signatário e permite detectar alterações. III é falsa: o documento continua legível em texto claro. IV é verdadeira: a cifragem com chave secreta adequadamente protegida atende à finalidade de confidencialidade. Portanto, somente II e IV são corretas.",
+      "fontes": [
+        {
+          "titulo": "NIST — FIPS 180-4: Secure Hash Standard, agosto de 2015",
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
+          "localizador": "Seção 1, página impressa 3 (8ª página do PDF): resumo de mensagem e detecção probabilística de alteração. A possibilidade de substituir documento e hash foi analisada nas condições de I."
+        },
+        {
+          "titulo": "NIST — FIPS 186-5: Digital Signature Standard, fevereiro de 2023",
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf",
+          "localizador": "Anúncio, item 3, página impressa i (4ª página do PDF): integridade, identidade, geração com chave privada e verificação com chave pública."
+        },
+        {
+          "titulo": "NIST — FIPS 186-5: página oficial da publicação e resumo",
+          "url": "https://csrc.nist.gov/pubs/fips/186-5/final",
+          "localizador": "Abstract: detecção de modificações não autorizadas e autenticação do signatário. A página informa nota de possíveis correções; o item cobra apenas as finalidades conceituais documentadas."
+        },
+        {
+          "titulo": "NIST — FIPS 197: Advanced Encryption Standard, atualização de 09/05/2023",
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf",
+          "localizador": "Abstract, página impressa ii (3ª página do PDF), e anúncio, item 3, página impressa iii (4ª página do PDF): confidencialidade e cifragem simétrica. Não se exige algoritmo ou modo específico na questão."
+        },
+        {
+          "titulo": "Programa-base do projeto — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "- criptografia simétrica e assimétrica;\n- certificados e assinaturas digitais;\n- hashes criptográficos."
+        },
+        {
+          "titulo": "FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão(ões) 38, 36, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo."
+        }
+      ],
+      "autor": "/root/elaborador_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: navegação nos documentos oficiais NIST FIPS 180-4, 186-5 e 197 atualizado em 2023, em 26/11/2026. Analítica: avaliação individual de I–IV antes das combinações A–E, incluindo a substituição conjunta do documento e hash e a leitura do texto claro. Não houve execução criptográfica.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "38",
+          "pagina": 9,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Afirmações numeradas sobre proteção de transações, seguidas de alternativas que combinam os itens e do qualificador apenas.",
+          "caracteristicaAplicada": "Apresentação de quatro afirmações autorais e seleção da combinação correta; as premissas criptográficas são explicitadas. A norma citada na prova antiga não foi transportada para o conteúdo atual.",
+          "limites": "Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual."
+        },
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "36",
+          "pagina": 9,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Confronto de afirmações técnicas sobre resumos e assinatura digital em alternativas A–E.",
+          "caracteristicaAplicada": "Uso de confusões conceituais concretas sobre hash, assinatura e finalidade de proteção como base de distratores novos; os conceitos foram verificados no NIST, sem usar o gabarito antigo como fundamento.",
+          "limites": "Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-11-0003",
+      "numero": 42,
+      "materia": "Segurança da Informação",
+      "topico": "LGPD: anonimização e pseudonimização",
+      "versao": "v01",
+      "enunciado": "Um órgão de pesquisa realiza um estudo em saúde pública. Na base de trabalho, nomes e CPFs foram substituídos por códigos aleatórios. A associação dos registros aos respectivos titulares somente é possível pelo uso de uma tabela adicional, mantida separadamente pelo controlador em ambiente controlado e seguro. A tabela permite ao controlador restabelecer essa associação com seus próprios meios. Considerando a Lei nº 13.709/2018, a conclusão correta é:",
+      "alternativas": {
+        "A": "Os dados foram anonimizados, pois a ausência de nome e CPF basta para afastar a possibilidade de identificar os titulares.",
+        "B": "Os dados foram pseudonimizados e continuam pessoais, pois o controlador pode associá-los aos titulares com a tabela separada.",
+        "C": "Os dados foram pseudonimizados e deixam de ser pessoais enquanto a tabela de correspondência não for utilizada.",
+        "D": "Os dados foram anonimizados e deixam de ser pessoais, pois a reversão por meios próprios do controlador não é considerada pela LGPD.",
+        "E": "Os dados não podem ser pseudonimizados nesse estudo, pois a LGPD exige anonimização integral em qualquer pesquisa em saúde pública."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende: a retirada de identificadores diretos não basta se a identificação continua possível com a tabela mantida pelo controlador.",
+        "B": "Atende: a tabela separada caracteriza a pseudonimização do art. 13, § 4º, e mantém possível identificar os titulares.",
+        "C": "Não atende: a identificabilidade não depende de a tabela ser efetivamente consultada; a possibilidade de associação já permanece.",
+        "D": "Não atende: o art. 12 considera expressamente a reversão por meios próprios, além da reversão com esforços razoáveis.",
+        "E": "Não atende: o art. 13 admite, sempre que possível, anonimização ou pseudonimização; não impõe exclusivamente anonimização integral."
+      },
+      "resolucao": "A associação depende de informação adicional mantida separadamente pelo controlador, situação de pseudonimização descrita no art. 13, § 4º. Os titulares permanecem identificáveis por meios próprios do controlador; retirar nome e CPF não torna esses registros anônimos. O art. 12 impede afastar a natureza pessoal com base em anonimização reversível pelos meios ali previstos.",
+      "fontes": [
+        {
+          "titulo": "Presidência da República — Lei nº 13.709, de 14 de agosto de 2018 (LGPD), texto oficial com alterações",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+          "localizador": "Art. 5º, I, III e XI; art. 12, caput e § 1º; art. 13, caput e § 4º. Dispositivos consultados em 26/11/2026: identificação, anonimização, reversibilidade e pseudonimização em estudos de saúde pública. Não se cobra base legal ou autorização de divulgação."
+        },
+        {
+          "titulo": "Programa-base do projeto — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "- Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº 13.709/2018): fundamentos, princípios, bases legais, tratamento pelo Poder Público, direitos dos titulares, agentes de tratamento e papel da ANPD;\n- anonimização e pseudonimização."
+        },
+        {
+          "titulo": "FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão(ões) 36, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo."
+        }
+      ],
+      "autor": "/root/elaborador_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: navegação no texto oficial da LGPD no Planalto em 26/11/2026, conferindo os arts. 5º, 12 e 13. Analítica: cenário delimitado ao estudo de saúde pública do art. 13 e associação possível somente pela tabela segregada; exame das cinco alternativas. Não houve processamento de dados pessoais reais.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "36",
+          "pagina": 9,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Comando de conclusão correta seguido de cinco afirmações técnicas comparáveis.",
+          "caracteristicaAplicada": "Cenário autoral seguido de conclusão correta, com alternativas que confrontam uma classificação e sua consequência; o conteúdo jurídico foi conferido diretamente na lei.",
+          "limites": "Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-11-0004",
+      "numero": 43,
+      "materia": "Segurança da Informação",
+      "topico": "OWASP Top 10:2021: prevenção de injeção",
+      "versao": "v01",
+      "enunciado": "Uma API de relatórios constrói uma consulta SQL concatenando duas entradas recebidas do cliente: um texto livre para filtrar o nome de um cliente e a escolha da coluna de ordenação. A funcionalidade admite ordenar somente pelas colunas nome ou saldo. Para corrigir essa construção conforme a prevenção de injeção da categoria A03 do OWASP Top 10:2021, a equipe deve",
+      "alternativas": {
+        "A": "usar parâmetros vinculados tanto para o texto de busca quanto para o nome da coluna de ordenação, preservando a escolha livre de identificadores pelo cliente.",
+        "B": "validar o formulário no navegador para rejeitar aspas nas duas entradas e manter a concatenação dessas entradas na consulta executada pelo servidor.",
+        "C": "transferir a concatenação das duas entradas para uma procedure no banco e considerar a chamada dessa procedure suficiente para impedir a injeção.",
+        "D": "vincular o texto de busca como valor de parâmetro e mapear a escolha de ordenação, no servidor, para os identificadores fixos nome ou saldo.",
+        "E": "migrar a consulta para a linguagem de um ORM, concatenando as duas entradas recebidas e confiando no framework para separar automaticamente dados e comandos."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende: marcadores de parâmetros representam valores, não nomes de colunas. A escolha de identificadores deve ser restringida aos previstos pela aplicação.",
+        "B": "Não atende: a validação no navegador pode ser contornada por requisições diretas; a concatenação no servidor permanece. Validação não substitui a separação de dados e comandos.",
+        "C": "Não atende: a procedure pode continuar vulnerável se concatenar entradas em SQL dinâmico; movê-las de camada não resolve essa construção.",
+        "D": "Atende: vincula o valor de busca e controla a parte estrutural por opções fixas permitidas no servidor, preservando a funcionalidade descrita.",
+        "E": "Não atende: linguagens de consulta de ORMs também admitem injeção quando entradas são concatenadas; o framework não torna essa construção automaticamente segura."
+      },
+      "resolucao": "O valor de busca deve ser vinculado como dado, sem alterar a estrutura SQL. A coluna de ordenação é um identificador: sua seleção deve ser controlada por um mapeamento no servidor entre as opções admitidas e os identificadores fixos. Essa combinação mantém os dados separados da consulta e restringe sua parte estrutural. Procedure ou ORM com concatenação continuam sujeitos à injeção.",
+      "fontes": [
+        {
+          "titulo": "OWASP — Top 10:2021, A03:2021 — Injection",
+          "url": "https://top10.owasp.org/2021/A03_2021-Injection/",
+          "localizador": "Description, How to Prevent e Example Attack Scenarios: separação entre dados e comandos, interfaces parametrizadas, validação no servidor e riscos de concatenação em procedures e ORMs. Acesso inicial por https://owasp.org/Top10/2021/A03_2021-Injection/, redirecionado para o endereço informado."
+        },
+        {
+          "titulo": "OWASP Cheat Sheet Series — SQL Injection Prevention Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+          "localizador": "Primary Defenses: Parameterized Queries e Allow-List Input Validation; exemplos de SQL Injection in ORM Query Languages e SQL Injection inside stored Procedures and Functions. Parâmetros vinculam valores; identificadores exigem escolhas fixas controladas. Consulta em 26/11/2026, como detalhamento técnico complementar à edição Top 10:2021."
+        },
+        {
+          "titulo": "Programa-base do projeto — Segurança da Informação",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "- segurança de APIs e aplicações web conforme OWASP Top 10:2021;"
+        },
+        {
+          "titulo": "FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "localizador": "Questão(ões) 37, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo."
+        }
+      ],
+      "autor": "/root/elaborador_11",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Documental: navegação na página oficial A03 da edição OWASP Top 10:2021 e na Cheat Sheet oficial em 26/11/2026. Analítica: diferenciação de valor e identificador e confronto das cinco propostas com o cenário. Não houve exploração de sistema ou execução de consulta.",
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, tipo 001",
+          "questao": "37",
+          "pagina": 9,
+          "origem": "Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.",
+          "caracteristicaObservada": "Cenário profissional de implantação seguido de uma decisão objetiva entre cinco alternativas técnicas.",
+          "caracteristicaAplicada": "Cenário autoral de correção de consulta em API e cinco intervenções comparáveis, com comando afirmativo e delimitação da funcionalidade; a referência antiga orienta somente a apresentação.",
+          "limites": "Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual."
+        }
+      ]
+    }
+  ]
+}

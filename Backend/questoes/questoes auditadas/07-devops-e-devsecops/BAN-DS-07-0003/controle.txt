@@ -1,0 +1,27 @@
+ID: BAN-DS-07-0003
+Matéria: 07 — DevOps e DevSecOps
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/07-devops-e-devsecops.txt
+Tópico do conteúdo: Kubernetes;
+Objetivo da questão: Distinguir o efeito de falha de readiness do efeito de falha de liveness, considerando limiares e política efetiva de reinício.
+Tarefa de origem: SIM-001 — três questões autorais do elaborador 07, números globais 30 a 32, conforme plano.json e orientacoes-aos-elaboradores.txt.
+Responsável pela elaboração: /root/elaborador_07
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26 — v01 — Elaboração autoral concluída e encaminhada em PENDENTE_AUDITORIA, com fundamentação documental, análise das cinco alternativas e referência editorial local identificada. Responsável: /root/elaborador_07. Sem parecer ou aprovação de auditoria.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0003 -> Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003
+ESTILO_FCC: Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-redacao-e-conformidade.txt

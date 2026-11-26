@@ -1,0 +1,30 @@
+ID: BAN-DS-03-0007
+Versão: v01
+Matéria: Programação
+Tópico: Tratamento de exceções em cenário com condições explícitas
+
+ENUNCIADO
+Considere o programa Java 21 abaixo:
+
+public class Exemplo {
+    public static void main(String[] args) {
+        int divisor = 0;
+        try {
+            int valor = 12 / divisor;
+            System.out.print("T");
+        } catch (ArithmeticException ex) {
+            System.out.print("C");
+        } finally {
+            System.out.print("F");
+        }
+        System.out.print("S");
+    }
+}
+
+Executando main, a sequência de caracteres exibida é
+
+A) TFS
+B) CFS
+C) CF
+D) FS
+E) CS

@@ -1,0 +1,13 @@
+ID: BAN-DS-01-0002
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: UML 2.5
+
+ENUNCIADO
+Em um diagrama de classes UML 2.5, existe uma associação binária simples entre Agencia e Carteira. A multiplicidade escrita junto à extremidade Agencia é 0..1; junto à extremidade Carteira, é 1..*. Considere exclusivamente essas restrições de multiplicidade. Cada alternativa descreve todos os objetos existentes e todas as ligações entre eles. A configuração compatível com o modelo é:
+
+A) Uma agência sem carteiras e duas carteiras sem ligação com agência.
+B) Duas agências ligadas à mesma carteira, sem outras carteiras ou ligações.
+C) Duas agências, cada uma ligada a uma carteira distinta, e uma terceira agência sem carteiras.
+D) Uma agência ligada a duas carteiras, sendo uma delas também ligada a uma segunda agência.
+E) Uma agência ligada a duas carteiras e uma terceira carteira sem ligação com agência.

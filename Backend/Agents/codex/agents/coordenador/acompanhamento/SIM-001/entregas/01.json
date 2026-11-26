@@ -1,0 +1,283 @@
+{
+  "elaborador": "01",
+  "responsavel": "/root/elaborador_01",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0001",
+      "numero": 1,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "Métodos ágeis (Scrum)",
+      "versao": "v01",
+      "enunciado": "Uma equipe desenvolve um aplicativo bancário segundo o Scrum Guide 2020. Ao final de uma Sprint, precisa discutir uma mudança nas necessidades dos clientes e os resultados obtidos no produto. Também identificou falhas recorrentes de comunicação e integração durante o trabalho. A utilização dos eventos Sprint Review e Sprint Retrospective está adequada ao Guia quando a equipe, respectivamente,",
+      "alternativas": {
+        "A": "define a meta da próxima Sprint com os stakeholders e planeja melhorias em suas interações e processos.",
+        "B": "inspeciona os resultados com os stakeholders para adaptar o produto e define a meta da próxima Sprint.",
+        "C": "inspeciona os resultados com os stakeholders para adaptar o produto e planeja melhorias em suas interações e processos.",
+        "D": "planeja melhorias em suas interações e processos e inspeciona os resultados com os stakeholders para adaptar o produto.",
+        "E": "inspeciona o progresso diário em direção à meta da Sprint e ajusta o plano de trabalho do próximo dia."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. Planejar melhorias cabe à Retrospective, mas a criação da meta da próxima Sprint pertence à Sprint Planning, e não constitui a finalidade da Review.",
+        "B": "Não atende. A primeira ação corresponde à Review. A segunda é parte da Sprint Planning; a Retrospective deve planejar maneiras de aumentar a qualidade e a eficácia.",
+        "C": "Atende. A Review examina o resultado da Sprint com stakeholders e orienta adaptações; a Retrospective trata da melhoria de interações, processos e outros aspectos do trabalho.",
+        "D": "Não atende. Inverte os focos dos eventos: a melhoria do modo de trabalho caracteriza a Retrospective, enquanto a inspeção dos resultados com stakeholders caracteriza a Review.",
+        "E": "Não atende. Inspecionar o progresso em direção à meta da Sprint e produzir um plano para o próximo dia são atividades próprias da Daily Scrum, e não as finalidades dos eventos pedidos."
+      },
+      "resolucao": "A mudança nas necessidades dos clientes exige inspeção dos resultados e discussão de adaptações do produto na Sprint Review. Os problemas de comunicação e integração dizem respeito ao modo de trabalho e motivam melhorias na Sprint Retrospective. A alternativa C associa essas duas finalidades na ordem solicitada.",
+      "fontes": [
+        {
+          "titulo": "The Scrum Guide, Ken Schwaber e Jeff Sutherland, novembro de 2020",
+          "url": "https://scrumguides.org/scrum-guide.html",
+          "localizador": "Seções Sprint Planning, Daily Scrum, Sprint Review e Sprint Retrospective; sustenta a distinção de finalidades nas cinco alternativas. Consulta por navegação em 26/11/2026."
+        },
+        {
+          "titulo": "Arquivo-base do conteúdo programático do projeto",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item: métodos ágeis (Scrum, Kanban, XP e similares); Consultado em 26/11/2026 para delimitar o escopo."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação, 2022",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; caderno A14, Tipo 001; questão 59; página 14. Origem: cópia secundária hospedada no Qconcursos."
+        },
+        {
+          "titulo": "Metadados das referências FCC locais",
+          "localizador": "Backend/Agents/conteudo/referencias-fcc/fontes.json; registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001, origem e URLs. Consultado em 26/11/2026; os hashes registrados não foram recalculados nesta elaboração."
+        }
+      ],
+      "autor": "/root/elaborador_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: conferidas por navegação as quatro seções de eventos do Scrum Guide 2020 indicadas nas fontes.",
+        "Analítica: confrontadas as duas ações de cada alternativa com o evento correspondente; somente C preserva a ordem e ambas as finalidades.",
+        "Editorial: lidas a questão 59, página 14, da extração TRT4/2022 e sua identificação em fontes.json; cenário e alternativas são autorais. Não houve execução de software para verificar conteúdo técnico."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 59,
+          "pagina": 14,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaObservada": "Apresenta contexto de estudo de uma analista e exige correspondência entre dois conceitos na ordem indicada por respectivamente.",
+          "caracteristicaAplicada": "O cenário exige relacionar duas ações às finalidades de Review e Retrospective na ordem do comando, com alternativas paralelas.",
+          "limites": "Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-01-0002",
+      "numero": 2,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "UML 2.5",
+      "versao": "v01",
+      "enunciado": "Em um diagrama de classes UML 2.5, existe uma associação binária simples entre Agencia e Carteira. A multiplicidade escrita junto à extremidade Agencia é 0..1; junto à extremidade Carteira, é 1..*. Considere exclusivamente essas restrições de multiplicidade. Cada alternativa descreve todos os objetos existentes e todas as ligações entre eles. A configuração compatível com o modelo é:",
+      "alternativas": {
+        "A": "Uma agência sem carteiras e duas carteiras sem ligação com agência.",
+        "B": "Duas agências ligadas à mesma carteira, sem outras carteiras ou ligações.",
+        "C": "Duas agências, cada uma ligada a uma carteira distinta, e uma terceira agência sem carteiras.",
+        "D": "Uma agência ligada a duas carteiras, sendo uma delas também ligada a uma segunda agência.",
+        "E": "Uma agência ligada a duas carteiras e uma terceira carteira sem ligação com agência."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Não atende. As carteiras sem agência respeitam 0..1, mas a agência sem carteiras viola o limite inferior 1 da extremidade Carteira.",
+        "B": "Não atende. Cada agência possui uma carteira, mas a carteira compartilhada possui duas agências, ultrapassando o limite superior 1 da extremidade Agencia.",
+        "C": "Não atende. As duas primeiras agências respeitam 1..*, mas a terceira possui zero carteiras e viola o limite inferior dessa multiplicidade.",
+        "D": "Não atende. Ambas as agências possuem carteiras, mas uma carteira está ligada a duas agências, o que viola 0..1 junto a Agencia.",
+        "E": "Atende. A agência tem pelo menos uma carteira; nenhuma carteira possui mais de uma agência. A carteira sem agência é permitida pelo limite inferior zero junto a Agencia."
+      },
+      "resolucao": "A multiplicidade junto a Agencia limita, para cada carteira, o número de agências a zero ou uma. A multiplicidade junto a Carteira exige uma ou mais carteiras para cada agência. Em E, a única agência possui duas carteiras; cada uma delas possui uma agência; a terceira carteira possui zero. Todos os limites são respeitados.",
+      "fontes": [
+        {
+          "titulo": "OMG Unified Modeling Language, versão 2.5, formal/15-03-01, maio de 2015",
+          "url": "https://www.omg.org/spec/UML/2.5/PDF",
+          "localizador": "Seções 7.5.3.2 Multiplicities e 7.5.4.1 Multiplicity Element, páginas impressas 33–35; 11.5.3.1 Associations, páginas 197–198, e 11.5.4 Notation, página 199. Sustenta limites, asterisco e interpretação por extremidade. Página da edição conferida em https://www.omg.org/spec/UML/2.5; consulta por navegação em 26/11/2026."
+        },
+        {
+          "titulo": "Arquivo-base do conteúdo programático do projeto",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item: UML 2.5; Consultado em 26/11/2026 para delimitar o escopo."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional Federal da 4ª Região, Analista Judiciário - Área Apoio Especializado - Especialidade Informática, 2007",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; caderno Cargo I, Tipo 001; questão 56; página 9. Origem: próprio órgão; referência histórica."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação, 2022",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; caderno A14, Tipo 001; questão 57; página 13. Origem: cópia secundária hospedada no Qconcursos."
+        },
+        {
+          "titulo": "Metadados das referências FCC locais",
+          "localizador": "Backend/Agents/conteudo/referencias-fcc/fontes.json; registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001, origem e URLs. Consultado em 26/11/2026; os hashes registrados não foram recalculados nesta elaboração."
+        }
+      ],
+      "autor": "/root/elaborador_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: conferida por navegação a edição UML 2.5 no portal OMG e consultadas as seções de multiplicidade, associação e notação do PDF normativo correspondente; não foi usada a edição 2.5.1.",
+        "Analítica: contadas as carteiras por agência e as agências por carteira; A e C violam o mínimo de carteiras por agência, B e D violam o máximo de agências por carteira e E respeita ambos.",
+        "Editorial: lidas TRF4/2007, questão 56, página 9, e TRT4/2022, questão 57, página 13, nas extrações locais, com metadados de origem conferidos. Não houve execução de modelo UML."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional Federal da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 56,
+          "pagina": 9,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; disponibilização no próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "caracteristicaObservada": "Usa terminologia UML de forma direta e apresenta cinco respostas conceitualmente comparáveis.",
+          "caracteristicaAplicada": "A terminologia é mantida precisa, mas o reconhecimento de um termo foi substituído por aplicação autoral das multiplicidades a configurações de objetos.",
+          "limites": "Referência histórica de 2007, disponibilizada no próprio órgão conforme fontes.json. Foi lida a extração TXT local. O exemplo não valida a UML 2.5 nem demonstra frequência de formatos na FCC."
+        },
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 57,
+          "pagina": 13,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaObservada": "Parte de contexto técnico de estudo de um analista, fornece a condição pertinente e pede uma única resposta entre cinco.",
+          "caracteristicaAplicada": "O enunciado declara versão, associação e restrições necessárias e solicita uma única configuração que as satisfaça.",
+          "limites": "Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-01-0003",
+      "numero": 3,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "Versionamento semântico",
+      "versao": "v01",
+      "enunciado": "Uma biblioteca segue a especificação Semantic Versioning 2.0.0 e está publicada na versão normal 3.7.4. Sua próxima publicação reunirá uma correção de defeito compatível com versões anteriores, uma nova operação compatível na API pública e a remoção de outra operação dessa API, ainda utilizada pelos clientes. Essa remoção exige alteração nos programas clientes para que continuem funcionando. O menor número de versão normal que expressa corretamente esse conjunto de mudanças é",
+      "alternativas": {
+        "A": "3.8.0.",
+        "B": "4.0.0.",
+        "C": "3.7.5.",
+        "D": "4.7.4.",
+        "E": "4.0.1."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Não atende. Incrementar apenas a versão menor comportaria a nova operação compatível e a correção, mas não a remoção incompatível da API pública.",
+        "B": "Atende. Incrementa a versão maior de 3 para 4 e zera os outros dois componentes, conforme a mudança incompatível, incluindo na mesma publicação as mudanças menores.",
+        "C": "Não atende. Incrementar somente a versão de correção se aplica a correções compatíveis; não expressa a nova funcionalidade nem, sobretudo, a ruptura da API.",
+        "D": "Não atende. Embora incremente a versão maior, mantém os componentes menor e de correção anteriores. O SemVer exige zerá-los ao incrementar a versão maior.",
+        "E": "Não atende. A correção não exige um incremento separado dentro da publicação maior. O primeiro número mínimo resultante é 4.0.0; 4.0.1 não é esse mínimo."
+      },
+      "resolucao": "A remoção rompe a compatibilidade da API pública e exige incremento da versão maior. Esse incremento zera as versões menor e de correção. As demais mudanças podem integrar a mesma publicação. Partindo de 3.7.4, o menor número normal resultante é 4.0.0.",
+      "fontes": [
+        {
+          "titulo": "Semantic Versioning 2.0.0, especificação oficial",
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "localizador": "Itens 1–2, API pública e versão normal; itens 6–8, correções compatíveis, adições compatíveis, mudanças incompatíveis, inclusão de alterações menores e reinicialização de componentes. Sustenta A–E. Consulta por navegação em 26/11/2026."
+        },
+        {
+          "titulo": "Arquivo-base do conteúdo programático do projeto",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item: versionamento semântico; Consultado em 26/11/2026 para delimitar o escopo."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação, 2022",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; caderno A14, Tipo 001; questão 57; página 13. Origem: cópia secundária hospedada no Qconcursos."
+        },
+        {
+          "titulo": "Metadados das referências FCC locais",
+          "localizador": "Backend/Agents/conteudo/referencias-fcc/fontes.json; registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001, origem e URLs. Consultado em 26/11/2026; os hashes registrados não foram recalculados nesta elaboração."
+        }
+      ],
+      "autor": "/root/elaborador_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: conferidos por navegação os itens 1, 2, 6, 7 e 8 da especificação oficial SemVer 2.0.0.",
+        "Analítica: classificada cada mudança e aplicado o incremento maior com reinicialização dos componentes; B é o menor número admissível entre as alternativas e expressa a publicação completa.",
+        "Editorial: lida TRT4/2022, questão 57, página 13, na extração local e conferida sua origem secundária em fontes.json. Não houve execução de código nem consulta a uma API real; a biblioteca do cenário é autoral."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 57,
+          "pagina": 13,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaObservada": "Enunciado técnico contextualizado seguido de comando que exige selecionar um valor entre cinco alternativas numéricas curtas.",
+          "caracteristicaAplicada": "O cenário fornece a versão inicial e todas as mudanças; as cinco alternativas são números de versão comparáveis, sem explicações que revelem o gabarito.",
+          "limites": "Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-01-0004",
+      "numero": 4,
+      "materia": "Processo de desenvolvimento de software",
+      "topico": "Engenharia de requisitos",
+      "versao": "v01",
+      "enunciado": "Durante a especificação de um sistema bancário, uma analista registrou os seguintes requisitos:\n\nI. O sistema deve emitir um comprovante de transferência contendo o identificador da operação, a data e o valor transferido.\nII. O sistema deve permitir ao cliente cancelar um agendamento ainda não executado e apresentar a confirmação do cancelamento.\nIII. Sob o perfil de carga homologado de 1.000 usuários simultâneos, pelo menos 95% das consultas de saldo devem apresentar resposta em até 2 segundos.\nIV. O serviço de consulta de saldo deve apresentar disponibilidade mensal de, no mínimo, 99,9%, considerando todas as interrupções no mês.\n\nQuanto à natureza do que é exigido, são requisitos funcionais e requisitos de qualidade, respectivamente,",
+      "alternativas": {
+        "A": "I e III; II e IV.",
+        "B": "II e IV; I e III.",
+        "C": "III e IV; I e II.",
+        "D": "I e II; III e IV.",
+        "E": "I e IV; II e III."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. I e IV estão nos grupos adequados, mas III é qualidade de desempenho e II descreve comportamento funcional de cancelamento e confirmação.",
+        "B": "Não atende. II e III estão nos grupos adequados, mas IV exige disponibilidade, uma qualidade; I exige a produção do comprovante, um resultado funcional.",
+        "C": "Não atende. Inverte os dois grupos: desempenho e disponibilidade são qualidades; emissão de comprovante e cancelamento são comportamentos ou resultados funcionais.",
+        "D": "Atende. Reúne I e II, que especificam funções observáveis, e III e IV, que fixam qualidades mensuráveis dos serviços, na ordem solicitada.",
+        "E": "Não atende. I e III estão nos grupos adequados, mas IV é uma exigência de qualidade e II é funcional. A existência de confirmação não muda a natureza funcional de II."
+      },
+      "resolucao": "I exige um resultado produzido por uma função: emitir o comprovante com dados definidos. II exige o comportamento de cancelar e confirmar um agendamento. Ambos são funcionais. III estabelece desempenho temporal sob carga, e IV estabelece disponibilidade do serviço. Esses dois qualificam a prestação da funcionalidade e são requisitos de qualidade. A combinação correspondente é D.",
+      "fontes": [
+        {
+          "titulo": "IREB CPRE Online Glossary",
+          "url": "https://cpre.ireb.org/en/downloads-and-resources/glossary",
+          "localizador": "Verbetes Functional requirement, Quality requirement, Non-functional requirement, Performance requirement e Reliability. Sustenta a distinção entre comportamento/resultado funcional e preocupação de qualidade, incluindo desempenho. Conteúdo consultado por navegação e resultado indexado do próprio domínio em 26/11/2026."
+        },
+        {
+          "titulo": "Arquivo-base do conteúdo programático do projeto",
+          "localizador": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item: engenharia de requisitos; Consultado em 26/11/2026 para delimitar o escopo."
+        },
+        {
+          "titulo": "FCC — Tribunal Regional do Trabalho da 4ª Região, Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação, 2022",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Extração local efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; caderno A14, Tipo 001; questão 59; página 14. Origem: cópia secundária hospedada no Qconcursos."
+        },
+        {
+          "titulo": "Metadados das referências FCC locais",
+          "localizador": "Backend/Agents/conteudo/referencias-fcc/fontes.json; registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001, origem e URLs. Consultado em 26/11/2026; os hashes registrados não foram recalculados nesta elaboração."
+        }
+      ],
+      "autor": "/root/elaborador_01",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: consultados no glossário oficial IREB os conceitos de requisito funcional, de qualidade e de desempenho; a classificação é de engenharia de requisitos e não depende de substituir a edição ISO/IEC 25010:2024 indicada em outro item do programa.",
+        "Analítica: classificadas individualmente as quatro proposições antes das combinações; I e II funcionais, III e IV de qualidade; somente D reproduz ambos os grupos.",
+        "Editorial: lida TRT4/2022, questão 59, página 14, na extração local e conferidos os metadados de origem. Não houve medição do sistema nem simulação da carga: os valores integram exclusivamente o cenário autoral."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "Tribunal Regional do Trabalho da 4ª Região",
+          "cargo": "Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 59,
+          "pagina": 14,
+          "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaObservada": "Solicita classificação de dois elementos na sequência indicada por correta e respectivamente; os distratores permutam os conceitos.",
+          "caracteristicaAplicada": "Os quatro requisitos autorais são distribuídos em dois grupos; todas as alternativas têm a mesma estrutura e permutam as classificações funcional e de qualidade.",
+          "limites": "Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual."
+        }
+      ]
+    }
+  ]
+}

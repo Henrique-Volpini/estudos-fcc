@@ -1,0 +1,21 @@
+ID: BAN-DS-03-0005
+Versão: v01
+Matéria: Programação
+Tópico: PHP: comportamento básico de linguagem conforme versão declarada
+
+ENUNCIADO
+Um desenvolvedor executou o código abaixo em PHP 8.2:
+
+<?php
+$codigo = "42";
+$numero = 42;
+echo ($codigo == $numero ? "S" : "N");
+echo ($codigo === $numero ? "S" : "N");
+
+Qual é o resultado da execução?
+
+A) É exibido SN.
+B) É exibido SS.
+C) É exibido NS.
+D) É exibido NN.
+E) É lançado TypeError ao comparar a string com o inteiro.

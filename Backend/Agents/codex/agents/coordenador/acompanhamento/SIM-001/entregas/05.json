@@ -1,0 +1,174 @@
+{
+  "elaborador": "05",
+  "responsavel": "/root/elaborador_05",
+  "questoes": [
+    {
+      "id": "BAN-DS-05-0001",
+      "numero": 21,
+      "materia": "Desenvolvimento de aplicações web e mobile",
+      "topico": "Princípios de design de APIs: idempotência",
+      "versao": "v01",
+      "enunciado": "Um aplicativo envia uma requisição PUT para atualizar o endereço de correspondência de um cliente em um recurso identificado por uma URI. A conexão é interrompida antes da leitura da resposta. O cliente considera reenviar a mesma requisição, com o mesmo conteúdo. Supondo uma implementação conforme a semântica HTTP definida na RFC 9110, é correto afirmar que",
+      "alternativas": {
+        "A": "a idempotência exige que a repetição produza o mesmo código de status e o mesmo corpo de resposta.",
+        "B": "a repetição deve criar outro recurso, pois cada requisição PUT representa uma nova operação de inclusão.",
+        "C": "a idempotência depende de desabilitar o armazenamento da resposta em cache antes do reenvio.",
+        "D": "a repetição tem o mesmo efeito pretendido sobre o recurso, embora a resposta recebida possa ser diferente.",
+        "E": "o método é seguro e idempotente, pois a atualização solicitada não pode modificar o estado do servidor."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Incorreta: a propriedade se refere ao efeito pretendido no servidor, não à igualdade do status ou do corpo das respostas.",
+        "B": "Incorreta: repetir um PUT idêntico não exige criar outro recurso; PUT atua sobre o recurso identificado pela URI de destino.",
+        "C": "Incorreta: armazenamento em cache e idempotência são propriedades distintas; desabilitar cache não é condição para tornar PUT idempotente.",
+        "D": "Correta: PUT é idempotente; repetições idênticas preservam o efeito pretendido de uma única solicitação, mesmo com respostas diferentes.",
+        "E": "Incorreta: PUT é idempotente, mas não é um método seguro na classificação HTTP, pois solicita mudança de estado."
+      },
+      "resolucao": "A análise considera o efeito solicitado sobre o recurso. Reenviar o mesmo PUT não deve acrescentar outro efeito pretendido além daquele de uma aplicação. A RFC permite que as respostas difiram e que existam registros operacionais por requisição. Idempotência não significa somente leitura.",
+      "fontes": [
+        {"titulo": "IETF — RFC 9110: HTTP Semantics", "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-idempotent-methods", "localizador": "Seções 9.2.1, 9.2.2, 9.2.3 e 9.3.4: segurança, idempotência, cache e PUT."}
+      ],
+      "autor": "/root/elaborador_05",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Conferência documental na RFC 9110 e análise das cinco afirmações; nenhuma requisição de atualização foi executada.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário — Tecnologia da Informação", "ano": 2022, "caderno": "A14, Tipo 001", "questao": 34, "pagina": 8, "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia hospedada no Qconcursos, identificada na capa; não é download direto da FCC.", "caracteristicaAplicada": "Julgamento de uma afirmação correta sobre protocolo, com cinco proposições alternativas da mesma área. O cenário e a semântica examinada são autorais; a comparação é editorial e restrita ao exemplo."}
+      ]
+    },
+    {
+      "id": "BAN-DS-05-0002",
+      "numero": 22,
+      "materia": "Desenvolvimento de aplicações web e mobile",
+      "topico": "JavaScript e desenvolvimento web: ordem de execução assíncrona",
+      "versao": "v01",
+      "enunciado": "Um desenvolvedor executa integralmente o trecho abaixo como um único script clássico em uma página ativa, em navegador compatível com o HTML Standard. Não há outros registros no console, exceções ou interrupções durante a execução.\n\nconsole.log('inicio');\nPromise.resolve().then(() => {\n  console.log('promessa');\n  queueMicrotask(() => console.log('micro'));\n});\nsetTimeout(() => console.log('temporizador'), 0);\nconsole.log('fim');\n\nA sequência de mensagens produzida por esse trecho é",
+      "alternativas": {
+        "A": "inicio, promessa, micro, fim, temporizador.",
+        "B": "inicio, fim, promessa, micro, temporizador.",
+        "C": "inicio, fim, temporizador, promessa, micro.",
+        "D": "inicio, fim, promessa, temporizador, micro.",
+        "E": "inicio, promessa, fim, temporizador, micro."
+      },
+      "gabarito": "B",
+      "justificativas": {
+        "A": "Incorreta: o tratador de then não interrompe o script para executar antes do registro síncrono de fim.",
+        "B": "Correta: os registros síncronos vêm primeiro; depois executam a reação da promessa e a microtarefa que ela enfileira; o temporizador fica para outra tarefa.",
+        "C": "Incorreta: o temporizador não passa à frente das microtarefas processadas ao término da tarefa do script.",
+        "D": "Incorreta: a microtarefa adicionada pela reação da promessa ainda é processada no mesmo esvaziamento da fila, antes da tarefa do temporizador.",
+        "E": "Incorreta: coloca a reação antes de fim e ainda posterga sua microtarefa para depois do temporizador."
+      },
+      "resolucao": "O script registra inicio e fim. A reação da promessa é processada como microtarefa e registra promessa. A chamada queueMicrotask acrescenta micro à fila, que continua sendo esvaziada. Somente depois a tarefa do temporizador registra temporizador.",
+      "fontes": [
+        {"titulo": "WHATWG — HTML Standard: Web application APIs", "url": "https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint", "localizador": "HostEnqueuePromiseJob, processamento do event loop e algoritmo perform a microtask checkpoint; consulta em 26/11/2026."},
+        {"titulo": "WHATWG — HTML Standard: Timers and microtask queuing", "url": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers", "localizador": "Seções Timers e Microtask queuing: setTimeout e queueMicrotask."}
+      ],
+      "autor": "/root/elaborador_05",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Análise documental do modelo de navegador WHATWG. Como conferência suplementar, o mesmo trecho foi executado em memória no Node.js 26.12.1 e produziu inicio, fim, promessa, micro, temporizador. Não se declarou execução em navegador nem se criaram arquivos de teste.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário — Tecnologia da Informação", "ano": 2022, "caderno": "A14, Tipo 001", "questao": 43, "pagina": 10, "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia secundária do Qconcursos, com banca/cargo/caderno identificados no documento.", "caracteristicaAplicada": "Apresentação de fragmento técnico autocontido seguido de cinco representações candidatas, aqui adaptada para sequências de mensagens. A referência não é de event loop e não fundamenta a solução técnica; sustenta apenas a organização editorial."}
+      ]
+    },
+    {
+      "id": "BAN-DS-05-0003",
+      "numero": 23,
+      "materia": "Desenvolvimento de aplicações web e mobile",
+      "topico": "Acessibilidade digital conforme WCAG 2.2: foco não encoberto",
+      "versao": "v01",
+      "enunciado": "Na avaliação de acessibilidade de um portal, uma analista examina o efeito de faixas fixas da interface sobre componentes que recebem foco pelo teclado. Considerando os critérios 2.4.11 e 2.4.12 das WCAG 2.2, avalie as afirmações.\n\nI. O critério 2.4.11, de nível AA, exige que o componente com foco não fique totalmente oculto por conteúdo criado pelo autor.\nII. O critério 2.4.11 é atendido se apenas o indicador de foco permanecer visível, mesmo que o próprio componente esteja inteiramente oculto.\nIII. A exigência de que nenhuma parte do componente com foco seja ocultada por conteúdo criado pelo autor corresponde ao critério 2.4.12, de nível AAA.\n\nEstá correto o que se afirma APENAS em",
+      "alternativas": {
+        "A": "I.",
+        "B": "II.",
+        "C": "I e II.",
+        "D": "II e III.",
+        "E": "I e III."
+      },
+      "gabarito": "E",
+      "justificativas": {
+        "A": "Incorreta como combinação: I é verdadeira, mas III também é verdadeira e foi omitida.",
+        "B": "Incorreta: II confunde o componente com seu indicador de foco; o critério mínimo avalia se o componente fica inteiramente oculto.",
+        "C": "Incorreta: inclui II, que é falsa, e omite III, que descreve corretamente o critério de nível AAA.",
+        "D": "Incorreta: III é verdadeira, porém II é falsa; além disso, I também é verdadeira.",
+        "E": "Correta: I apresenta a exigência mínima AA e III apresenta a exigência mais rigorosa AAA; II não atende à definição do critério."
+      },
+      "resolucao": "I e III são verdadeiras. O requisito mínimo admite ocultação parcial do componente, enquanto o critério mais rigoroso impede que qualquer parte dele fique encoberta. II é falsa porque a avaliação do 2.4.11 recai sobre o componente, não apenas sobre seu indicador de foco.",
+      "fontes": [
+        {"titulo": "W3C — Web Content Accessibility Guidelines 2.2", "url": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum", "localizador": "Critérios 2.4.11 Focus Not Obscured (Minimum), nível AA, e 2.4.12 Focus Not Obscured (Enhanced), nível AAA."},
+        {"titulo": "W3C WAI — Understanding SC 2.4.11", "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum", "localizador": "Intent e Note: distinção entre o componente e o indicador de foco."}
+      ],
+      "autor": "/root/elaborador_05",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Critérios e níveis conferidos no texto WCAG 2.2 e no documento explicativo do W3C. As três proposições e as cinco combinações foram analisadas; não houve avaliação executada de uma página real.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário — Tecnologia da Informação", "ano": 2022, "caderno": "A14, Tipo 001", "questao": 38, "pagina": 9, "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia secundária hospedada no Qconcursos.", "caracteristicaAplicada": "Avaliação de proposições numeradas à luz de referência normativa expressa, com alternativas que combinam os itens. Conteúdo, cenário e combinações são autorais, sem inferência de frequência desse formato na FCC."}
+      ]
+    },
+    {
+      "id": "BAN-DS-05-0004",
+      "numero": 24,
+      "materia": "Desenvolvimento de aplicações web e mobile",
+      "topico": "Contratos de API OpenAPI: localização e obrigatoriedade de parâmetros",
+      "versao": "v01",
+      "enunciado": "Uma equipe documenta uma operação GET em OpenAPI 3.0.3 para consultar o cliente identificado no caminho /clientes/{clienteId}. A operação também aceita, opcionalmente, detalhes=true na consulta da URL para ampliar os dados retornados. Foram declarados os seguintes parâmetros:\n\nparameters:\n  - name: clienteId\n    in: path\n    required: false\n    schema:\n      type: integer\n  - name: detalhes\n    in: query\n    required: false\n    schema:\n      type: boolean\n\nPara que essas declarações atendam à especificação e preservem a intenção descrita, as configurações de localização e obrigatoriedade deverão ser",
+      "alternativas": {
+        "A": "clienteId em query, required: false; detalhes em query, required: false.",
+        "B": "clienteId em path, required: false; detalhes em query, required: true.",
+        "C": "clienteId em path, required: true; detalhes em query, required: false.",
+        "D": "clienteId em path, required: true; detalhes em path, required: true.",
+        "E": "clienteId em header, required: true; detalhes em query, required: false."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Incorreta: clienteId aparece na expressão do caminho e precisa ser declarado como parâmetro path, com required igual a true.",
+        "B": "Incorreta: um parâmetro path não pode ter required igual a false; além disso, detalhes deixaria de ser opcional.",
+        "C": "Correta: clienteId permanece vinculado ao caminho e obrigatório; detalhes permanece na consulta da URL e opcional.",
+        "D": "Incorreta: não existe expressão detalhes no caminho apresentado, e a configuração tornaria obrigatório o parâmetro definido como opcional.",
+        "E": "Incorreta: um parâmetro de cabeçalho não descreve a expressão clienteId existente no caminho da operação."
+      },
+      "resolucao": "Na OpenAPI 3.0.3, o nome do parâmetro path deve corresponder à expressão do caminho, e required é obrigatório com valor true. Para o parâmetro query detalhes, a opção false é permitida e preserva seu caráter opcional. Portanto, apenas C atende simultaneamente às duas declarações.",
+      "fontes": [
+        {"titulo": "OpenAPI Initiative — OpenAPI Specification 3.0.3", "url": "https://spec.openapis.org/oas/v3.0.3.html#parameter-object", "localizador": "Seção 4.7.12 Parameter Object, Parameter Locations e campos name, in e required."}
+      ],
+      "autor": "/root/elaborador_05",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Conferência documental das regras de name, in e required na OpenAPI 3.0.3; análise de cada par de configurações. Não se declarou uso de validador de contratos.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário — Tecnologia da Informação", "ano": 2022, "caderno": "A14, Tipo 001", "questao": 33, "pagina": 8, "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia do Qconcursos identificada na capa como FCC.", "caracteristicaAplicada": "Cenário de documentação de API seguido de cinco pares de configurações técnicas. O novo item trabalha Parameter Object e não reproduz o problema de anotações Java da referência."}
+      ]
+    },
+    {
+      "id": "BAN-DS-05-0005",
+      "numero": 25,
+      "materia": "Desenvolvimento de aplicações web e mobile",
+      "topico": "XML Schema: ocorrências de elementos, tipos e atributos obrigatórios",
+      "versao": "v01",
+      "enunciado": "Uma aplicação valida documentos XML de acordo com o esquema XSD 1.0 completo abaixo, sem namespace de destino:\n\n<xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"lote\">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name=\"item\" type=\"xs:string\"\n                    minOccurs=\"0\" maxOccurs=\"3\"/>\n      </xs:sequence>\n      <xs:attribute name=\"codigo\" type=\"xs:integer\" use=\"required\"/>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>\n\nConsiderando apenas a validade em relação a esse esquema, o documento aceito é",
+      "alternativas": {
+        "A": "<lote codigo=\"7\"/>",
+        "B": "<lote><item>A</item></lote>",
+        "C": "<lote codigo=\"7\"><item>A</item><item>B</item><item>C</item><item>D</item></lote>",
+        "D": "<lote codigo=\"sete\"><item>A</item></lote>",
+        "E": "<lote codigo=\"7\"><item>A</item><extra>B</extra></lote>"
+      },
+      "gabarito": "A",
+      "justificativas": {
+        "A": "Correta: codigo está presente com valor inteiro, e a ausência de item é permitida por minOccurs igual a zero.",
+        "B": "Incorreta: o atributo codigo é obrigatório e não foi informado, embora o elemento item esteja permitido.",
+        "C": "Incorreta: há quatro ocorrências de item, excedendo o limite de três definido por maxOccurs.",
+        "D": "Incorreta: sete não é uma representação lexical válida para o tipo xs:integer do atributo codigo.",
+        "E": "Incorreta: extra não integra o conteúdo permitido pelo tipo complexo, que admite somente as ocorrências declaradas de item."
+      },
+      "resolucao": "O tipo complexo permite de zero a três elementos item e exige o atributo codigo com valor do tipo integer. A satisfaz essas condições mesmo sem filhos. As demais opções violam, respectivamente, a obrigatoriedade do atributo, o máximo de ocorrências, o tipo do atributo ou o conteúdo permitido.",
+      "fontes": [
+        {"titulo": "W3C — XML Schema Part 0: Primer, Second Edition", "url": "https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints", "localizador": "Seções 2.2 e 2.2.1: modelos de conteúdo, minOccurs, maxOccurs e use required."},
+        {"titulo": "W3C — XML Schema Part 2: Datatypes, Second Edition", "url": "https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/datatypes.html#integer", "localizador": "Seção 3.3.13 integer, especialmente a representação lexical."}
+      ],
+      "autor": "/root/elaborador_05",
+      "dificuldadeEstimada": "média",
+      "verificacoes": "Análise documental de XSD 1.0 e inspeção de cada documento quanto a conteúdo, ocorrências, atributo e tipo. Não se declarou execução de um validador XSD.",
+      "referenciasEstilo": [
+        {"orgao": "TRT da 4ª Região", "cargo": "Analista Judiciário — Tecnologia da Informação", "ano": 2022, "caderno": "A14, Tipo 001", "questao": 43, "pagina": 10, "origem": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia secundária do Qconcursos.", "caracteristicaAplicada": "Fragmento XML fornecido no enunciado e cinco alternativas em notação técnica para seleção de uma representação válida. O conteúdo XSD, os documentos e a tarefa de validação são autorais."}
+      ]
+    }
+  ]
+}

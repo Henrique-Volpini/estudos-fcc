@@ -1,0 +1,407 @@
+{
+  "simulado": "SIM-001",
+  "responsavel": "/root/auditor_redacao",
+  "perfil": "REDACAO_E_CONFORMIDADE",
+  "questoes": [
+    {
+      "id": "BAN-DS-01-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "d1161719b9a26ff3d5f5b4bf37aaffa3b6ec82e628455a8b201726594d67af26"
+    },
+    {
+      "id": "BAN-DS-01-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "dd2c582ffb49c93decf938ab6cec0ced08ee2820e34393eeabbc10a43d4b8b0f"
+    },
+    {
+      "id": "BAN-DS-01-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "7ee451e363931694e192f1c8cac9ee50823203592ac9cad17096f656e268ff21"
+    },
+    {
+      "id": "BAN-DS-01-0004",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0004/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "df59c3fb19ff0c04bb96f298d5779fd62b5031a7fe6a6c327a4928cfa63e980c"
+    },
+    {
+      "id": "BAN-DS-02-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "995859b33307b0bab32845a1947f8474d76c53177fbc798547d1e0dbf08149f2"
+    },
+    {
+      "id": "BAN-DS-02-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "84a96a060588fe1a37f0e6c61c0ba8aa1ab9e73df898f433a1432eff3cde6ece"
+    },
+    {
+      "id": "BAN-DS-02-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "855dcda8a371597f989f235f8284194f689a5373e797ae900d111e25baeecece"
+    },
+    {
+      "id": "BAN-DS-03-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "1e869456c7893d9f231dba97ce89dd5e1b3bd87fdcbe5a226a8ccc6cd46f925c"
+    },
+    {
+      "id": "BAN-DS-03-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "65e1631c3f700e962eee77bcbc3a964f4aecf1362e50695dfca573792b14d3ed"
+    },
+    {
+      "id": "BAN-DS-03-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "70b0d6b7fdaae0301ef13a51330512d71fe6adacd90377468a5b297cc93d3d13"
+    },
+    {
+      "id": "BAN-DS-03-0004",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0004/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "5fba5bc54fb02abe490b4bd319b50791919fc516cc771b751c939ff0cc3efc2d"
+    },
+    {
+      "id": "BAN-DS-03-0005",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0005/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "cfb8f6328c2a2c0b6fad0dbfaf378a73bb3bb451dfcab3647f1466008faf7fb8"
+    },
+    {
+      "id": "BAN-DS-03-0006",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0006/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "13d91feb5129494f89f07a106e5faf26cea66ca6f76f7d52054f392d8432df54"
+    },
+    {
+      "id": "BAN-DS-03-0007",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/03-programacao/BAN-DS-03-0007/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "f11f783792e07430b9bbaf341fdcb566753d4f6c0ac9a11bc7aca0db79eddff8"
+    },
+    {
+      "id": "BAN-DS-04-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "92a7fb671dc52416c50463c61628eed77013a6a4eb0c47bc16ffb005dccd3a14"
+    },
+    {
+      "id": "BAN-DS-04-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "ffd9f5f023f40f8ac8bcf21e84add2937d060b4dd925576200b2aff4a93e55a6"
+    },
+    {
+      "id": "BAN-DS-04-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "3cb1dc3b32455d506eb67e075b17082fc5febec9e133d5b56900f55d05b0ab32"
+    },
+    {
+      "id": "BAN-DS-04-0004",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0004/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "b931af23684ae40d7ffd21cc6525f40f49d9257c80605b02c113da7e4ec6c57a"
+    },
+    {
+      "id": "BAN-DS-04-0005",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0005/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "fff5e8b7fc9a39393920eef488e8b35e727ab9b712a8e26d16d382527dea648c"
+    },
+    {
+      "id": "BAN-DS-04-0006",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/04-banco-de-dados/BAN-DS-04-0006/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "d27a7846b43a359bd57a105bd544b5ea2048f124bc130da544c33e903242e2df"
+    },
+    {
+      "id": "BAN-DS-05-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "314f9d86a3019cd06f0a47a07bf9853a38016c31114358815abeea605e2a8d20"
+    },
+    {
+      "id": "BAN-DS-05-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "1d70ff86570c29963da230d5594203170efd10b1778da03dc9a45987199a2a30"
+    },
+    {
+      "id": "BAN-DS-05-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "8702188d3b5f650f20a88096013a71cdc970469ccc313221d247ed72faa6a29e"
+    },
+    {
+      "id": "BAN-DS-05-0004",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0004/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "b37c4d07960f941c66da75a4b46a58d539fda09229f0b6a77444c254c0abc78d"
+    },
+    {
+      "id": "BAN-DS-05-0005",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/05-desenvolvimento-web-e-mobile/BAN-DS-05-0005/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "605c3b886c835ecda765d14fc02324d44d036db5ac6123ba2a70490f766a3022"
+    },
+    {
+      "id": "BAN-DS-06-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "25c641c675aed6ed54cf039c12c173d057bd4255c77577cfeacb3889f0c49ada"
+    },
+    {
+      "id": "BAN-DS-06-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "3049dff3238e51f4f8eb2c212a1d5066747c004e6874b3091074be2459ab1252"
+    },
+    {
+      "id": "BAN-DS-06-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "c6d9e1eb87d834e8d9852c370c221863f23de96c17292100dd0bd876a1410a1d"
+    },
+    {
+      "id": "BAN-DS-06-0004",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/06-arquitetura-de-sistemas/BAN-DS-06-0004/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "c6911db07a24a3b78667b3c733473c23fcb1b953edc70fc664ff258b6aae1399"
+    },
+    {
+      "id": "BAN-DS-07-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "d3138d352fa8c5fadb2694fb80b438d6c8dba560238e2dabc4c95eddfd0c75ab"
+    },
+    {
+      "id": "BAN-DS-07-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "ba5297b7654b6476cb9a4e45f7005b8aae420925056ce28599521d951b205e7e"
+    },
+    {
+      "id": "BAN-DS-07-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/07-devops-e-devsecops/BAN-DS-07-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "dda15cd97f9d7dcb6be1c3a9a1f6873a310075c911c2ac47cde5b7ee056060b9"
+    },
+    {
+      "id": "BAN-DS-08-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "67a586c9ede23c4f65293a10d79e56d694f6b37f7c6d593d7fafb1cfd88d0ce1"
+    },
+    {
+      "id": "BAN-DS-08-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/08-sistemas-operacionais/BAN-DS-08-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "3af90d937ebee8fde23648828359cbd052b4cc3dd00bf78b8188abcff2c13ad4"
+    },
+    {
+      "id": "BAN-DS-09-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "00f748aff6bbaed0e5c1c6ab86fe1c1c44bccc03833f055be3da14363facb802"
+    },
+    {
+      "id": "BAN-DS-09-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "a5a7f650707fa04b01cdbd49ac29c276c9599b7f832903efae8ce5a4a4fcf80e"
+    },
+    {
+      "id": "BAN-DS-09-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "7c32407fda9d6af9549f34f8ad03d8011a3623dd00a45c16c1afb77ccfdfd88c"
+    },
+    {
+      "id": "BAN-DS-10-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "a2c3eaef2999b451c036b8752d7244a2459738b5abbe2f28cbf50cc087fa5346"
+    },
+    {
+      "id": "BAN-DS-10-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "94b63cef014a6c9a8671341808749a9181146181df9d176b950115c68f8023bd"
+    },
+    {
+      "id": "BAN-DS-11-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "67bb0a5f8a0fa9321792a42946ef2561ff6632190a30fd21a0e8c155be06c57f"
+    },
+    {
+      "id": "BAN-DS-11-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "96196ecf69a971e24f4fd2dc4ae4de58649569d844cdbddb5377d5acf06b7636"
+    },
+    {
+      "id": "BAN-DS-11-0003",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0003/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "874cb22831a0ce27138cd0a70273a49f8439219be2f288d32d8ed4832f73794f"
+    },
+    {
+      "id": "BAN-DS-11-0004",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/11-seguranca-da-informacao/BAN-DS-11-0004/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "f94e88a83f0ea48d9459282687e7399459f039fd953d94c2b195205a75f524da"
+    },
+    {
+      "id": "BAN-DS-12-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "b12930e8b0be96efa23d87bde0337cfb546e06c141555ef8910b82851ca96610"
+    },
+    {
+      "id": "BAN-DS-12-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/12-computacao-em-nuvem/BAN-DS-12-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "2776c1358487434678049dd9add6032547d298132c077e2ab77be577508134d1"
+    },
+    {
+      "id": "BAN-DS-13-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/13-git-kubernetes-rancher-deploy-e-cicd/BAN-DS-13-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "2dbdaba06f8180c395a13d34c1403b4abf77efa9ca087effbc80d831f11c92d3"
+    },
+    {
+      "id": "BAN-DS-14-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "e834128391e37e3db1bc0c10ce20d6060c5951f1ab781b7e3583d44770f2afdf"
+    },
+    {
+      "id": "BAN-DS-15-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/15-governanca-de-dados-autenticacao-e-acesso/BAN-DS-15-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "0ac55db38b20fbb33a4e794a8eb44e2ce965351893ee7f2119de99657678c7e8"
+    },
+    {
+      "id": "BAN-DS-16-0001",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0001/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "ad8f12bf07f367b411b4aa15cd8c30d5e3868a8b2cd171963e712140972059d9"
+    },
+    {
+      "id": "BAN-DS-16-0002",
+      "versao": "v01",
+      "resultado": "APROVADA",
+      "parecer": "Backend/questoes/questoes pendentes/16-ingles-tecnico/BAN-DS-16-0002/v01/parecer-redacao-e-conformidade.txt",
+      "pendencias": "nenhuma",
+      "sha256Textos": "63468778e9307f7351be29e8c0747cec3511d3d52a85c511f9b7c5a7a7c8731d"
+    }
+  ]
+}

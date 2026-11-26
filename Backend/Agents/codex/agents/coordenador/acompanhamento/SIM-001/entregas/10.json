@@ -1,0 +1,195 @@
+{
+  "elaborador": "10",
+  "responsavel": "/root/elaborador_10",
+  "questoes": [
+    {
+      "id": "BAN-DS-10-0001",
+      "numero": 38,
+      "materia": "Serviços e gerenciamento de redes",
+      "topico": "SNMP: agentes, gerentes e MIBs",
+      "versao": "v01",
+      "enunciado": "Uma central de monitoramento consulta um roteador por SNMPv2c, utilizando OIDs numéricos em mensagens GetRequest. O roteador devolve os valores solicitados, mas a central ainda não dispõe do módulo MIB do fabricante. Um analista importa para a central esse módulo, compatível com os objetos implementados no roteador. Sobre os papéis dos componentes e o efeito dessa importação, é correto afirmar:",
+      "alternativas": {
+        "A": "A central atua como gerente, e a importação do módulo passa a habilitar os objetos correspondentes no agente do roteador.",
+        "B": "A central atua como agente, e o roteador assume o papel de gerente ao devolver os valores pedidos nas consultas.",
+        "C": "A central atua como gerente, e o módulo fornece definições para interpretar os objetos cujos valores são obtidos do agente.",
+        "D": "A central atua como gerente, e o módulo passa a fornecer os valores atuais dos objetos sem novas consultas ao roteador.",
+        "E": "O roteador atua como agente, e a importação faz suas respostas enviarem nomes simbólicos dos objetos em lugar dos OIDs."
+      },
+      "gabarito": "C",
+      "justificativas": {
+        "A": "Não atende. A central é gerente, mas importar definições localmente não implementa nem habilita objetos no agente remoto. A resposta anterior à importação já demonstra que os objetos consultados estavam disponíveis. A distinção entre definição e implementação decorre da RFC 2578, seções 3 e 7.",
+        "B": "Não atende. Gerar GetRequest para consultar dados caracteriza o papel de gerente; atender a essa solicitação caracteriza o papel de agente. O retorno de uma resposta não inverte esses papéis (RFC 3411, seções 3.1.3.1 e 3.1.3.2).",
+        "C": "Atende. A central gera as consultas e o agente do roteador fornece os valores. O módulo MIB contém definições dos objetos, permitindo interpretar sua identificação e semântica; importá-lo não substitui a coleta (RFC 3411, seções 3.1.3.1 e 3.1.3.2; RFC 2578, seções 1, 3 e 7).",
+        "D": "Não atende. O arquivo de definições não é uma fonte de medições atuais do roteador. Uma nova leitura obtém o valor da instância por operação do protocolo, como GetRequest/Response, e não pela releitura do módulo importado (RFC 3416, seção 4.2.1).",
+        "E": "Não atende. O roteador é agente, porém a importação na central não modifica os identificadores transmitidos. Os nomes das variáveis nos vínculos nome/valor continuam sendo OIDs; os nomes simbólicos são interpretados localmente com as definições (RFC 3416, seção 2.1; RFC 2578, seção 3.1)."
+      },
+      "resolucao": "A central exerce o papel tradicional de gerente ao iniciar consultas, e o roteador exerce o de agente ao respondê-las. As mensagens transportam identificadores de instâncias e valores. O módulo MIB define objetos e sua semântica; sua importação permite à central interpretar esses objetos, sem criar instrumentação remota nem transformar o arquivo em dados de monitoramento. Como os valores já eram recebidos por OID, a comunicação de consulta não dependia de nomes simbólicos carregados na central.",
+      "fontes": [
+        {
+          "titulo": "RFC 3411 — An Architecture for Describing SNMP Management Frameworks",
+          "url": "https://www.rfc-editor.org/rfc/rfc3411.html",
+          "localizador": "IETF, dezembro/2002, seções 1.2, 3.1.3.1 e 3.1.3.2: papéis tradicionais de gerente e agente."
+        },
+        {
+          "titulo": "RFC 3416 — Version 2 of the Protocol Operations for SNMP",
+          "url": "https://www.rfc-editor.org/rfc/rfc3416.html",
+          "localizador": "IETF, dezembro/2002, seções 2, 2.1 e 4.2.1: vínculos de OID e valor, GetRequest e Response."
+        },
+        {
+          "titulo": "RFC 2578 — Structure of Management Information Version 2 (SMIv2)",
+          "url": "https://www.rfc-editor.org/rfc/rfc2578.html",
+          "localizador": "IETF, abril/1999, seções 1, 3, 3.1, 7, 7.1 e 7.5: módulos, descritores, definição e semântica dos objetos."
+        },
+        {
+          "titulo": "Conteúdo programático — conhecimentos específicos de Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SERVIÇOS E GERENCIAMENTO DE REDES, linhas 149–163; observação final, linhas 213–217."
+        },
+        {
+          "titulo": "Metadados das referências FCC consultadas",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; origem e arquivos locais."
+        },
+        {
+          "titulo": "FCC — TRF4/2007 — Analista Judiciário, Informática — Cargo I, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt",
+          "url": "https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "localizador": "Questão 46, página 8; extração local consultada, PDF de origem primária no órgão. Formato e terminologia."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 32, página 8; extração local consultada, cópia secundária no Qconcursos. Cinco afirmações sobre ferramenta."
+        }
+      ],
+      "autor": "/root/elaborador_10",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: RFCs 3411, 3416 e 2578 abertas por navegação em 2026-11-26; confrontados papéis, conteúdo dos módulos e representação das variáveis no protocolo.",
+        "Analítica: verificadas individualmente as cinco alternativas; somente uma preserva simultaneamente os papéis, a diferença entre definição e valor e o uso de OIDs nas mensagens.",
+        "Editorial: lidas as extrações reais da FCC, com conferência dos marcadores de página e dos metadados de origem em fontes.json.",
+        "Não houve execução de agente, gerente ou tráfego SNMP; a conferência técnica foi documental e analítica."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "TRF da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Informática",
+          "ano": 2007,
+          "caderno": "Cargo I, Tipo 001",
+          "questao": 46,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt, marcador PAGINA 8; PDF Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; origem primária no órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf",
+          "caracteristicaAplicada": "Comando afirmativo e objetivo sobre componentes de gerenciamento, com cinco alternativas comparáveis. A questão autoral aplica os papéis a uma consulta e à importação de definições, em vez de reproduzir a enumeração da prova.",
+          "limites": "Referência histórica de 2007, utilizada para formato e terminologia; a correção técnica foi conferida nas RFCs, e não inferida do gabarito antigo."
+        },
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 32,
+          "pagina": 8,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 8; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Contextualização de uma ferramenta seguida de cinco afirmações técnicas sobre seu funcionamento. Aplicação em alternativas de extensão próxima que confrontam definições, instrumentação e comunicação SNMP.",
+          "limites": "A origem é uma cópia no Qconcursos, não um download da FCC nem uma certificação oficial de integridade. O exemplo de Spring Cloud orienta apenas a construção editorial."
+        }
+      ]
+    },
+    {
+      "id": "BAN-DS-10-0002",
+      "numero": 39,
+      "materia": "Serviços e gerenciamento de redes",
+      "topico": "Administração e configuração de servidor Apache HTTP",
+      "versao": "v01",
+      "enunciado": "Um servidor Apache HTTP Server 2.4, em Linux, utiliza os trechos abaixo, nesta ordem, e não possui outros hosts virtuais:\n\nListen 80\nDocumentRoot \"/srv/www/base\"\n\n<VirtualHost *:80>\n    ServerName portal.intra.example\n    ServerAlias *.intra.example\n    DocumentRoot \"/srv/www/site-a\"\n</VirtualHost>\n\n<VirtualHost *:80>\n    ServerName relatorios.intra.example\n    DocumentRoot \"/srv/www/site-b\"\n</VirtualHost>\n\nOs três diretórios contêm um arquivo status.txt legível e autorizado para acesso HTTP. O servidor atende diretamente esses arquivos estáticos, sem regras adicionais de mapeamento ou redirecionamento.\n\nDuas requisições HTTP/1.1 independentes são recebidas no endereço 192.0.2.10, porta 80:\n\nI. GET /status.txt, com Host: relatorios.intra.example\nII. GET /status.txt, com Host: externo.example\n\nOs arquivos servidos em I e II são, respectivamente,",
+      "alternativas": {
+        "A": "/srv/www/site-b/status.txt e /srv/www/site-a/status.txt.",
+        "B": "/srv/www/site-b/status.txt e /srv/www/base/status.txt.",
+        "C": "/srv/www/site-a/status.txt e /srv/www/base/status.txt.",
+        "D": "/srv/www/site-a/status.txt e /srv/www/site-a/status.txt.",
+        "E": "/srv/www/site-b/status.txt e /srv/www/site-b/status.txt."
+      },
+      "gabarito": "D",
+      "justificativas": {
+        "A": "Não atende. II está correta, mas I é atendida pelo primeiro bloco: o nome corresponde ao ServerAlias *.intra.example. O ServerName exato do segundo bloco não prevalece sobre uma correspondência anterior de ServerAlias.",
+        "B": "Não atende. Em I, a correspondência anterior do ServerAlias seleciona site-a. Em II, a ausência de correspondência nominal leva ao primeiro host virtual de *:80, também site-a; não ao DocumentRoot global.",
+        "C": "Não atende. I seleciona site-a, mas II também utiliza site-a como host virtual padrão de *:80. O diretório base seria relevante para o servidor principal; neste endereço e porta há hosts virtuais correspondentes.",
+        "D": "Atende. Em I, *.intra.example corresponde ao Host e seleciona o primeiro bloco. Em II, nenhum nome corresponde e esse mesmo bloco é o padrão de *:80. Em ambos, /status.txt é anexado ao DocumentRoot /srv/www/site-a.",
+        "E": "Não atende. O segundo bloco não recebe prioridade por ter o nome exato nem por aparecer por último. I corresponde primeiro ao alias de site-a, e II recai no primeiro bloco como padrão; site-b não atende nenhuma das duas."
+      },
+      "resolucao": "Ambos os blocos pertencem ao conjunto correspondente a *:80. A seleção por nome segue a ordem da configuração, sem preferência de ServerName sobre ServerAlias ou de nome exato sobre curinga. Em I, o alias do primeiro bloco já corresponde ao Host, selecionando site-a. Em II, não há correspondência nominal, e o primeiro bloco é usado como padrão. Aplicando o DocumentRoot escolhido a /status.txt, as duas requisições mapeiam para /srv/www/site-a/status.txt.",
+      "fontes": [
+        {
+          "titulo": "Apache HTTP Server 2.4 — Name-based Virtual Host Support — fonte oficial XML",
+          "url": "https://raw.githubusercontent.com/apache/httpd/2.4.x/docs/manual/vhosts/name-based.xml",
+          "localizador": "Apache Software Foundation, ramo oficial 2.4.x, seções alg/defaultvhost (linhas 55–79) e using (linhas 168–173): ordem de seleção e host padrão. Navegação em 2026-11-26."
+        },
+        {
+          "titulo": "Apache HTTP Server 2.4 — core — fonte oficial XML",
+          "url": "https://raw.githubusercontent.com/apache/httpd/2.4.x/docs/manual/mod/core.xml",
+          "localizador": "Apache Software Foundation, ramo oficial 2.4.x, diretivas DocumentRoot (linhas 973–997) e ServerAlias (linhas 4139–4163): mapeamento do caminho e ausência de precedência especial para nomes exatos. Navegação em 2026-11-26."
+        },
+        {
+          "titulo": "Apache HTTP Server 2.4 — Name-based Virtual Host Support — manual HTML",
+          "url": "https://httpd.apache.org/docs/current/vhosts/name-based.html",
+          "localizador": "Conteúdo oficial retornado pela busca web, seções How the server selects the proper name-based virtual host e Using Name-based Virtual Hosts. A abertura direta retornou HTTP 404; a fundamentação foi confirmada no XML oficial acima."
+        },
+        {
+          "titulo": "Apache HTTP Server 2.4 — core — manual HTML",
+          "url": "https://httpd.apache.org/docs/2.4/mod/core.html",
+          "localizador": "Conteúdo oficial retornado pela busca web, diretivas DocumentRoot e ServerAlias. A abertura direta retornou HTTP 404; os trechos foram confirmados no XML oficial acima."
+        },
+        {
+          "titulo": "Apache HTTP Server 2.4 — An In-Depth Discussion of Virtual Host Matching",
+          "url": "https://httpd.apache.org/docs/2.4/vhosts/details.html",
+          "localizador": "Conteúdo primário retornado pela busca web em 2026-11-26, seções Phase 1 e Phase 2: seleção por endereço/porta e por nome. Abertura direta retornou HTTP 404; regras confirmadas no XML oficial."
+        },
+        {
+          "titulo": "Apache HTTP Server 2.4 — VirtualHost Examples",
+          "url": "https://httpd.apache.org/docs/2.4/vhosts/examples.html",
+          "localizador": "Conteúdo primário retornado pela busca web em 2026-11-26, exemplo de dois blocos <VirtualHost *:80>: primeiro bloco como padrão. Abertura direta retornou HTTP 404; regra confirmada no XML oficial."
+        },
+        {
+          "titulo": "Conteúdo programático — conhecimentos específicos de Desenvolvimento de Sistemas",
+          "arquivo": "Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt",
+          "localizador": "Bloco SERVIÇOS E GERENCIAMENTO DE REDES, linhas 149–163; observação final, linhas 213–217."
+        },
+        {
+          "titulo": "Metadados das referências FCC consultadas",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/fontes.json",
+          "localizador": "Registros trf4-2007-informatica-i001 e trt4-2022-ti-a14-001; origem e arquivos locais."
+        },
+        {
+          "titulo": "FCC — TRT4/2022 — Analista Judiciário, Tecnologia da Informação — A14, Tipo 001",
+          "arquivo": "Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt",
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "localizador": "Questão 43, página 10; extração local consultada, cópia secundária hospedada no Qconcursos. Fragmento técnico e alternativas de estrutura paralela."
+        }
+      ],
+      "autor": "/root/elaborador_10",
+      "dificuldadeEstimada": "média",
+      "verificacoes": [
+        "Documental: a documentação oficial Apache 2.4 foi consultada por busca web e, após falhas HTTP 404 na abertura dos manuais HTML, pelo XML oficial do repositório apache/httpd, ramo 2.4.x, em 2026-11-26.",
+        "Analítica: rastreadas as etapas endereço/porta, ordem de ServerName/ServerAlias, host padrão e concatenação com DocumentRoot; conferidos os cinco pares de caminhos.",
+        "Editorial: lida a questão 43 da extração TRT4/2022, página 10; origem secundária conferida em fontes.json e explicitada.",
+        "Não houve inicialização nem execução de Apache. O comportamento foi verificado por documentação e análise da configuração fornecida."
+      ],
+      "referenciasEstilo": [
+        {
+          "orgao": "TRT da 4ª Região",
+          "cargo": "Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação",
+          "ano": 2022,
+          "caderno": "A14, Tipo 001",
+          "questao": 43,
+          "pagina": 10,
+          "origem": "Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 10; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf",
+          "caracteristicaAplicada": "Apresentação de um fragmento técnico completo e pedido de sua consequência, com alternativas de mesma estrutura. A questão autoral apresenta configuração e requisições próprias e pede pares de caminhos de arquivos.",
+          "limites": "Exemplo sobre XML/JSON, usado para formato, não para validar Apache. Cópia secundária no Qconcursos; não se afirma download da FCC nem integridade oficial."
+        }
+      ]
+    }
+  ]
+}
+

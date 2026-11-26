@@ -1,0 +1,13 @@
+ID: BAN-DS-01-0003
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: Versionamento semântico
+
+ENUNCIADO
+Uma biblioteca segue a especificação Semantic Versioning 2.0.0 e está publicada na versão normal 3.7.4. Sua próxima publicação reunirá uma correção de defeito compatível com versões anteriores, uma nova operação compatível na API pública e a remoção de outra operação dessa API, ainda utilizada pelos clientes. Essa remoção exige alteração nos programas clientes para que continuem funcionando. O menor número de versão normal que expressa corretamente esse conjunto de mudanças é
+
+A) 3.8.0.
+B) 4.0.0.
+C) 3.7.5.
+D) 4.7.4.
+E) 4.0.1.

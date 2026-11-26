@@ -1,0 +1,32 @@
+ID: BAN-DS-04-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Determinar as duas contagens da linha indicada.
+
+RESOLUÇÃO
+A agência 30 não encontra uma conta na condição de junção. O LEFT JOIN preserva essa agência e preenche as colunas da conta com NULL. Seu grupo contém uma linha: COUNT(*) resulta em 1. Como c.id é NULL nessa linha, COUNT(c.id) resulta em 0. Portanto, a alternativa C atende ao comando.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: o LEFT JOIN mantém uma linha para a agência 30, mesmo sem conta correspondente. Por isso, COUNT(*) não resulta em zero nesse grupo.
+B) Não atende: inverte os efeitos das contagens. Há uma linha no grupo, mas o campo c.id dessa linha é nulo e não é contado por COUNT(c.id).
+C) Atende: a linha preservada pelo LEFT JOIN é contada por COUNT(*), enquanto COUNT(c.id) desconsidera seu valor nulo, produzindo 1 e 0.
+D) Não atende: COUNT(c.id) não conta a linha com c.id nulo. A ausência de conta não cria um identificador de conta não nulo.
+E) Não atende: GROUP BY a.id separa as agências. O grupo da agência 30 não contém as três linhas da tabela agencia.
+
+FONTES TÉCNICAS CONSULTADAS
+- PostgreSQL 15 - Table Expressions | https://www.postgresql.org/docs/15/queries-table-expressions.html | 7.2.1.1, Joined Tables, LEFT OUTER JOIN: preservação da linha esquerda sem correspondência
+- PostgreSQL 15 - Aggregate Functions | https://www.postgresql.org/docs/15/functions-aggregate.html | 9.21, tabela 9.58: count(*) e count(any)
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- TRF da 4ª Região | Analista Judiciário - Informática | 2007 | Caderno I, tipo 001 | Questão 50 | Página PDF 8
+  Origem: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Característica aplicada e limites: Apresentação de expressões SQL e seleção de uma conclusão entre cinco alternativas. Referência histórica de construção; o cenário, os dados e o cálculo desta questão são autorais.
+- TRT da 4ª Região | Analista Judiciário - Tecnologia da Informação | 2022 | Caderno A14, tipo 001 | Questão 43 | Página PDF 10
+  Origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica aplicada e limites: Uso de fragmento técnico seguido de alternativas de representação ou resultado. A cópia consultada é secundária, hospedada no Qconcursos; não se afirma obtenção direta da FCC.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental nas seções indicadas e análise manual da junção e do grupo da agência 30. Não foi declarada execução no PostgreSQL.
+
+PENDÊNCIAS
+Nenhum impedimento técnico identificado na elaboração. Aguardando as três auditorias de conformidade.

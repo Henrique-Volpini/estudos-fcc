@@ -1,0 +1,32 @@
+ID: BAN-DS-06-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a organização que atende aos requisitos de substituição dos mecanismos externos e preservação das regras no núcleo.
+
+RESOLUÇÃO
+Os mecanismos HTTP e de lote acionam o caso de uso por uma porta de entrada. O núcleo usa um contrato de persistência independente do mecanismo de armazenamento. Adaptadores SQL e em memória atendem a essa porta de saída; a troca ocorre na conexão das implementações, preservando as regras.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: coloca a interface no adaptador HTTP e cria dependência do núcleo em relação a esse mecanismo externo.
+B) Não atende: duplica as regras nos adaptadores de entrada, contrariando sua concentração no núcleo e exigindo manutenção em dois pontos.
+C) Atende: separa os contratos de interação das tecnologias externas e permite variar os adaptadores de entrada e de persistência.
+D) Não atende: a montagem de SQL no caso de uso mantém dependência de uma tecnologia de persistência, apesar da existência da porta.
+E) Não atende: inverte o papel da persistência, que é acionada pelo núcleo, e desloca regras do núcleo para o adaptador HTTP.
+
+FONTES TÉCNICAS E DOCUMENTAIS CONSULTADAS
+- Alistair Cockburn — Hexagonal architecture: the original 2005 article | https://alistair.cockburn.us/hexagonal-architecture | HaT Technical Report 2005.02, 04/09/2005; seções Intent, Motivation e Nature of the Solution: separação interior/exterior; protocolos de portas; adaptadores GUI, lote, SQL e banco em memória. Sustenta a resolução e a distinção dos distratores A–E.
+- Programa de conhecimentos específicos — Arquitetura de Sistemas | Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt | Bloco ARQUITETURA DE SISTEMAS, linhas 92–99; observação final sobre legislação, linhas 213–217. Nenhuma norma jurídica é cobrada nesta questão.
+- FCC — TRT4/2022 — Tecnologia da Informação — A14, tipo 001 | https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf | Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt | Página 8, questão 32; origem secundária conferida em Backend/Agents/conteudo/referencias-fcc/fontes.json. Referência de formato.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 32; página 8.
+- Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador === PAGINA 8 ===; PDF local homônimo; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação nesta questão autoral: Aplicação de cenário técnico delimitado seguido de cinco afirmações comparáveis sobre a organização proposta. A referência apresenta um mecanismo em cenário de microsserviços; o cenário, as restrições e os arranjos desta questão são autorais.
+- Limites da referência: Exemplo editorial de uma prova de 2022. A cópia foi obtida no Qconcursos, conforme fontes.json; não se afirma download da FCC ou integridade oficial certificada. O exemplo não demonstra frequência de cobrança nem valida os conceitos técnicos atuais.
+
+VERIFICAÇÕES REALIZADAS
+Documental: artigo original de Cockburn consultado por navegação em 26/11/2026; programa e referência FCC lidos em arquivos locais. Analítica: confrontados os cinco arranjos com os requisitos de regras únicas no núcleo e substituição de entrada/persistência. Não houve execução de aplicação ou código; trata-se de análise arquitetural.
+
+PENDÊNCIAS
+Nenhuma.

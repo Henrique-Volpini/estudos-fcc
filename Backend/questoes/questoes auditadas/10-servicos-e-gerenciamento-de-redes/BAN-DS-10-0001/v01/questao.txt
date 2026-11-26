@@ -1,0 +1,15 @@
+ID: BAN-DS-10-0001
+Versão: v01
+Número no SIM-001: 38
+Matéria: Serviços e gerenciamento de redes
+Tópico: SNMP: agentes, gerentes e MIBs
+
+ENUNCIADO
+Uma central de monitoramento consulta um roteador por SNMPv2c, utilizando OIDs numéricos em mensagens GetRequest. O roteador devolve os valores solicitados, mas a central ainda não dispõe do módulo MIB do fabricante. Um analista importa para a central esse módulo, compatível com os objetos implementados no roteador. Sobre os papéis dos componentes e o efeito dessa importação, é correto afirmar:
+
+A) A central atua como gerente, e a importação do módulo passa a habilitar os objetos correspondentes no agente do roteador.
+B) A central atua como agente, e o roteador assume o papel de gerente ao devolver os valores pedidos nas consultas.
+C) A central atua como gerente, e o módulo fornece definições para interpretar os objetos cujos valores são obtidos do agente.
+D) A central atua como gerente, e o módulo passa a fornecer os valores atuais dos objetos sem novas consultas ao roteador.
+E) O roteador atua como agente, e a importação faz suas respostas enviarem nomes simbólicos dos objetos em lugar dos OIDs.
+

@@ -1,0 +1,47 @@
+ID: BAN-DS-02-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Classificar corretamente as três atividades, preservando sua ordem.
+Responsável pela elaboração: /root/elaborador_02
+Dificuldade estimada: média
+
+RESOLUÇÃO
+I reúne avaliação de necessidades, definição de prioridades e acompanhamento da direção estabelecida: governança, no domínio EDM. II trata de organização e planejamento de informação e tecnologia: gestão, no domínio APO. III corresponde ao acompanhamento de desempenho e conformidade: gestão, no domínio MEA. O monitoramento também integra a gestão; sua presença não torna automaticamente uma atividade de governança.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: II corresponde a APO. BAI concentra definição, aquisição e implementação de soluções e sua integração aos processos de negócio.
+
+B) Não atende: I estabelece e acompanha a direção, em EDM; III verifica desempenho e conformidade, em MEA. Apenas II foi classificada adequadamente.
+
+C) Não atende: III corresponde a MEA. DSS trata da entrega operacional e do suporte a serviços, inclusive segurança.
+
+D) Atende: I é governança em EDM; II é gestão em APO; III é gestão em MEA.
+
+E) Não atende: I está em EDM, II em APO e III em MEA. A alternativa confunde a direção estratégica com o monitoramento de gestão e desloca o planejamento para BAI.
+
+FONTES TÉCNICAS CONSULTADAS
+- Effective Capability and Maturity Assessment Using COBIT 2019 — ISACA, Emeka Elue, 27/07/2020
+  URL: https://www.isaca.org/resources/news-and-trends/industry-news/2020/effective-capability-and-maturity-assessment-using-cobit-2019
+  Localizador: Introdução, parágrafos e lista entre «COBIT 2019 provides guidance...» e «Management plans, builds, runs and monitors...»; leitura integral desse trecho em 26/11/2026.
+  Fundamentação: Distinção entre avaliação, direção e monitoramento de governança e planejamento, construção, execução e monitoramento de gestão.
+
+- Employing COBIT 2019 for Enterprise Governance Strategy — ISACA, 2019
+  URL: https://www.isaca.org/resources/news-and-trends/industry-news/2019/employing-cobit-2019-for-enterprise-governance-strategy
+  Localizador: Seção «Governance and Management Objectives in COBIT 2019», lista dos cinco domínios e descrições de EDM, APO, BAI, DSS e MEA; leitura em 26/11/2026.
+  Fundamentação: EDM como domínio de governança e os quatro domínios de gestão; organização e planejamento em APO, implementação em BAI, entrega e suporte em DSS e monitoramento e conformidade em MEA.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 59; página 14.
+- Origem verificável: Extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 14, questão 59. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação autoral: O exemplo apresenta contexto de uma analista estudando COBIT 2019 e pede uma associação «correta e respectivamente» em cinco alternativas paralelas. A questão autoral usa três atividades organizacionais e associações de domínios na mesma ordem, cobrando outro recorte: governança e gestão.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, identificada como prova FCC; não se afirma download direto da FCC nem integridade oficial. A referência comprova um exemplo de construção editorial, não uma frequência da banca ou a correção técnica atual; conteúdo e alternativas autorais.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: páginas técnicas oficiais da ISACA abertas por navegação e trechos de definições e dos cinco domínios efetivamente lidos em 26/11/2026; não se atribui leitura integral do manual comercial.
+- Analítica: associação de cada atividade ao seu propósito e conferência das cinco combinações; exatamente uma preserva as três classificações.
+- Editorial: leitura das questões 59, página 14, e da identificação do caderno TRT4/2022 na extração local; uso apenas da questão 59 como referência de construção deste item.
+- Não houve execução de código ou simulação de processo; a conferência foi documental e analítica.
+
+PENDÊNCIAS
+Auditorias de estilo FCC, pistas de resposta e redação/conformidade ainda não realizadas. Nenhuma pendência de elaboração identificada; a conclusão do elaborador não equivale a aprovação.

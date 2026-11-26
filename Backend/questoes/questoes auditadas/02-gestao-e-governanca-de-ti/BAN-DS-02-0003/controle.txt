@@ -1,0 +1,27 @@
+ID: BAN-DS-02-0003
+Matéria: 02 — Gestão e Governança de Tecnologia da Informação
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/02-gestao-e-governanca-de-ti.txt
+Tópico do conteúdo: gestão de níveis de serviço (SLAs e OLAs);
+Objetivo da questão: Reconhecer OLAs como compromissos internos e analisar sua compatibilidade com o prazo de um SLA no fluxo sequencial declarado.
+Tarefa de origem: SIM-001 — questão 7 do plano; produção autoral real atribuída ao elaborador 02.
+Responsável pela elaboração: /root/elaborador_02
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26 — v01 — elaboração concluída por /root/elaborador_02, com fontes primárias consultadas por navegação, referência FCC real lida e análise de A a E; entrega para auditoria, sem autoaprovação.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/02-gestao-e-governanca-de-ti/BAN-DS-02-0003 -> Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003
+ESTILO_FCC: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/02-gestao-e-governanca-de-ti/BAN-DS-02-0003/v01/parecer-redacao-e-conformidade.txt

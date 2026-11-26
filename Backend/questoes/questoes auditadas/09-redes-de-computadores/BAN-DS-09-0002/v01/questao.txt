@@ -1,0 +1,15 @@
+ID: BAN-DS-09-0002
+Versão: v01
+Matéria: Redes de computadores
+Tópico: IPv4 e endereçamento de rede
+
+ENUNCIADO
+Um Analista deve dividir o bloco IPv4 10.48.12.0/24 em sub-redes de mesmo tamanho. Cada sub-rede deve oferecer, no mínimo, 25 endereços atribuíveis a interfaces, reservando um endereço para identificar a rede e outro para broadcast. Para reduzir o desperdício, será adotado o prefixo mais longo que atenda a essa quantidade.
+
+Uma estação receberá o endereço 10.48.12.77. A máscara, o endereço de rede e o endereço de broadcast da sub-rede dessa estação são, correta e respectivamente,
+
+A) 255.255.255.224 — 10.48.12.64 — 10.48.12.95.
+B) 255.255.255.240 — 10.48.12.64 — 10.48.12.79.
+C) 255.255.255.192 — 10.48.12.64 — 10.48.12.127.
+D) 255.255.255.224 — 10.48.12.64 — 10.48.12.94.
+E) 255.255.255.224 — 10.48.12.32 — 10.48.12.63.

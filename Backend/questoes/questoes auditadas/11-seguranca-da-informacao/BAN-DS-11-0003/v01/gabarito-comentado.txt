@@ -1,0 +1,34 @@
+ID: BAN-DS-11-0003
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar a conclusão compatível com os dispositivos da LGPD sobre os dados do cenário.
+
+RESOLUÇÃO
+A associação depende de informação adicional mantida separadamente pelo controlador, situação de pseudonimização descrita no art. 13, § 4º. Os titulares permanecem identificáveis por meios próprios do controlador; retirar nome e CPF não torna esses registros anônimos. O art. 12 impede afastar a natureza pessoal com base em anonimização reversível pelos meios ali previstos.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: a retirada de identificadores diretos não basta se a identificação continua possível com a tabela mantida pelo controlador.
+B) Atende: a tabela separada caracteriza a pseudonimização do art. 13, § 4º, e mantém possível identificar os titulares.
+C) Não atende: a identificabilidade não depende de a tabela ser efetivamente consultada; a possibilidade de associação já permanece.
+D) Não atende: o art. 12 considera expressamente a reversão por meios próprios, além da reversão com esforços razoáveis.
+E) Não atende: o art. 13 admite, sempre que possível, anonimização ou pseudonimização; não impõe exclusivamente anonimização integral.
+
+FONTES TÉCNICAS CONSULTADAS
+- Presidência da República — Lei nº 13.709, de 14 de agosto de 2018 (LGPD), texto oficial com alterações. https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Localizador e suporte: Art. 5º, I, III e XI; art. 12, caput e § 1º; art. 13, caput e § 4º. Dispositivos consultados em 26/11/2026: identificação, anonimização, reversibilidade e pseudonimização em estudos de saúde pública. Não se cobra base legal ou autorização de divulgação.
+- Programa-base do projeto — Segurança da Informação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e suporte: - Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº 13.709/2018): fundamentos, princípios, bases legais, tratamento pelo Poder Público, direitos dos titulares, agentes de tratamento e papel da ANPD;
+- anonimização e pseudonimização.
+- FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e suporte: Questão(ões) 36, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 36; página 9.
+- Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Comando de conclusão correta seguido de cinco afirmações técnicas comparáveis.
+- Aplicação nesta questão autoral: Cenário autoral seguido de conclusão correta, com alternativas que confrontam uma classificação e sua consequência; o conteúdo jurídico foi conferido diretamente na lei.
+- Limites da referência: Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+Documental: navegação no texto oficial da LGPD no Planalto em 26/11/2026, conferindo os arts. 5º, 12 e 13. Analítica: cenário delimitado ao estudo de saúde pública do art. 13 e associação possível somente pela tabela segregada; exame das cinco alternativas. Não houve processamento de dados pessoais reais.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardam-se as auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

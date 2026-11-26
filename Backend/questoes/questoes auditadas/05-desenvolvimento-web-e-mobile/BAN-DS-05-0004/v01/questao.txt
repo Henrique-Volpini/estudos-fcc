@@ -1,0 +1,31 @@
+ID: BAN-DS-05-0004
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: Contratos de API OpenAPI: localização e obrigatoriedade de parâmetros
+
+ENUNCIADO
+Uma equipe documenta uma operação GET em OpenAPI 3.0.3 para consultar o cliente identificado no caminho /clientes/{clienteId}. A operação também aceita, opcionalmente, detalhes=true na consulta da URL para ampliar os dados retornados. Foram declarados os seguintes parâmetros:
+
+parameters:
+  - name: clienteId
+    in: path
+    required: false
+    schema:
+      type: integer
+  - name: detalhes
+    in: query
+    required: false
+    schema:
+      type: boolean
+
+Para que essas declarações atendam à especificação e preservem a intenção descrita, as configurações de localização e obrigatoriedade deverão ser
+
+A) clienteId em query, required: false; detalhes em query, required: false.
+
+B) clienteId em path, required: false; detalhes em query, required: true.
+
+C) clienteId em path, required: true; detalhes em query, required: false.
+
+D) clienteId em path, required: true; detalhes em path, required: true.
+
+E) clienteId em header, required: true; detalhes em query, required: false.

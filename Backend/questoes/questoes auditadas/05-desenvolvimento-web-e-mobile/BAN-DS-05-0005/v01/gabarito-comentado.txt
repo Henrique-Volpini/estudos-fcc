@@ -1,0 +1,43 @@
+ID: BAN-DS-05-0005
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Selecionar a alternativa que atende ao comando
+
+RESOLUÇÃO
+O tipo complexo permite de zero a três elementos item e exige o atributo codigo com valor do tipo integer. A satisfaz essas condições mesmo sem filhos. As demais opções violam, respectivamente, a obrigatoriedade do atributo, o máximo de ocorrências, o tipo do atributo ou o conteúdo permitido.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Correta: codigo está presente com valor inteiro, e a ausência de item é permitida por minOccurs igual a zero.
+
+B) Incorreta: o atributo codigo é obrigatório e não foi informado, embora o elemento item esteja permitido.
+
+C) Incorreta: há quatro ocorrências de item, excedendo o limite de três definido por maxOccurs.
+
+D) Incorreta: sete não é uma representação lexical válida para o tipo xs:integer do atributo codigo.
+
+E) Incorreta: extra não integra o conteúdo permitido pelo tipo complexo, que admite somente as ocorrências declaradas de item.
+
+FONTES TÉCNICAS CONSULTADAS
+- W3C — XML Schema Part 0: Primer, Second Edition
+  URL: https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints
+  Localizador: Seções 2.2 e 2.2.1: modelos de conteúdo, minOccurs, maxOccurs e use required.
+- W3C — XML Schema Part 2: Datatypes, Second Edition
+  URL: https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/datatypes.html#integer
+  Localizador: Seção 3.3.13 integer, especialmente a representação lexical.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+Órgão: TRT da 4ª Região
+Cargo: Analista Judiciário — Tecnologia da Informação
+Ano: 2022
+Caderno: A14, Tipo 001
+Questão: 43
+Página PDF: 10
+Origem: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf — cópia secundária do Qconcursos.
+Característica aplicada: Fragmento XML fornecido no enunciado e cinco alternativas em notação técnica para seleção de uma representação válida. O conteúdo XSD, os documentos e a tarefa de validação são autorais.
+Limites: comparação editorial pontual; a cópia de 2022 não foi obtida diretamente na FCC. A referência não certifica conteúdo técnico nem calibração estatística.
+
+VERIFICAÇÕES REALIZADAS
+Análise documental de XSD 1.0 e inspeção de cada documento quanto a conteúdo, ocorrências, atributo e tipo. Não se declarou execução de um validador XSD.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando as três avaliações de conformidade; sem autoaprovação.

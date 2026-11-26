@@ -1,0 +1,28 @@
+ID: BAN-DS-04-0003
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Identificar o comportamento das consultas nas condições de isolamento declaradas.
+
+RESOLUÇÃO
+Em READ COMMITTED, cada SELECT comum vê dados confirmados antes de seu próprio início. O comando do passo 3 ainda vê saldo 1000; o comando do passo 5, iniciado depois da confirmação de B, vê saldo 1300. A mudança entre consultas da mesma transação é permitida nesse isolamento.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: no segundo SELECT, a alteração de B ainda não foi confirmada e não fica visível para A nesse isolamento.
+B) Atende: o segundo comando vê o valor confirmado anterior; após o COMMIT de B, o terceiro comando obtém uma nova visão e vê 1300.
+C) Não atende: READ COMMITTED não conserva para todos os comandos a visão do primeiro SELECT da transação.
+D) Não atende: o SELECT comum descrito lê a versão visível dos dados; ele não aguarda a confirmação dessa atualização como se tivesse pedido o bloqueio da linha.
+E) Não atende: leituras não repetíveis são possíveis nesse isolamento e não causam, apenas por ocorrerem, esse aborto do terceiro SELECT.
+
+FONTES TÉCNICAS CONSULTADAS
+- PostgreSQL 15 - Transaction Isolation | https://www.postgresql.org/docs/15/transaction-iso.html | 13.2.1, Read Committed Isolation Level; tabela 13.1 e comportamento de SELECT sem FOR UPDATE/SHARE
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- TRT da 4ª Região | Analista Judiciário - Tecnologia da Informação | 2022 | Caderno A14, tipo 001 | Questão 32 | Página PDF 8
+  Origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica aplicada e limites: Contextualização técnica e seleção de uma afirmação correta sobre o comportamento do mecanismo. O cenário concorrente é novo; a referência editorial é uma cópia secundária, não uma comprovação de incidência.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental da sequência temporal, das hipóteses de visibilidade e da ausência de bloqueio explícito. Não houve simulação declarada de sessões PostgreSQL.
+
+PENDÊNCIAS
+Nenhum impedimento técnico identificado na elaboração. Aguardando as três auditorias de conformidade.

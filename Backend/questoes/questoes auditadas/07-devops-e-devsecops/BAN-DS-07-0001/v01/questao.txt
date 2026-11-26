@@ -1,0 +1,15 @@
+ID: BAN-DS-07-0001
+Versão: v01
+Matéria: DevOps e DevSecOps
+Tópico: Integração contínua e entrega contínua
+
+ENUNCIADO
+Uma equipe incorpora pequenas alterações ao repositório compartilhado várias vezes ao dia. Cada incorporação aciona automaticamente a construção da aplicação e a execução de testes. As versões que passam pelas verificações são implantadas automaticamente em homologação e ficam prontas para produção. A implantação em produção usa o mesmo processo automatizado, mas só é iniciada após aprovação expressa de um responsável pelo negócio.
+
+Na distinção entre integração contínua, entrega contínua e implantação contínua, esse fluxo caracteriza
+
+A) integração contínua e implantação contínua, porque uma aprovação de negócio pode compor a promoção automática de cada versão para produção.
+B) apenas integração contínua, porque a entrega contínua exige publicar automaticamente em produção toda alteração aprovada nos testes.
+C) integração contínua e entrega contínua, porque uma versão pode permanecer pronta para produção até a autorização de sua implantação.
+D) apenas entrega contínua, porque a integração contínua exige executar os testes antes da incorporação do código ao repositório compartilhado.
+E) apenas implantação contínua, porque a publicação automática em homologação é suficiente para caracterizar a implantação contínua de uma aplicação.

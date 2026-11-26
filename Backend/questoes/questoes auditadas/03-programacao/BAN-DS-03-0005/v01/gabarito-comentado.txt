@@ -1,0 +1,30 @@
+ID: BAN-DS-03-0005
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+Na comparação ==, a string numérica e o inteiro são comparados numericamente, resultando em verdadeiro e exibindo S. A comparação === exige igualdade de valor e de tipo; os tipos string e int diferem, resultando em falso e exibindo N. Os dois echo produzem SN, sem separador.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende: == resulta em verdadeiro para os valores fornecidos e === resulta em falso por causa dos tipos diferentes.
+B) Não atende: a segunda comparação é estrita e não converte a string em inteiro para torná-los idênticos.
+C) Não atende: inverte os resultados; a comparação com coerção é verdadeira e a comparação estrita é falsa.
+D) Não atende: a primeira comparação aceita a igualdade numérica entre a string numérica e o inteiro.
+E) Não atende: esses operandos são comparáveis pelos operadores apresentados, que retornam booleanos; essa comparação não lança TypeError.
+
+FONTES TÉCNICAS CONSULTADAS
+- PHP Manual — Comparison Operators | https://www.php.net/manual/en/language.operators.comparison.php | Tabela de == e === e regra de comparação numérica entre número e string numérica; aplicável ao PHP 8.2.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 42; página PDF 10.
+- Origem verificável: Cópia secundária em Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação: Linguagem explicitamente identificada, fragmento curto e cinco alternativas de resultado técnico. Os valores, a linguagem e a lógica da questão são autorais.
+- Limites: Referência editorial de uma amostra de 2022, obtida em cópia secundária; não constitui certificação de padrão universal nem de incidência no Banestes.
+
+VERIFICAÇÕES REALIZADAS
+Análise das duas expressões conforme o manual oficial: comparação numérica com == e identidade de valor/tipo com ===. Não houve execução de interpretador PHP.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

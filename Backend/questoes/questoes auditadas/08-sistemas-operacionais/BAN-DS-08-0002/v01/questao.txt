@@ -1,0 +1,23 @@
+ID: BAN-DS-08-0002
+Versão: v01
+Matéria: Sistemas Operacionais
+Tópico: Sincronização, deadlock e starvation
+
+ENUNCIADO
+Em uma aplicação, duas threads executam repetidamente operações que exigem os mutexes R e S, cada um com um único detentor. Em uma execução, T1 mantém R e está bloqueada à espera de S, enquanto T2 mantém S e está bloqueada à espera de R. Cada thread só libera seus mutexes depois de obter ambos e concluir a operação. Não há timeouts, cancelamentos nem liberação forçada de mutexes.
+
+Para futuras execuções, iniciadas com os mutexes livres, propõe-se que ambas adquiram sempre R antes de S, sem alterar a política de escolha entre threads que disputam um mutex.
+
+Considere as afirmações:
+
+I. O estado observado caracteriza deadlock entre T1 e T2.
+II. A ordem de aquisição proposta impede a espera circular envolvendo R e S.
+III. A ordem de aquisição proposta, por si só, garante ausência de starvation na disputa pelos mutexes.
+
+Está correto o que se afirma em
+
+A) I, apenas.
+B) I e II, apenas.
+C) I e III, apenas.
+D) II e III, apenas.
+E) I, II e III.

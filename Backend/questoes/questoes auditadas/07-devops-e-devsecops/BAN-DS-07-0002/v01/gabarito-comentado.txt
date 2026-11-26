@@ -1,0 +1,51 @@
+ID: BAN-DS-07-0002
+Versão: v01
+Gabarito proposto: A
+O que o comando pede: Determinar o conteúdo final do arquivo em beta e gama e selecionar a explicação compatível.
+
+RESOLUÇÃO
+O estado deve ser separado por container. Inicialmente, alfa e beta leem original a partir da imagem. A escrita em alfa produz ajustado apenas na visão de seu sistema de arquivos; beta conserva original. Ao remover alfa, sua camada gravável é descartada. gama recebe uma nova camada gravável sobre a imagem, que ainda contém original. Assim, a leitura final em beta e gama produz original. As exclusões de montagens e rotinas de escrita afastam mecanismos que poderiam compartilhar dados ou alterar o resultado.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Atende. A alteração está associada à camada gravável de alfa. beta mantém a leitura do conteúdo fornecido pela imagem; gama é criado com uma nova camada gravável sobre a mesma imagem. Nenhum dos dois recebe a modificação particular de alfa, portanto ambos leem original.
+
+B) Não atende. Remover um container não incorpora suas alterações à imagem. A camada gravável de alfa é descartada, e gama continua partindo da imagem original. Produzir outra imagem a partir de mudanças exigiria uma operação específica, expressamente ausente no cenário.
+
+C) Não atende. A execução simultânea não implica compartilhar a camada gravável: cada container tem a sua. Sem armazenamento compartilhado e sem outra escrita, beta não recebe ajustado. A parte relativa a gama está correta, mas não corrige o resultado incorreto atribuído a beta.
+
+D) Não atende. A escrita em arquivo originado da imagem é refletida na camada gravável do container que escreve, preservando as camadas da imagem. O distrator confunde compartilhamento de camadas somente para leitura com compartilhamento das alterações realizadas em execução.
+
+E) Não atende. A remoção de alfa descarta o estado particular desse container e não apaga o arquivo da imagem. A versão original continua disponível para beta e gama. O enunciado trata de modificação local de conteúdo, sem qualquer operação de remoção ou reconstrução da imagem.
+
+FONTES TÉCNICAS CONSULTADAS
+- Docker Docs — Storage
+  URL: https://docs.docker.com/engine/storage/
+  Localizador e alcance: Container layer basics, especialmente camadas imutáveis da imagem, camada gravável exclusiva por container e descarte na destruição. Consulta por navegação em 26/11/2026. Sustenta os resultados de beta e gama e a análise de A, B e E.
+- Docker Docs — Storage drivers
+  URL: https://docs.docker.com/engine/storage/drivers/
+  Localizador e alcance: Container and layers; The copy-on-write (CoW) strategy; Copying makes containers efficient, especialmente dados independentes por container e modificação de arquivo preexistente. Consulta por navegação em 26/11/2026. Sustenta a análise de C e D.
+- Docker Learn — What is a container?
+  URL: https://docs.docker.com/learn/content/what-is-a-container/
+  Localizador e alcance: What an image is: imutabilidade, camadas e distinção entre imagem e camada gravável; página publicada e verificada em 21/10/2026. A antiga URL what-is-an-image redirecionou para esta página na consulta de 26/11/2026.
+- FCC — TRT4/2022, Tecnologia da Informação, A14 Tipo 001 — referência editorial
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador e alcance: Questão 43, página 10 da extração e do caderno: apresentação de dados técnicos concretos e escolha da representação compatível. PDF local homônimo; origem secundária declarada em referenciasEstilo.
+- Programa de conhecimentos específicos — Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e alcance: Bloco DEVOPS E DEVSECOPS, linhas 101–114; observação final lida. Delimita o conteúdo, sem impor versão de Docker ou Kubernetes para estes recortes.
+- Metadados das referências FCC locais
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador e alcance: Registro trt4-2022-ti-a14-001: URL, origem copia_secundaria, arquivo PDF e data de consulta. O SHA-256 identifica a cópia local; não é autenticação oficial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 43; página 10.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, extração local do PDF homônimo; cópia secundária hospedada no Qconcursos, conforme fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não é download direto da FCC e o hash local não representa assinatura de integridade oficial.
+- Característica observada e aplicação nesta questão autoral: O exemplo fornece dados técnicos suficientes e solicita selecionar a representação que os preserva. Aplicou-se a apresentação de um estado inicial e a seleção do resultado compatível, acompanhada da explicação técnica; a transformação e o cenário Docker são autorais.
+- Limites da referência: O exemplo foi usado somente como referência editorial localizada; não certifica correção técnica atual, frequência do formato ou aprovação da questão autoral.
+
+VERIFICAÇÕES REALIZADAS
+Verificação documental nas páginas oficiais de Docker sobre camadas, armazenamento e imagens; rastreamento analítico dos estados de alfa, beta e gama; exame individual de A–E. Consulta do exemplo FCC Q43, p.10, e dos metadados de origem. Não houve execução de Docker, build, commit ou remoção de containers. O texto de questão e o JSON foram gerados dos mesmos dados e conferidos por leitura e comparação estrutural.
+
+PENDÊNCIAS
+Nenhuma de elaboração. As auditorias de estilo FCC, pistas de resposta e redação/conformidade ainda serão realizadas pelos respectivos responsáveis. Esta entrega não contém aprovação.

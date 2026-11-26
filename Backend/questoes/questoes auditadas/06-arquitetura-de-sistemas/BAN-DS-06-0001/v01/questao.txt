@@ -1,0 +1,13 @@
+ID: BAN-DS-06-0001
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: Arquitetura hexagonal: portas e adaptadores
+
+ENUNCIADO
+Uma instituição utiliza o mesmo caso de uso de concessão de limite por uma API HTTP e por processamento em lote. As regras de concessão devem permanecer no núcleo da aplicação, sem duplicação, e o caso de uso deve ignorar detalhes de HTTP e SQL. Também é necessário substituir a persistência SQL por uma implementação em memória durante a verificação dessas regras, sem alterar o caso de uso. Na arquitetura hexagonal, uma organização compatível com esses requisitos consiste em
+
+A) definir a interface do caso de uso no adaptador HTTP e fazer o núcleo depender desse adaptador, permitindo que o processamento em lote reutilize a interface.
+B) manter a coordenação do caso de uso no núcleo e distribuir as regras de concessão entre os adaptadores HTTP e de lote, compartilhando a persistência SQL.
+C) expor o caso de uso por uma porta de entrada e expressar a persistência por uma porta de saída do núcleo, conectando implementações externas por adaptadores.
+D) definir uma porta de persistência no núcleo e manter no caso de uso a montagem de instruções SQL, implementando essa porta também para o armazenamento em memória.
+E) utilizar a implementação em memória como porta de entrada e delegar ao adaptador HTTP a execução das regras e o acionamento da persistência do caso de uso.

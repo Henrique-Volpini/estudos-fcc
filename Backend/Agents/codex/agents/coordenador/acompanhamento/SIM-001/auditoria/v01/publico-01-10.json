@@ -1,0 +1,132 @@
+[
+  {
+    "id": "BAN-DS-01-0001",
+    "numero": 1,
+    "versao": "v01",
+    "enunciado": "Uma equipe desenvolve um aplicativo bancário segundo o Scrum Guide 2020. Ao final de uma Sprint, precisa discutir uma mudança nas necessidades dos clientes e os resultados obtidos no produto. Também identificou falhas recorrentes de comunicação e integração durante o trabalho. A utilização dos eventos Sprint Review e Sprint Retrospective está adequada ao Guia quando a equipe, respectivamente,",
+    "alternativas": {
+      "A": "define a meta da próxima Sprint com os stakeholders e planeja melhorias em suas interações e processos.",
+      "B": "inspeciona os resultados com os stakeholders para adaptar o produto e define a meta da próxima Sprint.",
+      "C": "inspeciona os resultados com os stakeholders para adaptar o produto e planeja melhorias em suas interações e processos.",
+      "D": "planeja melhorias em suas interações e processos e inspeciona os resultados com os stakeholders para adaptar o produto.",
+      "E": "inspeciona o progresso diário em direção à meta da Sprint e ajusta o plano de trabalho do próximo dia."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0002",
+    "numero": 2,
+    "versao": "v01",
+    "enunciado": "Em um diagrama de classes UML 2.5, existe uma associação binária simples entre Agencia e Carteira. A multiplicidade escrita junto à extremidade Agencia é 0..1; junto à extremidade Carteira, é 1..*. Considere exclusivamente essas restrições de multiplicidade. Cada alternativa descreve todos os objetos existentes e todas as ligações entre eles. A configuração compatível com o modelo é:",
+    "alternativas": {
+      "A": "Uma agência sem carteiras e duas carteiras sem ligação com agência.",
+      "B": "Duas agências ligadas à mesma carteira, sem outras carteiras ou ligações.",
+      "C": "Duas agências, cada uma ligada a uma carteira distinta, e uma terceira agência sem carteiras.",
+      "D": "Uma agência ligada a duas carteiras, sendo uma delas também ligada a uma segunda agência.",
+      "E": "Uma agência ligada a duas carteiras e uma terceira carteira sem ligação com agência."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0003",
+    "numero": 3,
+    "versao": "v01",
+    "enunciado": "Uma biblioteca segue a especificação Semantic Versioning 2.0.0 e está publicada na versão normal 3.7.4. Sua próxima publicação reunirá uma correção de defeito compatível com versões anteriores, uma nova operação compatível na API pública e a remoção de outra operação dessa API, ainda utilizada pelos clientes. Essa remoção exige alteração nos programas clientes para que continuem funcionando. O menor número de versão normal que expressa corretamente esse conjunto de mudanças é",
+    "alternativas": {
+      "A": "3.8.0.",
+      "B": "4.0.0.",
+      "C": "3.7.5.",
+      "D": "4.7.4.",
+      "E": "4.0.1."
+    }
+  },
+  {
+    "id": "BAN-DS-01-0004",
+    "numero": 4,
+    "versao": "v01",
+    "enunciado": "Durante a especificação de um sistema bancário, uma analista registrou os seguintes requisitos:\n\nI. O sistema deve emitir um comprovante de transferência contendo o identificador da operação, a data e o valor transferido.\nII. O sistema deve permitir ao cliente cancelar um agendamento ainda não executado e apresentar a confirmação do cancelamento.\nIII. Sob o perfil de carga homologado de 1.000 usuários simultâneos, pelo menos 95% das consultas de saldo devem apresentar resposta em até 2 segundos.\nIV. O serviço de consulta de saldo deve apresentar disponibilidade mensal de, no mínimo, 99,9%, considerando todas as interrupções no mês.\n\nQuanto à natureza do que é exigido, são requisitos funcionais e requisitos de qualidade, respectivamente,",
+    "alternativas": {
+      "A": "I e III; II e IV.",
+      "B": "II e IV; I e III.",
+      "C": "III e IV; I e II.",
+      "D": "I e II; III e IV.",
+      "E": "I e IV; II e III."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0001",
+    "numero": 5,
+    "versao": "v01",
+    "enunciado": "Em uma organização que adota o COBIT 2019, foram descritas as seguintes atividades:\n\nI. O colegiado responsável examina necessidades das partes interessadas, fixa prioridades para investimentos de informação e tecnologia e acompanha os resultados em relação à direção estabelecida.\nII. A unidade de TI organiza recursos e planos para executar a direção recebida.\nIII. Uma equipe verifica o desempenho de informação e tecnologia em relação a metas internas e sua conformidade com requisitos externos.\n\nA classificação das atividades I, II e III nos domínios do COBIT 2019 é, correta e respectivamente,",
+    "alternativas": {
+      "A": "governança (EDM); gestão (BAI); gestão (MEA).",
+      "B": "gestão (APO); gestão (APO); governança (EDM).",
+      "C": "governança (EDM); gestão (APO); gestão (DSS).",
+      "D": "governança (EDM); gestão (APO); gestão (MEA).",
+      "E": "gestão (MEA); gestão (BAI); governança (EDM)."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0002",
+    "numero": 6,
+    "versao": "v01",
+    "enunciado": "Uma organização compara duas soluções de infraestrutura, X e Y, com capacidade e níveis de serviço equivalentes, para uso durante três anos. Foram estimados os seguintes custos, em reais:\n\nItem                                      X             Y\nAquisição e instalação, uma única vez     140.000       200.000\nOperação, por ano                         30.000        16.000\nManutenção e suporte, por ano             20.000         8.000\n\nOs custos anuais incidem em cada um dos três anos. Não há outros custos, valor residual, inflação ou desconto financeiro a considerar. Com base no custo total de propriedade (TCO), a solução de menor custo no período e a diferença entre os TCOs são, respectivamente,",
+    "alternativas": {
+      "A": "X e R$ 60.000,00.",
+      "B": "Y e R$ 26.000,00.",
+      "C": "X e R$ 18.000,00.",
+      "D": "Y e R$ 78.000,00.",
+      "E": "Y e R$ 18.000,00."
+    }
+  },
+  {
+    "id": "BAN-DS-02-0003",
+    "numero": 7,
+    "versao": "v01",
+    "enunciado": "Uma prestadora de serviços de TI acordou com um cliente externo o prazo máximo de quatro horas para tratar um incidente, contado da abertura à conclusão da validação do restabelecimento. Para apoiar esse atendimento, pactuou com suas equipes internas os limites de 40 minutos para triagem, 150 minutos para restabelecimento e 70 minutos para validação.\n\nAs etapas ocorrem sucessivamente, sem sobreposição, intervalos ou pausas. Cada limite interno é contado do início da respectiva etapa, e todos os prazos usam minutos corridos. Na gestão de níveis de serviço, esses compromissos internos são",
+    "alternativas": {
+      "A": "OLAs compatíveis com o prazo global, pois o limite de cada etapa, considerado isoladamente, é inferior às quatro horas acordadas com o cliente.",
+      "B": "SLAs compatíveis com o prazo global, pois a passagem entre equipes reinicia a contagem das quatro horas acordadas com o cliente.",
+      "C": "OLAs incompatíveis com o prazo global, pois todas as metas internas podem ser cumpridas e o atendimento, ainda assim, alcançar 260 minutos.",
+      "D": "contratos de apoio compatíveis com o prazo global, pois estabelecem metas de fornecedores externos para executar as etapas do atendimento.",
+      "E": "OLAs compatíveis com o prazo global, pois a soma dos limites internos amplia automaticamente o prazo acordado com o cliente para 260 minutos."
+    }
+  },
+  {
+    "id": "BAN-DS-03-0001",
+    "numero": 8,
+    "versao": "v01",
+    "enunciado": "Em Python 3.12, um desenvolvedor executou o código abaixo para preparar uma lista de trabalho:\n\norigem = [[1], [2]]\ncopia = origem[:]\ncopia[0].append(3)\ncopia.append([4])\nprint(origem)\n\nA saída produzida por esse código é",
+    "alternativas": {
+      "A": "[[1], [2], [4]]",
+      "B": "[[1, 3], [2], [4]]",
+      "C": "[[1, 3], [2]]",
+      "D": "[[1], [2]]",
+      "E": "[[1, 3], [2, 4]]"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0002",
+    "numero": 9,
+    "versao": "v01",
+    "enunciado": "Considere o programa Java 21 abaixo:\n\npublic class Exemplo {\n    static class Base {\n        String nome() { return \"base\"; }\n    }\n    static class Derivada extends Base {\n        @Override String nome() { return \"derivada\"; }\n    }\n    static String identificar(Base item) { return \"base\"; }\n    static String identificar(Derivada item) { return \"derivada\"; }\n    public static void main(String[] args) {\n        Base item = new Derivada();\n        System.out.print(item.nome() + \"/\" + identificar(item));\n    }\n}\n\nO texto exibido ao executar o método main é",
+    "alternativas": {
+      "A": "base/base",
+      "B": "derivada/derivada",
+      "C": "base/derivada",
+      "D": "Não há saída, pois a chamada identificar(item) é ambígua.",
+      "E": "derivada/base"
+    }
+  },
+  {
+    "id": "BAN-DS-03-0003",
+    "numero": 10,
+    "versao": "v01",
+    "enunciado": "Em uma aplicação C# 12 com .NET 8, considere o programa:\n\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\nclass Exemplo {\n    static void Main() {\n        var valores = new List<int> { 2, 4, 6 };\n        var consulta = valores.Where(n => n > 3);\n        valores.Add(8);\n        Console.Write(consulta.Count());\n    }\n}\n\nO valor exibido é",
+    "alternativas": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3",
+      "E": "4"
+    }
+  }
+]

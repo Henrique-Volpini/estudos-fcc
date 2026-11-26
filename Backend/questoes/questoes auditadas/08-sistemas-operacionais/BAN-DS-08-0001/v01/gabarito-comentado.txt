@@ -1,0 +1,52 @@
+ID: BAN-DS-08-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Determinar o número total de faltas de página na sequência, incluindo o preenchimento inicial dos quadros.
+
+RESOLUÇÃO
+A presença em memória é verificada em cada referência, e a ordem de recência é atualizada também nos acertos. Abaixo, os residentes são apresentados do menos recentemente usado para o mais recentemente usado; essa ordem não indica a posição física dos quadros.
+
+Acesso | Página | Resultado | Página removida | Residentes após o acesso
+1      | 2      | falta     | nenhuma         | 2
+2      | 3      | falta     | nenhuma         | 2, 3
+3      | 2      | acerto    | nenhuma         | 3, 2
+4      | 1      | falta     | nenhuma         | 3, 2, 1
+5      | 4      | falta     | 3               | 2, 1, 4
+6      | 2      | acerto    | nenhuma         | 1, 4, 2
+7      | 3      | falta     | 1               | 4, 2, 3
+8      | 4      | acerto    | nenhuma         | 2, 3, 4
+9      | 1      | falta     | 2               | 3, 4, 1
+10     | 2      | falta     | 3               | 4, 1, 2
+11     | 5      | falta     | 4               | 1, 2, 5
+12     | 2      | acerto    | nenhuma         | 1, 5, 2
+
+As faltas estão nos acessos 1, 2, 4, 5, 7, 9, 10 e 11: oito ao todo. A condição inicial vazia exige contar também os três primeiros preenchimentos. A conclusão é uma aplicação analítica da política às premissas do enunciado, confirmada por execução de um cálculo somente em memória.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: quatro é o número de referências atendidas por páginas já residentes, nos acessos 3, 6, 8 e 12. O comando pede faltas, não acertos.
+B) Não atende: há cinco páginas distintas, mas uma página pode provocar nova falta após ser removida. Além dos cinco primeiros carregamentos de páginas distintas, ocorrem três recarregamentos, totalizando oito faltas. Cinco também é o número de substituições, que não inclui as três faltas iniciais.
+C) Não atende: sete subconta as faltas. Em particular, o acesso 10 à página 2 também provoca falta, porque o acesso 9 à página 1 havia removido a página 2, então a menos recente.
+D) Atende: provocam falta os acessos 1, 2, 4, 5, 7, 9, 10 e 11. São três carregamentos em quadros vazios e cinco substituições, totalizando oito.
+E) Não atende: nove é o total obtido ao usar FIFO nesta sequência, sem atualizar a ordem nos acertos. Pela regra LRU, o acesso 3 renova a página 2 e o acesso 5 remove a página 3; o acesso 6 à página 2, portanto, é um acerto. A política declarada produz oito faltas.
+
+FONTES TÉCNICAS E EDITORIAIS CONSULTADAS
+- Operating Systems: Three Easy Pieces — Beyond Physical Memory: Policies. https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf. Localizador: Capítulo 22, versão 1.10: abertura e seção 22.1, pp. 1–2; seção 22.5 e Figura 22.5, pp. 7–8 do PDF. Sustenta: Material autoral dos professores Arpaci-Dusseau hospedado pela Universidade de Wisconsin–Madison: faltas com memória inicialmente vazia e regra LRU baseada na referência mais recente. A sequência da questão é autoral e foi calculada separadamente.
+- The Linux Kernel documentation — Page Tables. https://docs.kernel.org/mm/page_tables.html. Localizador: Seção Page Faults, parágrafos sobre ausência em memória física, tratamento da falta e atualização do mapeamento. Sustenta: Falta de página por ausência da página em memória física. Utilizada no nível conceitual; o enunciado define seu próprio modelo e não atribui LRU exato a uma versão do Linux.
+- FCC — TRT4/2022 — Analista Judiciário — Tecnologia da Informação — A14, Tipo 001. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador: Questão 52, p. 12; metadados de origem secundária em fontes.json. Sustenta: Referência de formato: dados operacionais explícitos, comando objetivo e cinco opções compactas.
+- Conteúdo programático local — Sistemas Operacionais. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador: Linhas 116–121: sincronização; deadlocks e starvation; gerenciamento de memória: segmentação, memória virtual e paginação. Sustenta: Delimitação dos tópicos no programa; a observação final sobre legislação foi lida, sem incidência normativa na solução destes modelos conceituais.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 52; página 12.
+  Origem verificável: Extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 12; PDF Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  Característica observada e aplicação nesta questão autoral: O exemplo fornece dados operacionais concretos e pede uma conclusão técnica objetiva, com cinco respostas compactas. A questão autoral aplica esse encadeamento a um estado inicial de memória e a uma sequência de referências; não reproduz a saída de comando nem as lacunas do exemplo.
+  Limites da referência: A referência sustenta a organização de cenário técnico e opções compactas, não comprova frequência de questões numéricas de LRU na FCC. Trata-se de cópia secundária, sem atestado de integridade oficial da FCC; não fundamenta a correção técnica da questão autoral.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: navegação aberta no capítulo 22 de OSTEP e na documentação Page Tables do Linux Kernel; confronto da definição de LRU e da falta por ausência física com as premissas.
+- Analítica: rastreamento das doze referências, atualização da recência a cada acerto, conferência das cinco alternativas e unicidade da resposta.
+- Executada: cálculo JavaScript em memória no ambiente V8 de functions.exec, sem criação de programa ou teste no projeto. Entrada: três quadros vazios e sequência 2,3,2,1,4,2,3,4,1,2,5,2. Resultado observado: oito faltas; residentes finais em ordem LRU→MRU: 1,5,2.
+- Editorial: leitura da questão 52, p. 12, do TRT4/2022 na extração local e dos metadados em fontes.json; registro expresso da origem secundária e dos limites.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardam-se as auditorias independentes de estilo, pistas e redação/conformidade; o gabarito proposto permanece sob responsabilidade técnica do elaborador.

@@ -1,0 +1,31 @@
+ID: BAN-DS-05-0005
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: XML Schema: ocorrências de elementos, tipos e atributos obrigatórios
+
+ENUNCIADO
+Uma aplicação valida documentos XML de acordo com o esquema XSD 1.0 completo abaixo, sem namespace de destino:
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="item" type="xs:string"
+                    minOccurs="0" maxOccurs="3"/>
+      </xs:sequence>
+      <xs:attribute name="codigo" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+Considerando apenas a validade em relação a esse esquema, o documento aceito é
+
+A) <lote codigo="7"/>
+
+B) <lote><item>A</item></lote>
+
+C) <lote codigo="7"><item>A</item><item>B</item><item>C</item><item>D</item></lote>
+
+D) <lote codigo="sete"><item>A</item></lote>
+
+E) <lote codigo="7"><item>A</item><extra>B</extra></lote>

@@ -1,0 +1,19 @@
+ID: BAN-DS-06-0003
+Versão: v01
+Matéria: Arquitetura de sistemas
+Tópico: Circuit breaker, tentativas e timeouts
+
+ENUNCIADO
+Uma aplicação realiza consultas idempotentes a um serviço remoto. O projeto de resiliência deve atender às seguintes necessidades:
+
+I. Limitar o tempo durante o qual o cliente aguarda a conclusão de cada chamada remota.
+II. Fazer novas tentativas diante de falhas transitórias, com espera entre elas e número máximo de repetições, respeitando o prazo total da operação.
+III. Após atingir um limiar de falhas, rejeitar temporariamente novas chamadas sem acessar o serviço; em seguida, permitir um conjunto restrito de chamadas para avaliar sua recuperação.
+
+Os mecanismos associados a I, II e III são, respectivamente,
+
+A) retry, timeout e circuit breaker.
+B) timeout, retry e circuit breaker.
+C) timeout, circuit breaker e retry.
+D) circuit breaker, retry e timeout.
+E) retry, circuit breaker e timeout.

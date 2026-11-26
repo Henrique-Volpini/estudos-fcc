@@ -1,0 +1,38 @@
+ID: BAN-DS-10-0002
+Versão: v01
+Número no SIM-001: 39
+Matéria: Serviços e gerenciamento de redes
+Tópico: Administração e configuração de servidor Apache HTTP
+
+ENUNCIADO
+Um servidor Apache HTTP Server 2.4, em Linux, utiliza os trechos abaixo, nesta ordem, e não possui outros hosts virtuais:
+
+Listen 80
+DocumentRoot "/srv/www/base"
+
+<VirtualHost *:80>
+    ServerName portal.intra.example
+    ServerAlias *.intra.example
+    DocumentRoot "/srv/www/site-a"
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName relatorios.intra.example
+    DocumentRoot "/srv/www/site-b"
+</VirtualHost>
+
+Os três diretórios contêm um arquivo status.txt legível e autorizado para acesso HTTP. O servidor atende diretamente esses arquivos estáticos, sem regras adicionais de mapeamento ou redirecionamento.
+
+Duas requisições HTTP/1.1 independentes são recebidas no endereço 192.0.2.10, porta 80:
+
+I. GET /status.txt, com Host: relatorios.intra.example
+II. GET /status.txt, com Host: externo.example
+
+Os arquivos servidos em I e II são, respectivamente,
+
+A) /srv/www/site-b/status.txt e /srv/www/site-a/status.txt.
+B) /srv/www/site-b/status.txt e /srv/www/base/status.txt.
+C) /srv/www/site-a/status.txt e /srv/www/base/status.txt.
+D) /srv/www/site-a/status.txt e /srv/www/site-a/status.txt.
+E) /srv/www/site-b/status.txt e /srv/www/site-b/status.txt.
+

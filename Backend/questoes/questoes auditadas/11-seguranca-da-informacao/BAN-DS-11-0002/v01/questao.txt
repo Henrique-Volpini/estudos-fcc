@@ -1,0 +1,20 @@
+ID: BAN-DS-11-0002
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: Hashes, confidencialidade e assinaturas
+
+ENUNCIADO
+Uma equipe avalia mecanismos para proteger documentos eletrônicos. Considere implementações criptográficas adequadas, a preservação do segredo das chaves privadas e secretas e a obtenção autenticada da chave pública do signatário. Foram apresentadas as seguintes afirmações:
+
+I. Enviar o documento e seu hash SHA-256 pelo mesmo canal, no qual um atacante pode substituir ambos, basta para autenticar a origem do documento.
+II. Uma assinatura digital gerada com a chave privada do signatário e verificada com a chave pública correspondente permite verificar a origem e a integridade do documento.
+III. Acrescentar uma assinatura digital a um documento enviado em texto claro basta para impedir que terceiros leiam seu conteúdo.
+IV. A cifragem simétrica adequada, com chave secreta disponível somente às partes autorizadas, é um mecanismo aplicável à confidencialidade do documento.
+
+Está correto o que se afirma APENAS em
+
+A) I e II.
+B) I e III.
+C) I e IV.
+D) II, III e IV.
+E) II e IV.

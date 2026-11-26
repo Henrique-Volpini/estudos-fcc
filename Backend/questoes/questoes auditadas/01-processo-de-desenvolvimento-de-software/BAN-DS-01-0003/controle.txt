@@ -1,0 +1,27 @@
+ID: BAN-DS-01-0003
+Matéria: 01 - Processo de desenvolvimento de software
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/01-processo-de-desenvolvimento-de-software.txt
+Tópico do conteúdo: versionamento semântico;
+Objetivo da questão: Determinar o incremento mínimo exigido por uma mudança incompatível da API pública, mesmo quando a publicação também inclui correções e adições compatíveis.
+Tarefa de origem: SIM-001; elaborador 01; número global 3; ID reservado no plano.json.
+Responsável pela elaboração: /root/elaborador_01
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, elaboração autoral concluída por /root/elaborador_01; fontes técnicas e exemplos FCC consultados; encaminhada em PENDENTE_AUDITORIA, sem aprovação de auditoria.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003 -> Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003
+ESTILO_FCC: Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/01-processo-de-desenvolvimento-de-software/BAN-DS-01-0003/v01/parecer-redacao-e-conformidade.txt

@@ -1,0 +1,54 @@
+ID: BAN-DS-07-0003
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar, na ordem indicada, os efeitos das falhas de prontidão e de vivacidade.
+
+RESOLUÇÃO
+Em I, o diagnóstico de prontidão passa a indicar falha: p1 fica não pronto para o Service informado, sem que essa falha determine reinício. Em II, o diagnóstico de vivacidade também falha após o número configurado de tentativas. O kubelet então encerra o container e aplica a política efetiva Always, reiniciando-o no mesmo Pod. Esse processo não exige que a readiness volte a ter sucesso. O cenário considera novas requisições, sem atribuir às probes a interrupção instantânea de conexões existentes ou a substituição do Pod.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. A alternativa inverte as finalidades. Em I, o container permanece em execução, mas p1 perde a prontidão para receber o tráfego considerado. Em II, a falha de vivacidade aciona encerramento e reinício conforme a política informada; não se limita à retirada do atendimento.
+
+B) Não atende. A segunda consequência corresponde à falha de liveness, mas a primeira contraria o efeito da readiness. Como o Service não publica endereços não prontos, p1 deixa de ser selecionado para as novas requisições consideradas após a falha de prontidão.
+
+C) Não atende. A primeira consequência é compatível com I. Entretanto, as probes de prontidão e vivacidade são independentes: a recuperação da readiness não é condição para executar a ação decorrente da falha de liveness. O distrator introduz uma dependência que o Kubernetes não exige.
+
+D) Não atende. Falhar a readiness não exclui nem substitui automaticamente o objeto Pod; indica indisponibilidade para atendimento. Em II, a política efetiva Always permite o reinício do container encerrado por falha de liveness. A alternativa confunde substituição de Pod com reinício de container.
+
+E) Atende. Em I, p1 deixa de receber as novas requisições do Service e o container continua em execução. Em II, atingido o limiar de falhas de vivacidade, o kubelet encerra o container e o reinicia conforme Always. Os efeitos não dependem de recuperação prévia da readiness.
+
+FONTES TÉCNICAS CONSULTADAS
+- Kubernetes Documentation — Liveness, Readiness, and Startup Probes
+  URL: https://kubernetes.io/docs/concepts/workloads/pods/probes/
+  Localizador e alcance: Types of probe: Liveness probe e Readiness probe; Probe results; Configuration fields: failureThreshold. Consulta por navegação em 26/11/2026. Sustenta os efeitos distintos e a consideração dos limiares de falhas.
+- Kubernetes Documentation — Configure Liveness, Readiness and Startup Probes
+  URL: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+  Localizador e alcance: Define readiness probes, incluindo a observação de que readiness e liveness não dependem uma da outra para ter sucesso. Consulta por navegação em 26/11/2026. Sustenta a refutação de C e o uso combinado das probes.
+- Kubernetes Documentation — Pod Lifecycle
+  URL: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
+  Localizador e alcance: Container restart policy, inclusive Pod-level container restart policy: reinícios pelo kubelet ocorrem no mesmo Pod e nó; Always reinicia após encerramento. Consulta por navegação em 26/11/2026. Sustenta a distinção entre reiniciar o container e substituir o Pod em D.
+- Kubernetes API Reference — Service v1
+  URL: https://kubernetes.io/docs/reference/kubernetes-api/core/service-v1/
+  Localizador e alcance: ServiceSpec.publishNotReadyAddresses: quando habilitado, ignora indicações de prontidão para os endpoints. Consulta por navegação em 26/11/2026. Fundamenta a condição false explicitada no enunciado.
+- FCC — TRT4/2022, Tecnologia da Informação, A14 Tipo 001 — referência editorial
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt
+  Localizador e alcance: Questão 59, página 14 da extração e do caderno: comando que relaciona dois elementos e cinco pares apresentados na mesma ordem. PDF local homônimo; origem secundária declarada em referenciasEstilo.
+- Programa de conhecimentos específicos — Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador e alcance: Bloco DEVOPS E DEVSECOPS, linhas 101–114; observação final lida. Delimita o conteúdo, sem impor versão de Docker ou Kubernetes para estes recortes.
+- Metadados das referências FCC locais
+  Arquivo: Backend/Agents/conteudo/referencias-fcc/fontes.json
+  Localizador e alcance: Registro trt4-2022-ti-a14-001: URL, origem copia_secundaria, arquivo PDF e data de consulta. O SHA-256 identifica a cópia local; não é autenticação oficial.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 59; página 14.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, extração local do PDF homônimo; cópia secundária hospedada no Qconcursos, conforme fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não é download direto da FCC e o hash local não representa assinatura de integridade oficial.
+- Característica observada e aplicação nesta questão autoral: O exemplo exige relacionar corretamente dois elementos na ordem solicitada e dispõe cinco pares de respostas. Aplicou-se a comparação de pares ordenados de consequências para duas ocorrências técnicas; todas as condições do cluster e as alternativas foram elaboradas originalmente.
+- Limites da referência: O exemplo foi usado somente como referência editorial localizada; não certifica correção técnica atual, frequência do formato ou aprovação da questão autoral.
+
+VERIFICAÇÕES REALIZADAS
+Verificação documental nas páginas oficiais do Kubernetes sobre probes e ciclo de vida; análise das duas ocorrências e de cada par de consequências de A–E. Consulta do exemplo FCC Q59, p.14, e dos metadados de origem. Não houve execução de cluster, aplicação de manifesto ou simulação de falhas. O texto de questão e o JSON foram gerados dos mesmos dados e conferidos por leitura e comparação estrutural.
+
+PENDÊNCIAS
+Nenhuma de elaboração. As auditorias de estilo FCC, pistas de resposta e redação/conformidade ainda serão realizadas pelos respectivos responsáveis. Esta entrega não contém aprovação.

@@ -1,0 +1,33 @@
+ID: BAN-DS-04-0005
+Versão: v01
+Matéria: Banco de Dados
+Tópico: Common Table Expressions e agregação em SQL
+
+ENUNCIADO
+Em um banco PostgreSQL 15, a tabela movimento possui as colunas agencia e valor, ambas não nulas, e contém somente os registros:
+
+agencia | valor
+A       | 40
+A       | 70
+B       | 50
+C       | 30
+C       | 60
+
+Considere:
+
+WITH totais AS (
+    SELECT agencia, SUM(valor) AS total
+    FROM movimento
+    GROUP BY agencia
+)
+SELECT COUNT(*) AS quantidade, SUM(total) AS soma
+FROM totais
+WHERE total >= 90;
+
+Os valores retornados nas colunas quantidade e soma são, respectivamente,
+
+A) 5 e 250.
+B) 3 e 250.
+C) 2 e 110.
+D) 1 e 110.
+E) 2 e 200.

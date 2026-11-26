@@ -1,0 +1,17 @@
+ID: BAN-DS-05-0001
+Versão: v01
+Matéria: Desenvolvimento de aplicações web e mobile
+Tópico: Princípios de design de APIs: idempotência
+
+ENUNCIADO
+Um aplicativo envia uma requisição PUT para atualizar o endereço de correspondência de um cliente em um recurso identificado por uma URI. A conexão é interrompida antes da leitura da resposta. O cliente considera reenviar a mesma requisição, com o mesmo conteúdo. Supondo uma implementação conforme a semântica HTTP definida na RFC 9110, é correto afirmar que
+
+A) a idempotência exige que a repetição produza o mesmo código de status e o mesmo corpo de resposta.
+
+B) a repetição deve criar outro recurso, pois cada requisição PUT representa uma nova operação de inclusão.
+
+C) a idempotência depende de desabilitar o armazenamento da resposta em cache antes do reenvio.
+
+D) a repetição tem o mesmo efeito pretendido sobre o recurso, embora a resposta recebida possa ser diferente.
+
+E) o método é seguro e idempotente, pois a atualização solicitada não pode modificar o estado do servidor.

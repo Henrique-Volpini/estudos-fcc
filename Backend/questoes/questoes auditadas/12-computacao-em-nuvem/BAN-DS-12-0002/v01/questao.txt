@@ -1,0 +1,17 @@
+ID: BAN-DS-12-0002
+Versão: v01
+Matéria: Computação em nuvem
+Tópico: Elasticidade, capacidade e disponibilidade em nuvem
+
+ENUNCIADO
+Uma aplicação sem estado é executada em duas zonas de disponibilidade com falhas independentes. Cada instância suporta até 200 requisições por segundo, mantendo o tempo de resposta exigido, e a carga de pico é de 900 requisições por segundo. O balanceador redireciona o tráfego às instâncias disponíveis. Para o dimensionamento, considere que o balanceador, a rede e o banco de dados continuam operacionais e não limitam a vazão, e desconsidere o tempo de redirecionamento.
+
+A aplicação deve sustentar integralmente o pico após a perda de qualquer uma das zonas, usando instâncias já ativas. Há um mecanismo automático que adiciona ou remove instâncias conforme a demanda; a ativação de novas instâncias leva dois minutos.
+
+Durante o pico, a quantidade mínima de instâncias que deve estar previamente ativa em cada zona e o mecanismo de ajuste de recursos descrito correspondem, respectivamente, a:
+
+A) 3 instâncias e elasticidade horizontal.
+B) 5 instâncias e elasticidade horizontal.
+C) 5 instâncias e escalabilidade vertical.
+D) 3 instâncias e escalabilidade vertical.
+E) 6 instâncias e elasticidade horizontal.

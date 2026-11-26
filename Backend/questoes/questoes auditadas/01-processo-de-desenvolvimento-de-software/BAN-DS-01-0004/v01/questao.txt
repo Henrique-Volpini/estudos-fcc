@@ -1,0 +1,20 @@
+ID: BAN-DS-01-0004
+Versão: v01
+Matéria: Processo de desenvolvimento de software
+Tópico: Engenharia de requisitos
+
+ENUNCIADO
+Durante a especificação de um sistema bancário, uma analista registrou os seguintes requisitos:
+
+I. O sistema deve emitir um comprovante de transferência contendo o identificador da operação, a data e o valor transferido.
+II. O sistema deve permitir ao cliente cancelar um agendamento ainda não executado e apresentar a confirmação do cancelamento.
+III. Sob o perfil de carga homologado de 1.000 usuários simultâneos, pelo menos 95% das consultas de saldo devem apresentar resposta em até 2 segundos.
+IV. O serviço de consulta de saldo deve apresentar disponibilidade mensal de, no mínimo, 99,9%, considerando todas as interrupções no mês.
+
+Quanto à natureza do que é exigido, são requisitos funcionais e requisitos de qualidade, respectivamente,
+
+A) I e III; II e IV.
+B) II e IV; I e III.
+C) III e IV; I e II.
+D) I e II; III e IV.
+E) I e IV; II e III.

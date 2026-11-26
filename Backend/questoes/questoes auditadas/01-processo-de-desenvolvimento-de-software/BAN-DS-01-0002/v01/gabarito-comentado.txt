@@ -1,0 +1,40 @@
+ID: BAN-DS-01-0002
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Identificar a única configuração de objetos e ligações compatível com as multiplicidades declaradas.
+
+RESOLUÇÃO
+A multiplicidade junto a Agencia limita, para cada carteira, o número de agências a zero ou uma. A multiplicidade junto a Carteira exige uma ou mais carteiras para cada agência. Em E, a única agência possui duas carteiras; cada uma delas possui uma agência; a terceira carteira possui zero. Todos os limites são respeitados.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. As carteiras sem agência respeitam 0..1, mas a agência sem carteiras viola o limite inferior 1 da extremidade Carteira.
+B) Não atende. Cada agência possui uma carteira, mas a carteira compartilhada possui duas agências, ultrapassando o limite superior 1 da extremidade Agencia.
+C) Não atende. As duas primeiras agências respeitam 1..*, mas a terceira possui zero carteiras e viola o limite inferior dessa multiplicidade.
+D) Não atende. Ambas as agências possuem carteiras, mas uma carteira está ligada a duas agências, o que viola 0..1 junto a Agencia.
+E) Atende. A agência tem pelo menos uma carteira; nenhuma carteira possui mais de uma agência. A carteira sem agência é permitida pelo limite inferior zero junto a Agencia.
+
+FONTES TÉCNICAS CONSULTADAS
+- OMG Unified Modeling Language, versão 2.5, formal/15-03-01, maio de 2015. https://www.omg.org/spec/UML/2.5/PDF. Seções 7.5.3.2 Multiplicities e 7.5.4.1 Multiplicity Element, páginas impressas 33–35; 11.5.3.1 Associations, páginas 197–198, e 11.5.4 Notation, página 199. Sustenta limites, asterisco e interpretação por extremidade. Página da edição conferida em https://www.omg.org/spec/UML/2.5; consulta por navegação em 26/11/2026.
+- Arquivo-base do programa: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt; bloco PROCESSO DE DESENVOLVIMENTO DE SOFTWARE; item UML 2.5; Delimita o escopo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Informática; 2007.
+- Caderno, questão e página: Cargo I, Tipo 001; questão 56; página 9.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; disponibilização no próprio órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Usa terminologia UML de forma direta e apresenta cinco respostas conceitualmente comparáveis.
+- Aplicação nesta questão autoral: A terminologia é mantida precisa, mas o reconhecimento de um termo foi substituído por aplicação autoral das multiplicidades a configurações de objetos.
+- Limites da referência: Referência histórica de 2007, disponibilizada no próprio órgão conforme fontes.json. Foi lida a extração TXT local. O exemplo não valida a UML 2.5 nem demonstra frequência de formatos na FCC.
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário - Área Apoio Especializado - Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 57; página 13.
+- Origem verificável: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; cópia secundária: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Parte de contexto técnico de estudo de um analista, fornece a condição pertinente e pede uma única resposta entre cinco.
+- Aplicação nesta questão autoral: O enunciado declara versão, associação e restrições necessárias e solicita uma única configuração que as satisfaça.
+- Limites da referência: Cópia hospedada no Qconcursos, identificada como secundária em fontes.json. Foi lida a extração TXT local; não houve certificação de integridade oficial nem download diretamente da FCC. O exemplo sustenta apenas o formato observado, sem comprovar frequência na banca ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: conferida por navegação a edição UML 2.5 no portal OMG e consultadas as seções de multiplicidade, associação e notação do PDF normativo correspondente; não foi usada a edição 2.5.1.
+- Analítica: contadas as carteiras por agência e as agências por carteira; A e C violam o mínimo de carteiras por agência, B e D violam o máximo de agências por carteira e E respeita ambos.
+- Editorial: lidas TRF4/2007, questão 56, página 9, e TRT4/2022, questão 57, página 13, nas extrações locais, com metadados de origem conferidos. Não houve execução de modelo UML.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Entrega completa em PENDENTE_AUDITORIA; as auditorias do SIM-001 ainda serão realizadas.

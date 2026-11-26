@@ -1,0 +1,45 @@
+ID: BAN-DS-11-0002
+Versão: v01
+Gabarito proposto: E
+O que o comando pede: Determinar o conjunto de afirmações corretas.
+
+RESOLUÇÃO
+I é falsa: o atacante pode trocar o documento e recalcular seu hash, sem comprovar a origem. II é verdadeira: a assinatura vincula a verificação ao par de chaves do signatário e permite detectar alterações. III é falsa: o documento continua legível em texto claro. IV é verdadeira: a cifragem com chave secreta adequadamente protegida atende à finalidade de confidencialidade. Portanto, somente II e IV são corretas.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: inclui I, que atribui autenticidade de origem a um hash que também pode ser substituído, e omite IV, que descreve a finalidade de confidencialidade da cifragem.
+B) Não atende: I não autentica a origem nas condições descritas; III confunde a assinatura com a ocultação do conteúdo. II e IV são as afirmações corretas.
+C) Não atende: IV é verdadeira, mas I é falsa. O hash recalculável pelo atacante não substitui a assinatura digital descrita em II.
+D) Não atende: II e IV são verdadeiras, mas III é falsa. Acrescentar uma assinatura não retira a legibilidade do documento enviado em texto claro.
+E) Atende: reúne II e IV, correspondentes à verificação de origem e integridade pela assinatura e à confidencialidade por cifragem; exclui I e III.
+
+FONTES TÉCNICAS CONSULTADAS
+- NIST — FIPS 180-4: Secure Hash Standard, agosto de 2015. https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf. Localizador e suporte: Seção 1, página impressa 3 (8ª página do PDF): resumo de mensagem e detecção probabilística de alteração. A possibilidade de substituir documento e hash foi analisada nas condições de I.
+- NIST — FIPS 186-5: Digital Signature Standard, fevereiro de 2023. https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf. Localizador e suporte: Anúncio, item 3, página impressa i (4ª página do PDF): integridade, identidade, geração com chave privada e verificação com chave pública.
+- NIST — FIPS 186-5: página oficial da publicação e resumo. https://csrc.nist.gov/pubs/fips/186-5/final. Localizador e suporte: Abstract: detecção de modificações não autorizadas e autenticação do signatário. A página informa nota de possíveis correções; o item cobra apenas as finalidades conceituais documentadas.
+- NIST — FIPS 197: Advanced Encryption Standard, atualização de 09/05/2023. https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf. Localizador e suporte: Abstract, página impressa ii (3ª página do PDF), e anúncio, item 3, página impressa iii (4ª página do PDF): confidencialidade e cifragem simétrica. Não se exige algoritmo ou modo específico na questão.
+- Programa-base do projeto — Segurança da Informação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e suporte: - criptografia simétrica e assimétrica;
+- certificados e assinaturas digitais;
+- hashes criptográficos.
+- FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e suporte: Questão(ões) 38, 36, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 38; página 9.
+- Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Afirmações numeradas sobre proteção de transações, seguidas de alternativas que combinam os itens e do qualificador apenas.
+- Aplicação nesta questão autoral: Apresentação de quatro afirmações autorais e seleção da combinação correta; as premissas criptográficas são explicitadas. A norma citada na prova antiga não foi transportada para o conteúdo atual.
+- Limites da referência: Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual.
+
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 36; página 9.
+- Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Confronto de afirmações técnicas sobre resumos e assinatura digital em alternativas A–E.
+- Aplicação nesta questão autoral: Uso de confusões conceituais concretas sobre hash, assinatura e finalidade de proteção como base de distratores novos; os conceitos foram verificados no NIST, sem usar o gabarito antigo como fundamento.
+- Limites da referência: Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+Documental: navegação nos documentos oficiais NIST FIPS 180-4, 186-5 e 197 atualizado em 2023, em 26/11/2026. Analítica: avaliação individual de I–IV antes das combinações A–E, incluindo a substituição conjunta do documento e hash e a leitura do texto claro. Não houve execução criptográfica.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardam-se as auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

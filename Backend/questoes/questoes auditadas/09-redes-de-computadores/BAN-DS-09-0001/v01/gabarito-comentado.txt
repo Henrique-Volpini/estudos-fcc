@@ -1,0 +1,56 @@
+ID: BAN-DS-09-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a combinação correta de marcação no trunk e entrega às estações do segundo switch.
+
+RESOLUÇÃO
+H1 ingressa em S1 por uma porta de acesso da VLAN 10. Como essa VLAN difere da nativa 99, o quadro segue no trunk com identificação VID 10. Em S2, o broadcast permanece na VLAN 10: alcança H2, enquanto H3 pertence à VLAN 20. O trunk transporta as VLANs permitidas sem reunir seus domínios de broadcast.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao comando. A VLAN nativa 99 não substitui a VLAN de origem: o quadro pertence à VLAN 10 e deve atravessar o trunk com VID 10.
+B) Não atende ao comando. O VID 10 está adequado, mas o broadcast não é entregue à porta de H3, que pertence à VLAN 20.
+C) Não atende ao comando. O quadro ingressa na VLAN 10 e não sofre conversão para a VLAN 20. H3 não integra o domínio de broadcast de H1.
+D) Atende ao comando. O quadro da VLAN 10 atravessa o trunk com VID 10 e, entre as estações de S2, é entregue somente a H2, membro dessa VLAN.
+E) Não atende ao comando. A ausência de tag foi prevista para a VLAN nativa 99. A VLAN 10 deve permanecer identificada no trunk; a entrega em porta de acesso não determina a marcação no enlace entre switches.
+
+FONTES TÉCNICAS CONSULTADAS
+- Programa-base — conhecimentos específicos de Desenvolvimento de Sistemas
+  Arquivo: Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt
+  Localizador: REDES DE COMPUTADORES — itens de padrões IEEE e de VLAN.
+  Fundamentação: Delimitação do conteúdo atribuído ao elaborador 09.
+  Consulta: 2026-11-26.
+- Cisco — Software Configuration Guide, IOS Release 15.2(2)E — Configuring VLAN Trunks
+  URL: https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release/15-2_2_e/configuration/guide/b_1522e_2960_2960c_2960s_2960sf_2960p_cg/m_1522e_vlan_trunk_2960s_cg.html
+  Localizador: Seção 'Configuring the Native VLAN for Untagged Traffic', parágrafos sobre quadros tagged/untagged e comparação do VLAN ID com a VLAN nativa; 'Defining the Allowed VLANs on a Trunk'.
+  Fundamentação: Identificação dos quadros de VLAN não nativa e distinção entre VLAN nativa e lista de VLANs permitidas.
+  Consulta: 2026-11-26.
+- Cisco — Software Configuration Guide, IOS Release 15.2(2)E — Configuring VLANs
+  URL: https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst2960/software/release/15-2_2_e/configuration/guide/b_1522e_2960_2960c_2960s_2960sf_2960p_cg/m_1522e_vlan_vlan_2960s_cg.html
+  Localizador: Trecho 'Information About VLANs', seção 'Logical Networks', parágrafo inicial sobre encaminhamento de unicast, broadcast e multicast apenas para estações da VLAN.
+  Fundamentação: Restrição do broadcast aos membros da VLAN de origem.
+  Consulta: 2026-11-26.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 36; página 9.
+  Origem verificável: Cópia secundária hospedada no Qconcursos; extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+  Característica observada: Contextualização da atividade de um Analista, seguida de escolha de uma conclusão técnica entre cinco afirmações.
+  Aplicação nesta questão autoral: O cenário de dois switches fornece as condições e solicita a conclusão sobre a transmissão e a entrega do mesmo quadro; as cinco opções descrevem essas duas propriedades.
+  Limites da referência: Referência editorial consultada na extração local de uma cópia secundária do Qconcursos. Não foi obtida no domínio da FCC e o hash registrado não constitui assinatura ou certificação oficial. O exemplo isolado não demonstra frequência de formatos nem valida a correção técnica desta questão.
+- Órgão, cargo e ano: Tribunal Regional Federal da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Informática; 2007.
+  Caderno, questão e página: Cargo I, Tipo 001; questão 45; página 8.
+  Origem verificável: PDF obtido no próprio TRF4; extração local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.txt; PDF local Backend/Agents/conteudo/referencias-fcc/trf4-2007-informatica-i001.pdf; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+  URL de origem: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Característica observada: Comando direto sobre comunicação de dados, com cinco alternativas sintaticamente paralelas.
+  Aplicação nesta questão autoral: As alternativas repetem a estrutura 'tag no trunk; estações que recebem', para comparar os mesmos aspectos sem copiar o conteúdo do item histórico.
+  Limites da referência: Referência histórica de 2007, obtida no órgão. Empregada somente para observar a forma de redigir o comando e as alternativas; não fundamenta a atualidade técnica nem permite generalizações sobre toda a banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: navegação efetiva nas duas páginas oficiais da Cisco em 26/11/2026, nos localizadores indicados. O comportamento de VLAN nativa está declarado no enunciado; não se cobra recurso de edição posterior do IEEE 802.1Q.
+- Analítica: acompanhamento do mesmo quadro de H1 à porta de entrada em S1, ao trunk e às portas de H2/H3; confronto individual das cinco combinações. Uma única combinação satisfaz marcação e alcance.
+- Editorial: leitura das questões reais identificadas nas extrações locais e dos metadados de origem em fontes.json; redação, estações e topologia autorais.
+- Não houve execução de simulador, equipamento ou captura de tráfego.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguarda auditoria independente.

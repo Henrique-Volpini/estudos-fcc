@@ -1,0 +1,30 @@
+ID: BAN-DS-03-0006
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: determinar o resultado ou a organização que atende ao cenário apresentado.
+
+RESOLUÇÃO
+O princípio da responsabilidade única relaciona a responsabilidade de um componente às suas razões de mudança. Neste caso, regras de tarifa, apresentação do relatório e persistência evoluem por demandas independentes. Separar esses comportamentos permite modificar um deles sem concentrar as três responsabilidades na classe de cálculo.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: transformar os métodos em estáticos e mudar o nome da classe não separa as três razões independentes de alteração.
+B) Não atende: cada subclasse continua acumulando cálculo, apresentação e persistência, além de poder repetir essas responsabilidades.
+C) Não atende: a interface única conserva a obrigação de reunir os três comportamentos em cada implementação; a separação pretendida não ocorre.
+D) Atende: distribui comportamentos com razões distintas de mudança entre componentes que podem colaborar sem concentrá-los na calculadora.
+E) Não atende: a mudança de visibilidade controla acesso aos métodos, mas mantém na mesma classe as três responsabilidades.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn — Architectural principles | https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles | Seção Single responsibility: uma responsabilidade/razão de mudança; separação entre apresentação, acesso a dados e lógica de negócio.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRF da 4ª Região; Analista Judiciário — Informática; 2007.
+- Caderno, questão e página: I, tipo 001; questão 62; página PDF 10.
+- Origem verificável: Arquivo primário do órgão: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+- Característica observada e aplicação: Comando técnico objetivo e alternativas da mesma categoria para distinguir conceitos de projeto orientado a objetos. O caso e as propostas de refatoração são autorais.
+- Limites: Referência formal histórica; não fundamenta correção técnica atual nem frequência de assuntos.
+
+VERIFICAÇÕES REALIZADAS
+Análise documental do princípio da responsabilidade única e confronto das cinco propostas com as três demandas de alteração explicitadas no cenário. Não se trata de verificação por execução.
+
+PENDÊNCIAS
+Nenhuma na elaboração; aguardando as três auditorias de conformidade.

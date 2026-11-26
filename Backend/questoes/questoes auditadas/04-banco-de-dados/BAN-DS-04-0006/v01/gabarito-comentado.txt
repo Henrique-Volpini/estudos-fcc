@@ -1,0 +1,29 @@
+ID: BAN-DS-04-0006
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar o modelo mais alinhado ao padrão predominante de consulta.
+
+RESOLUÇÃO
+O requisito dominante é percorrer conexões entre entidades por caminhos de profundidade variável. O modelo de grafos trata os relacionamentos como parte central da representação e da consulta. A escolha é conceitual: não afirma que outros modelos sejam incapazes de implementar alguma consulta equivalente, nem garante superioridade de qualquer produto em todo cenário.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende ao critério principal: documentos organizam agregados de dados, mas não são a escolha diretamente centrada em travessias de relacionamentos entre entidades.
+B) Não atende: o acesso característico chave-valor recupera um valor por sua chave; não oferece, como modelo central, a representação e a travessia dos vínculos descritos.
+C) Não atende: colunas largas organizam dados por chaves e famílias de colunas, sem fazer das ligações entre entidades o elemento central da consulta.
+D) Atende: grafos representam entidades e relacionamentos e são adequados a consultas que percorrem conexões por diferentes quantidades de etapas.
+E) Não atende: o esquema estrela organiza fatos e dimensões para análise dimensional, em vez de priorizar travessias de uma rede de relacionamentos.
+
+FONTES TÉCNICAS CONSULTADAS
+- Microsoft Learn - Understand data models | https://learn.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/understand-data-store-models | Graph data stores; Document, Key/value e Column-family data stores; classificação dos modelos de dados
+- Microsoft Learn - Understand star schema and the importance for Power BI | https://learn.microsoft.com/en-us/power-bi/guidance/star-schema | Star schema overview: fatos e dimensões na modelagem dimensional; fundamentação do distrator E, sem exigir Power BI
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- TRF da 4ª Região | Analista Judiciário - Informática | 2007 | Caderno I, tipo 001 | Questão 47 | Página PDF 8
+  Origem: https://www.trf4.jus.br/trf4/upload/arquivos/conc_servidores/gabaritos/Prova-I-Tipo-001.pdf
+  Característica aplicada e limites: Comando conceitual que pede identificar um elemento da área de dados entre cinco termos comparáveis. O caso de investigação e o conceito cobrado são autorais; referência histórica, sem alegação de dificuldade calibrada.
+
+VERIFICAÇÕES REALIZADAS
+Conferência documental dos modelos e análise conceitual do padrão predominante de acesso. Não se exige produto específico, teste de desempenho ou conhecimento de sintaxe de consulta de grafos.
+
+PENDÊNCIAS
+Nenhum impedimento técnico identificado na elaboração. Aguardando as três auditorias de conformidade.

@@ -1,0 +1,13 @@
+ID: BAN-DS-11-0004
+Versão: v01
+Matéria: Segurança da Informação
+Tópico: OWASP Top 10:2021: prevenção de injeção
+
+ENUNCIADO
+Uma API de relatórios constrói uma consulta SQL concatenando duas entradas recebidas do cliente: um texto livre para filtrar o nome de um cliente e a escolha da coluna de ordenação. A funcionalidade admite ordenar somente pelas colunas nome ou saldo. Para corrigir essa construção conforme a prevenção de injeção da categoria A03 do OWASP Top 10:2021, a equipe deve
+
+A) usar parâmetros vinculados tanto para o texto de busca quanto para o nome da coluna de ordenação, preservando a escolha livre de identificadores pelo cliente.
+B) validar o formulário no navegador para rejeitar aspas nas duas entradas e manter a concatenação dessas entradas na consulta executada pelo servidor.
+C) transferir a concatenação das duas entradas para uma procedure no banco e considerar a chamada dessa procedure suficiente para impedir a injeção.
+D) vincular o texto de busca como valor de parâmetro e mapear a escolha de ordenação, no servidor, para os identificadores fixos nome ou saldo.
+E) migrar a consulta para a linguagem de um ORM, concatenando as duas entradas recebidas e confiando no framework para separar automaticamente dados e comandos.

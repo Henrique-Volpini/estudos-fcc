@@ -1,0 +1,18 @@
+REFERÊNCIA FCC - INGLÊS EM TI
+
+Órgão: Tribunal Regional do Trabalho da 7ª Região.
+Cargo: Analista Judiciário - Tecnologia da Informação.
+Ano: 2009.
+Origem consultada: acervo secundário Qconcursos.
+URL: https://www.qconcursos.com/questoes-de-concursos/provas/fcc-2009-trt-7-regiao-ce-analista-judiciario-tecnologia-da-informacao/questoes?discipline_ids%5B%5D=16
+Consulta: 26/11/2026.
+
+Exemplos identificados no acervo:
+- Q128171: significado contextual de vocabulário em texto em inglês.
+- Q128172: interpretação de uma expressão conforme empregada no texto.
+- Q128173 e Q128174: compreensão de informações expressas no texto.
+- Q128175: inferência apoiada no texto.
+
+Esses identificadores são do acervo consultado; a numeração original, o tipo do caderno e a paginação do PDF não foram obtidos nesta consulta. Não inventar esses dados.
+O material foi consultado como evidência histórica de construção de questões de inglês da FCC, com comando e cinco alternativas em português baseados em texto em inglês. Não há reprodução dos textos ou das alternativas nesta nota. O elaborador deve consultar os exemplos reais e criar textos e itens próprios.
+Essa referência não demonstra frequência atual de formatos nem equivalência ao Banestes. O caderno TRT4/2022 também contém texto técnico em inglês na questão 35, página 8, mas ali o objetivo envolve conhecimento técnico para completar lacunas; não o use isoladamente para justificar uma questão de mera compreensão da língua.

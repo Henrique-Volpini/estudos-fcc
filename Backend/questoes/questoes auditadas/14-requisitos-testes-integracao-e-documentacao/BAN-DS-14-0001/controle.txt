@@ -1,0 +1,27 @@
+ID: BAN-DS-14-0001
+Matéria: 14 - Levantamento de requisitos, testes, integração e documentação técnica
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/14-requisitos-testes-integracao-e-documentacao.txt
+Tópico do conteúdo: LEVANTAMENTO DE REQUISITOS, TESTES, INTEGRAÇÃO E DOCUMENTAÇÃO TÉCNICA.
+Objetivo da questão: Avaliar o uso bidirecional de vínculos entre requisitos, casos de teste e documentação na análise de impacto de uma alteração, distinguindo cobertura cadastrada de comprovação de atendimento.
+Tarefa de origem: SIM-001, plano.json, elaborador 14, questão global 47; tópico atribuído: Rastreabilidade entre requisitos, testes e documentação.
+Responsável pela elaboração: /root/elaborador_14
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01, elaboração autoral concluída e conferida; responsável /root/elaborador_14; fontes primárias e exemplos FCC registrados, entrega estruturada salva em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/entregas/14.json; encaminhada como PENDENTE_AUDITORIA.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001 -> Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001
+ESTILO_FCC: Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/14-requisitos-testes-integracao-e-documentacao/BAN-DS-14-0001/v01/parecer-redacao-e-conformidade.txt

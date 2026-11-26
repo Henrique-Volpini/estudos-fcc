@@ -1,0 +1,28 @@
+ID: BAN-DS-10-0002
+Matéria: 10 — Serviços e gerenciamento de redes
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/10-servicos-e-gerenciamento-de-redes.txt
+Tópico do conteúdo: servidores de aplicação (WildFly, JBoss EAP, Apache HTTP Server, IIS): administração e configuração;
+Objetivo da questão: Determinar o host virtual e o caminho físico de duas requisições, aplicando a ordem de correspondência de nomes e o host padrão no Apache 2.4.
+Tarefa de origem: SIM-001, questão 39; duas questões de Serviços e gerenciamento de redes, conforme plano.json e orientacoes-aos-elaboradores.txt.
+Responsável pela elaboração: /root/elaborador_10
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26, v01: elaboração autoral concluída por /root/elaborador_10, com cinco alternativas, resolução, fontes primárias e referência real FCC. Entrega marcada PENDENTE_AUDITORIA; não há aprovação de auditor registrada.
+
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002 -> Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002
+ESTILO_FCC: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/10-servicos-e-gerenciamento-de-redes/BAN-DS-10-0002/v01/parecer-redacao-e-conformidade.txt

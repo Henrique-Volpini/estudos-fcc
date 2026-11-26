@@ -1,0 +1,46 @@
+ID: BAN-DS-12-0001
+Versão: v01
+Gabarito proposto: D
+O que o comando pede: Identificar a sequência de modelos de serviço correspondente às situações I, II e III.
+
+RESOLUÇÃO
+Em I, a instituição administra o sistema operacional convidado, o que caracteriza IaaS. Em II, administra sua aplicação implantada, enquanto o provedor administra o ambiente subjacente: PaaS. Em III, utiliza a aplicação do provedor com configurações de uso limitadas: SaaS. A sequência é IaaS, PaaS e SaaS. A operação da infraestrutura física pelo provedor, comum aos três arranjos, não distingue os modelos.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. I exige controle do sistema operacional convidado, próprio de IaaS; em II, a equipe recebe uma plataforma de execução, própria de PaaS. A classificação de III como SaaS está adequada.
+B) Não atende. I permite instalar o sistema operacional e aplicações, em vez de apenas usar uma aplicação pronta. III oferece uso de uma aplicação do provedor, sem provisionamento dos recursos fundamentais característico de IaaS. II foi classificada adequadamente.
+C) Não atende. II envolve implantação de aplicação própria em uma plataforma, e não uso da aplicação pronta do provedor. III corresponde a SaaS; configurações de uso permitidas não o transformam em PaaS. I foi classificada adequadamente.
+D) Atende. I mantém o sistema operacional convidado sob controle da instituição: IaaS. II fornece ambiente para implantar aplicação própria sem administrar esse sistema: PaaS. III fornece uma aplicação pronta do provedor: SaaS.
+E) Não atende. I corresponde a IaaS pelo controle do sistema operacional; II, a PaaS pela implantação de aplicação própria; III, a SaaS pelo uso de aplicação do provedor. As três posições foram trocadas.
+
+FONTES TÉCNICAS CONSULTADAS
+- NIST SP 800-145 — The NIST Definition of Cloud Computing (setembro de 2011)
+  URL: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf
+  Localizador: Seção 2, Essential Characteristics: Rapid elasticity (p. impressa 2; PDF p. 6) e Service Models: SaaS, PaaS e IaaS (pp. impressas 2–3; PDF pp. 6–7). Consulta por navegação em 26/11/2026.
+  Fundamentação: Fronteiras de controle dos três modelos de serviço e ajuste de recursos à demanda como característica de elasticidade.
+- Microsoft Learn — Shared responsibility in the cloud
+  URL: https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
+  Localizador: In this article: IaaS, PaaS e SaaS; Division of responsibility, Responsibility matrix, linha Operating system. Atualização indicada: 24/08/2026; consulta por navegação em 26/11/2026.
+  Fundamentação: Contraste entre administrar máquinas virtuais e sistemas operacionais, implantar aplicações em plataforma gerenciada e usar aplicações prontas. Os exemplos comerciais da fonte não são exigidos na questão.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 21; p. 6.
+  Origem verificável: Cópia secundária hospedada no Qconcursos, consultada pela extração TXT local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.
+  Característica observada e aplicação autoral: O exemplo apresenta três descrições numeradas e pede a correspondência correta e respectiva a conceitos. Aplicou-se essa organização às três fronteiras de responsabilidade em serviços de nuvem, com redação e cenários autorais.
+  Limites da referência: Referência editorial de uma prova específica; não demonstra frequência de formatos e não fundamenta a correção técnica atual. Cópia secundária do Qconcursos, sem afirmação de autenticação oficial de integridade.
+
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 53; p. 12.
+  Origem verificável: Cópia secundária hospedada no Qconcursos, consultada pela extração TXT local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.
+  Característica observada e aplicação autoral: O exemplo de TI reúne conceitos técnicos e alternativas paralelas em sequência ordenada. Aplicou-se o paralelismo das cinco sequências, sem importar seu conteúdo de redes ou suas lacunas.
+  Limites da referência: Referência editorial de uma prova específica; não demonstra frequência de formatos e não fundamenta a correção técnica atual. Cópia secundária do Qconcursos, sem afirmação de autenticação oficial de integridade.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: NIST SP 800-145 e documentação oficial Microsoft acessados por navegação em 26/11/2026 para conferir as fronteiras de controle dos três modelos.
+- Analítica: classificadas separadamente as situações I, II e III e confrontadas as cinco sequências; apenas uma conserva as três correspondências.
+- Editorial: lidas as questões FCC 21 (p. 6) e 53 (p. 12) na extração local do caderno TRT4/2022 A14/001, com identificação da origem secundária em fontes.json.
+- Não houve execução de serviço em nuvem; a verificação técnica foi documental e analítica.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria independente.

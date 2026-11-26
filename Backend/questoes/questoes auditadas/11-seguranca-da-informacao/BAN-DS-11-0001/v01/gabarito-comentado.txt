@@ -1,0 +1,34 @@
+ID: BAN-DS-11-0001
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a conduta compatível com as finalidades e a validação dos tokens.
+
+RESOLUÇÃO
+OIDC acrescenta informações padronizadas sobre autenticação por meio do ID Token. O cliente deve validá-lo, incluindo emissor, audiência e expiração, conforme o fluxo. O Access Token representa autorização para acessar recursos protegidos e deve ser apresentado à API, que verifica o acesso permitido. As duas finalidades não tornam os tokens intercambiáveis.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: inverte as funções. O ID Token informa a autenticação ao cliente; o Access Token é a credencial para os recursos protegidos.
+B) Não atende: assinatura válida não substitui as verificações de emissor, audiência e expiração exigidas pelo OIDC Core, seção 3.1.3.7.
+C) Atende: associa o ID Token à autenticação e o Access Token ao acesso autorizado à API, preservando as validações de cada contexto.
+D) Não atende: tokens emitidos para o mesmo usuário podem ter destinatários e finalidades diferentes; a coincidência do usuário não iguala suas permissões.
+E) Não atende: o ID Token é representado como JWT pelo OIDC. A RFC 6749 admite formatos diversos de Access Token, sem impor JWT.
+
+FONTES TÉCNICAS CONSULTADAS
+- IETF — RFC 6749: The OAuth 2.0 Authorization Framework, outubro de 2012. https://www.rfc-editor.org/rfc/rfc6749. Localizador e suporte: Seções 1, 1.4 e 7: autorização, formatos de Access Token e uso no servidor de recursos. A página registra atualizações posteriores; não se cobra fluxo desaconselhado.
+- OpenID Foundation — OpenID Connect Core 1.0 incorporating errata set 2, 15/12/2023. https://openid.net/specs/openid-connect-core-1_0.html. Localizador e suporte: Seções 1, 1.3 e 2: identidade e ID Token em JWT; seção 3.1.3.7, itens 2, 3 e 9: emissor, audiência e expiração.
+- Programa-base do projeto — Segurança da Informação. Backend/Agents/conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt. Localizador e suporte: - IAM, SSO, OAuth 2.0 e OpenID Connect (OIDC).
+- FCC — TRT4/2022, Analista Judiciário — Tecnologia da Informação, caderno A14 tipo 001, referência editorial. https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt. Localizador e suporte: Questão(ões) 37, página 9; PDF local: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf; origem e limites em referenciasEstilo.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: TRT da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, tipo 001; questão 37; página 9.
+- Origem verificável: Cópia secundária hospedada no Qconcursos: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf; leitura da extração local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt; metadados em Backend/Agents/conteudo/referencias-fcc/fontes.json.
+- Característica observada: Situação de implantação apresentada por um profissional de TI, seguida de comando objetivo e cinco alternativas técnicas.
+- Aplicação nesta questão autoral: Cenário autoral de integração de aplicação, seguido de uma decisão técnica entre cinco condutas comparáveis; o objeto cobrado é a finalidade dos tokens, sem reproduzir o enunciado antigo.
+- Limites da referência: Cópia obtida no Qconcursos; não se afirma download direto da FCC nem assinatura de integridade oficial. Exemplo pontual de 2022, usado somente como referência editorial; não prova frequência, padrão universal da banca ou correção técnica atual.
+
+VERIFICAÇÕES REALIZADAS
+Documental: navegação nas páginas oficiais RFC Editor e OpenID Foundation em 26/11/2026. Analítica: separação entre autenticação e autorização e confronto das cinco alternativas. Não houve execução de protocolo ou de software de autenticação.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardam-se as auditorias independentes de estilo FCC, pistas de resposta e redação/conformidade.

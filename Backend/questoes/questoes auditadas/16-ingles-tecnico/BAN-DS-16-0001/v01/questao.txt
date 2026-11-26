@@ -1,0 +1,20 @@
+ID: BAN-DS-16-0001
+Versão: v01
+Matéria: Inglês técnico
+Tópico: Compreensão de texto técnico autoral em inglês
+
+ENUNCIADO
+Considere o texto abaixo.
+
+The service desk replaced a lengthy installation guide with a checklist. During the first week, new employees completed the routine steps more quickly, yet the number of requests for help remained unchanged. Most requests concerned messages that the checklist did not explain. Rather than bring back the full guide, the team kept the checklist and added a separate section on those messages. It will review next month's support requests to find out whether the addition makes employees less dependent on assistance.
+
+(Texto autoral.)
+
+Segundo o texto, a equipe decidiu acrescentar uma seção à lista de verificação porque
+
+A) a redução dos pedidos de auxílio precisava ser documentada antes de a lista ser mantida.
+B) a maior rapidez nas etapas usuais não havia eliminado as dúvidas que motivavam pedidos de auxílio.
+C) a lista havia aumentado o tempo das etapas usuais, apesar de ter diminuído os pedidos de auxílio.
+D) os funcionários solicitavam ajuda para preencher os relatórios previstos para o mês seguinte.
+E) as mensagens apresentadas durante a instalação determinavam a retomada obrigatória do guia extenso.
+

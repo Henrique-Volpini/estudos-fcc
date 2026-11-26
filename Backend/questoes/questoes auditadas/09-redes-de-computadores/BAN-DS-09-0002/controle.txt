@@ -1,0 +1,27 @@
+ID: BAN-DS-09-0002
+Matéria: 09 — Redes de computadores
+Arquivo do elaborador: Backend/Agents/codex/agents/elaboradores/09-redes-de-computadores.txt
+Tópico do conteúdo: IPv4 e IPv6;
+Objetivo da questão: Escolher o prefixo mais longo que suporte a quantidade de interfaces e calcular rede e broadcast da sub-rede que contém um endereço dado.
+Tarefa de origem: SIM-001; questão global 36; recorte IPv4 e endereçamento de rede; orientações do coordenador em Backend/Agents/codex/agents/coordenador/acompanhamento/SIM-001/orientacoes-aos-elaboradores.txt.
+Responsável pela elaboração: /root/elaborador_09
+Dificuldade estimada: média
+Estado: APROVADA_CONFORMIDADE
+Versão atual completa: v01
+Versão em elaboração: nenhuma
+Enunciado atual: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/questao.txt
+Gabarito atual: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/gabarito-comentado.txt
+Pendências: nenhuma de produção; versão atual aprovada nos três perfis de conformidade.
+Histórico:
+- 2026-11-26 18:36:19 -03:00; v01; elaboração autoral concluída com fontes primárias consultadas por navegação, referência editorial FCC e análise das cinco alternativas; responsável /root/elaborador_09; enviada para auditoria independente no SIM-001.
+
+PROMOÇÃO PELO COORDENADOR
+Simulado: SIM-001
+Responsável: /root
+Data: 2026-11-26
+Estado do coordenador: APROVADA
+Escopo: conformidade editorial nos três perfis; fundamentação técnica sob responsabilidade do elaborador.
+Movimentação: Backend/questoes/questoes pendentes/09-redes-de-computadores/BAN-DS-09-0002 -> Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002
+ESTILO_FCC: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-estilo-fcc.txt
+PISTAS_DE_RESPOSTA: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-pistas-de-resposta.txt
+REDACAO_E_CONFORMIDADE: Backend/questoes/questoes auditadas/09-redes-de-computadores/BAN-DS-09-0002/v01/parecer-redacao-e-conformidade.txt

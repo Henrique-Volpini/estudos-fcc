@@ -1,0 +1,15 @@
+ID: BAN-DS-07-0002
+Versão: v01
+Matéria: DevOps e DevSecOps
+Tópico: Docker: imagens e containers
+
+ENUNCIADO
+Uma imagem Docker contém o arquivo /app/config.txt com o conteúdo original. Dois containers, denominados alfa e beta, são criados a partir dessa mesma imagem. Um analista altera com sucesso, somente em alfa, o conteúdo desse arquivo para ajustado. Depois, remove alfa e cria o container gama a partir da mesma imagem, sem executar build ou commit.
+
+Não existem montagens em /app, armazenamento compartilhado ou rotinas de inicialização que alterem o arquivo, e nenhuma outra escrita é realizada. Nessas condições, ao ler /app/config.txt em beta e gama, o resultado e sua explicação são:
+
+A) beta e gama apresentam original, porque a escrita ficou na camada gravável de alfa e não alterou a imagem usada pelos demais.
+B) beta apresenta original e gama apresenta ajustado, porque remover alfa incorpora suas alterações aos próximos containers criados a partir da imagem.
+C) beta apresenta ajustado e gama apresenta original, porque containers simultâneos compartilham a camada gravável enquanto permanecem em execução.
+D) beta e gama apresentam ajustado, porque modificar um arquivo preexistente atualiza a camada da imagem compartilhada por todos os containers.
+E) beta e gama deixam de encontrar o arquivo, porque remover alfa elimina o arquivo modificado também das camadas da imagem de origem.

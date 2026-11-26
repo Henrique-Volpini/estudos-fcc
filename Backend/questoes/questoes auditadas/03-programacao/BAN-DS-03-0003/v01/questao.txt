@@ -1,0 +1,28 @@
+ID: BAN-DS-03-0003
+Versão: v01
+Matéria: Programação
+Tópico: C#: recursos de linguagem e execução de coleções
+
+ENUNCIADO
+Em uma aplicação C# 12 com .NET 8, considere o programa:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Exemplo {
+    static void Main() {
+        var valores = new List<int> { 2, 4, 6 };
+        var consulta = valores.Where(n => n > 3);
+        valores.Add(8);
+        Console.Write(consulta.Count());
+    }
+}
+
+O valor exibido é
+
+A) 0
+B) 1
+C) 2
+D) 3
+E) 4

@@ -1,0 +1,53 @@
+ID: BAN-DS-02-0003
+Versão: v01
+Gabarito proposto: C
+O que o comando pede: Identificar a natureza dos compromissos internos e avaliar a compatibilidade dos limites com o prazo global acordado com o cliente.
+Responsável pela elaboração: /root/elaborador_02
+Dificuldade estimada: média
+
+RESOLUÇÃO
+Os compromissos entre a prestadora e suas equipes internas são OLAs. O prazo acordado com o cliente é um SLA e equivale a 4 × 60 = 240 minutos. Como as etapas são sequenciais, o uso integral dos limites internos resulta em 40 + 150 + 70 = 260 minutos. Assim, todos os limites internos podem ser respeitados e o SLA ser excedido em 20 minutos. É necessário ajustar o arranjo para que o cumprimento das metas internas assegure o prazo global; a alteração interna não modifica por si o acordo com o cliente.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende: são OLAs, mas a comparação isolada ignora a sucessão das etapas. Seus limites somam 260 minutos, acima dos 240 do SLA.
+
+B) Não atende: os compromissos descritos são internos, e o prazo do cliente começa na abertura. A transferência entre equipes não reinicia esse prazo nas condições do enunciado.
+
+C) Atende: os OLAs permitem consumir 260 minutos, embora o cliente tenha direito ao prazo máximo de 240 minutos. Cumprir cada limite interno não assegura o SLA.
+
+D) Não atende: não há fornecedores externos nos compromissos internos. Um contrato de apoio envolve terceiro que fornece bens ou serviços de suporte; além disso, a soma dos limites continua superior ao prazo global.
+
+E) Não atende: o acordo com as equipes internas não amplia automaticamente o prazo pactuado com o cliente. Nas condições dadas, o SLA continua limitado a 240 minutos.
+
+FONTES TÉCNICAS CONSULTADAS
+- Service Level Agreement API — ServiceNow Fluent, documentação oficial, release Zurich, atualização de 12/03/2026
+  URL: https://www.servicenow.com/docs/r/zurich/application-development/servicenow-sdk/fluent-sla-api.html?contentId=vianmU5_VCuMN6HVNQVKqQ
+  Localizador: Introdução e seção «Sla object», tabela de propriedades, linha «type»: SLA, OLA e Underpinning contract; também linha «scheduleSource» sobre contagem contínua. Trechos efetivamente abertos e lidos em 26/11/2026.
+  Fundamentação: Distinção entre acordo com cliente, acordo entre equipes internas e contrato com fornecedor externo. A contagem de tempo do cenário é explicitamente fixada no próprio enunciado, sem depender de configuração dessa ferramenta.
+
+- FTOC Service Level Management Process — United Nations, FTOC DFS Services, documento PRO-OPR-013, dezembro de 2014
+  URL: https://ft.dfs.un.org/sites/default/files/ungsc_-_ftoc_service_level_management_process_-_2014_12.pdf
+  Localizador: Página 4 de 8, seção 8, «Terms and definitions»: Service Level Agreement, Operational Level Agreement e Underpinning contract; página 5 de 8, seção 9, item de consistência dos níveis estabelecidos em OLAs e UCs com os SLAs que apoiam. PDF aberto e trechos efetivamente lidos em 26/11/2026.
+  Fundamentação: Definições dos três tipos de acordo e aplicação organizacional do alinhamento entre compromissos internos e SLA. Fonte histórica de um processo institucional; não é usada para atribuir processos, fases ou requisitos a ITIL (Version 5).
+
+- Configuring service targets — BMC Helix Business Workflows 26.1, documentação oficial, atualização de 21/04/2026
+  URL: https://docs.helixops.ai/bin/Service-Management/Enterprise-Service-Management/BMC-Helix-Business-Workflows/bwf261/Configuring-a-line-of-business/Configuring-service-targets-for-tracking-case-progress/Configuring-service-targets/
+  Localizador: Seção «To define or modify service targets», tabela «Description of basic fields for the service target», campo «Agreement Type»; campos de medição «Start When», «Stop When» e «Pause When». Trechos efetivamente abertos e lidos em 26/11/2026.
+  Fundamentação: Conferência adicional da distinção entre acordos externos e internos e de que os critérios de início, término e pausa precisam estar definidos para a medição.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+- Caderno, questão e página: A14, Tipo 001; questão 32; página 8.
+- Origem verificável: Extração efetivamente lida: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt, marcador PAGINA 8, questão 32. Metadados: Backend/Agents/conteudo/referencias-fcc/fontes.json. PDF: Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.pdf. URL de origem: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf
+- Característica observada e aplicação autoral: O exemplo inicia com uma necessidade de gerenciamento em TI e completa uma declaração por uma entre cinco afirmações sobre o mesmo objeto. A questão autoral parte de um atendimento de serviço e oferece cinco avaliações comparáveis sobre os compromissos internos e o prazo global.
+- Limites da referência: Cópia secundária hospedada no Qconcursos, sem afirmação de download direto da FCC ou integridade oficial. O exemplo versa sobre Spring Cloud Config e serve somente à construção editorial; não é fonte sobre SLA/OLA. Não se generaliza esse formato para toda a banca.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: navegação e leitura de documentação oficial ServiceNow e BMC Helix sobre tipos de acordos; leitura das definições e do alinhamento dos compromissos no processo institucional da ONU.
+- Delimitação: a questão cobra gestão de níveis de serviço (SLAs e OLAs), tópico autônomo do programa. Não exige nem afirma terminologia, fases ou processos específicos de qualquer versão do ITIL; o documento histórico da ONU é usado apenas nos trechos de acordos e consistência.
+- Analítica: prazo do cliente contado desde a abertura; três etapas sem sobreposição, intervalos ou pausas. A soma dos limites produz um caso possível que viola o SLA com todos os OLAs cumpridos; não se afirma que todo atendimento necessariamente excederá quatro horas.
+- Cálculo executado em memória JavaScript: 4*60 = 240; 40+150+70 = 260; excesso = 20 minutos.
+- Editorial: leitura da questão 32, página 8, do TRT4/2022; cenário próprio, comando declarativo e cinco avaliações comparáveis do mesmo arranjo.
+
+PENDÊNCIAS
+Auditorias de estilo FCC, pistas de resposta e redação/conformidade ainda não realizadas. Nenhuma pendência de elaboração identificada; a conclusão do elaborador não equivale a aprovação.

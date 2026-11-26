@@ -1,0 +1,48 @@
+ID: BAN-DS-12-0002
+Versão: v01
+Gabarito proposto: B
+O que o comando pede: Determinar a capacidade mínima por zona durante o pico e identificar o mecanismo de ajuste de recursos.
+
+RESOLUÇÃO
+Após a perda de uma zona, apenas a outra permanece atendendo. Ela precisa ter n instâncias já ativas, com 200n >= 900. Como n é inteiro, n >= teto(900/200) = 5. A falha pode afetar qualquer zona; portanto, são necessárias pelo menos cinco em cada uma, totalizando dez durante o pico. Não se pode contar com a ativação posterior, que leva dois minutos. Adicionar e remover instâncias conforme a carga constitui elasticidade horizontal; mudar o porte de uma instância seria ajuste vertical. A elasticidade não elimina a reserva de capacidade exigida pela disponibilidade neste cenário.
+
+ANÁLISE INDIVIDUAL DAS ALTERNATIVAS
+A) Não atende. A identificação do mecanismo está adequada, mas três instâncias na zona sobrevivente oferecem apenas 600 requisições por segundo. As seis instâncias somadas antes da falha não asseguram a capacidade necessária depois dela.
+B) Atende. Cinco instâncias na zona sobrevivente oferecem 1.000 requisições por segundo, cobrindo o pico de 900; quatro ofereceriam apenas 800. Adicionar e remover instâncias automaticamente conforme a carga caracteriza elasticidade horizontal.
+C) Não atende. Cinco instâncias por zona atendem ao requisito de capacidade, mas escalabilidade vertical altera o porte de uma instância, como CPU ou memória. O mecanismo descrito altera a quantidade de instâncias.
+D) Não atende. Além de três instâncias deixarem somente 600 requisições por segundo após a perda da outra zona, alterar a quantidade de instâncias é ajuste horizontal; o ajuste vertical modifica a capacidade de uma instância.
+E) Não atende ao mínimo solicitado. Seis instâncias por zona suportariam o cenário, mas cinco já cobrem 900 requisições por segundo mesmo com a perda da outra zona. A identificação do mecanismo como elasticidade horizontal está adequada.
+
+FONTES TÉCNICAS CONSULTADAS
+- NIST SP 800-145 — The NIST Definition of Cloud Computing (setembro de 2011)
+  URL: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf
+  Localizador: Seção 2, Essential Characteristics: Rapid elasticity (p. impressa 2; PDF p. 6) e Service Models: SaaS, PaaS e IaaS (pp. impressas 2–3; PDF pp. 6–7). Consulta por navegação em 26/11/2026.
+  Fundamentação: Fronteiras de controle dos três modelos de serviço e ajuste de recursos à demanda como característica de elasticidade.
+- Microsoft Azure Architecture Center — Autoscaling guidance
+  URL: https://learn.microsoft.com/en-us/azure/architecture/best-practices/auto-scaling
+  Localizador: Introdução: Vertical scaling e Horizontal scaling; Application design considerations, capacidade mínima, tempo de inicialização e capacidade de dependências. Atualização indicada: 11/10/2026; consulta por navegação em 26/11/2026.
+  Fundamentação: Distinção entre alterar o porte de uma instância e adicionar/remover instâncias; necessidade de capacidade prévia durante o tempo de ativação.
+- AWS Well-Architected Framework, Reliability Pillar — Use fault isolation to protect your workload
+  URL: https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/use-fault-isolation-to-protect-your-workload.html
+  Localizador: Parágrafo inicial sobre limites de isolamento de falhas; consulta por navegação em 26/11/2026.
+  Fundamentação: Separação de componentes em limites de falha para restringir o impacto de uma falha.
+- AWS Well-Architected Framework, Reliability Pillar — REL10-BP01 Deploy the workload to multiple locations
+  URL: https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/rel_fault_isolation_multiaz_region_system.html
+  Localizador: Implementation guidance, Using multiple Availability Zones, e Implementation steps, itens 3 e 4; consulta por navegação em 26/11/2026.
+  Fundamentação: Distribuição entre zonas, roteamento às instâncias disponíveis e consideração de dados e dependências na disponibilidade. O cálculo numérico é próprio do cenário, sem premissa de produto AWS.
+
+REFERÊNCIAS REAIS DE ESTILO FCC
+- Órgão, cargo e ano: Tribunal Regional do Trabalho da 4ª Região; Analista Judiciário — Área Apoio Especializado — Especialidade Tecnologia da Informação; 2022.
+  Caderno, questão e página: A14, Tipo 001; questão 59; p. 14.
+  Origem verificável: Cópia secundária hospedada no Qconcursos, consultada pela extração TXT local Backend/Agents/conteudo/referencias-fcc/trt4-2022-ti-a14-001.txt e pelos metadados de Backend/Agents/conteudo/referencias-fcc/fontes.json. URL: https://arquivos.qconcursos.com/prova/arquivo_prova/88707/fcc-2022-trt-4-regiao-rs-analista-judiciario-especialidade-tecnologia-da-informacao-prova.pdf. Não se afirma download direto da FCC nem autenticação oficial de integridade.
+  Característica observada e aplicação autoral: O exemplo de TI exige identificar dois elementos em ordem e apresenta cinco pares com estrutura comparável. Aplicou-se o comando de correspondência respectiva a capacidade mínima por zona e mecanismo de ajuste, em cenário numérico autoral.
+  Limites da referência: Referência editorial de uma prova específica; não demonstra frequência de formatos e não fundamenta a correção técnica atual. Cópia secundária do Qconcursos, sem afirmação de autenticação oficial de integridade.
+
+VERIFICAÇÕES REALIZADAS
+- Documental: NIST SP 800-145, Autoscaling guidance da Microsoft e duas páginas do AWS Reliability Pillar acessados por navegação em 26/11/2026. Os princípios gerais foram aplicados sem exigir produto de fornecedor.
+- Analítica: dimensionamento inteiro de capacidade na zona sobrevivente: teto(900/200) = 5. Foram confrontadas a perda de qualquer zona, a espera de dois minutos e as cinco alternativas.
+- Editorial: lida a questão FCC 59 (p. 14) na extração local do caderno TRT4/2022 A14/001 e conferida sua origem secundária em fontes.json.
+- Não houve implantação, teste de carga nem medição de nuvem. Os números são premissas autorais do cenário; o cálculo foi analítico.
+
+PENDÊNCIAS
+Nenhuma pendência de elaboração. Aguardando auditoria independente.
