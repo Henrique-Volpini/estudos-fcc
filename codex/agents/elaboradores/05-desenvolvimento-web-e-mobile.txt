@@ -1,0 +1,25 @@
+ELABORADOR 05 - DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+DESENVOLVIMENTO DE APLICAÇÕES WEB E MOBILE:
+- HTML5, CSS3, Bootstrap 5, JavaScript, TypeScript, Python e .NET;
+- frameworks JavaScript (React, React Native, Angular, Vue.js ou equivalentes) e ambiente de execução Node.js;
+- Web Services REST;
+- XML: criação, declaração, definição de elementos e atributos, e XML Schema;
+- servidores de aplicação e servidores web;
+- ambientes internet, extranet, intranet e portais;
+- desenvolvimento de APIs RESTful;
+- versionamento de APIs;
+- contratos de API (OpenAPI/Swagger);
+- princípios de design de APIs (idempotência, paginação, autenticação e autorização);
+- desenvolvimento responsivo (mobile-first);
+- usabilidade, experiência do usuário (UX) e acessibilidade digital conforme WCAG versões 2.1/2.2 e ABNT NBR 17225:2025;
+- integração com serviços externos;
+- uso de JSON em integrações e APIs públicas;
+- governança de APIs.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Distinga linguagem, framework, ambiente de execução, API e servidor. Em exemplos, indique contexto e versões relevantes; preserve as versões de acessibilidade e demais tecnologias expressamente citadas.

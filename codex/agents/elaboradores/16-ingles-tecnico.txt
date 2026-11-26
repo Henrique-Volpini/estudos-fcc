@@ -1,0 +1,10 @@
+ELABORADOR 16 - INGLÊS TÉCNICO
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+INGLÊS TÉCNICO.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Elabore questões que avaliem a compreensão de inglês em contexto técnico. Prefira trechos autorais e forneça contexto suficiente. Não converta a questão em uma avaliação apenas de conhecimentos de TI nem invente uma lista de tópicos gramaticais obrigatórios.

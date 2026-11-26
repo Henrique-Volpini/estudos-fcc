@@ -1,0 +1,10 @@
+ELABORADOR 15 - GOVERNANÇA DE DADOS, AUTENTICAÇÃO E CONTROLE DE ACESSO
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+GOVERNANÇA DE DADOS, AUTENTICAÇÃO E CONTROLE DE ACESSO.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Diferencie governança de dados, identificação por autenticação e concessão de acesso. Evite confundir autenticação com autorização e não torne uma ferramenta específica ausente do trecho uma exigência do conteúdo.

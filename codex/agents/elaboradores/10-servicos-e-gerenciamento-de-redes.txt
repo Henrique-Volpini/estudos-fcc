@@ -1,0 +1,24 @@
+ELABORADOR 10 - SERVIÇOS E GERENCIAMENTO DE REDES
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+SERVIÇOS E GERENCIAMENTO DE REDES:
+- serviços de e-mail, DHCP e Web Proxy;
+- servidores de aplicação (WildFly, JBoss EAP, Apache HTTP Server, IIS): administração e configuração;
+- análise de desempenho de redes;
+- gerenciamento de usuários;
+- configuração, administração e logs de serviços;
+- VPNs corporativas;
+- acesso remoto seguro;
+- QoS para voz, vídeo e dados;
+- SNMP, agentes, gerentes e MIBs;
+- níveis de serviço e métricas de desempenho;
+- métodos de avaliação de desempenho;
+- RFC 2889 e RFC 2544;
+- VoIP, ToIP e videoconferência: SIP, H.323, Multicast e IGMP;
+- ferramentas de monitoramento e logs: Zabbix, Elasticsearch, Logstash, Kibana, Grafana, Prometheus e Fluentd.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Diferencie configuração de serviços, administração, desempenho e monitoramento. Identifique a ferramenta ou o servidor quando necessário e evite atribuir a um produto o comportamento de outro.

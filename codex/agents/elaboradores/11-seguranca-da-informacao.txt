@@ -1,0 +1,34 @@
+ELABORADOR 11 - SEGURANÇA DA INFORMAÇÃO
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+SEGURANÇA DA INFORMAÇÃO:
+- ABNT NBR ISO/IEC 27001:2024 e ABNT NBR ISO/IEC 27002:2022;
+- sistemas de proteção: firewall, WAF, UTM, DMZ, proxy, NAC, antivírus e antispam;
+- IDS e IPS;
+- monitoramento de tráfego;
+- segurança em redes sem fio (EAP, WPA, WPA2 e WPA3);
+- VPN, VPN-SSL e ZTNA;
+- ataques e ameaças: malware, DoS e DDoS;
+- criptografia simétrica e assimétrica;
+- certificados e assinaturas digitais;
+- hashes criptográficos;
+- controle de acesso: autenticação, autorização e auditoria;
+- RBAC e MFA;
+- SSL/TLS;
+- Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº 13.709/2018): fundamentos, princípios, bases legais, tratamento pelo Poder Público, direitos dos titulares, agentes de tratamento e papel da ANPD;
+- anonimização e pseudonimização;
+- gestão de riscos de segurança segundo ABNT NBR ISO/IEC 27005:2023;
+- gestão de incidentes conforme ABNT NBR ISO/IEC 27035-1:2023 e NIST SP 800-61 Rev. 3;
+- segurança em nuvem conforme ABNT NBR ISO/IEC 27017:2016;
+- defesa em profundidade;
+- Zero Trust;
+- SOC, SIEM, EDR e segurança de endpoints;
+- gestão e correlação de logs;
+- segurança de APIs e aplicações web conforme OWASP Top 10:2021;
+- IAM, SSO, OAuth 2.0 e OpenID Connect (OIDC).
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Preserve as versões exatas das normas e referências, inclusive OWASP Top 10:2021 e NIST SP 800-61 Rev. 3. Diferencie requisitos legais, requisitos normativos, mecanismos de proteção e conceitos de segurança.

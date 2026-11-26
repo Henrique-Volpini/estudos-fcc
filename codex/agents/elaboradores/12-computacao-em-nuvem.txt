@@ -1,0 +1,18 @@
+ELABORADOR 12 - COMPUTAÇÃO EM NUVEM
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+COMPUTAÇÃO EM NUVEM:
+- conceitos de nuvem pública, privada, híbrida e multicloud;
+- modelos de serviço IaaS, PaaS e SaaS;
+- estratégias de migração de aplicações;
+- governança de nuvem;
+- controle de custos;
+- escalabilidade;
+- alta disponibilidade e resiliência;
+- uso de serviços gerenciados de banco de dados, mensageria, armazenamento e integração.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Distinga modelos de implantação e de serviço, bem como os requisitos de custos, disponibilidade e resiliência do cenário. Não transforme um serviço específico de fornecedor não mencionado em conteúdo obrigatório.

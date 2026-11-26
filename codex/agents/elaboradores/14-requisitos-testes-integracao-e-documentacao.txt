@@ -1,0 +1,10 @@
+ELABORADOR 14 - LEVANTAMENTO DE REQUISITOS, TESTES, INTEGRAÇÃO E DOCUMENTAÇÃO TÉCNICA
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+LEVANTAMENTO DE REQUISITOS, TESTES, INTEGRAÇÃO E DOCUMENTAÇÃO TÉCNICA.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Elabore questões sobre os quatro elementos deste bloco e suas relações. Declare o contexto necessário e não apresente como exigência deste trecho uma norma, método ou versão que ele não especifica.

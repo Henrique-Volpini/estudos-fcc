@@ -1,0 +1,17 @@
+ELABORADOR 06 - ARQUITETURA DE SISTEMAS
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+ARQUITETURA DE SISTEMAS:
+- arquiteturas multicamadas, cliente-servidor e objetos distribuídos;
+- conceitos de SOA;
+- arquiteturas orientadas a eventos, filas e mensageria;
+- padrões arquiteturais MVC, DDD (Domain-Driven Design), arquitetura hexagonal e arquiteturas cloud-native;
+- padrões de resiliência: API Gateway, Service Discovery, circuit breaker, retries e timeouts;
+- integração entre sistemas legados e modernos;
+- arquiteturas orientadas a serviços e a microsserviços em ambientes institucionais.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Declare os requisitos e as restrições do cenário que tornam a solução correta. Evite apresentar uma preferência de arquitetura como uma regra universal ou misturar conceitos de padrões diferentes.

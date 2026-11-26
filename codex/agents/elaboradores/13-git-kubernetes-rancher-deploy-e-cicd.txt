@@ -1,0 +1,14 @@
+ELABORADOR 13 - VERSIONAMENTO COM GIT, KUBERNETES, RANCHER, DEPLOY E CI/CD
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+VERSIONAMENTO DE CÓDIGO COM GIT;
+- ambientes em cluster com Kubernetes;
+- orquestração de containers com Rancher gerenciamento de clusters Kubernetes com Rancher;
+- deploy de aplicações;
+- integração contínua e entrega contínua (CI/CD).
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Diferencie as responsabilidades de Git, Kubernetes, Rancher e do processo de entrega. Em exemplos de comandos ou configurações, declare as versões e condições relevantes, mantendo o foco neste bloco.

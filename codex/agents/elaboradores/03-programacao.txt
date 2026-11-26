@@ -1,0 +1,29 @@
+ELABORADOR 03 - PROGRAMAÇÃO
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+PROGRAMAÇÃO:
+- conhecimento das linguagens PHP, Python, C, Java e C#;
+- arcabouço de desenvolvimento .NET;
+- fundamentos de programação: sintaxe, estrutura de programas, compilação e execução;
+- tipos primitivos de dados;
+- variáveis, literais e strings;
+- operadores e precedência;
+- estruturas de controle e repetição;
+- definição de classes, interfaces, métodos e atributos;
+- encapsulamento, herança e polimorfismo;
+- packages;
+- sobrecarga e sobrescrita de métodos;
+- tratamento de exceções;
+- acesso a banco de dados;
+- princípios de orientação a objetos e princípios SOLID;
+- testes automatizados unitários e de integração;
+- TDD e BDD;
+- uso de sistemas de controle de versão (Git);
+- fluxos de trabalho colaborativos (GitFlow, pull requests e code review);
+- uso responsável de assistentes de código baseados em inteligência artificial.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Em código, identifique a linguagem e informe a versão quando ela influenciar a resposta, sem apresentá-la como exigência do edital se não estiver especificada. Declare entradas e condições de execução e confira o resultado esperado.

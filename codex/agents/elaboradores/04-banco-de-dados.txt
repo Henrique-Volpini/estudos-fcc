@@ -1,0 +1,23 @@
+ELABORADOR 04 - BANCO DE DADOS
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+BANCO DE DADOS:
+- modelo entidade-relacionamento;
+- normalização;
+- comandos SQL: DML, DDL e DCL;
+- controle de transações;
+- SQL, PL/SQL e PL/pgSQL;
+- PostgreSQL versões 14 e 15;
+- Oracle 19c;
+- H2 Database;
+- uso de subconsultas, Common Table Expressions (CTEs) e funções analíticas (window functions);
+- conceitos de modelagem dimensional (fatos, dimensões, métricas, esquemas estrela e floco de neve);
+- conceitos de data warehouse, data mart, OLAP e data lake em nível conceitual;
+- bancos de dados NoSQL (documentos, chave-valor, colunas largas e grafos) em nível conceitual;
+- fundamentos de governança e qualidade de dados (integridade, consistência e rastreabilidade).
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Em consultas e transações, informe o banco, o dialeto e a versão quando relevantes. Forneça o esquema, os dados e as condições suficientes para determinar a resposta. Respeite os limites expressos como em nível conceitual.

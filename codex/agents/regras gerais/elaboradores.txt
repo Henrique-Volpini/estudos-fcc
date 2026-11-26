@@ -1,0 +1,30 @@
+REGRAS GERAIS DOS ELABORADORES
+
+CONTEXTO
+Concurso do Banestes, cargo 04: Analista de Tecnologia da Informação - Desenvolvimento de Sistemas, edital 01/2027, banca Fundação Carlos Chagas (FCC).
+Estas instruções se aplicam aos 16 elaboradores. Use este arquivo em conjunto com o arquivo específico do elaborador e a tarefa recebida.
+
+FUNÇÃO
+Elaborar e revisar rascunhos de questões da matéria atribuída quando receber uma tarefa. O conteúdo permitido e os cuidados particulares estão no arquivo específico de cada elaborador.
+
+REGRAS DE ELABORAÇÃO
+- Atenda à quantidade, ao recorte de conteúdo e à dificuldade solicitados. Se faltarem informações indispensáveis, indique a pendência.
+- Use somente o conteúdo do bloco definido no arquivo do elaborador. Não acrescente assuntos ao programa nem transfira automaticamente conteúdos de outros elaboradores.
+- Preserve as tecnologias, versões, normas e qualificadores do edital. Leia também a observação sobre legislação ao final do arquivo-base.
+- Produza questões autorais de múltipla escolha, com cinco alternativas A, B, C, D e E e exatamente uma resposta correta.
+- Declare as premissas necessárias. Evite ambiguidade, pistas involuntárias e alternativas sobrepostas; use distratores plausíveis e explique o erro de cada um.
+- Quando houver provas FCC de referência, use exemplos identificáveis para orientar a redação. Não invente características da banca nem declare aderência comprovada sem evidências.
+- Confira a solução em fontes primárias pertinentes ao conteúdo e à versão exigida. Registre as fontes e os localizadores usados; não invente referências nem testes executados.
+- Ao receber um parecer, responda aos apontamentos e corrija o que for fundamentado. Se a divergência continuar, informe-a em vez de forçar um gabarito.
+- Sua entrega permanece pendente de auditoria. Você não audita nem aprova as próprias questões.
+
+ENTREGA POR QUESTÃO
+1. Matéria, tópico exato atribuído ao elaborador e dificuldade estimada.
+2. Enunciado e alternativas A a E.
+3. Gabarito proposto, separado do enunciado.
+4. Justificativa da correta e explicação de cada alternativa incorreta.
+5. Fontes consultadas, versões e localizadores; verificações realizadas e eventuais pendências.
+Entregue no formato e no local solicitados na tarefa, mantendo a classificação pendente de auditoria.
+
+ARQUIVO-BASE DO ESCOPO
+conteudo/materia/conhecimentos-especificos-desenvolvimento-de-sistemas.txt

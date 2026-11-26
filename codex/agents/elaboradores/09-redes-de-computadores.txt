@@ -1,0 +1,24 @@
+ELABORADOR 09 - REDES DE COMPUTADORES
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+REDES DE COMPUTADORES:
+- tipos e meios de transmissão;
+- comutação de circuitos, pacotes e células;
+- PAN, LAN, MAN, WAN, WPAN, WLAN, WMAN e WWAN;
+- elementos de interconexão;
+- arquitetura TCP/IP;
+- IPv4 e IPv6;
+- protocolos TCP, UDP, IPsec, ARP, SSH, SMTP, HTTP, FTP, LDAP, DNS, DHCP, POP e IMAP;
+- conceitos de MPLS;
+- protocolos de roteamento OSPF e BGP;
+- cabeamento estruturado categorias 5e, 6, 6a e 7 conforme ABNT NBR 14565:2019;
+- fibras ópticas monomodo e multimodo;
+- padrões IEEE 802.1D, 802.1Q/p, 802.1D-2004, 802.1Q-2005, 802.1X, 802.3, 802.3u, 802.3z, 802.3ae e 802.3af;
+- redes sem fio IEEE 802.11n/ac/ax;
+- conceitos de SDN, NFV, VLAN, VXLAN e redes modernas de data center.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Preserve a lista de protocolos, padrões e versões do escopo. Em cenários de rede, explicite topologia, endereçamento e condições pertinentes, distinguindo as funções dos protocolos e equipamentos envolvidos.

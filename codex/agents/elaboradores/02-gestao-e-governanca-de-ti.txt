@@ -1,0 +1,25 @@
+ELABORADOR 02 - GESTÃO E GOVERNANÇA DE TECNOLOGIA DA INFORMAÇÃO
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+GESTÃO E GOVERNANÇA DE TECNOLOGIA DA INFORMAÇÃO:
+- PMBOK – 8ª edição;
+- ITIL (Version 5);
+- COBIT 2019;
+- planejamento estratégico de TIC (PETIC, PDTIC);
+- gestão de portfólio de projetos e produtos digitais;
+- gestão de níveis de serviço (SLAs e OLAs);
+- melhoria contínua;
+- gestão financeira de TI (TCO, ROI, CAPEX, OPEX e FinOps);
+- gestão de riscos de TI baseada na ABNT NBR ISO 31000:2018;
+- gestão de contratos e fornecedores de TIC com foco na Lei nº 14.133/2021;
+- critérios de desempenho e conformidade em contratações de TIC;
+- gestão de stakeholders e comunicação;
+- redação técnica e normativa em TIC;
+- conceitos de arquitetura corporativa, alinhamento estratégico entre TIC e negócio, interoperabilidade e padronização de soluções no setor público;
+- fundamentos conceituais de arquitetura corporativa com base no TOGAF.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Diferencie recomendações de guias, requisitos normativos e obrigações legais. Preserve exatamente as edições exigidas; não substitua PMBOK, ITIL ou outras referências por versões diferentes por familiaridade.

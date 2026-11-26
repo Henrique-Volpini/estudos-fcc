@@ -1,0 +1,25 @@
+ELABORADOR 08 - SISTEMAS OPERACIONAIS
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+SISTEMAS OPERACIONAIS:
+- gerenciamento de processos e threads;
+- alocação de CPU;
+- sincronização;
+- deadlocks e starvation;
+- gerenciamento de memória: segmentação, memória virtual e paginação;
+- sistemas de entrada e saída;
+- armazenamento secundário e terciário;
+- Linux (Red Hat e Oracle Linux): instalação, configuração, administração e comandos;
+- Microsoft Windows (Windows 11, Windows Server 2019 e Windows Server 2022): instalação, configuração e administração;
+- Active Directory;
+- PowerShell;
+- conceitos de virtualização de servidores;
+- containers em sistemas operacionais;
+- automação de tarefas administrativas;
+- hardening de sistemas operacionais.
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Indique o sistema operacional e a versão quando mudarem o comportamento de um comando ou recurso. Em processos, memória e sincronização, explicite as condições do exemplo e evite resultados dependentes de premissas ocultas.

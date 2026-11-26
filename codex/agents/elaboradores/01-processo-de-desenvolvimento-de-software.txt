@@ -1,0 +1,27 @@
+ELABORADOR 01 - PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
+
+REGRAS COMPARTILHADAS
+codex/agents/regras gerais/elaboradores.txt
+
+CONTEÚDO EXCLUSIVO DESTE ELABORADOR
+PROCESSO DE DESENVOLVIMENTO DE SOFTWARE:
+- CMMI-DEV v2.0;
+- ABNT NBR ISO/IEC/IEEE 12207:2021;
+- MR-MPS-SW versão 2023;
+- UML 2.5;
+- BPMN;
+- métodos ágeis (Scrum, Kanban, XP e similares);
+- engenharia de requisitos;
+- engenharia de software;
+- modelagem e especificação de processos e sistemas;
+- desenvolvimento low-code e no-code;
+- modelagem de dados estruturados, semiestruturados (XML, JSON) e não estruturados;
+- boas práticas de documentação técnica, dicionário de dados e rastreabilidade de requisitos;
+- qualidade de software segundo o modelo ISO/IEC 25010:2024;
+- tipos de testes de software (funcionais, não funcionais, unitários, de integração, de sistema, de aceitação, de desempenho, de carga, de estresse, de segurança e de usabilidade);
+- gestão da configuração de software;
+- versionamento semântico;
+- revisão de código (code review).
+
+CUIDADO ESPECÍFICO DA MATÉRIA
+Diferencie processos, modelos, requisitos, documentação e qualidade conforme as versões citadas. Em questões de teste, explicite o objetivo e as condições necessárias para definir a resposta.
